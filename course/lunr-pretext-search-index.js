@@ -19,6 +19,69 @@ var ptx_lunr_docs = [
   "body": "course name (MATH xxx, section xxx) "
 },
 {
+  "id": "notes-Limits-and-Continuity-chapter-exercises",
+  "level": "1",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html",
+  "type": "Section",
+  "number": "",
+  "title": "Limits and Continuity - Chapter Exercises",
+  "body": " Limits and Continuity - Chapter Exercises   This section contains exercises related to limits and continuity. These exercises are designed to reinforce the concepts covered in the chapter and provide practice with various types of limit evaluations, continuity analysis, and applications of these concepts in different contexts.    Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.       Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .     Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :      Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .       Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .     Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .      "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-3",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
+  "type": "Checkpoint",
+  "number": "1",
+  "title": "Graphical Limit Analysis.",
+  "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-4",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
+  "type": "Checkpoint",
+  "number": "2",
+  "title": "Continuity of Rational Functions.",
+  "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-5",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
+  "type": "Checkpoint",
+  "number": "3",
+  "title": "Average Rate of Change.",
+  "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-6",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
+  "type": "Checkpoint",
+  "number": "4",
+  "title": "Mixed Limit Evaluations.",
+  "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-7",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
+  "type": "Checkpoint",
+  "number": "5",
+  "title": "Piecewise Continuity.",
+  "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
+},
+{
+  "id": "notes-Limits-and-Continuity-chapter-exercises-8",
+  "level": "2",
+  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
+  "type": "Checkpoint",
+  "number": "6",
+  "title": "Kinematics: Velocity and Acceleration.",
+  "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
+},
+{
   "id": "notes-week-01",
   "level": "1",
   "url": "notes-week-01.html",

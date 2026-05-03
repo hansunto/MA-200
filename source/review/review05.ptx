@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 05-Implicit Differentiation</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+  <exercise>
+  <title>Implicit Differentiation and Slopes</title>
+  <statement>
+    <p>
+      Find the <term>slope</term> of the tangent line to the graph 
+      <me>x^2y + 2y^3 = x + 2 \text{ at } (1, 1)</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We differentiate both sides with respect to <m>x</m> using the product rule and chain rule:
+      <me>\frac{d}{dx}(x^2y) + \frac{d}{dx}(2y^3) = \frac{d}{dx}(x + 2)</me>
+      <me>(2xy + x^2\frac{dy}{dx}) + 6y^2\frac{dy}{dx} = 1</me>
+      Now, substitute the point <m>(1, 1)</m>:
+      <me>2(1)(1) + (1)^2\frac{dy}{dx} + 6(1)^2\frac{dy}{dx} = 1</me>
+      <me>2 + \frac{dy}{dx} + 6\frac{dy}{dx} = 1</me>
+      <me>7\frac{dy}{dx} = -1 \implies \frac{dy}{dx} = -\frac{1}{7}</me>
+      The slope of the tangent line at <m>(1, 1)</m> is <m>-1/7</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Logarithmic Differentiation</title>
+  <statement>
+    <p>
+      Use the properties of <m>\ln</m> to differentiate 
+      <me>y = \frac{2x^3(1-x^2)}{\sqrt{1+x^2}\cos x}</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, take the natural logarithm of both sides:
+      <me>\ln y = \ln(2) + 3\ln x + \ln(1-x^2) - \frac{1}{2}\ln(1+x^2) - \ln(\cos x)</me>
+      Now, differentiate implicitly with respect to <m>x</m>:
+      <me>\frac{1}{y} \frac{dy}{dx} = 0 + \frac{3}{x} + \frac{-2x}{1-x^2} - \frac{1}{2}\frac{2x}{1+x^2} - \frac{-\sin x}{\cos x}</me>
+      <me>\frac{dy}{dx} = y \left( \frac{3}{x} - \frac{2x}{1-x^2} - \frac{x}{1+x^2} + \tan x \right)</me>
+      Substituting <m>y</m> back:
+      <me>\frac{dy}{dx} = \frac{2x^3(1-x^2)}{\sqrt{1+x^2}\cos x} \left( \frac{3}{x} - \frac{2x}{1-x^2} - \frac{x}{1+x^2} + \tan x \right)</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Higher Order Implicit Derivatives</title>
+  <statement>
+    <p>
+      Find the <term>first and second derivatives</term> of <m>x^2 + y^2 = 1</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First derivative:
+      <me>2x + 2y y' = 0 \implies 2y y' = -2x \implies y' = -\frac{x}{y}</me>
+      Second derivative (using quotient rule on <m>y'</m>):
+      <me>y'' = \frac{d}{dx} \left( -\frac{x}{y} \right) = -\frac{(1)(y) - (x)(y')}{y^2}</me>
+      Substitute <m>y' = -x/y</m>:
+      <me>y'' = -\frac{y - x(-x/y)}{y^2} = -\frac{y + x^2/y}{y^2} = -\frac{y^2 + x^2}{y^3}</me>
+      Since <m>x^2 + y^2 = 1</m>, the expression simplifies to <m>y'' = -\frac{1}{y^3}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Derivatives of Logarithmic Functions</title>
+  <statement>
+    <p>
+      Find the first and second derivatives of <m>y = \ln(x + \sin x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First derivative using chain rule:
+      <me>y' = \frac{1}{x + \sin x} \cdot (1 + \cos x) = \frac{1 + \cos x}{x + \sin x}</me>
+      Second derivative using quotient rule:
+      <me>y'' = \frac{(-\sin x)(x + \sin x) - (1 + \cos x)(1 + \cos x)}{(x + \sin x)^2}</me>
+      <me>y'' = \frac{-x\sin x - \sin^2 x - (1 + 2\cos x + \cos^2 x)}{(x + \sin x)^2}</me>
+      Using <m>\sin^2 x + \cos^2 x = 1</m>:
+      <me>y'' = \frac{-x\sin x - 2 - 2\cos x}{(x + \sin x)^2}</me>
+    </p>
+  </solution>
+</exercise>
+
+
+  </page>
+
+
+</worksheet>

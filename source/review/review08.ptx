@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 08-Optimization and L'Hôpital's Rule</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+  <exercise>
+  <title>Optimization: Maximum Box Volume</title>
+  <statement>
+    <p>
+      From a cardboard 5 in. by 5 in., square corners are cut out so that the sides can be folded up to make a box. What dimensions will yield a box of maximum volume? What is the maximum volume?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>x</m> be the side length of the square cutouts. The dimensions of the resulting box will be:
+      <ul>
+        <li><p>Length: <m>L = 5 - 2x</m></p></li>
+        <li><p>Width: <m>W = 5 - 2x</m></p></li>
+        <li><p>Height: <m>H = x</m></p></li>
+      </ul>
+      The volume function is <m>V(x) = x(5 - 2x)^2 = x(25 - 20x + 4x^2) = 4x^3 - 20x^2 + 25x</m>.
+    </p>
+    <p>
+      Find the critical points by taking the derivative:
+      <me>V'(x) = 12x^2 - 40x + 25</me>
+      Set <m>V'(x) = 0</m> and solve using the quadratic formula:
+      <me>x = \frac{40 \pm \sqrt{(-40)^2 - 4(12)(25)}}{2(12)} = \frac{40 \pm \sqrt{1600 - 1200}}{24} = \frac{40 \pm 20}{24}</me>
+      This gives <m>x = \frac{60}{24} = 2.5</m> (which results in zero volume) or <m>x = \frac{20}{24} = \frac{5}{6}</m>.
+    </p>
+    <p>
+      The dimensions for maximum volume are:
+      <me>H = \frac{5}{6} \text{ in}, \quad L = W = 5 - 2\left(\frac{5}{6}\right) = \frac{10}{3} \text{ in}</me>
+      The maximum volume is:
+      <me>V = \left(\frac{5}{6}\right)\left(\frac{10}{3}\right)^2 = \frac{5}{6} \cdot \frac{100}{9} = \frac{500}{54} = \frac{250}{27} \approx 9.26 \text{ in}^3</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Limits and L'Hôpital's Rule</title>
+  <statement>
+    <p>
+      Find <m>\displaystyle \lim_{x \to 0} \frac{e^x + e^{-x} - 2}{1 - \cos 2x}</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Direct substitution results in the indeterminate form <m>0/0</m>. We apply L'Hôpital's Rule:
+      <me>\lim_{x \to 0} \frac{e^x - e^{-x}}{2\sin 2x}</me>
+      This still results in <m>0/0</m>, so we apply L'Hôpital's Rule a second time:
+      <me>\lim_{x \to 0} \frac{e^x + e^{-x}}{4\cos 2x}</me>
+      Now, evaluate the limit:
+      <me>\frac{e^0 + e^0}{4\cos(0)} = \frac{1 + 1}{4(1)} = \frac{2}{4} = \frac{1}{2}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Optimization: Sum of Areas</title>
+  <statement>
+    <p>
+      A wire 5 feet long is to be cut into two pieces. One piece is to be bent into the shape of a circle and the other into the shape of a square. Where should the wire be cut so that the sum of the areas of the circle and square is a maximum?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>x</m> be the length of the wire used for the circle. Then <m>5-x</m> is used for the square.
+      <ul>
+        <li><p>Circle: Circumference <m>x = 2\pi r \implies r = \frac{x}{2\pi}</m>. Area <m>A_C = \pi(\frac{x}{2\pi})^2 = \frac{x^2}{4\pi}</m>.</p></li>
+        <li><p>Square: Perimeter <m>5-x = 4s \implies s = \frac{5-x}{4}</m>. Area <m>A_S = (\frac{5-x}{4})^2 = \frac{(5-x)^2}{16}</m>.</p></li>
+      </ul>
+      Total Area <m>A(x) = \frac{x^2}{4\pi} + \frac{(5-x)^2}{16}</m> on interval <m>[0, 5]</m>.
+    </p>
+    <p>
+      The derivative is <m>A'(x) = \frac{x}{2\pi} - \frac{5-x}{8}</m>. Setting <m>A'(x)=0</m> gives a local minimum.
+      For absolute maximum on a closed interval, we check endpoints:
+      <ul>
+        <li><p>If <m>x=0</m> (all square): <m>A(0) = \frac{25}{16} = 1.5625</m>.</p></li>
+        <li><p>If <m>x=5</m> (all circle): <m>A(5) = \frac{25}{4\pi} \approx 1.989</m>.</p></li>
+      </ul>
+      To maximize the area, the entire wire should be used for the <term>circle</term> (<m>x=5</m>). No cut should be made.
+    </p>
+  </solution>
+</exercise>
+
+
+</page>
+</worksheet>

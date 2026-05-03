@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 04-Differentiation rules</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+   <exercise>
+  <title>Derivatives using Product and Quotient Rules</title>
+  <statement>
+    <p>
+      Find the derivatives of the following functions:
+      <ol marker="a.">
+        <li>
+          <p><m>y = (x^2 + 4x - 11)(7x^3 - \sqrt{x})</m></p>
+        </li>
+        <li>
+          <p><m>g(x) = \frac{\sin x}{x}</m></p>
+        </li>
+        <li>
+          <p><m>f(x) = \frac{1}{\csc x} + \frac{1}{\sin x}</m></p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a.">
+        <li>
+          <p>
+            Using the Product Rule <m>(uv)' = u'v + uv'</m>:
+            <me>y' = (2x + 4)(7x^3 - x^{1/2}) + (x^2 + 4x - 11)(21x^2 - \frac{1}{2\sqrt{x}})</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Using the Quotient Rule <m>(\frac{u}{v})' = \frac{u'v - uv'}{v^2}</m>:
+            <me>g'(x) = \frac{(\cos x)(x) - (\sin x)(1)}{x^2} = \frac{x\cos x - \sin x}{x^2}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Simplify first: <m>f(x) = \sin x + \csc x</m>.
+            <me>f'(x) = \cos x - \csc x \cot x</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Chain Rule Application</title>
+  <statement>
+    <p>
+      If <m>f(x) = g(h(x))</m> and given:
+      <me>f(4)=3, g(4)=3, h(4)=3, f'(3)=-1, f'(4)=1, g'(3)=-2, g'(4)=-5</me>
+      find <m>h'(4)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      By the Chain Rule, <m>f'(x) = g'(h(x)) \cdot h'(x)</m>.
+      Evaluating at <m>x=4</m>:
+      <me>f'(4) = g'(h(4)) \cdot h'(4)</me>
+      Substitute the known values <m>f'(4) = 1</m> and <m>h(4) = 3</m>:
+      <me>1 = g'(3) \cdot h'(4)</me>
+      Substitute <m>g'(3) = -2</m>:
+      <me>1 = -2 \cdot h'(4) \implies h'(4) = -\frac{1}{2}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Chain Rule and Simplification Exercises</title>
+  <statement>
+    <p>Find the derivatives of the following functions:</p>
+    <ol marker="a.">
+      <li><p><m>y = \sin 4x \cos 4x</m></p></li>
+      <li><p><m>y = \frac{\sec x}{\csc x}</m></p></li>
+      <li><p><m>g(x) = (3x - 1)^5 \sqrt{2x - 4}</m></p></li>
+      <li><p><m>r = \frac{1 + \cos x}{1 - \cos x}</m></p></li>
+      <li><p><m>y = (x^2 + \sin x)^3</m></p></li>
+      <li><p><m>y = (8 - 2x + x^2)e^{-x}</m></p></li>
+    </ol>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a.">
+        <li>
+          <p>Simplify using <m>\sin(2\theta) = 2\sin\theta\cos\theta</m>: <m>y = \frac{1}{2}\sin 8x</m>. Thus, <m>y' = 4\cos 8x</m>.</p>
+        </li>
+        <li>
+          <p>Simplify: <m>y = \frac{1/\cos x}{1/\sin x} = \tan x</m>. Thus, <m>y' = \sec^2 x</m>.</p>
+        </li>
+        <li>
+          <p>Product and Chain Rules: <m>g'(x) = 5(3x-1)^4(3)\sqrt{2x-4} + (3x-1)^5\frac{2}{2\sqrt{2x-4}} = 15(3x-1)^4\sqrt{2x-4} + \frac{(3x-1)^5}{\sqrt{2x-4}}</m>.</p>
+        </li>
+        <li>
+          <p>Quotient Rule: <m>r' = \frac{(-\sin x)(1-\cos x) - (1+\cos x)(\sin x)}{(1-\cos x)^2} = \frac{-2\sin x}{(1-\cos x)^2}</m>.</p>
+        </li>
+        <li>
+          <p>Chain Rule: <m>y' = 3(x^2 + \sin x)^2(2x + \cos x)</m>.</p>
+        </li>
+        <li>
+          <p>Product Rule: <m>y' = (-2 + 2x)e^{-x} + (8 - 2x + x^2)(-e^{-x}) = e^{-x}(2x - 2 - 8 + 2x - x^2) = e^{-x}(-x^2 + 4x - 10)</m>.</p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+  </page>
+
+
+</worksheet>

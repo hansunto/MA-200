@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 09- Antiderivatives, Newton's Method and Linearization</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+
+<exercise>
+  <title>Indefinite Trigonometric Integration</title>
+  <statement>
+    <p>
+      Evaluate the following integral: 
+      <me>\int \left( \sin(2x) + \cos\left(\frac{x}{2}\right) \right) \, dx</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the integration rules for trigonometric functions with linear arguments:
+      <md>
+        <mrow>\int \sin(2x) \, dx + \int \cos\left(\frac{x}{2}\right) \, dx \amp = -\frac{1}{2}\cos(2x) + \frac{1}{1/2}\sin\left(\frac{x}{2}\right) + C</mrow>
+        <mrow>\amp = -\frac{1}{2}\cos(2x) + 2\sin\left(\frac{x}{2}\right) + C</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Integration of Exponential Functions</title>
+  <statement>
+    <p>
+      Evaluate <m>\displaystyle \int (e^x - e^{-x})^2 \, dx</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, expand the integrand:
+      <me>(e^x - e^{-x})^2 = e^{2x} - 2e^x e^{-x} + e^{-2x} = e^{2x} - 2 + e^{-2x}</me>
+      Now, integrate term by term:
+      <md>
+        <mrow>\int (e^{2x} - 2 + e^{-2x}) \, dx \amp = \frac{1}{2}e^{2x} - 2x - \frac{1}{2}e^{-2x} + C</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>General Antiderivatives</title>
+  <statement>
+    <p>
+      Find the general antiderivative of <m>f(x) = -5x^5 + \frac{1}{x^2} - 3\sqrt{x}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Rewrite the function in power form: <m>f(x) = -5x^5 + x^{-2} - 3x^{1/2}</m>.
+      Apply the power rule for integration:
+      <md>
+        <mrow>F(x) \amp = -5\left(\frac{x^6}{6}\right) + \frac{x^{-1}}{-1} - 3\left(\frac{x^{3/2}}{3/2}\right) + C</mrow>
+        <mrow>\amp = -\frac{5}{6}x^6 - \frac{1}{x} - 2x\sqrt{x} + C</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Linearization and Approximation</title>
+  <statement>
+    <p>
+      Find the linearization of <m>f(x) = \sqrt{x+3}</m> at <m>a=1</m> and use it to approximate <m>\sqrt{3.98}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The linearization is <m>L(x) = f(a) + f'(a)(x-a)</m>.
+      <ol>
+        <li><p><m>f(1) = \sqrt{1+3} = 2</m></p></li>
+        <li><p><m>f'(x) = \frac{1}{2\sqrt{x+3}} \implies f'(1) = \frac{1}{2(2)} = \frac{1}{4}</m></p></li>
+      </ol>
+      Thus, <m>L(x) = 2 + 0.25(x-1)</m>.
+    </p>
+    <p>
+      To approximate <m>\sqrt{3.98}</m>, note that <m>x+3 = 3.98 \implies x = 0.98</m>:
+      <me>f(0.98) \approx L(0.98) = 2 + 0.25(0.98 - 1) = 2 + 0.25(-0.02) = 2 - 0.005 = 1.995</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Newton's Method</title>
+  <statement>
+    <p>
+      Starting with <m>x_1 = 2</m>, find the third approximation <m>x_3</m> to the root of <m>x^3 - 2x - 5 = 0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>f(x) = x^3 - 2x - 5</m>, so <m>f'(x) = 3x^2 - 2</m>. The formula is <m>x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}</m>.
+    </p>
+    <p>
+      First iteration (<m>n=1</m>):
+      <me>x_2 = 2 - \frac{f(2)}{f'(2)} = 2 - \frac{8-4-5}{12-2} = 2 - \frac{-1}{10} = 2.1</me>
+      Second iteration (<m>n=2</m>):
+      <me>x_3 = 2.1 - \frac{f(2.1)}{f'(2.1)} = 2.1 - \frac{(2.1)^3 - 2(2.1) - 5}{3(2.1)^2 - 2} \approx 2.1 - \frac{0.061}{11.23} \approx 2.09457</me>
+    </p>
+  </solution>
+</exercise>
+
+</page>
+</worksheet>

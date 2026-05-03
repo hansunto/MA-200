@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 11- Substitution and Area</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+
+    <exercise>
+      <title>Substitution Method</title>
+      <statement>
+        <p>
+          Evaluate <m>\displaystyle \int 2x \sqrt{1+x^2} \, dx</m> using substitution.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = 1 + x^2</m>, then <m>du = 2x \, dx</m>. Substituting into the integral gives:
+          <md>
+            <mrow>\int 2x \sqrt{1+x^2} \, dx \amp = \int \sqrt{u} \, du</mrow>
+            <mrow>\amp = \frac{2}{3} u^{3/2} + C\amp = \frac{2}{3} (1+x^2)^{3/2} + C</mrow>
+          </md>
+        </p>
+      </solution>
+    </exercise>
+<exercise>
+  <title>Integration by Substitution</title>
+  <statement>
+    <p>
+      Evaluate <m>\displaystyle \int x \sin(x^2) \, dx</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>u = x^2</m>. Then <m>du = 2x \, dx</m>, which implies <m>x \, dx = \frac{1}{2} du</m>.
+      Substituting these into the integral:
+      <md>
+        <mrow>\int x \sin(x^2) \, dx \amp = \int \sin(u) \cdot \frac{1}{2} \, du</mrow>
+        <mrow>\amp = \frac{1}{2} \int \sin(u) \, du</mrow>
+        <mrow>\amp = -\frac{1}{2} \cos(u) + C</mrow>
+      </md>
+      Substituting back <m>u = x^2</m>:
+      <me>-\frac{1}{2} \cos(x^2) + C</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Area Between Curves</title>
+  <statement>
+    <p>
+      Find the area of the region enclosed by the graphs of <m>y = x^2 - 2</m> and <m>y = x</m>.
+    </p>
+  </statement>
+  <solution>
+    <figure xml:id="fig-area-between-curves">
+  <caption>Region enclosed by <m>y = x</m> and <m>y = x^2 - 2</m></caption>
+  <image width="70%">
+    <description>A parabola opening upward and a diagonal line intersecting at (-1,-1) and (2,2), with the region between them shaded.</description>
+    <latex-image>
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines = middle,
+          xlabel = \(x\),
+          ylabel = \(y\),
+          xmin=-2.5, xmax=3,
+          ymin=-3, ymax=4,
+          grid=major,
+          samples=100
+        ]
+        <!-- Shade the region between the curves -->
+        <!--\addplot [
+            fill=gray, 
+            fill opacity=0.3, 
+            draw=none, 
+            domain=-1:2
+        ] {x} \closedcycle;
+        \addplot [
+            fill=white, 
+            draw=none, 
+            domain=-1:2
+        ] {x^2-2} \closedcycle;-->
+        
+        <!-- Plot the functions -->
+        \addplot [domain=-2:2.2, blue, thick] {x^2 - 2};
+        \addlegendentry{\(y = x^2 - 2\)}
+        \addplot [domain=-1.5:2.5, red, thick] {x};
+        \addlegendentry{\(y = x\)}
+
+        <!-- Intersection points -->
+        \addplot [only marks, mark=*, black] coordinates {(-1,-1) (2,2)};
+        \node [below left] at (axis cs:-1,-1) {\small (-1,-1)};
+        \node [above left] at (axis cs:2,2) {\small (2,2)};
+        \end{axis}
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+    <p>
+      First, find the points of intersection by setting the equations equal to each other:
+      <me>x^2 - 2 = x \implies x^2 - x - 2 = 0 \implies (x - 2)(x + 1) = 0</me>
+      The curves intersect at <m>x = -1</m> and <m>x = 2</m>.
+    </p>
+    <p>
+      On the interval <m>[-1, 2]</m>, the line <m>y = x</m> is above the parabola <m>y = x^2 - 2</m>. The area <m>A</m> is given by:
+      <md>
+        <mrow>A \amp = \int_{-1}^{2} [x - (x^2 - 2)] \, dx = \int_{-1}^{2} (-x^2 + x + 2) \, dx</mrow>
+        <mrow>\amp = \left[ -\frac{x^3}{3} + \frac{x^2}{2} + 2x \right]_{-1}^{2}</mrow>
+        <mrow>\amp = \left( -\frac{8}{3} + \frac{4}{2} + 4 \right) - \left( \frac{1}{3} + \frac{1}{2} - 2 \right)</mrow>
+        <mrow>\amp = \left( -\frac{8}{3} + 6 \right) - \left( \frac{1}{3} - \frac{3}{2} \right)</mrow>
+        <mrow>\amp = \frac{10}{3} - \left( -\frac{7}{6} \right) = \frac{20}{6} + \frac{7}{6} = \frac{27}{6} = 4.5</mrow>
+      </md>
+      The area of the region is <m>4.5</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+
+</page>
+</worksheet>

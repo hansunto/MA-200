@@ -6,9 +6,9 @@
   <xi:include href="./docinfo.ptx" />
   <!-- By creating a PreTeXt "book" for the course, we can split components into "chapters" -->
   <book>
-    <title>Course Name (change me)</title>
+    <title>Calculus 1</title>
 
-    <subtitle>MATH xxx Semester 20xx</subtitle>
+    <subtitle>MA-200</subtitle>
 
     <!-- Optional: include frontmatter with author info and date -->
     <xi:include href="./frontmatter.ptx" />
@@ -37,6 +37,26 @@
 
     </chapter>
 
+    <chapter xml:id="ch-review">
+      <title>Review</title>
+      <introduction>
+        <p>
+          This chapter contains review materials for the final exam.
+        </p>
+      </introduction> 
+      <xi:include href="./review/review01.ptx"/>
+      <xi:include href="./review/review02.ptx"/>
+      <xi:include href="./review/review03.ptx"/>
+      <xi:include href="./review/review04.ptx"/>
+      <xi:include href="./review/review05.ptx"/>
+      <xi:include href="./review/review06.ptx"/>
+      <xi:include href="./review/review07.ptx"/>
+      <xi:include href="./review/review08.ptx"/>
+      <xi:include href="./review/review09.ptx"/>
+      <xi:include href="./review/review10.ptx"/>
+      <xi:include href="./review/review11.ptx"/>
+      <!-- Add more review materials here --> 
+    </chapter>
 
     <chapter xml:id="activities">
       <title>In-Class Activities</title>

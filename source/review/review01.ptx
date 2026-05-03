@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 01- Limits of a Function</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.
+    </p>
+  </introduction>
+
+  <page>
+    <exercise>
+  <title>Limit Laws Evaluation</title>
+  <statement>
+    <p>
+      Suppose <m>\lim_{x \to 1} f(x) = 2</m> and <m>\lim_{x \to 1} g(x) = -1</m>. Find
+      <me>\lim_{x \to 1} \left( \frac{2f(x)}{3g(x) + 1} + f(x) \right)</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the limit laws for sums, quotients, and scalar multiples:
+      <md>
+        <mrow>\lim_{x \to 1} \left( \frac{2f(x)}{3g(x) + 1} + f(x) \right) \amp = \frac{2 \lim_{x \to 1} f(x)}{3 \lim_{x \to 1} g(x) + 1} + \lim_{x \to 1} f(x)</mrow>
+        <mrow>\amp = \frac{2(2)}{3(-1) + 1} + 2</mrow>
+        <mrow>\amp = \frac{4}{-2} + 2 = -2 + 2 = 0</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Rationalizing Limits</title>
+  <statement>
+    <p>
+      Find <m>\displaystyle \lim_{x \to 1} \frac{x - 1}{\sqrt{x} - 1}</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Direct substitution results in the indeterminate form <m>0/0</m>. We rationalize the denominator:
+      <md>
+        <mrow>\lim_{x \to 1} \frac{x - 1}{\sqrt{x} - 1} \cdot \frac{\sqrt{x} + 1}{\sqrt{x} + 1} \amp = \lim_{x \to 1} \frac{(x - 1)(\sqrt{x} + 1)}{x - 1}</mrow>
+        <mrow>\amp = \lim_{x \to 1} (\sqrt{x} + 1)</mrow>
+        <mrow>\amp = \sqrt{1} + 1 = 2</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Composition and Domain</title>
+  <statement>
+    <p>
+      If <m>f(x) = \sqrt{x}</m> and <m>g(x) = x^2 - 1</m>, find <m>(f \circ g)(x)</m> and its domain.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The composition is:
+      <me>(f \circ g)(x) = f(g(x)) = \sqrt{x^2 - 1}</me>
+      For the domain, we require the radicand to be non-negative:
+      <me>x^2 - 1 \ge 0 \implies x^2 \ge 1 \implies |x| \ge 1</me>
+      The domain in interval notation is <m>(-\infty, -1] \cup [1, \infty)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Trigonometric Limits at Infinity</title>
+  <statement>
+    <p>
+      Find <m>\displaystyle \lim_{x \to \infty} x \sin\left(\frac{1}{x}\right)</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>t = 1/x</m>. As <m>x \to \infty</m>, <m>t \to 0^+</m>.
+      The limit becomes:
+      <me>\lim_{t \to 0^+} \frac{1}{t} \sin(t) = \lim_{t \to 0^+} \frac{\sin(t)}{t}</me>
+      Using the fundamental trigonometric limit, the result is <m>1</m>.
+    </p>
+  </solution>
+</exercise>
+
+  </page>
+
+
+</worksheet>

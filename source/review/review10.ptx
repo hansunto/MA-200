@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 10- Definite Integrals and Area</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+
+    <exercise>
+  <title>Definite Integration</title>
+  <statement>
+    <p>
+      Evaluate <m>\displaystyle \int^1_0 (1-x^2) \, dx</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the Fundamental Theorem of Calculus:
+      <md>
+        <mrow>\int^1_0 (1-x^2) \, dx \amp = \left[ x - \frac{x^3}{3} \right]_0^1</mrow>
+        <mrow>\amp = \left( 1 - \frac{1}{3} \right) - (0 - 0) = \frac{2}{3}</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Indefinite Integration of Power Functions</title>
+  <statement>
+    <p>
+      Evaluate <m>\displaystyle \int (x^2 + x^{-2}) \, dx</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Applying the power rule term by term:
+      <md>
+        <mrow>\int (x^2 + x^{-2}) \, dx \amp = \frac{x^{2+1}}{2+1} + \frac{x^{-2+1}}{-2+1} + C</mrow>
+        <mrow>\amp = \frac{x^3}{3} - \frac{1}{x} + C</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Properties of Definite Integrals</title>
+  <statement>
+    <p>
+      If <m>\displaystyle \int^4_0 f(x) \, dx = 2</m> and <m>\displaystyle \int^0_6 f(x) \, dx = -5</m>, find <m>\displaystyle \int^6_4 f(x) \, dx</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we use the property <m>\int^a_b f(x) \, dx = -\int^b_a f(x) \, dx</m> to find:
+      <me>\int^6_0 f(x) \, dx = -\int^0_6 f(x) \, dx = -(-5) = 5</me>
+      Using the additive property of intervals:
+      <me>\int^6_0 f(x) \, dx = \int^4_0 f(x) \, dx + \int^6_4 f(x) \, dx</me>
+      Substitute the known values:
+      <me>5 = 2 + \int^6_4 f(x) \, dx \implies \int^6_4 f(x) \, dx = 3</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Properties of Sigma Notation</title>
+  <statement>
+    <p>
+      Suppose that <m>\displaystyle \sum^{100}_{k=1} a_k = -3</m> and <m>\displaystyle \sum^{100}_{k=1} b_k = 2</m>. Find the value of:
+      <me>\sum^{100}_{k=1} (b_k - 2a_k + 1)</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the linearity properties of summation:
+      <me>\sum^{100}_{k=1} b_k - 2\sum^{100}_{k=1} a_k + \sum^{100}_{k=1} 1</me>
+      Substitute the given sums and note that <m>\sum_{k=1}^n c = nc</m>:
+      <md>
+        <mrow>\amp = (2) - 2(-3) + (100 \cdot 1)</mrow>
+        <mrow>\amp = 2 + 6 + 100 = 108</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+</page>
+</worksheet>

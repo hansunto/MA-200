@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 06-Related Rates</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+<exercise>
+  <title>Derivative of Inverse Trigonometric Functions</title>
+  <statement>
+    <p>
+      Find the derivative of <m>f(x) = \arcsin(2 - x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the chain rule and the formula <m>\frac{d}{du}(\arcsin u) = \frac{1}{\sqrt{1-u^2}}</m>:
+      <me>f'(x) = \frac{1}{\sqrt{1 - (2 - x)^2}} \cdot \frac{d}{dx}(2 - x)</me>
+      <me>f'(x) = \frac{-1}{\sqrt{1 - (4 - 4x + x^2)}} = \frac{-1}{\sqrt{4x - x^2 - 3}}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Related Rates: Sliding Ladder</title>
+  <statement>
+    <p>
+      A 50 ft ladder is placed against a large building. The base of the ladder is resting on an oil spill, and it slips at the rate of 3 ft. per minute. Find the rate of change of the height of the top of the ladder above the ground at the instant when the base of the ladder is 40 ft. from the base of the building.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Let <m>x</m> be the distance from the building and <m>y</m> be the height. The ladder length is constant at <m>50</m>.
+      By the Pythagorean theorem: <m>x^2 + y^2 = 50^2</m>.
+    </p>
+    <p>
+      Differentiating with respect to time <m>t</m>: 
+      <me>2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{x}{y}\frac{dx}{dt}</me>
+      Given <m>x = 40</m> and <m>\frac{dx}{dt} = 3</m>. At this instant, <m>y = \sqrt{50^2 - 40^2} = 30</m>.
+      <me>\frac{dy}{dt} = -\frac{40}{30}(3) = -4 \text{ ft/min}</me>
+      The height is decreasing at a rate of 4 ft/min.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Related Rates: Conical Tank</title>
+  <statement>
+    <p>
+      Water runs into a conical tank at the rate of 9 ft<m>^3</m>/min. The tank stands point down and has a height of 10 ft and a base radius of 5 ft. How fast is the water level rising when the water is 6 ft deep?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The volume of a cone is <m>V = \frac{1}{3}\pi r^2 h</m>.
+      Using similar triangles: <m>\frac{r}{h} = \frac{5}{10} \implies r = \frac{h}{2}</m>.
+      Substitute <m>r</m> into the volume formula:
+      <me>V = \frac{1}{3}\pi \left(\frac{h}{2}\right)^2 h = \frac{\pi}{12}h^3</me>
+    </p>
+    <p>
+      Differentiating with respect to <m>t</m>:
+      <me>\frac{dV}{dt} = \frac{\pi}{4}h^2 \frac{dh}{dt}</me>
+      Given <m>\frac{dV}{dt} = 9</m> and <m>h = 6</m>:
+      <me>9 = \frac{\pi}{4}(6^2) \frac{dh}{dt} \implies 9 = 9\pi \frac{dh}{dt} \implies \frac{dh}{dt} = \frac{1}{\pi} \text{ ft/min}</me>
+    </p>
+  </solution>
+</exercise>
+
+</page>
+</worksheet>

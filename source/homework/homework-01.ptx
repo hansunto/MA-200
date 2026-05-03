@@ -10,12 +10,19 @@
 
   <page>
     <exercise>
-      <statement>
-        <p>
-          This is the first homework exercise.
-        </p>
-      </statement>
-    </exercise>
+
+  <statement>
+    <p>
+      This is a sample exercise for Homework 01.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      This is a sample solution for Homework 01.
+    </p>  
+  </solution>
+</exercise>
+
 
   </page>
 </worksheet>

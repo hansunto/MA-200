@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 02- Limits of a Function</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+   
+    <exercise>
+  <title>Limits at Infinity</title>
+  <statement>
+    <p>
+      Find <m>\displaystyle \lim_{x \to \infty} \frac{3x^2 - 1}{2x^2 - 4x + 3}</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the limit at infinity of a rational function, we divide the numerator and denominator by the highest power of <m>x</m> in the denominator, which is <m>x^2</m>:
+      <md>
+        <mrow>\lim_{x \to \infty} \frac{3x^2 - 1}{2x^2 - 4x + 3} \amp = \lim_{x \to \infty} \frac{\frac{3x^2}{x^2} - \frac{1}{x^2}}{\frac{2x^2}{x^2} - \frac{4x}{x^2} + \frac{3}{x^2}}</mrow>
+        <mrow>\amp = \lim_{x \to \infty} \frac{3 - \frac{1}{x^2}}{2 - \frac{4}{x} + \frac{3}{x^2}}</mrow>
+      </md>
+      As <m>x \to \infty</m>, the terms <m>\frac{1}{x^2}</m>, <m>\frac{4}{x}</m>, and <m>\frac{3}{x^2}</m> all approach <m>0</m>. Thus:
+      <me>\frac{3 - 0}{2 - 0 + 0} = \frac{3}{2}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Derivative by Definition</title>
+  <statement>
+    <p>
+      By using the <term>definition</term>, find the derivative of <m>f(x) = \frac{1}{x}</m> for <m>x \neq 0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The definition of the derivative is <m>f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}</m>.
+      <md>
+        <mrow>f'(x) \amp = \lim_{h \to 0} \frac{\frac{1}{x+h} - \frac{1}{x}}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{1}{h} \left( \frac{x - (x+h)}{x(x+h)} \right)</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{1}{h} \left( \frac{-h}{x(x+h)} \right)</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{-1}{x(x+h)}</mrow>
+        <mrow>\amp = -\frac{1}{x^2}</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Continuity of a Piecewise Function</title>
+  <statement>
+    <p>
+      Consider the function <m>f</m> defined as follows:
+      <me>
+        f(x) = \begin{cases} 
+        x \amp \text{for } x \lt 1 \\
+        -x + 1 \amp \text{for } x \ge 1
+        \end{cases}
+      </me>
+      Is <m>f(x)</m> continuous at <m>x=1</m>? Why or why not.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      A function is continuous at <m>x=c</m> if <m>\lim_{x \to c} f(x) = f(c)</m>. We check the one-sided limits at <m>x=1</m>:
+      <ol>
+        <li><p><m>\displaystyle \lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} (x) = 1</m></p></li>
+        <li><p><m>\displaystyle \lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} (-x + 1) = -1 + 1 = 0</m></p></li>
+      </ol>
+      Since the left-hand limit (<m>1</m>) does not equal the right-hand limit (<m>0</m>), the limit <m>\lim_{x \to 1} f(x)</m> does not exist. Therefore, <m>f(x)</m> is <term>not continuous</term> at <m>x=1</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Slope of a Tangent Line</title>
+  <statement>
+    <p>
+      Find the slope of the tangent line to the curve <m>g(x) = \sqrt{x}</m> at <m>x=4</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The slope of the tangent line is the derivative <m>g'(4)</m>. 
+      First, find the general derivative using the power rule:
+      <me>g(x) = x^{1/2} \implies g'(x) = \frac{1}{2}x^{-1/2} = \frac{1}{2\sqrt{x}}</me>
+      Now, evaluate at <m>x=4</m>:
+      <me>g'(4) = \frac{1}{2\sqrt{4}} = \frac{1}{2(2)} = \frac{1}{4}</me>
+      The slope of the tangent line is <m>1/4</m>.
+    </p>
+  </solution>
+</exercise>
+
+
+  </page>
+
+
+</worksheet>

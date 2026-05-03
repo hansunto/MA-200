@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet>
+  <title>Review 03-Introduction to Derivatives</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Prepare neatly written solutions to the following problems. 
+      Show all relevant work and use proper notation/terminology. 
+      <!--Submit these problems as a single PDF. Be sure your file is readable before submitting! -->
+      Calculators should NOT be used.   
+    </p>
+  </introduction>
+
+  <page>
+   <exercise>
+  <title>Differentiation of Polynomial and Radical Expressions</title>
+  <statement>
+    <p>
+      Find the derivatives of the following functions:
+      <ol marker="a.">
+        <li>
+          <p>
+            <m>p(x) = \sqrt{x} - \sqrt{2} + x^2 - \pi^2</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>y = \displaystyle \frac{x^3 + 5x^2 - 2}{x^2}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a.">
+        <li>
+          <p>
+            Rewrite the radical as a power: <m>p(x) = x^{1/2} - \sqrt{2} + x^2 - \pi^2</m>. Note that <m>\sqrt{2}</m> and <m>\pi^2</m> are constants, so their derivatives are <m>0</m>.
+            <me>p'(x) = \frac{1}{2}x^{-1/2} + 2x = \frac{1}{2\sqrt{x}} + 2x</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            First, simplify the expression by dividing each term in the numerator by <m>x^2</m>:
+            <me>y = \frac{x^3}{x^2} + \frac{5x^2}{x^2} - \frac{2}{x^2} = x + 5 - 2x^{-2}</me>
+            Now, differentiate using the power rule:
+            <me>y' = 1 + 0 - 2(-2x^{-3}) = 1 + \frac{4}{x^3}</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Higher Order Derivatives</title>
+  <statement>
+    <p>
+      Find the <term>first and second derivatives</term> of <m>\displaystyle y = 3x^3 - \frac{1}{x}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Rewrite the function: <m>y = 3x^3 - x^{-1}</m>.
+    </p>
+    <p>
+      The first derivative is:
+      <me>y' = 3(3x^2) - (-1x^{-2}) = 9x^2 + \frac{1}{x^2}</me>
+    </p>
+    <p>
+      To find the second derivative, differentiate <m>y' = 9x^2 + x^{-2}</m>:
+      <me>y'' = 9(2x) + (-2x^{-3}) = 18x - \frac{2}{x^3}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Differentiability of the Absolute Value Function</title>
+  <statement>
+    <p>
+      Show that <m>f(x) = |x|</m> is not differentiable at <m>0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To show <m>f(x)</m> is not differentiable at <m>x=0</m>, we check the limit definition of the derivative:
+      <me>f'(0) = \lim_{h \to 0} \frac{f(0+h) - f(0)}{h} = \lim_{h \to 0} \frac{|h| - 0}{h} = \lim_{h \to 0} \frac{|h|}{h}</me>
+      We examine the one-sided limits:
+      <ul>
+        <li><p>From the right (<m>h \gt 0</m>): <m>\displaystyle \lim_{h \to 0^+} \frac{h}{h} = 1</m></p></li>
+        <li><p>From the left (<m>h \lt 0</m>): <m>\displaystyle \lim_{h \to 0^-} \frac{-h}{h} = -1</m></p></li>
+      </ul>
+      Since the one-sided limits are not equal, the limit does not exist. Thus, <m>f(x)</m> is <term>not differentiable</term> at <m>x=0</m>.
+    </p>
+  </solution>
+</exercise>
+
+  </page>
+
+
+</worksheet>

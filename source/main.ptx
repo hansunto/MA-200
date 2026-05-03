@@ -31,6 +31,9 @@
         </p>
       </introduction>
 
+      <xi:include href="./notes/limitschex.ptx"/>
+      
+      <!-- Add more xi:include files here to include them in the main course -->
       <xi:include href="./notes/week01.ptx"/>
       <xi:include href="./notes/week02.ptx"/>
       <!-- etc. -->

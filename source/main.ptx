@@ -21,7 +21,23 @@
       <!-- Other documents could go here, like a schedule, project description, etc. -->
     </chapter>
 
-    <chapter xml:id="course-notes">
+    <chapter xml:id="ch-Limits-and-Derivatives">
+      <title>Limits and Derivatives</title>
+      <introduction>
+        <p>
+          This chapter contains materials related to limits and derivatives, including lecture notes, activities, and homework.
+        </p>
+      </introduction>
+        <xi:include href="./notes/11introlimits.ptx"/>
+      
+        <!-- Include lecture notes, activities, and homework related to limits and derivatives -->
+      
+    
+      </chapter>
+
+
+
+   <!----> <chapter xml:id="course-notes">
       <title>Course Notes</title>
 
       <introduction>
@@ -38,7 +54,7 @@
       <xi:include href="./notes/week02.ptx"/>
       <!-- etc. -->
 
-    </chapter>
+    </chapter>-->
 
     <chapter xml:id="ch-review">
       <title>Review</title>

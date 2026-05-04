@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    
+<section xml:id="sec-limits-concept">
+<title>Introduction to Limits</title>
+            
+<p>
+Consider the function <m>f(x) = 3x+5</m>. What happens as <m>x \to 1</m>?
+We say that <m>\displaystyle\lim_{x\to 1} (3x+5) = </m>.
+</p>
+
+<solution>
+  <p>
+    To find <m>\displaystyle\lim_{x\to 1} (3x+5)</m>, we examine the function's behavior as <m>x</m> approaches <m>1</m> from both sides:
+  </p>
+  <p>
+    <ul>
+      <li>
+        <p>
+          <term>From the left:</term> Let <m>x = 0.999999</m>.
+          <me>f(0.999999) = 3(0.999999) + 5 = 2.999997 + 5 = 7.999997</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <term>From the right:</term> Let <m>x = 1.000001</m>.
+          <me>f(1.000001) = 3(1.000001) + 5 = 3.000003 + 5 = 8.000003</me>
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    As <m>x</m> gets closer to <m>1</m> from both directions, <m>f(x)</m> approaches <m>8</m>. 
+    Therefore, we say that <m>\displaystyle\lim_{x\to 1} (3x+5) = 8</m>.
+  </p>
+  
+  <figure xml:id="fig-limit-intro-graph">
+    <caption>Graph of <m>f(x) = 3x+5</m> near <m>x=1</m></caption>
+    <image xml:id="graph-3x5">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            axis lines = middle,
+            xlabel = $x$,
+            ylabel = {$f(x)$},
+            xmin=0.5, xmax=1.5,
+            ymin=6, ymax=10,
+            xtick={1},
+            ytick={8},
+            grid=both
+          ]
+          \addplot [domain=0.5:1.5, blue, thick] {3*x+5};
+          \addplot[only marks, mark=*, red] coordinates {(1,8)};
+          \draw[dashed] (axis cs:1,0) -- (axis cs:1,8);
+          \draw[dashed] (axis cs:0,8) -- (axis cs:1,8);
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+</solution>
+
+<example xml:id="example-polynomial-limit">
+<title>Limit of a Polynomial</title>
+    <statement>
+    <p>Find <m>\displaystyle\lim_{x\to 2} (3x^2+2x-1)</m>. Justify your answer.</p>
+    </statement>
+ <solution>
+    <p>
+    Since <m>f(x) = 3x^2+2x-1</m> is a polynomial, it is continuous everywhere. 
+    We can find the limit by direct substitution:
+    <me>3(2)^2 + 2(2) - 1 = 3(4) + 4 - 1 = 12 + 4 - 1 = 15</me>.
+    </p>
+</solution>
+</example>
+
+<example xml:id="example-numerical-approach">
+<title>Numerical Exploration of a Hole</title>
+   <statement>
+    <p>
+    Consider the function: <m>\displaystyle f(x)=\frac{x^3-1}{x-1}</m>. 
+    What happens to <m>f(x)</m> as <m>x</m> gets closer to <m>1</m>?
+    </p>
+    <table xml:id="table-limit-values">
+       <title>Numerical Values for <m>f(x)</m> near <m>x=1</m></title>
+       <tabular halign="center">
+           <row header ="yes" bottom="minor" top="minor" left="minor" right="major">
+               <cell><m>x</m></cell>
+               <cell><m>f(x)</m></cell>
+               <cell><m>x</m></cell>
+               <cell><m>f(x)</m></cell>
+           </row>
+           <row left="minor" right="minor" top="minor" bottom="minor">
+               <cell>1.1</cell>
+               <cell>3.31</cell>
+               <cell>0.9</cell>
+               <cell>2.71</cell>
+           </row>
+           <row left="minor" right="minor" top="minor" bottom="minor">
+               <cell>1.01</cell>
+               <cell>3.0301</cell>
+               <cell>0.99</cell>
+               <cell>2.9701</cell>
+           </row>
+           <row left="minor" right="minor" top="minor" bottom="minor">
+               <cell>1.001</cell>
+               <cell>3.003</cell>
+               <cell>0.999</cell>
+               <cell>2.997</cell>
+           </row>
+           <row left="minor" right="minor" top="minor" bottom="minor">
+               <cell>1.0001</cell>
+               <cell>3.0003</cell>
+               <cell>0.9999</cell>
+               <cell>2.9997</cell>
+           </row>
+       </tabular>
+    </table>
+    </statement>
+<solution>
+   <p>
+       As <m>x</m> approaches 1 from both the left and the right, the values of <m>f(x)</m> 
+       approach 3. Note that <m>f(1)</m> is undefined, but the limit exists.
+   </p>
+</solution>
+
+</example>
+<p>
+Our algebraic result is the same as our numeric result. Our algebraic result is based on the following idea for what a limit should mean: 
+<m>f(x)</m> gets closer and closer to <m>L</m> as <m>x</m> gets closer to <m>a</m>. 
+The variable <m>x</m> never actually reaches <m>a</m>.
+</p>
+
+<exercise xml:id="ex-rational-limit-direct">
+  <title>Direct Substitution in a Rational Function</title>
+    <statement>
+   <p>Calculate <m>\displaystyle\lim_{x\to 2}\frac{x+3}{x+6}</m></p>
+    </statement>
+   <solution>
+   <p>By direct substitution: <m>\frac{2+3}{2+6} = \frac{5}{8}</m>.</p>
+    </solution>
+</exercise>
+
+ <exercise xml:id="ex-rational-limit-factor">
+   <title>Limit by Factoring</title>
+     <statement>
+   <p>Calculate <m>\displaystyle\lim_{x\to 1}\frac{x^2+x-2}{x^2-1}</m></p>
+     </statement>
+     <solution>
+   <p>
+    Factoring numerator and denominator: 
+    <me>\lim_{x\to 1}\frac{(x+2)(x-1)}{(x+1)(x-1)} = \lim_{x\to 1}\frac{x+2}{x+1} = \frac{3}{2}</me>.
+   </p>
+     </solution>
+</exercise>
+
+<statement>
+   <p>
+       Consider the function <m>f</m> given by <m>f(x)=2x+3</m>. 
+       Suppose we select input numbers <m>x</m> closer and closer to the number 4. 
+       As input numbers approach 4 from either side, <m>2x+3</m> approaches 11.
+   </p>
+   <p>
+       An arrow, <m>\rightarrow</m>, represents "approaches from either side." 
+       The statement above can be written: <m>x \to 4, 2x+3 \to 11</m>.
+       The number 11 is the limit, abbreviated as: <m>\displaystyle\lim_{x \rightarrow 4}(2x+3)=11</m>.
+   </p>
+   <figure xml:id="fig-limit-graph">
+       <caption>Graph of <m>f(x) = 2x+3</m> near <m>x=4</m></caption>
+       <image xml:id="graph-2x3">
+           <latex-image>
+               \begin{tikzpicture}
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = $x$,
+      ylabel = {$f(x)$},
+      xmin=0, xmax=6,
+      ymin=0, ymax=15,
+      grid=both
+  ]
+  \addplot [domain=0:6, blue, thick] {2*x+3};
+  \addplot[dashed] coordinates {(4,0) (4,11)};
+  \addplot[dashed] coordinates {(0,11) (4,11)};
+  \addplot[only marks, mark=*, red] coordinates {(4,11)};
+  \node[label={180:{11}},circle,fill,inner sep=1pt] at (axis cs:0,11) {};
+  \node[label={270:{4}},circle,fill,inner sep=1pt] at (axis cs:4,0) {};
+  \end{axis}
+               \end{tikzpicture}
+           </latex-image>
+       </image>
+   </figure>
+</statement>
+            
+<definition xml:id="def-limit">
+<title>Limit of a Function</title>
+  <statement>
+   <p>
+       A function <m>f</m> has the <term>limit</term> as <m>x</m> approaches <m>a</m> from either side, written 
+       <me>\displaystyle\lim_{x \rightarrow a}f(x)=L</me>,
+       if all values <m>f(x)</m> for <m>f</m> are close to <m>L</m> for values of <m>x</m> 
+       that are arbitrarily close, but not equal, to <m>a</m>.
+   </p>
+    </statement>
+</definition>
+
+<p>
+Limits and function values are not the same thing. Finding a limit is not the same 
+as computing <m>f(x)</m>; a limit looks at where the function is going as it gets 
+close to a point, not where it actually is at that point  <m>x=a</m> .
+</p>
+
+<example xml:id="example-dynamic-limit">
+    <title>The Dynamic Limit Process</title>
+                <statement>
+   <p>Find <m>\displaystyle\lim_{x\to 1} \frac{(x^2-1)}{(x-1)}</m></p>
+                </statement>
+                <solution>
+   <p>
+       The value <m>f(1)</m> is undefined (<m>0/0</m>). However, factoring gives 
+       <m>\frac{(x-1)(x+1)}{x-1} = x+1</m>. As <m>x \to 1</m>, <m>x+1 \to 2</m>.
+   </p>
+                </solution>
+            </example>
+<p>
+The value <m> f(1) </m> of the function is not defined, since plugging in 
+<m> x=1 </m> produces <m> 0/0,</m> whereas the values at points close to
+ 1, like <m> 1.01,.999,1.000045,</m> and so on, are perfectly well defined 
+ and can be calculated. And if you calculate several of them you will notice 
+ a definite trend: as you get closer to 1, the values converge to 2. 
+</p>
+<p>
+    Suppose <m>f(x)</m> is given, and we would like to find the limit as <m> x\to a</m>. 
+    We are interested in points in a neighborhood around <m> a,</m> points 
+    close to <m> a,</m> points <m> x</m> such that <m> x-a</m> is a very small 
+    (positive or negative) number. 
+    If we call this small number <m> h</m>, 
+    then this simply means 
+</p>
+<me> x - a = h , \text{ or equivalently } x = a + h </me>
+<p>
+    Note that even if <m> f(x) </m> is undefined at <m> x=a </m> (like the example above), 
+    these nearby values can be calculated and the limit determined. 
+</p>
+ <p>
+We can use the <m>h</m>-method to find limits by looking at a neighborhood <m>x = a + h</m> 
+as <m>h \to 0</m>.
+</p>
+
+ <assemblage xml:id="h-method-formula">
+   <p><me>\displaystyle\lim_{x\to a} f(x)=\lim_{h\to 0} f(a+h)</me></p>
+</assemblage>
+
+<remark xml:id="remark-limit-steps">
+    <title>The Three-Step Process for Limits</title>
+    <p>
+        The dynamic process of taking a limit is here broken down into three natural steps. 
+        To find <m>\displaystyle\lim_{x\to a} f(x)</m>:
+    </p>
+    <p>
+        <ol marker="1">
+            <li>
+                <p>
+                    <term>Evaluate</term> <m>f(a+h)</m>, a generic value at a nearby point.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <term>Simplify</term>, collect terms, cancel common factors in the numerator and denominator, 
+                    and otherwise reorganize this expression into a convenient form.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <term>Limit</term>: Now we can let <m>h \to 0</m>. The remainders small (h) go to zero, 
+                    and we are left with the residual limit:
+                    <me>\lim_{x \to a} f(x)</me>
+                </p>
+            </li>
+        </ol>
+    </p>
+</remark>
+ <example xml:id="example-h-method-example">
+    <title>Using the <m>h</m>-method</title>
+    <statement>
+   <p>Find <m>\displaystyle\lim_{x\to 3} \frac{(x^2-3x)}{(2x-6)}</m></p>
+    </statement>
+ <solution>
+  <p>
+    <ol marker="1">
+      <li>
+        <p>
+          Notice that <m>f(3)</m> is undefined, since both numerator and denominator zero out at <m>x=3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Plug in <m>x=3+h</m> into the expression for <m>f(x)</m>:
+          <me>f(3+h) = \frac{(3+h)^2-3(3+h)}{2(3+h)-6} = \frac{9+6h+h^2-9-3h}{6+2h-6}</me>
+          with minimal expansion of terms.
+        </p>
+      </li>
+      <li>
+        <p>
+          Simplify and put into useful form:
+          <me>f(3+h) = \frac{3h+ h^2}{2h} = \frac{3+h}{2}</me>
+          after canceling <m>h</m> in the numerator and denominator.
+        </p>
+      </li>
+      <li>
+        <p>
+          Now let <m>h \to 0</m> without any problem:
+          <me>\lim_{h \to 0} f(3+h) = \lim_{h \to 0} \frac{3+h}{2} = \frac{3}{2}</me>
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    Therefore,
+    <me>\lim_{x \to 3} \frac{x^2-3x}{2x-6} = \frac{3}{2}</me>
+  </p>
+</solution>
+
+</example>
+
+<exercise xml:id="ex-complex-rational">
+  <title>Rational Function with Quadratic Factors</title>
+  <statement>
+    <p>
+      If <m>f(x)=\frac{2x^2-5x+2}{5x^2-7x-6}</m>, find <m>\displaystyle\lim_{x \to 2} f(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <term>Method 1: Factoring</term>
+    </p>
+    <p>
+      First, we factor the quadratic expressions in the numerator and denominator:
+      <me>\frac{(2x-1)(x-2)}{(5x+3)(x-2)}</me>
+      Since we are taking the limit as <m>x \to 2</m>, we assume <m>x \neq 2</m> and cancel the common factor:
+      <me>\lim_{x \to 2} \frac{2x-1}{5x+3} = \frac{2(2)-1}{5(2)+3} = \frac{3}{13}</me>
+    </p>
+
+    <p>
+      <term>Method 2: The <m>h</m>-method</term>
+    </p>
+    <p>
+      Let <m>x = 2 + h</m>. As <m>x \to 2</m>, <m>h \to 0</m>. We substitute into the function:
+      <md>
+        <mrow>f(2+h) \amp = \frac{2(2+h)^2 - 5(2+h) + 2}{5(2+h)^2 - 7(2+h) - 6}</mrow>
+        <mrow>\amp = \frac{2(4 + 4h + h^2) - 10 - 5h + 2}{5(4 + 4h + h^2) - 14 - 7h - 6}</mrow>
+        <mrow>\amp = \frac{8 + 8h + 2h^2 - 10 - 5h + 2}{20 + 20h + 5h^2 - 14 - 7h - 6}</mrow>
+        <mrow>\amp = \frac{3h + 2h^2}{13h + 5h^2} = \frac{h(3 + 2h)}{h(13 + 5h)}</mrow>
+      </md>
+      Canceling the <m>h</m> and letting <m>h \to 0</m>:
+      <me>\lim_{h \to 0} \frac{3 + 2h}{13 + 5h} = \frac{3 + 0}{13 + 0} = \frac{3}{13}</me>
+    </p>
+  </solution>
+</exercise>
+
+ </section>
+    

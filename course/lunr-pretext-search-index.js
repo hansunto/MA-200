@@ -19,6 +19,123 @@ var ptx_lunr_docs = [
   "body": "course name (MATH xxx, section xxx) "
 },
 {
+  "id": "sec-limits-concept",
+  "level": "1",
+  "url": "sec-limits-concept.html",
+  "type": "Section",
+  "number": "",
+  "title": "Introduction to Limits",
+  "body": " Introduction to Limits  Consider the function . What happens as ? We say that .   To find , we examine the function's behavior as approaches from both sides:      From the left: Let .      From the right: Let .      As gets closer to from both directions, approaches . Therefore, we say that .   Graph of near        Limit of a Polynomial   Find . Justify your answer.    Since is a polynomial, it is continuous everywhere. We can find the limit by direct substitution: .     Numerical Exploration of a Hole   Consider the function: . What happens to as gets closer to ?   Numerical Values for near          1.1  3.31  0.9  2.71    1.01  3.0301  0.99  2.9701    1.001  3.003  0.999  2.997    1.0001  3.0003  0.9999  2.9997       As approaches 1 from both the left and the right, the values of approach 3. Note that is undefined, but the limit exists.    Our algebraic result is the same as our numeric result. Our algebraic result is based on the following idea for what a limit should mean: gets closer and closer to as gets closer to . The variable never actually reaches .   Direct Substitution in a Rational Function   Calculate    By direct substitution: .     Limit by Factoring   Calculate    Factoring numerator and denominator: .     Consider the function given by . Suppose we select input numbers closer and closer to the number 4. As input numbers approach 4 from either side, approaches 11.  An arrow, , represents \"approaches from either side.\" The statement above can be written: . The number 11 is the limit, abbreviated as: .   Graph of near        Limit of a Function   A function has the limit as approaches from either side, written , if all values for are close to for values of that are arbitrarily close, but not equal, to .    Limits and function values are not the same thing. Finding a limit is not the same as computing ; a limit looks at where the function is going as it gets close to a point, not where it actually is at that point .   The Dynamic Limit Process   Find    The value is undefined ( ). However, factoring gives . As , .    The value of the function is not defined, since plugging in produces whereas the values at points close to 1, like and so on, are perfectly well defined and can be calculated. And if you calculate several of them you will notice a definite trend: as you get closer to 1, the values converge to 2.  Suppose is given, and we would like to find the limit as . We are interested in points in a neighborhood around points close to points such that is a very small (positive or negative) number. If we call this small number , then this simply means   Note that even if is undefined at (like the example above), these nearby values can be calculated and the limit determined.  We can use the -method to find limits by looking at a neighborhood as .      The Three-Step Process for Limits  The dynamic process of taking a limit is here broken down into three natural steps. To find :      Evaluate  , a generic value at a nearby point.     Simplify , collect terms, cancel common factors in the numerator and denominator, and otherwise reorganize this expression into a convenient form.     Limit : Now we can let . The remainders small (h) go to zero, and we are left with the residual limit:        Using the -method   Find       Notice that is undefined, since both numerator and denominator zero out at .    Plug in into the expression for : with minimal expansion of terms.    Simplify and put into useful form: after canceling in the numerator and denominator.    Now let without any problem:      Therefore,      Rational Function with Quadratic Factors   If , find .     Method 1: Factoring   First, we factor the quadratic expressions in the numerator and denominator: Since we are taking the limit as , we assume and cancel the common factor:    Method 2: The -method   Let . As , . We substitute into the function: Canceling the and letting :     "
+},
+{
+  "id": "sec-limits-concept-3-2",
+  "level": "2",
+  "url": "sec-limits-concept.html#sec-limits-concept-3-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "From the left: From the right: "
+},
+{
+  "id": "fig-limit-intro-graph",
+  "level": "2",
+  "url": "sec-limits-concept.html#fig-limit-intro-graph",
+  "type": "Figure",
+  "number": "1",
+  "title": "",
+  "body": " Graph of near     "
+},
+{
+  "id": "example-polynomial-limit",
+  "level": "2",
+  "url": "sec-limits-concept.html#example-polynomial-limit",
+  "type": "Example",
+  "number": "2",
+  "title": "Limit of a Polynomial.",
+  "body": " Limit of a Polynomial   Find . Justify your answer.    Since is a polynomial, it is continuous everywhere. We can find the limit by direct substitution: .   "
+},
+{
+  "id": "example-numerical-approach",
+  "level": "2",
+  "url": "sec-limits-concept.html#example-numerical-approach",
+  "type": "Example",
+  "number": "3",
+  "title": "Numerical Exploration of a Hole.",
+  "body": " Numerical Exploration of a Hole   Consider the function: . What happens to as gets closer to ?   Numerical Values for near          1.1  3.31  0.9  2.71    1.01  3.0301  0.99  2.9701    1.001  3.003  0.999  2.997    1.0001  3.0003  0.9999  2.9997       As approaches 1 from both the left and the right, the values of approach 3. Note that is undefined, but the limit exists.   "
+},
+{
+  "id": "ex-rational-limit-direct",
+  "level": "2",
+  "url": "sec-limits-concept.html#ex-rational-limit-direct",
+  "type": "Checkpoint",
+  "number": "5",
+  "title": "Direct Substitution in a Rational Function.",
+  "body": " Direct Substitution in a Rational Function   Calculate    By direct substitution: .   "
+},
+{
+  "id": "ex-rational-limit-factor",
+  "level": "2",
+  "url": "sec-limits-concept.html#ex-rational-limit-factor",
+  "type": "Checkpoint",
+  "number": "6",
+  "title": "Limit by Factoring.",
+  "body": " Limit by Factoring   Calculate    Factoring numerator and denominator: .   "
+},
+{
+  "id": "fig-limit-graph",
+  "level": "2",
+  "url": "sec-limits-concept.html#fig-limit-graph",
+  "type": "Figure",
+  "number": "7",
+  "title": "",
+  "body": " Graph of near     "
+},
+{
+  "id": "def-limit",
+  "level": "2",
+  "url": "sec-limits-concept.html#def-limit",
+  "type": "Definition",
+  "number": "8",
+  "title": "Limit of a Function.",
+  "body": " Limit of a Function   A function has the limit as approaches from either side, written , if all values for are close to for values of that are arbitrarily close, but not equal, to .   "
+},
+{
+  "id": "example-dynamic-limit",
+  "level": "2",
+  "url": "sec-limits-concept.html#example-dynamic-limit",
+  "type": "Example",
+  "number": "9",
+  "title": "The Dynamic Limit Process.",
+  "body": " The Dynamic Limit Process   Find    The value is undefined ( ). However, factoring gives . As , .   "
+},
+{
+  "id": "remark-limit-steps",
+  "level": "2",
+  "url": "sec-limits-concept.html#remark-limit-steps",
+  "type": "Remark",
+  "number": "10",
+  "title": "The Three-Step Process for Limits.",
+  "body": " The Three-Step Process for Limits  The dynamic process of taking a limit is here broken down into three natural steps. To find :      Evaluate  , a generic value at a nearby point.     Simplify , collect terms, cancel common factors in the numerator and denominator, and otherwise reorganize this expression into a convenient form.     Limit : Now we can let . The remainders small (h) go to zero, and we are left with the residual limit:      "
+},
+{
+  "id": "example-h-method-example",
+  "level": "2",
+  "url": "sec-limits-concept.html#example-h-method-example",
+  "type": "Example",
+  "number": "11",
+  "title": "Using the <span class=\"process-math\">\\(h\\)<\/span>-method.",
+  "body": " Using the -method   Find       Notice that is undefined, since both numerator and denominator zero out at .    Plug in into the expression for : with minimal expansion of terms.    Simplify and put into useful form: after canceling in the numerator and denominator.    Now let without any problem:      Therefore,    "
+},
+{
+  "id": "ex-complex-rational",
+  "level": "2",
+  "url": "sec-limits-concept.html#ex-complex-rational",
+  "type": "Checkpoint",
+  "number": "12",
+  "title": "Rational Function with Quadratic Factors.",
+  "body": " Rational Function with Quadratic Factors   If , find .     Method 1: Factoring   First, we factor the quadratic expressions in the numerator and denominator: Since we are taking the limit as , we assume and cancel the common factor:    Method 2: The -method   Let . As , . We substitute into the function: Canceling the and letting :    "
+},
+{
   "id": "notes-Limits-and-Continuity-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html",
@@ -32,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "1",
+  "number": "13",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -41,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "3",
+  "number": "15",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -50,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "4",
+  "number": "16",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -59,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "5",
+  "number": "17",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -68,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "6",
+  "number": "18",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -77,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "7",
+  "number": "19",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -86,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "8",
+  "number": "20",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

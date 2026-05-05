@@ -35,7 +35,7 @@ We say that <m>\displaystyle\lim_{x\to 1} (3x+5) = </m>.
   
   <figure xml:id="fig-limit-intro-graph">
     <caption>Graph of <m>f(x) = 3x+5</m> near <m>x=1</m></caption>
-    <image xml:id="graph-3x5">
+    <image xml:id="graph-3x5" width="60%">
       <latex-image>
         \begin{tikzpicture}
           \begin{axis}[
@@ -166,7 +166,7 @@ The variable <m>x</m> never actually reaches <m>a</m>.
    </p>
    <figure xml:id="fig-limit-graph">
        <caption>Graph of <m>f(x) = 2x+3</m> near <m>x=4</m></caption>
-       <image xml:id="graph-2x3">
+       <image xml:id="graph-2x3" width="60%">
            <latex-image>
                \begin{tikzpicture}
   \begin{axis}[

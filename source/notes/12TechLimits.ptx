@@ -3,7 +3,7 @@
 <section xml:id="sec-techniques-limits">
     <title>Techniques for Finding Limits</title>
 
-    <theorem xml:id="thm-limit-principles">
+<theorem xml:id="thm-limit-principles">
  <title>Limit Principles</title>
  <statement>
      <p>
@@ -21,35 +21,45 @@
   </ol>
      </p>
  </statement>
-    </theorem>
+</theorem>
 
-    <exercise xml:id="exe-substitution">
+<p>
+    We can therefore use ordinary substitution and algebraic simplification, 
+    such as canceling out common factors in the numerator and denominator of 
+    a rational function, to help us determine limits. 
+</p>
+
+    <example xml:id="example-substitution">
  <title>Limit by Direct Substitution</title>
  <statement>
      <p>Find <m>\displaystyle\lim_{x\to 2}\frac{x^3+1}{2x}</m>.</p>
  </statement>
  <solution>
      <p>
-  By direct substitution:
+  By direct substitution: to calculate this limit we "plug in" 2 in place of <m>x</m> to get: 
   <me>\lim_{x\to 2}\frac{x^3+1}{2x} = \frac{2^3+1}{2(2)} = \frac{9}{4}</me>.
      </p>
  </solution>
-    </exercise>
+    </example>
 
-    <exercise xml:id="exe-factoring-negative">
+<example xml:id="example-factoring-negative">
  <title>Limit by Factoring</title>
  <statement>
      <p>Find <m>\displaystyle\lim_{x\to -3}\frac{x+3}{x^2-9}</m>.</p>
  </statement>
  <solution>
      <p>
-  Substituting <m>-3</m> gives <m>0/0</m>. We factor the denominator:
+        Here, when we "plug in" -3 we get <m>0/0</m>. 
+        We factor the denominator: this means that -3 is a root of both the numerator and 
+        the denominator. Hence we can factor out <m>x-(-3) = x+3</m>
+         from both the numerator and the denominator to get: 
+  
   <me>\lim_{x\to -3}\frac{x+3}{(x+3)(x-3)} = \lim_{x\to -3}\frac{1}{x-3} = \frac{1}{-3-3} = -\frac{1}{6}</me>.
      </p>
  </solution>
-    </exercise>
+</example>
 
-    <example xml:id="ex-conjugate-simple">
+<example xml:id="ex-conjugate-simple">
  <title>Limit involving Square Roots</title>
  <statement>
      <p>If <m>f(x)= \frac{x-9}{\sqrt{x}-3}</m>, find <m>\displaystyle\lim_{x \to 9} f(x)</m>.</p>
@@ -60,9 +70,9 @@
   <me>\lim_{x \to 9} \frac{(\sqrt{x}-3)(\sqrt{x}+3)}{\sqrt{x}-3} = \lim_{x \to 9} (\sqrt{x}+3) = \sqrt{9}+3 = 6</me>.
      </p>
  </solution>
-    </example>
+</example>
 
-    <example xml:id="ex-various-techniques">
+<exercise xml:id="ex-various-techniques">
  <title>Mixed Limit Practice</title>
  <statement>
      <p>
@@ -83,9 +93,9 @@
   </ol>
      </p>
  </solution>
-    </example>
+</exercise>
 
-    <example xml:id="ex-piecewise">
+<exercise xml:id="ex-piecewise">
  <title>Limit of a Piecewise Function</title>
  <statement>
      <p>
@@ -94,14 +104,139 @@
      </p>
  </statement>
  <solution>
+  <figure xml:id="fig-limit-g">
+  <caption>The graph of <m> g(x)</m> showing the limit as <m>x \to 1</m>.</caption>
+  <image width="60%">
+    <description>A line with slope 1 and y-intercept 1. There is an open circle at (1,2) and a solid dot at (1, pi).</description>
+    <latex-image>
+      \begin{tikzpicture}
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = \(x\),
+            ylabel = \(y\),
+            xmin = -0.5, xmax = 2.5,
+            ymin = 0, ymax = 4,
+            xtick = {1},
+            ytick = {1, 2, 3.14159},
+            yticklabels = {1, 2, \(\pi\)},
+          ]
+          <!-- The linear pieces -->
+          \addplot[domain=-0.5:0.92, thick, blue] {x+1};
+          \addplot[domain=1.08:2.5, thick, blue] {x+1};
+          
+          <!-- The removable discontinuity (hole) -->
+          \draw[thick, blue] (axis cs:1,2) circle [radius=2pt];
+          
+          <!-- The actual function value at x=1 -->
+          \addplot[only marks, mark=*, blue] coordinates {(1, 3.14159)};
+          
+          <!-- Optional dashed lines to show limit -->
+          \draw[dashed] (axis cs:1,0) -- (axis cs:1,2);
+          \draw[dashed] (axis cs:0,2) -- (axis cs:1,2);
+        \end{axis}
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
      <p>
   The limit depends only on values near 1, not at <m>x=1</m>.
   As <m>x \to 1</m>, <m>g(x) = x+1</m>. Thus, the limit is <m>1+1=2</m>.
      </p>
  </solution>
-    </example>
+</exercise>
 
-    <theorem xml:id="thm-sandwich">
+<exercises xml:id="exercises-limits-algebraic">
+    <title>Limits Practice</title>
+
+    <!-- Problem 1 -->
+    <exercise>
+        <statement>
+            <p>Evaluate <m>\displaystyle \lim_{h \rightarrow 0}\frac{4-\sqrt{16+h}}{h}</m></p>
+        </statement>
+        <solution>
+            <p>
+                Direct substitution results in the indeterminate form <m>0/0</m>. 
+                We rationalize the numerator by multiplying by the conjugate:
+                <me>
+                    \lim_{h \to 0} \frac{4-\sqrt{16+h}}{h} \cdot \frac{4+\sqrt{16+h}}{4+\sqrt{16+h}} = \lim_{h \to 0} \frac{16-(16+h)}{h(4+\sqrt{16+h})}
+                </me>
+                Simplifying the numerator gives <m>-h</m>, which allows us to cancel the <m>h</m> in the denominator:
+                <me>
+                    \lim_{h \to 0} \frac{-h}{h(4+\sqrt{16+h})} = \lim_{h \to 0} \frac{-1}{4+\sqrt{16+h}} = -\frac{1}{8}
+                </me>
+            </p>
+        </solution>
+    </exercise>
+
+    <!-- Problem 2 -->
+    <exercise>
+        <statement>
+            <p>Evaluate <m>\displaystyle \lim_{x \rightarrow 5^+}(\sqrt{x^2-25}+3)</m></p>
+        </statement>
+        <solution>
+            <p>
+                Since we are approaching 5 from the right (<m>x > 5</m>), the term <m>x^2 - 25</m> is a small positive number. 
+                We can evaluate this by direct substitution:
+                <me>\sqrt{5^2-25}+3 = \sqrt{0}+3 = 3</me>
+            </p>
+        </solution>
+    </exercise>
+
+    <!-- Problem 3 -->
+    <exercise>
+        <statement>
+            <p>Evaluate <m>\displaystyle \lim_{h \rightarrow 0}\left(\frac{1}{h}\right)\left(\frac{1}{\sqrt{1+h}}-1\right)</m></p>
+        </statement>
+        <solution>
+            <p>
+                First, find a common denominator for the second term:
+                <me>\frac{1}{h} \left( \frac{1 - \sqrt{1+h}}{\sqrt{1+h}} \right)</me>
+                Now multiply by the conjugate <m>1 + \sqrt{1+h}</m>:
+                <me>
+                    \lim_{h \to 0} \frac{1-(1+h)}{h\sqrt{1+h}(1+\sqrt{1+h})} = \lim_{h \to 0} \frac{-h}{h\sqrt{1+h}(1+\sqrt{1+h})}
+                </me>
+                Canceling <m>h</m> and substituting <m>h=0</m> gives <m>\frac{-1}{1(1+1)} = -1/2</m>.
+            </p>
+        </solution>
+    </exercise>
+
+    <!-- Problem 4 -->
+    <exercise>
+        <statement>
+            <p>Evaluate <m>\displaystyle \lim_{x \rightarrow 1}\left(\frac{x^2}{x-1}-\frac{1}{x-1}\right)</m></p>
+        </statement>
+        <solution>
+            <p>
+                Combine the fractions over the common denominator:
+                <me>\lim_{x \to 1} \frac{x^2-1}{x-1}</me>
+                Factor the difference of squares:
+                <me>\lim_{x \to 1} \frac{(x-1)(x+1)}{x-1} = \lim_{x \to 1} (x+1) = 2</me>
+            </p>
+        </solution>
+    </exercise>
+
+    <!-- Problem 5 -->
+    <exercise>
+        <statement>
+            <p>Evaluate <m>\displaystyle \lim_{x \rightarrow 1} \frac{x-1}{\sqrt{x+3}-2}</m></p>
+        </statement>
+        <solution>
+            <p>
+                Multiply by the conjugate of the denominator, <m>\sqrt{x+3}+2</m>:
+                <me>
+                    \lim_{x \to 1} \frac{(x-1)(\sqrt{x+3}+2)}{(x+3)-4} = \lim_{x \to 1} \frac{(x-1)(\sqrt{x+3}+2)}{x-1}
+                </me>
+                Canceling <m>x-1</m> leaves <m>\sqrt{1+3}+2 = 4</m>.
+            </p>
+        </solution>
+    </exercise>
+</exercises>
+
+
+
+
+<theorem xml:id="thm-sandwich">
  <title>Sandwich Theorem (Squeeze Theorem)</title>
  <statement>
      <p>
@@ -111,7 +246,7 @@
  </statement>
     </theorem>
 
-    <exercise xml:id="exe-sandwich-sine">
+    <example xml:id="example-sandwich-sine">
  <title>Proving a Limit with Sandwich Theorem</title>
  <statement>
      <p>Prove <m>\displaystyle \lim_{x \to 0}x^2\sin\left(\frac{1}{x^2}\right)=0</m>.</p>
@@ -125,5 +260,24 @@
   Since <m>\lim_{x \to 0}(-x^2) = 0</m> and <m>\lim_{x \to 0}(x^2) = 0</m>, by the Sandwich Theorem, the limit is 0.
      </p>
  </solution>
-    </exercise>
+    </example>
+
+    <exercise>
+    <statement>
+        <p>Find <m>\displaystyle\lim_{x\to 0} |x|</m> by using the Sandwich Theorem.</p>
+    </statement>
+    <solution>
+        <p>
+            For any real number <m>x</m>, we know the absolute value is bounded by:
+            <me>-|x| \le x \le |x|</me>
+            To squeeze <m>|x|</m> specifically, we use the fact that:
+            <me>0 \le |x| \le |x|</me>
+            More formally, observe that for all <m>x</m> in the interval <m>(-1, 1)</m>:
+            <me>0 \le |x| \le \sqrt{x^2}</me>
+            Since <m>\displaystyle\lim_{x \to 0} 0 = 0</m> and <m>\displaystyle\lim_{x \to 0} \sqrt{x^2} = 0</m>, by the Sandwich Theorem:
+            <me>\lim_{x \to 0} |x| = 0</me>
+        </p>
+    </solution>
+</exercise>
+
 </section>

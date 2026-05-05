@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file contains the lecture notes for the section on continuity. -->
+  <section xml:id="continuity-definition">
+    <title>Definition of Continuity</title>
+ <introduction>
+    <p>
+      In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.
+    </p>
+  </introduction>
+    <p>
+      A function f is said to be continuous at a point x = a if the following three conditions are satisfied:
+    </p>
+
+    <ol>
+      <li>The function f is defined at x = a, meaning that f(a) exists.</li>
+      <li>The limit of f(x) as x approaches a exists, meaning that lim(x→a) f(x) exists.</li>
+      <li>The limit of f(x) as x approaches a is equal to the value of the function at that point, meaning that lim(x→a) f(x) = f(a).</li>
+    </ol>
+
+    <p>
+      If a function is continuous at every point in its domain, we say that the function is continuous on its domain.
+    </p>
+  </section>
+
+  <!-- Add more sections here to cover other aspects of continuity, such as types of discontinuities, properties of continuous functions, etc. -->      

@@ -82,7 +82,7 @@ We say that <m>\displaystyle\lim_{x\to 1} (3x+5) = </m>.
     </p>
     <table xml:id="table-limit-values">
        <title>Numerical Values for <m>f(x)</m> near <m>x=1</m></title>
-       <tabular halign="center">
+       <tabular halign="center" right="minor" left="minor" top="minor" bottom="minor">
            <row header ="yes" bottom="minor" top="minor" left="minor" right="major">
                <cell><m>x</m></cell>
                <cell><m>f(x)</m></cell>

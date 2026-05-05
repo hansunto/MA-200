@@ -29,6 +29,7 @@
         </p>
       </introduction>
         <xi:include href="./notes/11introlimits.ptx"/>
+        <xi:include href="./notes/12TechLimits.ptx"/>
       
         <!-- Include lecture notes, activities, and homework related to limits and derivatives -->
       

@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Techniques for Finding Limits",
-  "body": " Techniques for Finding Limits   Limit Principles   If and , then:     Sum\/Difference:   Product:   Quotient:  , if   If is a polynomial,  If is a rational function, (where defined)       Limit by Direct Substitution   Find .    By direct substitution: .     Limit by Factoring   Find .    Substituting gives . We factor the denominator: .     Limit involving Square Roots   If , find .    Factoring the numerator as a difference of squares: .     Mixed Limit Practice   Find the following limits:                   Limit of a Piecewise Function   Find where     The limit depends only on values near 1, not at . As , . Thus, the limit is .     Sandwich Theorem (Squeeze Theorem)   Suppose near (except possibly at ). If , then .     Proving a Limit with Sandwich Theorem   Prove .    Since , we have: Multiply by (which is always ): Since and , by the Sandwich Theorem, the limit is 0.    "
+  "body": " Techniques for Finding Limits   Limit Principles   If and , then:     Sum\/Difference:   Product:   Quotient:  , if   If is a polynomial,  If is a rational function, (where defined)      We can therefore use ordinary substitution and algebraic simplification, such as canceling out common factors in the numerator and denominator of a rational function, to help us determine limits.   Limit by Direct Substitution   Find .    By direct substitution: to calculate this limit we \"plug in\" 2 in place of to get: .     Limit by Factoring   Find .    Here, when we \"plug in\" -3 we get . We factor the denominator: this means that -3 is a root of both the numerator and the denominator. Hence we can factor out from both the numerator and the denominator to get: .     Limit involving Square Roots   If , find .    Factoring the numerator as a difference of squares: .     Mixed Limit Practice   Find the following limits:                   Limit of a Piecewise Function   Find where      The graph of showing the limit as .   A line with slope 1 and y-intercept 1. There is an open circle at (1,2) and a solid dot at (1, pi).     The limit depends only on values near 1, not at . As , . Thus, the limit is .     Limits Practice     Evaluate    Direct substitution results in the indeterminate form . We rationalize the numerator by multiplying by the conjugate: Simplifying the numerator gives , which allows us to cancel the in the denominator:        Evaluate    Since we are approaching 5 from the right ( ), the term is a small positive number. We can evaluate this by direct substitution:        Evaluate    First, find a common denominator for the second term: Now multiply by the conjugate : Canceling and substituting gives .       Evaluate    Combine the fractions over the common denominator: Factor the difference of squares:        Evaluate    Multiply by the conjugate of the denominator, : Canceling leaves .      Sandwich Theorem (Squeeze Theorem)   Suppose near (except possibly at ). If , then .     Proving a Limit with Sandwich Theorem   Prove .    Since , we have: Multiply by (which is always ): Since and , by the Sandwich Theorem, the limit is 0.      Find by using the Sandwich Theorem.    For any real number , we know the absolute value is bounded by: To squeeze specifically, we use the fact that: More formally, observe that for all in the interval : Since and , by the Sandwich Theorem:     "
 },
 {
   "id": "thm-limit-principles",
@@ -154,22 +154,22 @@ var ptx_lunr_docs = [
   "body": " Limit Principles   If and , then:     Sum\/Difference:   Product:   Quotient:  , if   If is a polynomial,  If is a rational function, (where defined)     "
 },
 {
-  "id": "exe-substitution",
+  "id": "example-substitution",
   "level": "2",
-  "url": "sec-techniques-limits.html#exe-substitution",
-  "type": "Checkpoint",
+  "url": "sec-techniques-limits.html#example-substitution",
+  "type": "Example",
   "number": "14",
   "title": "Limit by Direct Substitution.",
-  "body": " Limit by Direct Substitution   Find .    By direct substitution: .   "
+  "body": " Limit by Direct Substitution   Find .    By direct substitution: to calculate this limit we \"plug in\" 2 in place of to get: .   "
 },
 {
-  "id": "exe-factoring-negative",
+  "id": "example-factoring-negative",
   "level": "2",
-  "url": "sec-techniques-limits.html#exe-factoring-negative",
-  "type": "Checkpoint",
+  "url": "sec-techniques-limits.html#example-factoring-negative",
+  "type": "Example",
   "number": "15",
   "title": "Limit by Factoring.",
-  "body": " Limit by Factoring   Find .    Substituting gives . We factor the denominator: .   "
+  "body": " Limit by Factoring   Find .    Here, when we \"plug in\" -3 we get . We factor the denominator: this means that -3 is a root of both the numerator and the denominator. Hence we can factor out from both the numerator and the denominator to get: .   "
 },
 {
   "id": "ex-conjugate-simple",
@@ -184,7 +184,7 @@ var ptx_lunr_docs = [
   "id": "ex-various-techniques",
   "level": "2",
   "url": "sec-techniques-limits.html#ex-various-techniques",
-  "type": "Example",
+  "type": "Checkpoint",
   "number": "17",
   "title": "Mixed Limit Practice.",
   "body": " Mixed Limit Practice   Find the following limits:                 "
@@ -193,28 +193,145 @@ var ptx_lunr_docs = [
   "id": "ex-piecewise",
   "level": "2",
   "url": "sec-techniques-limits.html#ex-piecewise",
-  "type": "Example",
+  "type": "Checkpoint",
   "number": "18",
   "title": "Limit of a Piecewise Function.",
-  "body": " Limit of a Piecewise Function   Find where     The limit depends only on values near 1, not at . As , . Thus, the limit is .   "
+  "body": " Limit of a Piecewise Function   Find where      The graph of showing the limit as .   A line with slope 1 and y-intercept 1. There is an open circle at (1,2) and a solid dot at (1, pi).     The limit depends only on values near 1, not at . As , . Thus, the limit is .   "
+},
+{
+  "id": "exercises-limits-algebraic-2",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exercises-limits-algebraic-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Evaluate    Direct substitution results in the indeterminate form . We rationalize the numerator by multiplying by the conjugate: Simplifying the numerator gives , which allows us to cancel the in the denominator:    "
+},
+{
+  "id": "exercises-limits-algebraic-3",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exercises-limits-algebraic-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Evaluate    Since we are approaching 5 from the right ( ), the term is a small positive number. We can evaluate this by direct substitution:    "
+},
+{
+  "id": "exercises-limits-algebraic-4",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exercises-limits-algebraic-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Evaluate    First, find a common denominator for the second term: Now multiply by the conjugate : Canceling and substituting gives .   "
+},
+{
+  "id": "exercises-limits-algebraic-5",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exercises-limits-algebraic-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Evaluate    Combine the fractions over the common denominator: Factor the difference of squares:    "
+},
+{
+  "id": "exercises-limits-algebraic-6",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exercises-limits-algebraic-6",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Evaluate    Multiply by the conjugate of the denominator, : Canceling leaves .   "
 },
 {
   "id": "thm-sandwich",
   "level": "2",
   "url": "sec-techniques-limits.html#thm-sandwich",
   "type": "Theorem",
-  "number": "19",
+  "number": "20",
   "title": "Sandwich Theorem (Squeeze Theorem).",
   "body": " Sandwich Theorem (Squeeze Theorem)   Suppose near (except possibly at ). If , then .   "
 },
 {
-  "id": "exe-sandwich-sine",
+  "id": "example-sandwich-sine",
   "level": "2",
-  "url": "sec-techniques-limits.html#exe-sandwich-sine",
-  "type": "Checkpoint",
-  "number": "20",
+  "url": "sec-techniques-limits.html#example-sandwich-sine",
+  "type": "Example",
+  "number": "21",
   "title": "Proving a Limit with Sandwich Theorem.",
   "body": " Proving a Limit with Sandwich Theorem   Prove .    Since , we have: Multiply by (which is always ): Since and , by the Sandwich Theorem, the limit is 0.   "
+},
+{
+  "id": "sec-techniques-limits-12",
+  "level": "2",
+  "url": "sec-techniques-limits.html#sec-techniques-limits-12",
+  "type": "Checkpoint",
+  "number": "22",
+  "title": "",
+  "body": "  Find by using the Sandwich Theorem.    For any real number , we know the absolute value is bounded by: To squeeze specifically, we use the fact that: More formally, observe that for all in the interval : Since and , by the Sandwich Theorem:    "
+},
+{
+  "id": "sec-one-sided-limits",
+  "level": "1",
+  "url": "sec-one-sided-limits.html",
+  "type": "Section",
+  "number": "",
+  "title": "One-sided Limits",
+  "body": " One-sided Limits   The phrase from either side used in the preceding definition is very important. The notation we use to indicate the limit from the right and to indicate the limit from the left. If both limits exist and are the same , then we say the limit exists.    Let . First let's look at the meaning of the limit of as approaches 5 from the right. This is written as: In , the means we are approaching 5 from the positive side. This side is to the right of 5 on a number line. Now as approaches 5 from the right, note that is always positive. The limit from the right is of course zero, but the fact that is always positive will be used later on.  Now, the limit of as approaches 5 from the left is the same notion. It is written as: The sign means we are approaching 5 from the negative side. This side is to the left of 5 on a number line. Note that as approaches 5 from the left, is always negative. The limit from the left is of course zero, but we will make use of the fact that is always negative later on.    Two-sided Limit   A function has the limit  as approaches if the limit from the left exists and the limit from the right exists and both limits are . That is:       Show that does not exist.    To show that the two-sided limit does not exist, we evaluate the one-sided limits:   As approaches from the right ( ), the values of are positive and decreasing, so increases without bound:     As approaches from the left ( ), the values of are negative and increasing toward , so decreases without bound:      Since the one-sided limits are not equal (and do not approach a finite real number), the two-sided limit  does not exist .      Consider the function defined as follows: Graph the function and find each of the following limits, if they exist:         Graph of   A piecewise function with a line y=2x+2 for x less than 1 and y=2x-2 for x greater than or equal to 1.        Check one-sided limits at :  Since , the limit does not exist (DNE) .    At , we only use the first piece ( ):          Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :        Find .    Let . As , .     "
+},
+{
+  "id": "insight-one-sided-limits",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#insight-one-sided-limits",
+  "type": "Insight",
+  "number": "23",
+  "title": "",
+  "body": " The phrase from either side used in the preceding definition is very important. The notation we use to indicate the limit from the right and to indicate the limit from the left. If both limits exist and are the same , then we say the limit exists.  "
+},
+{
+  "id": "theorem-two-sided-limit",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#theorem-two-sided-limit",
+  "type": "Theorem",
+  "number": "24",
+  "title": "Two-sided Limit.",
+  "body": " Two-sided Limit   A function has the limit  as approaches if the limit from the left exists and the limit from the right exists and both limits are . That is:    "
+},
+{
+  "id": "example-limit-one-over-x",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#example-limit-one-over-x",
+  "type": "Example",
+  "number": "25",
+  "title": "",
+  "body": "  Show that does not exist.    To show that the two-sided limit does not exist, we evaluate the one-sided limits:   As approaches from the right ( ), the values of are positive and decreasing, so increases without bound:     As approaches from the left ( ), the values of are negative and increasing toward , so decreases without bound:      Since the one-sided limits are not equal (and do not approach a finite real number), the two-sided limit  does not exist .   "
+},
+{
+  "id": "sec-one-sided-limits-6",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-6",
+  "type": "Checkpoint",
+  "number": "26",
+  "title": "",
+  "body": "  Consider the function defined as follows: Graph the function and find each of the following limits, if they exist:         Graph of   A piecewise function with a line y=2x+2 for x less than 1 and y=2x-2 for x greater than or equal to 1.        Check one-sided limits at :  Since , the limit does not exist (DNE) .    At , we only use the first piece ( ):       "
+},
+{
+  "id": "sec-one-sided-limits-7",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-7",
+  "type": "Checkpoint",
+  "number": "28",
+  "title": "",
+  "body": "  Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :     "
+},
+{
+  "id": "sec-one-sided-limits-8",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-8",
+  "type": "Checkpoint",
+  "number": "29",
+  "title": "",
+  "body": "  Find .    Let . As , .    "
 },
 {
   "id": "notes-Limits-and-Continuity-chapter-exercises",
@@ -230,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "21",
+  "number": "30",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -239,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "23",
+  "number": "32",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -248,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "24",
+  "number": "33",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -257,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "25",
+  "number": "34",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -266,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "26",
+  "number": "35",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -275,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "27",
+  "number": "36",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -284,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "28",
+  "number": "37",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

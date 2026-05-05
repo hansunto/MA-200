@@ -277,7 +277,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "One-sided Limits",
-  "body": " One-sided Limits   The phrase from either side used in the preceding definition is very important. The notation we use to indicate the limit from the right and to indicate the limit from the left. If both limits exist and are the same , then we say the limit exists.    Let . First let's look at the meaning of the limit of as approaches 5 from the right. This is written as: In , the means we are approaching 5 from the positive side. This side is to the right of 5 on a number line. Now as approaches 5 from the right, note that is always positive. The limit from the right is of course zero, but the fact that is always positive will be used later on.  Now, the limit of as approaches 5 from the left is the same notion. It is written as: The sign means we are approaching 5 from the negative side. This side is to the left of 5 on a number line. Note that as approaches 5 from the left, is always negative. The limit from the left is of course zero, but we will make use of the fact that is always negative later on.    Two-sided Limit   A function has the limit  as approaches if the limit from the left exists and the limit from the right exists and both limits are . That is:       Show that does not exist.    To show that the two-sided limit does not exist, we evaluate the one-sided limits:   As approaches from the right ( ), the values of are positive and decreasing, so increases without bound:     As approaches from the left ( ), the values of are negative and increasing toward , so decreases without bound:      Since the one-sided limits are not equal (and do not approach a finite real number), the two-sided limit  does not exist .      Consider the function defined as follows: Graph the function and find each of the following limits, if they exist:         Graph of   A piecewise function with a line y=2x+2 for x less than 1 and y=2x-2 for x greater than or equal to 1.        Check one-sided limits at :  Since , the limit does not exist (DNE) .    At , we only use the first piece ( ):          Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :        Find .    Let . As , .     "
+  "body": " One-sided Limits   The phrase from either side used in the preceding definition is very important. The notation we use to indicate the limit from the right and to indicate the limit from the left. If both limits exist and are the same , then we say the limit exists.    Let . First let's look at the meaning of the limit of as approaches 5 from the right. This is written as: In , the means we are approaching 5 from the positive side. This side is to the right of 5 on a number line. Now as approaches 5 from the right, note that is always positive. The limit from the right is of course zero, but the fact that is always positive will be used later on.  Now, the limit of as approaches 5 from the left is the same notion. It is written as: The sign means we are approaching 5 from the negative side. This side is to the left of 5 on a number line. Note that as approaches 5 from the left, is always negative. The limit from the left is of course zero, but we will make use of the fact that is always negative later on.    Two-sided Limit   A function has the limit  as approaches if the limit from the left exists and the limit from the right exists and both limits are . That is:       Show that does not exist.    To show that the two-sided limit does not exist, we evaluate the one-sided limits:   As approaches from the right ( ), the values of are positive and decreasing, so increases without bound:     As approaches from the left ( ), the values of are negative and increasing toward , so decreases without bound:      Since the one-sided limits are not equal (and do not approach a finite real number), the two-sided limit  does not exist .      Consider the function defined as follows: Graph the function and find each of the following limits, if they exist:         Graph of   A piecewise function with a line y=2x+2 for x less than 1 and y=2x-2 for x greater than or equal to 1.        Check one-sided limits at :  Since , the limit does not exist (DNE) .    At , we only use the first piece ( ):          Sketch the graph of an example of a function that satisfies all the given conditions.     , , .         , , , , , and is undefined.         Possible solutions for the graphs:     Conditions: , , and .        Conditions: , , , , , and is undefined.           Use the graph of the function below to find the indicated limits.    A piecewise function with a jump at x=2 and a hole at x=4.                            By inspecting the graph:    (The one-sided limits are not equal.)    (The limit exists even though .)        If , find:     We rewrite the function by using the definition of absolute value: Now we evaluate the limits:   From the left: .    From the right: .    Two-sided limit: Since , the limit  does not exist (DNE) .        Special Trigonometric Limit        Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :        Find .    Let . As , .       Find .    Direct substitution results in the indeterminate form . To evaluate this, we multiply the numerator and denominator by the conjugate : Using the Pythagorean identity , we rewrite the limit: Applying the special limit : Thus, .    "
 },
 {
   "id": "insight-one-sided-limits",
@@ -307,22 +307,22 @@ var ptx_lunr_docs = [
   "body": "  Show that does not exist.    To show that the two-sided limit does not exist, we evaluate the one-sided limits:   As approaches from the right ( ), the values of are positive and decreasing, so increases without bound:     As approaches from the left ( ), the values of are negative and increasing toward , so decreases without bound:      Since the one-sided limits are not equal (and do not approach a finite real number), the two-sided limit  does not exist .   "
 },
 {
-  "id": "sec-one-sided-limits-6",
+  "id": "example-piecewise-limit",
   "level": "2",
-  "url": "sec-one-sided-limits.html#sec-one-sided-limits-6",
-  "type": "Checkpoint",
+  "url": "sec-one-sided-limits.html#example-piecewise-limit",
+  "type": "Example",
   "number": "26",
   "title": "",
   "body": "  Consider the function defined as follows: Graph the function and find each of the following limits, if they exist:         Graph of   A piecewise function with a line y=2x+2 for x less than 1 and y=2x-2 for x greater than or equal to 1.        Check one-sided limits at :  Since , the limit does not exist (DNE) .    At , we only use the first piece ( ):       "
 },
 {
-  "id": "sec-one-sided-limits-7",
+  "id": "example-sketch-one-sided-limits",
   "level": "2",
-  "url": "sec-one-sided-limits.html#sec-one-sided-limits-7",
-  "type": "Checkpoint",
+  "url": "sec-one-sided-limits.html#example-sketch-one-sided-limits",
+  "type": "Example",
   "number": "28",
   "title": "",
-  "body": "  Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :     "
+  "body": "  Sketch the graph of an example of a function that satisfies all the given conditions.     , , .         , , , , , and is undefined.         Possible solutions for the graphs:     Conditions: , , and .        Conditions: , , , , , and is undefined.        "
 },
 {
   "id": "sec-one-sided-limits-8",
@@ -331,7 +331,43 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "29",
   "title": "",
+  "body": "  Use the graph of the function below to find the indicated limits.    A piecewise function with a jump at x=2 and a hole at x=4.                            By inspecting the graph:    (The one-sided limits are not equal.)    (The limit exists even though .)     "
+},
+{
+  "id": "sec-one-sided-limits-9",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-9",
+  "type": "Checkpoint",
+  "number": "31",
+  "title": "",
+  "body": "  If , find:     We rewrite the function by using the definition of absolute value: Now we evaluate the limits:   From the left: .    From the right: .    Two-sided limit: Since , the limit  does not exist (DNE) .      "
+},
+{
+  "id": "example-sin-over-x",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#example-sin-over-x",
+  "type": "Example",
+  "number": "32",
+  "title": "",
+  "body": "  Show that .    We use the special limit . Multiply the numerator and denominator to match the argument :     "
+},
+{
+  "id": "sec-one-sided-limits-12",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-12",
+  "type": "Checkpoint",
+  "number": "33",
+  "title": "",
   "body": "  Find .    Let . As , .    "
+},
+{
+  "id": "sec-one-sided-limits-13",
+  "level": "2",
+  "url": "sec-one-sided-limits.html#sec-one-sided-limits-13",
+  "type": "Checkpoint",
+  "number": "34",
+  "title": "",
+  "body": "  Find .    Direct substitution results in the indeterminate form . To evaluate this, we multiply the numerator and denominator by the conjugate : Using the Pythagorean identity , we rewrite the limit: Applying the special limit : Thus, .   "
 },
 {
   "id": "notes-Limits-and-Continuity-chapter-exercises",
@@ -347,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "30",
+  "number": "35",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -356,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "32",
+  "number": "37",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -365,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "33",
+  "number": "38",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -374,7 +410,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "34",
+  "number": "39",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -383,7 +419,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "35",
+  "number": "40",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -392,7 +428,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "36",
+  "number": "41",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -401,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "37",
+  "number": "42",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

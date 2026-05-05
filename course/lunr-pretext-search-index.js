@@ -136,6 +136,87 @@ var ptx_lunr_docs = [
   "body": " Rational Function with Quadratic Factors   If , find .     Method 1: Factoring   First, we factor the quadratic expressions in the numerator and denominator: Since we are taking the limit as , we assume and cancel the common factor:    Method 2: The -method   Let . As , . We substitute into the function: Canceling the and letting :    "
 },
 {
+  "id": "sec-techniques-limits",
+  "level": "1",
+  "url": "sec-techniques-limits.html",
+  "type": "Section",
+  "number": "",
+  "title": "Techniques for Finding Limits",
+  "body": " Techniques for Finding Limits   Limit Principles   If and , then:     Sum\/Difference:   Product:   Quotient:  , if   If is a polynomial,  If is a rational function, (where defined)       Limit by Direct Substitution   Find .    By direct substitution: .     Limit by Factoring   Find .    Substituting gives . We factor the denominator: .     Limit involving Square Roots   If , find .    Factoring the numerator as a difference of squares: .     Mixed Limit Practice   Find the following limits:                   Limit of a Piecewise Function   Find where     The limit depends only on values near 1, not at . As , . Thus, the limit is .     Sandwich Theorem (Squeeze Theorem)   Suppose near (except possibly at ). If , then .     Proving a Limit with Sandwich Theorem   Prove .    Since , we have: Multiply by (which is always ): Since and , by the Sandwich Theorem, the limit is 0.    "
+},
+{
+  "id": "thm-limit-principles",
+  "level": "2",
+  "url": "sec-techniques-limits.html#thm-limit-principles",
+  "type": "Theorem",
+  "number": "13",
+  "title": "Limit Principles.",
+  "body": " Limit Principles   If and , then:     Sum\/Difference:   Product:   Quotient:  , if   If is a polynomial,  If is a rational function, (where defined)     "
+},
+{
+  "id": "exe-substitution",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exe-substitution",
+  "type": "Checkpoint",
+  "number": "14",
+  "title": "Limit by Direct Substitution.",
+  "body": " Limit by Direct Substitution   Find .    By direct substitution: .   "
+},
+{
+  "id": "exe-factoring-negative",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exe-factoring-negative",
+  "type": "Checkpoint",
+  "number": "15",
+  "title": "Limit by Factoring.",
+  "body": " Limit by Factoring   Find .    Substituting gives . We factor the denominator: .   "
+},
+{
+  "id": "ex-conjugate-simple",
+  "level": "2",
+  "url": "sec-techniques-limits.html#ex-conjugate-simple",
+  "type": "Example",
+  "number": "16",
+  "title": "Limit involving Square Roots.",
+  "body": " Limit involving Square Roots   If , find .    Factoring the numerator as a difference of squares: .   "
+},
+{
+  "id": "ex-various-techniques",
+  "level": "2",
+  "url": "sec-techniques-limits.html#ex-various-techniques",
+  "type": "Example",
+  "number": "17",
+  "title": "Mixed Limit Practice.",
+  "body": " Mixed Limit Practice   Find the following limits:                 "
+},
+{
+  "id": "ex-piecewise",
+  "level": "2",
+  "url": "sec-techniques-limits.html#ex-piecewise",
+  "type": "Example",
+  "number": "18",
+  "title": "Limit of a Piecewise Function.",
+  "body": " Limit of a Piecewise Function   Find where     The limit depends only on values near 1, not at . As , . Thus, the limit is .   "
+},
+{
+  "id": "thm-sandwich",
+  "level": "2",
+  "url": "sec-techniques-limits.html#thm-sandwich",
+  "type": "Theorem",
+  "number": "19",
+  "title": "Sandwich Theorem (Squeeze Theorem).",
+  "body": " Sandwich Theorem (Squeeze Theorem)   Suppose near (except possibly at ). If , then .   "
+},
+{
+  "id": "exe-sandwich-sine",
+  "level": "2",
+  "url": "sec-techniques-limits.html#exe-sandwich-sine",
+  "type": "Checkpoint",
+  "number": "20",
+  "title": "Proving a Limit with Sandwich Theorem.",
+  "body": " Proving a Limit with Sandwich Theorem   Prove .    Since , we have: Multiply by (which is always ): Since and , by the Sandwich Theorem, the limit is 0.   "
+},
+{
   "id": "notes-Limits-and-Continuity-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html",
@@ -149,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "13",
+  "number": "21",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -158,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "15",
+  "number": "23",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -167,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "16",
+  "number": "24",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -176,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "17",
+  "number": "25",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -185,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "18",
+  "number": "26",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -194,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "19",
+  "number": "27",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -203,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "20",
+  "number": "28",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

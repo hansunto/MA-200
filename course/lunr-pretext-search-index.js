@@ -370,6 +370,15 @@ var ptx_lunr_docs = [
   "body": "  Find .    Direct substitution results in the indeterminate form . To evaluate this, we multiply the numerator and denominator by the conjugate : Using the Pythagorean identity , we rewrite the limit: Applying the special limit : Thus, .   "
 },
 {
+  "id": "continuity-definition",
+  "level": "1",
+  "url": "continuity-definition.html",
+  "type": "Section",
+  "number": "",
+  "title": "Definition of Continuity",
+  "body": " Definition of Continuity   In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.   A function f is said to be continuous at a point x = a if the following three conditions are satisfied:   The function f is defined at x = a, meaning that f(a) exists.  The limit of f(x) as x approaches a exists, meaning that lim(x→a) f(x) exists.  The limit of f(x) as x approaches a is equal to the value of the function at that point, meaning that lim(x→a) f(x) = f(a).   If a function is continuous at every point in its domain, we say that the function is continuous on its domain.  "
+},
+{
   "id": "notes-Limits-and-Continuity-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html",

@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- This file contains the lecture notes for the section on continuity. -->
   <section xml:id="continuity-definition">
-    <title>Definition of Continuity</title>
+    <title>Continuity</title>
  <introduction>
     <p>
       In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.
     </p>
   </introduction>
+<insight>
     <p>
-      A function f is said to be continuous at a point x = a if the following three conditions are satisfied:
+        The limit at a number <m>a</m> <em>does not depend</em> on the function value at <m>a</m>, 
+        even if that value, <m>f(a)</m>, exists. That is, whether or not a limit exists at <m>a</m> 
+        has <em>nothing</em> to do with the function value <m>f(a)</m>.
     </p>
+</insight>
 
-    <ol>
-      <li>The function f is defined at x = a, meaning that f(a) exists.</li>
-      <li>The limit of f(x) as x approaches a exists, meaning that lim(x→a) f(x) exists.</li>
-      <li>The limit of f(x) as x approaches a is equal to the value of the function at that point, meaning that lim(x→a) f(x) = f(a).</li>
-    </ol>
+<assemblage xml:id="note-continuity">
+    <title>Continuity at a point</title>
+    <p>
+        When the limit of a function is the same as its function value, it satisfies a condition 
+        called <term>continuity at a point</term>. Continuous functions do not have 
+        <q>jumps</q> or <q>holes</q> in their graphs.
+    </p>
+</assemblage>
+
+<definition xml:id="def-continuity-at-a-point">
+    <title>Continuity at a Point</title>
+    <statement>
+        <p>
+            A function <m>f</m> is said to be <term>continuous at a point</term> <m>x = a</m> if the following three conditions are satisfied:
+            <ol>
+                <li>
+                    <p>The function <m>f</m> is defined at <m>x = a</m> (i.e., <m>f(a)</m> exists).</p>
+                </li>
+                <li>
+                    <p>The limit of <m>f(x)</m> as <m>x</m> approaches <m>a</m> exists (i.e., <m>\lim_{x \to a} f(x)</m> exists).</p>
+                </li>
+                <li>
+                    <p>The limit of the function equals the function value: <m>\lim_{x \to a} f(x) = f(a)</m>.</p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <p> A function is <term>continuous over an interval I</term> if it is continuous at each point in I.</p>
+</definition>
 
     <p>
       If a function is continuous at every point in its domain, we say that the function is continuous on its domain.
     </p>
+    <p>
+        There are three types of discontinuous functions which are <term>removable, jump and infinite discontinuous</term>. 
+        Roughly speaking, we say that a function <m>f(x)</m> is continuous at <m>x = a</m> if its graph has no breaks 
+        and passes through the point <m>(a,f(a))</m>.
+    </p>
+<example xml:id="example-defining-continuity">
+    <statement>
+        <p>
+            Let <m>f</m> be defined as:
+            <me>
+                f(x) = \begin{cases} 4x+1 \amp \text{for } 0 \lt x \lt 1 \\ x^2+4 \amp \text{for } 1 \lt x \lt 2 \end{cases}
+            </me>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            We evaluate the one-sided limits as <m>x</m> approaches <m>1</m>:
+            <me>\lim_{x \to 1^-} f(x) = 5 \quad \text{and} \quad \lim_{x \to 1^+} f(x) = 5</me>
+            Therefore, <m>f</m> would be <term>continuous</term> at <m>x = 1</m> if we define <m>f(1) = 5</m>.
+        </p>
+    </solution>
+</example>
+<example xml:id="example-continuity-analysis">
+  <statement>
+    <p>
+      Let <m>f</m> be defined as:
+      <me>
+        f(x) = \begin{cases} x^2 - \frac{1}{2} \amp \text{where } x \in [-2,-1] \\ x + 2 \amp \text{where } x \in (-1,1) \end{cases}
+      </me>
+    </p>
+    <p>
+      This function is defined on the interval <m>[-2,1)</m>, which is the union of the intervals <m>[-2,-1]</m> and <m>(-1,1)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The point <m>-2</m> is a point of continuity because the limit <m>\lim_{x \to -2^+} f(x)</m> exists (as a one-sided limit) and is equal to <m>3.5</m> (or <m>7/2</m>), which is also the value of the function:
+      <me>\lim_{x \to -2} f(x) = f(-2)</me>
+    </p>
+    <p>
+      The function is also continuous at any point in the open intervals <m>(-2,-1)</m> and <m>(-1,1)</m>. However, at the point <m>x = -1</m>, the function is <strong>not continuous</strong> because the two-sided limit does not exist. While the one-sided limits exist:
+      <me>\lim_{x \to -1^+} f(x) = 1 \quad \text{and} \quad \lim_{x \to -1^-} f(x) = \frac{1}{2}</me>
+      they are different, so the limit <m>\lim_{x \to -1} f(x)</m> does not exist.
+    </p>
+    <p>
+      Since the function is not defined at <m>x = 1</m>, it does not make sense to discuss continuity there; <m>\lim_{x \to 1^-} f(x)</m> exists, but it cannot be compared to an undefined <m>f(1)</m>. Thus, the function has exactly one discontinuity at <m>x = -1</m> and is continuous elsewhere on its domain.
+    </p>
+  </solution>
+</example>
+
+
+
+
+
+
   </section>
 
   <!-- Add more sections here to cover other aspects of continuity, such as types of discontinuities, properties of continuous functions, etc. -->      

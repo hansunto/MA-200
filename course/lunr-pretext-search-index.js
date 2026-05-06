@@ -375,8 +375,62 @@ var ptx_lunr_docs = [
   "url": "continuity-definition.html",
   "type": "Section",
   "number": "",
-  "title": "Definition of Continuity",
-  "body": " Definition of Continuity   In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.   A function f is said to be continuous at a point x = a if the following three conditions are satisfied:   The function f is defined at x = a, meaning that f(a) exists.  The limit of f(x) as x approaches a exists, meaning that lim(x→a) f(x) exists.  The limit of f(x) as x approaches a is equal to the value of the function at that point, meaning that lim(x→a) f(x) = f(a).   If a function is continuous at every point in its domain, we say that the function is continuous on its domain.  "
+  "title": "Continuity",
+  "body": " Continuity   In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.    The limit at a number  does not depend on the function value at , even if that value, , exists. That is, whether or not a limit exists at has nothing to do with the function value .    Continuity at a point  When the limit of a function is the same as its function value, it satisfies a condition called continuity at a point . Continuous functions do not have jumps or holes in their graphs.    Continuity at a Point   A function is said to be continuous at a point  if the following three conditions are satisfied:   The function is defined at (i.e., exists).    The limit of as approaches exists (i.e., exists).    The limit of the function equals the function value: .      A function is continuous over an interval I if it is continuous at each point in I.   If a function is continuous at every point in its domain, we say that the function is continuous on its domain.  There are three types of discontinuous functions which are removable, jump and infinite discontinuous . Roughly speaking, we say that a function is continuous at if its graph has no breaks and passes through the point .    Let be defined as:     We evaluate the one-sided limits as approaches : Therefore, would be continuous at if we define .      Let be defined as:   This function is defined on the interval , which is the union of the intervals and .    The point is a point of continuity because the limit exists (as a one-sided limit) and is equal to (or ), which is also the value of the function:   The function is also continuous at any point in the open intervals and . However, at the point , the function is not continuous because the two-sided limit does not exist. While the one-sided limits exist: they are different, so the limit does not exist.  Since the function is not defined at , it does not make sense to discuss continuity there; exists, but it cannot be compared to an undefined . Thus, the function has exactly one discontinuity at and is continuous elsewhere on its domain.    "
+},
+{
+  "id": "continuity-definition-3",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-3",
+  "type": "Insight",
+  "number": "35",
+  "title": "",
+  "body": " The limit at a number  does not depend on the function value at , even if that value, , exists. That is, whether or not a limit exists at has nothing to do with the function value .  "
+},
+{
+  "id": "note-continuity-2",
+  "level": "2",
+  "url": "continuity-definition.html#note-continuity-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "continuity at a point "
+},
+{
+  "id": "def-continuity-at-a-point",
+  "level": "2",
+  "url": "continuity-definition.html#def-continuity-at-a-point",
+  "type": "Definition",
+  "number": "36",
+  "title": "Continuity at a Point.",
+  "body": " Continuity at a Point   A function is said to be continuous at a point  if the following three conditions are satisfied:   The function is defined at (i.e., exists).    The limit of as approaches exists (i.e., exists).    The limit of the function equals the function value: .      A function is continuous over an interval I if it is continuous at each point in I.  "
+},
+{
+  "id": "continuity-definition-7",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "removable, jump and infinite discontinuous "
+},
+{
+  "id": "example-defining-continuity",
+  "level": "2",
+  "url": "continuity-definition.html#example-defining-continuity",
+  "type": "Example",
+  "number": "37",
+  "title": "",
+  "body": "  Let be defined as:     We evaluate the one-sided limits as approaches : Therefore, would be continuous at if we define .   "
+},
+{
+  "id": "example-continuity-analysis",
+  "level": "2",
+  "url": "continuity-definition.html#example-continuity-analysis",
+  "type": "Example",
+  "number": "38",
+  "title": "",
+  "body": "  Let be defined as:   This function is defined on the interval , which is the union of the intervals and .    The point is a point of continuity because the limit exists (as a one-sided limit) and is equal to (or ), which is also the value of the function:   The function is also continuous at any point in the open intervals and . However, at the point , the function is not continuous because the two-sided limit does not exist. While the one-sided limits exist: they are different, so the limit does not exist.  Since the function is not defined at , it does not make sense to discuss continuity there; exists, but it cannot be compared to an undefined . Thus, the function has exactly one discontinuity at and is continuous elsewhere on its domain.   "
 },
 {
   "id": "notes-Limits-and-Continuity-chapter-exercises",
@@ -392,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "35",
+  "number": "39",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -401,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "37",
+  "number": "41",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -410,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "38",
+  "number": "42",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -419,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "39",
+  "number": "43",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -428,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "40",
+  "number": "44",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -437,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "41",
+  "number": "45",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -446,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "42",
+  "number": "46",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

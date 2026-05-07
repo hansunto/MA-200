@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file contains the lecture notes for the section on limits at infinity. -->
+  <section xml:id="limits-at-infinity">
+    <title>Limits at Infinity</title>
+    <p>
+      In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.
+    </p>
+    <p>
+       It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest <m>x=a,</m>
+        but unlike those examples the numerator does not vanish at <m>x=a</m> to provide cancellation, then we get an undefined expression, like <m>1/0.</m> 
+    </p>
+    <p> 
+    In such a case, we must examine the values of the functions closely in the neighborhood of
+     <m>x=a</m>. If the values ``blow up" to infinity on both sides of <m>x=a</m>,
+      we may say that the limit is infinity. Similarly, if the values converge to <m>-\infty</m>
+       on both sides, then we may say that the limit is <m>-\infty.</m> 
+       But otherwise, all we can say is that the limit is undefined. 
+    </p>
+
+
+
+    </section>

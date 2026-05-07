@@ -32,6 +32,7 @@
         <xi:include href="./notes/12TechLimits.ptx"/>
         <xi:include href="./notes/13OneSideLimit.ptx"/>
         <xi:include href="./notes/14Continuity.ptx"/>
+        <xi:include href="./notes/15Limitsatinfinity.ptx"/>
       
         <!-- Include lecture notes, activities, and homework related to limits and derivatives -->
       

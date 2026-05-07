@@ -98,9 +98,723 @@
   </solution>
 </example>
 
+<example>
+  <title>Absolute Value function Continuity</title>
+  <statement>
+    <p>
+      Show that the function <m>f(x) = |x|</m> is continuous at every value <m>c</m> in its domain.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Recall that the absolute value function is defined piecewise as:
+      <me>
+        f(x) = \begin{cases} x \amp \text{if } x \ge 0 \\ -x \amp \text{if } x \lt 0 \end{cases}
+      </me>
+    </p>
+    <p>
+      We consider three cases for a real number <m>c</m>:
+    </p>
+    <p>
+      <ol marker="I.">
+        <li>
+          <p>
+            If <m>c \gt 0</m>, then for values of <m>x</m> sufficiently close to <m>c</m>, <m>f(x) = x</m>. 
+            Since <m>\lim_{x \to c} x = c</m>, we have <m>\lim_{x \to c} f(x) = f(c)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>c \lt 0</m>, then for values of <m>x</m> sufficiently close to <m>c</m>, <m>f(x) = -x</m>. 
+            Since <m>\lim_{x \to c} (-x) = -c</m>, we have <m>\lim_{x \to c} f(x) = f(c)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>c = 0</m>, we check the one-sided limits:
+            <ul>
+              <li><p><m>\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} x = 0</m></p></li>
+              <li><p><m>\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} (-x) = 0</m></p></li>
+            </ul>
+            Since the left and right limits are equal, <m>\lim_{x \to 0} f(x) = 0</m>. Since <m>f(0) = 0</m>, the function is continuous at <m>x = 0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Therefore, <m>f(x) = |x|</m> is continuous for all <m>x</m>.
+    </p>
+  </solution>
+</example>
 
+<example xml:id="example-continuity-analysis-graph">
+    <title>Continuity Analysis</title>
+    <statement>
+      <p>
+        Find the points at which the function <m>f</m> in the figure is continuous and at which <m>f</m> is not continuous. The vertical axis represents the <m>y</m>-values.
+      </p>
+      
+      <figure xml:id="fig-continuity-graph">
+        <caption>A piecewise function graph.</caption>
+        <image xml:id="graph-continuity" width="50%">
+          <shortdescription>Graph with various discontinuities at integers 1 through 4.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=1]
+              \draw[step=1,gray!20,very thin] (-1,-1) grid (5,3);
+              \draw[-&gt;] (-1,0) -- (5,0) node[right] {\(x\)};
+              \draw[-&gt;] (0,-1) -- (0,3) node[above] {\(y\)};
+              
+        % X-axis labels
+        \foreach \x in {1, 2, 3, 4}
+          \draw (\x, 0.1) -- (\x, -0.1) node[below] {\small \(\x\)};
 
+        % Y-axis labels
+        \foreach \y in {1, 2}
+          \draw (0.1, \y) -- (-0.1, \y) node[left] {\small \(\y\)};
 
+              % Piecewise segments
+              \draw[thick] (0,1) -- (0.92,0.08);
+              \fill (0,1) circle (2pt);
+              \draw (1,0) circle (2pt);
+
+              \draw[thick] (1.08,1) -- (1.92,1);
+              \fill (1,1) circle (2pt);
+              \draw (2,1) circle (2pt);
+
+              \draw[thick] (2.06,1.06) -- (2.94,1.94);
+              \fill (2,2) circle (2pt);
+              \draw (3,2) circle (2pt);
+
+              \draw[thick] (3.06,1.94) -- (3.94,1.06);
+              \draw (4,1) circle (2pt);
+              \fill (4,0.5) circle (2pt);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </statement>
+
+    <solution>
+      <p>
+        The function is continuous except at the following points:
+      </p>
+      <p>
+        <ul>
+          <li>
+            <p>At <m>x=1</m>, there is a jump discontinuity.</p>
+          </li>
+          <li>
+            <p>At <m>x=2</m>, <m>x=3</m>, and <m>x=4</m>, there are removable discontinuities where the limit exists but does not equal the function value.</p>
+          </li>
+        </ul>
+      </p>
+    </solution>
+  </example>
+
+<exercise xml:id="ex-continuity-check">
+  <title>Continuity at Specific Points</title>
+  <statement>
+    <p>
+      Determine whether each function is continuous at the given point.
+    </p>
+  </statement>
+
+  <!-- Part 1 -->
+  <task>
+    <statement>
+      <p>
+        <m>f(x) = 2x + 3</m> at <m>x = 3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Since <m>f(x)</m> is a polynomial, it is continuous everywhere. 
+        Specifically, <m>\lim_{x \to 3} (2x+3) = 2(3)+3 = 9</m>. 
+        Since <m>f(3) = 9</m>, the function is continuous at <m>x=3</m>.
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 2 -->
+  <task>
+    <statement>
+      <p>
+        <m>g(x) = \frac{x^2+x-2}{x-1}</m> at <m>x = 1</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The function <m>g(x)</m> is not defined at <m>x = 1</m> because the denominator becomes zero. 
+        Since <m>g(1)</m> does not exist, the function is not continuous at <m>x = 1</m>. 
+        (Note: There is a removable discontinuity at this point).
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 3 -->
+  <task>
+    <statement>
+      <p>
+        The greatest integer function <m>f(x) = \lfloor x \rfloor</m> at integer points.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>n</m> be an integer. 
+        As <m>x \to n^-</m>, <m>f(x) = n-1</m>, so <m>\lim_{x \to n^-} \lfloor x \rfloor = n-1</m>. 
+        As <m>x \to n^+</m>, <m>f(x) = n</m>, so <m>\lim_{x \to n^+} \lfloor x \rfloor = n</m>. 
+        Since the one-sided limits are not equal, the limit does not exist, and the function is not continuous at any integer point.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<theorem xml:id="thm-continuity-principles">
+  <title>Continuity Principles</title>
+  <statement>
+    <p>
+      The following principles describe the continuity of various functions:
+    </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>Any constant function is continuous.</p>
+        </li>
+        <li>
+          <p>Any polynomial function is continuous.</p>
+        </li>
+        <li>
+          <p>Trigonometric functions and their inverse trigonometric functions (such as <m>\sin</m>, <m>\cos</m>, and <m>\tan</m>) are continuous on their domains.</p>
+        </li>
+        <li>
+          <p>Exponential functions and logarithmic functions are continuous on their domains.</p>
+        </li>
+        <li>
+          <p>
+            For any positive integer <m>n</m> and any continuous function <m>f</m>, the functions <m>[f(x)]^n</m> and <m>\sqrt[n]{f(x)}</m> are continuous. 
+            When <m>n</m> is even, the domain of <m>\sqrt[n]{f(x)}</m> is restricted to values of <m>x</m> for which <m>f(x) \geq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>f(x)</m> and <m>g(x)</m> are continuous, then their sum <m>f(x) + g(x)</m>, difference <m>f(x) - g(x)</m>, and product <m>f(x) \cdot g(x)</m> are also continuous.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>f(x)</m> and <m>g(x)</m> are continuous, then the quotient <m>\frac{g(x)}{f(x)}</m> is continuous for all <m>x</m> such that <m>f(x) \neq 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>g(x)</m> is continuous at <m>x=c</m> with <m>\lim_{x \to c} g(x) = b</m>, and <m>f(x)</m> is continuous at <m>x=b</m>, then the composite function <m>(f \circ g)(x) = f(g(x))</m> is continuous at <m>x=c</m>. That is:
+            <me>
+              \lim_{x \to c} (f \circ g)(x) = f(b) = f\left( \lim_{x \to c} g(x) \right)
+            </me>
+            In fact, if <m>g</m> is continuous at <m>c</m> and <m>f</m> is continuous at <m>g(c)</m>, then the composite function <m>f \circ g</m> is continuous at <m>x=c</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</theorem>
+
+<example xml:id="ex-limit-cosine">
+  <statement>
+    <p>
+      Find the following limit:
+      <me>
+        \lim_{x \to \pi} \cos\left(2x + \frac{3x}{2}\right)
+      </me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Since the cosine function and the linear terms inside the parentheses are continuous, we can evaluate the limit by direct substitution:
+      <md>
+        <mrow>\lim_{x \to \pi} \cos\left(2x + \frac{3x}{2}\right) \amp = \cos\left(2\pi + \frac{3\pi}{2}\right)</mrow>
+        <mrow>\amp = \cos\left(\frac{7\pi}{2}\right)</mrow>
+        <mrow>\amp = 0</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-poly-continuity">
+  <statement>
+    <p>
+      Provide an argument to show that <m>f(x) = x^2 - 3x + 2</m> is continuous.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The function <m>f(x) = x^2 - 3x + 2</m> is a polynomial. 
+      According to the <xref ref="thm-continuity-principles" text="title" />, any polynomial function is continuous for all real numbers.
+    </p>
+    <p>
+      Alternatively, we can observe that <m>f(x)</m> is formed by the sum and difference of the power functions <m>x^2</m>, <m>3x</m>, and the constant <m>2</m>. 
+      Since each of these individual terms is continuous, their sum <m>f(x)</m> must also be continuous at every value of <m>x</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise>
+  <task>
+    <statement>
+      <p>
+        Show that the rational function
+        <me>
+          r(x)=\frac{x^4-5x^3+x^2-7}{x-3}
+        </me>
+        is continuous for all values except <m>x=3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The function <m>r(x)</m> is a rational function, which is the quotient of two polynomials. According to the <xref ref="thm-continuity-principles" />, a rational function is continuous at all points in its domain.
+      </p>
+      <p>
+        The domain of <m>r(x)</m> consists of all real numbers where the denominator is non-zero. Since <m>x-3 = 0</m> only when <m>x=3</m>, the function is continuous for all <m>x \neq 3</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Show that <m>f(x)=|x|</m> is continuous everywhere (at every real number <m>c</m>).
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Recall that <m>f(x) = \sqrt{x^2}</m>. Since the power function <m>g(x) = x^2</m> is a polynomial and therefore continuous, and the square root function <m>h(x) = \sqrt{x}</m> is continuous for all <m>x \geq 0</m>, their composition <m>h(g(x))</m> is continuous.
+      </p>
+      <p>
+        Alternatively, for any real number <m>c</m>, 
+        we can show that <m>\lim_{x \to c} |x| = |c|</m> 
+        by considering cases for<m>c\gt 0 </m>, <m>c\lt 0</m>, 
+        and <m>c = 0</m> using one-sided limits. 
+        Since the limit always equals the function value, 
+        <m>f(x) = |x|</m> is continuous at every real number <m>c</m>.
+      </p>
+    </solution>
+  </task>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Show that 
+      <me>
+        \lim_{x \to 1} \arcsin\left(\frac{1-\sqrt{x}}{1-x}\right) = \frac{\pi}{6}
+      </me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we simplify the rational expression inside the arcsine. Notice that the denominator can be factored as a difference of squares: <m>1 - x = (1 - \sqrt{x})(1 + \sqrt{x})</m>.
+    </p>
+    <p>
+      For <m>x \neq 1</m>, we have:
+      <me>
+        \frac{1 - \sqrt{x}}{1 - x} = \frac{1 - \sqrt{x}}{(1 - \sqrt{x})(1 + \sqrt{x})} = \frac{1}{1 + \sqrt{x}}
+      </me>
+    </p>
+    <p>
+      Now, we apply the limit inside the function, justified by the continuity of the <m>\arcsin</m> function:
+      <md>
+        <mrow>\lim_{x \to 1} \arcsin\left(\frac{1 - \sqrt{x}}{1 - x}\right) \amp = \arcsin\left(\lim_{x \to 1} \frac{1}{1 + \sqrt{x}}\right)</mrow>
+        <mrow>\amp = \arcsin\left(\frac{1}{1 + \sqrt{1}}\right)</mrow>
+        <mrow>\amp = \arcsin\left(\frac{1}{2}\right)</mrow>
+        <mrow>\amp = \frac{\pi}{6}</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Show that <m>f</m> is continuous on <m>(-\infty, \infty)</m> where
+      <me>
+        f(x) = \begin{cases} \sin x \amp \text{if } x \lt \pi/4 \\ \cos x \amp \text{if } x \geq \pi/4 \end{cases}
+      </me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We check the continuity of <m>f</m> by examining the two pieces and the transition point:
+    </p>
+    <ul>
+      <li>
+        <p>
+          For <m>x \lt \pi/4</m>, <m>f(x) = \sin x</m>. Since the sine function is continuous everywhere, <m>f</m> is continuous on the interval <m>(-\infty, \pi/4)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          For <m>x \gt \pi/4</m>, <m>f(x) = \cos x</m>. Since the cosine function is continuous everywhere, <m>f</m> is continuous on the interval <m>(\pi/4, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          At <m>x = \pi/4</m>, we check the one-sided limits and the function value:
+          <ul>
+            <li><p><m>\lim_{x \to (\pi/4)^-} f(x) = \lim_{x \to (\pi/4)^-} \sin x = \sin(\pi/4) = \frac{\sqrt{2}}{2}</m></p></li>
+            <li><p><m>\lim_{x \to (\pi/4)^+} f(x) = \lim_{x \to (\pi/4)^+} \cos x = \cos(\pi/4) = \frac{\sqrt{2}}{2}</m></p></li>
+            <li><p><m>f(\pi/4) = \cos(\pi/4) = \frac{\sqrt{2}}{2}</m></p></li>
+          </ul>
+          Since <m>\lim_{x \to \pi/4} f(x) = f(\pi/4)</m>, the function is continuous at <m>x = \pi/4</m>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Therefore, <m>f</m> is continuous on <m>(-\infty, \infty)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Where are the following functions continuous?
+    </p>
+  </statement>
+
+  <task>
+    <statement>
+      <p>
+        <m>f(x) = \sin(x^2)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The function <m>f(x)</m> is the composition of the sine function and the polynomial function <m>x^2</m>. 
+        Since both <m>\sin(x)</m> and <m>x^2</m> are continuous on <m>(-\infty, \infty)</m>, their composition is also continuous everywhere.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>F(x) = \ln(1 + \cos x)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The function <m>F(x)</m> is continuous wherever its component parts are continuous and the argument of the logarithm is positive. 
+        The functions <m>\cos x</m> and <m>1 + \cos x</m> are continuous for all real numbers. 
+        However, <m>\ln(u)</m> is only continuous for <m>u \gt 0</m>.
+      </p>
+      <p>
+        We must have <m>1 + \cos x \gt 0</m>, which means <m>\cos x \neq -1</m>. 
+        This occurs when <m>x</m> is not an odd multiple of <m>\pi</m>. 
+        Therefore, <m>F(x)</m> is continuous on its domain: 
+        <me>\{x \in \mathbb{R} \mid x \neq (2n+1)\pi, n \in \mathbb{Z}\}</me>.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<exercise>
+  <task>
+    <statement>
+      <p>
+        If the product function <m>f(x) = g(x) \cdot h(x)</m> is continuous at <m>x = 0</m>, must <m>g(x)</m> and <m>h(x)</m> be continuous at <m>x = 0</m>? Give reasons for your answer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        No, <m>g(x)</m> and <m>h(x)</m> do not need to be continuous at <m>x = 0</m>.
+      </p>
+      <p>
+        For example, consider <m>g(x) = \begin{cases} 1 \amp x \neq 0 \\ 0 \amp x = 0 \end{cases}</m> and <m>h(x) = x</m>. Here, <m>g(x)</m> is discontinuous at <m>x = 0</m>, but the product <m>f(x) = g(x) \cdot h(x)</m> is:
+        <me>
+          f(x) = \begin{cases} x \amp x \neq 0 \\ 0 \amp x = 0 \end{cases}
+        </me>
+        which simplifies to <m>f(x) = x</m> for all <m>x</m>. Since <m>f(x) = x</m> is a polynomial, it is continuous at <m>x = 0</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Give an example of functions <m>f</m> and <m>g</m>, both continuous at <m>x = 0</m>, for which the composite <m>f \circ g</m> is <strong>discontinuous</strong> at <m>x = 0</m>. Does this contradict the Continuity Principles theorem? Give reasons for your answer.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This is actually impossible. If <m>g</m> is continuous at <m>x = 0</m> and <m>f</m> is continuous at <m>g(0)</m>, then the composition <m>f \circ g</m> must be continuous at <m>x = 0</m>.
+      </p>
+      <p>
+        The confusion often arises if <m>f</m> is continuous at <m>x = 0</m> but <em>not</em> continuous at the value <m>g(0)</m>. For example, let <m>g(x) = 1</m> (constant) and <m>f(x) = \begin{cases} 0 \amp x \neq 1 \\ 5 \amp x = 1 \end{cases}</m>. 
+        Both are continuous at <m>x = 0</m>, but <m>f(g(x)) = f(1) = 5</m> for all <m>x</m>, which is actually continuous. 
+      </p>
+      <p>
+        It does not contradict <xref ref="thm-continuity-principles" /> because the theorem specifically requires <m>f</m> to be continuous at the <strong>output</strong> of <m>g</m> (i.e., at <m>b = g(c)</m>), not just at the same point <m>c</m>.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Which of the following statements about the function <m>f(x)</m> graphed here are true. Explain your answers.
+    </p>
+    <figure xml:id="fig-piecewise-graph">
+      <caption>Graph of the piecewise function</caption>
+      <image xml:id="graph-piecewise" width="60%">
+        <shortdescription>A piecewise function with a curve and several line segments with open and closed circles.</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=1]
+            % Grid and Axes
+            \draw[step=1, gray!20, very thin] (-4,-4) grid (4,4);
+            \draw[-stealth] (-4.2,0) -- (4.5,0) node[right] {\(x\)};
+            \draw[-stealth] (0,-4.2) -- (0,4.2) node[above] {\(y\)};
+
+            % Axis Labels
+            \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+              \draw (\x, 0.1) -- (\x, -0.1) node[below] {\small \(\x\)};
+            \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+              \draw (0.1, \y) -- (-0.1, \y) node[left] {\small \(\y\)};
+
+            % Segment: Line from (0,0) to (1,2)
+            \draw[thick] (0.07,0.14) -- (0.93,1.86);
+            \draw (0,0) circle (2.5pt);
+            \draw (1,2) circle (2.5pt);
+            
+            % Isolated Point at (1,1)
+            \fill (1,1) circle (2.5pt);
+
+            % Segment: Line from (1,2) to (3,0)
+            \draw[thick] (1.07,1.93) -- (2.93,0.07);
+            \draw (3,0) circle (2.5pt);
+
+            % Segment: Line from (3,0) to (4,0)
+            \draw[thick] (3.09,0) -- (4,0);
+
+            % Curve: Quadratic Bezier from (-2,0) to (0,-3) with control point (-2,-2)
+            \draw[thick] (-2,0) .. controls (-2,-2) .. (-0.08,-2.9);
+            \fill (-2,0) circle (2.5pt);
+            \draw (0,-3) circle (2.5pt);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  <ol>
+    <li>
+      <p>
+        Does <m>\lim_{x \to 1^-} f(x)</m> exist?
+      </p>
+    </li>
+    <li>
+      <p>
+        Does <m>\lim_{x \to 1^+} f(x)</m> exist?
+      </p>
+    </li>
+    <li>
+      <p>
+        Does <m>\lim_{x \to 1} f(x)</m> exist?
+      </p>
+    </li>
+    <li>
+      <p>
+        Does <m>\lim_{x \to 1} f(x) = f(1)</m>?
+      </p>
+    </li>
+    <li>
+      <p>
+        Is <m>f</m> continuous at <m>x = 1</m>?
+      </p>
+    </li>
+  </ol>
+  </statement>
+    <solution>
+    <ol>
+      <li>
+        <p>
+          Yes, as <m>x</m> approaches <m>1</m> from the left, the function values approach <m>2</m>. 
+          Thus, <m>\lim_{x \to 1^-} f(x) = 2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Yes, as <m>x</m> approaches <m>1</m> from the right, the function values approach <m>1</m>. 
+          Thus, <m>\lim_{x \to 1^+} f(x) = 2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+         Yes. Since the left-hand limit and the right-hand limit are both equal to <m>2</m>, the overall limit exists and <m>\lim_{x \to 1} f(x) = 2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          No. While the limit is <m>2</m>, the solid dot on the graph shows that <m>f(1) = 1</m>. 
+          Therefore, <m>\lim_{x \to 1} f(x) \neq f(1)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          No. For a function to be continuous at a point, the limit must exist and be equal to the function value. 
+          Since <m>\lim_{x \to 1} f(x) \neq f(1)</m>, the function is not continuous at <m>x = 1</m>.
+        </p>
+      </li>
+    </ol>
+    </solution>
+</exercise>
+<p>
+  By applying <xref ref="thm-continuity-principles" />, we can see that the 
+  limit exists. Furthermore, as shown in <xref ref="fig-piecewise-graph" />, 
+  there is a jump discontinuity at <m>x = 0</m>.
+</p>
+<exercise>
+  <statement>
+    <p>
+      Based on the graph of the function <m>f</m> as shown in <xref ref="fig-piecewise-graph" />, 
+      answer the following questions regarding continuity at <m>x=0</m>:
+    </p>
+    <ol>
+      <li>
+        <p>Does <m>\lim_{x \to 0^-} f(x)</m> exist?</p>
+      </li>
+      <li>
+        <p>Does <m>\lim_{x \to 0^+} f(x)</m> exist?</p>
+      </li>
+      <li>
+        <p>Does <m>\lim_{x \to 0} f(x)</m> exist?</p>
+      </li>
+      <li>
+        <p>Does <m>\lim_{x \to 0} f(x) = f(0)</m>?</p>
+      </li>
+      <li>
+        <p>Is <m>f</m> continuous at <m>x = 0</m>?</p>
+      </li>
+    </ol>
+  </statement>
+  <solution>
+    <ol>
+      <li>
+        <p>
+          Yes, as <m>x</m> approaches <m>0</m> from the left (along the curve), the function values approach <m>-3</m>. Thus, <m>\lim_{x \to 0^-} f(x) = -3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Yes, as <m>x</m> approaches <m>0</m> from the right (along the line segment), the function values approach <m>0</m>. Thus, <m>\lim_{x \to 0^+} f(x) = 0</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          No. Since the left-hand limit (<m>-3</m>) and the right-hand limit (<m>0</m>) are not equal, the two-sided limit <m>\lim_{x \to 0} f(x)</m> does not exist.
+        </p>
+      </li>
+      <li>
+        <p>
+          No. Since the limit does not exist, it cannot be equal to the function value. Furthermore, <m>f(0)</m> is undefined as there is no solid dot at <m>x=0</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          No. The function is not continuous at <m>x = 0</m> because the limit does not exist (a jump discontinuity) and the function is not defined there.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Consider the piecewise function <m>f</m>:
+      <me>
+        f(x) = \begin{cases} 
+        x^2 - 1 \amp -1 \le x \lt 0 \\ 
+        2x \amp 0 \lt x \lt 1 \\ 
+        1 \amp x = 1 \\ 
+        -2x + 4 \amp 1 \lt x \lt 2 \\ 
+        0 \amp 2 \lt x \lt 3 
+        \end{cases}
+      </me>
+    </p>
+
+    <ol marker="1">
+      <li>
+        <p>Graph the function <m>f</m>.</p>
+
+        <figure xml:id="fig-colored-piecewise">
+  <caption>Colored graph of the piecewise function</caption>
+  <image xml:id="img-colored-piecewise" width="70%">
+    <shortdescription>Piecewise function with segments in blue, red, and green.</shortdescription>
+    <latex-image>
+      \begin{tikzpicture}[scale=0.85]
+        \draw[step=1, gray!20, thin] (-3,-2) grid (4,4);
+        \draw[-stealth] (-3,0) -- (4.2,0) node[right] {\(x\)};
+        \draw[-stealth] (0,-2) -- (0,4.2) node[above] {\(y\)};
+
+        % Segment 1: Blue parabola
+        \draw[very thick, blue, domain=-1:0, smooth] plot (\x, {\x*\x - 1});
+        \fill[blue] (-1,0) circle (2.5pt);
+        \draw[blue] (0,-1) circle (2.5pt);
+
+        % Segment 2: Red line
+        \draw[very thick, red] (0.05,0.1) -- (0.95,1.9);
+        \draw[red] (0,0) circle (2.5pt);
+        \draw[red] (1,2) circle (2.5pt);
+
+        % Isolated point: Black
+        \fill[black] (1,1) circle (2.5pt);
+
+        % Segment 3: Green!60!black line
+        \draw[very thick, green!60!black] (1.05,1.9) -- (1.95,0.1);
+        \draw[green!60!black] (1,2) circle (2.5pt);
+        \draw[green!60!black] (2,0) circle (2.5pt);
+
+        % Segment 4: Orange line
+        \draw[very thick, orange] (2.1,0) -- (3,0);
+        \draw[orange] (2,0) circle (2.5pt);
+        \draw[orange] (3,0) circle (2.5pt);
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+      </li>
+      <li><p>Does <m>f(-1)</m> exist?</p></li>
+      <li><p>Does <m>\lim_{x\to -1^+} f(x)</m> exist?</p></li>
+      <li><p>Does <m>\lim_{x\to -1^+} f(x)=f(-1)</m>?</p></li>
+      <li><p>Is <m>f</m> continuous at <m>x=-1</m>?</p></li>
+      <li><p>Does <m>f(1)</m> exist?</p></li>
+      <li><p>Does <m>\lim_{x\to 1} f(x)</m> exist?</p></li>
+      <li><p>Does <m>\lim_{x\to 1} f(x)=f(1)</m>?</p></li>
+      <li><p>Is <m>f</m> continuous at <m>x=1</m>?</p></li>
+      <li><p>Is <m>f</m> defined at <m>x=2</m>?</p></li>
+      <li><p>Is <m>f</m> continuous at <m>x=2</m>?</p></li>
+      <li><p>To what new value should <m>f(1)</m> be changed to remove the discontinuity?</p></li>
+    </ol>
+  </statement>
+  
+  <solution>
+    <p>
+      Using <xref ref="fig-colored-piecewise" /> and the function definition:
+    </p>
+    <ol marker="1">
+      <li><p>See the graph above.</p></li>
+      <li><p>Yes, <m>f(-1) = (-1)^2 - 1 = 0</m>.</p></li>
+      <li><p>Yes, <m>\lim_{x \to -1^+} (x^2-1) = 0</m>.</p></li>
+      <li><p>Yes, both are equal to <m>0</m>.</p></li>
+      <li><p>Yes, the right-hand limit matches the function value at the endpoint.</p></li>
+      <li><p>Yes, <m>f(1) = 1</m>.</p></li>
+      <li><p>Yes, since <m>\lim_{x \to 1^-} 2x = 2</m> and <m>\lim_{x \to 1^+} (-2x+4) = 2</m>, the limit is <m>2</m>.</p></li>
+      <li><p>No, <m>2 \neq 1</m>.</p></li>
+      <li><p>No, there is a removable discontinuity at <m>x=1</m>.</p></li>
+      <li><p>No, the inequalities <m>1 \lt x \lt 2</m> and <m>2 \lt x \lt 3</m> do not include <m>x=2</m>.</p></li>
+      <li><p>No, a function cannot be continuous where it is not defined.</p></li>
+      <li><p>Setting <m>f(1) = 2</m> would make the function continuous at that point.</p></li>
+    </ol>
+  </solution>
+</exercise>
 
 
   </section>

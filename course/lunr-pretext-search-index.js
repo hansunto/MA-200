@@ -376,7 +376,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Continuity",
-  "body": " Continuity   In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.    The limit at a number  does not depend on the function value at , even if that value, , exists. That is, whether or not a limit exists at has nothing to do with the function value .    Continuity at a point  When the limit of a function is the same as its function value, it satisfies a condition called continuity at a point . Continuous functions do not have jumps or holes in their graphs.    Continuity at a Point   A function is said to be continuous at a point  if the following three conditions are satisfied:   The function is defined at (i.e., exists).    The limit of as approaches exists (i.e., exists).    The limit of the function equals the function value: .      A function is continuous over an interval I if it is continuous at each point in I.   If a function is continuous at every point in its domain, we say that the function is continuous on its domain.  There are three types of discontinuous functions which are removable, jump and infinite discontinuous . Roughly speaking, we say that a function is continuous at if its graph has no breaks and passes through the point .    Let be defined as:     We evaluate the one-sided limits as approaches : Therefore, would be continuous at if we define .      Let be defined as:   This function is defined on the interval , which is the union of the intervals and .    The point is a point of continuity because the limit exists (as a one-sided limit) and is equal to (or ), which is also the value of the function:   The function is also continuous at any point in the open intervals and . However, at the point , the function is not continuous because the two-sided limit does not exist. While the one-sided limits exist: they are different, so the limit does not exist.  Since the function is not defined at , it does not make sense to discuss continuity there; exists, but it cannot be compared to an undefined . Thus, the function has exactly one discontinuity at and is continuous elsewhere on its domain.    "
+  "body": " Continuity   In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.    The limit at a number  does not depend on the function value at , even if that value, , exists. That is, whether or not a limit exists at has nothing to do with the function value .    Continuity at a point  When the limit of a function is the same as its function value, it satisfies a condition called continuity at a point . Continuous functions do not have jumps or holes in their graphs.    Continuity at a Point   A function is said to be continuous at a point  if the following three conditions are satisfied:   The function is defined at (i.e., exists).    The limit of as approaches exists (i.e., exists).    The limit of the function equals the function value: .      A function is continuous over an interval I if it is continuous at each point in I.   If a function is continuous at every point in its domain, we say that the function is continuous on its domain.  There are three types of discontinuous functions which are removable, jump and infinite discontinuous . Roughly speaking, we say that a function is continuous at if its graph has no breaks and passes through the point .    Let be defined as:     We evaluate the one-sided limits as approaches : Therefore, would be continuous at if we define .      Let be defined as:   This function is defined on the interval , which is the union of the intervals and .    The point is a point of continuity because the limit exists (as a one-sided limit) and is equal to (or ), which is also the value of the function:   The function is also continuous at any point in the open intervals and . However, at the point , the function is not continuous because the two-sided limit does not exist. While the one-sided limits exist: they are different, so the limit does not exist.  Since the function is not defined at , it does not make sense to discuss continuity there; exists, but it cannot be compared to an undefined . Thus, the function has exactly one discontinuity at and is continuous elsewhere on its domain.     Absolute Value function Continuity   Show that the function is continuous at every value in its domain.    Recall that the absolute value function is defined piecewise as:   We consider three cases for a real number :     If , then for values of sufficiently close to , . Since , we have .    If , then for values of sufficiently close to , . Since , we have .    If , we check the one-sided limits:    Since the left and right limits are equal, . Since , the function is continuous at .     Therefore, is continuous for all .     Continuity Analysis   Find the points at which the function in the figure is continuous and at which is not continuous. The vertical axis represents the -values.   A piecewise function graph.   Graph with various discontinuities at integers 1 through 4.       The function is continuous except at the following points:     At , there is a jump discontinuity.    At , , and , there are removable discontinuities where the limit exists but does not equal the function value.        Continuity at Specific Points   Determine whether each function is continuous at the given point.       at .    Since is a polynomial, it is continuous everywhere. Specifically, . Since , the function is continuous at .        at .    The function is not defined at because the denominator becomes zero. Since does not exist, the function is not continuous at . (Note: There is a removable discontinuity at this point).       The greatest integer function at integer points.    Let be an integer. As , , so . As , , so . Since the one-sided limits are not equal, the limit does not exist, and the function is not continuous at any integer point.      Continuity Principles   The following principles describe the continuity of various functions:     Any constant function is continuous.    Any polynomial function is continuous.    Trigonometric functions and their inverse trigonometric functions (such as , , and ) are continuous on their domains.    Exponential functions and logarithmic functions are continuous on their domains.    For any positive integer and any continuous function , the functions and are continuous. When is even, the domain of is restricted to values of for which .    If and are continuous, then their sum , difference , and product are also continuous.    If and are continuous, then the quotient is continuous for all such that .    If is continuous at with , and is continuous at , then the composite function is continuous at . That is: In fact, if is continuous at and is continuous at , then the composite function is continuous at .         Find the following limit:     Since the cosine function and the linear terms inside the parentheses are continuous, we can evaluate the limit by direct substitution:       Provide an argument to show that is continuous.    The function is a polynomial. According to the , any polynomial function is continuous for all real numbers.  Alternatively, we can observe that is formed by the sum and difference of the power functions , , and the constant . Since each of these individual terms is continuous, their sum must also be continuous at every value of .       Show that the rational function is continuous for all values except .    The function is a rational function, which is the quotient of two polynomials. According to the , a rational function is continuous at all points in its domain.  The domain of consists of all real numbers where the denominator is non-zero. Since only when , the function is continuous for all .      Show that is continuous everywhere (at every real number ).    Recall that . Since the power function is a polynomial and therefore continuous, and the square root function is continuous for all , their composition is continuous.  Alternatively, for any real number , we can show that by considering cases for , , and using one-sided limits. Since the limit always equals the function value, is continuous at every real number .       Show that     First, we simplify the rational expression inside the arcsine. Notice that the denominator can be factored as a difference of squares: .  For , we have:   Now, we apply the limit inside the function, justified by the continuity of the function:       Show that is continuous on where     We check the continuity of by examining the two pieces and the transition point:    For , . Since the sine function is continuous everywhere, is continuous on the interval .    For , . Since the cosine function is continuous everywhere, is continuous on the interval .    At , we check the one-sided limits and the function value:     Since , the function is continuous at .    Therefore, is continuous on .      Where are the following functions continuous?          The function is the composition of the sine function and the polynomial function . Since both and are continuous on , their composition is also continuous everywhere.           The function is continuous wherever its component parts are continuous and the argument of the logarithm is positive. The functions and are continuous for all real numbers. However, is only continuous for .  We must have , which means . This occurs when is not an odd multiple of . Therefore, is continuous on its domain: .        If the product function is continuous at , must and be continuous at ? Give reasons for your answer.    No, and do not need to be continuous at .  For example, consider and . Here, is discontinuous at , but the product is: which simplifies to for all . Since is a polynomial, it is continuous at .      Give an example of functions and , both continuous at , for which the composite is discontinuous at . Does this contradict the Continuity Principles theorem? Give reasons for your answer.    This is actually impossible. If is continuous at and is continuous at , then the composition must be continuous at .  The confusion often arises if is continuous at but not continuous at the value . For example, let (constant) and . Both are continuous at , but for all , which is actually continuous.  It does not contradict because the theorem specifically requires to be continuous at the output of (i.e., at ), not just at the same point .       Which of the following statements about the function graphed here are true. Explain your answers.   Graph of the piecewise function   A piecewise function with a curve and several line segments with open and closed circles.       Does exist?    Does exist?    Does exist?    Does ?    Is continuous at ?        Yes, as approaches from the left, the function values approach . Thus, .    Yes, as approaches from the right, the function values approach . Thus, .    Yes. Since the left-hand limit and the right-hand limit are both equal to , the overall limit exists and .    No. While the limit is , the solid dot on the graph shows that . Therefore, .    No. For a function to be continuous at a point, the limit must exist and be equal to the function value. Since , the function is not continuous at .      By applying , we can see that the limit exists. Furthermore, as shown in , there is a jump discontinuity at .    Based on the graph of the function as shown in , answer the following questions regarding continuity at :    Does exist?    Does exist?    Does exist?    Does ?    Is continuous at ?        Yes, as approaches from the left (along the curve), the function values approach . Thus, .    Yes, as approaches from the right (along the line segment), the function values approach . Thus, .    No. Since the left-hand limit ( ) and the right-hand limit ( ) are not equal, the two-sided limit does not exist.    No. Since the limit does not exist, it cannot be equal to the function value. Furthermore, is undefined as there is no solid dot at .    No. The function is not continuous at because the limit does not exist (a jump discontinuity) and the function is not defined there.        Consider the piecewise function :     Graph the function .   Colored graph of the piecewise function   Piecewise function with segments in blue, red, and green.      Does exist?  Does exist?  Does ?  Is continuous at ?  Does exist?  Does exist?  Does ?  Is continuous at ?  Is defined at ?  Is continuous at ?  To what new value should be changed to remove the discontinuity?     Using and the function definition:   See the graph above.  Yes, .  Yes, .  Yes, both are equal to .  Yes, the right-hand limit matches the function value at the endpoint.  Yes, .  Yes, since and , the limit is .  No, .  No, there is a removable discontinuity at .  No, the inequalities and do not include .  No, a function cannot be continuous where it is not defined.  Setting would make the function continuous at that point.     "
 },
 {
   "id": "continuity-definition-3",
@@ -433,6 +433,141 @@ var ptx_lunr_docs = [
   "body": "  Let be defined as:   This function is defined on the interval , which is the union of the intervals and .    The point is a point of continuity because the limit exists (as a one-sided limit) and is equal to (or ), which is also the value of the function:   The function is also continuous at any point in the open intervals and . However, at the point , the function is not continuous because the two-sided limit does not exist. While the one-sided limits exist: they are different, so the limit does not exist.  Since the function is not defined at , it does not make sense to discuss continuity there; exists, but it cannot be compared to an undefined . Thus, the function has exactly one discontinuity at and is continuous elsewhere on its domain.   "
 },
 {
+  "id": "continuity-definition-10",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-10",
+  "type": "Example",
+  "number": "39",
+  "title": "Absolute Value function Continuity.",
+  "body": " Absolute Value function Continuity   Show that the function is continuous at every value in its domain.    Recall that the absolute value function is defined piecewise as:   We consider three cases for a real number :     If , then for values of sufficiently close to , . Since , we have .    If , then for values of sufficiently close to , . Since , we have .    If , we check the one-sided limits:    Since the left and right limits are equal, . Since , the function is continuous at .     Therefore, is continuous for all .   "
+},
+{
+  "id": "example-continuity-analysis-graph",
+  "level": "2",
+  "url": "continuity-definition.html#example-continuity-analysis-graph",
+  "type": "Example",
+  "number": "40",
+  "title": "Continuity Analysis.",
+  "body": " Continuity Analysis   Find the points at which the function in the figure is continuous and at which is not continuous. The vertical axis represents the -values.   A piecewise function graph.   Graph with various discontinuities at integers 1 through 4.       The function is continuous except at the following points:     At , there is a jump discontinuity.    At , , and , there are removable discontinuities where the limit exists but does not equal the function value.      "
+},
+{
+  "id": "ex-continuity-check",
+  "level": "2",
+  "url": "continuity-definition.html#ex-continuity-check",
+  "type": "Checkpoint",
+  "number": "42",
+  "title": "Continuity at Specific Points.",
+  "body": " Continuity at Specific Points   Determine whether each function is continuous at the given point.       at .    Since is a polynomial, it is continuous everywhere. Specifically, . Since , the function is continuous at .        at .    The function is not defined at because the denominator becomes zero. Since does not exist, the function is not continuous at . (Note: There is a removable discontinuity at this point).       The greatest integer function at integer points.    Let be an integer. As , , so . As , , so . Since the one-sided limits are not equal, the limit does not exist, and the function is not continuous at any integer point.    "
+},
+{
+  "id": "thm-continuity-principles",
+  "level": "2",
+  "url": "continuity-definition.html#thm-continuity-principles",
+  "type": "Theorem",
+  "number": "43",
+  "title": "Continuity Principles.",
+  "body": " Continuity Principles   The following principles describe the continuity of various functions:     Any constant function is continuous.    Any polynomial function is continuous.    Trigonometric functions and their inverse trigonometric functions (such as , , and ) are continuous on their domains.    Exponential functions and logarithmic functions are continuous on their domains.    For any positive integer and any continuous function , the functions and are continuous. When is even, the domain of is restricted to values of for which .    If and are continuous, then their sum , difference , and product are also continuous.    If and are continuous, then the quotient is continuous for all such that .    If is continuous at with , and is continuous at , then the composite function is continuous at . That is: In fact, if is continuous at and is continuous at , then the composite function is continuous at .      "
+},
+{
+  "id": "ex-limit-cosine",
+  "level": "2",
+  "url": "continuity-definition.html#ex-limit-cosine",
+  "type": "Example",
+  "number": "44",
+  "title": "",
+  "body": "  Find the following limit:     Since the cosine function and the linear terms inside the parentheses are continuous, we can evaluate the limit by direct substitution:    "
+},
+{
+  "id": "ex-poly-continuity",
+  "level": "2",
+  "url": "continuity-definition.html#ex-poly-continuity",
+  "type": "Example",
+  "number": "45",
+  "title": "",
+  "body": "  Provide an argument to show that is continuous.    The function is a polynomial. According to the , any polynomial function is continuous for all real numbers.  Alternatively, we can observe that is formed by the sum and difference of the power functions , , and the constant . Since each of these individual terms is continuous, their sum must also be continuous at every value of .   "
+},
+{
+  "id": "continuity-definition-16",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-16",
+  "type": "Checkpoint",
+  "number": "46",
+  "title": "",
+  "body": "   Show that the rational function is continuous for all values except .    The function is a rational function, which is the quotient of two polynomials. According to the , a rational function is continuous at all points in its domain.  The domain of consists of all real numbers where the denominator is non-zero. Since only when , the function is continuous for all .      Show that is continuous everywhere (at every real number ).    Recall that . Since the power function is a polynomial and therefore continuous, and the square root function is continuous for all , their composition is continuous.  Alternatively, for any real number , we can show that by considering cases for , , and using one-sided limits. Since the limit always equals the function value, is continuous at every real number .    "
+},
+{
+  "id": "continuity-definition-17",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-17",
+  "type": "Checkpoint",
+  "number": "47",
+  "title": "",
+  "body": "  Show that     First, we simplify the rational expression inside the arcsine. Notice that the denominator can be factored as a difference of squares: .  For , we have:   Now, we apply the limit inside the function, justified by the continuity of the function:    "
+},
+{
+  "id": "continuity-definition-18",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-18",
+  "type": "Checkpoint",
+  "number": "48",
+  "title": "",
+  "body": "  Show that is continuous on where     We check the continuity of by examining the two pieces and the transition point:    For , . Since the sine function is continuous everywhere, is continuous on the interval .    For , . Since the cosine function is continuous everywhere, is continuous on the interval .    At , we check the one-sided limits and the function value:     Since , the function is continuous at .    Therefore, is continuous on .   "
+},
+{
+  "id": "continuity-definition-19",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-19",
+  "type": "Checkpoint",
+  "number": "49",
+  "title": "",
+  "body": "  Where are the following functions continuous?          The function is the composition of the sine function and the polynomial function . Since both and are continuous on , their composition is also continuous everywhere.           The function is continuous wherever its component parts are continuous and the argument of the logarithm is positive. The functions and are continuous for all real numbers. However, is only continuous for .  We must have , which means . This occurs when is not an odd multiple of . Therefore, is continuous on its domain: .    "
+},
+{
+  "id": "continuity-definition-20",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-20",
+  "type": "Checkpoint",
+  "number": "50",
+  "title": "",
+  "body": "   If the product function is continuous at , must and be continuous at ? Give reasons for your answer.    No, and do not need to be continuous at .  For example, consider and . Here, is discontinuous at , but the product is: which simplifies to for all . Since is a polynomial, it is continuous at .      Give an example of functions and , both continuous at , for which the composite is discontinuous at . Does this contradict the Continuity Principles theorem? Give reasons for your answer.    This is actually impossible. If is continuous at and is continuous at , then the composition must be continuous at .  The confusion often arises if is continuous at but not continuous at the value . For example, let (constant) and . Both are continuous at , but for all , which is actually continuous.  It does not contradict because the theorem specifically requires to be continuous at the output of (i.e., at ), not just at the same point .    "
+},
+{
+  "id": "continuity-definition-21",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-21",
+  "type": "Checkpoint",
+  "number": "51",
+  "title": "",
+  "body": "  Which of the following statements about the function graphed here are true. Explain your answers.   Graph of the piecewise function   A piecewise function with a curve and several line segments with open and closed circles.       Does exist?    Does exist?    Does exist?    Does ?    Is continuous at ?        Yes, as approaches from the left, the function values approach . Thus, .    Yes, as approaches from the right, the function values approach . Thus, .    Yes. Since the left-hand limit and the right-hand limit are both equal to , the overall limit exists and .    No. While the limit is , the solid dot on the graph shows that . Therefore, .    No. For a function to be continuous at a point, the limit must exist and be equal to the function value. Since , the function is not continuous at .     "
+},
+{
+  "id": "continuity-definition-23",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-23",
+  "type": "Checkpoint",
+  "number": "53",
+  "title": "",
+  "body": "  Based on the graph of the function as shown in , answer the following questions regarding continuity at :    Does exist?    Does exist?    Does exist?    Does ?    Is continuous at ?        Yes, as approaches from the left (along the curve), the function values approach . Thus, .    Yes, as approaches from the right (along the line segment), the function values approach . Thus, .    No. Since the left-hand limit ( ) and the right-hand limit ( ) are not equal, the two-sided limit does not exist.    No. Since the limit does not exist, it cannot be equal to the function value. Furthermore, is undefined as there is no solid dot at .    No. The function is not continuous at because the limit does not exist (a jump discontinuity) and the function is not defined there.     "
+},
+{
+  "id": "continuity-definition-24",
+  "level": "2",
+  "url": "continuity-definition.html#continuity-definition-24",
+  "type": "Checkpoint",
+  "number": "54",
+  "title": "",
+  "body": "  Consider the piecewise function :     Graph the function .   Colored graph of the piecewise function   Piecewise function with segments in blue, red, and green.      Does exist?  Does exist?  Does ?  Is continuous at ?  Does exist?  Does exist?  Does ?  Is continuous at ?  Is defined at ?  Is continuous at ?  To what new value should be changed to remove the discontinuity?     Using and the function definition:   See the graph above.  Yes, .  Yes, .  Yes, both are equal to .  Yes, the right-hand limit matches the function value at the endpoint.  Yes, .  Yes, since and , the limit is .  No, .  No, there is a removable discontinuity at .  No, the inequalities and do not include .  No, a function cannot be continuous where it is not defined.  Setting would make the function continuous at that point.    "
+},
+{
+  "id": "limits-at-infinity",
+  "level": "1",
+  "url": "limits-at-infinity.html",
+  "type": "Section",
+  "number": "",
+  "title": "Limits at Infinity",
+  "body": " Limits at Infinity  In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.  It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest but unlike those examples the numerator does not vanish at to provide cancellation, then we get an undefined expression, like   In such a case, we must examine the values of the functions closely in the neighborhood of . If the values ``blow up\" to infinity on both sides of , we may say that the limit is infinity. Similarly, if the values converge to on both sides, then we may say that the limit is But otherwise, all we can say is that the limit is undefined.  "
+},
+{
   "id": "notes-Limits-and-Continuity-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html",
@@ -446,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "39",
+  "number": "56",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -455,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "41",
+  "number": "58",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -464,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "42",
+  "number": "59",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -473,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "43",
+  "number": "60",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -482,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "44",
+  "number": "61",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -491,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "45",
+  "number": "62",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -500,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "46",
+  "number": "63",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

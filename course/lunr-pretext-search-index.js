@@ -565,7 +565,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Limits at Infinity",
-  "body": " Limits at Infinity  In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.  It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest but unlike those examples the numerator does not vanish at to provide cancellation, then we get an undefined expression, like   In such a case, we must examine the values of the functions closely in the neighborhood of . If the values ``blow up\" to infinity on both sides of , we may say that the limit is infinity. Similarly, if the values converge to on both sides, then we may say that the limit is But otherwise, all we can say is that the limit is undefined.  "
+  "body": " Limits at Infinity  In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.  It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest but unlike those examples the numerator does not vanish at to provide cancellation, then we get an undefined expression, like   In such a case, we must examine the values of the functions closely in the neighborhood of . If the values ``blow up\" to infinity on both sides of , we may say that the limit is infinity. Similarly, if the values converge to on both sides, then we may say that the limit is But otherwise, all we can say is that the limit is undefined.   The following examples demonstrate infinite limits and behavior near a vertical asymptote:       Since the numerator approaches and the denominator is always positive and approaches , the values are positive and become arbitrarily large near .       Since the numerator approaches and the denominator is always positive and approaches , all values are negative and large in magnitude near .       The values are negative and large to the right of , but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.     "
+},
+{
+  "id": "ex-infinite-limits",
+  "level": "2",
+  "url": "limits-at-infinity.html#ex-infinite-limits",
+  "type": "Example",
+  "number": "56",
+  "title": "",
+  "body": " The following examples demonstrate infinite limits and behavior near a vertical asymptote:       Since the numerator approaches and the denominator is always positive and approaches , the values are positive and become arbitrarily large near .       Since the numerator approaches and the denominator is always positive and approaches , all values are negative and large in magnitude near .       The values are negative and large to the right of , but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.    "
 },
 {
   "id": "notes-Limits-and-Continuity-chapter-exercises",
@@ -581,7 +590,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "56",
+  "number": "57",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -590,7 +599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "58",
+  "number": "59",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -599,7 +608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "59",
+  "number": "60",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -608,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "60",
+  "number": "61",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -617,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "61",
+  "number": "62",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -626,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "62",
+  "number": "63",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -635,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "63",
+  "number": "64",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

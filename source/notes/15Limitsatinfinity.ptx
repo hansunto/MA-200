@@ -17,6 +17,38 @@
        But otherwise, all we can say is that the limit is undefined. 
     </p>
 
+    <example xml:id="ex-infinite-limits">
+  <p>
+    The following examples demonstrate infinite limits and behavior near a vertical asymptote:
+  </p>
+  <ol marker="1">
+    <li>
+      <p>
+        <m>\displaystyle\lim_{x \to -1} \frac{x+4}{(x+1)^2} = \infty</m>
+      </p>
+      <p>
+        Since the numerator approaches <m>3</m> and the denominator is always positive and approaches <m>0</m>, the values are positive and become arbitrarily large near <m>x = -1</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\displaystyle\lim_{x \to -1} \frac{x-2}{(x+1)^2} = -\infty</m>
+      </p>
+      <p>
+        Since the numerator approaches <m>-3</m> and the denominator is always positive and approaches <m>0</m>, all values are negative and large in magnitude near <m>x = -1</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\displaystyle\lim_{x \to -1} \frac{x-2}{x+1} = \text{undefined}</m>
+      </p>
+      <p>
+        The values are negative and large to the right of <m>x = -1</m>, but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.
+      </p>
+    </li>
+  </ol>
+</example>
+
 
 
     </section>

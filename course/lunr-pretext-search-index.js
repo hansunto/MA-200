@@ -565,7 +565,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Limits at Infinity",
-  "body": " Limits at Infinity  In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.  It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest but unlike those examples the numerator does not vanish at to provide cancellation, then we get an undefined expression, like   In such a case, we must examine the values of the functions closely in the neighborhood of . If the values ``blow up\" to infinity on both sides of , we may say that the limit is infinity. Similarly, if the values converge to on both sides, then we may say that the limit is But otherwise, all we can say is that the limit is undefined.   The following examples demonstrate infinite limits and behavior near a vertical asymptote:       Since the numerator approaches and the denominator is always positive and approaches , the values are positive and become arbitrarily large near .       Since the numerator approaches and the denominator is always positive and approaches , all values are negative and large in magnitude near .       The values are negative and large to the right of , but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.     "
+  "body": " Limits at Infinity  In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.  It may be that the limit does not exist at all! For example, if a function is defined as a ratio like the examples above, the denominator vanishes at our point of interest but unlike those examples the numerator does not vanish at to provide cancellation, then we get an undefined expression, like   In such a case, we must examine the values of the functions closely in the neighborhood of . If the values ``blow up\" to infinity on both sides of , we may say that the limit is infinity. Similarly, if the values converge to on both sides, then we may say that the limit is But otherwise, all we can say is that the limit is undefined.   The following examples demonstrate infinite limits and behavior near a vertical asymptote:       Since the numerator approaches and the denominator is always positive and approaches , the values are positive and become arbitrarily large near .       Since the numerator approaches and the denominator is always positive and approaches , all values are negative and large in magnitude near .       The values are negative and large to the right of , but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.      Limit at Infinity Rule       Limits at Infinity   Find the following limits:                    As , the fraction . Thus, .    As , . Dividing a constant by a large number gives .    Substituting , as , . Since , the limit is .    Rewriting as where . This is a fundamental limit equal to .        Find , if it exists.    We analyze the behavior of the function as approaches from both sides:    As , the term is negative but very small. Squaring it makes a very small positive number. Therefore, .    As , the term is positive and very small. Squaring it again results in a very small positive number. Therefore, .    Since the function increases without bound from both sides, we write: The limit does not exist as a finite real number, but it is described as being infinite.      Find , , and , if they exist.    We examine the behavior of the function near :    As , is a small negative number. Cubing a negative number keeps it negative, so is a very small negative value. Therefore:     As , is a small positive number. Cubing it results in a very small positive value. Therefore:     Because the left-hand limit ( ) and the right-hand limit ( ) are not the same, the two-sided limit does not exist:         If is a positive rational number and is any real number, then provided that is defined for all required values of .      Let . Find .    To calculate this limit, we first find the highest power of that appears in the function. In this case, it is , showing up in both the numerator and denominator. Next, we divide every term by raised to this highest power. In this case, we divide every term by .  We get:       Evaluate the following limits:                       Divide the numerator and denominator by :     Divide by the highest power :     Divide by : Since the numerator behaves like and , the limit is .       Summary of Limits of Rational Functions at Infinity  Let and be polynomial functions. To find , compare the degree of the numerator ( ) and the degree of the denominator ( ):      If : The limit is always .     If : The limit is the ratio of the leading coefficients.     If : The limit is or (determine the sign by checking the leading terms).        Find and if .    To evaluate these limits, we divide the numerator and denominator by .  For , we have :   For , we have (or ). This introduces a negative sign when we divide the denominator by the radical:       Find .    This limit has the indeterminate form . To evaluate it, we rationalize the expression by multiplying the numerator and the denominator by the conjugate:   Next, we divide the numerator and denominator by (noting that for ):     "
 },
 {
   "id": "ex-infinite-limits",
@@ -575,6 +575,177 @@ var ptx_lunr_docs = [
   "number": "56",
   "title": "",
   "body": " The following examples demonstrate infinite limits and behavior near a vertical asymptote:       Since the numerator approaches and the denominator is always positive and approaches , the values are positive and become arbitrarily large near .       Since the numerator approaches and the denominator is always positive and approaches , all values are negative and large in magnitude near .       The values are negative and large to the right of , but positive and large on the left side. Because the one-sided limits do not match, the two-sided limit does not exist.    "
+},
+{
+  "id": "ex-limits-infinity-list",
+  "level": "2",
+  "url": "limits-at-infinity.html#ex-limits-infinity-list",
+  "type": "Example",
+  "number": "57",
+  "title": "Limits at Infinity.",
+  "body": " Limits at Infinity   Find the following limits:                    As , the fraction . Thus, .    As , . Dividing a constant by a large number gives .    Substituting , as , . Since , the limit is .    Rewriting as where . This is a fundamental limit equal to .     "
+},
+{
+  "id": "ex-infinite-limit-rational",
+  "level": "2",
+  "url": "limits-at-infinity.html#ex-infinite-limit-rational",
+  "type": "Example",
+  "number": "58",
+  "title": "",
+  "body": "  Find , if it exists.    We analyze the behavior of the function as approaches from both sides:    As , the term is negative but very small. Squaring it makes a very small positive number. Therefore, .    As , the term is positive and very small. Squaring it again results in a very small positive number. Therefore, .    Since the function increases without bound from both sides, we write: The limit does not exist as a finite real number, but it is described as being infinite.   "
+},
+{
+  "id": "limits-at-infinity-9",
+  "level": "2",
+  "url": "limits-at-infinity.html#limits-at-infinity-9",
+  "type": "Checkpoint",
+  "number": "59",
+  "title": "",
+  "body": "  Find , , and , if they exist.    We examine the behavior of the function near :    As , is a small negative number. Cubing a negative number keeps it negative, so is a very small negative value. Therefore:     As , is a small positive number. Cubing it results in a very small positive value. Therefore:     Because the left-hand limit ( ) and the right-hand limit ( ) are not the same, the two-sided limit does not exist:      "
+},
+{
+  "id": "thm-limits-at-infinity-power",
+  "level": "2",
+  "url": "limits-at-infinity.html#thm-limits-at-infinity-power",
+  "type": "Theorem",
+  "number": "60",
+  "title": "",
+  "body": "  If is a positive rational number and is any real number, then provided that is defined for all required values of .   "
+},
+{
+  "id": "ex-limit-rational-infinity",
+  "level": "2",
+  "url": "limits-at-infinity.html#ex-limit-rational-infinity",
+  "type": "Example",
+  "number": "61",
+  "title": "",
+  "body": "  Let . Find .    To calculate this limit, we first find the highest power of that appears in the function. In this case, it is , showing up in both the numerator and denominator. Next, we divide every term by raised to this highest power. In this case, we divide every term by .  We get:    "
+},
+{
+  "id": "limits-at-infinity-12",
+  "level": "2",
+  "url": "limits-at-infinity.html#limits-at-infinity-12",
+  "type": "Checkpoint",
+  "number": "62",
+  "title": "",
+  "body": "  Evaluate the following limits:                       Divide the numerator and denominator by :     Divide by the highest power :     Divide by : Since the numerator behaves like and , the limit is .     "
+},
+{
+  "id": "ex-limit-radical-infinity",
+  "level": "2",
+  "url": "limits-at-infinity.html#ex-limit-radical-infinity",
+  "type": "Checkpoint",
+  "number": "63",
+  "title": "",
+  "body": "  Find and if .    To evaluate these limits, we divide the numerator and denominator by .  For , we have :   For , we have (or ). This introduces a negative sign when we divide the denominator by the radical:    "
+},
+{
+  "id": "limits-at-infinity-15",
+  "level": "2",
+  "url": "limits-at-infinity.html#limits-at-infinity-15",
+  "type": "Checkpoint",
+  "number": "64",
+  "title": "",
+  "body": "  Find .    This limit has the indeterminate form . To evaluate it, we rationalize the expression by multiplying the numerator and the denominator by the conjugate:   Next, we divide the numerator and denominator by (noting that for ):    "
+},
+{
+  "id": "sec-rate-change-tangent-curves",
+  "level": "1",
+  "url": "sec-rate-change-tangent-curves.html",
+  "type": "Section",
+  "number": "",
+  "title": "Rate of Change and Tangent Curves",
+  "body": " Rate of Change and Tangent Curves  The rate of change of a function at a point is the slope of the tangent line to the graph of the function at that point. It can be calculated using limits.  If I drive 200 miles in 4 hours, my average velocity is miles per hour. Let represent the reading on my odometer at time . Suppose I want to find my average velocity during some time interval that begins when and ends hours later. Velocity can be calculated as follows: The subscript ave tells us this is an average velocity. My velocity does not have to be constant during this time (Even cruise control is not perfect).  Our common notion of velocity involves a change in distance and a change in time. Yet, a speedometer tells us the velocity of a car at any instant. We can do this mathematically using the idea of a limit.    Suppose . Complete the following table, letting .   Calculating Average Velocity as           1  16  9  7  7    0.1  9.61  9  0.61  6.1    0.01  9.0601  9  0.0601  6.01    0.001  9.006001  9  0.006001  6.001     Each of the values in the last column represents an average velocity. What seems to be happening to these values as gets smaller?  So when ,  .    As approaches , the values in the last column seem to be approaching . Therefore, when , the instantaneous velocity is .     Average Rate of Change  The average rate of change of with respect to , as changes from to , is the ratio of the change in output to the change in input:    The slope of the line from to is and the line is called a secant line .   Tangent Line   The Tangent line to the curve at the point is the line through with slope provided that this limit exists.    We sometimes refer to the slope of the tangent line to the curve at a point as the slope of the curve at the point.  Then the average rate of change is called a difference quotient , given by:   We now use a different notation for average rates of change by eliminating the subscripts. Let be and be . To get from to , we calculate the change in input as .    Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       First, we find the slope of the tangent line at using the limit definition:   Now, using the point-slope form with the point and slope :   The equation of the tangent line is .     Difference Quotient and Tangent Slope   The average rate of change of with respect to is also called the difference quotient . It is given by:   The difference quotient is equal to the slope of the line from a point to a point . The slope of the tangent line at is then:      Rate of Change of a Quadratic Function  Consider the function . We want to find the rate of change at the point .  Using the definition, we have:     Therefore, the rate of change of the function at is -4.     Find the slope of the curve at .    First, we find the -coordinate of the point:   Then, we find a formula for the -coordinate at a point near . By squaring the binomial and simplifying:   Now, we evaluate the limit of the difference quotient:   Our calculation shows that the slope of the line tangent to at is .    "
+},
+{
+  "id": "sec-rate-change-tangent-curves-5",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-5",
+  "type": "Checkpoint",
+  "number": "65",
+  "title": "",
+  "body": "  Suppose . Complete the following table, letting .   Calculating Average Velocity as           1  16  9  7  7    0.1  9.61  9  0.61  6.1    0.01  9.0601  9  0.0601  6.01    0.001  9.006001  9  0.006001  6.001     Each of the values in the last column represents an average velocity. What seems to be happening to these values as gets smaller?  So when ,  .    As approaches , the values in the last column seem to be approaching . Therefore, when , the instantaneous velocity is .   "
+},
+{
+  "id": "asm-average-rate-of-change-2",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#asm-average-rate-of-change-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "average rate of change of with respect to "
+},
+{
+  "id": "sec-rate-change-tangent-curves-7",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "secant line "
+},
+{
+  "id": "def-tangent-line",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#def-tangent-line",
+  "type": "Definition",
+  "number": "67",
+  "title": "Tangent Line.",
+  "body": " Tangent Line   The Tangent line to the curve at the point is the line through with slope provided that this limit exists.   "
+},
+{
+  "id": "sec-rate-change-tangent-curves-9",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "slope of the curve "
+},
+{
+  "id": "sec-rate-change-tangent-curves-10",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "difference quotient "
+},
+{
+  "id": "ex-tangent-parabola",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-tangent-parabola",
+  "type": "Example",
+  "number": "68",
+  "title": "",
+  "body": "  Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       First, we find the slope of the tangent line at using the limit definition:   Now, using the point-slope form with the point and slope :   The equation of the tangent line is .   "
+},
+{
+  "id": "def-difference-quotient-tangent",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#def-difference-quotient-tangent",
+  "type": "Definition",
+  "number": "70",
+  "title": "Difference Quotient and Tangent Slope.",
+  "body": " Difference Quotient and Tangent Slope   The average rate of change of with respect to is also called the difference quotient . It is given by:   The difference quotient is equal to the slope of the line from a point to a point . The slope of the tangent line at is then:    "
+},
+{
+  "id": "ex-rate-change",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-rate-change",
+  "type": "Example",
+  "number": "71",
+  "title": "Rate of Change of a Quadratic Function.",
+  "body": " Rate of Change of a Quadratic Function  Consider the function . We want to find the rate of change at the point .  Using the definition, we have:     Therefore, the rate of change of the function at is -4.  "
+},
+{
+  "id": "ex-slope-reciprocal-squared",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-slope-reciprocal-squared",
+  "type": "Example",
+  "number": "72",
+  "title": "",
+  "body": "  Find the slope of the curve at .    First, we find the -coordinate of the point:   Then, we find a formula for the -coordinate at a point near . By squaring the binomial and simplifying:   Now, we evaluate the limit of the difference quotient:   Our calculation shows that the slope of the line tangent to at is .   "
 },
 {
   "id": "notes-Limits-and-Continuity-chapter-exercises",
@@ -590,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "57",
+  "number": "73",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -599,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "59",
+  "number": "75",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -608,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "60",
+  "number": "76",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -617,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "61",
+  "number": "77",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -626,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "62",
+  "number": "78",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -635,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "63",
+  "number": "79",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -644,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "64",
+  "number": "80",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

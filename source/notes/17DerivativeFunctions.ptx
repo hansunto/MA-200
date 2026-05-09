@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-derivative-functions" type="notes">
+  <title>The Derivative as a Function</title>
+
+  <p>
+    In the previous section, we defined the derivative at a point as the limit of the difference quotient. 
+    Now, we will explore how to find the derivative as a function, which gives us the rate of change at any point in the domain of the original function.
+  </p>
+
+  <definition xml:id="def-derivative">
+  <title>The Derivative</title>
+  <statement>
+    <p>
+      The <term>derivative</term> of a function <m>f</m>, denoted by <m>f'</m>, is defined by
+      <me>
+        f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+      </me>
+      if the limit exists.
+    </p>
+  </statement>
+</definition>
+<p>
+  If <m>y = f(x)</m>, we also use the <term>Leibniz notation</term> for the derivative:
+  <me>
+    f'(x) = \frac{dy}{dx}
+  </me>
+</p>
+<example xml:id="ex-derivative-linear">
+  <statement>
+    <p>
+      For <m>f(x)=3x-4</m>, find <m>f'(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We use the limit definition of the derivative:
+      <md>
+        <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{[3(x+h)-4] - (3x-4)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{3x + 3h - 4 - 3x + 4}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{3h}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} 3 = 3</mrow>
+      </md>
+    </p>
+    <p>
+      The derivative is <m>f'(x) = 3</m>, which makes sense because the slope of the line <m>y = 3x - 4</m> is constant at <m>3</m>.
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-derivative-at-point-x2">
+  <statement>
+    <p>
+      For <m>f(x)=x^2</m>, find <m>f'(4)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We apply the limit definition of the derivative at the point <m>a=4</m>:
+      <md>
+        <mrow>f'(4) \amp = \lim_{h \to 0} \frac{f(4+h) - f(4)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{(4+h)^2 - 4^2}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{(16 + 8h + h^2) - 16}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{8h + h^2}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} (8 + h)</mrow>
+        <mrow>\amp = 8</mrow>
+      </md>
+    </p>
+    <p>
+      Alternatively, using the <m>x \to a</m> form:
+      <md>
+        <mrow>f'(4) \amp = \lim_{x \to 4} \frac{f(x) - f(4)}{x - 4}</mrow>
+        <mrow>\amp = \lim_{x \to 4} \frac{x^2 - 16}{x - 4}</mrow>
+        <mrow>\amp = \lim_{x \to 4} \frac{(x-4)(x+4)}{x - 4}</mrow>
+        <mrow>\amp = \lim_{x \to 4} (x + 4) = 8</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+<exercise xml:id="ex-derivative-cubic">
+  <statement>
+    <p>
+      For <m>f(x)=x^3</m>, find <m>f'(x)</m>. Then, evaluate <m>f'(-1)</m> and <m>f'(1.5)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the general derivative function <m>f'(x)</m> using the limit definition:
+      <md>
+        <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{(x+h)^3 - x^3}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{x^3 + 3x^2h + 3xh^2 + h^3 - x^3}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{3x^2h + 3xh^2 + h^3}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} (3x^2 + 3xh + h^2)</mrow>
+        <mrow>\amp = 3x^2</mrow>
+      </md>
+    </p>
+    <p>
+      Now, we evaluate the derivative at the specific points:
+      <ol marker="1">
+        <li>
+          <p>
+            At <m>x = -1</m>: <m>f'(-1) = 3(-1)^2 = 3</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            At <m>x = 1.5</m>: <m>f'(1.5) = 3(1.5)^2 = 3(2.25) = 6.75</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<definition xml:id="def-derivative-alternative">
+  <title>Alternative definition of derivative</title>
+  <statement>
+    <p>
+      <me>
+        f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
+      </me>
+    </p>
+  </statement>
+</definition>
+
+<example xml:id="ex-derivative-quadratic-alternative">
+  <statement>
+    <p>
+      Find the derivative of the function <m>f(x)=x^2-5x+6</m> at the number <m>a</m> using the alternative definition.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We use the alternative definition of the derivative:
+      <me>
+        f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+      </me>
+    </p>
+    <p>
+      Substituting the function <m>f(x) = x^2 - 5x + 6</m>:
+      <md>
+        <mrow>f'(a) \amp = \lim_{x \to a} \frac{(x^2 - 5x + 6) - (a^2 - 5a + 6)}{x - a}</mrow>
+        <mrow>\amp = \lim_{x \to a} \frac{x^2 - a^2 - 5x + 5a}{x - a}</mrow>
+        <mrow>\amp = \lim_{x \to a} \frac{(x - a)(x + a) - 5(x - a)}{x - a}</mrow>
+      </md>
+    </p>
+    <p>
+      Factoring out <m>(x - a)</m> from the numerator:
+      <md>
+        <mrow>\amp = \lim_{x \to a} \frac{(x - a)(x + a - 5)}{x - a}</mrow>
+        <mrow>\amp = \lim_{x \to a} (x + a - 5)</mrow>
+        <mrow>\amp = a + a - 5 = 2a - 5</mrow>
+      </md>
+    </p>
+    <p>
+      As expected, we obtain the same result: <m>f'(a) = 2a - 5</m>.
+    </p>
+  </solution>
+</example>
+
+<definition xml:id="def-differentiable-closed-interval">
+  <title>Differentiability on a Closed Interval</title>
+  <statement>
+    <p>
+      A function <term>f is differentiable on the closed interval <m>[a,b]</m></term> if <m>f</m> is differentiable on the open interval <m>(a,b)</m> and if the following limits exist:
+      <me>
+        \lim_{h \to 0^+} \frac{f(a+h)-f(a)}{h} \quad \text{and} \quad \lim_{h \to 0^-} \frac{f(b+h)-f(b)}{h}
+      </me>
+    </p>
+  </statement>
+</definition>
+<p>
+  A function <m>f(x)</m> is said to be differentiable at a point <m>x=x_0</m> in its domain if the derivative <m>f'(x_0)</m> exists. Remember, the derivative is defined as a limit of a difference quotient as follows:
+  <me>f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h) - f(x_0)}{h}</me>
+  So <m>f</m> is differentiable at <m>x=x_0</m> if this limit exists. That means:
+</p>
+
+<ol marker="1">
+  <li>
+    <p>
+      The right-hand limit <m>L^+ = \lim_{h\to 0^+} \frac{f(x_0+h) - f(x_0)}{h}</m> exists.
+    </p>
+  </li>
+  <li>
+    <p>
+      The left-hand limit <m>L^- = \lim_{h\to 0^-} \frac{f(x_0+h) - f(x_0)}{h}</m> exists.
+    </p>
+  </li>
+  <li>
+    <p>
+      They are equal: <m>L^+ = L^-</m>.
+    </p>
+  </li>
+</ol>
+
+<p>
+  If <m>x_0</m> is a point at which this limit fails to exist for some reason—either because the function is not continuous, one or both of the one-sided limits don't exist, or they exist but do not match—then we say that <m>x_0</m> is a point of non-differentiability of <m>f</m>, or more simply, <m>x_0</m> is a <term>singular point</term> of <m>f</m>.
+</p>
+
+<p>
+  If <m>f(x)</m> is defined in an open interval <m>(a,b)</m>, then we say <m>f</m> is differentiable in <m>(a,b)</m> if it is differentiable at each point in the interval. Since the endpoints are not actually in the interval, we do not have to concern ourselves with them. However, if <m>f</m> is defined piecewise, we must check the right and left hand limits at each of the points separating adjacent intervals to verify differentiability. If either one-sided limit fails to exist or if they do not match, the point is a singularity.
+</p>
+
+<remark>
+  <p>
+    A function is <term>not differentiable</term> (does not have a derivative <m>f'</m>) at a point <m>x=a</m> if any of the following occur:
+  </p>
+  <ol marker="1">
+    <li>
+      <p>
+        The graph of <m>f</m> is <strong>not continuous</strong> at <m>x=a</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        The graph of <m>f</m> has a <strong>vertical tangent line</strong> at <m>x=a</m>; that is:
+        <me>\lim_{h \to 0} |f'(x)| = \infty</me>
+      </p>
+    </li>
+    <li>
+      <p>
+        The graph of <m>f</m> has a <strong>cusp</strong> (or a sharp corner) at <m>x=a</m>. This occurs if <m>f</m> is continuous but <m>f'(x) \to \infty</m> as <m>x \to a</m> from one side, and <m>f'(x) \to -\infty</m> as <m>x \to a</m> from the other side.
+      </p>
+    </li>
+  </ol>
+</remark>
+
+<example xml:id="ex-piecewise-singularity">
+  <statement>
+    <p>
+      Consider the piecewise function <m>f</m>:
+      <me>
+        f(x) = \begin{cases} 
+        3x - x^2 \amp \text{if } x \in (1,2] \\ 
+        4x - x^2 - 2 \amp \text{if } x \in (2,3] 
+        \end{cases}
+      </me>
+    </p>
+    <figure xml:id="fig-singularity-graph">
+      <caption>Graph of <m>f(x)</m> showing a sharp corner (singularity) at <m>x=2</m></caption>
+      <image xml:id="img-singularity-graph" width="60%">
+        <shortdescription>A piecewise function formed by two parabolas meeting at a sharp corner at x equals 2.</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=1]
+            % Grid and Axes
+            \draw[step=1, gray!20, thin] (0,0) grid (4,4);
+            \draw[-stealth] (0,0) -- (4.2,0) node[right] {\(x\)};
+            \draw[-stealth] (0,0) -- (0,4.2) node[above] {\(y\)};
+
+            % Axis Labels
+            \foreach \x in {1,2,3} \draw (\x, 0.1) -- (\x, -0.1) node[below] {\small \(\x\)};
+            \foreach \y in {1,2,3,4} \draw (0.1, \y) -- (-0.1, \y) node[left] {\small \(\y\)};
+
+            % Piece 1: 3x - x^2 on (1,2]
+            \draw[very thick, blue, domain=1:2, smooth] plot (\x, {3*\x - \x*\x});
+            
+            % Piece 2: 4x - x^2 - 2 on (2,3]
+            \draw[very thick, red, domain=2:3, smooth] plot (\x, {4*\x - \x*\x - 2});
+
+            % Singularity Point
+            \fill[black] (2,2) circle (2.5pt) node[above] {\(x=2\)};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+  <solution>
+    <p>
+      To determine if <m>x=2</m> is a singularity, we check both continuity and differentiability at that point:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Continuity:</strong> On the left, as <m>x \to 2^-</m>, <m>f(x) = 3x - x^2 \to 3(2) - (2)^2 = 2</m>. On the right, as <m>x \to 2^+</m>, <m>f(x) = 4x - x^2 - 2 \to 4(2) - (2)^2 - 2 = 2</m>. Since the limits match the function value <m>f(2)=2</m>, the function is continuous.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Differentiability:</strong> We examine the slopes of the tangent lines from each side.
+          <ul>
+            <li><p>On the left <m>(x \lt 2)</m>: <m>f'(x) = 3 - 2x</m>. As <m>x \to 2^-</m>, <m>f'(x) \to 3 - 4 = -1</m>.</p></li>
+            <li><p>On the right <m>(x \gt 2)</m>: <m>f'(x) = 4 - 2x</m>. As <m>x \to 2^+</m>, <m>f'(x) \to 4 - 4 = 0</m>.</p></li>
+          </ul>
+        </p>
+      </li>
+    </ul>
+    <p>
+      While the function values match, the slopes do not (<m>-1 \neq 0</m>). This creates a sharp corner in the graph as seen in <xref ref="fig-singularity-graph" />, making <m>x=2</m> a <strong>singularity</strong> of <m>f</m>.
+    </p>
+  </solution>
+</example>
+<example xml:id="ex-abs-not-differentiable">
+  <statement>
+    <p>
+      If <m>f(x)=|x|</m>, show that <m>f</m> is not differentiable at <m>0</m>.
+    </p>
+  </statement>
+  <solution>
+    <figure xml:id="fig-absolute-value-graph">
+  <caption>Graph of <m>f(x) = |x|</m> showing the sharp corner at the origin</caption>
+  <image xml:id="img-absolute-value" width="50%">
+    <shortdescription>A V-shaped graph with a sharp point at the origin.</shortdescription>
+    <latex-image>
+      \begin{tikzpicture}[scale=1]
+        % Grid and Axes
+        \draw[step=1, gray!20, thin] (-3,-1) grid (3,3);
+        \draw[-stealth] (-3.2,0) -- (3.2,0) node[right] {\(x\)};
+        \draw[-stealth] (0,-1.2) -- (0,3.2) node[above] {\(y\)};
+
+        % Axis Labels
+        \foreach \x in {-2,-1,1,2} \draw (\x,0.1) -- (\x,-0.1) node[below] {\small \(\x\)};
+        \foreach \y in {1,2} \draw (0.1,\y) -- (-0.1,\y) node[left] {\small \(\y\)};
+
+        % The function f(x) = |x|
+        \draw[ultra thick, blue] (-3,3) -- (0,0) -- (3,3);
+
+        % Label for the corner
+        \fill[black] (0,0) circle (2.5pt) node[below] {Corner (Not Differentiable)};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+    <p>
+      To show that <m>f(x) = |x|</m> is not differentiable at <m>x = 0</m>, we must check if the limit of the difference quotient exists at that point:
+      <me>
+        f'(0) = \lim_{h \to 0} \frac{f(0+h) - f(0)}{h} = \lim_{h \to 0} \frac{|h| - |0|}{h} = \lim_{h \to 0} \frac{|h|}{h}
+      </me>
+    </p>
+    <p>
+      We examine the one-sided limits:
+    </p>
+    <ul>
+      <li>
+        <p>
+          From the right (<m>h \to 0^+</m>), <m>|h| = h</m>, so:
+          <me>\lim_{h \to 0^+} \frac{h}{h} = 1</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          From the left (<m>h \to 0^-</m>), <m>|h| = -h</m>, so:
+          <me>\lim_{h \to 0^-} \frac{-h}{h} = -1</me>
+        </p>
+      </li>
+    </ul>
+    <p>
+      Since the left-hand and right-hand limits are not equal (<m>1 \neq -1</m>), the two-sided limit does not exist. Therefore, <m>f(x) = |x|</m> is not differentiable at <m>x = 0</m>. This corresponds to the <strong>sharp corner</strong> (or cusp) seen at the origin on its graph.
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-cube-root-not-differentiable">
+  <statement>
+    <p>
+      If <m>f(x)=\sqrt[3]{x}</m>, show that <m>f</m> is not differentiable at <m>0</m>.
+    </p>
+    <figure xml:id="fig-cube-root-vertical-tangent">
+      <caption>Graph of <m>f(x) = \sqrt[3]{x}</m> showing a vertical tangent at the origin</caption>
+      <image xml:id="img-cube-root" width="60%">
+        <shortdescription>The graph of a cube root function passing through the origin with an increasingly steep slope.</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}[scale=1]
+            % Grid and Axes
+            \draw[step=1, gray!20, thin] (-3,-2) grid (3,2);
+            \draw[-stealth] (-3.2,0) -- (3.2,0) node[right] {\(x\)};
+            \draw[-stealth] (0,-2.2) -- (0,2.2) node[above] {\(y\)};
+
+            % The function f(x) = x^(1/3)
+            \draw[ultra thick, blue, domain=0.01:2.8, smooth] plot (\x, {\x^(1/3)});
+            \draw[ultra thick, blue, domain=-2.8:-0.01, smooth] plot (\x, {-abs(\x)^(1/3)});
+
+            % Vertical tangent indicator
+            \draw[dashed, red, thick] (0,-1.5) -- (0,1.5);
+            \fill[black] (0,0) circle (2.5pt);
+            \node[red, anchor=west] at (0,1) {\small Vertical Tangent};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+  <solution>
+    <p>
+      We use the limit definition of the derivative at <m>x = 0</m>:
+      <md>
+        <mrow>f'(0) \amp = \lim_{h \to 0} \frac{f(0+h) - f(0)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{\sqrt[3]{h} - 0}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{h^{1/3}}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{1}{h^{2/3}}</mrow>
+      </md>
+    </p>
+    <p>
+      As <m>h \to 0</m>, the denominator <m>h^{2/3}</m> is always positive (since it is a square of a cube root) and approaches <m>0</m>. Therefore:
+      <me>\lim_{h \to 0} \frac{1}{h^{2/3}} = \infty</me>
+    </p>
+    <p>
+      Since the limit of the difference quotient is infinite, the derivative <m>f'(0)</m> does not exist. Geometrically, this means the graph has a <strong>vertical tangent line</strong> at the origin, as illustrated in <xref ref="fig-cube-root-vertical-tangent" />.
+    </p>
+  </solution>
+</example>
+
+<theorem xml:id="thm-differentiable-implies-continuous">
+  <statement>
+    <p>
+      If <m>f</m> is differentiable at <m>a</m>, then <m>f</m> is continuous at <m>a</m>.
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Since <m>f</m> is differentiable at <m>a</m>, we know that
+      <me>f'(a) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}</me>
+      exists. To show that <m>f</m> is continuous at <m>a</m>, we must show that <m>\lim_{x \to a} f(x) = f(a)</m>, or equivalently, <m>\lim_{x \to a} [f(x) - f(a)] = 0</m>.
+    </p>
+    <p>
+      For <m>x \neq a</m>, we can write:
+      <me>f(x) - f(a) = \frac{f(x) - f(a)}{x - a}(x - a)</me>
+    </p>
+    <p>
+      Using the limit laws, we get:
+      <md>
+        <mrow>\lim_{x \to a} [f(x) - f(a)] \amp = \lim_{x \to a} \left[ \frac{f(x) - f(a)}{x - a} (x - a) \right]</mrow>
+        <mrow>\amp = \left( \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \right) \left( \lim_{x \to a} (x - a) \right)</mrow>
+        <mrow>\amp = f'(a) \cdot 0</mrow>
+        <mrow>\amp = 0</mrow>
+      </md>
+    </p>
+    <p>
+      Since <m>\lim_{x \to a} [f(x) - f(a)] = 0</m>, it follows that <m>\lim_{x \to a} f(x) = f(a)</m>. Therefore, by the definition of continuity, <m>f</m> is continuous at <m>a</m>.
+    </p>
+  </proof>
+</theorem>
+
+
+
+  </section>

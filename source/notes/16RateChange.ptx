@@ -109,18 +109,6 @@
 <p>
   We sometimes refer to the slope of the tangent line to the curve at a point as the <term>slope of the curve</term> at the point.
 </p>
-<p>
-  Then the average rate of change is called a <term>difference quotient</term>, given by:
-  <me>
-    \frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x+h)-f(x)}{(x+h)-x} = \frac{f(x+h)-f(x)}{h}
-  </me>
-</p>
-<p>
-  We now use a different notation for average rates of change by eliminating the subscripts. 
-  Let <m>x</m> be <m>x_1</m> and <m>x+h</m> be <m>x_2</m>. 
-  To get from <m>x_1</m> to <m>x_2</m>, we calculate the change in input as 
-  <m>x_2 - x_1 = (x+h) - x = h</m>. 
-</p>
 
 <example xml:id="ex-tangent-parabola">
   <statement>
@@ -160,30 +148,42 @@
 
   </statement>
   <solution>
-    <p>
-      First, we find the slope of the tangent line at <m>a = -2</m> using the limit definition:
-      <md>
-        <mrow>m \amp = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}</mrow>
-        <mrow>\amp = \lim_{h \to 0} \frac{(-2+h)^2 - (-2)^2}{h}</mrow>
-        <mrow>\amp = \lim_{h \to 0} \frac{(4 - 4h + h^2) - 4}{h}</mrow>
-        <mrow>\amp = \lim_{h \to 0} \frac{-4h + h^2}{h}</mrow>
-        <mrow>\amp = \lim_{h \to 0} (-4 + h) = -4</mrow>
-      </md>
-    </p>
-    <p>
-      Now, using the point-slope form <m>y - y_1 = m(x - x_1)</m> with the point <m>(-2, 4)</m> and slope <m>m = -4</m>:
-      <md>
-        <mrow>y - 4 \amp = -4(x - (-2))</mrow>
-        <mrow>y - 4 \amp = -4x - 8</mrow>
-        <mrow>y \amp = -4x - 4</mrow>
-      </md>
-    </p>
-    <p>
-      The equation of the tangent line is <m>y = -4x - 4</m>.
-    </p>
-  </solution>
+  <title>Method using <m>x \to a</m></title>
+  <p>
+    We can also find the slope <m>m</m> at <m>a = -2</m> using the alternative limit definition:
+    <md>
+      <mrow>m \amp = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}</mrow>
+      <mrow>\amp = \lim_{x \to -2} \frac{x^2 - (-2)^2}{x - (-2)}</mrow>
+      <mrow>\amp = \lim_{x \to -2} \frac{x^2 - 4}{x + 2}</mrow>
+    </md>
+  </p>
+  <p>
+    Factoring the numerator as a difference of squares:
+    <md>
+      <mrow>\amp = \lim_{x \to -2} \frac{(x + 2)(x - 2)}{x + 2}</mrow>
+      <mrow>\amp = \lim_{x \to -2} (x - 2)</mrow>
+      <mrow>\amp = -2 - 2 = -4</mrow>
+    </md>
+  </p>
+  <p>
+    This gives the same slope, <m>m = -4</m>, which we then use in the point-slope formula to find <m>y = -4x - 4</m>.
+  </p>
+</solution>
+
 </example>
 
+<p>
+  The average rate of change is called a <term>difference quotient</term>, given by:
+  <me>
+    \frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x+h)-f(x)}{(x+h)-x} = \frac{f(x+h)-f(x)}{h}
+  </me>
+</p>
+<p>
+  We now use a different notation for average rates of change by eliminating the subscripts. 
+  Let <m>x</m> be <m>x_1</m> and <m>x+h</m> be <m>x_2</m>. 
+  To get from <m>x_1</m> to <m>x_2</m>, we calculate the change in input as 
+  <m>x_2 - x_1 = (x+h) - x = h</m>. 
+</p>
 
 <definition xml:id="def-difference-quotient-tangent">
   <title>Difference Quotient and Tangent Slope</title>
@@ -250,6 +250,154 @@
     </p>
   </solution>
 </example>
+<example xml:id="ex-simplified-difference-quotient">
+  <statement>
+    <p>
+      For <m>f(x)=x^2</m>, find a <term>simplified</term> form of the <term>difference quotient</term>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Recall that the difference quotient is given by <m>\displaystyle \frac{f(x+h)-f(x)}{h}</m>. Substituting <m>f(x)=x^2</m>, we have:
+      <md>
+        <mrow>\frac{f(x+h)-f(x)}{h} \amp = \frac{(x+h)^2 - x^2}{h}</mrow>
+        <mrow>\amp = \frac{(x^2 + 2xh + h^2) - x^2}{h}</mrow>
+        <mrow>\amp = \frac{2xh + h^2}{h}</mrow>
+        <mrow>\amp = \frac{h(2x + h)}{h}</mrow>
+        <mrow>\amp = 2x + h, \quad \text{for } h \neq 0</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+<p>
+  By taking the limit of the result from <xref ref="ex-simplified-difference-quotient" /> as <m>h \to 0</m>, we find the derivative (the instantaneous rate of change) of the function.
+</p>
+
+<assemblage xml:id="asm-derivative-x-squared">
+  <title>The Derivative of <m>x^2</m></title>
+    <p>
+      The derivative of <m>f(x) = x^2</m>, denoted as <m>f'(x)</m>, is calculated as:
+      <md>
+        <mrow>f'(x) \amp = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} (2x + h)</mrow>
+        <mrow>\amp = 2x</mrow>
+      </md>
+    </p>
+</assemblage>
+
+<p>
+  This result, <m>f'(x) = 2x</m>, provides a formula to find the slope of the tangent line to the parabola at <em>any</em> point <m>x</m>.
+</p>
+<example xml:id="ex-diff-quotient-cubic">
+  <statement>
+    <p>
+      For <m>f(x)=x^3</m>, find a simplified form of the difference quotient.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We substitute <m>f(x)=x^3</m> into the difference quotient formula:
+      <md>
+        <mrow>\frac{f(x+h)-f(x)}{h} \amp = \frac{(x+h)^3 - x^3}{h}</mrow>
+        <mrow>\amp = \frac{(x^3 + 3x^2h + 3xh^2 + h^3) - x^3}{h}</mrow>
+        <mrow>\amp = \frac{3x^2h + 3xh^2 + h^3}{h}</mrow>
+        <mrow>\amp = \frac{h(3x^2 + 3xh + h^2)}{h}</mrow>
+        <mrow>\amp = 3x^2 + 3xh + h^2, \quad \text{for } h \neq 0</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+<p>
+  By taking the limit of the result from <xref ref="ex-diff-quotient-cubic" /> as <m>h \to 0</m>, we find the derivative (the instantaneous rate of change) of the function.
+</p>
+
+<p>
+  This result, <m>f'(x) = \lim_{h \to 0} (3x^2 + 3xh + h^2)=3x^2</m>, 
+  provides a formula to find the slope of the tangent line to the cubic curve at <em>any</em> point <m>x</m>.
+</p>
+<exercise xml:id="ex-diff-quotient-reciprocal">
+  <task>
+    <statement>
+      <p>
+        For <m>f(x)=3/x</m>, find a simplified form of the difference quotient.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We substitute <m>f(x) = \frac{3}{x}</m> into the difference quotient formula:
+        <md>
+          <mrow>\frac{f(x+h)-f(x)}{h} \amp = \frac{\frac{3}{x+h} - \frac{3}{x}}{h}</mrow>
+          <mrow>\amp = \frac{1}{h} \left( \frac{3x - 3(x+h)}{x(x+h)} \right)</mrow>
+          <mrow>\amp = \frac{1}{h} \left( \frac{3x - 3x - 3h}{x(x+h)} \right)</mrow>
+          <mrow>\amp = \frac{-3h}{h \cdot x(x+h)}</mrow>
+          <mrow>\amp = \frac{-3}{x(x+h)}, \quad \text{for } h \neq 0</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        Find the equation of the tangent line to the hyperbola <m>y=3/x</m> at the point <m>P(-1,-3)</m>.
+      </p>
+    </statement>
+    <solution>
+        <figure xml:id="fig-hyperbola-tangent">
+  <caption>The hyperbola <m>y=3/x</m> and its tangent line at <m>P(-1,-3)</m></caption>
+  <image xml:id="img-hyperbola-tangent" width="60%">
+    <shortdescription>A hyperbola in the first and third quadrants with a tangent line at negative 1, negative 3.</shortdescription>
+    <latex-image>
+      \begin{tikzpicture}[scale=0.8]
+        % Grid and Axes
+        \draw[step=1, gray!20, thin] (-6,-6) grid (2,2);
+        \draw[-stealth] (-6.2,0) -- (2.2,0) node[right] {\(x\)};
+        \draw[-stealth] (0,-6.2) -- (0,2.2) node[above] {\(y\)};
+
+        % Axis Labels
+        \foreach \x in {-6,-4,-2,2} \draw (\x,0.1) -- (\x,-0.1) node[below] {\small \(\x\)};
+        \foreach \y in {-6,-4,-2,2} \draw (0.1,\y) -- (-0.1,\y) node[left] {\small \(\y\)};
+
+        % Hyperbola y = 3/x (Third Quadrant)
+        \draw[very thick, blue, domain=-6:-0.5, smooth] plot (\x, {3/\x});
+        \node[blue, left] at (-4, -0.75) {\(y=3/x\)};
+
+        % Tangent Line y = -3x - 6
+        % When x = -2, y = 0. When x = 0, y = -6.
+        \draw[thick, red, domain=-2.2:-0.2] plot (\x, {-3*\x - 6});
+        \node[red, right] at (-0.5, -4.5) {\(y=-3x-6\)};
+
+        % Point of Tangency
+        \fill[black] (-1,-3) circle (2.5pt) node[below left] {\(P(-1,-3)\)};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+      <p>
+        First, we find the slope <m>m</m> at <m>x = -1</m> by taking the limit of the difference quotient from the previous part:
+        <md>
+          <mrow>m \amp = \lim_{h \to 0} \frac{-3}{x(x+h)} \bigg|_{x=-1}</mrow>
+          <mrow>\amp = \lim_{h \to 0} \frac{-3}{-1(-1+h)}</mrow>
+          <mrow>\amp = \frac{-3}{(-1)(-1)} = -3</mrow>
+        </md>
+      </p>
+      <p>
+        Now, using the point-slope form with <m>P(-1, -3)</m> and <m>m = -3</m>:
+        <md>
+          <mrow>y - (-3) \amp = -3(x - (-1))</mrow>
+          <mrow>y + 3 \amp = -3x - 3</mrow>
+          <mrow>y \amp = -3x - 6</mrow>
+        </md>
+      </p>
+      <p>
+        The equation of the tangent line is <m>y = -3x - 6</m>.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+
 
 
 

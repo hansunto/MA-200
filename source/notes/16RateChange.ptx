@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec-rate-change-tangent-curves" class="notes">
+  <title>Rate of Change and Tangent Curves</title>
+  <p>
+    The rate of change of a function at a point is the slope of the tangent line to the graph of the function at that point. It can be calculated using limits.
+  </p>
+  
+  <p>
+  If I drive 200 miles in 4 hours, my average velocity is <m>50</m> miles per hour. 
+  Let <m>s(t)</m> represent the reading on my odometer at time <m>t</m>. 
+  Suppose I want to find my average velocity during some time interval that begins when <m>t=a</m> and ends <m>h</m> hours later. 
+  Velocity can be calculated as follows:
+  <me>v_{\text{ave}} = \frac{\text{change in distance}}{\text{change in time}} = \frac{s(a+h)-s(a)}{h}</me>
+  The subscript <q>ave</q> tells us this is an average velocity. 
+  My velocity does not have to be constant during this time (Even cruise control is not perfect).
+  </p>
+  <p>
+  Our common notion of velocity involves a change in distance and a change in time. 
+  Yet, a speedometer tells us the velocity of a car at any instant. 
+  We can do this mathematically using the idea of a limit.
+</p>
+
+<exercise>
+  <statement>
+    <p>
+      Suppose <m>s(t) = t^2</m>. Complete the following table, letting <m>a=3</m>.
+    </p>
+    <table xml:id="table-velocity-limit">
+      <title>Calculating Average Velocity as <m>h \to 0</m></title>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell><m>h</m></cell>
+          <cell><m>s(3+h)</m></cell>
+          <cell><m>s(3)</m></cell>
+          <cell><m>s(3+h)-s(3)</m></cell>
+          <cell><m>\frac{s(3+h)-s(3)}{h}</m></cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>16</cell>
+          <cell>9</cell>
+          <cell>7</cell>
+          <cell>7</cell>
+        </row>
+        <row>
+          <cell>0.1</cell>
+          <cell>9.61</cell>
+          <cell>9</cell>
+          <cell>0.61</cell>
+          <cell>6.1</cell>
+        </row>
+        <row>
+          <cell>0.01</cell>
+          <cell>9.0601</cell>
+          <cell>9</cell>
+          <cell>0.0601</cell>
+          <cell>6.01</cell>
+        </row>
+        <row>
+          <cell>0.001</cell>
+          <cell>9.006001</cell>
+          <cell>9</cell>
+          <cell>0.006001</cell>
+          <cell>6.001</cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      Each of the values in the last column represents an average velocity. What seems to be happening to these values as <m>h</m> gets smaller?
+    </p>
+    <p>
+      So when <m>a=3</m>, <m>v_{\text{ins}} = </m> <fillin characters="5" />.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      As <m>h</m> approaches <m>0</m>, the values in the last column seem to be approaching <m>6</m>. Therefore, when <m>a=3</m>, the instantaneous velocity is <m>v_{\text{ins}} = 6</m>.
+    </p>
+  </solution>
+</exercise>
+
+<assemblage xml:id="asm-average-rate-of-change">
+  <title>Average Rate of Change</title>
+    <p>
+      The <term>average rate of change of <m>y</m> with respect to <m>x</m></term>, as <m>x</m> changes from <m>x_1</m> to <m>x_2</m>, is the ratio of the change in output to the change in input:
+      <me>
+        \frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1}, \quad \text{where } x_2 \neq x_1
+      </me>
+    </p>
+</assemblage>
+
+<p>
+  The slope of the line from <m>P(x_1,y_1)</m> to <m>Q(x_2,y_2)</m> is <m>\displaystyle \frac{f(x_2)-f(x_1)}{x_2-x_1}</m> 
+  and the line <m>\overleftrightarrow{PQ}</m> is called a <term>secant line</term>.
+</p>
+
+<definition xml:id="def-tangent-line">
+  <title>Tangent Line</title>
+  <statement>
+    <p>
+      The <term>Tangent line</term> to the curve <m>y=f(x)</m> at the point <m>P(a,f(a))</m> is the line through <m>P</m> with slope
+      <me>
+        m = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
+      </me>
+      provided that this limit exists.
+    </p>
+  </statement>
+</definition>
+<p>
+  We sometimes refer to the slope of the tangent line to the curve at a point as the <term>slope of the curve</term> at the point.
+</p>
+<p>
+  Then the average rate of change is called a <term>difference quotient</term>, given by:
+  <me>
+    \frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x+h)-f(x)}{(x+h)-x} = \frac{f(x+h)-f(x)}{h}
+  </me>
+</p>
+<p>
+  We now use a different notation for average rates of change by eliminating the subscripts. 
+  Let <m>x</m> be <m>x_1</m> and <m>x+h</m> be <m>x_2</m>. 
+  To get from <m>x_1</m> to <m>x_2</m>, we calculate the change in input as 
+  <m>x_2 - x_1 = (x+h) - x = h</m>. 
+</p>
+
+<example xml:id="ex-tangent-parabola">
+  <statement>
+    <p>
+      Find the equation of the tangent line to the parabola <m>y=x^2</m> at the point <m>P(-2,4)</m>.
+    </p>
+    <figure xml:id="fig-parabola-tangent">
+  <caption>The parabola <m>y=x^2</m> and its tangent line at <m>P(-2,4)</m></caption>
+  <image xml:id="img-parabola-tangent" width="60%">
+    <shortdescription>A parabola opening upward with a tangent line touching it at x equals negative 2.</shortdescription>
+    <latex-image>
+      \begin{tikzpicture}[scale=0.8]
+        % Grid and Axes
+        \draw[step=1, gray!20, thin] (-5,-1) grid (2,6);
+        \draw[-stealth] (-5.2,0) -- (2.2,0) node[right] {\(x\)};
+        \draw[-stealth] (0,-1.2) -- (0,6.2) node[above] {\(y\)};
+
+        % Axis Labels
+        \foreach \x in {-4,-2,2} \draw (\x,0.1) -- (\x,-0.1) node[below] {\small \(\x\)};
+        \foreach \y in {2,4,6} \draw (0.1,\y) -- (-0.1,\y) node[left] {\small \(\y\)};
+
+        % The Parabola y = x^2
+        \draw[very thick, blue, domain=-2.4:2.4, smooth] plot (\x, {\x*\x});
+        \node[blue, right] at (1.5, 2.25) {\(y=x^2\)};
+
+        % The Tangent Line y = -4x - 4
+        % When x = -2.5, y = 6. When x = -1, y = 0.
+        \draw[thick, red, domain=-2.5:-0.5] plot (\x, {-4*\x - 4});
+        \node[red, left] at (-2.5, 6) {\(y=-4x-4\)};
+
+        % Point of Tangency
+        \fill[black] (-2,4) circle (2.5pt) node[above left] {\(P(-2,4)\)};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+  </statement>
+  <solution>
+    <p>
+      First, we find the slope of the tangent line at <m>a = -2</m> using the limit definition:
+      <md>
+        <mrow>m \amp = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{(-2+h)^2 - (-2)^2}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{(4 - 4h + h^2) - 4}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} \frac{-4h + h^2}{h}</mrow>
+        <mrow>\amp = \lim_{h \to 0} (-4 + h) = -4</mrow>
+      </md>
+    </p>
+    <p>
+      Now, using the point-slope form <m>y - y_1 = m(x - x_1)</m> with the point <m>(-2, 4)</m> and slope <m>m = -4</m>:
+      <md>
+        <mrow>y - 4 \amp = -4(x - (-2))</mrow>
+        <mrow>y - 4 \amp = -4x - 8</mrow>
+        <mrow>y \amp = -4x - 4</mrow>
+      </md>
+    </p>
+    <p>
+      The equation of the tangent line is <m>y = -4x - 4</m>.
+    </p>
+  </solution>
+</example>
+
+
+<definition xml:id="def-difference-quotient-tangent">
+  <title>Difference Quotient and Tangent Slope</title>
+  <statement>
+    <p>
+      The average rate of change of <m>f</m> with respect to <m>x</m> is also called the <term>difference quotient</term>. It is given by:
+      <me>
+        \frac{f(x+h)-f(x)}{h}, \quad \text{where } h \neq 0
+      </me>
+    </p>
+    <p>
+      The difference quotient is equal to the slope of the line from a point <m>P(x,f(x))</m> to a point <m>Q(x+h,f(x+h))</m>. The slope of the tangent line at <m>x=a</m> is then:
+      <me>
+        m = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}
+      </me>
+    </p>
+  </statement>
+</definition>
+
+  <example xml:id="ex-rate-change">
+    <title>Rate of Change of a Quadratic Function</title>
+    <p>
+      Consider the function <me>f(x) = x^2</me>. 
+      We want to find the rate of change at the point <me>x=-2</me>.
+    </p>
+    <p>
+      Using the definition, we have:
+    </p>
+    <p>
+      <me>\lim_{h \to 0} \frac{(-2+h)^2 - (-2)^2}{h} = \lim_{h \to 0} \frac{4 - 4h + h^2 - 4}{h} = \lim_{h \to 0} \frac{-4h + h^2}{h} = \lim_{h \to 0} (-4 + h) = -4</me>
+    </p>
+    <p>
+      Therefore, the rate of change of the function at <me>x=-2</me> is -4.
+    </p>
+  </example>
+  <example xml:id="ex-slope-reciprocal-squared">
+  <statement>
+    <p>
+      Find the slope of the curve <m>y = 1/x^2</m> at <m>x = 1/2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the <m>y</m>-coordinate of the point:
+      <me>y = f(1/2) = \frac{1}{(1/2)^2} = 4</me>
+    </p>
+    <p>
+      Then, we find a formula for the <m>y</m>-coordinate at a point near <m>x = 1/2</m>. By squaring the binomial and simplifying:
+      <me>f(1/2+h) = \frac{1}{(1/2+h)^2} = \frac{1}{1/4 + h + h^2} = \frac{4}{1 + 4h + 4h^2}</me>
+    </p>
+    <p>
+      Now, we evaluate the limit of the difference quotient:
+      <md>
+        <mrow>f'(1/2) \amp = \lim_{h\to 0} \frac{\frac{4}{1 + 4h + 4h^2} - 4}{h}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{\frac{4}{1 + 4h + 4h^2} - \frac{4(1 + 4h + 4h^2)}{1 + 4h + 4h^2}}{h}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{\frac{4 - 4 - 16h - 16h^2}{1 + 4h + 4h^2}}{h}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{-16h - 16h^2}{h(1 + 4h + 4h^2)}</mrow>
+        <mrow>\amp = \lim_{h\to 0} \frac{-16 - 16h}{1 + 4h + 4h^2}</mrow>
+        <mrow>\amp = \frac{-16 - 0}{1 + 0 + 0} = -16</mrow>
+      </md>
+    </p>
+    <p>
+      Our calculation shows that the slope of the line tangent to <m>y = 1/x^2</m> at <m>x = 1/2</m> is <m>-16</m>.
+    </p>
+  </solution>
+</example>
+
+
+
+</section>  

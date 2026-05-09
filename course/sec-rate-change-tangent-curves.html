@@ -136,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="limits-at-infinity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Limits-and-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="limits-at-infinity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Limits-and-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-derivative-functions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -172,6 +172,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">Continuity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">The Derivative as a Function</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -310,52 +311,49 @@ m = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}
 </div>
 <div class="autopermalink" data-description="Definition 67: Tangent Line"><a href="#def-tangent-line" title="Copy heading and permalink for Definition 67: Tangent Line" aria-label="Copy heading and permalink for Definition 67: Tangent Line">🔗</a></div></article><div class="para" id="sec-rate-change-tangent-curves-9">We sometimes refer to the slope of the tangent line to the curve at a point as the <dfn class="terminology">slope of the curve</dfn> at the point.<div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="sec-rate-change-tangent-curves-10">
-<div class="para">Then the average rate of change is called a <dfn class="terminology">difference quotient</dfn>, given by:</div>
-<div class="displaymath process-math" id="sec-rate-change-tangent-curves-10-2">
-\begin{equation*}
-\frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x+h)-f(x)}{(x+h)-x} = \frac{f(x+h)-f(x)}{h}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec-rate-change-tangent-curves-11">We now use a different notation for average rates of change by eliminating the subscripts. Let <span class="process-math">\(x\)</span> be <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x+h\)</span> be <span class="process-math">\(x_2\text{.}\)</span> To get from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\text{,}\)</span> we calculate the change in input as <span class="process-math">\(x_2 - x_1 = (x+h) - x = h\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
 <details id="ex-tangent-parabola" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">68</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-tangent-parabola-1-1">Find the equation of the tangent line to the parabola <span class="process-math">\(y=x^2\)</span> at the point <span class="process-math">\(P(-2,4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <figure class="figure figure-like" id="fig-parabola-tangent"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-parabola-tangent.svg" role="img" class="contained" alt="A parabola opening upward with a tangent line touching it at x equals negative 2."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">69<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The parabola <span class="process-math">\(y=x^2\)</span> and its tangent line at <span class="process-math">\(P(-2,4)\)</span><div class="autopermalink" data-description="Figure 69"><a href="#fig-parabola-tangent" title="Copy heading and permalink for Figure 69" aria-label="Copy heading and permalink for Figure 69">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex-tangent-parabola-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="ex-tangent-parabola-2-1">
-<div class="para">First, we find the slope of the tangent line at <span class="process-math">\(a = -2\)</span> using the limit definition:</div>
-<div class="displaymath process-math" id="ex-tangent-parabola-2-1-2">
-\begin{align*}
-m \amp = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}\\
-\amp = \lim_{h \to 0} \frac{(-2+h)^2 - (-2)^2}{h}\\
-\amp = \lim_{h \to 0} \frac{(4 - 4h + h^2) - 4}{h}\\
-\amp = \lim_{h \to 0} \frac{-4h + h^2}{h}\\
-\amp = \lim_{h \to 0} (-4 + h) = -4
-\end{align*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">69<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The parabola <span class="process-math">\(y=x^2\)</span> and its tangent line at <span class="process-math">\(P(-2,4)\)</span><div class="autopermalink" data-description="Figure 69"><a href="#fig-parabola-tangent" title="Copy heading and permalink for Figure 69" aria-label="Copy heading and permalink for Figure 69">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex-tangent-parabola-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method using <span class="process-math">\(x \to a\)</span></span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-tangent-parabola-2-2">
-<div class="para">Now, using the point-slope form <span class="process-math">\(y - y_1 = m(x - x_1)\)</span> with the point <span class="process-math">\((-2, 4)\)</span> and slope <span class="process-math">\(m = -4\text{:}\)</span>
-</div>
-<div class="displaymath process-math" id="ex-tangent-parabola-2-2-4">
+<div class="para">We can also find the slope <span class="process-math">\(m\)</span> at <span class="process-math">\(a = -2\)</span> using the alternative limit definition:</div>
+<div class="displaymath process-math" id="ex-tangent-parabola-2-2-3">
 \begin{align*}
-y - 4 \amp = -4(x - (-2))\\
-y - 4 \amp = -4x - 8\\
-y \amp = -4x - 4
+m \amp = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}\\
+\amp = \lim_{x \to -2} \frac{x^2 - (-2)^2}{x - (-2)}\\
+\amp = \lim_{x \to -2} \frac{x^2 - 4}{x + 2}
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-tangent-parabola-2-3">The equation of the tangent line is <span class="process-math">\(y = -4x - 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ex-tangent-parabola-2-3">
+<div class="para">Factoring the numerator as a difference of squares:</div>
+<div class="displaymath process-math" id="ex-tangent-parabola-2-3-1">
+\begin{align*}
+\amp = \lim_{x \to -2} \frac{(x + 2)(x - 2)}{x + 2}\\
+\amp = \lim_{x \to -2} (x - 2)\\
+\amp = -2 - 2 = -4
+\end{align*}
 </div>
-<div class="autopermalink" data-description="Solution 68.1"><a href="#ex-tangent-parabola-2" title="Copy heading and permalink for Solution 68.1" aria-label="Copy heading and permalink for Solution 68.1">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-tangent-parabola-2-4">This gives the same slope, <span class="process-math">\(m = -4\text{,}\)</span> which we then use in the point-slope formula to find <span class="process-math">\(y = -4x - 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-tangent-parabola-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 68.1: Method using x \to a"><a href="#ex-tangent-parabola-2" title="Copy heading and permalink for Solution 68.1: Method using x \to a" aria-label="Copy heading and permalink for Solution 68.1: Method using x \to a">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 68"><a href="#ex-tangent-parabola" title="Copy heading and permalink for Example 68" aria-label="Copy heading and permalink for Example 68">🔗</a></div></article></details><article class="definition definition-like" id="def-difference-quotient-tangent"><h3 class="heading">
+<div class="autopermalink" data-description="Example 68"><a href="#ex-tangent-parabola" title="Copy heading and permalink for Example 68" aria-label="Copy heading and permalink for Example 68">🔗</a></div></article></details><div class="para logical" id="sec-rate-change-tangent-curves-11">
+<div class="para">The average rate of change is called a <dfn class="terminology">difference quotient</dfn>, given by:</div>
+<div class="displaymath process-math" id="sec-rate-change-tangent-curves-11-2">
+\begin{equation*}
+\frac{y_2-y_1}{x_2-x_1} = \frac{f(x_2)-f(x_1)}{x_2-x_1} = \frac{f(x+h)-f(x)}{(x+h)-x} = \frac{f(x+h)-f(x)}{h}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-rate-change-tangent-curves-12">We now use a different notation for average rates of change by eliminating the subscripts. Let <span class="process-math">\(x\)</span> be <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x+h\)</span> be <span class="process-math">\(x_2\text{.}\)</span> To get from <span class="process-math">\(x_1\)</span> to <span class="process-math">\(x_2\text{,}\)</span> we calculate the change in input as <span class="process-math">\(x_2 - x_1 = (x+h) - x = h\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-difference-quotient-tangent"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">70</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Difference Quotient and Tangent Slope.</span>
 </h3>
 <div class="para logical" id="def-difference-quotient-tangent-2-1">
@@ -453,9 +451,122 @@ f'(1/2) \amp = \lim_{h\to 0} \frac{\frac{4}{1 + 4h + 4h^2} - 4}{h}\\
 </div>
 <div class="autopermalink" data-description="Solution 72.1"><a href="#ex-slope-reciprocal-squared-2" title="Copy heading and permalink for Solution 72.1" aria-label="Copy heading and permalink for Solution 72.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 72"><a href="#ex-slope-reciprocal-squared" title="Copy heading and permalink for Example 72" aria-label="Copy heading and permalink for Example 72">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Rate of Change and Tangent Curves"><a href="#sec-rate-change-tangent-curves" title="Copy heading and permalink for Section: Rate of Change and Tangent Curves" aria-label="Copy heading and permalink for Section: Rate of Change and Tangent Curves">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 72"><a href="#ex-slope-reciprocal-squared" title="Copy heading and permalink for Example 72" aria-label="Copy heading and permalink for Example 72">🔗</a></div></article></details><details id="ex-simplified-difference-quotient" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">73</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-simplified-difference-quotient-1-1">For <span class="process-math">\(f(x)=x^2\text{,}\)</span> find a <dfn class="terminology">simplified</dfn> form of the <dfn class="terminology">difference quotient</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-simplified-difference-quotient-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-simplified-difference-quotient-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-simplified-difference-quotient-2-1">
+<div class="para">Recall that the difference quotient is given by <span class="process-math">\(\displaystyle \frac{f(x+h)-f(x)}{h}\text{.}\)</span> Substituting <span class="process-math">\(f(x)=x^2\text{,}\)</span> we have:</div>
+<div class="displaymath process-math" id="ex-simplified-difference-quotient-2-1-3">
+\begin{align*}
+\frac{f(x+h)-f(x)}{h} \amp = \frac{(x+h)^2 - x^2}{h}\\
+\amp = \frac{(x^2 + 2xh + h^2) - x^2}{h}\\
+\amp = \frac{2xh + h^2}{h}\\
+\amp = \frac{h(2x + h)}{h}\\
+\amp = 2x + h, \quad \text{for } h \neq 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-simplified-difference-quotient-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 73.1"><a href="#ex-simplified-difference-quotient-2" title="Copy heading and permalink for Solution 73.1" aria-label="Copy heading and permalink for Solution 73.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 73"><a href="#ex-simplified-difference-quotient" title="Copy heading and permalink for Example 73" aria-label="Copy heading and permalink for Example 73">🔗</a></div></article></details><div class="para" id="sec-rate-change-tangent-curves-17">By taking the limit of the result from <a href="sec-rate-change-tangent-curves.html#ex-simplified-difference-quotient" class="xref" data-knowl="./knowl/xref/ex-simplified-difference-quotient.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 73">Example 73</a> as <span class="process-math">\(h \to 0\text{,}\)</span> we find the derivative (the instantaneous rate of change) of the function.<div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="asm-derivative-x-squared"><h3 class="heading"><span class="title">The Derivative of <span class="process-math">\(x^2\)</span>.</span></h3>
+<div class="para logical" id="asm-derivative-x-squared-2">
+<div class="para">The derivative of <span class="process-math">\(f(x) = x^2\text{,}\)</span> denoted as <span class="process-math">\(f'(x)\text{,}\)</span> is calculated as:</div>
+<div class="displaymath process-math" id="asm-derivative-x-squared-2-3">
+\begin{align*}
+f'(x) \amp = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\\
+\amp = \lim_{h \to 0} (2x + h)\\
+\amp = 2x
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#asm-derivative-x-squared-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: The Derivative of x^2"><a href="#asm-derivative-x-squared" title="Copy heading and permalink for Assemblage: The Derivative of x^2" aria-label="Copy heading and permalink for Assemblage: The Derivative of x^2">🔗</a></div></article><div class="para" id="sec-rate-change-tangent-curves-19">This result, <span class="process-math">\(f'(x) = 2x\text{,}\)</span> provides a formula to find the slope of the tangent line to the parabola at <em class="emphasis">any</em> point <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-diff-quotient-cubic" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">74</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-diff-quotient-cubic-1-1">For <span class="process-math">\(f(x)=x^3\text{,}\)</span> find a simplified form of the difference quotient.<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-cubic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-diff-quotient-cubic-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-diff-quotient-cubic-2-1">
+<div class="para">We substitute <span class="process-math">\(f(x)=x^3\)</span> into the difference quotient formula:</div>
+<div class="displaymath process-math" id="ex-diff-quotient-cubic-2-1-2">
+\begin{align*}
+\frac{f(x+h)-f(x)}{h} \amp = \frac{(x+h)^3 - x^3}{h}\\
+\amp = \frac{(x^3 + 3x^2h + 3xh^2 + h^3) - x^3}{h}\\
+\amp = \frac{3x^2h + 3xh^2 + h^3}{h}\\
+\amp = \frac{h(3x^2 + 3xh + h^2)}{h}\\
+\amp = 3x^2 + 3xh + h^2, \quad \text{for } h \neq 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-cubic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 74.1"><a href="#ex-diff-quotient-cubic-2" title="Copy heading and permalink for Solution 74.1" aria-label="Copy heading and permalink for Solution 74.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 74"><a href="#ex-diff-quotient-cubic" title="Copy heading and permalink for Example 74" aria-label="Copy heading and permalink for Example 74">🔗</a></div></article></details><div class="para" id="sec-rate-change-tangent-curves-21">By taking the limit of the result from <a href="sec-rate-change-tangent-curves.html#ex-diff-quotient-cubic" class="xref" data-knowl="./knowl/xref/ex-diff-quotient-cubic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 74">Example 74</a> as <span class="process-math">\(h \to 0\text{,}\)</span> we find the derivative (the instantaneous rate of change) of the function.<div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-rate-change-tangent-curves-22">This result, <span class="process-math">\(f'(x) = \lim_{h \to 0} (3x^2 + 3xh + h^2)=3x^2\text{,}\)</span> provides a formula to find the slope of the tangent line to the cubic curve at <em class="emphasis">any</em> point <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-rate-change-tangent-curves-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-diff-quotient-reciprocal" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">75</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><article class="task exercise-like" id="ex-diff-quotient-reciprocal-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ex-diff-quotient-reciprocal-1-1-1">For <span class="process-math">\(f(x)=3/x\text{,}\)</span> find a simplified form of the difference quotient.<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-diff-quotient-reciprocal-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-diff-quotient-reciprocal-1-2-1">
+<div class="para">We substitute <span class="process-math">\(f(x) = \frac{3}{x}\)</span> into the difference quotient formula:</div>
+<div class="displaymath process-math" id="ex-diff-quotient-reciprocal-1-2-1-2">
+\begin{align*}
+\frac{f(x+h)-f(x)}{h} \amp = \frac{\frac{3}{x+h} - \frac{3}{x}}{h}\\
+\amp = \frac{1}{h} \left( \frac{3x - 3(x+h)}{x(x+h)} \right)\\
+\amp = \frac{1}{h} \left( \frac{3x - 3x - 3h}{x(x+h)} \right)\\
+\amp = \frac{-3h}{h \cdot x(x+h)}\\
+\amp = \frac{-3}{x(x+h)}, \quad \text{for } h \neq 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 75.a.1"><a href="#ex-diff-quotient-reciprocal-1-2" title="Copy heading and permalink for Solution 75.a.1" aria-label="Copy heading and permalink for Solution 75.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 75.a"><a href="#ex-diff-quotient-reciprocal-1" title="Copy heading and permalink for Task 75.a" aria-label="Copy heading and permalink for Task 75.a">🔗</a></div></article><article class="task exercise-like" id="ex-diff-quotient-reciprocal-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ex-diff-quotient-reciprocal-2-1-1">Find the equation of the tangent line to the hyperbola <span class="process-math">\(y=3/x\)</span> at the point <span class="process-math">\(P(-1,-3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-diff-quotient-reciprocal-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="figure figure-like" id="fig-hyperbola-tangent"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-hyperbola-tangent.svg" role="img" class="contained" alt="A hyperbola in the first and third quadrants with a tangent line at negative 1, negative 3."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">76<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The hyperbola <span class="process-math">\(y=3/x\)</span> and its tangent line at <span class="process-math">\(P(-1,-3)\)</span><div class="autopermalink" data-description="Figure 76"><a href="#fig-hyperbola-tangent" title="Copy heading and permalink for Figure 76" aria-label="Copy heading and permalink for Figure 76">🔗</a></div></figcaption></figure><div class="para logical" id="ex-diff-quotient-reciprocal-2-2-2">
+<div class="para">First, we find the slope <span class="process-math">\(m\)</span> at <span class="process-math">\(x = -1\)</span> by taking the limit of the difference quotient from the previous part:</div>
+<div class="displaymath process-math" id="ex-diff-quotient-reciprocal-2-2-2-3">
+\begin{align*}
+m \amp = \lim_{h \to 0} \frac{-3}{x(x+h)} \bigg|_{x=-1}\\
+\amp = \lim_{h \to 0} \frac{-3}{-1(-1+h)}\\
+\amp = \frac{-3}{(-1)(-1)} = -3
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-diff-quotient-reciprocal-2-2-3">
+<div class="para">Now, using the point-slope form with <span class="process-math">\(P(-1, -3)\)</span> and <span class="process-math">\(m = -3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-diff-quotient-reciprocal-2-2-3-3">
+\begin{align*}
+y - (-3) \amp = -3(x - (-1))\\
+y + 3 \amp = -3x - 3\\
+y \amp = -3x - 6
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-diff-quotient-reciprocal-2-2-4">The equation of the tangent line is <span class="process-math">\(y = -3x - 6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-diff-quotient-reciprocal-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 75.b.1"><a href="#ex-diff-quotient-reciprocal-2-2" title="Copy heading and permalink for Solution 75.b.1" aria-label="Copy heading and permalink for Solution 75.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 75.b"><a href="#ex-diff-quotient-reciprocal-2" title="Copy heading and permalink for Task 75.b" aria-label="Copy heading and permalink for Task 75.b">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 75"><a href="#ex-diff-quotient-reciprocal" title="Copy heading and permalink for Checkpoint 75" aria-label="Copy heading and permalink for Checkpoint 75">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Rate of Change and Tangent Curves"><a href="#sec-rate-change-tangent-curves" title="Copy heading and permalink for Section: Rate of Change and Tangent Curves" aria-label="Copy heading and permalink for Section: Rate of Change and Tangent Curves">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="limits-at-infinity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="limits-at-infinity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-derivative-functions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

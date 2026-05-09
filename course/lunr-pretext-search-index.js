@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Rate of Change and Tangent Curves",
-  "body": " Rate of Change and Tangent Curves  The rate of change of a function at a point is the slope of the tangent line to the graph of the function at that point. It can be calculated using limits.  If I drive 200 miles in 4 hours, my average velocity is miles per hour. Let represent the reading on my odometer at time . Suppose I want to find my average velocity during some time interval that begins when and ends hours later. Velocity can be calculated as follows: The subscript ave tells us this is an average velocity. My velocity does not have to be constant during this time (Even cruise control is not perfect).  Our common notion of velocity involves a change in distance and a change in time. Yet, a speedometer tells us the velocity of a car at any instant. We can do this mathematically using the idea of a limit.    Suppose . Complete the following table, letting .   Calculating Average Velocity as           1  16  9  7  7    0.1  9.61  9  0.61  6.1    0.01  9.0601  9  0.0601  6.01    0.001  9.006001  9  0.006001  6.001     Each of the values in the last column represents an average velocity. What seems to be happening to these values as gets smaller?  So when ,  .    As approaches , the values in the last column seem to be approaching . Therefore, when , the instantaneous velocity is .     Average Rate of Change  The average rate of change of with respect to , as changes from to , is the ratio of the change in output to the change in input:    The slope of the line from to is and the line is called a secant line .   Tangent Line   The Tangent line to the curve at the point is the line through with slope provided that this limit exists.    We sometimes refer to the slope of the tangent line to the curve at a point as the slope of the curve at the point.  Then the average rate of change is called a difference quotient , given by:   We now use a different notation for average rates of change by eliminating the subscripts. Let be and be . To get from to , we calculate the change in input as .    Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       First, we find the slope of the tangent line at using the limit definition:   Now, using the point-slope form with the point and slope :   The equation of the tangent line is .     Difference Quotient and Tangent Slope   The average rate of change of with respect to is also called the difference quotient . It is given by:   The difference quotient is equal to the slope of the line from a point to a point . The slope of the tangent line at is then:      Rate of Change of a Quadratic Function  Consider the function . We want to find the rate of change at the point .  Using the definition, we have:     Therefore, the rate of change of the function at is -4.     Find the slope of the curve at .    First, we find the -coordinate of the point:   Then, we find a formula for the -coordinate at a point near . By squaring the binomial and simplifying:   Now, we evaluate the limit of the difference quotient:   Our calculation shows that the slope of the line tangent to at is .    "
+  "body": " Rate of Change and Tangent Curves  The rate of change of a function at a point is the slope of the tangent line to the graph of the function at that point. It can be calculated using limits.  If I drive 200 miles in 4 hours, my average velocity is miles per hour. Let represent the reading on my odometer at time . Suppose I want to find my average velocity during some time interval that begins when and ends hours later. Velocity can be calculated as follows: The subscript ave tells us this is an average velocity. My velocity does not have to be constant during this time (Even cruise control is not perfect).  Our common notion of velocity involves a change in distance and a change in time. Yet, a speedometer tells us the velocity of a car at any instant. We can do this mathematically using the idea of a limit.    Suppose . Complete the following table, letting .   Calculating Average Velocity as           1  16  9  7  7    0.1  9.61  9  0.61  6.1    0.01  9.0601  9  0.0601  6.01    0.001  9.006001  9  0.006001  6.001     Each of the values in the last column represents an average velocity. What seems to be happening to these values as gets smaller?  So when ,  .    As approaches , the values in the last column seem to be approaching . Therefore, when , the instantaneous velocity is .     Average Rate of Change  The average rate of change of with respect to , as changes from to , is the ratio of the change in output to the change in input:    The slope of the line from to is and the line is called a secant line .   Tangent Line   The Tangent line to the curve at the point is the line through with slope provided that this limit exists.    We sometimes refer to the slope of the tangent line to the curve at a point as the slope of the curve at the point.    Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       Method using  We can also find the slope at using the alternative limit definition:   Factoring the numerator as a difference of squares:   This gives the same slope, , which we then use in the point-slope formula to find .    The average rate of change is called a difference quotient , given by:   We now use a different notation for average rates of change by eliminating the subscripts. Let be and be . To get from to , we calculate the change in input as .   Difference Quotient and Tangent Slope   The average rate of change of with respect to is also called the difference quotient . It is given by:   The difference quotient is equal to the slope of the line from a point to a point . The slope of the tangent line at is then:      Rate of Change of a Quadratic Function  Consider the function . We want to find the rate of change at the point .  Using the definition, we have:     Therefore, the rate of change of the function at is -4.     Find the slope of the curve at .    First, we find the -coordinate of the point:   Then, we find a formula for the -coordinate at a point near . By squaring the binomial and simplifying:   Now, we evaluate the limit of the difference quotient:   Our calculation shows that the slope of the line tangent to at is .      For , find a simplified form of the difference quotient .    Recall that the difference quotient is given by . Substituting , we have:     By taking the limit of the result from as , we find the derivative (the instantaneous rate of change) of the function.   The Derivative of  The derivative of , denoted as , is calculated as:    This result, , provides a formula to find the slope of the tangent line to the parabola at any point .    For , find a simplified form of the difference quotient.    We substitute into the difference quotient formula:     By taking the limit of the result from as , we find the derivative (the instantaneous rate of change) of the function.  This result, , provides a formula to find the slope of the tangent line to the cubic curve at any point .     For , find a simplified form of the difference quotient.    We substitute into the difference quotient formula:       Find the equation of the tangent line to the hyperbola at the point .     The hyperbola and its tangent line at   A hyperbola in the first and third quadrants with a tangent line at negative 1, negative 3.     First, we find the slope at by taking the limit of the difference quotient from the previous part:   Now, using the point-slope form with and :   The equation of the tangent line is .     "
 },
 {
   "id": "sec-rate-change-tangent-curves-5",
@@ -703,22 +703,22 @@ var ptx_lunr_docs = [
   "body": "slope of the curve "
 },
 {
-  "id": "sec-rate-change-tangent-curves-10",
-  "level": "2",
-  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-10",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "difference quotient "
-},
-{
   "id": "ex-tangent-parabola",
   "level": "2",
   "url": "sec-rate-change-tangent-curves.html#ex-tangent-parabola",
   "type": "Example",
   "number": "68",
   "title": "",
-  "body": "  Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       First, we find the slope of the tangent line at using the limit definition:   Now, using the point-slope form with the point and slope :   The equation of the tangent line is .   "
+  "body": "  Find the equation of the tangent line to the parabola at the point .   The parabola and its tangent line at   A parabola opening upward with a tangent line touching it at x equals negative 2.       Method using  We can also find the slope at using the alternative limit definition:   Factoring the numerator as a difference of squares:   This gives the same slope, , which we then use in the point-slope formula to find .   "
+},
+{
+  "id": "sec-rate-change-tangent-curves-11",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#sec-rate-change-tangent-curves-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "difference quotient "
 },
 {
   "id": "def-difference-quotient-tangent",
@@ -748,6 +748,168 @@ var ptx_lunr_docs = [
   "body": "  Find the slope of the curve at .    First, we find the -coordinate of the point:   Then, we find a formula for the -coordinate at a point near . By squaring the binomial and simplifying:   Now, we evaluate the limit of the difference quotient:   Our calculation shows that the slope of the line tangent to at is .   "
 },
 {
+  "id": "ex-simplified-difference-quotient",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-simplified-difference-quotient",
+  "type": "Example",
+  "number": "73",
+  "title": "",
+  "body": "  For , find a simplified form of the difference quotient .    Recall that the difference quotient is given by . Substituting , we have:    "
+},
+{
+  "id": "ex-diff-quotient-cubic",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-diff-quotient-cubic",
+  "type": "Example",
+  "number": "74",
+  "title": "",
+  "body": "  For , find a simplified form of the difference quotient.    We substitute into the difference quotient formula:    "
+},
+{
+  "id": "ex-diff-quotient-reciprocal",
+  "level": "2",
+  "url": "sec-rate-change-tangent-curves.html#ex-diff-quotient-reciprocal",
+  "type": "Checkpoint",
+  "number": "75",
+  "title": "",
+  "body": "   For , find a simplified form of the difference quotient.    We substitute into the difference quotient formula:       Find the equation of the tangent line to the hyperbola at the point .     The hyperbola and its tangent line at   A hyperbola in the first and third quadrants with a tangent line at negative 1, negative 3.     First, we find the slope at by taking the limit of the difference quotient from the previous part:   Now, using the point-slope form with and :   The equation of the tangent line is .    "
+},
+{
+  "id": "sec-derivative-functions",
+  "level": "1",
+  "url": "sec-derivative-functions.html",
+  "type": "Section",
+  "number": "",
+  "title": "The Derivative as a Function",
+  "body": " The Derivative as a Function  In the previous section, we defined the derivative at a point as the limit of the difference quotient. Now, we will explore how to find the derivative as a function, which gives us the rate of change at any point in the domain of the original function.   The Derivative   The derivative of a function , denoted by , is defined by if the limit exists.    If , we also use the Leibniz notation for the derivative:     For , find .    We use the limit definition of the derivative:   The derivative is , which makes sense because the slope of the line is constant at .      For , find .    We apply the limit definition of the derivative at the point :   Alternatively, using the form:       For , find . Then, evaluate and .    First, we find the general derivative function using the limit definition:   Now, we evaluate the derivative at the specific points:   At : .    At : .        Alternative definition of derivative          Find the derivative of the function at the number using the alternative definition.    We use the alternative definition of the derivative:   Substituting the function :   Factoring out from the numerator:   As expected, we obtain the same result: .     Differentiability on a Closed Interval   A function f is differentiable on the closed interval if is differentiable on the open interval and if the following limits exist:     A function is said to be differentiable at a point in its domain if the derivative exists. Remember, the derivative is defined as a limit of a difference quotient as follows: So is differentiable at if this limit exists. That means:    The right-hand limit exists.    The left-hand limit exists.    They are equal: .    If is a point at which this limit fails to exist for some reason—either because the function is not continuous, one or both of the one-sided limits don't exist, or they exist but do not match—then we say that is a point of non-differentiability of , or more simply, is a singular point of .  If is defined in an open interval , then we say is differentiable in if it is differentiable at each point in the interval. Since the endpoints are not actually in the interval, we do not have to concern ourselves with them. However, if is defined piecewise, we must check the right and left hand limits at each of the points separating adjacent intervals to verify differentiability. If either one-sided limit fails to exist or if they do not match, the point is a singularity.   A function is not differentiable (does not have a derivative ) at a point if any of the following occur:    The graph of is not continuous at .    The graph of has a vertical tangent line at ; that is:     The graph of has a cusp (or a sharp corner) at . This occurs if is continuous but as from one side, and as from the other side.       Consider the piecewise function :    Graph of showing a sharp corner (singularity) at   A piecewise function formed by two parabolas meeting at a sharp corner at x equals 2.       To determine if is a singularity, we check both continuity and differentiability at that point:     Continuity: On the left, as , . On the right, as , . Since the limits match the function value , the function is continuous.     Differentiability: We examine the slopes of the tangent lines from each side.  On the left : . As , .  On the right : . As , .      While the function values match, the slopes do not ( ). This creates a sharp corner in the graph as seen in , making a singularity of .      If , show that is not differentiable at .     Graph of showing the sharp corner at the origin   A V-shaped graph with a sharp point at the origin.     To show that is not differentiable at , we must check if the limit of the difference quotient exists at that point:   We examine the one-sided limits:    From the right ( ), , so:     From the left ( ), , so:     Since the left-hand and right-hand limits are not equal ( ), the two-sided limit does not exist. Therefore, is not differentiable at . This corresponds to the sharp corner (or cusp) seen at the origin on its graph.      If , show that is not differentiable at .   Graph of showing a vertical tangent at the origin   The graph of a cube root function passing through the origin with an increasingly steep slope.       We use the limit definition of the derivative at :   As , the denominator is always positive (since it is a square of a cube root) and approaches . Therefore:   Since the limit of the difference quotient is infinite, the derivative does not exist. Geometrically, this means the graph has a vertical tangent line at the origin, as illustrated in .      If is differentiable at , then is continuous at .    Since is differentiable at , we know that exists. To show that is continuous at , we must show that , or equivalently, .  For , we can write:   Using the limit laws, we get:   Since , it follows that . Therefore, by the definition of continuity, is continuous at .    "
+},
+{
+  "id": "def-derivative",
+  "level": "2",
+  "url": "sec-derivative-functions.html#def-derivative",
+  "type": "Definition",
+  "number": "77",
+  "title": "The Derivative.",
+  "body": " The Derivative   The derivative of a function , denoted by , is defined by if the limit exists.   "
+},
+{
+  "id": "sec-derivative-functions-4",
+  "level": "2",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Leibniz notation "
+},
+{
+  "id": "ex-derivative-linear",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-derivative-linear",
+  "type": "Example",
+  "number": "78",
+  "title": "",
+  "body": "  For , find .    We use the limit definition of the derivative:   The derivative is , which makes sense because the slope of the line is constant at .   "
+},
+{
+  "id": "ex-derivative-at-point-x2",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-derivative-at-point-x2",
+  "type": "Example",
+  "number": "79",
+  "title": "",
+  "body": "  For , find .    We apply the limit definition of the derivative at the point :   Alternatively, using the form:    "
+},
+{
+  "id": "ex-derivative-cubic",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-derivative-cubic",
+  "type": "Checkpoint",
+  "number": "80",
+  "title": "",
+  "body": "  For , find . Then, evaluate and .    First, we find the general derivative function using the limit definition:   Now, we evaluate the derivative at the specific points:   At : .    At : .      "
+},
+{
+  "id": "def-derivative-alternative",
+  "level": "2",
+  "url": "sec-derivative-functions.html#def-derivative-alternative",
+  "type": "Definition",
+  "number": "81",
+  "title": "Alternative definition of derivative.",
+  "body": " Alternative definition of derivative       "
+},
+{
+  "id": "ex-derivative-quadratic-alternative",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-derivative-quadratic-alternative",
+  "type": "Example",
+  "number": "82",
+  "title": "",
+  "body": "  Find the derivative of the function at the number using the alternative definition.    We use the alternative definition of the derivative:   Substituting the function :   Factoring out from the numerator:   As expected, we obtain the same result: .   "
+},
+{
+  "id": "def-differentiable-closed-interval",
+  "level": "2",
+  "url": "sec-derivative-functions.html#def-differentiable-closed-interval",
+  "type": "Definition",
+  "number": "83",
+  "title": "Differentiability on a Closed Interval.",
+  "body": " Differentiability on a Closed Interval   A function f is differentiable on the closed interval if is differentiable on the open interval and if the following limits exist:    "
+},
+{
+  "id": "sec-derivative-functions-13",
+  "level": "2",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-13",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "singular point "
+},
+{
+  "id": "sec-derivative-functions-15",
+  "level": "2",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-15",
+  "type": "Remark",
+  "number": "84",
+  "title": "",
+  "body": " A function is not differentiable (does not have a derivative ) at a point if any of the following occur:    The graph of is not continuous at .    The graph of has a vertical tangent line at ; that is:     The graph of has a cusp (or a sharp corner) at . This occurs if is continuous but as from one side, and as from the other side.    "
+},
+{
+  "id": "ex-piecewise-singularity",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-piecewise-singularity",
+  "type": "Example",
+  "number": "85",
+  "title": "",
+  "body": "  Consider the piecewise function :    Graph of showing a sharp corner (singularity) at   A piecewise function formed by two parabolas meeting at a sharp corner at x equals 2.       To determine if is a singularity, we check both continuity and differentiability at that point:     Continuity: On the left, as , . On the right, as , . Since the limits match the function value , the function is continuous.     Differentiability: We examine the slopes of the tangent lines from each side.  On the left : . As , .  On the right : . As , .      While the function values match, the slopes do not ( ). This creates a sharp corner in the graph as seen in , making a singularity of .   "
+},
+{
+  "id": "ex-abs-not-differentiable",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-abs-not-differentiable",
+  "type": "Example",
+  "number": "87",
+  "title": "",
+  "body": "  If , show that is not differentiable at .     Graph of showing the sharp corner at the origin   A V-shaped graph with a sharp point at the origin.     To show that is not differentiable at , we must check if the limit of the difference quotient exists at that point:   We examine the one-sided limits:    From the right ( ), , so:     From the left ( ), , so:     Since the left-hand and right-hand limits are not equal ( ), the two-sided limit does not exist. Therefore, is not differentiable at . This corresponds to the sharp corner (or cusp) seen at the origin on its graph.   "
+},
+{
+  "id": "ex-cube-root-not-differentiable",
+  "level": "2",
+  "url": "sec-derivative-functions.html#ex-cube-root-not-differentiable",
+  "type": "Example",
+  "number": "89",
+  "title": "",
+  "body": "  If , show that is not differentiable at .   Graph of showing a vertical tangent at the origin   The graph of a cube root function passing through the origin with an increasingly steep slope.       We use the limit definition of the derivative at :   As , the denominator is always positive (since it is a square of a cube root) and approaches . Therefore:   Since the limit of the difference quotient is infinite, the derivative does not exist. Geometrically, this means the graph has a vertical tangent line at the origin, as illustrated in .   "
+},
+{
+  "id": "thm-differentiable-implies-continuous",
+  "level": "2",
+  "url": "sec-derivative-functions.html#thm-differentiable-implies-continuous",
+  "type": "Theorem",
+  "number": "91",
+  "title": "",
+  "body": "  If is differentiable at , then is continuous at .    Since is differentiable at , we know that exists. To show that is continuous at , we must show that , or equivalently, .  For , we can write:   Using the limit laws, we get:   Since , it follows that . Therefore, by the definition of continuity, is continuous at .   "
+},
+{
   "id": "notes-Limits-and-Continuity-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html",
@@ -761,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
   "type": "Checkpoint",
-  "number": "73",
+  "number": "92",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
@@ -770,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
   "type": "Checkpoint",
-  "number": "75",
+  "number": "94",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
@@ -779,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
   "type": "Checkpoint",
-  "number": "76",
+  "number": "95",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
@@ -788,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
   "type": "Checkpoint",
-  "number": "77",
+  "number": "96",
   "title": "Mixed Limit Evaluations.",
   "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
 },
@@ -797,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
   "type": "Checkpoint",
-  "number": "78",
+  "number": "97",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
@@ -806,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
   "type": "Checkpoint",
-  "number": "79",
+  "number": "98",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
@@ -815,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
   "type": "Checkpoint",
-  "number": "80",
+  "number": "99",
   "title": "Limit from Existing Derivative Definition.",
   "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
 },

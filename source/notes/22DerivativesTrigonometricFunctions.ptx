@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  
+<section xml:id="sec-trig-derivatives">
+  <title>Derivatives of the Trigonometric Functions</title>
+
+  <p>
+    In this section, we will find the derivatives of the six trigonometric functions: sine, cosine, tangent, cotangent, secant, and cosecant. We will use the limit definition of the derivative to find these derivatives.
+  </p>
+<theorem xml:id="thm-trig-limits-basic">
+  <statement>
+    <p>
+      <me>\lim_{\theta \to 0} \sin \theta = 0 \quad \text{and} \quad \lim_{\theta \to 0} \cos \theta = 1</me>
+    </p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm-trig-limits-special">
+  <statement>
+    <p>
+      <me>\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1 \quad \text{and} \quad \lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta} = 0</me>
+    </p>
+  </statement>
+</theorem>
+
+  <p>
+    We will start with the sine function. The derivative of sine is given by:
+    <me>\frac{d}{dx} \sin(x) = \lim_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h}</me>
+  </p>
+
+  <p>
+    Using the sine addition formula, we can rewrite the numerator as:
+    <me>\sin(x+h) - \sin(x) = \sin(x)\cos(h) + \cos(x)\sin(h) - \sin(x)</me>
+    This simplifies to:
+    <me>\sin(x)(\cos(h) - 1) + \cos(x)\sin(h)</me>
+  </p>
+
+  <p>
+    Now, we can substitute this back into the limit definition:
+    <me>\frac{d}{dx} \sin(x) = \lim_{h \to 0} \frac{\sin(x)(\cos(h) - 1) + \cos(x)\sin(h)}{h}</me>
+    We can split this limit into two separate limits:
+    <me>\frac{d}{dx} \sin(x) = \sin(x) \lim_{h \to 0} \frac{\cos(h) - 1}{h} + \cos(x) \lim_{h \to 0} \frac{\sin(h)}{h}</me>
+  </p>
+
+  <p>
+    We know that <m>\lim_{h \to 0} \frac{\sin(h)}{h} = 1</m> and <m>\lim_{h \to 0} \frac{\cos(h) - 1}{h} = 0</m>, so we can simplify this to:
+    <me>\frac{d}{dx} \sin(x) = \cos(x)</me>
+  </p>
+
+<p>
+    Next, we will find the derivative of the cosine function. The derivative of cosine is given by:
+</p>
+<me>\frac{d}{dx} \cos(x) = \lim_{h \to 0} \frac{\cos(x+h) - \cos(x)}{h}</me>
+<p>
+    Using the cosine addition formula, we can rewrite the numerator as:
+    <me>\cos(x+h) - \cos(x) = \cos(x)\cos(h) - \sin(x)\sin(h) - \cos(x)</me>
+    This simplifies to:
+    <me>\cos(x)(\cos(h) - 1) - \sin(x)\sin(h)</me>
+  </p>
+
+  <p>
+    Now, we can substitute this back into the limit definition:
+    <me>\frac{d}{dx} \cos(x) = \lim_{h \to 0} \frac{\cos(x)(\cos(h) - 1) - \sin(x)\sin(h)}{h}</me>
+    We can split this limit into two separate limits:
+    <me>\frac{d}{dx} \cos(x) = \cos(x) \lim_{h \to 0} \frac{\cos(h) - 1}{h} - \sin(x) \lim_{h \to 0} \frac{\sin(h)}{h}</me>
+  </p>
+
+  <p>
+    We know that <m>\lim_{h \to 0} \frac{\sin(h)}{h} = 1</m> and <m>\lim_{h \to 0} \frac{\cos(h) - 1}{h} = 0</m>, so we can simplify this to:
+    <me>\frac{d}{dx} \cos(x) = -\sin(x)</me>
+  </p>  
+  <p>
+    We can use similar techniques to find the derivatives of the other four trigonometric functions. The results are:
+    <me>\frac{d}{dx} \tan(x) = \sec^2(x)</me>
+    <me>\frac{d}{dx} \cot(x) = -\csc^2(x)</me>
+    <me>\frac{d}{dx} \sec(x) = \sec(x)\tan(x)</me>
+    <me>\frac{d}{dx} \csc(x) = -\csc(x)\cot(x)</me>
+  </p>
+  <definition xml:id="def-trig-derivatives">
+  <title>Derivatives of the Trigonometric Functions</title>
+  <statement>
+    <p>
+      <md>
+        <mrow>\frac{d}{dx} \sin x \amp = \cos x</mrow>
+        <mrow>\frac{d}{dx} \cos x \amp = -\sin x</mrow>
+        <mrow>\frac{d}{dx} \tan x \amp = \sec^2 x</mrow>
+        <mrow>\frac{d}{dx} \sec x \amp = \tan x \sec x</mrow>
+        <mrow>\frac{d}{dx} \cot x \amp = -\csc^2 x</mrow>
+        <mrow>\frac{d}{dx} \csc x \amp = -\csc x \cot x</mrow>
+      </md>
+    </p>
+  </statement>
+</definition>
+
+<example>
+  <statement>
+    <p>
+      Find the first three derivatives of <m>f(x)=x^2 + 2 \cos x</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      According to the trigonometric table for derivatives and the <q>power rule</q>, we have:
+      <md>
+        <mrow>f'(x) \amp = 2x - 2 \sin x</mrow>
+        <mrow>f''(x) \amp = 2 - 2 \cos x</mrow>
+        <mrow>f'''(x) \amp = 2 \sin x</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+<remark>
+  <p>
+    Higher-order derivatives can be written using several notations:
+    <tabular halign="center" border="1" top="minor" bottom="minor" left="minor" right="minor">
+      <row bottom="minor">
+        <cell>Order</cell>
+        <cell>Prime Notation</cell>
+        <cell>Derivatives Notation</cell>
+      </row>
+      <row>
+        <cell>1st</cell>
+        <cell><m>f'(x)</m></cell>
+        <cell><m>\dfrac{df}{dx}</m></cell>
+      </row>
+      <row>
+        <cell>2nd</cell>
+        <cell><m>f''(x)</m></cell>
+        <cell><m>\dfrac{d^2f}{dx^2}</m></cell>
+      </row>
+      <row>
+        <cell>3rd</cell>
+        <cell><m>f'''(x)</m></cell>
+        <cell><m>\dfrac{d^3f}{dx^3}</m></cell>
+      </row>
+      <row>
+        <cell><m>n</m>th</cell>
+        <cell><m>f^{(n)}(x)</m></cell>
+        <cell><m>\dfrac{d^nf}{dx^n}</m></cell>
+      </row>
+    </tabular>
+  </p>
+</remark>
+
+
+<example>
+  <statement>
+    <p>
+      Find the first ten derivatives of <m>f(x)=\sin x</m> and determine the pattern for the <m>n</m>th derivative.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We calculate the first few derivatives to identify the repeating cycle:
+      <md>
+        <mrow>f(x) \amp = \sin x</mrow>
+        <mrow>f'(x) \amp = \cos x</mrow>
+        <mrow>f''(x) \amp = -\sin x</mrow>
+        <mrow>f'''(x) \amp = -\cos x</mrow>
+        <mrow>f^{(4)}(x) \amp = \sin x</mrow>
+      </md>
+    </p>
+    <p>
+      Notice that the derivatives repeat every four steps. Continuing this pattern:
+      <md>
+        <mrow>f^{(5)}(x) \amp = \cos x</mrow>
+        <mrow>f^{(6)}(x) \amp = -\sin x</mrow>
+        <mrow>f^{(7)}(x) \amp = -\cos x</mrow>
+        <mrow>f^{(8)}(x) \amp = \sin x</mrow>
+        <mrow>f^{(9)}(x) \amp = \cos x</mrow>
+        <mrow>f^{(10)}(x) \amp = -\sin x</mrow>
+      </md>
+    </p>
+    <p>
+      The <m>n</m>th derivative follows a cycle of four:
+      <ul>
+        <li><p><m>f^{(n)}(x) = \cos x</m> if <m>n = 1, 5, 9, \dots</m> (remainder 1 when divided by 4)</p></li>
+        <li><p><m>f^{(n)}(x) = -\sin x</m> if <m>n = 2, 6, 10, \dots</m> (remainder 2 when divided by 4)</p></li>
+        <li><p><m>f^{(n)}(x) = -\cos x</m> if <m>n = 3, 7, 11, \dots</m> (remainder 3 when divided by 4)</p></li>
+        <li><p><m>f^{(n)}(x) = \sin x</m> if <m>n = 4, 8, 12, \dots</m> (remainder 0 when divided by 4)</p></li>
+      </ul>
+    </p>
+  </solution>
+</example>
+<example>
+  <statement>
+    <p>
+      Find the derivative of <m>f(x)=2 \cos x \sin x</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We can solve this using the Product Rule where <m>u = 2\cos x</m> and <m>v = \sin x</m>.
+      First, find the derivatives of the parts:
+      <me>u' = -2\sin x \quad \text{and} \quad v' = \cos x</me>
+    </p>
+    <p>
+      Now apply the Product Rule <m>f'(x) = uv' + u'v</m>:
+      <md>
+        <mrow>f'(x) \amp = (2\cos x)(\cos x) + (-2\sin x)(\sin x)</mrow>
+        <mrow>\amp = 2\cos^2 x - 2\sin^2 x</mrow>
+        <mrow>\amp = 2(\cos^2 x - \sin^2 x)</mrow>
+      </md>
+    </p>
+    <p>
+      Using the double-angle identity <m>\cos(2x) = \cos^2 x - \sin^2 x</m>, we can simplify the result:
+      <me>f'(x) = 2\cos(2x)</me>
+    </p>
+  </solution>
+</example>
+<exercise>
+  <statement>
+    <p>
+      Find <m>y'</m> if <m>y = \dfrac{\sin x}{1+\cos x}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the Quotient Rule with <m>u = \sin x</m> and <m>v = 1 + \cos x</m>:
+      <md>
+        <mrow>y' \amp = \dfrac{(1+\cos x)(\cos x) - (\sin x)(-\sin x)}{(1+\cos x)^2}</mrow>
+        <mrow>\amp = \dfrac{\cos x + \cos^2 x + \sin^2 x}{(1+\cos x)^2}</mrow>
+      </md>
+      Using the Pythagorean identity <m>\cos^2 x + \sin^2 x = 1</m>:
+      <md>
+        <mrow>y' \amp = \dfrac{\cos x + 1}{(1+\cos x)^2}</mrow>
+        <mrow>\amp = \dfrac{1}{1+\cos x}</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find <m>g'(x)</m> if <m>g(x) = \sec x \tan x</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the Product Rule with <m>u = \sec x</m> and <m>v = \tan x</m>:
+      <md>
+        <mrow>g'(x) \amp = (\sec x)(\sec^2 x) + (\tan x)(\sec x \tan x)</mrow>
+        <mrow>\amp = \sec^3 x + \sec x \tan^2 x</mrow>
+        <mrow>\amp = \sec x(\sec^2 x + \tan^2 x)</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Find <m>dy/d\theta</m> if <m>y=\sec \theta \cot \theta</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we can simplify the expression:
+      <me>y = \sec \theta \cot \theta = \frac{1}{\cos \theta} \cdot \frac{\cos \theta}{\sin \theta} = \frac{1}{\sin \theta} = \csc \theta</me>
+      Now, taking the derivative:
+      <me>\dfrac{dy}{d\theta} = -\csc \theta \cot \theta</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find the slope of the tangent line to the graph of <m>y=\sin x</m> at the point with <m>x</m>-coordinate <m>x=\pi/3</m>. For what values of <m>x</m> is the tangent line horizontal?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The slope of the tangent line is given by the derivative:
+      <me>y' = \cos x</me>
+      Evaluating at <m>x = \pi/3</m>:
+      <me>m = \cos(\pi/3) = \frac{1}{2}</me>
+    </p>
+    <p>
+      The tangent line is horizontal when the derivative is zero:
+      <me>\cos x = 0</me>
+      This occurs at <m>x = \dfrac{\pi}{2} + n\pi</m> for any integer <m>n</m>.
+    </p>
+  </solution>
+</exercise>
+<definition xml:id="def-normal-line">
+  <title>Normal Line</title>
+  <statement>
+    <p>
+      If <m>f</m> is a differentiable function, then the <term>normal line</term> at a point <m>P(a,f(a))</m> on the graph of <m>f</m> is the line through <m>P</m> that is perpendicular to the tangent line.
+    </p>
+    <p>
+      If <m>f'(a) \neq 0</m>, then the slope of the normal line is <m>-1/f'(a)</m>.
+    </p>
+    <p>
+      If <m>f'(a) = 0</m>, then the tangent line is horizontal and the normal line is vertical; moreover, the equation of the normal line is <m>x=a</m>.
+    </p>
+  </statement>
+</definition>
+<example>
+  <statement>
+    <p>
+      Find an equation of the normal line to the graph of <m>y = \tan x</m> at the point <m>P(\pi/4, 1)</m>.
+    </p>
+    <figure xml:id="fig-tangent-normal-tan">
+      <caption>The graph of <m>y = \tan x</m> with its tangent and normal lines at <m>P(\pi/4, 1)</m>.</caption>
+      <image xml:id="img-tangent-normal-tan" width="60%">
+        <description>Graph of tangent function in blue, tangent line in red, and normal line in green intersecting at (pi/4, 1).</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = $x$,
+                ylabel = $y$,
+                xmin = -0.5, xmax = 2,
+                ymin = -1, ymax = 3,
+                xtick = {0.785},
+                xticklabels = {$\pi/4$},
+                ytick = {1},
+                grid = both,
+                width=8cm,
+                height=6cm
+            ]
+            % Plot tan(x)
+            \addplot [domain=0:1.3, samples=100, blue, thick] {tan(deg(x))};
+            
+            % Plot tangent line: y = 2(x - pi/4) + 1
+            \addplot [domain=0.2:1.3, red, thick] {2*(x - 0.785) + 1};
+            
+            % Plot normal line: y = -0.5(x - pi/4) + 1
+            \addplot [domain=-0.2:1.8, green!60!black, thick] {-0.5*(x - 0.785) + 1};
+            
+            % Intersection point
+            \addplot[only marks, mark=*] coordinates {(0.785, 1)};
+            \node[above left] at (axis cs:0.785,1) {$P$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+  <solution>
+    <p>
+      First, we find the slope of the tangent line (red) by taking the derivative of <m>y = \tan x</m>:
+      <me>y' = \sec^2 x</me>
+      Evaluating at <m>x = \pi/4</m> to find the tangent slope <m>m_t</m>:
+      <me>m_t = \sec^2(\pi/4) = 2</me>
+    </p>
+    <p>
+      The slope of the normal line (green) <m>m_n</m> is the negative reciprocal of the tangent slope:
+      <me>m_n = -\frac{1}{m_t} = -\frac{1}{2}</me>
+    </p>
+    <p>
+      Using the point-slope form with <m>P(\pi/4, 1)</m> and <m>m_n = -1/2</m>:
+      <me>y - 1 = -\frac{1}{2}\left(x - \frac{\pi}{4}\right)</me>
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <task>
+        <statement>
+            <p>
+                Find the derivative of each of the following functions.
+            </p>
+        </statement>
+    </task>
+
+  <task>
+    <statement>
+      <p><m>y=4\cos x</m></p>
+    </statement>
+    <solution>
+      <p><m>y' = -4\sin x</m></p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>r(x) = \frac{1}{\sin x \tan x}</m></p>
+    </statement>
+    <hint>
+      <p>Simplify using the identity <m>\tan x = \frac{\sin x}{\cos x}</m> before differentiating.</p>
+    </hint>
+    <solution>
+      <p>
+        Simplify: <m>r(x) = \frac{\cos x}{\sin^2 x} = \cot x \csc x</m>. 
+        Then <m>r'(x) = -\csc x \cot^2 x - \csc^3 x</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>y=(x+\csc x)\cot x</m></p>
+    </statement>
+    <solution>
+      <p>
+        By the Product Rule:
+        <me>y' = (1 - \csc x \cot x)\cot x + (x + \csc x)(-\csc^2 x)</me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>g(u)=\sin u \cot u</m></p>
+    </statement>
+    <hint>
+      <p>Write <m>\cot u</m> in terms of sine and cosine.</p>
+    </hint>
+    <solution>
+      <p>
+        Simplify: <m>g(u) = \sin u \left(\frac{\cos u}{\sin u}\right) = \cos u</m>.
+        Then <m>g'(u) = -\sin u</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>y=\frac{\tan x}{1+x^2}</m></p>
+    </statement>
+    <solution>
+      <p>
+        By the Quotient Rule:
+        <me>y' = \frac{(1+x^2)\sec^2 x - (\tan x)(2x)}{(1+x^2)^2}</me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>f(x)=\frac{1+\sec x}{1-\sec x}</m></p>
+    </statement>
+    <solution>
+      <p>
+        By the Quotient Rule:
+        <me>f'(x) = \frac{(1-\sec x)(\sec x \tan x) - (1+\sec x)(-\sec x \tan x)}{(1-\sec x)^2} = \frac{2\sec x \tan x}{(1-\sec x)^2}</me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>k(v)=\frac{\csc v}{\sec v}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Simplify: <m>k(v) = \frac{\cos v}{\sin v} = \cot v</m>.
+        Then <m>k'(v) = -\csc^2 v</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>g(x)=\sin (-x)+\cos(-x)</m></p>
+    </statement>
+    <hint>
+      <p>Use the even/odd identities: <m>\sin(-x) = -\sin x</m> and <m>\cos(-x) = \cos x</m>.</p>
+    </hint>
+    <solution>
+      <p>
+        Rewrite: <m>g(x) = -\sin x + \cos x</m>.
+        Then <m>g'(x) = -\cos x - \sin x</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>H(\phi)=(\cot \phi + \csc \phi)(\tan \phi -\sin \phi)</m></p>
+    </statement>
+    <solution>
+      <p>
+        Expanding gives <m>H(\phi) = \cot \phi \tan \phi - \cot \phi \sin \phi + \csc \phi \tan \phi - \csc \phi \sin \phi</m>.
+        Simplifying gives <m>H(\phi) = 1 - \cos \phi + \sec \phi - 1 = \sec \phi - \cos \phi</m>.
+        Then <m>H'(\phi) = \sec \phi \tan \phi + \sin \phi</m>.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+
+
+
+</section>
+
+
+

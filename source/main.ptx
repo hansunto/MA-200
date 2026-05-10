@@ -38,10 +38,18 @@
         <xi:include href="./notes/18DerivativeasRateofChange.ptx"/>
       
         <!-- Include lecture notes, activities, and homework related to limits and derivatives -->
-      
-    
       </chapter>
-
+    <chapter xml:id="ch-differentiation-rules">
+      <title>Differentiation Rules</title>
+      
+      <introduction>
+        <p>
+          This chapter contains materials related to differentiation rules, including lecture notes, activities, and homework.
+        </p>
+      </introduction>
+        <xi:include href="./notes/21DifferentiationRules.ptx"/>
+        <xi:include href="./notes/22DerivativesTrigonometricFunctions.ptx"/>
+    </chapter>
 
 
    <!----> <chapter xml:id="course-notes">

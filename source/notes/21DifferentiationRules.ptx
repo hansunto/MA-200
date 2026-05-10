@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-differentiation-rules">
+  <title>Differentiation Rules</title>
+
+  <p>
+    In this section, we will learn some rules for computing derivatives of functions.
+  </p>
+
+  <p>
+    We will start with the constant rule, which states that the derivative of a constant function is zero. 
+    Then we will learn the power rule, which allows us to compute the derivative of a function of the form <m>f(x) = x^n</m> 
+    for any real number <m>n.</m> Finally, we will learn the sum rule, which states that the derivative of a sum of functions is the sum of their derivatives.
+  </p>
+
+  <p>
+    These rules will allow us to compute derivatives of many different types of functions, and they will be essential tools for solving problems in calculus.
+  </p>
+<theorem xml:id="thm-power-rule">
+  <title>The Power Rule</title>
+  <statement>
+    <p>
+      For any real number <m>n</m>,
+      <me>\frac{d}{dx}x^n = n \cdot x^{n-1}.  </me>
+    </p>
+  </statement>
+</theorem>
+
+<example>
+  <statement>
+    <p>
+      Find <m>\dfrac{dy}{dx}</m> if
+      <ol marker="a">
+        <li><p><m>y=x^5</m></p></li>
+        <li><p><m>y=x</m></p></li>
+        <li><p><m>y=\frac{1}{x}</m></p></li>
+        <li><p><m>\sqrt{x}</m></p></li>
+        <li><p><m>x^{-2/3}</m></p></li>
+        <li><p><m>y=2.349</m></p></li>
+        <li><p><m>y=\pi^2</m></p></li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Applying the Power Rule:
+      <ol marker="a">
+        <li><p><m>\dfrac{dy}{dx} = 5x^4</m></p></li>
+        <li><p><m>\dfrac{dy}{dx} = 1</m></p></li>
+        <li><p><m>\dfrac{dy}{dx} = -x^{-2} = -\dfrac{1}{x^2}</m></p></li>
+        <li><p><m>\dfrac{d}{dx}[x^{1/2}] = \dfrac{1}{2}x^{-1/2} = \dfrac{1}{2\sqrt{x}}</m></p></li>
+        <li><p><m>\dfrac{d}{dx}[x^{-2/3}] = -\dfrac{2}{3}x^{-5/3}</m></p></li>
+        <li><p><m>\dfrac{dy}{dx} = 0</m> (constant rule)</p></li>
+        <li><p><m>\dfrac{dy}{dx} = 0</m> (constant rule)</p></li>
+      </ol>
+    </p>
+  </solution>
+</example>
+
+<theorem xml:id="thm-derivative-constant">
+  <statement>
+    <p>
+      The derivative of a constant function is 0. That is,
+      <me>\frac{d}{dx}c=0.</me>
+    </p>
+  </statement>
+</theorem>
+
+<theorem xml:id="thm-derivative-linear">
+  <statement>
+    <p>
+      The derivative of a linear function is <m>m</m>.
+      <me>\frac{d}{dx}(mx+b)=m.</me>
+    </p>
+  </statement>
+</theorem>
+
+<subsection xml:id="sub-techniques-differentiation">
+<title>Techniques of Differentiation</title>
+<p>
+    In the previous section, we learned some basic rules for computing derivatives of functions. 
+    In this section, we will learn some techniques for computing derivatives of more complicated functions.
+</p>
+
+<theorem xml:id="thm-constant-multiple-rule">
+  <statement>
+    <p>
+      The derivative of a constant times a function is the constant times the derivative of the function. Using derivative notation, we can write this as
+      <me>\frac{d}{dx}[c \cdot f(x)] = c \cdot \frac{d}{dx}f(x).</me>
+    </p>
+  </statement>
+</theorem>
+
+<p>
+  Here are some examples with integer exponents:
+</p>
+<p>
+  <ol marker="1">
+    <li>
+      <p>
+        Let <m>f(x) = -7x^4.</m> Then <m>f'(x) = -7 \cdot 4x^{(4-1)} = -28x^3</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>g(t) = 3t^{-2}.</m> Then <m>g'(t) = 3 \cdot (-2)t^{(-2-1)} = -6t^{-3}</m>
+      </p>
+    </li>
+  </ol>
+</p>
+<example>
+  <statement>
+    <p>
+      Find <m>\dfrac{dy}{dx}</m> if
+      <ol marker="a">
+        <li>
+          <p>
+            <m>y=5x^4</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>y=\dfrac{-4}{x^2}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>y=-x^{0.7}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            <m>\dfrac{dy}{dx} = 5(4x^3) = 20x^3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Rewrite as <m>y = -4x^{-2}</m>. Then <m>\dfrac{dy}{dx} = -4(-2x^{-3}) = 8x^{-3} = \dfrac{8}{x^3}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\dfrac{dy}{dx} = -0.7x^{-0.3} = -\dfrac{0.7}{x^{0.3}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</example>
+
+<theorem xml:id="thm-sum-difference-rule">
+  <title>The Sum-Difference Rule</title>
+  <statement>
+    <p>
+      The derivative of a sum is the sum of the derivatives;
+      <me>\frac{d}{dx}[f(x)+g(x)] = \frac{d}{dx}f(x) + \frac{d}{dx}g(x).</me>
+      The derivative of a difference is the difference of the derivatives;
+      <me>\frac{d}{dx}[f(x)-g(x)] = \frac{d}{dx}f(x) - \frac{d}{dx}g(x). </me>
+    </p>
+  </statement>
+</theorem>
+<p>
+  Let <m>y</m> be the polynomial
+  <me>y = 2x^5 + (1/3)x^2 - 1.7x - 3</me>
+  Then
+  <me>\frac{dy}{dx} = 2(5x^4) + (1/3)(2x) - 1.7 = 10x^4 + \frac{2}{3}x - 1.7</me>
+  Notice that the derivative of the constant term <m>-3</m> is <m>0</m>, because <m>3</m> really means <m>3x^0</m>. 
+  The derivative of any real constant is zero.
+</p>
+<example>
+  <statement>
+    <p>
+      Let <m>y</m> be the Laurent polynomial (with negative exponents, in this case)
+      <me>y = \frac{5}{x^4} + \frac{1}{3x} - 2x = 5 x^{-4} + \frac{1}{3}x^{-1} - 2x</me>
+      <me>\frac{dy}{dx} = -4(5x^{-5}) + (-1)\left(\frac{1}{3}\right) x^{-2} - 2 = -20x^{-5} - \frac{1}{3}x^{-2} - 2</me>
+    </p>
+  </statement>
+</example>
+<remark>
+  <p>
+    In this section, you can write negative powers as fractions, if you like:
+    <me>x^{-n} = \frac{1}{x^n}</me>
+    (e.g., <m>3x^{-6} = \dfrac{3}{x^6}</m>)
+  </p>
+</remark>
+<exercise>
+  <statement>
+    <p>
+      Find <m>\dfrac{d}{dx}</m> if
+      <ol marker="a">
+        <li>
+          <p>
+            <m>5x^3-3x^2</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>24x-\sqrt{x}+\dfrac{2}{x}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6\sqrt[3]{x^2}-\dfrac{4}{\sqrt{x}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            <m>15x^2 - 6x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Rewrite as <m>24x - x^{1/2} + 2x^{-1}</m>. 
+            Then the derivative is <m>24 - \dfrac{1}{2}x^{-1/2} - 2x^{-2}</m>, 
+            or <m>24 - \dfrac{1}{2\sqrt{x}} - \dfrac{2}{x^2}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Rewrite as <m>6x^{2/3} - 4x^{-1/2}</m>. 
+            Then the derivative is <m>6(\frac{2}{3})x^{-1/3} - 4(-\frac{1}{2})x^{-3/2} = 4x^{-1/3} + 2x^{-3/2}</m>, 
+            or <m>\dfrac{4}{\sqrt[3]{x}} + \dfrac{2}{\sqrt{x^3}}</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Find the equation of the tangent line to the graph of <m>y = 6\sqrt[3]{x^2} - \dfrac{4}{\sqrt{x}}</m> at <m>(1,2)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we rewrite the function using fractional exponents:
+      <me>y = 6x^{2/3} - 4x^{-1/2}</me>
+      Next, we find the derivative to determine the slope <m>m</m>:
+      <me>\frac{dy}{dx} = 6\left(\frac{2}{3}\right)x^{-1/3} - 4\left(-\frac{1}{2}\right)x^{-3/2} = 4x^{-1/3} + 2x^{-3/2}</me>
+      To find the slope at the point <m>(1,2)</m>, we evaluate the derivative at <m>x=1</m>:
+      <me>m = 4(1)^{-1/3} + 2(1)^{-3/2} = 4 + 2 = 6</me>
+      Using the point-slope form <m>y - y_1 = m(x - x_1)</m> with the point <m>(1,2)</m>:
+      <me>y - 2 = 6(x - 1)</me>
+      Simplifying to slope-intercept form:
+      <me>y = 6x - 4</me>
+    </p>
+  </solution>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Find the points on the graph of <m>y=-x^3+6x^2</m> at which the tangent line is horizontal.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      A tangent line is horizontal when the derivative (slope) is equal to zero. First, we find the derivative:
+      <me>\frac{dy}{dx} = -3x^2 + 12x</me>
+      Setting the derivative equal to zero and solving for <m>x</m>:
+      <md>
+        <mrow>-3x^2 + 12x \amp = 0</mrow>
+        <mrow>-3x(x - 4) \amp = 0</mrow>
+      </md>
+      This gives critical values of <m>x = 0</m> and <m>x = 4</m>.
+    </p>
+    <p>
+      Now, we find the corresponding <m>y</m>-coordinates by plugging these values back into the original function:
+      <ul>
+        <li>
+          <p>
+            At <m>x = 0</m>: <m>y = -(0)^3 + 6(0)^2 = 0</m>. So, the point is <m>(0, 0)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            At <m>x = 4</m>: <m>y = -(4)^3 + 6(4)^2 = -64 + 96 = 32</m>. So, the point is <m>(4, 32)</m>.
+          </p>
+        </li>
+      </ul>
+      The points where the tangent line is horizontal are <m>(0, 0)</m> and <m>(4, 32)</m>.
+    </p>
+  </solution>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Find the points on the graph of <m>y=-x^3+6x^2</m> at which the tangent line has slope <m>9</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The slope of the tangent line is given by the derivative. First, we find <m>\frac{dy}{dx}</m>:
+      <me>\frac{dy}{dx} = -3x^2 + 12x</me>
+      We set the derivative equal to the desired slope, <m>9</m>, and solve for <m>x</m>:
+      <md>
+        <mrow>-3x^2 + 12x \amp = 9</mrow>
+        <mrow>-3x^2 + 12x - 9 \amp = 0</mrow>
+        <mrow>-3(x^2 - 4x + 3) \amp = 0</mrow>
+        <mrow>-3(x - 1)(x - 3) \amp = 0</mrow>
+      </md>
+      This gives us <m>x = 1</m> and <m>x = 3</m>.
+    </p>
+    <p>
+      Now, find the corresponding <m>y</m>-coordinates from the original function:
+      <ul>
+        <li>
+          <p>
+            If <m>x = 1</m>: <m>y = -(1)^3 + 6(1)^2 = -1 + 6 = 5</m>. Point: <m>(1, 5)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>x = 3</m>: <m>y = -(3)^3 + 6(3)^2 = -27 + 54 = 27</m>. Point: <m>(3, 27)</m>.
+          </p>
+        </li>
+      </ul>
+      The points where the tangent line has slope <m>9</m> are <m>(1, 5)</m> and <m>(3, 27)</m>.
+    </p>
+  </solution>
+</exercise>
+</subsection>
+<subsection xml:id="subsec-ProductandQuotientRules">
+    <title>Product and Quotient Rules</title>
+    <p>
+        In the previous section, we learned some techniques for computing derivatives of functions. 
+        In this section, we will learn two more techniques for computing derivatives of more complicated functions: the product rule and the quotient rule.
+    </p>
+<theorem xml:id="thm-product-rule">
+  <title>The Product Rule</title>
+  <statement>
+    <p>
+      Suppose that <m>F(x)=f(x)\cdot g(x)</m>, where <m>f(x)</m> is the <q>first</q> factor and <m>g(x)</m> is the <q>second</q> factor. Then
+      <me>F'(x) = \frac{d}{dx}[f(x)\cdot g(x)] = \left[\frac{d}{dx}f(x)\right]\cdot g(x) + f(x)\cdot\left[\frac{d}{dx}g(x)\right].</me>
+      The derivative of a product is the first factor times the derivative of the second factor, <alert>plus</alert> the derivative of the first factor times the second factor.
+    </p>
+  </statement>
+</theorem>
+<p>
+  In this section, we learn how to differentiate a <q>product</q> function which is built from two basic parts which are multiplied together: a product
+  <me>f(x) = u(x) v(x)</me>
+  of two simpler parts <m>u</m> and <m>v</m>.
+  <me>\frac{df}{dx} = u(x) \frac{dv}{dx} + v(x) \frac{du}{dx}</me>
+  This is often written
+  <me>(uv)' = u v' + v u'</me>
+</p>
+
+<example>
+  <statement>
+    <p>
+      Given <m>f(x) = (3x^2 + x) (7x^3 + 1)</m>, find <m>\dfrac{df}{dx}</m>.
+    </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            Identify <m>u</m> and <m>v</m>: <m>f = u v</m>, where <m>u = 3x^2 + x</m> and <m>v = 7x^3 + 1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the derivatives <m>\dfrac{du}{dx}</m> and <m>\dfrac{dv}{dx}</m> of the factors:
+            <me>u = 3x^2 + x, \dfrac{du}{dx} = 6x + 1 \quad \text{and} \quad v = 7x^3 + 1, \dfrac{dv}{dx} = 21x^2</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply the product formula: <m>\dfrac{df}{dx} = u \dfrac{dv}{dx} + v \dfrac{du}{dx}</m>
+            <me>\dfrac{df}{dx} = (3x^2 + x)(21x^2) + (7x^3 + 1)(6x + 1).</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Of course, this can be expanded and simplified to obtain a polynomial representation:
+      <me>\dfrac{df}{dx} = 105 x^4 + 28 x^3 + 6 x + 1</me>
+    </p>
+  </statement>
+</example>
+<note xml:id="note-sin-x">
+  <title>Note on the derivative of sine</title>
+<p>
+  Now for an example involving trigonometric functions. 
+  All we need is one fact: the derivative of <m>\sin x</m> is <m>\cos x</m> 
+  (that is, <m>\dfrac{d}{dx} \sin x = \cos x</m>).
+</p>
+</note>
+<example>
+  <statement>
+    <p>
+      Given <m>f(x) = 3x^5 \sin x</m>, find <m>f'(x)</m>.
+    </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            Identify <m>u</m> and <m>v</m>: <m>f = u v</m>, where <m>u = 3x^5</m> and <m>v = \sin x</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the derivatives <m>u'</m> and <m>v'</m> of the factors:
+            <me>u = 3x^5, u' = 15 x^4 \quad \text{and} \quad v = \sin x, v' = \cos x</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply the product formula: <m>f' = u v' + u' v</m>
+            <me>f'(x) = 3x^5 \cos x + 15 x^4 \sin x</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</example>
+<p> Find <m>\dfrac{d}{dx}</m> for each of the following functions. </p>
+<exercise>
+    
+  <task>
+    <statement> 
+      <p>
+        <m>(x^4-2x^3-7)(3x^2-5x)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>(x^4-2x^3-7)(6x-5) + (3x^2-5x)(4x^3-6x^2)</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>(x^2+4x-11)(7x^3-\sqrt{x})</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>(x^2+4x-11)(21x^2-\frac{1}{2\sqrt{x}}) + (7x^3-\sqrt{x})(2x+4)</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>x^{1/3}(x^2-3x+2)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>x^{1/3}(2x-3) + (x^2-3x+2)(\frac{1}{3}x^{-2/3})</m>
+      </p>
+    </solution>
+  </task>
+  <task>
+    <statement>
+      <p>
+        <m>(x^2-3x+2)\sin x</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <m>(x^2-3x+2)\cos x + \sin x(2x-3)</m>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+
+<theorem xml:id="thm-quotient-rule">
+  <title>The Quotient Rule</title>
+  <statement>
+    <p>
+      Suppose that <m>F(x)=\dfrac{f(x)}{g(x)}</m>, where <m>f(x)</m> is the <q>numerator</q> and <m>g(x)</m> is the <q>denominator</q>. Then
+      <me>F'(x) = \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{\left[\frac{d}{dx}f(x)\right]\cdot g(x) - f(x)\cdot\left[\frac{d}{dx}g(x)\right]}{(g(x))^2}.</me>
+      The derivative of a quotient is the denominator times the derivative of the numerator, <alert>minus</alert> the numerator times the derivative of the denominator, all divided by the denominator squared.
+    </p>
+  </statement>
+</theorem>
+<p>
+  In this section, we learn how to differentiate a function which is constructed as a ratio of two basic parts: a quotient
+  <me>f(x) = \frac{u(x)}{v(x)}</me>
+  of two simpler functions <m>u</m> and <m>v</m>. To calculate the derivative of a function of the form <m>u/v</m>, we have the <q>Quotient Rule</q>. The quotient rule says explicitly how to combine the functions <m>u</m> and <m>v</m> with their derivatives <m>\frac{du}{dx}</m> and <m>\frac{dv}{dx}</m> to form the derivative of <m>f=u/v</m>. It works like this:
+  <me>\frac{df}{dx} = \frac{\frac{du}{dx} v(x) - \frac{dv}{dx} u(x)}{v(x)^2}</me>
+  This can also be written
+  <me>\left(\frac{u}{v}\right)' = \frac{v u' - u v'}{v^2}</me>
+</p>
+<example>
+  <statement>
+    <p>
+      Given <m>f(x) = \dfrac{3x^2 + x}{7x^3 + 1}</m>, find <m>\dfrac{df}{dx}</m>.
+    </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            Identify <m>u</m> and <m>v</m>: <m>f = u / v</m>, where <m>u = 3x^2 + x</m> and <m>v = 7x^3 + 1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the derivatives <m>\dfrac{du}{dx}</m> and <m>\dfrac{dv}{dx}</m> of the numerator and denominator:
+            <me>u = 3x^2 + x, \dfrac{du}{dx} = 6x + 1 \quad \text{and} \quad v = 7x^3 + 1, \dfrac{dv}{dx} = 21x^2</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Apply the quotient formula: <m>\dfrac{df}{dx} = \dfrac{v \dfrac{du}{dx} - u \dfrac{dv}{dx}}{v^2}</m>
+            <me>\dfrac{df}{dx} = \dfrac{(7x^3 + 1)(6x + 1) - (3x^2 + x)(21x^2)}{(7x^3 + 1)^2}</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Of course, this can be expanded and terms collected to obtain a rational representation:
+      <me>\dfrac{df}{dx} = \dfrac{-21x^4 - 14x^3 + 6x - 1}{(7x^3 + 1)^2}</me>
+    </p>
+  </statement>
+</example>
+<example>
+  <statement>
+    <p>
+      Given <m>f(x) = \dfrac{\sin x}{x}</m>, find <m>f'(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the Quotient Rule with <m>u = \sin x</m> and <m>v = x</m>, and recalling the fact (<xref ref="note-sin-x"/>) that
+      <me>\frac{d}{dx}(\sin x) = \cos x</me>
+      we have <m>u' = \cos x</m> and <m>v' = 1</m>. Thus,
+      <me>f'(x) = \frac{x(\cos x) - (\sin x)(1)}{x^2} = \frac{x\cos x - \sin x}{x^2}</me>
+    </p>
+  </solution>
+</example>
+<remark>
+  <p>
+    To avoid ambiguity when multiplying a trigonometric function by a power function, 
+    always write the power function first. 
+    For example, write <m>x \sin x</m> instead of <m>\sin x \cdot x</m>. 
+    This prevents the common mistake of misinterpreting the expression as <m>\sin(x^2)</m>.
+  </p>
+</remark>
+<statement>
+    <p>
+      Find <m>\dfrac{d}{dx}</m> for each of the following functions.
+    </p>
+  </statement>
+<exercise>
+  
+
+  <task>
+    <statement>
+      <p>
+        <m>\dfrac{x^4-2x^3-7}{3x^2-5x}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Applying the Quotient Rule:
+        <me>\dfrac{(3x^2-5x)(4x^3-6x^2) - (x^4-2x^3-7)(6x-5)}{(3x^2-5x)^2}</me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\dfrac{x^2+4x-11}{7x^3-\sqrt{x}}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Applying the Quotient Rule:
+        <me>\dfrac{(7x^3-\sqrt{x})(2x+4) - (x^2+4x-11)(21x^2-\frac{1}{2\sqrt{x}})}{(7x^3-\sqrt{x})^2}</me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\dfrac{x^5}{x^3}</m>
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Simplify the fraction using laws of exponents before differentiating.
+      </p>
+    </hint>
+    <solution>
+      <p>
+        First simplify: <m>x^5/x^3 = x^2</m>. Then the derivative is <m>2x</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\dfrac{1+x^2}{x^3}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Simplify to <m>x^{-3} + x^{-1}</m>. The derivative is <m>-3x^{-4} - x^{-2}</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\dfrac{x^2-3x}{x-1}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Using the Quotient Rule:
+        <me>\dfrac{(x-1)(2x-3) - (x^2-3x)(1)}{(x-1)^2} = \dfrac{x^2-2x+3}{(x-1)^2}</me>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+
+
+</subsection>
+
+
+
+</section>

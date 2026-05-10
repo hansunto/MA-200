@@ -8,8 +8,7 @@ Consider the function <m>f(x) = 3x+5</m>. What happens as <m>x \to 1</m>?
 We say that <m>\displaystyle\lim_{x\to 1} (3x+5) = </m>.
 </p>
 
-<solution>
-  <p>
+<p>
     To find <m>\displaystyle\lim_{x\to 1} (3x+5)</m>, we examine the function's behavior as <m>x</m> approaches <m>1</m> from both sides:
   </p>
   <p>
@@ -57,7 +56,6 @@ We say that <m>\displaystyle\lim_{x\to 1} (3x+5) = </m>.
       </latex-image>
     </image>
   </figure>
-</solution>
 
 <example xml:id="example-polynomial-limit">
 <title>Limit of a Polynomial</title>

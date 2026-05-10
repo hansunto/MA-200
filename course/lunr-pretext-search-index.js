@@ -781,7 +781,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "The Derivative as a Function",
-  "body": " The Derivative as a Function  In the previous section, we defined the derivative at a point as the limit of the difference quotient. Now, we will explore how to find the derivative as a function, which gives us the rate of change at any point in the domain of the original function.   The Derivative   The derivative of a function , denoted by , is defined by if the limit exists.    If , we also use the Leibniz notation for the derivative:     For , find .    We use the limit definition of the derivative:   The derivative is , which makes sense because the slope of the line is constant at .      For , find .    We apply the limit definition of the derivative at the point :   Alternatively, using the form:       For , find . Then, evaluate and .    First, we find the general derivative function using the limit definition:   Now, we evaluate the derivative at the specific points:   At : .    At : .        Alternative definition of derivative          Find the derivative of the function at the number using the alternative definition.    We use the alternative definition of the derivative:   Substituting the function :   Factoring out from the numerator:   As expected, we obtain the same result: .     Differentiability on a Closed Interval   A function f is differentiable on the closed interval if is differentiable on the open interval and if the following limits exist:     A function is said to be differentiable at a point in its domain if the derivative exists. Remember, the derivative is defined as a limit of a difference quotient as follows: So is differentiable at if this limit exists. That means:    The right-hand limit exists.    The left-hand limit exists.    They are equal: .    If is a point at which this limit fails to exist for some reason—either because the function is not continuous, one or both of the one-sided limits don't exist, or they exist but do not match—then we say that is a point of non-differentiability of , or more simply, is a singular point of .  If is defined in an open interval , then we say is differentiable in if it is differentiable at each point in the interval. Since the endpoints are not actually in the interval, we do not have to concern ourselves with them. However, if is defined piecewise, we must check the right and left hand limits at each of the points separating adjacent intervals to verify differentiability. If either one-sided limit fails to exist or if they do not match, the point is a singularity.   A function is not differentiable (does not have a derivative ) at a point if any of the following occur:    The graph of is not continuous at .    The graph of has a vertical tangent line at ; that is:     The graph of has a cusp (or a sharp corner) at . This occurs if is continuous but as from one side, and as from the other side.       Consider the piecewise function :    Graph of showing a sharp corner (singularity) at   A piecewise function formed by two parabolas meeting at a sharp corner at x equals 2.       To determine if is a singularity, we check both continuity and differentiability at that point:     Continuity: On the left, as , . On the right, as , . Since the limits match the function value , the function is continuous.     Differentiability: We examine the slopes of the tangent lines from each side.  On the left : . As , .  On the right : . As , .      While the function values match, the slopes do not ( ). This creates a sharp corner in the graph as seen in , making a singularity of .      If , show that is not differentiable at .     Graph of showing the sharp corner at the origin   A V-shaped graph with a sharp point at the origin.     To show that is not differentiable at , we must check if the limit of the difference quotient exists at that point:   We examine the one-sided limits:    From the right ( ), , so:     From the left ( ), , so:     Since the left-hand and right-hand limits are not equal ( ), the two-sided limit does not exist. Therefore, is not differentiable at . This corresponds to the sharp corner (or cusp) seen at the origin on its graph.      If , show that is not differentiable at .   Graph of showing a vertical tangent at the origin   The graph of a cube root function passing through the origin with an increasingly steep slope.       We use the limit definition of the derivative at :   As , the denominator is always positive (since it is a square of a cube root) and approaches . Therefore:   Since the limit of the difference quotient is infinite, the derivative does not exist. Geometrically, this means the graph has a vertical tangent line at the origin, as illustrated in .      If is differentiable at , then is continuous at .    Since is differentiable at , we know that exists. To show that is continuous at , we must show that , or equivalently, .  For , we can write:   Using the limit laws, we get:   Since , it follows that . Therefore, by the definition of continuity, is continuous at .    "
+  "body": " The Derivative as a Function  In the previous section, we defined the derivative at a point as the limit of the difference quotient. Now, we will explore how to find the derivative as a function, which gives us the rate of change at any point in the domain of the original function.   The Derivative   The derivative of a function , denoted by , is defined by if the limit exists.       For , find .    We use the limit definition of the derivative:   The derivative is , which makes sense because the slope of the line is constant at .      For , find .    We apply the limit definition of the derivative at the point :   Alternatively, using the form:       For , find . Then, evaluate and .    First, we find the general derivative function using the limit definition:   Now, we evaluate the derivative at the specific points:   At : .    At : .        Alternative definition of derivative          Find the derivative of the function at the number using the alternative definition.    We use the alternative definition of the derivative:   Substituting the function :   Factoring out from the numerator:   As expected, we obtain the same result: .     Differentiability on a Closed Interval   A function f is differentiable on the closed interval if is differentiable on the open interval and if the following limits exist:     A function is said to be differentiable at a point in its domain if the derivative exists. Remember, the derivative is defined as a limit of a difference quotient as follows: So is differentiable at if this limit exists. That means:    The right-hand limit exists.    The left-hand limit exists.    They are equal: .    If is a point at which this limit fails to exist for some reason—either because the function is not continuous, one or both of the one-sided limits don't exist, or they exist but do not match—then we say that is a point of non-differentiability of , or more simply, is a singular point of .  If is defined in an open interval , then we say is differentiable in if it is differentiable at each point in the interval. Since the endpoints are not actually in the interval, we do not have to concern ourselves with them. However, if is defined piecewise, we must check the right and left hand limits at each of the points separating adjacent intervals to verify differentiability. If either one-sided limit fails to exist or if they do not match, the point is a singularity.   A function is not differentiable (does not have a derivative ) at a point if any of the following occur:    The graph of is not continuous at .    The graph of has a vertical tangent line at ; that is:     The graph of has a cusp (or a sharp corner) at . This occurs if is continuous but as from one side, and as from the other side.       Consider the piecewise function :    Graph of showing a sharp corner (singularity) at   A piecewise function formed by two parabolas meeting at a sharp corner at x equals 2.       To determine if is a singularity, we check both continuity and differentiability at that point:     Continuity: On the left, as , . On the right, as , . Since the limits match the function value , the function is continuous.     Differentiability: We examine the slopes of the tangent lines from each side.  On the left : . As , .  On the right : . As , .      While the function values match, the slopes do not ( ). This creates a sharp corner in the graph as seen in , making a singularity of .      If , show that is not differentiable at .     Graph of showing the sharp corner at the origin   A V-shaped graph with a sharp point at the origin.     To show that is not differentiable at , we must check if the limit of the difference quotient exists at that point:   We examine the one-sided limits:    From the right ( ), , so:     From the left ( ), , so:     Since the left-hand and right-hand limits are not equal ( ), the two-sided limit does not exist. Therefore, is not differentiable at . This corresponds to the sharp corner (or cusp) seen at the origin on its graph.      If , show that is not differentiable at .   Graph of showing a vertical tangent at the origin   The graph of a cube root function passing through the origin with an increasingly steep slope.       We use the limit definition of the derivative at :   As , the denominator is always positive (since it is a square of a cube root) and approaches . Therefore:   Since the limit of the difference quotient is infinite, the derivative does not exist. Geometrically, this means the graph has a vertical tangent line at the origin, as illustrated in .      If is differentiable at , then is continuous at .    Since is differentiable at , we know that exists. To show that is continuous at , we must show that , or equivalently, .  For , we can write:   Using the limit laws, we get:   Since , it follows that . Therefore, by the definition of continuity, is continuous at .     Note that the converse is not true. See the example ( ).      When is a function of , , we will also designate the derivative, , reads as the derivative of with respect to . The value of when can be denoted by .    "
 },
 {
   "id": "def-derivative",
@@ -791,15 +791,6 @@ var ptx_lunr_docs = [
   "number": "77",
   "title": "The Derivative.",
   "body": " The Derivative   The derivative of a function , denoted by , is defined by if the limit exists.   "
-},
-{
-  "id": "sec-derivative-functions-4",
-  "level": "2",
-  "url": "sec-derivative-functions.html#sec-derivative-functions-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "Leibniz notation "
 },
 {
   "id": "ex-derivative-linear",
@@ -856,18 +847,18 @@ var ptx_lunr_docs = [
   "body": " Differentiability on a Closed Interval   A function f is differentiable on the closed interval if is differentiable on the open interval and if the following limits exist:    "
 },
 {
-  "id": "sec-derivative-functions-13",
+  "id": "sec-derivative-functions-12",
   "level": "2",
-  "url": "sec-derivative-functions.html#sec-derivative-functions-13",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-12",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "singular point "
 },
 {
-  "id": "sec-derivative-functions-15",
+  "id": "sec-derivative-functions-14",
   "level": "2",
-  "url": "sec-derivative-functions.html#sec-derivative-functions-15",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-14",
   "type": "Remark",
   "number": "84",
   "title": "",
@@ -910,76 +901,256 @@ var ptx_lunr_docs = [
   "body": "  If is differentiable at , then is continuous at .    Since is differentiable at , we know that exists. To show that is continuous at , we must show that , or equivalently, .  For , we can write:   Using the limit laws, we get:   Since , it follows that . Therefore, by the definition of continuity, is continuous at .   "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises",
-  "level": "1",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html",
-  "type": "Section",
-  "number": "",
-  "title": "Limits and Continuity - Chapter Exercises",
-  "body": " Limits and Continuity - Chapter Exercises   This section contains exercises related to limits and continuity. These exercises are designed to reinforce the concepts covered in the chapter and provide practice with various types of limit evaluations, continuity analysis, and applications of these concepts in different contexts.    Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.       Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .     Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :      Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .       Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .     Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .       Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .    "
+  "id": "sec-derivative-functions-19",
+  "level": "2",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-19",
+  "type": "Remark",
+  "number": "92",
+  "title": "",
+  "body": " Note that the converse is not true. See the example ( ).  "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-3",
+  "id": "sec-derivative-functions-20",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-3",
+  "url": "sec-derivative-functions.html#sec-derivative-functions-20",
+  "type": "Observation",
+  "number": "93",
+  "title": "",
+  "body": "   When is a function of , , we will also designate the derivative, , reads as the derivative of with respect to . The value of when can be denoted by .   "
+},
+{
+  "id": "sec-derivative-rate-change",
+  "level": "1",
+  "url": "sec-derivative-rate-change.html",
+  "type": "Section",
+  "number": "",
+  "title": "The Derivative as a Rate of Change",
+  "body": " The Derivative as a Rate of Change  In the previous section, we defined the derivative of a function at a point as the limit of the difference quotient. In this section, we will explore how the derivative can be interpreted as a rate of change.  The derivative of a function at a point gives us the instantaneous rate of change of the function at that point. This means that it tells us how fast the function is changing at that specific point. For example, if we have a function that represents the position of an object over time, the derivative of that function will give us the velocity of the object at any given time.   Tangent Line   The tangent line to at is the line through whose slope is , the derivative of at .    A tangent line at a point of a curve may be viewed as a geometric approximation to the curve itself. If the curve is the graph of a function , then we can think of the linear function defining the tangent line as an approximating function for . If we call this linear function , then the tangent line is .  Suppose the point lies on the graph of , where is a smooth function (a function with a nice continuous derivative). We would like to find the equation of the tangent line at the point . Suppose the coordinates of are Since lies on the graph of , we know that The characteristic property of the tangent line at is that the slope of the line is equal to the slope of the curve at , which is the derivative of at .  In other words, if the slope of the tangent line is , and the equation is , then . Also, lies on the line. These two pieces of information allow us to use the point-slope formula to find the equation of the tangent. Equivalently, we could simply plug the coordinates of into the equation and solve for . Formally, we can say the tangent line equation is .    Find the equation for the line tangent to at the point .    First we need to calculate : Thus, . Hence, the slope of the tangent line is .  Now we will use this to find the equation of the tangent. Since the line goes through the point , becomes , so , and the equation of the tangent line is .      Find an equation of the tangent line to the parabola at .    First, find the -coordinate of the point. When : So the point is .  Next, find the derivative to get the slope : At , the slope is .  Using the point-slope formula : The equation of the tangent line is .      For :     Find .    Find an equation of the tangent line to the curve at the point .          Using the definition of the derivative: Finding a common denominator in the numerator: Simplifying the :     First, find the slope at using the result from part (a): Using the point in the point-slope form : Simplifying to slope-intercept form:        Suppose an object moves along a straight line according to an equation of motion , where is the displacement of the object from the origin at time . The function that describes the motion is called the position function of the object. The average velocity over the interval of time is . Suppose we want to compute the average velocity for the shorter time interval as .   Instantaneous Velocity  We define the velocity (or instantaneous velocity ) at time as:      Suppose that a ball is dropped from a tower which is 450 m above the ground.   What is the velocity of the ball after 5 seconds?    How fast is the ball traveling when it hits the ground?      A ball dropping from a tower of height 450m.        The equation of motion is . The velocity at 5 seconds is , and the speed when it hits the ground is approximately .    Using the position function , we first find the velocity function by taking the derivative:      After 5 seconds, the velocity is:     The ball hits the ground when : So, . The velocity at this time is: The speed is the magnitude of velocity, approximately .         A sandbag is dropped from a hot-air balloon that is hovering at a height of 512 feet above the ground. If air resistance is discarded, then the distance from the ground to the sandbag after seconds is given by .   A sandbag falling from a balloon.      Find the velocity of the sandbag at and seconds.    To find the velocity, we take the derivative of the position function : .  At time , the velocity is: .  At time seconds, the velocity is: .     Rate of Change   Let where is defined on an open interval containing .   The average rate of change of with respect to on the interval is .    The instantaneous rate of change of with respect to at is , if the limit exists.         The derivative is the instantaneous rate of change of with respect to at .    If an object is thrown into the air from a given height (in feet) , with an initial upward velocity of , its height above the ground at the time is given by the following function: , where is the gravitational constant . This is the acceleration of an object due to gravity near the Earth's surface. Substituting this value for into the above equation, we obtain: .  To determine how long the object will be in the air (ignoring the effects of friction and wind), set the left hand side of the equation to 0, and solve for using the quadratic formula. We set this to 0 because is the height of the object above the ground; when the object reaches the ground, this height is 0. When the quadratic formula is used, two solutions are obtained: one positive and one negative. Since our answer refers to how long the object will be airborne, the positive root should be selected.  To determine the velocity of the object at a particular time , compute the derivative of with respect to and substitute into . In this case, it is important to note that the sign of the velocity determines its direction. An object moving upward has positive velocity, and an object going down has a negative velocity. The unit for velocity is feet\/second.    If an object is thrown into the air from a height of 200 feet at an initial velocity of 20 feet\/second, how long is it in the air? Also, what is its velocity at seconds?   Path of an object thrown from 200 ft.        Using the position function with and :   To find how long it is in the air, set : Using the quadratic formula: The positive root is seconds.  To find the velocity at , take the derivative: At :     "
+},
+{
+  "id": "def-tan-line",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#def-tan-line",
+  "type": "Definition",
+  "number": "94",
+  "title": "Tangent Line.",
+  "body": " Tangent Line   The tangent line to at is the line through whose slope is , the derivative of at .   "
+},
+{
+  "id": "sec-derivative-rate-change-8",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-8",
+  "type": "Example",
+  "number": "95",
+  "title": "",
+  "body": "  Find the equation for the line tangent to at the point .    First we need to calculate : Thus, . Hence, the slope of the tangent line is .  Now we will use this to find the equation of the tangent. Since the line goes through the point , becomes , so , and the equation of the tangent line is .   "
+},
+{
+  "id": "sec-derivative-rate-change-9",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-9",
   "type": "Checkpoint",
-  "number": "92",
+  "number": "96",
+  "title": "",
+  "body": "  Find an equation of the tangent line to the parabola at .    First, find the -coordinate of the point. When : So the point is .  Next, find the derivative to get the slope : At , the slope is .  Using the point-slope formula : The equation of the tangent line is .   "
+},
+{
+  "id": "sec-derivative-rate-change-10",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-10",
+  "type": "Checkpoint",
+  "number": "97",
+  "title": "",
+  "body": "  For :     Find .    Find an equation of the tangent line to the curve at the point .          Using the definition of the derivative: Finding a common denominator in the numerator: Simplifying the :     First, find the slope at using the result from part (a): Using the point in the point-slope form : Simplifying to slope-intercept form:       "
+},
+{
+  "id": "sec-derivative-rate-change-11",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-11",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "position function "
+},
+{
+  "id": "formula-velocity-2",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#formula-velocity-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "velocity instantaneous velocity "
+},
+{
+  "id": "sec-derivative-rate-change-13",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-13",
+  "type": "Example",
+  "number": "98",
+  "title": "",
+  "body": "  Suppose that a ball is dropped from a tower which is 450 m above the ground.   What is the velocity of the ball after 5 seconds?    How fast is the ball traveling when it hits the ground?      A ball dropping from a tower of height 450m.        The equation of motion is . The velocity at 5 seconds is , and the speed when it hits the ground is approximately .    Using the position function , we first find the velocity function by taking the derivative:      After 5 seconds, the velocity is:     The ball hits the ground when : So, . The velocity at this time is: The speed is the magnitude of velocity, approximately .      "
+},
+{
+  "id": "sec-derivative-rate-change-14",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-14",
+  "type": "Checkpoint",
+  "number": "100",
+  "title": "",
+  "body": "  A sandbag is dropped from a hot-air balloon that is hovering at a height of 512 feet above the ground. If air resistance is discarded, then the distance from the ground to the sandbag after seconds is given by .   A sandbag falling from a balloon.      Find the velocity of the sandbag at and seconds.    To find the velocity, we take the derivative of the position function : .  At time , the velocity is: .  At time seconds, the velocity is: .   "
+},
+{
+  "id": "def-rate-of-change",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#def-rate-of-change",
+  "type": "Definition",
+  "number": "102",
+  "title": "Rate of Change.",
+  "body": " Rate of Change   Let where is defined on an open interval containing .   The average rate of change of with respect to on the interval is .    The instantaneous rate of change of with respect to at is , if the limit exists.      "
+},
+{
+  "id": "def-derivative-rate-of-change",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#def-derivative-rate-of-change",
+  "type": "Definition",
+  "number": "103",
+  "title": "",
+  "body": "  The derivative is the instantaneous rate of change of with respect to at .   "
+},
+{
+  "id": "sec-derivative-rate-change-18",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-18",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "how long the object will be in the air "
+},
+{
+  "id": "sec-derivative-rate-change-19",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-19",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "velocity of the object at a particular time "
+},
+{
+  "id": "sec-derivative-rate-change-20",
+  "level": "2",
+  "url": "sec-derivative-rate-change.html#sec-derivative-rate-change-20",
+  "type": "Checkpoint",
+  "number": "104",
+  "title": "",
+  "body": "  If an object is thrown into the air from a height of 200 feet at an initial velocity of 20 feet\/second, how long is it in the air? Also, what is its velocity at seconds?   Path of an object thrown from 200 ft.        Using the position function with and :   To find how long it is in the air, set : Using the quadratic formula: The positive root is seconds.  To find the velocity at , take the derivative: At :    "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises",
+  "level": "1",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
+  "type": "Section",
+  "number": "",
+  "title": "Limits and Derivatives - Chapter Exercises",
+  "body": " Limits and Derivatives - Chapter Exercises   This section contains exercises related to limits and continuity. These exercises are designed to reinforce the concepts covered in the chapter and provide practice with various types of limit evaluations, continuity analysis, and applications of these concepts in different contexts.     Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.       Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .     Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :      Mixed Limit Evaluations   Find the following limits if they exist:             Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .   Multiply by the conjugate : .    Use the special limit : .         Evaluate the following limits:                       The degrees of the numerator and denominator are the same (both 2). The limit is the ratio of the leading coefficients: .    The degree of the denominator (4) is greater than the degree of the numerator (1). Therefore: .    The degree of the numerator (5) is greater than the degree of the denominator (2). Examining the leading terms: .       Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .      Find and if .    To find the limits at infinity, we identify the dominant terms. In the numerator, dominates. In the denominator, dominates.  For , : .  For , : .      Find .    To evaluate this limit, we multiply by the conjugate: Simplifying the numerator: As , the denominator grows without bound while the numerator remains constant. Therefore: .     Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .     Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .        A function is given by . Find:                    Simplify the fraction and take the limit .                         Simplifying the numerator: Taking the limit:         "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-1",
+  "level": "2",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-1",
+  "type": "Exercise",
+  "number": "1",
   "title": "Graphical Limit Analysis.",
   "body": " Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.     "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-4",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-2",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-4",
-  "type": "Checkpoint",
-  "number": "94",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-2",
+  "type": "Exercise",
+  "number": "2",
   "title": "Continuity of Rational Functions.",
   "body": " Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .   "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-5",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-3",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-5",
-  "type": "Checkpoint",
-  "number": "95",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-3",
+  "type": "Exercise",
+  "number": "3",
   "title": "Average Rate of Change.",
   "body": " Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :    "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-6",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-4",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-6",
-  "type": "Checkpoint",
-  "number": "96",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-4",
+  "type": "Exercise",
+  "number": "4",
   "title": "Mixed Limit Evaluations.",
-  "body": " Mixed Limit Evaluations   Find the following limits if they exist:           Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .     "
+  "body": " Mixed Limit Evaluations   Find the following limits if they exist:             Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .   Multiply by the conjugate : .    Use the special limit : .      "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-7",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-5",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-7",
-  "type": "Checkpoint",
-  "number": "97",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Evaluate the following limits:                       The degrees of the numerator and denominator are the same (both 2). The limit is the ratio of the leading coefficients: .    The degree of the denominator (4) is greater than the degree of the numerator (1). Therefore: .    The degree of the numerator (5) is greater than the degree of the denominator (2). Examining the leading terms: .     "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-6",
+  "level": "2",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-6",
+  "type": "Exercise",
+  "number": "6",
+  "title": "Limit from Existing Derivative Definition.",
+  "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-7",
+  "level": "2",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-7",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Find and if .    To find the limits at infinity, we identify the dominant terms. In the numerator, dominates. In the denominator, dominates.  For , : .  For , : .   "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-8",
+  "level": "2",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-8",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Find .    To evaluate this limit, we multiply by the conjugate: Simplifying the numerator: As , the denominator grows without bound while the numerator remains constant. Therefore: .   "
+},
+{
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-9",
+  "level": "2",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-9",
+  "type": "Exercise",
+  "number": "9",
   "title": "Piecewise Continuity.",
   "body": " Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .   "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-8",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-10",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-8",
-  "type": "Checkpoint",
-  "number": "98",
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-10",
+  "type": "Exercise",
+  "number": "10",
   "title": "Kinematics: Velocity and Acceleration.",
   "body": " Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .     "
 },
 {
-  "id": "notes-Limits-and-Continuity-chapter-exercises-9",
+  "id": "notes-Limits-and-Derivatives-chapter-exercises-3-11",
   "level": "2",
-  "url": "notes-Limits-and-Continuity-chapter-exercises.html#notes-Limits-and-Continuity-chapter-exercises-9",
-  "type": "Checkpoint",
-  "number": "99",
-  "title": "Limit from Existing Derivative Definition.",
-  "body": " Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .   "
+  "url": "notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3-11",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  A function is given by . Find:                    Simplify the fraction and take the limit .                         Simplifying the numerator: Taking the limit:       "
 },
 {
   "id": "notes-week-01",

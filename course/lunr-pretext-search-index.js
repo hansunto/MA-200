@@ -1045,6 +1045,357 @@ var ptx_lunr_docs = [
   "body": "  If an object is thrown into the air from a height of 200 feet at an initial velocity of 20 feet\/second, how long is it in the air? Also, what is its velocity at seconds?   Path of an object thrown from 200 ft.        Using the position function with and :   To find how long it is in the air, set : Using the quadratic formula: The positive root is seconds.  To find the velocity at , take the derivative: At :    "
 },
 {
+  "id": "sec-differentiation-rules",
+  "level": "1",
+  "url": "sec-differentiation-rules.html",
+  "type": "Section",
+  "number": "",
+  "title": "Differentiation Rules",
+  "body": " Differentiation Rules  In this section, we will learn some rules for computing derivatives of functions.  We will start with the constant rule, which states that the derivative of a constant function is zero. Then we will learn the power rule, which allows us to compute the derivative of a function of the form for any real number Finally, we will learn the sum rule, which states that the derivative of a sum of functions is the sum of their derivatives.  These rules will allow us to compute derivatives of many different types of functions, and they will be essential tools for solving problems in calculus.   The Power Rule   For any real number ,       Find if             Applying the Power Rule:       (constant rule)  (constant rule)        The derivative of a constant function is 0. That is,       The derivative of a linear function is .      Techniques of Differentiation  In the previous section, we learned some basic rules for computing derivatives of functions. In this section, we will learn some techniques for computing derivatives of more complicated functions.    The derivative of a constant times a function is the constant times the derivative of the function. Using derivative notation, we can write this as     Here are some examples with integer exponents:     Let Then     Let Then        Find if                             Rewrite as . Then              The Sum-Difference Rule   The derivative of a sum is the sum of the derivatives; The derivative of a difference is the difference of the derivatives;     Let be the polynomial Then Notice that the derivative of the constant term is , because really means . The derivative of any real constant is zero.    Let be the Laurent polynomial (with negative exponents, in this case)       In this section, you can write negative powers as fractions, if you like: (e.g., )     Find if                             Rewrite as . Then the derivative is , or .    Rewrite as . Then the derivative is , or .         Find the equation of the tangent line to the graph of at .    First, we rewrite the function using fractional exponents: Next, we find the derivative to determine the slope : To find the slope at the point , we evaluate the derivative at : Using the point-slope form with the point : Simplifying to slope-intercept form:       Find the points on the graph of at which the tangent line is horizontal.    A tangent line is horizontal when the derivative (slope) is equal to zero. First, we find the derivative: Setting the derivative equal to zero and solving for : This gives critical values of and .  Now, we find the corresponding -coordinates by plugging these values back into the original function:   At : . So, the point is .    At : . So, the point is .   The points where the tangent line is horizontal are and .      Find the points on the graph of at which the tangent line has slope .    The slope of the tangent line is given by the derivative. First, we find : We set the derivative equal to the desired slope, , and solve for : This gives us and .  Now, find the corresponding -coordinates from the original function:   If : . Point: .    If : . Point: .   The points where the tangent line has slope are and .      Product and Quotient Rules  In the previous section, we learned some techniques for computing derivatives of functions. In this section, we will learn two more techniques for computing derivatives of more complicated functions: the product rule and the quotient rule.   The Product Rule   Suppose that , where is the first factor and is the second factor. Then The derivative of a product is the first factor times the derivative of the second factor, plus the derivative of the first factor times the second factor.    In this section, we learn how to differentiate a product function which is built from two basic parts which are multiplied together: a product of two simpler parts and . This is often written     Given , find .     Identify and : , where and     Find the derivatives and of the factors:     Apply the product formula:       Of course, this can be expanded and simplified to obtain a polynomial representation:      Note on the derivative of sine  Now for an example involving trigonometric functions. All we need is one fact: the derivative of is (that is, ).     Given , find .     Identify and : , where and     Find the derivatives and of the factors:     Apply the product formula:         Find for each of the following functions.                                                     The Quotient Rule   Suppose that , where is the numerator and is the denominator . Then The derivative of a quotient is the denominator times the derivative of the numerator, minus the numerator times the derivative of the denominator, all divided by the denominator squared.    In this section, we learn how to differentiate a function which is constructed as a ratio of two basic parts: a quotient of two simpler functions and . To calculate the derivative of a function of the form , we have the Quotient Rule . The quotient rule says explicitly how to combine the functions and with their derivatives and to form the derivative of . It works like this: This can also be written     Given , find .     Identify and : , where and     Find the derivatives and of the numerator and denominator:     Apply the quotient formula:       Of course, this can be expanded and terms collected to obtain a rational representation:       Given , find .    Using the Quotient Rule with and , and recalling the fact ( ) that we have and . Thus,      To avoid ambiguity when multiplying a trigonometric function by a power function, always write the power function first. For example, write instead of . This prevents the common mistake of misinterpreting the expression as .    Find for each of the following functions.           Applying the Quotient Rule:            Applying the Quotient Rule:            Simplify the fraction using laws of exponents before differentiating.    First simplify: . Then the derivative is .           Simplify to . The derivative is .           Using the Quotient Rule:       "
+},
+{
+  "id": "thm-power-rule",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-power-rule",
+  "type": "Theorem",
+  "number": "106",
+  "title": "The Power Rule.",
+  "body": " The Power Rule   For any real number ,    "
+},
+{
+  "id": "sec-differentiation-rules-6",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sec-differentiation-rules-6",
+  "type": "Example",
+  "number": "107",
+  "title": "",
+  "body": "  Find if             Applying the Power Rule:       (constant rule)  (constant rule)     "
+},
+{
+  "id": "thm-derivative-constant",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-derivative-constant",
+  "type": "Theorem",
+  "number": "108",
+  "title": "",
+  "body": "  The derivative of a constant function is 0. That is,    "
+},
+{
+  "id": "thm-derivative-linear",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-derivative-linear",
+  "type": "Theorem",
+  "number": "109",
+  "title": "",
+  "body": "  The derivative of a linear function is .    "
+},
+{
+  "id": "thm-constant-multiple-rule",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-constant-multiple-rule",
+  "type": "Theorem",
+  "number": "110",
+  "title": "",
+  "body": "  The derivative of a constant times a function is the constant times the derivative of the function. Using derivative notation, we can write this as    "
+},
+{
+  "id": "sub-techniques-differentiation-6",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-6",
+  "type": "Example",
+  "number": "111",
+  "title": "",
+  "body": "  Find if                             Rewrite as . Then            "
+},
+{
+  "id": "thm-sum-difference-rule",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-sum-difference-rule",
+  "type": "Theorem",
+  "number": "112",
+  "title": "The Sum-Difference Rule.",
+  "body": " The Sum-Difference Rule   The derivative of a sum is the sum of the derivatives; The derivative of a difference is the difference of the derivatives;    "
+},
+{
+  "id": "sub-techniques-differentiation-9",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-9",
+  "type": "Example",
+  "number": "113",
+  "title": "",
+  "body": "  Let be the Laurent polynomial (with negative exponents, in this case)     "
+},
+{
+  "id": "sub-techniques-differentiation-10",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-10",
+  "type": "Remark",
+  "number": "114",
+  "title": "",
+  "body": " In this section, you can write negative powers as fractions, if you like: (e.g., )  "
+},
+{
+  "id": "sub-techniques-differentiation-11",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-11",
+  "type": "Checkpoint",
+  "number": "115",
+  "title": "",
+  "body": "  Find if                             Rewrite as . Then the derivative is , or .    Rewrite as . Then the derivative is , or .      "
+},
+{
+  "id": "sub-techniques-differentiation-12",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-12",
+  "type": "Checkpoint",
+  "number": "116",
+  "title": "",
+  "body": "  Find the equation of the tangent line to the graph of at .    First, we rewrite the function using fractional exponents: Next, we find the derivative to determine the slope : To find the slope at the point , we evaluate the derivative at : Using the point-slope form with the point : Simplifying to slope-intercept form:    "
+},
+{
+  "id": "sub-techniques-differentiation-13",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-13",
+  "type": "Checkpoint",
+  "number": "117",
+  "title": "",
+  "body": "  Find the points on the graph of at which the tangent line is horizontal.    A tangent line is horizontal when the derivative (slope) is equal to zero. First, we find the derivative: Setting the derivative equal to zero and solving for : This gives critical values of and .  Now, we find the corresponding -coordinates by plugging these values back into the original function:   At : . So, the point is .    At : . So, the point is .   The points where the tangent line is horizontal are and .   "
+},
+{
+  "id": "sub-techniques-differentiation-14",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#sub-techniques-differentiation-14",
+  "type": "Checkpoint",
+  "number": "118",
+  "title": "",
+  "body": "  Find the points on the graph of at which the tangent line has slope .    The slope of the tangent line is given by the derivative. First, we find : We set the derivative equal to the desired slope, , and solve for : This gives us and .  Now, find the corresponding -coordinates from the original function:   If : . Point: .    If : . Point: .   The points where the tangent line has slope are and .   "
+},
+{
+  "id": "thm-product-rule",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-product-rule",
+  "type": "Theorem",
+  "number": "119",
+  "title": "The Product Rule.",
+  "body": " The Product Rule   Suppose that , where is the first factor and is the second factor. Then The derivative of a product is the first factor times the derivative of the second factor, plus the derivative of the first factor times the second factor.   "
+},
+{
+  "id": "subsec-ProductandQuotientRules-5",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-5",
+  "type": "Example",
+  "number": "120",
+  "title": "",
+  "body": "  Given , find .     Identify and : , where and     Find the derivatives and of the factors:     Apply the product formula:       Of course, this can be expanded and simplified to obtain a polynomial representation:    "
+},
+{
+  "id": "note-sin-x",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#note-sin-x",
+  "type": "Note",
+  "number": "121",
+  "title": "Note on the derivative of sine.",
+  "body": " Note on the derivative of sine  Now for an example involving trigonometric functions. All we need is one fact: the derivative of is (that is, ).  "
+},
+{
+  "id": "subsec-ProductandQuotientRules-7",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-7",
+  "type": "Example",
+  "number": "122",
+  "title": "",
+  "body": "  Given , find .     Identify and : , where and     Find the derivatives and of the factors:     Apply the product formula:        "
+},
+{
+  "id": "subsec-ProductandQuotientRules-9",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-9",
+  "type": "Checkpoint",
+  "number": "123",
+  "title": "",
+  "body": "                                                 "
+},
+{
+  "id": "thm-quotient-rule",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#thm-quotient-rule",
+  "type": "Theorem",
+  "number": "124",
+  "title": "The Quotient Rule.",
+  "body": " The Quotient Rule   Suppose that , where is the numerator and is the denominator . Then The derivative of a quotient is the denominator times the derivative of the numerator, minus the numerator times the derivative of the denominator, all divided by the denominator squared.   "
+},
+{
+  "id": "subsec-ProductandQuotientRules-12",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-12",
+  "type": "Example",
+  "number": "125",
+  "title": "",
+  "body": "  Given , find .     Identify and : , where and     Find the derivatives and of the numerator and denominator:     Apply the quotient formula:       Of course, this can be expanded and terms collected to obtain a rational representation:    "
+},
+{
+  "id": "subsec-ProductandQuotientRules-13",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-13",
+  "type": "Example",
+  "number": "126",
+  "title": "",
+  "body": "  Given , find .    Using the Quotient Rule with and , and recalling the fact ( ) that we have and . Thus,    "
+},
+{
+  "id": "subsec-ProductandQuotientRules-14",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-14",
+  "type": "Remark",
+  "number": "127",
+  "title": "",
+  "body": " To avoid ambiguity when multiplying a trigonometric function by a power function, always write the power function first. For example, write instead of . This prevents the common mistake of misinterpreting the expression as .  "
+},
+{
+  "id": "subsec-ProductandQuotientRules-16",
+  "level": "2",
+  "url": "sec-differentiation-rules.html#subsec-ProductandQuotientRules-16",
+  "type": "Checkpoint",
+  "number": "128",
+  "title": "",
+  "body": "        Applying the Quotient Rule:            Applying the Quotient Rule:            Simplify the fraction using laws of exponents before differentiating.    First simplify: . Then the derivative is .           Simplify to . The derivative is .           Using the Quotient Rule:     "
+},
+{
+  "id": "sec-trig-derivatives",
+  "level": "1",
+  "url": "sec-trig-derivatives.html",
+  "type": "Section",
+  "number": "",
+  "title": "Derivatives of the Trigonometric Functions",
+  "body": " Derivatives of the Trigonometric Functions  In this section, we will find the derivatives of the six trigonometric functions: sine, cosine, tangent, cotangent, secant, and cosecant. We will use the limit definition of the derivative to find these derivatives.                We will start with the sine function. The derivative of sine is given by:   Using the sine addition formula, we can rewrite the numerator as: This simplifies to:   Now, we can substitute this back into the limit definition: We can split this limit into two separate limits:   We know that and , so we can simplify this to:   Next, we will find the derivative of the cosine function. The derivative of cosine is given by:   Using the cosine addition formula, we can rewrite the numerator as: This simplifies to:   Now, we can substitute this back into the limit definition: We can split this limit into two separate limits:   We know that and , so we can simplify this to:   We can use similar techniques to find the derivatives of the other four trigonometric functions. The results are:       Derivatives of the Trigonometric Functions          Find the first three derivatives of .    According to the trigonometric table for derivatives and the power rule , we have:      Higher-order derivatives can be written using several notations:   Order  Prime Notation  Derivatives Notation    1st      2nd      3rd      th          Find the first ten derivatives of and determine the pattern for the th derivative.    We calculate the first few derivatives to identify the repeating cycle:   Notice that the derivatives repeat every four steps. Continuing this pattern:   The th derivative follows a cycle of four:  if (remainder 1 when divided by 4)  if (remainder 2 when divided by 4)  if (remainder 3 when divided by 4)  if (remainder 0 when divided by 4)        Find the derivative of .    We can solve this using the Product Rule where and . First, find the derivatives of the parts:   Now apply the Product Rule :   Using the double-angle identity , we can simplify the result:       Find if .    Using the Quotient Rule with and : Using the Pythagorean identity :       Find if .    Using the Product Rule with and :       Find if .    First, we can simplify the expression: Now, taking the derivative:       Find the slope of the tangent line to the graph of at the point with -coordinate . For what values of is the tangent line horizontal?    The slope of the tangent line is given by the derivative: Evaluating at :   The tangent line is horizontal when the derivative is zero: This occurs at for any integer .     Normal Line   If is a differentiable function, then the normal line at a point on the graph of is the line through that is perpendicular to the tangent line.  If , then the slope of the normal line is .  If , then the tangent line is horizontal and the normal line is vertical; moreover, the equation of the normal line is .      Find an equation of the normal line to the graph of at the point .   The graph of with its tangent and normal lines at .   Graph of tangent function in blue, tangent line in red, and normal line in green intersecting at (pi\/4, 1).       First, we find the slope of the tangent line (red) by taking the derivative of : Evaluating at to find the tangent slope :   The slope of the normal line (green) is the negative reciprocal of the tangent slope:   Using the point-slope form with and :        Find the derivative of each of the following functions.                 Simplify using the identity before differentiating.    Simplify: . Then .         By the Product Rule:          Write in terms of sine and cosine.    Simplify: . Then .         By the Quotient Rule:          By the Quotient Rule:          Simplify: . Then .         Use the even\/odd identities: and .    Rewrite: . Then .         Expanding gives . Simplifying gives . Then .     "
+},
+{
+  "id": "thm-trig-limits-basic",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#thm-trig-limits-basic",
+  "type": "Theorem",
+  "number": "129",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "thm-trig-limits-special",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#thm-trig-limits-special",
+  "type": "Theorem",
+  "number": "130",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "def-trig-derivatives",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#def-trig-derivatives",
+  "type": "Definition",
+  "number": "131",
+  "title": "Derivatives of the Trigonometric Functions.",
+  "body": " Derivatives of the Trigonometric Functions       "
+},
+{
+  "id": "sec-trig-derivatives-16",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-16",
+  "type": "Example",
+  "number": "132",
+  "title": "",
+  "body": "  Find the first three derivatives of .    According to the trigonometric table for derivatives and the power rule , we have:    "
+},
+{
+  "id": "sec-trig-derivatives-17",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-17",
+  "type": "Remark",
+  "number": "133",
+  "title": "",
+  "body": " Higher-order derivatives can be written using several notations:   Order  Prime Notation  Derivatives Notation    1st      2nd      3rd      th       "
+},
+{
+  "id": "sec-trig-derivatives-18",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-18",
+  "type": "Example",
+  "number": "134",
+  "title": "",
+  "body": "  Find the first ten derivatives of and determine the pattern for the th derivative.    We calculate the first few derivatives to identify the repeating cycle:   Notice that the derivatives repeat every four steps. Continuing this pattern:   The th derivative follows a cycle of four:  if (remainder 1 when divided by 4)  if (remainder 2 when divided by 4)  if (remainder 3 when divided by 4)  if (remainder 0 when divided by 4)     "
+},
+{
+  "id": "sec-trig-derivatives-19",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-19",
+  "type": "Example",
+  "number": "135",
+  "title": "",
+  "body": "  Find the derivative of .    We can solve this using the Product Rule where and . First, find the derivatives of the parts:   Now apply the Product Rule :   Using the double-angle identity , we can simplify the result:    "
+},
+{
+  "id": "sec-trig-derivatives-20",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-20",
+  "type": "Checkpoint",
+  "number": "136",
+  "title": "",
+  "body": "  Find if .    Using the Quotient Rule with and : Using the Pythagorean identity :    "
+},
+{
+  "id": "sec-trig-derivatives-21",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-21",
+  "type": "Checkpoint",
+  "number": "137",
+  "title": "",
+  "body": "  Find if .    Using the Product Rule with and :    "
+},
+{
+  "id": "sec-trig-derivatives-22",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-22",
+  "type": "Checkpoint",
+  "number": "138",
+  "title": "",
+  "body": "  Find if .    First, we can simplify the expression: Now, taking the derivative:    "
+},
+{
+  "id": "sec-trig-derivatives-23",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-23",
+  "type": "Checkpoint",
+  "number": "139",
+  "title": "",
+  "body": "  Find the slope of the tangent line to the graph of at the point with -coordinate . For what values of is the tangent line horizontal?    The slope of the tangent line is given by the derivative: Evaluating at :   The tangent line is horizontal when the derivative is zero: This occurs at for any integer .   "
+},
+{
+  "id": "def-normal-line",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#def-normal-line",
+  "type": "Definition",
+  "number": "140",
+  "title": "Normal Line.",
+  "body": " Normal Line   If is a differentiable function, then the normal line at a point on the graph of is the line through that is perpendicular to the tangent line.  If , then the slope of the normal line is .  If , then the tangent line is horizontal and the normal line is vertical; moreover, the equation of the normal line is .   "
+},
+{
+  "id": "sec-trig-derivatives-25",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-25",
+  "type": "Example",
+  "number": "141",
+  "title": "",
+  "body": "  Find an equation of the normal line to the graph of at the point .   The graph of with its tangent and normal lines at .   Graph of tangent function in blue, tangent line in red, and normal line in green intersecting at (pi\/4, 1).       First, we find the slope of the tangent line (red) by taking the derivative of : Evaluating at to find the tangent slope :   The slope of the normal line (green) is the negative reciprocal of the tangent slope:   Using the point-slope form with and :    "
+},
+{
+  "id": "sec-trig-derivatives-26",
+  "level": "2",
+  "url": "sec-trig-derivatives.html#sec-trig-derivatives-26",
+  "type": "Checkpoint",
+  "number": "143",
+  "title": "",
+  "body": "   Find the derivative of each of the following functions.                 Simplify using the identity before differentiating.    Simplify: . Then .         By the Product Rule:          Write in terms of sine and cosine.    Simplify: . Then .         By the Quotient Rule:          By the Quotient Rule:          Simplify: . Then .         Use the even\/odd identities: and .    Rewrite: . Then .         Expanding gives . Simplifying gives . Then .    "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",

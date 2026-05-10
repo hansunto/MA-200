@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="notes-Limits-and-Continuity-chapter-exercises">
-  <title>Limits and Continuity - Chapter Exercises</title>
+<section xml:id="notes-Limits-and-Derivatives-chapter-exercises">
+  <title>Limits and Derivatives - Chapter Exercises</title>
 
   <introduction>
     <p>
@@ -10,6 +10,9 @@
      continuity analysis, and applications of these concepts in different contexts.  
     </p>
   </introduction>
+
+<exercises workspace="Limits and Derivatives Exercises">
+  
 
   <exercise>
     <title>Graphical Limit Analysis</title>
@@ -107,28 +110,144 @@
     </solution>
   </exercise>
 
-  <exercise>
-    <title>Mixed Limit Evaluations</title>
-    <statement>
-      <p>Find the following limits if they exist:</p>
+ <exercise>
+  <title>Mixed Limit Evaluations</title>
+  <statement>
+    <p>Find the following limits if they exist:</p>
+    <ol marker="a.">
+      <li><p><m>\lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}</m></p></li>
+      <li><p><m>\lim_{x \to -\infty} \frac{3x^2 - 2x + 5}{2x^2 + 3x - 5}</m></p></li>
+      <li><p><m>\lim_{x \to 3^-} \frac{5}{x - 3}</m></p></li>
+      <li><p><m>\lim_{h \to 0} \frac{\sqrt{5h+1}-1}{h}</m></p></li>
+      <li><p><m>\lim_{x \to 0} \frac{\sin 3x}{4x}</m></p></li>
+    </ol>
+  </statement>
+  <solution>
+    <p>
       <ol marker="a.">
-        <li><p><m>\lim_{x \to 4} \frac{\sqrt{x} - 2}{x - 4}</m></p></li>
-        <li><p><m>\lim_{x \to -\infty} \frac{3x^2 - 2x + 5}{2x^2 + 3x - 5}</m></p></li>
-        <li><p><m>\lim_{x \to 3^-} \frac{5}{x - 3}</m></p></li>
+        <li><p>Multiply by conjugate: <m>\lim_{x \to 4} \frac{\sqrt{x}-2}{(\sqrt{x}-2)(\sqrt{x}+2)} = \lim_{x \to 4} \frac{1}{\sqrt{x}+2} = \frac{1}{4}</m>.</p></li>
+        <li><p>Highest power of <m>x</m> is <m>x^2</m>. The limit is the ratio of coefficients: <m>3/2</m>.</p></li>
+        <li><p>As <m>x \to 3</m> from the left, <m>x - 3</m> is a very small negative number. Thus, the limit is <m>-\infty</m>.</p></li>
+        <li>
+          <p>
+            Multiply by the conjugate <m>\sqrt{5h+1}+1</m>:
+            <me>\lim_{h\to 0} \frac{5h+1-1}{h(\sqrt{5h+1}+1)} = \lim_{h\to 0} \frac{5}{\sqrt{5h+1}+1} = \frac{5}{2}</me>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the special limit <m>\lim_{\theta \to 0} \frac{\sin \theta}{\theta} = 1</m>:
+            <me>\lim_{x\to 0} \frac{\sin 3x}{3x} \cdot \frac{3}{4} = 1 \cdot \frac{3}{4} = \frac{3}{4}</me>.
+          </p>
+        </li>
       </ol>
-    </statement>
-    <solution>
-      <p>
-        <ol marker="a.">
-          <li><p>Multiply by conjugate: <m>\lim_{x \to 4} \frac{\sqrt{x}-2}{(\sqrt{x}-2)(\sqrt{x}+2)} = \lim_{x \to 4} \frac{1}{\sqrt{x}+2} = \frac{1}{4}</m>.</p></li>
-          <li><p>Highest power of <m>x</m> is <m>x^2</m>. The limit is the ratio of coefficients: <m>3/2</m>.</p></li>
-          <li><p>As <m>x \to 3</m> from the left, <m>x - 3</m> is a very small negative number. Thus, the limit is <m>-\infty</m>.</p></li>
-        </ol>
-      </p>
-    </solution>
-  </exercise>
+    </p>
+  </solution>
+</exercise>
 
-  <exercise>
+<exercise>
+  <statement>
+    <p>Evaluate the following limits:</p>
+    <ol marker="a.">
+      <li>
+        <p>
+          <m>\lim_{x \to -\infty} \frac{4x^2-1}{2x^2-7x+2}</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\lim_{x \to -\infty} \frac{4x-1}{2x^4-7x+2}</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\lim_{x \to -\infty} \frac{4x^5-1}{2x^2-7x+2}</m>
+        </p>
+      </li>
+    </ol>
+  </statement>
+  <solution>
+    <ol marker="a.">
+      <li>
+        <p>
+          The degrees of the numerator and denominator are the same (both 2). The limit is the ratio of the leading coefficients:
+          <me>\frac{4}{2} = 2</me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The degree of the denominator (4) is greater than the degree of the numerator (1). Therefore:
+          <me>\lim_{x \to -\infty} \frac{4x-1}{2x^4-7x+2} = 0</me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The degree of the numerator (5) is greater than the degree of the denominator (2). Examining the leading terms:
+          <me>\lim_{x \to -\infty} \frac{4x^5}{2x^2} = \lim_{x \to -\infty} 2x^3 = -\infty</me>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Limit from Existing Derivative Definition</title>
+  <statement>
+    <p>If <m>\displaystyle \lim_{x \to 2} \frac{f(x) - 5}{x - 2} = 4</m>, find <m>\lim_{x \to 2} f(x)</m>.</p>
+  </statement>
+  <solution>
+    <p>
+      Since the limit exists and the denominator approaches <m>0</m>, the numerator must also approach <m>0</m> (otherwise the limit would be infinite).
+      Therefore, <m>\lim_{x \to 2} (f(x) - 5) = 0</m>, which implies <m>\lim_{x \to 2} f(x) = 5</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find <m>\lim_{x \to -\infty} f(x)</m> and <m>\lim_{x \to \infty} f(x)</m> if 
+      <me>f(x) = \frac{\sqrt{9x^2+100x-2}}{4x+500}</me>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the limits at infinity, we identify the dominant terms. In the numerator, <m>\sqrt{9x^2} = 3|x|</m> dominates. In the denominator, <m>4x</m> dominates.
+    </p>
+    <p>
+      For <m>x \to \infty</m>, <m>|x| = x</m>:
+      <me>\lim_{x \to \infty} \frac{\sqrt{9x^2}}{4x} = \lim_{x \to \infty} \frac{3x}{4x} = \frac{3}{4}</me>.
+    </p>
+    <p>
+      For <m>x \to -\infty</m>, <m>|x| = -x</m>:
+      <me>\lim_{x \to -\infty} \frac{\sqrt{9x^2}}{4x} = \lim_{x \to -\infty} \frac{3(-x)}{4x} = -\frac{3}{4}</me>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find <m>\lim_{x \to \infty} (\sqrt{x^2+1} - \sqrt{x^2-1})</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To evaluate this limit, we multiply by the conjugate:
+      <me>
+        \lim_{x \to \infty} \frac{(\sqrt{x^2+1} - \sqrt{x^2-1})(\sqrt{x^2+1} + \sqrt{x^2-1})}{\sqrt{x^2+1} + \sqrt{x^2-1}}
+      </me>
+      Simplifying the numerator:
+      <me>
+        \lim_{x \to \infty} \frac{(x^2+1) - (x^2-1)}{\sqrt{x^2+1} + \sqrt{x^2-1}} = \lim_{x \to \infty} \frac{2}{\sqrt{x^2+1} + \sqrt{x^2-1}}
+      </me>
+      As <m>x \to \infty</m>, the denominator grows without bound while the numerator remains constant. Therefore:
+      <me>\lim_{x \to \infty} (\sqrt{x^2+1} - \sqrt{x^2-1}) = 0</me>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
     <title>Piecewise Continuity</title>
     <statement>
       <p>
@@ -143,9 +262,9 @@
         Set them equal: <m>4b = -2 \implies b = -1/2</m>.
       </p>
     </solution>
-  </exercise>
+</exercise>
 
-  <exercise>
+<exercise>
     <title>Kinematics: Velocity and Acceleration</title>
     <statement>
       <p>
@@ -160,26 +279,69 @@
         </ol>
       </p>
     </solution>
-  </exercise>
+</exercise>
+
 <exercise>
-  <title>Limit from Existing Derivative Definition</title>
   <statement>
-    <p>If <m>\displaystyle \lim_{x \to 2} \frac{f(x) - 5}{x - 2} = 4</m>, find <m>\lim_{x \to 2} f(x)</m>.</p>
+    <p>
+      A function is given by <m>f(x)=2x^2+3</m>. Find:
+    </p>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            <m>f(a)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f(a+h)</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\frac{f(a+h)-f(a)}{h}</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Simplify the fraction and take the limit <m>h \to 0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
   </statement>
   <solution>
     <p>
-      Since the limit exists and the denominator approaches <m>0</m>, the numerator must also approach <m>0</m> (otherwise the limit would be infinite).
-      Therefore, <m>\lim_{x \to 2} (f(x) - 5) = 0</m>, which implies <m>\lim_{x \to 2} f(x) = 5</m>.
+      <ol marker="a">
+        <li>
+          <p>
+            <m>f(a) = 2a^2 + 3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f(a+h) = 2(a+h)^2 + 3 = 2(a^2 + 2ah + h^2) + 3 = 2a^2 + 4ah + 2h^2 + 3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <me>\frac{f(a+h)-f(a)}{h} = \frac{(2a^2 + 4ah + 2h^2 + 3) - (2a^2 + 3)}{h}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Simplifying the numerator:
+            <me>\frac{4ah + 2h^2}{h} = \frac{h(4a + 2h)}{h} = 4a + 2h</me>
+            Taking the limit:
+            <me>\lim_{h \to 0} (4a + 2h) = 4a</me>
+          </p>
+        </li>
+      </ol>
     </p>
   </solution>
 </exercise>
 
-
-
-
-
-
-
-
+</exercises>
 
 </section>

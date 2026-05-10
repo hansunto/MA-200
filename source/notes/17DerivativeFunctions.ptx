@@ -19,12 +19,12 @@
     </p>
   </statement>
 </definition>
-<p>
+<!--<p>
   If <m>y = f(x)</m>, we also use the <term>Leibniz notation</term> for the derivative:
   <me>
     f'(x) = \frac{dy}{dx}
   </me>
-</p>
+</p>-->
 <example xml:id="ex-derivative-linear">
   <statement>
     <p>
@@ -430,7 +430,24 @@
     </p>
   </proof>
 </theorem>
+<remark>
+  <p> 
+    Note that the <term>converse</term> is not true. See the example (<xref ref="ex-abs-not-differentiable"/>).
+  </p>
+</remark>
 
+<observation>
+  <!--<usage><m>\frac{dy}{dx}</m></usage>-->
+  <description>
+    <p>
+      When <m>y</m> is a function of <m>x</m>, <m>y=f(x)</m>, we will also designate the derivative,
+      <me>f'(x) = \frac{d}{dx}f(x) = \frac{dy}{dx}</me>,
+      reads as <q>the derivative of <m>y</m> with respect to <m>x</m>.</q>
+      The value of <m>dy/dx</m> when <m>x=a</m> can be denoted by
+      <me>\left.\frac{dy}{dx}\right|_{x=a} = f'(a)</me>.
+    </p>
+  </description>
+</observation>
 
 
   </section>

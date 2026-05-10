@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-derivative-rate-change" type="notes">
+  <title>The Derivative as a Rate of Change</title>
+    <p>
+        In the previous section, we defined the derivative of a function at a point as the limit of the difference quotient. 
+        In this section, we will explore how the derivative can be interpreted as a rate of change. 
+    </p>
+    <p>
+        The derivative of a function at a point gives us the instantaneous rate of change of the function at that point. 
+        This means that it tells us how fast the function is changing at that specific point. 
+        For example, if we have a function that represents the position of an object over time, the derivative of that function will give us the velocity of the object at any given time. 
+    </p>
+    <definition xml:id="def-tan-line">
+  <title>Tangent Line</title>
+  <statement>
+    <p>
+      The <term>tangent line</term> to <m>y=f(x)</m> at <m>(a,f(a))</m> is the line through <m>(a,f(a))</m> whose <term>slope</term> is <m>f'(a)</m>, the derivative of <m>f</m> at <m>a</m>.
+    </p>
+  </statement>
+</definition>
+
+<p>
+  A tangent line at a point of a curve may be viewed as a geometric approximation to the curve itself.
+  If the curve is the graph of a function <m>y=f(x)</m>, then we can think of the linear function defining the tangent line as an approximating function for <m>f</m>.
+  If we call this linear function <m>L(x)</m>, then the tangent line is <m>y=L(x)</m>.
+</p>
+
+<p>
+  Suppose the point <m>P</m> lies on the graph of <m>y=f(x)</m>, where <m>f</m> is a smooth function (a function with a nice continuous derivative).
+  We would like to find the equation of the tangent line <m>y=L(x)</m> at the point <m>P</m>.
+  Suppose the coordinates of <m>P</m> are
+  <me>P = (x_0, y_0)</me>
+  Since <m>P</m> lies on the graph of <m>y = f(x)</m>, we know that
+  <me>y_0 = f(x_0) \quad \text{and} \quad P = (x_0, f(x_0))</me>
+  The characteristic property of the tangent line at <m>P</m> is that the slope of the line is equal to the slope of the curve <m>y=f(x)</m> at <m>P</m>, which is the derivative of <m>f(x)</m> at <m>x=x_0</m>.
+</p>
+
+<p>
+  In other words, if the slope of the tangent line is <m>m</m>, and the equation is <m>y=mx+b</m>, then <m>m = f'(x_0)</m>.
+  Also, <m>P = (x_0, f(x_0))</m> lies on the line.
+  These two pieces of information allow us to use the <q>point-slope</q> formula to find the equation of the tangent.
+  Equivalently, we could simply plug the coordinates of <m>P</m> into the equation <m>y=mx+b</m> and solve for <m>b</m>.
+  Formally, we can say the tangent line equation is
+  <me>y = f(x_0) + f'(x_0)(x - x_0)</me>.
+</p>
+
+<example>
+  <statement>
+    <p>
+      Find the equation for the line tangent to <m>f(x) = x^2</m> at the point <m>(1,1)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First we need to calculate <m>f'(1)</m>:
+      <me>f'(1) = \lim_{h\to 0}\frac{ f(1+h) - f(1)}{h} = \lim_{h\to 0}\frac{(1+h)^2 - 1^2}{h} = \lim_{h\to 0} (h + 2)</me>
+      Thus, <m>f'(1) = 2</m>. Hence, the slope of the tangent line is <m>2</m>.
+    </p>
+    <p>
+      Now we will use this to find the equation of the tangent. Since the line goes through the point <m>(1,1)</m>, <m>y = mx + b</m> becomes <m>1 = 2(1) + b</m>, so <m>b = -1</m>, and the equation of the tangent line is <m>y=2x-1</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise>
+  <statement>
+    <p>
+      Find an equation of the tangent line to the parabola <m>y=x^2-5x+6</m> at <m>x=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, find the <m>y</m>-coordinate of the point. When <m>x=2</m>:
+      <me>y = (2)^2 - 5(2) + 6 = 4 - 10 + 6 = 0</me>
+      So the point is <m>(2, 0)</m>.
+    </p>
+    <p>
+      Next, find the derivative to get the slope <m>m</m>:
+      <me>f'(x) = 2x - 5</me>
+      At <m>x=2</m>, the slope is <m>m = f'(2) = 2(2) - 5 = -1</m>.
+    </p>
+    <p>
+      Using the point-slope formula <m>y - y_0 = m(x - x_0)</m>:
+      <me>y - 0 = -1(x - 2)</me>
+      The equation of the tangent line is <m>y = -x + 2</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      For <m>f(x)=\dfrac{3}{x}</m>:
+    </p>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            Find <m>f'(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Find an equation of the tangent line to the curve at the point <m>(1,3)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            Using the definition of the derivative:
+            <me>f'(x) = \lim_{h \to 0} \frac{\frac{3}{x+h} - \frac{3}{x}}{h}</me>
+            Finding a common denominator in the numerator:
+            <me>f'(x) = \lim_{h \to 0} \frac{3x - 3(x+h)}{x(x+h)h} = \lim_{h \to 0} \frac{-3h}{x(x+h)h}</me>
+            Simplifying the <m>h</m>:
+            <me>f'(x) = \lim_{h \to 0} \frac{-3}{x(x+h)} = -\frac{3}{x^2}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            First, find the slope at <m>x=1</m> using the result from part (a):
+            <me>m = f'(1) = -\frac{3}{(1)^2} = -3</me>
+            Using the point <m>(1,3)</m> in the point-slope form <m>y - y_0 = m(x - x_0)</m>:
+            <me>y - 3 = -3(x - 1)</me>
+            Simplifying to slope-intercept form:
+            <me>y = -3x + 6</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<p>
+  Suppose an object moves along a straight line according to an equation of motion <m>s(t)</m>, where <m>s</m> is the displacement of the object from the origin at time <m>t</m>.
+  The function <m>s</m> that describes the motion is called the <term>position function</term> of the object.
+  The average velocity over the interval of time <m>[a, a+h]</m> is
+  <me>\text{Average Velocity} = \frac{\text{Difference in distance}}{\text{Difference in time}} = \frac{s(t+h)-s(t)}{h}</me>.
+  Suppose we want to compute the average velocity for the shorter time interval <m>[a, a+h]</m> as <m>h \to 0</m>.
+</p>
+
+<assemblage xml:id="formula-velocity">
+  <title>Instantaneous Velocity</title>
+  <p>
+    We define the <term>velocity</term> (or <term>instantaneous velocity</term>) <m>v(a)</m> at time <m>t=a</m> as:
+    <me>v(a) = \lim_{h \to 0} \frac{s(a+h) - s(a)}{h} = s'(a)</me>
+  </p>
+</assemblage>
+
+<example>
+  <statement>
+    <p>
+      Suppose that a ball is dropped from a tower which is 450 m above the ground.
+      <ol marker="a">
+        <li>
+          <p>
+            What is the velocity of the ball after 5 seconds?
+          </p>
+        </li>
+        <li>
+          <p>
+            How fast is the ball traveling when it hits the ground?
+          </p>
+        </li>
+      </ol>
+    </p>
+    <figure xml:id="fig-ball-drop">
+  <caption>A ball dropping from a tower of height 450m.</caption>
+  <image width="40%" xml:id="img-ball-drop">
+    <latex-image>
+      \begin{tikzpicture}[scale=0.8]
+        % Draw Ground
+        \draw[thick] (-1,0) -- (3,0);
+        \foreach \x in {-0.8,-0.4,...,2.8}
+          \draw (\x,0) -- (\x-0.2,-0.2);
+
+        % Draw Tower
+        \draw[fill=gray!20] (0,0) rectangle (0.5,5);
+        \node[left] at (0,5) {450 m};
+
+        % Path of ball
+        \draw[dashed, blue!50, ->] (1.5,5) -- (1.5,0.5);
+        
+        % The Ball
+        \draw[fill=red] (1.5,5) circle (0.15cm);
+        \node[right] at (1.6,5) {$s(0)=450$};
+        
+        % Velocity vector
+        \draw[ultra thick, -latex, red] (1.5,2.5) -- (1.5,1.5);
+        \node[right] at (1.5,2) {$v(t)$};
+
+        % Axis
+        \draw[->] (-1.5,0) -- (-1.5,5.5) node[above] {$s$};
+        \draw (-1.6,5) -- (-1.4,5);
+        \draw (-1.6,0) -- (-1.4,0);
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+  </statement>
+  <answer>
+    <p>
+      The equation of motion is <m>s(t) = -4.9t^2 + 450</m>. 
+      The velocity at 5 seconds is <m>v(5) = -49 \text{ m/s}</m>, and the speed when it hits the ground is approximately <m>94 \text{ m/s}</m>.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      Using the position function <m>s(t) = -4.9t^2 + 450</m>, we first find the velocity function by taking the derivative:
+      <me>v(t) = s'(t) = -9.8t</me>
+    </p>
+    <p>
+      <ol marker="a">
+        <li>
+          <p>
+            After 5 seconds, the velocity is:
+            <me>v(5) = -9.8(5) = -49 \text{ m/s}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            The ball hits the ground when <m>s(t) = 0</m>:
+            <me>-4.9t^2 + 450 = 0 \implies t^2 = \frac{450}{4.9} \approx 91.84</me>
+            So, <m>t \approx 9.58 \text{ seconds}</m>. The velocity at this time is:
+            <me>v(9.58) = -9.8(9.58) \approx -93.9 \text{ m/s}</me>
+            The speed is the magnitude of velocity, approximately <m>94 \text{ m/s}</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</example>
+
+<exercise>
+  <statement>
+    <p>
+      A sandbag is dropped from a hot-air balloon that is hovering at a height of 512 feet above the ground.
+      If air resistance is discarded, then the distance <m>s(t)</m> from the ground to the sandbag after <m>t</m> seconds is given by
+      <me>s(t) = -16t^2 + 512</me>.
+    </p>
+    <figure xml:id="fig-balloon-sandbag">
+      <caption>A sandbag falling from a balloon.</caption>
+      <image width="35%" xml:id="img-balloon-sandbag">
+        <latex-image>
+          \begin{tikzpicture}
+            % Balloon
+            \draw[fill=orange!30] (0,4) ellipse (0.6 and 0.8);
+            \draw[fill=brown] (-0.2,3) rectangle (0.2,3.3);
+            \draw (0.2,3.3) -- (0.4,3.6);
+            \draw (-0.2,3.3) -- (-0.4,3.6);
+            
+            % Sandbag
+            \draw[fill=brown!60] (0,2.5) circle (0.1);
+            \draw[dashed, ->] (0,2.4) -- (0,0.5);
+            
+            % Ground and height
+            \draw[thick] (-1,0) -- (1,0);
+            \draw[->] (-0.8,0) -- (-0.8,4) node[midway, left] {512 ft};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      Find the velocity of the sandbag at <m>t=a</m> and <m>t=2</m> seconds.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the velocity, we take the derivative of the position function <m>s(t)</m>:
+      <me>v(t) = s'(t) = \frac{d}{dt}(-16t^2 + 512) = -32t</me>.
+    </p>
+    <p>
+      At time <m>t=a</m>, the velocity is:
+      <me>v(a) = -32a \text{ ft/sec}</me>.
+    </p>
+    <p>
+      At time <m>t=2</m> seconds, the velocity is:
+      <me>v(2) = -32(2) = -64 \text{ ft/sec}</me>.
+    </p>
+  </solution>
+</exercise>
+
+<definition xml:id="def-rate-of-change">
+  <title>Rate of Change</title>
+  <statement>
+    <p>
+      Let <m>y=f(x)</m> where <m>f</m> is defined on an open interval containing <m>a</m>.
+      <ol marker="1">
+        <li>
+          <p>
+            The <term>average rate of change</term> of <m>y=f(x)</m> with respect to <m>x</m> on the interval <m>[a,a+h]</m> is
+            <me>y_{av} = \frac{f(a+h)-f(a)}{h}</me>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The <term>instantaneous rate of change</term> of <m>y=f(x)</m> with respect to <m>x</m> at <m>a</m> is
+            <me>y_a = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h}</me>,
+            if the limit exists.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</definition>
+
+<definition xml:id="def-derivative-rate-of-change">
+  <statement>
+    <p>
+      The derivative <m>f'(a)</m> is the <term>instantaneous rate of change</term> of <m>y=f(x)</m> with respect to <m>x</m> at <m>x=a</m>.
+    </p>
+  </statement>
+</definition>
+
+<p>
+  If an object is thrown into the air from a given height (in feet) <m>h</m>, with an initial upward velocity of <m>v</m>, its height above the ground at the time <m>t</m> is given by the following function:
+  <me>s(t) = \frac{1}{2}gt^2 + vt + h</me>,
+  where <m>g</m> is the gravitational constant <m>-32 \text{ feet/second}^2</m>. This is the acceleration of an object due to gravity near the Earth's surface. Substituting this value for <m>g</m> into the above equation, we obtain:
+  <me>s(t) = -16t^2 + vt + h</me>.
+</p>
+
+<p>
+  To determine <term>how long the object will be in the air</term> (ignoring the effects of friction and wind), set the left hand side of the equation to 0, and solve for <m>t</m> using the quadratic formula. We set this to 0 because <m>s(t)</m> is the height of the object above the ground; when the object reaches the ground, this height is 0. When the quadratic formula is used, two solutions are obtained: one positive and one negative. Since our answer refers to how long the object will be airborne, the positive root should be selected.
+</p>
+
+<p>
+  To determine the <term>velocity of the object at a particular time <m>t_0</m></term>, compute the derivative of <m>s</m> with respect to <m>t</m> and substitute <m>t_0</m> into <m>s'(t)</m>. In this case, it is important to note that the sign of the velocity determines its direction. An object moving upward has positive velocity, and an object going down has a negative velocity. The unit for velocity is feet/second.
+</p>
+
+<exercise>
+  <statement>
+    <p>
+      If an object is thrown into the air from a height of 200 feet at an initial velocity of 20 feet/second, how long is it in the air? Also, what is its velocity at <m>t=3</m> seconds?
+    </p>
+    <figure xml:id="fig-thrown-object">
+      <caption>Path of an object thrown from 200 ft.</caption>
+      <image width="40%" xml:id="img-thrown-object">
+        <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}[scale=0.6]
+            \draw[->] (0,0) -- (5,0) node[right] {$t$};
+            \draw[->] (0,0) -- (0,6) node[above] {$s(t)$};
+            % Parabolic path
+            \draw[domain=0:4.2, smooth, variable=\x, blue, thick] plot ({\x}, {5 + 1.2*\x - 0.4*\x*\x});
+            \draw[fill=black] (0,5) circle (0.1) node[left] {200};
+            \node[below] at (4.2,0) {impact};
+          \end{tikzpicture}
+          ]]>
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+  <solution>
+    <p>
+      Using the position function <m>s(t) = -16t^2 + v_0t + h_0</m> with <m>v_0 = 20</m> and <m>h_0 = 200</m>:
+      <me>s(t) = -16t^2 + 20t + 200</me>
+    </p>
+    <p>
+      To find how long it is in the air, set <m>s(t) = 0</m>:
+      <me>-16t^2 + 20t + 200 = 0 \implies -4(4t^2 - 5t - 50) = 0</me>
+      Using the quadratic formula:
+      <me>t = \frac{5 \pm \sqrt{(-5)^2 - 4(4)(-50)}}{2(4)} = \frac{5 \pm \sqrt{825}}{8}</me>
+      The positive root is <m>t \approx 4.22</m> seconds.
+    </p>
+    <p>
+      To find the velocity at <m>t=3</m>, take the derivative:
+      <me>v(t) = s'(t) = -32t + 20</me>
+      At <m>t=3</m>:
+      <me>v(3) = -32(3) + 20 = -96 + 20 = -76 \text{ ft/sec}</me>
+    </p>
+  </solution>
+</exercise>
+
+
+
+
+
+
+</section>

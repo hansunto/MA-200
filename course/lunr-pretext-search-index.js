@@ -1483,12 +1483,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "The Chain Rule",
-  "body": " The Chain Rule  The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. If we have a function defined as , where and are differentiable functions, then the derivative of with respect to is given by:   In other words, to differentiate a composite function, we first differentiate the outer function with respect to its argument , and then multiply by the derivative of the inner function with respect to .  The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.  For example, if we want to differentiate , we can identify and . Applying the Chain Rule, we get:   The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.       To find the derivative of , we can use the Chain Rule. Let , so that . Then, we have:     "
+  "body": " The Chain Rule   In this section, we will explore the Chain Rule, a fundamental differentiation rule that allows us to find the derivative of composite functions. The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions.   The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. If we have a function defined as , where and are differentiable functions, then the derivative of with respect to is given by:   In other words, to differentiate a composite function, we first differentiate the outer function with respect to its argument , and then multiply by the derivative of the inner function with respect to .  The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.  For example, if we want to differentiate , we can identify and . Applying the Chain Rule, we get:   The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.       To find the derivative of , we can use the Chain Rule. Let , so that . Then, we have:     "
 },
 {
-  "id": "sec-chain-rule-7",
+  "id": "sec-chain-rule-8",
   "level": "2",
-  "url": "sec-chain-rule.html#sec-chain-rule-7",
+  "url": "sec-chain-rule.html#sec-chain-rule-8",
   "type": "Example",
   "number": "153",
   "title": "",

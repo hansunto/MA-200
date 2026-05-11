@@ -347,24 +347,22 @@
     </p>
     <p>
       The slope of the normal line (green) <m>m_n</m> is the negative reciprocal of the tangent slope:
-      <me>m_n = -\frac{1}{m_t} = -\frac{1}{2}</me>
+      <me>m_n = -\dfrac{1}{m_t} = -\dfrac{1}{2}</me>
     </p>
     <p>
       Using the point-slope form with <m>P(\pi/4, 1)</m> and <m>m_n = -1/2</m>:
-      <me>y - 1 = -\frac{1}{2}\left(x - \frac{\pi}{4}\right)</me>
+      <me>y - 1 = -\dfrac{1}{2}\left(x - \dfrac{\pi}{4}\right)</me>
     </p>
   </solution>
 </example>
 
 <exercise>
-    <task>
-        <statement>
-            <p>
-                Find the derivative of each of the following functions.
-            </p>
-        </statement>
-    </task>
-
+  <introduction>
+    <p>
+      Find the derivative of each of the following functions.
+    </p>
+  </introduction>
+  
   <task>
     <statement>
       <p><m>y=4\cos x</m></p>
@@ -376,14 +374,14 @@
 
   <task>
     <statement>
-      <p><m>r(x) = \frac{1}{\sin x \tan x}</m></p>
+      <p><m>r(x) = \dfrac{1}{\sin x \tan x}</m></p>
     </statement>
     <hint>
-      <p>Simplify using the identity <m>\tan x = \frac{\sin x}{\cos x}</m> before differentiating.</p>
+      <p>Simplify using the identity <m>\tan x = \dfrac{\sin x}{\cos x}</m> before differentiating.</p>
     </hint>
     <solution>
       <p>
-        Simplify: <m>r(x) = \frac{\cos x}{\sin^2 x} = \cot x \csc x</m>. 
+        Simplify: <m>r(x) = \dfrac{\cos x}{\sin^2 x} = \cot x \csc x</m>. 
         Then <m>r'(x) = -\csc x \cot^2 x - \csc^3 x</m>.
       </p>
     </solution>
@@ -410,7 +408,7 @@
     </hint>
     <solution>
       <p>
-        Simplify: <m>g(u) = \sin u \left(\frac{\cos u}{\sin u}\right) = \cos u</m>.
+        Simplify: <m>g(u) = \sin u \left(\dfrac{\cos u}{\sin u}\right) = \cos u</m>.
         Then <m>g'(u) = -\sin u</m>.
       </p>
     </solution>
@@ -418,35 +416,35 @@
 
   <task>
     <statement>
-      <p><m>y=\frac{\tan x}{1+x^2}</m></p>
+      <p><m>y=\dfrac{\tan x}{1+x^2}</m></p>
     </statement>
     <solution>
       <p>
         By the Quotient Rule:
-        <me>y' = \frac{(1+x^2)\sec^2 x - (\tan x)(2x)}{(1+x^2)^2}</me>
+        <me>y' = \dfrac{(1+x^2)\sec^2 x - (\tan x)(2x)}{(1+x^2)^2}</me>
       </p>
     </solution>
   </task>
 
   <task>
     <statement>
-      <p><m>f(x)=\frac{1+\sec x}{1-\sec x}</m></p>
+      <p><m>f(x)=\dfrac{1+\sec x}{1-\sec x}</m></p>
     </statement>
     <solution>
       <p>
         By the Quotient Rule:
-        <me>f'(x) = \frac{(1-\sec x)(\sec x \tan x) - (1+\sec x)(-\sec x \tan x)}{(1-\sec x)^2} = \frac{2\sec x \tan x}{(1-\sec x)^2}</me>
+        <me>f'(x) = \dfrac{(1-\sec x)(\sec x \tan x) - (1+\sec x)(-\sec x \tan x)}{(1-\sec x)^2} = \dfrac{2\sec x \tan x}{(1-\sec x)^2}</me>
       </p>
     </solution>
   </task>
 
   <task>
     <statement>
-      <p><m>k(v)=\frac{\csc v}{\sec v}</m></p>
+      <p><m>k(v)=\dfrac{\csc v}{\sec v}</m></p>
     </statement>
     <solution>
       <p>
-        Simplify: <m>k(v) = \frac{\cos v}{\sin v} = \cot v</m>.
+        Simplify: <m>k(v) = \dfrac{\cos v}{\sin v} = \cot v</m>.
         Then <m>k'(v) = -\csc^2 v</m>.
       </p>
     </solution>

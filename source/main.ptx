@@ -49,6 +49,9 @@
       </introduction>
         <xi:include href="./notes/21DifferentiationRules.ptx"/>
         <xi:include href="./notes/22DerivativesTrigonometricFunctions.ptx"/>
+        <xi:include href="./notes/23DerivativesExpFunctions.ptx"/>
+        <xi:include href="./notes/24ChainRule.ptx"/>
+        <!-- Include lecture notes, activities, and homework related to differentiation rules -->
     </chapter>
 
 

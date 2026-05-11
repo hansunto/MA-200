@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  
+<section xml:id="sec-exp-derivatives">
+  <title>Derivatives of Exponential Functions</title>
+
+  <definition xml:id="def-exponential-function">
+    <title>Exponential Function</title>
+    <statement>
+      <p>
+        The <term>exponential function <m>f</m> with base <m>a</m></term> is defined by
+        <me>f(x)=a^x \quad \text{or} \quad y=a^x</me>
+        where <m>a</m> is a positive constant other than 1 (<m>a \gt 0</m> and <m>a \neq 1</m>) and <m>x</m> is any real number.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In this section, we explore the derivatives of both the natural exponential function and general exponential functions. The natural exponential function, <m>e^x</m>, is unique because it is its own derivative:
+    <me>\frac{d}{dx} e^x = e^x.</me>
+  </p>
+
+  <p>
+    For a general exponential function <m>a^x</m> (where <m>a \gt 0</m> and <m>a \neq 1</m>), the derivative involves a scaling factor of the natural logarithm of the base:
+    <me>\frac{d}{dx} a^x = a^x \ln(a).</me>
+  </p>
+
+  <p>
+    This formula shows that the growth rate of an exponential function is proportional to the function itself. The constant of proportionality, <m>\ln(a)</m>, arises from the relationship between general bases and the natural base <m>e</m>.
+  </p>
+
+  <p>
+    Understanding these derivatives is essential for modeling real-world phenomena such as population growth, radioactive decay, and compound interest, where the rate of change depends directly on the current quantity.
+  </p>
+<definition xml:id="def-natural-exponential-function">
+  <title>The Natural Exponential Function</title>
+  <statement>
+    <p>
+      The irrational number <m>e</m>, approximately <m>2.71828</m>, is called the <term>natural base</term>. The number <m>e</m> is defined as the value that <m>(1+1/n)^n</m> approaches as <m>n</m> increases without bound:
+      <me>\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n = e^1 = e.</me>
+      The function <m>f(x)=e^x</m> is called the <term>natural exponential function</term>.
+    </p>
+  </statement>
+</definition>
+
+<p>
+  Since <m>2 \lt e \lt 3</m>, the graph of the natural exponential function lies between the graphs of <m>2^x</m> and <m>3^x</m>.
+</p>
+
+<example>
+  <statement>
+    <p>Find the derivative of <m>f(x)=a^x</m>.</p>
+  </statement>
+  <solution>
+    <p>
+      Using the limit definition of the derivative:
+      <me>\frac{d}{dx}(a^x) = \left(\lim_{h\to 0}\frac{a^h-1}{h}\right) \cdot a^x</me>
+    </p>
+    <p>
+      Assuming the limit exists, this means that the derivative of <m>a^x</m> is equal to some constant times <m>a^x</m>. This constant varies depending on the value of the base <m>a</m>.
+    </p>
+    <p>
+      Specifically, when <m>a=e</m>, the value of this limit is exactly <m>1</m>.
+    </p>
+  </solution>
+</example>
+
+<assemblage xml:id="asm-natural-exp-derivative">
+  <title>Derivative of the Natural Exponential Function</title>
+  <p>
+    <me>\frac{d}{dx}(e^x) = e^x</me>
+  </p>
+</assemblage>
+
+<example>
+  <statement>
+    <p>
+      Find the derivative of <m>f(x)=e^{2x}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the chain rule with the fact that <m>\frac{d}{dx}(e^u) = e^u \frac{du}{dx}</m>, where <m>u = 2x</m>:
+      <me>f'(x) = e^{2x} \cdot \frac{d}{dx}(2x) = 2e^{2x}</me>
+    </p>
+  </solution>
+</example>
+<example>
+    <statement>
+      <p><m>f(x)=e^{-x}</m></p>
+    </statement>
+  <solution>
+    <p>
+      Similarly, using the chain rule where <m>u = -x</m>:
+      <me>f'(x) = e^{-x} \cdot \frac{d}{dx}(-x) = -e^{-x}</me>
+    </p>
+  </solution>
+</example>
+
+<exercise>
+    <introduction>
+    <p>Find the derivatives of the following functions.</p>
+    </introduction>
+  <statement>
+    <p>Find the derivatives of the following functions.</p>
+  </statement>
+
+  <!-- Part A: Product Rule and Exponential -->
+  <task>
+    <statement>
+      <p><m>f(x)=xe^{-x}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using the Product Rule <m>(uv)' = u'v + uv'</m> with <m>u=x</m> and <m>v=e^{-x}</m>:
+        <md>
+          <mrow>f'(x) \amp = (1)(e^{-x}) + (x)(-e^{-x})</mrow>
+          <mrow>\amp = e^{-x} - xe^{-x}</mrow>
+          <mrow>\amp = e^{-x}(1-x)</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part B: Power Rule and Constant Rule -->
+  <task>
+    <statement>
+      <p><m>f(x)=x^{-3/5}+\pi^{3/2}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Note that <m>\pi^{3/2}</m> is a constant, so its derivative is zero. Applying the Power Rule to the first term:
+        <me>f'(x) = -\frac{3}{5}x^{-3/5 - 1} + 0 = -\frac{3}{5}x^{-8/5}</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part C: Sum Rule and Chain Rule -->
+  <task>
+    <statement>
+      <p><m>z=2t^{2/3}+3e^{2t}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Differentiating each term separately:
+        <md>
+          <mrow>\frac{dz}{dt} \amp = 2\left(\frac{2}{3}t^{-1/3}\right) + 3(2e^{2t})</mrow>
+          <mrow>\amp = \frac{4}{3}t^{-1/3} + 6e^{2t}</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+</exercise>
+<exercise>
+  <introduction>
+    <p>Find the limits:</p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to\infty} e^{-x}\sin x</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Note that <m>e^{-x} \to 0</m> as <m>x \to \infty</m> and <m>\sin x</m> is bounded between <m>-1</m> and <m>1</m>. 
+        By the Squeeze Theorem, since <m>-e^{-x} \le e^{-x}\sin x \le e^{-x}</m>, the limit is <m>0</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to\infty} \frac{e^{x}-e^{-x}}{e^x+e^{-x}}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Multiply the numerator and denominator by <m>e^{-x}</m>:
+        <me>\lim_{x\to\infty} \frac{1 - e^{-2x}}{1 + e^{-2x}} = \frac{1 - 0}{1 + 0} = 1</me>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find an equation for a line that is tangent to the curve <m>y=e^x</m> and goes through <m>x=0</m>.
+    </p>
+    <figure xml:id="fig-tangent-ex">
+      <caption>The graph of <m>y=e^x</m> and its tangent line at <m>x=0</m>.</caption>
+      <image xml:id="img-tangent-ex" width="60%">
+        <description>The exponential function and its tangent line at the y-intercept.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = $x$,
+              ylabel = $y$,
+              xmin = -2, xmax = 2,
+              ymin = -0.5, ymax = 4,
+              xtick = {0},
+              ytick = {1}
+            ]
+            \addplot [domain=-2:1.3, blue, thick] {exp(x)};
+            \addplot [domain=-1.5:2, red, thick] {x + 1};
+            \addplot[only marks, mark=*] coordinates {(0, 1)};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </statement>
+  <solution>
+    <p>
+      To find the equation of the tangent line, we need a point and a slope:
+      <ol marker="1">
+        <li>
+          <p>
+            <strong>Point:</strong> When <m>x=0</m>, <m>y=e^0=1</m>. So the point is <m>(0,1)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Slope:</strong> The derivative is <m>y' = e^x</m>. Evaluating at <m>x=0</m>, the slope is <m>m = e^0 = 1</m>.
+          </p>
+        </li>
+      </ol>
+      Using the point-slope form <m>y - y_1 = m(x - x_1)</m>:
+      <me>y - 1 = 1(x - 0) \implies y = x + 1</me>
+    </p>
+  </solution>
+</exercise>
+
+
+</section>  

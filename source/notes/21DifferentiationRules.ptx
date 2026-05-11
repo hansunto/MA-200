@@ -424,10 +424,12 @@
     </p>
   </statement>
 </example>
-<p> Find <m>\dfrac{d}{dx}</m> for each of the following functions. </p>
+
 <exercise>
-    
-  <task>
+  <introduction>
+    <p> Find <m>\dfrac{d}{dx}</m> for each of the following functions. </p>
+    </introduction>
+    <task>
     <statement> 
       <p>
         <m>(x^4-2x^3-7)(3x^2-5x)</m>
@@ -551,14 +553,10 @@
     This prevents the common mistake of misinterpreting the expression as <m>\sin(x^2)</m>.
   </p>
 </remark>
-<statement>
-    <p>
-      Find <m>\dfrac{d}{dx}</m> for each of the following functions.
-    </p>
-  </statement>
 <exercise>
-  
-
+  <introduction>
+    <p> Find <m>\dfrac{d}{dx}</m> for each of the following functions. </p>
+    </introduction>
   <task>
     <statement>
       <p>

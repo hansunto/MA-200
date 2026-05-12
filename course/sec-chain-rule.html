@@ -153,10 +153,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -188,7 +191,15 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">Derivatives of the Trigonometric Functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">Derivatives of Exponential Functions</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -243,50 +254,1030 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Chain Rule</span>
 </h2>
 <section class="introduction" id="sec-chain-rule-2"><div class="para" id="sec-chain-rule-2-1">In this section, we will explore the Chain Rule, a fundamental differentiation rule that allows us to find the derivative of composite functions. The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions.<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="para logical" id="sec-chain-rule-3">
+</div></section><article class="definition definition-like" id="def-composed-function"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">153</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Composed Function.</span>
+</h3>
+<div class="para logical" id="def-composed-function-2-1">
+<div class="para">The <dfn class="terminology">composed</dfn> function <span class="process-math">\(f \circ g\text{,}\)</span> the <dfn class="terminology">composition</dfn> of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{,}\)</span> is defined as</div>
+<div class="displaymath process-math" id="def-composed-function-2-1-6">
+\begin{equation*}
+f\circ g(x)=f(g(x)), \quad \text{or} \quad (f\circ g)(x)=f[g(x)].
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-composed-function-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 153: Composed Function"><a href="#def-composed-function" title="Copy heading and permalink for Definition 153: Composed Function" aria-label="Copy heading and permalink for Definition 153: Composed Function">🔗</a></div></article><details id="sec-chain-rule-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">154</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-chain-rule-4-1-1">For <span class="process-math">\(f(x)=x^3\)</span> and <span class="process-math">\(g(x)=1+x^2\text{,}\)</span> find <span class="process-math">\(f\circ g(x)\)</span> and <span class="process-math">\(g\circ f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-chain-rule-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-chain-rule-4-2-1">
+<div class="para">To find <span class="process-math">\(f\circ g(x)\text{,}\)</span> we substitute <span class="process-math">\(g(x)\)</span> into <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-4-2-1-4">
+\begin{equation*}
+f(g(x)) = f(1+x^2) = (1+x^2)^3
+\end{equation*}
+</div>
+<div class="para">To find <span class="process-math">\(g\circ f(x)\text{,}\)</span> we substitute <span class="process-math">\(f(x)\)</span> into <span class="process-math">\(g\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-4-2-1-8">
+\begin{equation*}
+g(f(x)) = g(x^3) = 1+(x^3)^2 = 1+x^6
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 154.1"><a href="#sec-chain-rule-4-2" title="Copy heading and permalink for Solution 154.1" aria-label="Copy heading and permalink for Solution 154.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 154"><a href="#sec-chain-rule-4" title="Copy heading and permalink for Checkpoint 154" aria-label="Copy heading and permalink for Checkpoint 154">🔗</a></div></article></details><details id="sec-chain-rule-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">155</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-chain-rule-5-1-1">For <span class="process-math">\(f(x)=\sqrt{x}\)</span> and <span class="process-math">\(g(x)=x-1\text{,}\)</span> find <span class="process-math">\(f\circ g(x)\)</span> and <span class="process-math">\(g\circ f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-chain-rule-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-chain-rule-5-2-1">
+<div class="para">To find <span class="process-math">\(f\circ g(x)\text{,}\)</span> we substitute <span class="process-math">\(g(x)\)</span> into <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-5-2-1-4">
+\begin{equation*}
+f(g(x)) = f(x-1) = \sqrt{x-1}
+\end{equation*}
+</div>
+<div class="para">To find <span class="process-math">\(g\circ f(x)\text{,}\)</span> we substitute <span class="process-math">\(f(x)\)</span> into <span class="process-math">\(g\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-5-2-1-8">
+\begin{equation*}
+g(f(x)) = g(\sqrt{x}) = \sqrt{x}-1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 155.1"><a href="#sec-chain-rule-5-2" title="Copy heading and permalink for Solution 155.1" aria-label="Copy heading and permalink for Solution 155.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 155"><a href="#sec-chain-rule-5" title="Copy heading and permalink for Checkpoint 155" aria-label="Copy heading and permalink for Checkpoint 155">🔗</a></div></article></details><section class="subsection" id="subsec-extended-power-rule"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extended Power Rule</span>
+</h3>
+<div class="para" id="subsec-extended-power-rule-2">The extended power functions, such as <span class="process-math">\(f(x) = (3x^2 + 2)^5\text{,}\)</span> can also be differentiated using the Chain Rule.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-extended-power-rule-3">
+<div class="para">The extended power rule states that if <span class="process-math">\(g(x) = [f(x)]^n\text{,}\)</span> where <span class="process-math">\(f\)</span> is a differentiable function and <span class="process-math">\(n\)</span> is a constant, then the derivative of <span class="process-math">\(g\)</span> with respect to <span class="process-math">\(x\)</span> is given by:</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-3-6">
+\begin{equation*}
+g'(x) = n(f(x))^{n-1} \cdot f'(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-extended-power-rule"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">156</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extended Power Rule.</span>
+</h4>
+<div class="para logical" id="thm-extended-power-rule-2-1">
+<div class="para">Suppose that <span class="process-math">\(f(x)\)</span> is a function of <span class="process-math">\(x\text{,}\)</span> then for any real number <span class="process-math">\(k\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="thm-extended-power-rule-2-1-4">
+\begin{equation*}
+\frac{d}{dx}[f(x)]^k = k[f(x)]^{k-1} \cdot \frac{d}{dx}f(x).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-extended-power-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 156: Extended Power Rule"><a href="#thm-extended-power-rule" title="Copy heading and permalink for Theorem 156: Extended Power Rule" aria-label="Copy heading and permalink for Theorem 156: Extended Power Rule">🔗</a></div></article><div class="para logical" id="subsec-extended-power-rule-5">
+<div class="para">The chain rule tells you how to handle compositions. Generally speaking, if a function <span class="process-math">\(f(x)\)</span> is obtained "in two steps" as a composition of two simpler functions <span class="process-math">\(u(x)\)</span> and <span class="process-math">\(g(u)\text{,}\)</span> it is represented as</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-5-4">
+\begin{equation*}
+f(x) = g(u)\text{,}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-5-5">
+\begin{equation*}
+u = u(x)
+\end{equation*}
+</div>
+<div class="para">is a function of <span class="process-math">\(x\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-5-7">
+\begin{equation*}
+\dfrac{df}{dx}=\dfrac{df}{du} \cdot \dfrac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="example-differentiate-composition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">157</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="introduction" id="example-differentiate-composition-1"><div class="para" id="example-differentiate-composition-1-1">Identify the inner function <span class="process-math">\(u\)</span> and find the derivative for each expression.<div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-differentiate-composition-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="example-differentiate-composition-2-1-1">
+<span class="process-math">\(y = \sqrt{x^2+1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-differentiate-composition-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-differentiate-composition-2-2-1">Let the inner function be <span class="process-math">\(u = x^2+1\text{.}\)</span> Then <span class="process-math">\(y = u^{1/2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-differentiate-composition-2-2-2">
+<div class="para">Applying the Extended Power Rule:</div>
+<div class="displaymath process-math" id="example-differentiate-composition-2-2-2-1">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2}(x^2+1)^{-1/2} \cdot \frac{d}{dx}(x^2+1)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-differentiate-composition-2-2-2-2">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2}(x^2+1)^{-1/2} \cdot (2x) = \frac{x}{\sqrt{x^2+1}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 157.a.1"><a href="#example-differentiate-composition-2-2" title="Copy heading and permalink for Solution 157.a.1" aria-label="Copy heading and permalink for Solution 157.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 157.a"><a href="#example-differentiate-composition-2" title="Copy heading and permalink for Task 157.a" aria-label="Copy heading and permalink for Task 157.a">🔗</a></div></article><article class="task exercise-like" id="example-differentiate-composition-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="example-differentiate-composition-3-1-1">
+<span class="process-math">\(y = \dfrac{5}{(1+x^2)^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-differentiate-composition-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-differentiate-composition-3-2-1">Let the inner function be <span class="process-math">\(u = 1+x^2\text{.}\)</span> Then <span class="process-math">\(y = 5u^{-2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-differentiate-composition-3-2-2">
+<div class="para">Applying the Extended Power Rule:</div>
+<div class="displaymath process-math" id="example-differentiate-composition-3-2-2-1">
+\begin{equation*}
+\frac{dy}{dx} = 5(-2)(1+x^2)^{-3} \cdot \frac{d}{dx}(1+x^2)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-differentiate-composition-3-2-2-2">
+\begin{equation*}
+\frac{dy}{dx} = -10(1+x^2)^{-3} \cdot (2x) = \frac{-20x}{(1+x^2)^3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 157.b.1"><a href="#example-differentiate-composition-3-2" title="Copy heading and permalink for Solution 157.b.1" aria-label="Copy heading and permalink for Solution 157.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 157.b"><a href="#example-differentiate-composition-3" title="Copy heading and permalink for Task 157.b" aria-label="Copy heading and permalink for Task 157.b">🔗</a></div></article><article class="task exercise-like" id="example-differentiate-composition-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="example-differentiate-composition-4-1-1">
+<span class="process-math">\(f(x) = \tan^2 x = (\tan x)^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-differentiate-composition-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-differentiate-composition-4-2-1">Let the inner function be <span class="process-math">\(u = \tan x\text{.}\)</span> Then the expression is <span class="process-math">\(f(x) = u^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-differentiate-composition-4-2-2">
+<div class="para">Applying the Extended Power Rule:</div>
+<div class="displaymath process-math" id="example-differentiate-composition-4-2-2-1">
+\begin{equation*}
+f'(x) = 2(\tan x)^{1} \cdot \frac{d}{dx}(\tan x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-differentiate-composition-4-2-2-2">
+\begin{equation*}
+f'(x) = 2\tan x \cdot \sec^2 x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-differentiate-composition-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 157.c.1"><a href="#example-differentiate-composition-4-2" title="Copy heading and permalink for Solution 157.c.1" aria-label="Copy heading and permalink for Solution 157.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 157.c"><a href="#example-differentiate-composition-4" title="Copy heading and permalink for Task 157.c" aria-label="Copy heading and permalink for Task 157.c">🔗</a></div></article><div class="autopermalink" data-description="Example 157"><a href="#example-differentiate-composition" title="Copy heading and permalink for Example 157" aria-label="Copy heading and permalink for Example 157">🔗</a></div></article></details><details id="subsec-extended-power-rule-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">158</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="subsec-extended-power-rule-7-1"><div class="para" id="subsec-extended-power-rule-7-1-1">Differentiate the following functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-extended-power-rule-7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-extended-power-rule-7-2-1-1">
+<span class="process-math">\(f(x)=(1+x^3)^{1/2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-extended-power-rule-7-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-extended-power-rule-7-2-2-1">
+<div class="para">Using the Extended Power Rule with <span class="process-math">\(u = 1+x^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-2-2-1-2">
+\begin{equation*}
+f'(x) = \frac{1}{2}(1+x^3)^{-1/2} \cdot \frac{d}{dx}(1+x^3)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-2-2-1-3">
+\begin{equation*}
+f'(x) = \frac{1}{2}(1+x^3)^{-1/2} \cdot (3x^2) = \frac{3x^2}{2\sqrt{1+x^3}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 158.a.1"><a href="#subsec-extended-power-rule-7-2-2" title="Copy heading and permalink for Solution 158.a.1" aria-label="Copy heading and permalink for Solution 158.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 158.a"><a href="#subsec-extended-power-rule-7-2" title="Copy heading and permalink for Task 158.a" aria-label="Copy heading and permalink for Task 158.a">🔗</a></div></article><article class="task exercise-like" id="subsec-extended-power-rule-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-extended-power-rule-7-3-1-1">
+<span class="process-math">\(y=(1-x^2)^3-(1-x^2)^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-extended-power-rule-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-extended-power-rule-7-3-2-1">
+<div class="para">Differentiate each term using the Extended Power Rule:</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-3-2-1-1">
+\begin{equation*}
+y' = 3(1-x^2)^2(-2x) - 2(1-x^2)^1(-2x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-3-2-1-2">
+\begin{equation*}
+y' = -6x(1-x^2)^2 + 4x(1-x^2)
+\end{equation*}
+</div>
+<div class="para"><div class="para" id="subsec-extended-power-rule-7-3-2-1-3">Factoring out <span class="process-math">\(-2x(1-x^2)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-3-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-3-2-1-4">
+\begin{equation*}
+y' = -2x(1-x^2)[3(1-x^2) - 2] = -2x(1-x^2)(1-3x^2)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 158.b.1"><a href="#subsec-extended-power-rule-7-3-2" title="Copy heading and permalink for Solution 158.b.1" aria-label="Copy heading and permalink for Solution 158.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 158.b"><a href="#subsec-extended-power-rule-7-3" title="Copy heading and permalink for Task 158.b" aria-label="Copy heading and permalink for Task 158.b">🔗</a></div></article><article class="task exercise-like" id="subsec-extended-power-rule-7-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-extended-power-rule-7-4-1-1">
+<span class="process-math">\(f(x)=(x-5)^4(7-x)^{10}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-extended-power-rule-7-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-extended-power-rule-7-4-2-1">
+<div class="para">Apply the Product Rule <span class="process-math">\((uv)' = u'v + uv'\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-4-2-1-2">
+\begin{equation*}
+f'(x) = \left[4(x-5)^3(1)\right](7-x)^{10} + (x-5)^4\left[10(7-x)^9(-1)\right]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-4-2-1-3">
+\begin{equation*}
+f'(x) = 4(x-5)^3(7-x)^{10} - 10(x-5)^4(7-x)^9
+\end{equation*}
+</div>
+<div class="para"><div class="para" id="subsec-extended-power-rule-7-4-2-1-4">Factoring out the common terms <span class="process-math">\(2(x-5)^3(7-x)^9\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-4-2-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-4-2-1-5">
+\begin{equation*}
+f'(x) = 2(x-5)^3(7-x)^9 [2(7-x) - 5(x-5)]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-extended-power-rule-7-4-2-1-6">
+\begin{equation*}
+f'(x) = 2(x-5)^3(7-x)^9 [14 - 2x - 5x + 25] = 2(x-5)^3(7-x)^9(39-7x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-extended-power-rule-7-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 158.c.1"><a href="#subsec-extended-power-rule-7-4-2" title="Copy heading and permalink for Solution 158.c.1" aria-label="Copy heading and permalink for Solution 158.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 158.c"><a href="#subsec-extended-power-rule-7-4" title="Copy heading and permalink for Task 158.c" aria-label="Copy heading and permalink for Task 158.c">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 158"><a href="#subsec-extended-power-rule-7" title="Copy heading and permalink for Checkpoint 158" aria-label="Copy heading and permalink for Checkpoint 158">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: Extended Power Rule"><a href="#subsec-extended-power-rule" title="Copy heading and permalink for Subsection: Extended Power Rule" aria-label="Copy heading and permalink for Subsection: Extended Power Rule">🔗</a></div></section><section class="subsection" id="subsec-Chain-Rule"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Chain Rule</span>
+</h3>
+<div class="para logical" id="subsec-Chain-Rule-2">
 <div class="para">The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. If we have a function defined as <span class="process-math">\(h(x) = f(g(x))\text{,}\)</span> where <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable functions, then the derivative of <span class="process-math">\(h\)</span> with respect to <span class="process-math">\(x\)</span> is given by:</div>
-<div class="displaymath process-math" id="sec-chain-rule-3-6">
+<div class="displaymath process-math" id="subsec-Chain-Rule-2-6">
 \begin{equation*}
 h'(x) = f'(g(x)) \cdot g'(x)
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-chain-rule-4">In other words, to differentiate a composite function, we first differentiate the outer function <span class="process-math">\(f\)</span> with respect to its argument <span class="process-math">\(g(x)\text{,}\)</span> and then multiply by the derivative of the inner function <span class="process-math">\(g\)</span> with respect to <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="theorem theorem-like" id="thm-chain-rule"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">159</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Chain Rule.</span>
+</h4>
+<div class="para logical" id="thm-chain-rule-2-1">
+<div class="para">The derivative of the composition <span class="process-math">\(f\circ g\)</span> is given by</div>
+<div class="displaymath process-math" id="thm-chain-rule-2-1-2">
+\begin{equation*}
+\frac{d}{dx}[f\circ g(x)] = \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x).
+\end{equation*}
 </div>
-<div class="para" id="sec-chain-rule-5">The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Alternatively, suppose that <span class="process-math">\(y=f(u)\)</span> and <span class="process-math">\(u=g(x)\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="thm-chain-rule-2-1-5">
+\begin{equation*}
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}.
+\end{equation*}
 </div>
-<div class="para logical" id="sec-chain-rule-6">
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-chain-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 159: The Chain Rule"><a href="#thm-chain-rule" title="Copy heading and permalink for Theorem 159: The Chain Rule" aria-label="Copy heading and permalink for Theorem 159: The Chain Rule">🔗</a></div></article><div class="para" id="subsec-Chain-Rule-4">In other words, to differentiate a composite function, we first differentiate the outer function <span class="process-math">\(f\)</span> with respect to its argument <span class="process-math">\(g(x)\text{,}\)</span> and then multiply by the derivative of the inner function <span class="process-math">\(g\)</span> with respect to <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-Chain-Rule-5">The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Chain-Rule-6">
 <div class="para">For example, if we want to differentiate <span class="process-math">\(h(x) = \sin(x^2)\text{,}\)</span> we can identify <span class="process-math">\(f(u) = \sin(u)\)</span> and <span class="process-math">\(g(x) = x^2\text{.}\)</span> Applying the Chain Rule, we get:</div>
-<div class="displaymath process-math" id="sec-chain-rule-6-4">
+<div class="displaymath process-math" id="subsec-Chain-Rule-6-4">
 \begin{align*}
 h'(x) \amp = \cos(x^2) \cdot 2x
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="sec-chain-rule-7">The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="subsec-Chain-Rule-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">160</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-Chain-Rule-7-1-1">
+<div class="para">The function <span class="process-math">\(h(x) = (x^2 - 2x)^3\)</span> is decomposed as <span class="process-math">\(f(g(x))\)</span> with</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-7-1-1-3">
+\begin{equation*}
+f(u) = u^3 \quad g(x) = x^2 - 2x.
+\end{equation*}
 </div>
-<details id="sec-chain-rule-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">153</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-chain-rule-8-1-1">
-<span class="process-math">\(f(x)=e^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-7-1-2">
+<div class="para">Derivatives:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-7-1-2-1">
+\begin{equation*}
+f'(u) = 3u^2 \quad g'(x) = 2x - 2.
+\end{equation*}
 </div>
-<div class="solutions"><details id="sec-chain-rule-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="sec-chain-rule-8-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-7-1-3">
+<div class="para">Derivative of <span class="process-math">\(h(x)\)</span> by the chain rule:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-7-1-3-2">
+\begin{equation*}
+h'(x) = (3(x^2 - 2x)^2) (2x - 2).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 160"><a href="#subsec-Chain-Rule-7" title="Copy heading and permalink for Example 160" aria-label="Copy heading and permalink for Example 160">🔗</a></div></article></details><details id="subsec-Chain-Rule-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">161</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-Chain-Rule-8-1-1">
+<div class="para">The function <span class="process-math">\(h(x) = \sin(2x)\)</span> is decomposed as <span class="process-math">\(f(g(x))\)</span> with</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-8-1-1-3">
+\begin{equation*}
+f(u) = \sin u \quad g(x) = 2x.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-8-1-2">
+<div class="para">Derivatives:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-8-1-2-1">
+\begin{equation*}
+f'(u) = \cos u \quad g'(x) = 2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-8-1-3">
+<div class="para">Derivative of <span class="process-math">\(h(x)\)</span> by the chain rule:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-8-1-3-2">
+\begin{equation*}
+h'(x) = (\cos(2x)) (2)=2\cos 2x.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-8-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 161"><a href="#subsec-Chain-Rule-8" title="Copy heading and permalink for Example 161" aria-label="Copy heading and permalink for Example 161">🔗</a></div></article></details><details id="subsec-Chain-Rule-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">162</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="subsec-Chain-Rule-9-1-1">
+<div class="para">The function <span class="process-math">\(h(x) = \sin^2(2x)\)</span> is decomposed as <span class="process-math">\(f(g(x))\)</span> with</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-9-1-1-3">
+\begin{equation*}
+f(u) = \sin^2 u \quad g(x) = 2x.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-9-1-2">
+<div class="para">Derivatives:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-9-1-2-1">
+\begin{equation*}
+f'(u) = 2\sin u\cos u \quad g'(x) = 2.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="subsec-Chain-Rule-9-1-3">
+<div class="para">Derivative of <span class="process-math">\(h(x)\)</span> by the chain rule:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-9-1-3-2">
+\begin{equation*}
+h'(x) = (2\sin(2x)\cos(2x)) (2)= 4\sin(2x)\cos(2x).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-9-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 162"><a href="#subsec-Chain-Rule-9" title="Copy heading and permalink for Example 162" aria-label="Copy heading and permalink for Example 162">🔗</a></div></article></details><div class="para" id="subsec-Chain-Rule-10">The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-Chain-Rule-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">163</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-Chain-Rule-11-1-1">
+<span class="process-math">\(f(x)=e^{2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-Chain-Rule-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-Chain-Rule-11-2-1">
 <div class="para">To find the derivative of <span class="process-math">\(f(x) = e^{2x}\text{,}\)</span> we can use the Chain Rule. Let <span class="process-math">\(u = 2x\text{,}\)</span> so that <span class="process-math">\(f(x) = e^u\text{.}\)</span> Then, we have:</div>
-<div class="displaymath process-math" id="sec-chain-rule-8-2-1-4">
+<div class="displaymath process-math" id="subsec-Chain-Rule-11-2-1-4">
 \begin{align*}
 f'(x) \amp = \frac{d}{dx}(e^u) \cdot \frac{du}{dx}\\
 \amp = e^u \cdot 2\\
 \amp = 2e^{2x}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 153.1"><a href="#sec-chain-rule-8-2" title="Copy heading and permalink for Solution 153.1" aria-label="Copy heading and permalink for Solution 153.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 163.1"><a href="#subsec-Chain-Rule-11-2" title="Copy heading and permalink for Solution 163.1" aria-label="Copy heading and permalink for Solution 163.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 153"><a href="#sec-chain-rule-8" title="Copy heading and permalink for Example 153" aria-label="Copy heading and permalink for Example 153">🔗</a></div></article></details><div class="autopermalink" data-description="Section: The Chain Rule"><a href="#sec-chain-rule" title="Copy heading and permalink for Section: The Chain Rule" aria-label="Copy heading and permalink for Section: The Chain Rule">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 163"><a href="#subsec-Chain-Rule-11" title="Copy heading and permalink for Example 163" aria-label="Copy heading and permalink for Example 163">🔗</a></div></article></details><details id="subsec-Chain-Rule-12" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">164</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="subsec-Chain-Rule-12-1-1">For <span class="process-math">\(y=2+\sqrt{u}\)</span> and <span class="process-math">\(u=x^3+1\text{,}\)</span> find <span class="process-math">\(\dfrac{dy}{dx}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-Chain-Rule-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-Chain-Rule-12-2-1">
+<div class="para">First, we find the individual derivatives:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-12-2-1-1">
+\begin{equation*}
+\frac{dy}{du} = \frac{1}{2}u^{-1/2} = \frac{1}{2\sqrt{u}} \quad \text{and} \quad \frac{du}{dx} = 3x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Chain-Rule-12-2-2">
+<div class="para">Using the Chain Rule <span class="process-math">\(\dfrac{dy}{dx} = \dfrac{dy}{du} \cdot \dfrac{du}{dx}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-12-2-2-2">
+\begin{equation*}
+\dfrac{dy}{dx} = \left( \dfrac{1}{2\sqrt{u}} \right) (3x^2)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-12-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Chain-Rule-12-2-3">
+<div class="para">Substitute <span class="process-math">\(u = x^3+1\)</span> back into the expression:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-12-2-3-2">
+\begin{equation*}
+\dfrac{dy}{dx} = \dfrac{3x^2}{2\sqrt{x^3+1}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-12-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 164.1"><a href="#subsec-Chain-Rule-12-2" title="Copy heading and permalink for Solution 164.1" aria-label="Copy heading and permalink for Solution 164.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 164"><a href="#subsec-Chain-Rule-12" title="Copy heading and permalink for Example 164" aria-label="Copy heading and permalink for Example 164">🔗</a></div></article></details><details id="subsec-Chain-Rule-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">165</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="subsec-Chain-Rule-13-1-1">
+<div class="para">Find functions <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> such that <span class="process-math">\(h(x)=f\circ g(x)\text{,}\)</span> then differentiate:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-13-1-1-4">
+\begin{equation*}
+h(x)=(4x^3-7)^6
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-Chain-Rule-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-Chain-Rule-13-2-1">
+<div class="para">First, we decompose the function:</div>
+<ul class="disc" id="subsec-Chain-Rule-13-2-1-1">
+<li id="subsec-Chain-Rule-13-2-1-1-1">
+<div class="para" id="subsec-Chain-Rule-13-2-1-1-1-1">The "inner" function is <span class="process-math">\(g(x) = 4x^3 - 7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-13-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-Chain-Rule-13-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-Chain-Rule-13-2-1-1-2">
+<div class="para" id="subsec-Chain-Rule-13-2-1-1-2-1">The "outer" function is <span class="process-math">\(f(u) = u^6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-13-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-Chain-Rule-13-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsec-Chain-Rule-13-2-2">
+<div class="para">Next, we find the derivative using the Chain Rule:</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-13-2-2-1">
+\begin{equation*}
+h'(x) = f'(g(x)) \cdot g'(x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-13-2-2-2">
+\begin{equation*}
+h'(x) = 6(4x^3-7)^5 \cdot (12x^2)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-Chain-Rule-13-2-2-3">
+\begin{equation*}
+h'(x) = 72x^2(4x^3-7)^5
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-Chain-Rule-13-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 165.1"><a href="#subsec-Chain-Rule-13-2" title="Copy heading and permalink for Solution 165.1" aria-label="Copy heading and permalink for Solution 165.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 165"><a href="#subsec-Chain-Rule-13" title="Copy heading and permalink for Checkpoint 165" aria-label="Copy heading and permalink for Checkpoint 165">🔗</a></div></article></details><details id="exercise-horizontal-tangents-trig" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">166</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exercise-horizontal-tangents-trig-1-1">
+<div class="para">Find the points on the graph of</div>
+<div class="displaymath process-math" id="exercise-horizontal-tangents-trig-1-1-1">
+\begin{equation*}
+y = \cos 2x + 2\cos x \quad \text{for} \quad 0 \leq x \leq 2\pi
+\end{equation*}
+</div>
+<div class="para">at which the tangent line is horizontal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-horizontal-tangents-trig-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-horizontal-tangents-trig-2-1">
+<div class="para">A tangent line is horizontal when the derivative is zero. First, we find <span class="process-math">\(\frac{dy}{dx}\)</span> using the Chain Rule:</div>
+<div class="displaymath process-math" id="exercise-horizontal-tangents-trig-2-1-2">
+\begin{equation*}
+\frac{dy}{dx} = -2\sin 2x - 2\sin x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-horizontal-tangents-trig-2-2">
+<div class="para">Set the derivative equal to zero and use the double-angle identity <span class="process-math">\(\sin 2x = 2\sin x \cos x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercise-horizontal-tangents-trig-2-2-2">
+\begin{equation*}
+-2(2\sin x \cos x) - 2\sin x = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-horizontal-tangents-trig-2-2-3">
+\begin{equation*}
+-2\sin x (2\cos x + 1) = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-horizontal-tangents-trig-2-3">
+<div class="para">This gives two cases for <span class="process-math">\(0 \leq x \leq 2\pi\text{:}\)</span>
+</div>
+<ul class="disc" id="exercise-horizontal-tangents-trig-2-3-2">
+<li id="exercise-horizontal-tangents-trig-2-3-2-1">
+<div class="para" id="exercise-horizontal-tangents-trig-2-3-2-1-1">
+<span class="process-math">\(\displaystyle \sin x = 0 \implies x = 0, \pi, 2\pi\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-horizontal-tangents-trig-2-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="exercise-horizontal-tangents-trig-2-3-2-2">
+<div class="para" id="exercise-horizontal-tangents-trig-2-3-2-2-1">
+<span class="process-math">\(\displaystyle \cos x = -1/2 \implies x = 2\pi/3, 4\pi/3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exercise-horizontal-tangents-trig-2-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-horizontal-tangents-trig-2-4">
+<div class="para">Finally, we find the <span class="process-math">\(y\)</span>-coordinates for these points:</div>
+<div class="displaymath process-math" id="exercise-horizontal-tangents-trig-2-4-2">
+\begin{equation*}
+(0, 3), (\pi, -1), (2\pi, 3), (2\pi/3, -1.5), (4\pi/3, -1.5)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-horizontal-tangents-trig-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 166.1"><a href="#exercise-horizontal-tangents-trig-2" title="Copy heading and permalink for Solution 166.1" aria-label="Copy heading and permalink for Solution 166.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 166"><a href="#exercise-horizontal-tangents-trig" title="Copy heading and permalink for Checkpoint 166" aria-label="Copy heading and permalink for Checkpoint 166">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: The Chain Rule"><a href="#subsec-Chain-Rule" title="Copy heading and permalink for Subsection: The Chain Rule" aria-label="Copy heading and permalink for Subsection: The Chain Rule">🔗</a></div></section><section class="exercises" id="exercises-chain-rule-solutions"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Chain Rule Practice with Solutions</span>
+</h3>
+<section class="introduction" id="exercises-chain-rule-solutions-2"><div class="para" id="exercises-chain-rule-solutions-2-1">Differentiate the following functions.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="exercises-chain-rule-solutions-3"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-3-1-1">
+<span class="process-math">\(y=\sqrt[3]{5x^2-x+4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-3-2-1">
+<div class="para">Rewrite as <span class="process-math">\(y = (5x^2-x+4)^{1/3}\text{.}\)</span> By the Chain Rule:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-3-2-1-2">
+\begin{equation*}
+y' = \frac{1}{3}(5x^2-x+4)^{-2/3} \cdot (10x-1) = \frac{10x-1}{3\sqrt[3]{(5x^2-x+4)^2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#exercises-chain-rule-solutions-3-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#exercises-chain-rule-solutions-3" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-4"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-4-1-1">
+<span class="process-math">\(r(x) = \frac{1}{(4x^2+6x-7)^3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-4-2-1">
+<div class="para">Rewrite as <span class="process-math">\(r(x) = (4x^2+6x-7)^{-3}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-4-2-1-2">
+\begin{equation*}
+r'(x) = -3(4x^2+6x-7)^{-4} \cdot (8x+6) = \frac{-6(4x+3)}{(4x^2+6x-7)^4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#exercises-chain-rule-solutions-4-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#exercises-chain-rule-solutions-4" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-5"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-5-1-1">
+<span class="process-math">\(y=(2z+5)^3(3z-1)^4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-5-2-1">
+<div class="para">Using the Product Rule:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-5-2-1-1">
+\begin{equation*}
+y' = [3(2z+5)^2(2)](3z-1)^4 + (2z+5)^3[4(3z-1)^3(3)]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-5-2-1-2">
+\begin{equation*}
+y' = 6(2z+5)^2(3z-1)^3 [ (3z-1) + 2(2z+5) ] = 6(2z+5)^2(3z-1)^3(7z+9)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#exercises-chain-rule-solutions-5-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3"><a href="#exercises-chain-rule-solutions-5" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-6"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-6-1-1">
+<span class="process-math">\(g(x)=(3x-1)^5\sqrt{2x-5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-6-2-1">
+<div class="para">Using Product and Chain Rules:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-6-2-1-1">
+\begin{equation*}
+g'(x) = 5(3x-1)^4(3)\sqrt{2x-5} + (3x-1)^5\left(\frac{1}{2}(2x-5)^{-1/2}(2)\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-6-2-1-2">
+\begin{equation*}
+g'(x) = 15(3x-1)^4\sqrt{2x-5} + \frac{(3x-1)^5}{\sqrt{2x-5}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#exercises-chain-rule-solutions-6-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#exercises-chain-rule-solutions-6" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-7"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-7-1-1">
+<span class="process-math">\(y=(7x+\sqrt{x^2+6})^4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-7-2-1">
+<div class="para">This requires a nested Chain Rule:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-7-2-1-1">
+\begin{equation*}
+y' = 4(7x+\sqrt{x^2+6})^3 \cdot \frac{d}{dx}(7x+\sqrt{x^2+6})
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-7-2-1-2">
+\begin{equation*}
+y' = 4(7x+\sqrt{x^2+6})^3 \left(7 + \frac{x}{\sqrt{x^2+6}}\right)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#exercises-chain-rule-solutions-7-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#exercises-chain-rule-solutions-7" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-8"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-8-1-1">
+<span class="process-math">\(f(x)=\cos(5x^3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-8-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-8-2-1-1">
+\begin{equation*}
+f'(x) = -\sin(5x^3) \cdot (15x^2) = -15x^2\sin(5x^3)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#exercises-chain-rule-solutions-8-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#exercises-chain-rule-solutions-8" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-9"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-9-1-1">
+<span class="process-math">\(k(v)=(\cos v)^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-9-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-9-2-1-1">
+\begin{equation*}
+k'(v) = 3(\cos v)^2 \cdot (-\sin v) = -3\cos^2 v \sin v
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#exercises-chain-rule-solutions-9-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#exercises-chain-rule-solutions-9" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-10"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-10-1-1">
+<span class="process-math">\(g(x)=\tan^4(3x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-10-2-1">
+<div class="para">Outer is power, inner is tangent, innermost is <span class="process-math">\(3x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-10-2-1-2">
+\begin{equation*}
+g'(x) = 4\tan^3(3x) \cdot \sec^2(3x) \cdot 3 = 12\tan^3(3x)\sec^2(3x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#exercises-chain-rule-solutions-10-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#exercises-chain-rule-solutions-10" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-11"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-11-1-1">
+<span class="process-math">\(H(x)=\sqrt{\sin 5x^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-11-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-11-2-1-1">
+\begin{equation*}
+H'(x) = \frac{1}{2}(\sin 5x^2)^{-1/2} \cdot \cos(5x^2) \cdot (10x) = \frac{5x\cos 5x^2}{\sqrt{\sin 5x^2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#exercises-chain-rule-solutions-11-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9"><a href="#exercises-chain-rule-solutions-11" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-12"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-12-1-1">
+<span class="process-math">\(y=(x+\frac{1}{x})^5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-12-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-12-2-1-1">
+\begin{equation*}
+y' = 5(x+x^{-1})^4 \cdot (1 - x^{-2}) = 5(x+\frac{1}{x})^4(1 - \frac{1}{x^2})
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#exercises-chain-rule-solutions-12-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10"><a href="#exercises-chain-rule-solutions-12" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-13"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-13-1-1">
+<span class="process-math">\(p(x)=\sin 4x \cos 4x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-13-2-1">
+<div class="para">Using double angle identity <span class="process-math">\(\frac{1}{2}\sin 8x\)</span> or Product Rule:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-13-2-1-2">
+\begin{equation*}
+p'(x) = (4\cos 4x)\cos 4x + \sin 4x(-4\sin 4x) = 4(\cos^2 4x - \sin^2 4x) = 4\cos 8x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#exercises-chain-rule-solutions-13-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 11"><a href="#exercises-chain-rule-solutions-13" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-14"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-14-1-1">
+<span class="process-math">\(f(x)=\sin(2x+3)^4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-14-2-1">
+<div class="para">Note: This is <span class="process-math">\(\sin( [2x+3]^4 )\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-14-2-1-2">
+\begin{equation*}
+f'(x) = \cos(2x+3)^4 \cdot [4(2x+3)^3 \cdot 2] = 8(2x+3)^3\cos(2x+3)^4
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#exercises-chain-rule-solutions-14-2" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 12"><a href="#exercises-chain-rule-solutions-14" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-15"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-15-1-1">
+<span class="process-math">\(f(w)=\cot^3(3w-1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-15-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-15-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-15-2-1-1">
+\begin{equation*}
+f'(w) = 3\cot^2(3w-1) \cdot (-\csc^2(3w-1)) \cdot 3 = -9\cot^2(3w-1)\csc^2(3w-1)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.1"><a href="#exercises-chain-rule-solutions-15-2" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 13"><a href="#exercises-chain-rule-solutions-15" title="Copy heading and permalink for Exercise 13" aria-label="Copy heading and permalink for Exercise 13">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-16"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-16-1-1">
+<span class="process-math">\(f(x)=\frac{\sec 2x}{1+\tan 2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-16-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-16-2-1">
+<div class="para">Using Quotient Rule and Chain Rule:</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-16-2-1-1">
+\begin{equation*}
+f'(x) = \frac{(2\sec 2x \tan 2x)(1+\tan 2x) - (\sec 2x)(2\sec^2 2x)}{(1+\tan 2x)^2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-16-2-1-2">
+\begin{equation*}
+f'(x) = \frac{2\sec 2x (\tan 2x + \tan^2 2x - \sec^2 2x)}{(1+\tan 2x)^2} = \frac{2\sec 2x (\tan 2x - 1)}{(1+\tan 2x)^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 14.1"><a href="#exercises-chain-rule-solutions-16-2" title="Copy heading and permalink for Solution 14.1" aria-label="Copy heading and permalink for Solution 14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 14"><a href="#exercises-chain-rule-solutions-16" title="Copy heading and permalink for Exercise 14" aria-label="Copy heading and permalink for Exercise 14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-chain-rule-solutions-17"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-chain-rule-solutions-17-1-1">
+<span class="process-math">\(y = \sin \sqrt{x}+\cos \sqrt{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-chain-rule-solutions-17-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-chain-rule-solutions-17-2-1">
+<div class="displaymath process-math" id="exercises-chain-rule-solutions-17-2-1-1">
+\begin{equation*}
+y' = \cos\sqrt{x} \cdot \frac{1}{2\sqrt{x}} - \sin\sqrt{x} \cdot \frac{1}{2\sqrt{x}} = \frac{\cos\sqrt{x}-\sin\sqrt{x}}{2\sqrt{x}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-chain-rule-solutions-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 15.1"><a href="#exercises-chain-rule-solutions-17-2" title="Copy heading and permalink for Solution 15.1" aria-label="Copy heading and permalink for Solution 15.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 15"><a href="#exercises-chain-rule-solutions-17" title="Copy heading and permalink for Exercise 15" aria-label="Copy heading and permalink for Exercise 15">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Chain Rule Practice with Solutions"><a href="#exercises-chain-rule-solutions" title="Copy heading and permalink for Exercises: Chain Rule Practice with Solutions" aria-label="Copy heading and permalink for Exercises: Chain Rule Practice with Solutions">🔗</a></div></section><section class="subsection" id="subsec-higher-order-derivatives"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher Order Derivatives</span>
+</h3>
+<article class="definition definition-like" id="def-higher-order-derivatives"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">167</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Higher-Order Derivatives.</span>
+</h4>
+<div class="para logical" id="def-higher-order-derivatives-2-1">
+<div class="para">The <dfn class="terminology">second derivative</dfn> of <span class="process-math">\(f\)</span> is denoted by <span class="process-math">\(f''\)</span> and is defined as</div>
+<div class="displaymath process-math" id="def-higher-order-derivatives-2-1-4">
+\begin{equation*}
+f''(x) = \frac{d}{dx}f'(x).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-higher-order-derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 167: Higher-Order Derivatives"><a href="#def-higher-order-derivatives" title="Copy heading and permalink for Definition 167: Higher-Order Derivatives" aria-label="Copy heading and permalink for Definition 167: Higher-Order Derivatives">🔗</a></div></article><details id="example-second-derivative-fraction" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">168</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-second-derivative-fraction-1-1">For <span class="process-math">\(y=1/x\text{,}\)</span> find <span class="process-math">\(\dfrac{d^2y}{dx^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-second-derivative-fraction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-second-derivative-fraction-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-second-derivative-fraction-2-1">
+<div class="para">First, rewrite the function as a power:</div>
+<div class="displaymath process-math" id="example-second-derivative-fraction-2-1-1">
+\begin{equation*}
+y = x^{-1}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-second-derivative-fraction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-second-derivative-fraction-2-2">
+<div class="para">Find the first derivative:</div>
+<div class="displaymath process-math" id="example-second-derivative-fraction-2-2-1">
+\begin{equation*}
+\frac{dy}{dx} = -1x^{-2} = -\frac{1}{x^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-second-derivative-fraction-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-second-derivative-fraction-2-3">
+<div class="para">Differentiate again to find the second derivative:</div>
+<div class="displaymath process-math" id="example-second-derivative-fraction-2-3-1">
+\begin{equation*}
+\frac{d^2y}{dx^2} = \frac{d}{dx}(-x^{-2}) = 2x^{-3} = \frac{2}{x^3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-second-derivative-fraction-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 168.1"><a href="#example-second-derivative-fraction-2" title="Copy heading and permalink for Solution 168.1" aria-label="Copy heading and permalink for Solution 168.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 168"><a href="#example-second-derivative-fraction" title="Copy heading and permalink for Example 168" aria-label="Copy heading and permalink for Example 168">🔗</a></div></article></details><details id="subsec-higher-order-derivatives-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">169</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="subsec-higher-order-derivatives-4-1"><div class="para" id="subsec-higher-order-derivatives-4-1-1">Find the first and second derivatives of the following functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="subsec-higher-order-derivatives-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-higher-order-derivatives-4-2-1-1">
+<span class="process-math">\(g(x)=\sqrt{3x+1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-higher-order-derivatives-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-order-derivatives-4-2-2-1">
+<div class="para">Rewrite as <span class="process-math">\(g(x) = (3x+1)^{1/2}\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-2-2-1-2">
+\begin{equation*}
+g'(x) = \frac{1}{2}(3x+1)^{-1/2} \cdot 3 = \frac{3}{2}(3x+1)^{-1/2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-2-2-1-3">
+\begin{equation*}
+g''(x) = \frac{3}{2} \cdot \left(-\frac{1}{2}\right)(3x+1)^{-3/2} \cdot 3 = -\frac{9}{4(3x+1)^{3/2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 169.a.1"><a href="#subsec-higher-order-derivatives-4-2-2" title="Copy heading and permalink for Solution 169.a.1" aria-label="Copy heading and permalink for Solution 169.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 169.a"><a href="#subsec-higher-order-derivatives-4-2" title="Copy heading and permalink for Task 169.a" aria-label="Copy heading and permalink for Task 169.a">🔗</a></div></article><article class="task exercise-like" id="subsec-higher-order-derivatives-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-higher-order-derivatives-4-3-1-1">
+<span class="process-math">\(k(r)=(4r+7)^5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-higher-order-derivatives-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-order-derivatives-4-3-2-1">
+<div class="para">Using the Chain Rule:</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-3-2-1-1">
+\begin{equation*}
+k'(r) = 5(4r+7)^4 \cdot 4 = 20(4r+7)^4
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-3-2-1-2">
+\begin{equation*}
+k''(r) = 20 \cdot 4(4r+7)^3 \cdot 4 = 320(4r+7)^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 169.b.1"><a href="#subsec-higher-order-derivatives-4-3-2" title="Copy heading and permalink for Solution 169.b.1" aria-label="Copy heading and permalink for Solution 169.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 169.b"><a href="#subsec-higher-order-derivatives-4-3" title="Copy heading and permalink for Task 169.b" aria-label="Copy heading and permalink for Task 169.b">🔗</a></div></article><article class="task exercise-like" id="subsec-higher-order-derivatives-4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-higher-order-derivatives-4-4-1-1">
+<span class="process-math">\(z(x)=\sin^3 x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="subsec-higher-order-derivatives-4-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="subsec-higher-order-derivatives-4-4-2-1">
+<div class="para">Using the Chain Rule where the outer function is <span class="process-math">\(u^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-4-2-1-2">
+\begin{equation*}
+z'(x) = 3\sin^2 x \cdot \cos x
+\end{equation*}
+</div>
+<div class="para">For the second derivative, use the Product Rule:</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-4-2-1-3">
+\begin{equation*}
+z''(x) = [6\sin x \cos x](\cos x) + (3\sin^2 x)(-\sin x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsec-higher-order-derivatives-4-4-2-1-4">
+\begin{equation*}
+z''(x) = 6\sin x \cos^2 x - 3\sin^3 x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-higher-order-derivatives-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 169.c.1"><a href="#subsec-higher-order-derivatives-4-4-2" title="Copy heading and permalink for Solution 169.c.1" aria-label="Copy heading and permalink for Solution 169.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 169.c"><a href="#subsec-higher-order-derivatives-4-4" title="Copy heading and permalink for Task 169.c" aria-label="Copy heading and permalink for Task 169.c">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 169"><a href="#subsec-higher-order-derivatives-4" title="Copy heading and permalink for Checkpoint 169" aria-label="Copy heading and permalink for Checkpoint 169">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: Higher Order Derivatives"><a href="#subsec-higher-order-derivatives" title="Copy heading and permalink for Subsection: Higher Order Derivatives" aria-label="Copy heading and permalink for Subsection: Higher Order Derivatives">🔗</a></div></section><details id="sec-chain-rule-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">170</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application of Chain Rule (1).</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-chain-rule-10-2-1">If <span class="process-math">\(k(x)=f(g(x))\)</span> and if <span class="process-math">\(f(2)=-4\text{,}\)</span> <span class="process-math">\(g(2)=2\text{,}\)</span> <span class="process-math">\(f'(2)=-3\text{,}\)</span> and <span class="process-math">\(g'(2)=5\text{,}\)</span> find <span class="process-math">\(k(2)\)</span> and <span class="process-math">\(k'(2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-chain-rule-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-chain-rule-10-3-1">
+<div class="para">First, we find <span class="process-math">\(k(2)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-10-3-1-2">
+\begin{equation*}
+k(2) = f(g(2)) = f(2) = -4
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-chain-rule-10-3-2">
+<div class="para">Next, we use the Chain Rule to find <span class="process-math">\(k'(x) = f'(g(x)) \cdot g'(x)\text{.}\)</span> Evaluating at <span class="process-math">\(x=2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-10-3-2-3">
+\begin{equation*}
+k'(2) = f'(g(2)) \cdot g'(2)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-10-3-2-4">
+\begin{equation*}
+k'(2) = f'(2) \cdot 5 = (-3) \cdot 5 = -15
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 170.1"><a href="#sec-chain-rule-10-3" title="Copy heading and permalink for Solution 170.1" aria-label="Copy heading and permalink for Solution 170.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 170: Application of Chain Rule (1)"><a href="#sec-chain-rule-10" title="Copy heading and permalink for Checkpoint 170: Application of Chain Rule (1)" aria-label="Copy heading and permalink for Checkpoint 170: Application of Chain Rule (1)">🔗</a></div></article></details><details id="sec-chain-rule-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">171</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Application of Chain Rule (2).</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-chain-rule-11-2-1">If <span class="process-math">\(f(x)=g(h(x))\)</span> and if <span class="process-math">\(f(4)=3\text{,}\)</span> <span class="process-math">\(g(4)=3\text{,}\)</span> <span class="process-math">\(h(4)=4\text{,}\)</span> <span class="process-math">\(f'(4)=2\text{,}\)</span> and <span class="process-math">\(g'(4)=-5\text{,}\)</span> find <span class="process-math">\(h'(4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-chain-rule-11-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-chain-rule-11-3-1">
+<div class="para">By the Chain Rule, <span class="process-math">\(f'(x) = g'(h(x)) \cdot h'(x)\text{.}\)</span> Substituting <span class="process-math">\(x=4\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-11-3-1-3">
+\begin{equation*}
+f'(4) = g'(h(4)) \cdot h'(4)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-11-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-chain-rule-11-3-2">
+<div class="para">Substitute the given values:</div>
+<div class="displaymath process-math" id="sec-chain-rule-11-3-2-1">
+\begin{equation*}
+2 = g'(4) \cdot h'(4)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-11-3-2-2">
+\begin{equation*}
+2 = -5 \cdot h'(4)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-11-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-chain-rule-11-3-3">
+<div class="para">Solving for <span class="process-math">\(h'(4)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-chain-rule-11-3-3-2">
+\begin{equation*}
+h'(4) = -\frac{2}{5}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-chain-rule-11-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 171.1"><a href="#sec-chain-rule-11-3" title="Copy heading and permalink for Solution 171.1" aria-label="Copy heading and permalink for Solution 171.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 171: Application of Chain Rule (2)"><a href="#sec-chain-rule-11" title="Copy heading and permalink for Checkpoint 171: Application of Chain Rule (2)" aria-label="Copy heading and permalink for Checkpoint 171: Application of Chain Rule (2)">🔗</a></div></article></details><div class="autopermalink" data-description="Section: The Chain Rule"><a href="#sec-chain-rule" title="Copy heading and permalink for Section: The Chain Rule" aria-label="Copy heading and permalink for Section: The Chain Rule">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-exp-derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

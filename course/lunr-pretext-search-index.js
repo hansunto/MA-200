@@ -1,22 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "syllabus",
+  "id": "course-documents-2",
   "level": "1",
-  "url": "syllabus.html",
+  "url": "course-documents-2.html",
   "type": "Section",
   "number": "",
-  "title": "Syllabus",
-  "body": " Syllabus        Course Information  This is the syllabus for course name (MATH xxx, section xxx) for [term] 20xx. It is a [n] credit course.    Instructor  Prof. Lastname, Office Location, prof.lastname@example.edu .    Student Hours  TBD    Class meets  course times and location.    Course Description  course description from catalog    Prerequisite  list of prerequisites    Textbook and course materials   textbook name by textbook author.       Course Overview        Assessments and Grades     "
-},
-{
-  "id": "sec-course-info-2",
-  "level": "2",
-  "url": "syllabus.html#sec-course-info-2",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "course name (MATH xxx, section xxx) "
+  "title": "MA-200-BL: Calculus I Course Syllabus",
+  "body": " MA-200-BL: Calculus I Course Syllabus   Course Information  Course: MA-200: Calculus I (Hybrid\/Blended, 4 credits), Summer 2026  Instructor: Dr. Hansun To  Contact:  hto1@worcester.edu  This is a hybrid course that combines asynchronous online instruction with required in-person examinations. Course materials, assignments, quizzes, and instructional videos are delivered through MyOpenMath. In-person attendance is required for all exams.     Responsibility for Learning  Students are responsible for their own learning. While instructional support is provided, students are expected to seek help proactively. This course is very challenging for students without a strong background in algebra and functions.    Homework Policy  Practice is essential for learning mathematics. Homework problems are designed to deepen understanding, not just provide repetition. Students are encouraged to begin assignments early and seek help when needed.  A LatePass provides a 48-hour extension. A 30% penalty applies to late work.    Artificial Intelligence Policy  AI tools may be used for studying and practice only.   AI tools are not permitted on graded assignments unless explicitly authorized.   Violations will be treated as academic dishonesty.    Learning Outcomes   Justify mathematical reasoning  Compute limits and derivatives  Apply derivatives in applications  Understand integrals and area  Apply the Fundamental Theorem of Calculus  Use L'Hopital's Rule    "
 },
 {
   "id": "sec-limits-concept",
@@ -1483,16 +1474,313 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "The Chain Rule",
-  "body": " The Chain Rule   In this section, we will explore the Chain Rule, a fundamental differentiation rule that allows us to find the derivative of composite functions. The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions.   The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. If we have a function defined as , where and are differentiable functions, then the derivative of with respect to is given by:   In other words, to differentiate a composite function, we first differentiate the outer function with respect to its argument , and then multiply by the derivative of the inner function with respect to .  The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.  For example, if we want to differentiate , we can identify and . Applying the Chain Rule, we get:   The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.       To find the derivative of , we can use the Chain Rule. Let , so that . Then, we have:     "
+  "body": " The Chain Rule   In this section, we will explore the Chain Rule, a fundamental differentiation rule that allows us to find the derivative of composite functions. The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions.    Composed Function   The composed function , the composition of and , is defined as       For and , find and .    To find , we substitute into : To find , we substitute into :       For and , find and .    To find , we substitute into : To find , we substitute into :      Extended Power Rule  The extended power functions, such as , can also be differentiated using the Chain Rule.  The extended power rule states that if , where is a differentiable function and is a constant, then the derivative of with respect to is given by:    Extended Power Rule   Suppose that is a function of , then for any real number ,     The chain rule tells you how to handle compositions. Generally speaking, if a function is obtained \"in two steps\" as a composition of two simpler functions and , it is represented as , where is a function of . Then     Identify the inner function and find the derivative for each expression.        Let the inner function be . Then .  Applying the Extended Power Rule:           Let the inner function be . Then .  Applying the Extended Power Rule:           Let the inner function be . Then the expression is .  Applying the Extended Power Rule:         Differentiate the following functions.         Using the Extended Power Rule with :            Differentiate each term using the Extended Power Rule:   Factoring out :            Apply the Product Rule :   Factoring out the common terms :          The Chain Rule  The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. If we have a function defined as , where and are differentiable functions, then the derivative of with respect to is given by:    The Chain Rule   The derivative of the composition is given by Alternatively, suppose that and , then     In other words, to differentiate a composite function, we first differentiate the outer function with respect to its argument , and then multiply by the derivative of the inner function with respect to .  The Chain Rule is essential for differentiating a wide variety of functions, including those involving exponentials, logarithms, trigonometric functions, and more complex compositions. It allows us to break down complicated functions into simpler parts, making differentiation more manageable.  For example, if we want to differentiate , we can identify and . Applying the Chain Rule, we get:     The function is decomposed as with   Derivatives:   Derivative of by the chain rule:       The function is decomposed as with   Derivatives:   Derivative of by the chain rule:       The function is decomposed as with   Derivatives:   Derivative of by the chain rule:     The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, enabling us to handle a wide range of mathematical models and applications in physics, engineering, economics, and other fields.       To find the derivative of , we can use the Chain Rule. Let , so that . Then, we have:       For and , find .    First, we find the individual derivatives:   Using the Chain Rule :   Substitute back into the expression:       Find functions and such that , then differentiate:     First, we decompose the function:   The \"inner\" function is .    The \"outer\" function is .     Next, we find the derivative using the Chain Rule:         Find the points on the graph of at which the tangent line is horizontal.    A tangent line is horizontal when the derivative is zero. First, we find using the Chain Rule:   Set the derivative equal to zero and use the double-angle identity :    This gives two cases for :          Finally, we find the -coordinates for these points:       Chain Rule Practice with Solutions   Differentiate the following functions.         Rewrite as . By the Chain Rule:           Rewrite as :           Using the Product Rule:            Using Product and Chain Rules:            This requires a nested Chain Rule:                                  Outer is power, inner is tangent, innermost is :                                 Using double angle identity or Product Rule:           Note: This is :                      Using Quotient Rule and Chain Rule:                   Higher Order Derivatives   Higher-Order Derivatives   The second derivative of is denoted by and is defined as       For , find .    First, rewrite the function as a power:   Find the first derivative:   Differentiate again to find the second derivative:       Find the first and second derivatives of the following functions.         Rewrite as .            Using the Chain Rule:            Using the Chain Rule where the outer function is : For the second derivative, use the Product Rule:         Application of Chain Rule (1)   If and if , , , and , find and .    First, we find :   Next, we use the Chain Rule to find . Evaluating at :       Application of Chain Rule (2)   If and if , , , , and , find .    By the Chain Rule, . Substituting :   Substitute the given values:    Solving for :     "
 },
 {
-  "id": "sec-chain-rule-8",
+  "id": "def-composed-function",
   "level": "2",
-  "url": "sec-chain-rule.html#sec-chain-rule-8",
-  "type": "Example",
+  "url": "sec-chain-rule.html#def-composed-function",
+  "type": "Definition",
   "number": "153",
+  "title": "Composed Function.",
+  "body": " Composed Function   The composed function , the composition of and , is defined as    "
+},
+{
+  "id": "sec-chain-rule-4",
+  "level": "2",
+  "url": "sec-chain-rule.html#sec-chain-rule-4",
+  "type": "Checkpoint",
+  "number": "154",
+  "title": "",
+  "body": "  For and , find and .    To find , we substitute into : To find , we substitute into :    "
+},
+{
+  "id": "sec-chain-rule-5",
+  "level": "2",
+  "url": "sec-chain-rule.html#sec-chain-rule-5",
+  "type": "Checkpoint",
+  "number": "155",
+  "title": "",
+  "body": "  For and , find and .    To find , we substitute into : To find , we substitute into :    "
+},
+{
+  "id": "thm-extended-power-rule",
+  "level": "2",
+  "url": "sec-chain-rule.html#thm-extended-power-rule",
+  "type": "Theorem",
+  "number": "156",
+  "title": "Extended Power Rule.",
+  "body": " Extended Power Rule   Suppose that is a function of , then for any real number ,    "
+},
+{
+  "id": "example-differentiate-composition",
+  "level": "2",
+  "url": "sec-chain-rule.html#example-differentiate-composition",
+  "type": "Example",
+  "number": "157",
+  "title": "",
+  "body": "  Identify the inner function and find the derivative for each expression.        Let the inner function be . Then .  Applying the Extended Power Rule:           Let the inner function be . Then .  Applying the Extended Power Rule:           Let the inner function be . Then the expression is .  Applying the Extended Power Rule:      "
+},
+{
+  "id": "subsec-extended-power-rule-7",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-extended-power-rule-7",
+  "type": "Checkpoint",
+  "number": "158",
+  "title": "",
+  "body": "  Differentiate the following functions.         Using the Extended Power Rule with :            Differentiate each term using the Extended Power Rule:   Factoring out :            Apply the Product Rule :   Factoring out the common terms :       "
+},
+{
+  "id": "thm-chain-rule",
+  "level": "2",
+  "url": "sec-chain-rule.html#thm-chain-rule",
+  "type": "Theorem",
+  "number": "159",
+  "title": "The Chain Rule.",
+  "body": " The Chain Rule   The derivative of the composition is given by Alternatively, suppose that and , then    "
+},
+{
+  "id": "subsec-Chain-Rule-7",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-7",
+  "type": "Example",
+  "number": "160",
+  "title": "",
+  "body": "  The function is decomposed as with   Derivatives:   Derivative of by the chain rule:    "
+},
+{
+  "id": "subsec-Chain-Rule-8",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-8",
+  "type": "Example",
+  "number": "161",
+  "title": "",
+  "body": "  The function is decomposed as with   Derivatives:   Derivative of by the chain rule:    "
+},
+{
+  "id": "subsec-Chain-Rule-9",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-9",
+  "type": "Example",
+  "number": "162",
+  "title": "",
+  "body": "  The function is decomposed as with   Derivatives:   Derivative of by the chain rule:    "
+},
+{
+  "id": "subsec-Chain-Rule-11",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-11",
+  "type": "Example",
+  "number": "163",
   "title": "",
   "body": "     To find the derivative of , we can use the Chain Rule. Let , so that . Then, we have:    "
+},
+{
+  "id": "subsec-Chain-Rule-12",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-12",
+  "type": "Example",
+  "number": "164",
+  "title": "",
+  "body": "  For and , find .    First, we find the individual derivatives:   Using the Chain Rule :   Substitute back into the expression:    "
+},
+{
+  "id": "subsec-Chain-Rule-13",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-Chain-Rule-13",
+  "type": "Checkpoint",
+  "number": "165",
+  "title": "",
+  "body": "  Find functions and such that , then differentiate:     First, we decompose the function:   The \"inner\" function is .    The \"outer\" function is .     Next, we find the derivative using the Chain Rule:      "
+},
+{
+  "id": "exercise-horizontal-tangents-trig",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercise-horizontal-tangents-trig",
+  "type": "Checkpoint",
+  "number": "166",
+  "title": "",
+  "body": "  Find the points on the graph of at which the tangent line is horizontal.    A tangent line is horizontal when the derivative is zero. First, we find using the Chain Rule:   Set the derivative equal to zero and use the double-angle identity :    This gives two cases for :          Finally, we find the -coordinates for these points:    "
+},
+{
+  "id": "exercises-chain-rule-solutions-3",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-3",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "     Rewrite as . By the Chain Rule:    "
+},
+{
+  "id": "exercises-chain-rule-solutions-4",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-4",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "     Rewrite as :    "
+},
+{
+  "id": "exercises-chain-rule-solutions-5",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-5",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "     Using the Product Rule:     "
+},
+{
+  "id": "exercises-chain-rule-solutions-6",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-6",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "     Using Product and Chain Rules:     "
+},
+{
+  "id": "exercises-chain-rule-solutions-7",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-7",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "     This requires a nested Chain Rule:     "
+},
+{
+  "id": "exercises-chain-rule-solutions-8",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-8",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "exercises-chain-rule-solutions-9",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-9",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "exercises-chain-rule-solutions-10",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-10",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "     Outer is power, inner is tangent, innermost is :    "
+},
+{
+  "id": "exercises-chain-rule-solutions-11",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-11",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "exercises-chain-rule-solutions-12",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-12",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "exercises-chain-rule-solutions-13",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-13",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "     Using double angle identity or Product Rule:    "
+},
+{
+  "id": "exercises-chain-rule-solutions-14",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-14",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "     Note: This is :    "
+},
+{
+  "id": "exercises-chain-rule-solutions-15",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-15",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "exercises-chain-rule-solutions-16",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-16",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "     Using Quotient Rule and Chain Rule:     "
+},
+{
+  "id": "exercises-chain-rule-solutions-17",
+  "level": "2",
+  "url": "sec-chain-rule.html#exercises-chain-rule-solutions-17",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "         "
+},
+{
+  "id": "def-higher-order-derivatives",
+  "level": "2",
+  "url": "sec-chain-rule.html#def-higher-order-derivatives",
+  "type": "Definition",
+  "number": "167",
+  "title": "Higher-Order Derivatives.",
+  "body": " Higher-Order Derivatives   The second derivative of is denoted by and is defined as    "
+},
+{
+  "id": "example-second-derivative-fraction",
+  "level": "2",
+  "url": "sec-chain-rule.html#example-second-derivative-fraction",
+  "type": "Example",
+  "number": "168",
+  "title": "",
+  "body": "  For , find .    First, rewrite the function as a power:   Find the first derivative:   Differentiate again to find the second derivative:    "
+},
+{
+  "id": "subsec-higher-order-derivatives-4",
+  "level": "2",
+  "url": "sec-chain-rule.html#subsec-higher-order-derivatives-4",
+  "type": "Checkpoint",
+  "number": "169",
+  "title": "",
+  "body": "  Find the first and second derivatives of the following functions.         Rewrite as .            Using the Chain Rule:            Using the Chain Rule where the outer function is : For the second derivative, use the Product Rule:      "
+},
+{
+  "id": "sec-chain-rule-10",
+  "level": "2",
+  "url": "sec-chain-rule.html#sec-chain-rule-10",
+  "type": "Checkpoint",
+  "number": "170",
+  "title": "Application of Chain Rule (1).",
+  "body": " Application of Chain Rule (1)   If and if , , , and , find and .    First, we find :   Next, we use the Chain Rule to find . Evaluating at :     "
+},
+{
+  "id": "sec-chain-rule-11",
+  "level": "2",
+  "url": "sec-chain-rule.html#sec-chain-rule-11",
+  "type": "Checkpoint",
+  "number": "171",
+  "title": "Application of Chain Rule (2).",
+  "body": " Application of Chain Rule (2)   If and if , , , , and , find .    By the Chain Rule, . Substituting :   Substitute the given values:    Solving for :    "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises",

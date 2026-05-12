@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-Implicit-Differentiation" class="notes">
+    <title>Implicit Differentiation</title>
+    <p>
+        In the previous sections, we have focused on finding derivatives of functions that are explicitly defined as <m>y = f(x)</m>. 
+        However, there are many situations where we encounter equations that define <m>y</m> implicitly in terms of <m>x</m>. 
+        In this section, we will explore how to find the derivative of <m>y</m> with respect to <m>x</m> when <m>y</m> is defined implicitly.
+    </p>
+    <definition xml:id="def-explicit-implicit-functions">
+  <title>Explicit and Implicit Functions</title>
+  <statement>
+    <p>
+      Functions that express one variable directly in terms of another variable are called <term>explicit functions</term>. 
+      For example, <m>y = \sqrt{x^2-1}</m> or <m>y = \sin x</m>.
+    </p>
+    <p>
+      Some functions are defined by a relation between <m>x</m> and <m>y</m> where neither variable is isolated; these are called <term>implicit functions</term>. 
+      For example, <m>x^2 + y^2 = 1</m> or <m>xy + 3x^3 = y^2</m>.
+    </p>
+  </statement>
+</definition>
+
+    <p>
+        Consider the equation of a circle centered at the origin with radius <m>r</m>:
+    </p>
+    <p>
+        <m>x^2 + y^2 = r^2</m>
+    </p>
+    <p>
+        In this case, <m>y</m> is not explicitly defined as a function of <m>x</m>, 
+        but we can still find <m>\dfrac{dy}{dx}</m> using implicit differentiation. 
+        To do this, we will differentiate both sides of the equation with respect to <m>x</m>, 
+        treating <m>y</m> as a function of <m>x</m> (i.e., <m>y = y(x)</m>).
+    </p>
+<example xml:id="example-implicit-functions-circle">
+  <statement>
+    <p>
+      How many different functions are determined implicitly by the equation <m>x^2+y^2=1</m>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The equation <m>x^2+y^2=1</m> represents a circle, which fails the vertical line test and is therefore not a single function. However, it implicitly defines infinitely many functions.
+    </p>
+    <p>
+      The two most common "continuous" functions determined by this relation are found by solving for <m>y</m>:
+      <me>y = \sqrt{1-x^2} \quad \text{and} \quad y = -\sqrt{1-x^2}</me>
+      These represent the upper and lower semicircles, respectively.
+    </p>
+  </solution>
+</example>
+<example xml:id="example-explicit-differentiation">
+  <statement>
+    <p>
+      Given <m>x^2+y^2=1</m>, find <m>\dfrac{dy}{dx}</m> by differentiating explicitly.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we solve the equation for <m>y</m> to get an explicit function:
+      <me>y^2 = 1 - x^2 \implies y = \pm\sqrt{1-x^2}</me>
+    </p>
+    <p>
+      We choose the positive branch <m>y = (1-x^2)^{1/2}</m> and differentiate using the Chain Rule:
+      <me>
+        \frac{dy}{dx} = \frac{1}{2}(1-x^2)^{-1/2} \cdot (-2x)
+      </me>
+      <me>
+        \frac{dy}{dx} = \frac{-x}{\sqrt{1-x^2}}
+      </me>
+    </p>
+    <p>
+      Since <m>y = \sqrt{1-x^2}</m>, we can substitute <m>y</m> back in to see the relationship:
+      <me>\frac{dy}{dx} = -\frac{x}{y}</me>
+    </p>
+  </solution>
+</example>
+
+<p>
+  If the equation <me>y^3+3y-4x^2=5x+2</me> determines an implicit function <m>f</m>, 
+  then <me>[f(x)]^3+3f(x)-4x^2=5x+2</me> for every <m>x</m> in the domain of <m>f</m>. 
+  However, there is no obvious way to solve for <m>y</m> in terms of <m>x</m> to obtain <m>f(x)</m>.
+</p>
+
+<remark xml:id="remark-implicit-existence">
+  <p>
+    It is possible to state conditions under which an implicit function exists and is differentiable. 
+    In this section, we will assume that a given equation in <m>x</m> and <m>y</m> determines a differentiable function <m>f</m> such that if <m>f(x)</m> is substituted for <m>y</m>, the equation is an identity for every <m>x</m> in the domain of <m>f</m>.
+  </p>
+</remark>
+
+<definition xml:id="def-implicit-diff-extended-power-rule">
+  <title>Implicit Differentiation (Extended Power Rule)</title>
+  <statement>
+    <p>
+      The derivative of <m>f</m> can be found by the method of <term>implicit differentiation</term>, 
+      in which we differentiate each term of the equation with respect to <m>x</m>. 
+      This involves treating <m>y</m> as a function of <m>x</m> and applying the Chain Rule, 
+      specifically when computing 
+      <me>\frac{d}{dx}y^n=ny^{n-1}\cdot\frac{d}{dx}y=ny^{n-1}\cdot\frac{dy}{dx}</me> 
+      for all integers <m>n</m>.
+    </p>
+  </statement>
+</definition>
+
+<p>
+To find the derivative of <m>y</m> with respect to <m>x</m>, 
+we will differentiate both sides of the equation <m>x^2 + y^2 = 1</m> with respect to <m>x</m>. 
+Applying the differentiation rules, we get:
+</p>
+<p>
+<me>\dfrac{d}{dx}(x^2) + \dfrac{d}{dx}(y^2) = \dfrac{d}{dx}(1)</me>
+</p>
+<p>
+    This simplifies to:
+    <me>2x + 2y \dfrac{dy}{dx} = 0</me>
+</p>
+<p>
+    Solving for <m>\dfrac{dy}{dx}</m>, we find:
+    <me>\dfrac{dy}{dx} = -\dfrac{x}{y}</me>
+</p>
+<p>
+  This result shows that the derivative of <m>y</m> with respect to <m>x</m> can be found even when <m>y</m> is defined implicitly; notice that the derivative depends on both <m>x</m> and <m>y</m>. 
+  This method yields the same result as differentiating explicitly in 
+  <xref ref="example-explicit-differentiation"/>, but it is often more efficient and can be applied to complex equations where solving for <m>y</m> explicitly is difficult or impossible.
+</p>
+
+<assemblage xml:id="method-implicit-differentiation">
+  <title>Method of Implicit Differentiation</title>
+  <p>
+    <ol>
+      <li>
+        <p>
+          Differentiate both sides of the equation with respect to <term>x</term>, 
+          treating <m>y</m> as a differentiable function of <m>x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Collect all terms containing <m>\dfrac{dy}{dx}</m> on one side of the equation 
+          and move all other terms to the other side.
+        </p>
+      </li>
+      <li>
+        <p>
+          Factor out <m>\dfrac{dy}{dx}</m> and solve for it.
+        </p>
+      </li>
+    </ol>
+  </p>
+</assemblage>
+
+<example xml:id="example-implicit-product-rule">
+  <statement>
+    <p>
+      Suppose <m>x^2 y + 2y^2 - x = 3</m>. Find <m>\dfrac{dy}{dx}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we differentiate each term with respect to <m>x</m>. Note that the first term requires the Product Rule and the second requires the Chain Rule:
+      <me>\frac{d}{dx}(x^2 y) = x^2 y' + 2xy \quad \text{and} \quad \frac{d}{dx}(2y^2) = 4y y'</me>
+    </p>
+    <p>
+      Differentiating the entire equation produces:
+      <me>x^2 y' + 2xy + 4y y' - 1 = 0</me>
+    </p>
+    <p>
+      Collect the terms containing <m>y'</m> on the left and move the rest to the right:
+      <me>(x^2 + 4y) y' = 1 - 2xy</me>
+    </p>
+    <p>
+      Finally, solve for <m>y'</m> by dividing:
+      <me>y' = \frac{1 - 2xy}{x^2 + 4y}</me>
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="exercise-circle-tangent">
+  <statement>
+    <p>
+      If <m>x^2+y^2=4</m>, find <m>\frac{dy}{dx}</m>. Then, find an equation of the tangent line to the circle <m>x^2+y^2=4</m> at the point <m>(2,0)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find <m>\dfrac{dy}{dx}</m> using implicit differentiation:
+      <me>2x + 2y \dfrac{dy}{dx} = 0 \implies \dfrac{dy}{dx} = -\dfrac{x}{y}</me>
+    </p>
+    <p>
+      Next, we evaluate the derivative at the point <m>(2,0)</m> to find the slope <m>m</m>:
+      <me>m = -\dfrac{2}{0}</me>
+      Since the derivative is undefined at this point, the tangent line is vertical.
+    </p>
+    <p>
+      The equation of a vertical line passing through <m>(2,0)</m> is:
+      <me>x = 2</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-implicit-poly-derivative">
+  <statement>
+    <p>
+      Assuming that the equation <m>y^4+3y-4x^3=5x+1</m> determines, implicitly, 
+      a differentiable function <m>f</m> such that <m>y=f(x)</m>, find its derivative.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We differentiate both sides with respect to <m>x</m>, treating <m>y</m> as a function of <m>x</m>:
+      <me>4y^3 \frac{dy}{dx} + 3 \frac{dy}{dx} - 12x^2 = 5</me>
+    </p>
+    <p>
+      Collect the <m>\frac{dy}{dx}</m> terms and factor:
+      <me>\frac{dy}{dx}(4y^3 + 3) = 5 + 12x^2</me>
+    </p>
+    <p>
+      Solve for <m>\dfrac{dy}{dx}</m>:
+      <me>\dfrac{dy}{dx} = \dfrac{12x^2 + 5}{4y^3 + 3}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-implicit-tangent-line">
+  <statement>
+    <p>
+      Find the equation of the tangent line to the graph of 
+      <me>y^4+3y-4x^3=5x+1</me> 
+      at the point <m>(1,-2)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the derivative found in <xref ref="exercise-implicit-poly-derivative" />, 
+      we evaluate the slope <m>m</m> at the point <m>(1, -2)</m>:
+      <me>m = \dfrac{12(1)^2 + 5}{4(-2)^3 + 3} = \dfrac{17}{-32 + 3} = \dfrac{17}{-29}</me>
+    </p>
+    <p>
+      Using the point-slope form <m>y - y_1 = m(x - x_1)</m>:
+      <me>y - (-2) = -\dfrac{17}{29}(x - 1)</me>
+      <me>y + 2 = -\dfrac{17}{29}x + \dfrac{17}{29}</me>
+    </p>
+    <p>
+      The final equation of the tangent line is:
+      <me>y = -\dfrac{17}{29}x - \dfrac{41}{29}</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercises xml:id="exercises-implicit-differentiation-set">
+  <title>Implicit Differentiation Exercises</title>
+
+  <!-- Exercise 1 -->
+  <exercise>
+    <statement>
+      <p>Find <m>y'</m> if <m>4xy^3-x^2y+x^3-5x+6=0</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        Differentiating each term with respect to <m>x</m> (using the Product Rule on the first two terms):
+        <me>(4y^3 + 12xy^2 y') - (2xy + x^2 y') + 3x^2 - 5 = 0</me>
+        Group the <m>y'</m> terms:
+        <me>y'(12xy^2 - x^2) = 5 - 3x^2 - 4y^3 + 2xy</me>
+        <me>y' = \frac{5 - 3x^2 - 4y^3 + 2xy}{12xy^2 - x^2}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Exercise 2 -->
+  <exercise>
+    <statement>
+      <p>Find <m>y'</m> if <m>y=x^2\sin y</m>.</p>
+    </statement>
+    <solution>
+      <p>
+        Apply the Product Rule and Chain Rule:
+        <me>y' = 2x\sin y + x^2(\cos y \cdot y')</me>
+        Isolate <m>y'</m>:
+        <me>y' - x^2\cos y \cdot y' = 2x\sin y</me>
+        <me>y'(1 - x^2\cos y) = 2x\sin y \implies y' = \frac{2x\sin y}{1 - x^2\cos y}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Exercise 3 -->
+  <exercise>
+    <introduction>
+      <p>For <m>y^3+x^2y^5-x^4=27</m>:</p>
+    </introduction>
+    <task>
+      <statement>
+        <p>Find <m>dy/dx</m> using implicit differentiation.</p>
+      </statement>
+      <solution>
+        <me>3y^2 \frac{dy}{dx} + (2xy^5 + 5x^2y^4 \frac{dy}{dx}) - 4x^3 = 0</me>
+        <me>\frac{dy}{dx}(3y^2 + 5x^2y^4) = 4x^3 - 2xy^5 \implies \frac{dy}{dx} = \frac{4x^3 - 2xy^5}{3y^2 + 5x^2y^4}</me>
+      </solution>
+    </task>
+    <task>
+      <statement>
+        <p>Find the slope of the tangent line to the curve at the point <m>(0,3)</m>.</p>
+      </statement>
+      <solution>
+        <p>
+          Substitute <m>x=0</m> and <m>y=3</m> into the derivative found above:
+          <me>m = \frac{4(0)^3 - 2(0)(3)^5}{3(3)^2 + 5(0)^2(3)^4} = \frac{0}{27} = 0</me>
+          The slope of the tangent line is <m>0</m>.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- Exercise 4 -->
+  <exercise>
+    <statement>
+      <p>Find <m>y'</m> if <m>x^2y^4+3y-4x^3=5\cos x-1</m>.</p>
+    </statement>
+    <solution>
+      <me>(2xy^4 + 4x^2y^3 y') + 3y' - 12x^2 = -5\sin x</me>
+      <me>y'(4x^2y^3 + 3) = 12x^2 - 2xy^4 - 5\sin x</me>
+      <me>y' = \frac{12x^2 - 2xy^4 - 5\sin x}{4x^2y^3 + 3}</me>
+    </solution>
+  </exercise>
+
+  <!-- Exercise 5 -->
+  <exercise>
+    <statement>
+      <p>Find <m>y''</m> if <m>y=\cos(x)+\cos(y)</m>.</p>
+    </statement>
+    <solution>
+      <p>First derivative:</p>
+      <me>y' = -\sin x - (\sin y \cdot y') \implies y'(1 + \sin y) = -\sin x \implies y' = \frac{-\sin x}{1 + \sin y}</me>
+      <p>Second derivative (using Quotient Rule):</p>
+      <me>y'' = \frac{-\cos x(1 + \sin y) - (-\sin x)(\cos y \cdot y')}{(1 + \sin y)^2}</me>
+      <p>To finish, substitute the expression for <m>y'</m> back into this equation.</p>
+    </solution>
+  </exercise>
+</exercises>
+
+
+
+
+
+</section>

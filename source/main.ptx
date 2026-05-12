@@ -52,6 +52,7 @@
         <xi:include href="./notes/22DerivativesTrigonometricFunctions.ptx"/>
         <xi:include href="./notes/23DerivativesExpFunctions.ptx"/>
         <xi:include href="./notes/24ChainRule.ptx"/>
+        <xi:include href="./notes/25ImplicitDiff.ptx"/>
         <!-- Include lecture notes, activities, and homework related to differentiation rules -->
     </chapter>
 

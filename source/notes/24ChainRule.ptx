@@ -8,12 +8,241 @@
             including those involving exponentials, logarithms, trigonometric functions, and more complex compositions.
             </p>
         </introduction>
+
+<definition xml:id="def-composed-function">
+  <title>Composed Function</title>
+  <statement>
+    <p>
+      The <term>composed</term> function <m>f \circ g</m>, 
+      the <term>composition</term> of <m>f</m> and <m>g</m>, is defined as
+      <me>f\circ g(x)=f(g(x)), \quad \text{or} \quad (f\circ g)(x)=f[g(x)].</me>
+    </p>
+  </statement>
+</definition>
+
+<exercise>
+  <statement>
+    <p>
+      For <m>f(x)=x^3</m> and <m>g(x)=1+x^2</m>, find <m>f\circ g(x)</m> and <m>g\circ f(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find <m>f\circ g(x)</m>, we substitute <m>g(x)</m> into <m>f</m>:
+      <me>f(g(x)) = f(1+x^2) = (1+x^2)^3</me>
+      To find <m>g\circ f(x)</m>, we substitute <m>f(x)</m> into <m>g</m>:
+      <me>g(f(x)) = g(x^3) = 1+(x^3)^2 = 1+x^6</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      For <m>f(x)=\sqrt{x}</m> and <m>g(x)=x-1</m>, find <m>f\circ g(x)</m> and <m>g\circ f(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find <m>f\circ g(x)</m>, we substitute <m>g(x)</m> into <m>f</m>:
+      <me>f(g(x)) = f(x-1) = \sqrt{x-1}</me>
+      To find <m>g\circ f(x)</m>, we substitute <m>f(x)</m> into <m>g</m>:
+      <me>g(f(x)) = g(\sqrt{x}) = \sqrt{x}-1</me>
+    </p>
+  </solution>
+</exercise>
+
+<subsection xml:id="subsec-extended-power-rule">
+  <title>Extended Power Rule</title>
+<p>
+  The extended power functions, such as <m>f(x) = (3x^2 + 2)^5</m>, can also be differentiated using the Chain Rule.
+</p>
+<p>
+  The extended power rule states that if <m>g(x) = [f(x)]^n</m>, 
+  where <m>f</m> is a differentiable function and <m>n</m> is a constant,
+   then the derivative of <m>g</m> with respect to <m>x</m> is given by:
+  <me>g'(x) = n(f(x))^{n-1} \cdot f'(x)</me>
+</p>
+<theorem xml:id="thm-extended-power-rule">
+  <title>Extended Power Rule</title>
+  <statement>
+    <p>
+      Suppose that <m>f(x)</m> is a function of <m>x</m>, 
+      then for any real number <m>k</m>,
+      <me>\frac{d}{dx}[f(x)]^k = k[f(x)]^{k-1} \cdot \frac{d}{dx}f(x).</me>
+    </p>
+  </statement>
+</theorem>
+
+<p>
+  The chain rule tells you how to handle compositions. 
+  Generally speaking, if a function <m>f(x)</m> is obtained "in two steps" as a composition of two simpler functions <m>u(x)</m> and <m>g(u)</m>, it is represented as
+  <me>f(x) = g(u)</me>, where <me>u = u(x)</me> is a function of <m>x</m>. 
+  Then <me>\dfrac{df}{dx}=\dfrac{df}{du} \cdot \dfrac{du}{dx}</me> 
+</p>
+
+<example xml:id="example-differentiate-composition">
+  <introduction>
+    <p>Identify the inner function <m>u</m> and find the derivative for each expression.</p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p><m>y = \sqrt{x^2+1}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Let the inner function be <m>u = x^2+1</m>. 
+        Then <m>y = u^{1/2}</m>.
+      </p>
+      <p>
+        Applying the Extended Power Rule:
+        <me>
+          \frac{dy}{dx} = \frac{1}{2}(x^2+1)^{-1/2} \cdot \frac{d}{dx}(x^2+1)
+        </me>
+        <me>
+          \frac{dy}{dx} = \frac{1}{2}(x^2+1)^{-1/2} \cdot (2x) = \frac{x}{\sqrt{x^2+1}}
+        </me>
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p><m>y = \dfrac{5}{(1+x^2)^2}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Let the inner function be <m>u = 1+x^2</m>. 
+        Then <m>y = 5u^{-2}</m>.
+      </p>
+      <p>
+        Applying the Extended Power Rule:
+        <me>
+          \frac{dy}{dx} = 5(-2)(1+x^2)^{-3} \cdot \frac{d}{dx}(1+x^2)
+        </me>
+        <me>
+          \frac{dy}{dx} = -10(1+x^2)^{-3} \cdot (2x) = \frac{-20x}{(1+x^2)^3}
+        </me>
+      </p>
+    </solution>
+  </task>
+    <task>
+    <statement>
+      <p><m>f(x) = \tan^2 x = (\tan x)^2</m></p>
+    </statement>
+    <solution>
+      <p>
+        Let the inner function be <m>u = \tan x</m>. 
+        Then the expression is <m>f(x) = u^2</m>.
+      </p>
+      <p>
+        Applying the Extended Power Rule:
+        <me>
+          f'(x) = 2(\tan x)^{1} \cdot \frac{d}{dx}(\tan x)
+        </me>
+        <me>
+          f'(x) = 2\tan x \cdot \sec^2 x
+        </me>
+      </p>
+    </solution>
+  </task>
+
+</example>
+
+<exercise>
+  <introduction>
+    <p>Differentiate the following functions.</p>
+  </introduction>
+
+  <!-- Part 1 -->
+  <task>
+    <statement>
+      <p><m>f(x)=(1+x^3)^{1/2}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using the Extended Power Rule with <m>u = 1+x^3</m>:
+        <me>
+          f'(x) = \frac{1}{2}(1+x^3)^{-1/2} \cdot \frac{d}{dx}(1+x^3)
+        </me>
+        <me>
+          f'(x) = \frac{1}{2}(1+x^3)^{-1/2} \cdot (3x^2) = \frac{3x^2}{2\sqrt{1+x^3}}
+        </me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 2 -->
+  <task>
+    <statement>
+      <p><m>y=(1-x^2)^3-(1-x^2)^2</m></p>
+    </statement>
+    <solution>
+      <p>
+        Differentiate each term using the Extended Power Rule:
+        <me>
+          y' = 3(1-x^2)^2(-2x) - 2(1-x^2)^1(-2x)
+        </me>
+        <me>
+          y' = -6x(1-x^2)^2 + 4x(1-x^2)
+        </me>
+        <p>Factoring out <m>-2x(1-x^2)</m>:</p>
+        <me>
+          y' = -2x(1-x^2)[3(1-x^2) - 2] = -2x(1-x^2)(1-3x^2)
+        </me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 3 -->
+  <task>
+    <statement>
+      <p><m>f(x)=(x-5)^4(7-x)^{10}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Apply the Product Rule <m>(uv)' = u'v + uv'</m>:
+        <me>
+          f'(x) = \left[4(x-5)^3(1)\right](7-x)^{10} + (x-5)^4\left[10(7-x)^9(-1)\right]
+        </me>
+        <me>
+          f'(x) = 4(x-5)^3(7-x)^{10} - 10(x-5)^4(7-x)^9
+        </me>
+        <p>Factoring out the common terms <m>2(x-5)^3(7-x)^9</m>:</p>
+        <me>
+          f'(x) = 2(x-5)^3(7-x)^9 [2(7-x) - 5(x-5)]
+        </me>
+        <me>
+          f'(x) = 2(x-5)^3(7-x)^9 [14 - 2x - 5x + 25] = 2(x-5)^3(7-x)^9(39-7x)
+        </me>
+      </p>
+    </solution>
+  </task>
+</exercise>
+</subsection>
+
+
+<subsection xml:id="subsec-Chain-Rule">
+  <title>The Chain Rule</title>
     <p>
         The Chain Rule is a fundamental differentiation rule that allows us to find the derivative of composite functions. 
         If we have a function defined as <m>h(x) = f(g(x))</m>, where <m>f</m> and <m>g</m> are differentiable functions, 
         then the derivative of <m>h</m> with respect to <m>x</m> is given by:
         <me>h'(x) = f'(g(x)) \cdot g'(x)</me>
     </p>
+    <theorem xml:id="thm-chain-rule">
+  <title>The Chain Rule</title>
+  <statement>
+    <p>
+      The derivative of the composition <m>f\circ g</m> is given by
+      <me>\frac{d}{dx}[f\circ g(x)] = \frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x).</me>
+      Alternatively, suppose that <m>y=f(u)</m> and <m>u=g(x)</m>, then
+      <me>\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}.</me>
+    </p>
+  </statement>
+</theorem>
+
     <p>
         In other words, to differentiate a composite function, 
         we first differentiate the outer function <m>f</m> with respect to its argument <m>g(x)</m>, 
@@ -33,6 +262,58 @@
           <mrow>h'(x) \amp = \cos(x^2) \cdot 2x</mrow>
         </md>
     </p>
+
+<example>
+  <statement>
+    <p>
+      The function <m>h(x) = (x^2 - 2x)^3</m> is decomposed as <m>f(g(x))</m> with 
+      <me>f(u) = u^3 \quad g(x) = x^2 - 2x.</me>
+    </p>
+    <p>
+      Derivatives:
+      <me>f'(u) = 3u^2 \quad g'(x) = 2x - 2.</me>
+    </p>
+    <p>
+      Derivative of <m>h(x)</m> by the chain rule:
+      <me>h'(x) = (3(x^2 - 2x)^2) (2x - 2).</me>
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      The function <m>h(x) = \sin(2x)</m> is decomposed as <m>f(g(x))</m> with 
+      <me>f(u) = \sin u \quad g(x) = 2x.</me>
+    </p>
+    <p>
+      Derivatives:
+      <me>f'(u) = \cos u \quad g'(x) = 2.</me>
+    </p>
+    <p>
+      Derivative of <m>h(x)</m> by the chain rule:
+      <me>h'(x) = (\cos(2x)) (2)=2\cos 2x.</me>
+    </p>
+  </statement>
+</example>
+
+<example>
+  <statement>
+    <p>
+      The function <m>h(x) = \sin^2(2x)</m> is decomposed as <m>f(g(x))</m> with 
+      <me>f(u) = \sin^2 u \quad g(x) = 2x.</me>
+    </p>
+    <p>
+      Derivatives:
+      <me>f'(u) = 2\sin u\cos u \quad g'(x) = 2.</me>
+    </p>
+    <p>
+      Derivative of <m>h(x)</m> by the chain rule:
+      <me>h'(x) = (2\sin(2x)\cos(2x)) (2)= 4\sin(2x)\cos(2x).</me>
+    </p>
+  </statement>
+</example>
+
     <p>
         The Chain Rule is a powerful tool that extends our ability to differentiate beyond simple functions, 
         enabling us to handle a wide range of mathematical models and applications in physics, 
@@ -54,6 +335,425 @@
     </p>    
     </solution>
 </example>
+
+<example>
+  <statement>
+    <p>
+      For <m>y=2+\sqrt{u}</m> and <m>u=x^3+1</m>, find <m>\dfrac{dy}{dx}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the individual derivatives:
+      <me>\frac{dy}{du} = \frac{1}{2}u^{-1/2} = \frac{1}{2\sqrt{u}} \quad \text{and} \quad \frac{du}{dx} = 3x^2</me>
+    </p>
+    <p>
+      Using the Chain Rule <m>\dfrac{dy}{dx} = \dfrac{dy}{du} \cdot \dfrac{du}{dx}</m>:
+      <me>\dfrac{dy}{dx} = \left( \dfrac{1}{2\sqrt{u}} \right) (3x^2)</me>
+    </p>
+    <p>
+      Substitute <m>u = x^3+1</m> back into the expression:
+      <me>\dfrac{dy}{dx} = \dfrac{3x^2}{2\sqrt{x^3+1}}</me>
+    </p>
+  </solution>
+</example>
+<exercise>
+  <statement>
+    <p>
+      Find functions <m>f(x)</m> and <m>g(x)</m> such that <m>h(x)=f\circ g(x)</m>, 
+      then differentiate:
+      <me>h(x)=(4x^3-7)^6</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we decompose the function:
+      <ul>
+        <li>
+          <p>The "inner" function is <m>g(x) = 4x^3 - 7</m>.</p>
+        </li>
+        <li>
+          <p>The "outer" function is <m>f(u) = u^6</m>.</p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Next, we find the derivative using the Chain Rule:
+      <me>h'(x) = f'(g(x)) \cdot g'(x)</me>
+      <me>h'(x) = 6(4x^3-7)^5 \cdot (12x^2)</me>
+      <me>h'(x) = 72x^2(4x^3-7)^5</me>
+    </p>
+  </solution>
+</exercise>
+<exercise xml:id="exercise-horizontal-tangents-trig">
+  <statement>
+    <p>
+      Find the points on the graph of 
+      <me>y = \cos 2x + 2\cos x \quad \text{for} \quad 0 \leq x \leq 2\pi</me> 
+      at which the tangent line is horizontal.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      A tangent line is horizontal when the derivative is zero. 
+      First, we find <m>\frac{dy}{dx}</m> using the Chain Rule:
+      <me>\frac{dy}{dx} = -2\sin 2x - 2\sin x</me>
+    </p>
+    <p>
+      Set the derivative equal to zero and use the double-angle identity <m>\sin 2x = 2\sin x \cos x</m>:
+      <me>-2(2\sin x \cos x) - 2\sin x = 0</me>
+      <me>-2\sin x (2\cos x + 1) = 0</me>
+    </p>
+    <p>
+      This gives two cases for <m>0 \leq x \leq 2\pi</m>:
+      <ul>
+        <li>
+          <p><m>\sin x = 0 \implies x = 0, \pi, 2\pi</m></p>
+        </li>
+        <li>
+          <p><m>\cos x = -1/2 \implies x = 2\pi/3, 4\pi/3</m></p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Finally, we find the <m>y</m>-coordinates for these points:
+      <me>(0, 3), (\pi, -1), (2\pi, 3), (2\pi/3, -1.5), (4\pi/3, -1.5)</me>
+    </p>
+  </solution>
+</exercise>
+</subsection>
+
+<exercises xml:id="exercises-chain-rule-solutions">
+  <title>Chain Rule Practice with Solutions</title>
+  <introduction>
+    <p>Differentiate the following functions.</p>
+  </introduction>
+
+  <!-- 1 -->
+  <exercise>
+    <statement>
+      <p><m>y=\sqrt[3]{5x^2-x+4}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite as <m>y = (5x^2-x+4)^{1/3}</m>. By the Chain Rule:
+        <me>y' = \frac{1}{3}(5x^2-x+4)^{-2/3} \cdot (10x-1) = \frac{10x-1}{3\sqrt[3]{(5x^2-x+4)^2}}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 2 -->
+  <exercise>
+    <statement>
+      <p><m>r(x) = \frac{1}{(4x^2+6x-7)^3}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite as <m>r(x) = (4x^2+6x-7)^{-3}</m>:
+        <me>r'(x) = -3(4x^2+6x-7)^{-4} \cdot (8x+6) = \frac{-6(4x+3)}{(4x^2+6x-7)^4}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 3 -->
+  <exercise>
+    <statement>
+      <p><m>y=(2z+5)^3(3z-1)^4</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using the Product Rule:
+        <me>y' = [3(2z+5)^2(2)](3z-1)^4 + (2z+5)^3[4(3z-1)^3(3)]</me>
+        <me>y' = 6(2z+5)^2(3z-1)^3 [ (3z-1) + 2(2z+5) ] = 6(2z+5)^2(3z-1)^3(7z+9)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 4 -->
+  <exercise>
+    <statement>
+      <p><m>g(x)=(3x-1)^5\sqrt{2x-5}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using Product and Chain Rules:
+        <me>g'(x) = 5(3x-1)^4(3)\sqrt{2x-5} + (3x-1)^5\left(\frac{1}{2}(2x-5)^{-1/2}(2)\right)</me>
+        <me>g'(x) = 15(3x-1)^4\sqrt{2x-5} + \frac{(3x-1)^5}{\sqrt{2x-5}}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 5 -->
+  <exercise>
+    <statement>
+      <p><m>y=(7x+\sqrt{x^2+6})^4</m></p>
+    </statement>
+    <solution>
+      <p>
+        This requires a nested Chain Rule:
+        <me>y' = 4(7x+\sqrt{x^2+6})^3 \cdot \frac{d}{dx}(7x+\sqrt{x^2+6})</me>
+        <me>y' = 4(7x+\sqrt{x^2+6})^3 \left(7 + \frac{x}{\sqrt{x^2+6}}\right)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 6 -->
+  <exercise>
+    <statement>
+      <p><m>f(x)=\cos(5x^3)</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>f'(x) = -\sin(5x^3) \cdot (15x^2) = -15x^2\sin(5x^3)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 7 -->
+  <exercise>
+    <statement>
+      <p><m>k(v)=(\cos v)^3</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>k'(v) = 3(\cos v)^2 \cdot (-\sin v) = -3\cos^2 v \sin v</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 8 -->
+  <exercise>
+    <statement>
+      <p><m>g(x)=\tan^4(3x)</m></p>
+    </statement>
+    <solution>
+      <p>
+        Outer is power, inner is tangent, innermost is <m>3x</m>:
+        <me>g'(x) = 4\tan^3(3x) \cdot \sec^2(3x) \cdot 3 = 12\tan^3(3x)\sec^2(3x)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 9 -->
+  <exercise>
+    <statement>
+      <p><m>H(x)=\sqrt{\sin 5x^2}</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>H'(x) = \frac{1}{2}(\sin 5x^2)^{-1/2} \cdot \cos(5x^2) \cdot (10x) = \frac{5x\cos 5x^2}{\sqrt{\sin 5x^2}}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 10 -->
+  <exercise>
+    <statement>
+      <p><m>y=(x+\frac{1}{x})^5</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>y' = 5(x+x^{-1})^4 \cdot (1 - x^{-2}) = 5(x+\frac{1}{x})^4(1 - \frac{1}{x^2})</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 11 -->
+  <exercise>
+    <statement>
+      <p><m>p(x)=\sin 4x \cos 4x</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using double angle identity <m>\frac{1}{2}\sin 8x</m> or Product Rule:
+        <me>p'(x) = (4\cos 4x)\cos 4x + \sin 4x(-4\sin 4x) = 4(\cos^2 4x - \sin^2 4x) = 4\cos 8x</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 12 -->
+  <exercise>
+    <statement>
+      <p><m>f(x)=\sin(2x+3)^4</m></p>
+    </statement>
+    <solution>
+      <p>
+        Note: This is <m>\sin( [2x+3]^4 )</m>:
+        <me>f'(x) = \cos(2x+3)^4 \cdot [4(2x+3)^3 \cdot 2] = 8(2x+3)^3\cos(2x+3)^4</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 13 -->
+  <exercise>
+    <statement>
+      <p><m>f(w)=\cot^3(3w-1)</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>f'(w) = 3\cot^2(3w-1) \cdot (-\csc^2(3w-1)) \cdot 3 = -9\cot^2(3w-1)\csc^2(3w-1)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 14 -->
+  <exercise>
+    <statement>
+      <p><m>f(x)=\frac{\sec 2x}{1+\tan 2x}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using Quotient Rule and Chain Rule:
+        <me>f'(x) = \frac{(2\sec 2x \tan 2x)(1+\tan 2x) - (\sec 2x)(2\sec^2 2x)}{(1+\tan 2x)^2}</me>
+        <me>f'(x) = \frac{2\sec 2x (\tan 2x + \tan^2 2x - \sec^2 2x)}{(1+\tan 2x)^2} = \frac{2\sec 2x (\tan 2x - 1)}{(1+\tan 2x)^2}</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- 15 -->
+  <exercise>
+    <statement>
+      <p><m>y = \sin \sqrt{x}+\cos \sqrt{x}</m></p>
+    </statement>
+    <solution>
+      <p>
+        <me>y' = \cos\sqrt{x} \cdot \frac{1}{2\sqrt{x}} - \sin\sqrt{x} \cdot \frac{1}{2\sqrt{x}} = \frac{\cos\sqrt{x}-\sin\sqrt{x}}{2\sqrt{x}}</me>
+      </p>
+    </solution>
+  </exercise>
+</exercises>
+
+<subsection xml:id="subsec-higher-order-derivatives">
+  <title>Higher Order Derivatives</title>
+  
+<definition xml:id="def-higher-order-derivatives">
+  <title>Higher-Order Derivatives</title>
+  <statement>
+    <p>
+      The <term>second derivative</term> of <m>f</m> is denoted by <m>f''</m> and is defined as
+      <me>f''(x) = \frac{d}{dx}f'(x).</me>
+    </p>
+  </statement>
+</definition>
+<example xml:id="example-second-derivative-fraction">
+  <statement>
+    <p>
+      For <m>y=1/x</m>, find <m>\dfrac{d^2y}{dx^2}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, rewrite the function as a power:
+      <me>y = x^{-1}</me>
+    </p>
+    <p>
+      Find the first derivative:
+      <me>\frac{dy}{dx} = -1x^{-2} = -\frac{1}{x^2}</me>
+    </p>
+    <p>
+      Differentiate again to find the second derivative:
+      <me>\frac{d^2y}{dx^2} = \frac{d}{dx}(-x^{-2}) = 2x^{-3} = \frac{2}{x^3}</me>
+    </p>
+  </solution>
+</example>
+<exercise>
+  <introduction>
+    <p>Find the first and second derivatives of the following functions.</p>
+  </introduction>
+
+  <!-- Part 1 -->
+  <task>
+    <statement>
+      <p><m>g(x)=\sqrt{3x+1}</m></p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite as <m>g(x) = (3x+1)^{1/2}</m>.
+        <me>g'(x) = \frac{1}{2}(3x+1)^{-1/2} \cdot 3 = \frac{3}{2}(3x+1)^{-1/2}</me>
+        <me>g''(x) = \frac{3}{2} \cdot \left(-\frac{1}{2}\right)(3x+1)^{-3/2} \cdot 3 = -\frac{9}{4(3x+1)^{3/2}}</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 2 -->
+  <task>
+    <statement>
+      <p><m>k(r)=(4r+7)^5</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using the Chain Rule:
+        <me>k'(r) = 5(4r+7)^4 \cdot 4 = 20(4r+7)^4</me>
+        <me>k''(r) = 20 \cdot 4(4r+7)^3 \cdot 4 = 320(4r+7)^3</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Part 3 -->
+  <task>
+    <statement>
+      <p><m>z(x)=\sin^3 x</m></p>
+    </statement>
+    <solution>
+      <p>
+        Using the Chain Rule where the outer function is <m>u^3</m>:
+        <me>z'(x) = 3\sin^2 x \cdot \cos x</me>
+        For the second derivative, use the Product Rule:
+        <me>z''(x) = [6\sin x \cos x](\cos x) + (3\sin^2 x)(-\sin x)</me>
+        <me>z''(x) = 6\sin x \cos^2 x - 3\sin^3 x</me>
+      </p>
+    </solution>
+  </task>
+</exercise>
+</subsection>
+
+<exercise>
+  <title>Application of Chain Rule (1) </title>
+  <statement>
+    <p>
+      If <m>k(x)=f(g(x))</m> and if <m>f(2)=-4</m>, <m>g(2)=2</m>, <m>f'(2)=-3</m>, and <m>g'(2)=5</m>, find <m>k(2)</m> and <m>k'(2)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find <m>k(2)</m>:
+      <me>k(2) = f(g(2)) = f(2) = -4</me>
+    </p>
+    <p>
+      Next, we use the Chain Rule to find <m>k'(x) = f'(g(x)) \cdot g'(x)</m>. Evaluating at <m>x=2</m>:
+      <me>k'(2) = f'(g(2)) \cdot g'(2)</me>
+      <me>k'(2) = f'(2) \cdot 5 = (-3) \cdot 5 = -15</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Application of Chain Rule (2) </title>
+  <statement>
+    <p>
+      If <m>f(x)=g(h(x))</m> and if <m>f(4)=3</m>, <m>g(4)=3</m>, <m>h(4)=4</m>, <m>f'(4)=2</m>, and <m>g'(4)=-5</m>, find <m>h'(4)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      By the Chain Rule, <m>f'(x) = g'(h(x)) \cdot h'(x)</m>. 
+      Substituting <m>x=4</m>:
+      <me>f'(4) = g'(h(4)) \cdot h'(4)</me>
+    </p>
+    <p>
+      Substitute the given values:
+      <me>2 = g'(4) \cdot h'(4)</me>
+      <me>2 = -5 \cdot h'(4)</me>
+    </p>
+    <p>
+      Solving for <m>h'(4)</m>:
+      <me>h'(4) = -\frac{2}{5}</me>
+    </p>
+  </solution>
+</exercise>
+
+
+
 
 
 

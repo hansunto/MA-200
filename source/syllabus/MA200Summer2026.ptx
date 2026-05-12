@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <section >
+      <title>MA-200-BL: Calculus I Course Syllabus</title>
+        <subsection xml:id="subsec-Course-Information">
+            <title>Course Information </title>
+      <p><bold>Course:</bold> MA-200: Calculus I (Hybrid/Blended, 4 credits), Summer 2026</p>
+      <p><bold>Instructor:</bold> Dr. Hansun To</p>
+      <p><bold>Contact:</bold> <email>hto1@worcester.edu</email></p>
+
+      <p>
+        This is a <bold>hybrid course</bold> that combines asynchronous online instruction
+        with required in-person examinations. Course materials, assignments, quizzes,
+        and instructional videos are delivered through MyOpenMath.
+        <bold>In-person attendance is required for all exams.</bold>
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Responsibility for Learning</title>
+
+      <p>
+        Students are responsible for their own learning. While instructional support is provided,
+        students are expected to seek help proactively. This course is <bold>very challenging</bold>
+        for students without a strong background in algebra and functions.
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Homework Policy</title>
+
+      <p>
+        Practice is essential for learning mathematics. Homework problems are designed to deepen
+        understanding, not just provide repetition. Students are encouraged to begin assignments early
+        and seek help when needed.
+      </p>
+
+      <p>
+        A LatePass provides a 48-hour extension. A 30% penalty applies to late work.
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Artificial Intelligence Policy</title>
+
+      <p>
+        AI tools may be used for studying and practice only.
+      </p>
+
+      <p>
+        <bold>
+          AI tools are not permitted on graded assignments unless explicitly authorized.
+        </bold>
+      </p>
+
+      <p>
+        Violations will be treated as academic dishonesty.
+      </p>
+    </subsection>
+
+    <subsection>
+      <title>Learning Outcomes</title>
+
+      <ol>
+        <li>Justify mathematical reasoning</li>
+        <li>Compute limits and derivatives</li>
+        <li>Apply derivatives in applications</li>
+        <li>Understand integrals and area</li>
+        <li>Apply the Fundamental Theorem of Calculus</li>
+        <li>Use L'Hopital's Rule</li>
+      </ol>
+    </subsection>
+
+    </section>

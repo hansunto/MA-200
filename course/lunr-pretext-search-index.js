@@ -1783,6 +1783,150 @@ var ptx_lunr_docs = [
   "body": " Application of Chain Rule (2)   If and if , , , , and , find .    By the Chain Rule, . Substituting :   Substitute the given values:    Solving for :    "
 },
 {
+  "id": "sec-Implicit-Differentiation",
+  "level": "1",
+  "url": "sec-Implicit-Differentiation.html",
+  "type": "Section",
+  "number": "",
+  "title": "Implicit Differentiation",
+  "body": " Implicit Differentiation  In the previous sections, we have focused on finding derivatives of functions that are explicitly defined as . However, there are many situations where we encounter equations that define implicitly in terms of . In this section, we will explore how to find the derivative of with respect to when is defined implicitly.   Explicit and Implicit Functions   Functions that express one variable directly in terms of another variable are called explicit functions . For example, or .  Some functions are defined by a relation between and where neither variable is isolated; these are called implicit functions . For example, or .    Consider the equation of a circle centered at the origin with radius :     In this case, is not explicitly defined as a function of , but we can still find using implicit differentiation. To do this, we will differentiate both sides of the equation with respect to , treating as a function of (i.e., ).    How many different functions are determined implicitly by the equation ?    The equation represents a circle, which fails the vertical line test and is therefore not a single function. However, it implicitly defines infinitely many functions.  The two most common \"continuous\" functions determined by this relation are found by solving for : These represent the upper and lower semicircles, respectively.      Given , find by differentiating explicitly.    First, we solve the equation for to get an explicit function:   We choose the positive branch and differentiate using the Chain Rule:    Since , we can substitute back in to see the relationship:     If the equation determines an implicit function , then for every in the domain of . However, there is no obvious way to solve for in terms of to obtain .   It is possible to state conditions under which an implicit function exists and is differentiable. In this section, we will assume that a given equation in and determines a differentiable function such that if is substituted for , the equation is an identity for every in the domain of .    Implicit Differentiation (Extended Power Rule)   The derivative of can be found by the method of implicit differentiation , in which we differentiate each term of the equation with respect to . This involves treating as a function of and applying the Chain Rule, specifically when computing for all integers .    To find the derivative of with respect to , we will differentiate both sides of the equation with respect to . Applying the differentiation rules, we get:     This simplifies to:   Solving for , we find:   This result shows that the derivative of with respect to can be found even when is defined implicitly; notice that the derivative depends on both and . This method yields the same result as differentiating explicitly in , but it is often more efficient and can be applied to complex equations where solving for explicitly is difficult or impossible.   Method of Implicit Differentiation     Differentiate both sides of the equation with respect to x , treating as a differentiable function of .    Collect all terms containing on one side of the equation and move all other terms to the other side.    Factor out and solve for it.        Suppose . Find .    First, we differentiate each term with respect to . Note that the first term requires the Product Rule and the second requires the Chain Rule:   Differentiating the entire equation produces:   Collect the terms containing on the left and move the rest to the right:   Finally, solve for by dividing:       If , find . Then, find an equation of the tangent line to the circle at the point .    First, we find using implicit differentiation:   Next, we evaluate the derivative at the point to find the slope : Since the derivative is undefined at this point, the tangent line is vertical.  The equation of a vertical line passing through is:       Assuming that the equation determines, implicitly, a differentiable function such that , find its derivative.    We differentiate both sides with respect to , treating as a function of :   Collect the terms and factor:   Solve for :       Find the equation of the tangent line to the graph of at the point .    Using the derivative found in , we evaluate the slope at the point :   Using the point-slope form :    The final equation of the tangent line is:      Implicit Differentiation Exercises     Find if .    Differentiating each term with respect to (using the Product Rule on the first two terms): Group the terms:         Find if .    Apply the Product Rule and Chain Rule: Isolate :         For :     Find using implicit differentiation.          Find the slope of the tangent line to the curve at the point .    Substitute and into the derivative found above: The slope of the tangent line is .        Find if .            Find if .    First derivative:   Second derivative (using Quotient Rule):   To finish, substitute the expression for back into this equation.     "
+},
+{
+  "id": "def-explicit-implicit-functions",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#def-explicit-implicit-functions",
+  "type": "Definition",
+  "number": "172",
+  "title": "Explicit and Implicit Functions.",
+  "body": " Explicit and Implicit Functions   Functions that express one variable directly in terms of another variable are called explicit functions . For example, or .  Some functions are defined by a relation between and where neither variable is isolated; these are called implicit functions . For example, or .   "
+},
+{
+  "id": "example-implicit-functions-circle",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#example-implicit-functions-circle",
+  "type": "Example",
+  "number": "173",
+  "title": "",
+  "body": "  How many different functions are determined implicitly by the equation ?    The equation represents a circle, which fails the vertical line test and is therefore not a single function. However, it implicitly defines infinitely many functions.  The two most common \"continuous\" functions determined by this relation are found by solving for : These represent the upper and lower semicircles, respectively.   "
+},
+{
+  "id": "example-explicit-differentiation",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#example-explicit-differentiation",
+  "type": "Example",
+  "number": "174",
+  "title": "",
+  "body": "  Given , find by differentiating explicitly.    First, we solve the equation for to get an explicit function:   We choose the positive branch and differentiate using the Chain Rule:    Since , we can substitute back in to see the relationship:    "
+},
+{
+  "id": "remark-implicit-existence",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#remark-implicit-existence",
+  "type": "Remark",
+  "number": "175",
+  "title": "",
+  "body": " It is possible to state conditions under which an implicit function exists and is differentiable. In this section, we will assume that a given equation in and determines a differentiable function such that if is substituted for , the equation is an identity for every in the domain of .  "
+},
+{
+  "id": "def-implicit-diff-extended-power-rule",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#def-implicit-diff-extended-power-rule",
+  "type": "Definition",
+  "number": "176",
+  "title": "Implicit Differentiation (Extended Power Rule).",
+  "body": " Implicit Differentiation (Extended Power Rule)   The derivative of can be found by the method of implicit differentiation , in which we differentiate each term of the equation with respect to . This involves treating as a function of and applying the Chain Rule, specifically when computing for all integers .   "
+},
+{
+  "id": "method-implicit-differentiation-2",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#method-implicit-differentiation-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "x "
+},
+{
+  "id": "example-implicit-product-rule",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#example-implicit-product-rule",
+  "type": "Example",
+  "number": "177",
+  "title": "",
+  "body": "  Suppose . Find .    First, we differentiate each term with respect to . Note that the first term requires the Product Rule and the second requires the Chain Rule:   Differentiating the entire equation produces:   Collect the terms containing on the left and move the rest to the right:   Finally, solve for by dividing:    "
+},
+{
+  "id": "exercise-circle-tangent",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercise-circle-tangent",
+  "type": "Checkpoint",
+  "number": "178",
+  "title": "",
+  "body": "  If , find . Then, find an equation of the tangent line to the circle at the point .    First, we find using implicit differentiation:   Next, we evaluate the derivative at the point to find the slope : Since the derivative is undefined at this point, the tangent line is vertical.  The equation of a vertical line passing through is:    "
+},
+{
+  "id": "exercise-implicit-poly-derivative",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercise-implicit-poly-derivative",
+  "type": "Checkpoint",
+  "number": "179",
+  "title": "",
+  "body": "  Assuming that the equation determines, implicitly, a differentiable function such that , find its derivative.    We differentiate both sides with respect to , treating as a function of :   Collect the terms and factor:   Solve for :    "
+},
+{
+  "id": "exercise-implicit-tangent-line",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercise-implicit-tangent-line",
+  "type": "Checkpoint",
+  "number": "180",
+  "title": "",
+  "body": "  Find the equation of the tangent line to the graph of at the point .    Using the derivative found in , we evaluate the slope at the point :   Using the point-slope form :    The final equation of the tangent line is:    "
+},
+{
+  "id": "exercises-implicit-differentiation-set-2",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Find if .    Differentiating each term with respect to (using the Product Rule on the first two terms): Group the terms:     "
+},
+{
+  "id": "exercises-implicit-differentiation-set-3",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find if .    Apply the Product Rule and Chain Rule: Isolate :     "
+},
+{
+  "id": "exercises-implicit-differentiation-set-4",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  For :     Find using implicit differentiation.          Find the slope of the tangent line to the curve at the point .    Substitute and into the derivative found above: The slope of the tangent line is .    "
+},
+{
+  "id": "exercises-implicit-differentiation-set-5",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Find if .        "
+},
+{
+  "id": "exercises-implicit-differentiation-set-6",
+  "level": "2",
+  "url": "sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set-6",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Find if .    First derivative:   Second derivative (using Quotient Rule):   To finish, substitute the expression for back into this equation.   "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",

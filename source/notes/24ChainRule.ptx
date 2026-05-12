@@ -396,8 +396,8 @@
   <solution>
     <p>
       A tangent line is horizontal when the derivative is zero. 
-      First, we find <m>\frac{dy}{dx}</m> using the Chain Rule:
-      <me>\frac{dy}{dx} = -2\sin 2x - 2\sin x</me>
+      First, we find <m>\dfrac{dy}{dx}</m> using the Chain Rule:
+      <me>\dfrac{dy}{dx} = -2\sin 2x - 2\sin x</me>
     </p>
     <p>
       Set the derivative equal to zero and use the double-angle identity <m>\sin 2x = 2\sin x \cos x</m>:
@@ -445,7 +445,7 @@
   <!-- 2 -->
   <exercise>
     <statement>
-      <p><m>r(x) = \frac{1}{(4x^2+6x-7)^3}</m></p>
+      <p><m>r(x) = \dfrac{1}{(4x^2+6x-7)^3}</m></p>
     </statement>
     <solution>
       <p>
@@ -549,11 +549,11 @@
   <!-- 10 -->
   <exercise>
     <statement>
-      <p><m>y=(x+\frac{1}{x})^5</m></p>
+      <p><m>y=(x+\dfrac{1}{x})^5</m></p>
     </statement>
     <solution>
       <p>
-        <me>y' = 5(x+x^{-1})^4 \cdot (1 - x^{-2}) = 5(x+\frac{1}{x})^4(1 - \frac{1}{x^2})</me>
+        <me>y' = 5(x+x^{-1})^4 \cdot (1 - x^{-2}) = 5(x+\dfrac{1}{x})^4(1 - \dfrac{1}{x^2})</me>
       </p>
     </solution>
   </exercise>
@@ -565,7 +565,7 @@
     </statement>
     <solution>
       <p>
-        Using double angle identity <m>\frac{1}{2}\sin 8x</m> or Product Rule:
+        Using double angle identity <m>\dfrac{1}{2}\sin 8x</m> or Product Rule:
         <me>p'(x) = (4\cos 4x)\cos 4x + \sin 4x(-4\sin 4x) = 4(\cos^2 4x - \sin^2 4x) = 4\cos 8x</me>
       </p>
     </solution>
@@ -599,13 +599,13 @@
   <!-- 14 -->
   <exercise>
     <statement>
-      <p><m>f(x)=\frac{\sec 2x}{1+\tan 2x}</m></p>
+      <p><m>f(x)=\dfrac{\sec 2x}{1+\tan 2x}</m></p>
     </statement>
     <solution>
       <p>
         Using Quotient Rule and Chain Rule:
-        <me>f'(x) = \frac{(2\sec 2x \tan 2x)(1+\tan 2x) - (\sec 2x)(2\sec^2 2x)}{(1+\tan 2x)^2}</me>
-        <me>f'(x) = \frac{2\sec 2x (\tan 2x + \tan^2 2x - \sec^2 2x)}{(1+\tan 2x)^2} = \frac{2\sec 2x (\tan 2x - 1)}{(1+\tan 2x)^2}</me>
+        <me>f'(x) = \dfrac{(2\sec 2x \tan 2x)(1+\tan 2x) - (\sec 2x)(2\sec^2 2x)}{(1+\tan 2x)^2}</me>
+        <me>f'(x) = \dfrac{2\sec 2x (\tan 2x + \tan^2 2x - \sec^2 2x)}{(1+\tan 2x)^2} = \dfrac{2\sec 2x (\tan 2x - 1)}{(1+\tan 2x)^2}</me>
       </p>
     </solution>
   </exercise>

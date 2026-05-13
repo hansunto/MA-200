@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-Derivatives-Logarithmic-Functions" class="notes">
+    <title>Derivatives of Logarithmic Functions</title>
+    <p>
+        In this section, we will find the derivatives of logarithmic functions. 
+        We will start with the natural logarithm and then extend our results to logarithms 
+        with other bases.
+    </p>
+    
+<theorem>
+    <title>Laws of Logarithm</title>
+    <statement>
+        <p>
+            Let <m>a,M,</m> and <m>N</m> be positive real numbers with <m>a\not=1</m>.
+        </p>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        (product rule) <m>\log_aMN=\log_aM+\log_aN</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        (quotient rule) <m>\log_a\left(\frac{M}{N}\right)=\log_aM-\log_aN</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        (power rule) <m>\log_aM^p=p\log_a M</m>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+
+<assemblage>
+    <title>The change-of-base Property</title>
+    <p>
+        <m>\log_ax=\dfrac{\ln x}{\ln a}\quad (a&gt;0,~a\not= 1)</m>
+    </p>
+</assemblage>
+
+<p>
+    The natural logarithm function, denoted as <m>\ln(x)</m>, is the inverse of 
+    the exponential function <m>e^x</m>. 
+    To find the derivative of <m>\ln(x)</m>, we can use implicit differentiation. 
+    Let <m>y = \ln(x)</m>, which implies that <m>e^y = x</m>. Differentiating both sides 
+    with respect to <m>x</m>, we get:
+</p>
+<subsection xml:id="subsection-derivation-cases">
+        <title>How to Derive the Derivative Formula</title>
+        
+        <p>
+            <dfn>Case 1: <m>u = x</m> (where <m>x \gt 0</m>)</dfn>
+        </p>
+        <p>
+            Let <m>y = \ln x</m>. 
+            We rewrite the logarithmic equation in its equivalent exponential form:
+            <me>e^y = x</me>
+            Next, we differentiate both sides implicitly with respect to <m>x</m>:
+            <me>\frac{d}{dx}(e^y) = \frac{d}{dx}(x)</me>
+            <me>e^y \cdot \frac{dy}{dx} = 1</me>
+            Now we isolate <m>\dfrac{dy}{dx}</m>:
+            <me>\frac{dy}{dx} = \frac{1}{e^y}</me>
+            Finally, substituting <m>e^y = x</m> back into the denominator yields the identity:
+            <me>\frac{d}{dx}(\ln x) = \frac{1}{x}</me>
+        </p>
+
+        <p>
+            <dfn>Case 2: <m>y = \ln u</m> (Chain Rule for <m>u \gt 0</m>)</dfn>
+        </p>
+        <p>
+            We apply the Calculus Chain Rule, which states:
+            <me>\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}</me>
+            Substituting the known derivative from Case 1 where <m>\dfrac{dy}{du} = \dfrac{1}{u}</m>, we get:
+            <me>\frac{d}{dx}(\ln u) = \frac{1}{u} \cdot \frac{du}{dx}</me>
+        </p>
+        <assemblage xml:id="assemblage-derivative-natural-log">
+    <title>Derivative of the Natural Logarithm Function</title>
+    <p>
+        For a differentiable function <m>u</m> where <m>u \gt 0</m>:
+        <me>\frac{d}{dx}(\ln u)=\frac{1}{u}\frac{du}{dx}</me>
+    </p>
+    <p>
+        For <m>x \neq 0</m>:
+        <me>\frac{d}{dx}(\ln |x|)=\frac{1}{x}</me>
+    </p>
+</assemblage>
+    </subsection>
+    <example xml:id="example-derivative-ln-variants">
+    <introduction>
+        <p>
+            Differentiate each of the following functions:
+        </p>
+    </introduction>
+    <task>
+        <statement>
+            <p>
+                <m>y=\ln 2x</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                1. We apply the chain rule by setting the inner function <m>u = 2x</m>. 
+                The derivative is given by:
+                <me>\frac{dy}{dx} = \frac{1}{2x} \cdot \frac{d}{dx}(2x)</me>
+                Evaluating the inner derivative yields:
+                <me>\frac{dy}{dx} = \frac{1}{2x} \cdot 2 = \frac{1}{x}</me>
+            </p>
+            <p>
+                2. Alternatively, applying the product rule of logarithms first gives:
+                <me>y = \ln 2 + \ln x</me>
+                Since <m>\ln 2</m> is a constant, differentiating both sides directly gives:
+                <me>\frac{dy}{dx} = 0 + \frac{1}{x} = \frac{1}{x}</me>
+            </p>
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>
+                <m>y=\ln \left(\dfrac{2x+1}{3x}\right)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We use the properties of logarithms to expand the quotient before differentiating:
+                <me>y = \ln(2x+1) - \ln(3x)</me>
+                <me>y = \ln(2x+1) - (\ln 3 + \ln x) = \ln(2x+1) - \ln 3 - \ln x</me>
+                Next, we take the derivative of each individual term:
+                <me>\frac{dy}{dx} = \frac{1}{2x+1} \cdot \frac{d}{dx}(2x+1) - 0 - \frac{1}{x}</me>
+                <me>\frac{dy}{dx} = \frac{2}{2x+1} - \frac{1}{x}</me>
+                To find a single fractional expression, we find a common denominator:
+                <me>\frac{dy}{dx} = \frac{2x - (2x+1)}{x(2x+1)} = \frac{-1}{x(2x+1)}</me>
+            </p>
+        </solution>
+    </task>
+</example>
+<exercise xml:id="exercise-expand-logarithmic-derivatives">
+    <statement>
+        <p>
+            Expand the logarithmic expression and find the derivatives:
+        </p>
+    </statement>
+    <task>
+        <statement>
+            <p>
+                <m>\log_2(x\sqrt{x^2+1})</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                First, apply the product rule and power rule of logarithms to fully expand the expression:
+                <me>\log_2(x\sqrt{x^2+1}) = \log_2 x + \log_2(x^2+1)^{1/2}</me>
+                <me>= \log_2 x + \frac{1}{2}\log_2(x^2+1)</me>
+            </p>
+            <p>
+                Next, use the base change formula to rewrite the expressions in terms of natural logarithms for easier differentiation:
+                <me>= \frac{\ln x}{\ln 2} + \frac{1}{2\ln 2}\ln(x^2+1)</me>
+            </p>
+            <p>
+                Now, find the derivative with respect to <m>x</m> using the chain rule on the second term:
+                <me>\frac{d}{dx}\left[ \frac{\ln x}{\ln 2} + \frac{\ln(x^2+1)}{2\ln 2} \right] = \frac{1}{x\ln 2} + \frac{1}{2\ln 2} \cdot \frac{1}{x^2+1} \cdot 2x</me>
+                <me>= \frac{1}{x\ln 2} + \frac{x}{(x^2+1)\ln 2}</me>
+            </p>
+            <p>
+                Combine the expressions over a common denominator:
+                <me>= \frac{(x^2+1) + x^2}{x(x^2+1)\ln 2} = \frac{2x^2+1}{x(x^2+1)\ln 2}</me>
+            </p>
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>
+                <m>\ln\left(\dfrac{\sqrt[3]{x^4+12}}{(x+16)\sqrt{x-3}} \right)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                First, completely expand the quotient, products, and fractional powers using log laws:
+                <me>= \ln\sqrt[3]{x^4+12} - \ln\left((x+16)\sqrt{x-3}\right)</me>
+                <me>= \ln(x^4+12)^{1/3} - \left[ \ln(x+16) + \ln(x-3)^{1/2} \right]</me>
+                <me>= \frac{1}{3}\ln(x^4+12) - \ln(x+16) - \frac{1}{2}\ln(x-3)</me>
+            </p>
+            <p>
+                Next, differentiate each isolated logarithmic term applying the chain rule where necessary:
+                <me>\frac{d}{dx}\left[ \frac{1}{3}\ln(x^4+12) - \ln(x+16) - \frac{1}{2}\ln(x-3) \right]</me>
+                <me>= \frac{1}{3} \cdot \frac{4x^3}{x^4+12} - \frac{1}{x+16} - \frac{1}{2} \cdot \frac{1}{x-3}</me>
+                <me>= \frac{4x^3}{3(x^4+12)} - \frac{1}{x+16} - \frac{1}{2(x-3)}</me>
+            </p>
+        </solution>
+    </task>
+</exercise>
+
+<assemblage xml:id="assemblage-derivatives-general-base">
+    <title>Derivatives of <m>a^u</m> and <m>\log_au</m></title>
+    <p>
+        Every exponential function can be expressed as a power of the natural exponential function: 
+        <me>a^x=e^{x\ln a}</me>
+    </p>
+    <p>
+        For constants <m>a \gt 0</m> and <m>a \neq 1</m>, the derivatives are given by:
+        <me>\frac{d}{dx}(a^u)=a^u \ln a \frac{du}{dx} \qquad \frac{d}{dx}(\log_a u)=\frac{1}{u\ln a} \frac{du}{dx}</me>
+    </p>
+</assemblage>
+<example xml:id="example-derivative-general-exponential">
+    <statement>
+        <p>
+            Differentiate: <m>y=2^x</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            We apply the derivative rule for general exponential functions, 
+            <m>\dfrac{d}{dx}(a^x) = a^x \ln a</m>, where the base is <m>a = 2</m>:
+            <me>\frac{dy}{dx} = 2^x \ln 2</me>
+        </p>
+        <p>
+            Alternatively, we can rewrite the function using base <m>e</m> before differentiating:
+            <me>y = e^{x \ln 2}</me>
+            Applying the chain rule yields:
+            <me>\frac{dy}{dx} = e^{x \ln 2} \cdot \frac{d}{dx}(x \ln 2) = e^{x \ln 2} \cdot \ln 2</me>
+            Substituting <m>e^{x \ln 2} = 2^x</m> back into the expression gives the identical result:
+            <me>\frac{dy}{dx} = 2^x \ln 2</me>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="example-derivative-general-log-logarithmic-diff">
+    <statement>
+        <p>
+            Differentiate each of the following functions:
+        </p>
+    </statement>
+    <task>
+        <statement>
+            <p>
+                <m>y=\log_5 e^x</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We can simplify the expression first using the properties of logarithms. By bringing down the exponent <m>x</m>:
+                <me>y = x \log_5 e</me>
+                Since <m>\log_5 e</m> is a constant coefficient, we differentiate directly with respect to <m>x</m>:
+                <me>\frac{dy}{dx} = \log_5 e</me>
+            </p>
+            <p>
+                Alternatively, we can use the change-of-base formula to rewrite the expression in terms of natural logarithms:
+                <me>y = \frac{\ln(e^x)}{\ln 5} = \frac{x}{\ln 5}</me>
+                Differentiating this linear expression gives:
+                <me>\frac{dy}{dx} = \frac{1}{\ln 5}</me>
+                Note that both forms are equivalent because <m>\log_5 e = \frac{1}{\ln 5}</m>.
+            </p>
+        </solution>
+    </task>
+    <task>
+        <statement>
+            <p>
+                <m>y=\dfrac{(x^2+1)(x+3)^{1/2}}{x-1}, \quad x \gt 1</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Given the complex product and quotient structure, we use logarithmic differentiation. First, take the natural logarithm of both sides:
+                <me>\ln y = \ln\left( \frac{(x^2+1)(x+3)^{1/2}}{x-1} \right)</me>
+                Expand the right side completely using the product, quotient, and power laws of logarithms:
+                <me>\ln y = \ln(x^2+1) + \frac{1}{2}\ln(x+3) - \ln(x-1)</me>
+                Next, differentiate both sides implicitly with respect to <m>x</m>, applying the chain rule:
+                <me>\frac{1}{y}\frac{dy}{dx} = \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1}</me>
+                Finally, isolate <m>\frac{dy}{dx}</m> by multiplying both sides by <m>y</m>, and substitute the original algebraic expression back in for <m>y</m>:
+                <me>\frac{dy}{dx} = y \left[ \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1} \right]</me>
+                <me>\frac{dy}{dx} = \frac{(x^2+1)(x+3)^{1/2}}{x-1} \left[ \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1} \right]</me>
+            </p>
+        </solution>
+    </task>
+</example>
+
+<exercises xml:id="exercises-logarithmic-differentiation">
+    <title>Exercises on Logarithmic Differentiation</title>
+    <introduction>
+        <p>
+            Differentiate each of the following functions with respect to its independent variable:
+        </p>
+    </introduction>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\ln (t^2)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                First, apply logarithmic properties to simplify the expression by bringing down the exponent:
+                <me>y = 2\ln t</me>
+                Differentiating directly with respect to <m>t</m> yields:
+                <me>\frac{dy}{dt} = 2 \cdot \frac{1}{t} = \frac{2}{t}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\ln(\ln x)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We apply the chain rule, treating the outer function as <m>\ln(u)</m> where <m>u = \ln x</m>:
+                <me>\frac{dy}{dx} = \frac{1}{\ln x} \cdot \frac{d}{dx}(\ln x)</me>
+                Evaluating the inner derivative yields:
+                <me>\frac{dy}{dx} = \frac{1}{\ln x} \cdot \frac{1}{x} = \frac{1}{x\ln x}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\log(\sec \theta +\tan \theta)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Assuming <m>\log</m> denotes the common logarithm (base 10), 
+                we first apply the general logarithm derivative rule 
+                <m>\dfrac{d}{d\theta}(\log_a u) = \dfrac{1}{u\ln a}\dfrac{du}{d\theta}</m>:
+                <me>\frac{dy}{d\theta} = \frac{1}{(\sec \theta + \tan \theta)\ln 10} \cdot \frac{d}{d\theta}(\sec \theta + \tan \theta)</me>
+                Compute the derivatives of the trigonometric functions:
+                <me>\frac{dy}{d\theta} = \frac{\sec \theta \tan \theta + \sec^2 \theta}{(\sec \theta + \tan \theta)\ln 10}</me>
+                Factor out <m>\sec \theta</m> in the numerator to cancel common terms:
+                <me>\frac{dy}{d\theta} = \frac{\sec \theta (\tan \theta + \sec \theta)}{(\sec \theta + \tan \theta)\ln 10} = \frac{\sec \theta}{\ln 10}</me>
+                <em>Note:</em> If <m>\log</m> refers to the natural logarithm in your context, the <m>\ln 10</m> factor is omitted, yielding <m>\sec \theta</m>.
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y= \dfrac{1+\ln t}{1-\ln t}</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We apply the quotient rule <m>\left(\dfrac{f}{g}\right)' = \dfrac{f'g - fg'}{g^2}</m> with respect to <m>t</m>:
+                <me>\frac{dy}{dt} = \frac{\dfrac{1}{t}(1-\ln t) - (1+\ln t)\left(-\dfrac{1}{t}\right)}{(1-\ln t)^2}</me>
+                Factor out <m>\dfrac{1}{t}</m> in the numerator to simplify the terms:
+                <me>\dfrac{dy}{dt} = \dfrac{\dfrac{1}{t}\left[(1-\ln t) + (1+\ln t)\right]}{(1-\ln t)^2}</me>
+                Combine terms to get the final simplified expression:
+                <me>\dfrac{dy}{dt} = \dfrac{2}{t(1-\ln t)^2}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=e^{(\cos t+\ln t)}</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                First, use exponent rules to simplify the function before differentiating:
+                <me>y = e^{\cos t} \cdot e^{\ln t} = t e^{\cos t}</me>
+                Now, apply the product rule to evaluate the derivative:
+                <me>\frac{dy}{dt} = 1 \cdot e^{\cos t} + t \cdot \left(e^{\cos t} \cdot (-\sin t)\right)</me>
+                Factor out <m>e^{\cos t}</m>:
+                <me>\frac{dy}{dt} = e^{\cos t}(1 - t\sin t)</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>\ln y=e^y \sin x</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Since the equation defines <m>y</m> implicitly, we use implicit differentiation with respect to <m>x</m>. 
+                Differentiate both sides:
+                <me>\dfrac{1}{y}\frac{dy}{dx} = \left(e^y \cdot \dfrac{dy}{dx}\right)\sin x + e^y(\cos x)</me>
+                Gather all terms involving <m>\dfrac{dy}{dx}</m> onto the left side of the equation:
+                <me>\dfrac{1}{y}\dfrac{dy}{dx} - e^y \sin x \dfrac{dy}{dx} = e^y \cos x</me>
+                Factor out <m>\dfrac{dy}{dx}</m>:
+                <me>\dfrac{dy}{dx}\left(\dfrac{1}{y} - e^y \sin x\right) = e^y \cos x</me>
+                Isolate <m>\dfrac{dy}{dx}</m>:
+                <me>\dfrac{dy}{dx} = \dfrac{e^y \cos x}{\dfrac{1}{y} - e^y \sin x}</me>
+                Multiply the numerator and denominator by <m>y</m> to clear the complex fraction:
+                <me>\dfrac{dy}{dx} = \dfrac{y e^y \cos x}{1 - y e^y \sin x}</me>
+            </p>
+        </solution>
+    </exercise>
+</exercises>
+
+
+
+    </section>

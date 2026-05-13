@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-related-rates" class="notes">
+    <title>Related Rates</title>
+
+    <introduction>
+        <p>
+            In many real-world applications, several variables vary simultaneously with respect to time. When an algebraic or geometric equation connects these variables, we can differentiate the entire relationship implicitly with respect to time. This allows us to calculate how the rate of change of one quantity directly drives or restricts the rate of change of another.
+        </p>
+    </introduction>
+
+    <theorem xml:id="theorem-related-rates-chain-rule">
+        <title>Related Rates Identity</title>
+        <statement>
+            <p>
+                Suppose that <m>y</m> is a differentiable function of <m>x</m> given by <m>y=f(x)</m>, where <m>x</m> varies continuously with time <m>t</m>. Because <m>y</m> depends functionally on <m>x</m> and <m>x</m> depends on <m>t</m>, the quantity <m>y</m> implicitly depends on <m>t</m>. The Calculus Chain Rule dictates the following relationship:
+                <me>\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}</me>
+            </p>
+        </statement>
+    </theorem>
+    <statement>
+        <p>
+            A ladder is leaning precariously against a wall. It starts to slide down, 
+            and as it does, the distance <m>X</m> between the bottom of the ladder 
+            and the wall increases at a certain rate <m>X' = \dfrac{dX}{dt}</m>; 
+            at the same time, the height <m>H</m> of the top of the ladder decreases 
+            at the rate <m>H' = \dfrac{dH}{dt}</m>. 
+        </p>
+        <p>
+            Since the ladder, the wall, and the ground form a right triangle, the parameters in the problem are related by the Pythagorean theorem (where <m>L</m> is the constant length of the ladder):
+            <men xml:id="equation-ladder-pythagorean">H^2 + X^2 = L^2</men>
+        </p>
+        <p>
+            We can differentiate <xref ref="equation-ladder-pythagorean" /> with respect to the time variable <m>t</m> in order to obtain a relationship between the parameters and their rates of change:
+            <men xml:id="equation-ladder-derivative">H H' + X X' = 0 \quad \text{(Note: } L = \text{constant so } L' = 0\text{)}</men>
+        </p>
+        <p>
+            Thus we have five variables (<m>H, X, L, H', X'</m>); if we are given values for three of them, we can use our two equations to solve for the others.
+        </p>
+        <p>
+            For example, suppose we know that the ladder is <m>25</m> feet long, and the base is sliding away at the rate <m>X' = 4</m> fps (feet per second). How fast is the top sliding down when the base is <m>18</m> feet from the wall?
+        </p>
+    </statement>
+    <solution>
+        <p>
+            The data provided translate to the following mathematical conditions:
+            <me>L = 25, \text{ and } X' = 4 \text{ when } X = 18</me>
+            Using the Pythagorean relationship in <xref ref="equation-ladder-pythagorean" />, we isolate and compute <m>H</m>:
+            <me>H = \sqrt{25^2 - 18^2} = \sqrt{625 - 324} = \sqrt{301} \approx 17.35\text{ feet}</me>
+        </p>
+        <p>
+            Now, we feed these static values at this precise moment into the related rates equation from <xref ref="equation-ladder-derivative" />:
+            <men xml:id="equation-ladder-substitution">17.35 \cdot H' + 18 \cdot 4 = 0</men>
+            Solving <xref ref="equation-ladder-substitution" /> for <m>H'</m> yields:
+            <me>17.35 \cdot H' + 72 = 0 \implies H' = -\frac{72}{17.35} \approx -4.15\text{ fps}</me>
+            Thus, the top of the ladder is sliding down the wall at a rate of approximately <m>4.15</m> feet per second.
+        </p>
+    </solution>
+<example xml:id="example-implicit-related-rates">
+    <statement>
+        <p>
+        The variables <m>x</m> and <m>y</m> are both differentiable functions 
+        of <m>t</m> and are related by the equation:
+        <me>x^3-2y^2+5x=16</me>
+        If <m>\dfrac{dx}{dt}=4</m> when <m>x=2</m> and <m>y=-1</m>, 
+        find the corresponding value of <m>\dfrac{dy}{dt}</m>.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            We begin by differentiating both sides of the given equation implicitly with respect to time <m>t</m>, applying the chain rule to each term:
+            <me>\frac{d}{dt}(x^3) - \frac{d}{dt}(2y^2) + \frac{d}{dt}(5x) = \frac{d}{dt}(16)</me>
+            <me>3x^2 \frac{dx}{dt} - 4y \frac{dy}{dt} + 5 \frac{dx}{dt} = 0</me>
+        </p>
+        <p>
+            Next, we substitute the known values (<m>x = 2</m>, <m>y = -1</m>, and <m>\frac{dx}{dt} = 4</m>) into this differentiated equation to isolate <m>\frac{dy}{dt}</m>:
+            <me>3(2)^2(4) - 4(-1)\frac{dy}{dt} + 5(4) = 0</me>
+            <me>3(4)(4) + 4\frac{dy}{dt} + 20 = 0</me>
+            <me>48 + 4\frac{dy}{dt} + 20 = 0</me>
+        </p>
+        <p>
+            Combine the constant terms and solve for the remaining rate:
+            <me>68 + 4\frac{dy}{dt} = 0</me>
+            <me>4\frac{dy}{dt} = -68</me>
+            <me>\frac{dy}{dt} = -17</me>
+        </p>
+    </solution>
+</example>
+<example xml:id="example-expanding-circular-area">
+    <statement>
+        <p>
+            A restaurant supplier services the restaurants in a circular area in such a way that the radius <m>r</m> is increasing at the rate of <m>2</m> mi per year at the moment when <m>r</m> goes through the value <m>r=5</m> mi. At that moment, how fast is the area increasing?
+        </p>
+        <figure xml:id="fig-expanding-circle">
+            <caption>Expanding circular service area with an increasing radius <m>r</m></caption>
+            <image xml:id="img-expanding-circle" width="50%">
+                <description>A circle with a solid line radius r, surrounded by dashed concentric lines showing outward expansion.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Draw inner filled circle
+                        \fill[blue!10] (0,0) circle (1.5);
+                        \draw[thick, blue] (0,0) circle (1.5);
+                        
+                        % Draw center point
+                        \fill (0,0) circle (0.05);
+                        
+                        % Draw radius line and label
+                        \draw[thick, -&gt;] (0,0) -- (30:1.5) node[midway, above left] {$r$};
+                        
+                        % Draw outer expanding ripple dashed line
+                        \draw[dashed, gray, -&gt;] (0,0) circle (2.0);
+                        \draw[dashed, gray, -&gt;] (0,0) circle (2.5);
+                        
+                        % Add expansion rate vector indicator
+                        \draw[ultra thick, red, -&gt;] (30:1.5) -- (30:2.3) node[anchor=west] {$\frac{dr}{dt} = 2$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            We model the geometric shape of the service zone using the standard formula for the area of a circle:
+            <me>A = \pi r^2</me>
+            Both the area <m>A</m> and the radius <m>r</m> are implicit functions of time <m>t</m>. Differentiating both sides of the equation implicitly with respect to <m>t</m> using the chain rule yields:
+            <me>\frac{dA}{dt} = 2\pi r \frac{dr}{dt}</me>
+        </p>
+        <p>
+            We are given the rate of change of the radius and the instantaneous radius at this specific moment:
+            <me>\frac{dr}{dt} = 2 \text{ mi/year} \quad \text{when} \quad r = 5 \text{ mi}</me>
+            Substituting these parameters into our rate relationship gives:
+            <me>\frac{dA}{dt} = 2\pi (5)(2) = 20\pi</me>
+        </p>
+        <p>
+            Thus, at that exact moment, the circular service area is increasing at a rate of <m>20\pi \approx 62.83</m> square miles per year.
+        </p>
+    </solution>
+</example>
+<example xml:id="example-ripples-circumference">
+    <statement>
+        <p>
+            A stone is dropped into a lake, causing circular waves whose radii increase at a constant rate of <m>0.5</m> m/sec. At what rate is the circumference of a wave changing when its radius is <m>4</m> meters?
+        </p>
+        <figure xml:id="fig-expanding-ripple">
+            <caption>Concentric circular ripples expanding outward from a central entry point.</caption>
+            <image xml:id="img-expanding-ripple" width="50%">
+                <description>Concentric circles expanding outward with arrows illustrating a radial rate of change.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        \fill[blue!5] (0,0) circle (2.0);
+                        \draw[thick, blue!60!black] (0,0) circle (0.8);
+                        \draw[thick, blue!60!black] (0,0) circle (1.4);
+                        \draw[very thick, blue] (0,0) circle (2.0);
+                        \fill (0,0) circle (0.05);
+                        \draw[thick, -&gt;] (0,0) -- (45:2.0) node[midway, above left] {$r$};
+                        \draw[ultra thick, red, -&gt;] (45:2.0) -- (45:2.7) node[anchor=south west] {$\frac{dr}{dt} = 0.5$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            We represent the boundary path length of a circular wave using the standard formula for the circumference of a circle:
+            <me>C = 2\pi r</me>
+            Both the circumference <m>C</m> and the radius <m>r</m> vary continuously over time <m>t</m>. Differentiating both sides of this relationship implicitly with respect to <m>t</m> yields:
+            <me>\frac{dC}{dt} = 2\pi \frac{dr}{dt}</me>
+        </p>
+        <p>
+            We are given that the radius increases at a constant rate of <m>\frac{dr}{dt} = 0.5</m> m/sec. Substituting this value into our rate equation gives:
+            <me>\frac{dC}{dt} = 2\pi (0.5) = \pi</me>
+        </p>
+        <p>
+            Notice that the rate of change of the circumference depends entirely on the rate of change of the radius and is independent of the instantaneous radius value itself. Thus, when <m>r = 4</m> meters (or any other size), the circumference increases at a constant rate of <m>\pi \approx 3.14</m> meters per second.
+        </p>
+    </solution>
+</example>
+
+<example xml:id="example-sliding-ladder-10ft">
+    <statement>
+    <p>
+    A ladder 10 feet long leans against a vertical building. If the bottom of the ladder slides away from the building horizontally at a rate of 2 feet/sec, how fast is the ladder sliding down the building when the top of the ladder is 6 feet above the ground?
+    </p>
+    <figure xml:id="fig-sliding-ladder-diagram">
+        <caption>Right triangle formed by a ladder leaning against a vertical wall.</caption>
+        <image xml:id="img-sliding-ladder-diagram" width="50%">
+            <description>A right-angled triangle showing a ladder of length 10 as the hypotenuse, a vertical height h along the y-axis, and a horizontal distance x along the x-axis.</description>
+            <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                        % Draw ground and wall axes
+                        \draw[thick, gray] (0,0) -- (2.5,0) node[right, black] {Ground};
+                        \draw[thick, gray] (0,0) -- (0,2.5) node[above, black] {Wall};
+                        
+                        % Draw ladder
+                        \draw[ultra thick, blue] (0,2.0) -- (1.5,0);
+                        
+                        % Labels for sides
+                        \node at (-0.2, 1.0) {$h$};
+                        \node at (0.75, -0.2) {$x$};
+                        \node at (1.0, 1.2) {$L = 10$};
+                        
+                        % Right angle marker
+                        \draw (0.15,0) -- (0.15,0.15) -- (0,0.15);
+                        
+                        % Rate arrows
+                        \draw[thick, red, |-&gt;] (1.5, 0) -- (2.1, 0) node[midway, below] {\(\frac{dx}{dt}\)};
+                        \draw[thick, red, |-&gt;] (0, 2.0) -- (0, 1.4) node[midway, left] {\(\frac{dh}{dt}\)};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+    </statement>
+    <solution>
+        <p>
+            Let <m>x</m> represent the horizontal distance from the bottom of the ladder to the building, and let <m>h</m> represent the vertical height from the top of the ladder to the ground. The length of the ladder is a constant <m>L = 10</m> feet.
+        </p>
+        <p>
+            The ladder, ground, and wall form a right triangle. By the Pythagorean theorem, these parameters are related by:
+            <men xml:id="eqn-ladder-10ft-pythag">x^2 + h^2 = 10^2 \implies x^2 + h^2 = 100</men>
+            Both <m>x</m> and <m>h</m> change with respect to time <m>t</m>. Differentiating both sides implicitly with respect to <m>t</m> yields:
+            <men xml:id="eqn-ladder-10ft-deriv">2x \frac{dx}{dt} + 2h \frac{dh}{dt} = 0 \implies x \frac{dx}{dt} + h \frac{dh}{dt} = 0</men>
+        </p>
+        <p>
+            We are given that <m>\frac{dx}{dt} = 2</m> ft/sec at the exact moment when <m>h = 6</m> feet. Before substituting into our rate equation, we use <xref ref="eqn-ladder-10ft-pythag" /> to calculate the corresponding value of <m>x</m> at this instant:
+            <me>x^2 + 6^2 = 100 \implies x^2 + 36 = 100 \implies x^2 = 64 \implies x = 8 \text{ feet}</me>
+        </p>
+        <p>
+            Now, substitute the values <m>x = 8</m>, <m>h = 6</m>, and <m>\frac{dx}{dt} = 2</m> into our differentiated relation <xref ref="eqn-ladder-10ft-deriv" />:
+            <me>(8)(2) + (6)\frac{dh}{dt} = 0</me>
+            <me>16 + 6\frac{dh}{dt} = 0 \implies 6\frac{dh}{dt} = -16 \implies \frac{dh}{dt} = -\frac{8}{3} \approx -2.67 \text{ ft/sec}</me>
+        </p>
+        <p>
+            The negative sign confirms the height is decreasing. Therefore, the ladder is sliding down the building at a rate of <m>\frac{8}{3}</m> feet per second (or approximately <m>2.67</m> ft/sec).
+        </p>
+    </solution>
+</example>
+<exercise xml:id="exercise-sliding-ladder-13ft">
+    <introduction>
+        <p>
+            A 13-ft ladder is leaning against a house when its base starts to slide away. By the time the base is 12 ft from the house, the base is moving at the rate of 5 ft/sec.
+        </p>
+<figure xml:id="fig-sliding-ladder-13ft-diagram">
+        <caption>Right triangle formed by a 13-ft ladder leaning against a house.</caption>
+        <image xml:id="img-sliding-ladder-13ft-diagram" width="50%">
+            <description>
+            A right-angled triangle showing a ladder of length 13 as the hypotenuse, a vertical height y along the wall, 
+            a horizontal distance x along the ground, and an angle theta between the ladder and the ground.
+            </description>                
+            <latex-image>
+            \begin{tikzpicture}[scale=1.5]
+                        % Draw ground and wall axes
+                        \draw[thick, gray] (0,0) -- (2.5,0) node[right, black] {Ground};
+                        \draw[thick, gray] (0,0) -- (0,2.5) node[above, black] {Wall};
+                        
+                        % Draw ladder (Hypotenuse)
+                        \draw[ultra thick, blue] (0,2.0) -- (1.5,0);
+                        
+                        % Side labels
+                        \node at (-0.2, 1.0) {$y$};
+                        \node at (0.75, -0.2) {$x$};
+                        \node at (1.0, 1.2) {$L = 13$};
+                        
+                        % Right angle marker at (0,0)
+                        \draw (0.15,0) -- (0.15,0.15) -- (0,0.15);
+                        
+                        % Corrected Angle theta at vertex (1.5,0)
+                        % The ladder vector goes from (1.5,0) to (0,2.0), which has an angle of ~126.87 degrees
+                        \draw (1.2,0) arc (180:126.87:0.3);
+                        \node at (1.1, 0.18) {$\theta$};
+                        
+                        % Rate arrow at the base sliding away
+                        \draw[thick, red, |-&gt;] (1.5, 0) -- (2.1, 0) node[midway, below] {\(\frac{dx}{dt}\)};
+            \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+</introduction>
+    
+    <task>
+        <statement>
+            <p>
+                How fast is the top of the ladder sliding down from the wall then?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Let <m>x</m> be the distance from the base to the wall, and <m>y</m> be the height of the top of the ladder. The ladder forms a right triangle where <m>x^2 + y^2 = 13^2 = 169</m>.
+            </p>
+            <p>
+                At the given moment, <m>x = 12</m> ft. We solve for <m>y</m> using the Pythagorean theorem:
+                <me>12^2 + y^2 = 169 \implies 144 + y^2 = 169 \implies y^2 = 25 \implies y = 5\text{ ft}</me>
+            </p>
+            <p>
+                Differentiating <m>x^2 + y^2 = 169</m> implicitly with respect to time <m>t</m> yields:
+                <me>2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0 \implies x\frac{dx}{dt} + y\frac{dy}{dt} = 0</me>
+                Substitute the known snapshot parameters (<m>x = 12</m>, <m>y = 5</m>, and <m>\frac{dx}{dt} = 5</m>):
+                <me>(12)(5) + (5)\frac{dy}{dt} = 0 \implies 60 + 5\frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -12\text{ ft/sec}</me>
+                The top of the ladder is sliding down at a rate of <m>12</m> ft/sec.
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                At what rate is the area of the triangle formed by the ladder, wall, and ground changing then?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The area <m>A</m> of the right triangle is modeled by:
+                <me>A = \frac{1}{2}xy</me>
+                Differentiating both sides with respect to time <m>t</m> via the product rule yields:
+                <me>\frac{dA}{dt} = \frac{1}{2}\left( y\frac{dx}{dt} + x\frac{dy}{dt} \right)</me>
+                Substitute our snapshot values (<m>x = 12</m>, <m>y = 5</m>, <m>\frac{dx}{dt} = 5</m>, and <m>\frac{dy}{dt} = -12</m>):
+                <me>\frac{dA}{dt} = \frac{1}{2}\left( (5)(5) + (12)(-12) \right) = \frac{1}{2}(25 - 144) = \frac{1}{2}(-119) = -59.5\text{ ft}^2\text{/sec}</me>
+                The area of the triangle is decreasing at a rate of <m>59.5</m> square feet per second.
+            </p>
+        </solution>
+    </task>
+
+    <task>
+        <statement>
+            <p>
+                At what rate is the angle <m>\theta</m> between the ladder and the ground changing then?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We relate the angle <m>\theta</m> to the moving base distance <m>x</m> using the cosine relationship:
+                <me>\cos \theta = \frac{x}{13} \implies \theta = \cos^{-1}\left(\frac{x}{13}\right)</me>
+                Using the geometric right triangle method to find the rate of change, differentiate <m>\cos \theta = \frac{x}{13}</m> implicitly:
+                <me>-\sin \theta \frac{d\theta}{dt} = \frac{1}{13}\frac{dx}{dt}</me>
+                From the triangle values at this instant (<m>y = 5</m>, <m>\text{hypotenuse} = 13</m>), we find <m>\sin \theta = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{5}{13}</m>. Substituting <m>\sin \theta</m> and <m>\frac{dx}{dt} = 5</m>:
+                <me>-\left(\frac{5}{13}\right)\frac{d\theta}{dt} = \frac{1}{13}(5) \implies -5\frac{d\theta}{dt} = 5 \implies \frac{d\theta}{dt} = -1\text{ rad/sec}</me>
+                The angle between the ladder and the ground is decreasing at a rate of <m>1</m> radian per second.
+            </p>
+        </solution>
+    </task>
+</exercise>
+
+<exercise xml:id="exercise-inflating-balloon">
+    <statement>
+        <p>
+            Air is being pumped into a spherical balloon so that its volume increases at a rate of <m>100\text{ cm}^3/\text{s}</m>. How fast is the radius of the balloon increasing when the diameter is <m>50\text{ cm}</m>?
+        </p>
+        <figure xml:id="fig-expanding-sphere">
+            <caption>Spherical balloon expanding under a constant volumetric growth rate.</caption>
+            <image xml:id="img-expanding-sphere" width="50%">
+                <description>A shaded sphere with a clear radius variable r extending outward, accented by dashed outermost bounds showing expansion.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Draw shaded sphere background
+                        \shade[ball color=blue!10, opacity=0.6] (0,0) circle (1.5);
+                        \draw[thick, blue] (0,0) circle (1.5);
+                        
+                        % Draw cross-section ellipse to show three-dimensionality
+                        \draw[gray, dashed] (1.5,0) arc (0:180:1.5 and 0.4);
+                        \draw[gray] (-1.5,0) arc (180:360:1.5 and 0.4);
+                        
+                        % Draw center and radius
+                        \fill (0,0) circle (0.05);
+                        \draw[thick, -&gt;] (0,0) -- (28:1.5) node[midway, above left] {$r$};
+                        
+                        % Outer dashed expansion layer
+                        \draw[dashed, gray] (0,0) circle (1.8);
+                        
+                        % Rate Indicators
+                        \draw[ultra thick, red, -&gt;] (0:1.5) -- (0:2.1) node[anchor=west] {$\frac{dr}{dt}$};
+                        \node[blue!60!black] at (0,-1.8) {$\frac{dV}{dt} = 100$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            We model the physical system using the standard geometric equation for the volume of a sphere:
+            <me>V = \frac{4}{3}\pi r^3</me>
+            Both the volume <m>V</m> and the radius <m>r</m> are implicit functions of time <m>t</m>. Differentiating both sides of the equation implicitly with respect to <m>t</m> via the power rule and chain rule yields:
+            <me>\frac{dV}{dt} = \frac{4}{3}\pi \cdot \left(3r^2 \frac{dr}{dt}\right) \implies \frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}</me>
+        </p>
+        <p>
+            We are given that the instantaneous volumetric growth rate is <m>\frac{dV}{dt} = 100\text{ cm}^3/\text{s}</m>. The problem specifies this evaluation happens exactly when the diameter is <m>50\text{ cm}</m>. Since diameter <m>d = 2r</m>, we calculate the corresponding radius profile at this snapshot moment:
+            <me>r = \frac{50}{2} = 25\text{ cm}</me>
+        </p>
+        <p>
+            Substitute the known static numerical constants (<m>\frac{dV}{dt} = 100</m> and <m>r = 25</m>) into our rate relationship to isolate <m>\frac{dr}{dt}</m>:
+            <me>100 = 4\pi (25)^2 \frac{dr}{dt}</me>
+            <me>100 = 4\pi (625) \frac{dr}{dt} \implies 100 = 2500\pi \frac{dr}{dt}</me>
+            <me>\frac{dr}{dt} = \frac{100}{2500\pi} = \frac{1}{25\pi}\text{ cm/s}</me>
+        </p>
+        <p>
+            Thus, at that exact instant, the radius of the balloon is expanding at a speed of <m>\frac{1}{25\pi}\text{ cm/s}</m> (or approximately <m>0.0127\text{ cm/s}</m>).
+        </p>
+    </solution>
+</exercise>
+
+<exercise xml:id="exercise-conical-water-tank">
+    <introduction>
+        <p>
+            A water tank has the shape of an inverted right circular cone of altitude <m>4\text{ m}</m> and base radius <m>2\text{ m}</m>. 
+            If water is being pumped into the tank at a rate of <m>2\text{ m}^3/\text{min}</m>, 
+            find the rate at which the water level is rising when the water is <m>3\text{ m}</m> deep.
+        </p>
+        <figure xml:id="fig-conical-tank">
+            <caption>Cross-section of an inverted conical tank with water level tracker.</caption>
+            <image xml:id="img-conical-tank" width="50%">
+                <description>An inverted cone of total height 4 and top radius 2, partially filled with fluid up to height h with surface radius r.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.0]
+                        % Draw outer tank profile
+                        \draw[thick] (-2,4) -- (0,0) -- (2,4);
+                        \draw[thick] (0,4) circle [x radius=2, y radius=0.4];
+                        
+                        % Draw water layer contents
+                        \fill[blue!20] (-1.5,3) -- (0,0) -- (1.5,3) -- cycle;
+                        \fill[blue!30] (0,3) circle [x radius=1.5, y radius=0.3];
+                        \draw[blue, thick] (-1.5,3) -- (0,0) -- (1.5,3);
+                        \draw[blue, thick] (0,3) circle [x radius=1.5, y radius=0.3];
+                        
+                        % Dimensions labels for total tank (using arrows options instead of inline symbols)
+                        \draw[gray, arrows={latex-latex}] (-2.3,0) -- (-2.3,4) node[midway, left, black] {$4\text{ m}$};
+                        \draw[gray, arrows={latex-latex}] (0,4.3) -- (2,4.3) node[midway, above, black] {$2\text{ m}$};
+                        
+                        % Variable tracker dimensions inside water
+                        \draw[dashed] (0,0) -- (0,3) node[midway, left] {$h$};
+                        \draw[dashed] (0,3) -- (1.5,3) node[midway, above] {$r$};
+                        \fill (0,0) circle (0.04);
+                        \fill (0,3) circle (0.04);
+                        
+                        % Flow indicator arrow
+                        \draw[ultra thick, red, arrows={latex-}] (0,3.5) -- (0,4.8) node[above] {$\frac{dV}{dt} = 2$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </introduction>
+
+    <solution>
+        <figure xml:id="fig-conical-tank-cross-section">
+            <caption>Two-dimensional cross-section showing similar right triangles inside the inverted conical tank.</caption>
+            <image xml:id="img-conical-tank-cross-section" width="50%">
+                <description>A 2D cross section triangle representing an inverted cone with similar right triangles mapped out on the right side to illustrate the structural relationship between the water radius and height.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Draw main 2D outer triangular cross section
+                        \draw[thick] (-2,4) -- (0,0) -- (2,4) -- cycle;
+                        
+                        % Shaded 2D water area inside
+                        \fill[blue!10] (-1.5,3) -- (0,0) -- (1.5,3) -- cycle;
+                        \draw[blue, thick] (-1.5,3) -- (1.5,3);
+                        \draw[blue, thick] (-1.5,3) -- (0,0) -- (1.5,3);
+                        
+                        % Central axis line split
+                        \draw[gray, dashed] (0,0) -- (0,4.5);
+                        
+                        % Highlight similar right triangles on the right side
+                        \draw[very thick, red] (0,0) -- (0,4) -- (2,4) -- cycle;
+                        \draw[very thick, blue!70!black] (0,0) -- (0,3) -- (1.5,3) -- cycle;
+                        
+                        % Dimension markers using the arrow option format
+                        \draw[gray, arrows={latex-latex}] (0,4.2) -- (2,4.2) node[midway, above, black] {$R = 2$};
+                        \draw[gray, arrows={latex-latex}] (2.3,0) -- (2.3,4) node[midway, right, black] {$H = 4$};
+                        
+                        % Variables labels for the water layer
+                        \node[blue!70!black, anchor=south] at (0.75, 3.0) {$r$};
+                        \node[blue!70!black, anchor=east] at (0, 1.5) {$h$};
+                        
+                        % Right angle indicators
+                        \draw (0,3) -- (0.15,3) -- (0.15,3.15);
+                        \draw (0,4) -- (0.15,4) -- (0.15,4.15);
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+        <p>
+            The volume <m>V</m> of water inside a right circular cone is given by the formula:
+            <me>V = \frac{1}{3}\pi r^2 h</me>
+            Here, both the water radius <m>r</m> and the water depth <m>h</m> vary over time <m>t</m>. To eliminate <m>r</m>, we look at the matching cross-sectional profile. Similar right triangles form a fixed proportional geometric profile:
+            <me>\frac{r}{h} = \frac{\text{Base Radius}}{\text{Altitude}} = \frac{2}{4} \implies r = \frac{1}{2}h</me>
+        </p>
+        <p>
+            Substituting this proportional relation back into the volume formula yields a single variable equation tracking depth:
+            <me>V = \frac{1}{3}\pi \left(\frac{1}{2}h\right)^2 h = \frac{1}{3}\pi \left(\frac{1}{4}h^2\right) h = \frac{1}{12}\pi h^3</me>
+            Now, differentiate both sides implicitly with respect to time <m>t</m> via the chain rule:
+            <me>\frac{dV}{dt} = \frac{1}{12}\pi \left(3h^2 \frac{dh}{dt}\right) \implies \frac{dV}{dt} = \frac{1}{4}\pi h^2 \frac{dh}{dt}</me>
+        </p>
+        <p>
+            We are given that <m>\frac{dV}{dt} = 2\text{ m}^3/\text{min}</m>. Substituting this value alongside the target evaluation depth <m>h = 3\text{ m}</m> into our rate mapping formula yields:
+            <me>2 = \frac{1}{4}\pi (3)^2 \frac{dh}{dt}</me>
+            <me>2 = \frac{9\pi}{4}\frac{dh}{dt} \implies \frac{dh}{dt} = 2 \cdot \frac{4}{9\pi} = \frac{8}{9\pi}\text{ m/min}</me>
+        </p>
+        <p>
+            Thus, at that exact instant, the water level is rising at a rate of <m>\frac{8}{9\pi}\text{ m/min}</m> (or approximately <m>0.283\text{ m/min}</m>).
+        </p>
+    </solution>
+</exercise>
+
+<insight xml:id="insight-solving-related-rates">
+    <title>Solving Related Rates Problems</title>
+    <p>
+        To systematically analyze and solve problems involving related rates of change, apply the following structured protocol:
+    </p>
+    <ol>
+        <li>
+            <p>
+                Read the problem carefully to fully comprehend the changing system.
+            </p>
+        </li>
+        <li>
+            <p>
+                Draw a geometric diagram whenever possible to visualize spatial relationships.
+            </p>
+        </li>
+        <li>
+            <p>
+                Introduce explicit notation, assigning mathematical symbols to all quantities that function as variables over time.
+            </p>
+        </li>
+        <li>
+            <p>
+                Express all given numeric information and the targeted unknown rate explicitly as derivatives with respect to time <m>t</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Write an algebraic or geometric equation that mathematically links the various moving quantities of the problem.
+            </p>
+        </li>
+        <li>
+            <p>
+                Apply the Calculus Chain Rule to differentiate both sides of the relational equation implicitly with respect to time <m>t</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Substitute the instantaneous snapshot values and known rates into the differentiated equation, 
+                then solve algebraically for the targeted unknown rate.
+            </p>
+        </li>
+    </ol>
+</insight>
+
+<example xml:id="example-approaching-cars">
+    <title>Approaching Cars Intersection Problem</title>
+    <statement>
+        <p>
+            Car A is traveling west at <m>50\text{ mi/hr}</m> and car B is traveling north at <m>60\text{ mi/hr}</m>. Both are headed for the intersection of two perpendicular roads. At what rate are the cars approaching each other when car A is <m>0.3\text{ mi}</m> and car B is <m>0.4\text{ mi}</m> from the intersection?
+        </p>
+        <figure xml:id="fig-intersection-cars">
+            <caption>Right triangle formed by two cars approaching a common intersection.</caption>
+            <image xml:id="img-intersection-cars" width="50%">
+                <description>A right-angled triangle with the right angle at the intersection point. 
+                    Car A approaches along the horizontal x-axis from the right, 
+                    and Car B approaches along the vertical y-axis from the bottom. 
+                    The hypotenuse z represents the distance between them.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.5]
+                        % Draw perpendicular roads
+                        \draw[thick, gray, dashed] (-0.5,0) -- (2.5,0);
+                        \draw[thick, gray, dashed] (0,-0.5) -- (0,2.5);
+                        
+                        % Label the intersection
+                        \fill (0,0) circle (0.05) node[below left] {Intersection};
+                        \draw (0.15,0) -- (0.15,0.15) -- (0,0.15);
+                        
+                        % Position of Car A (on x-axis, moving west/left)
+                        \fill[blue] (1.8,0) circle (0.06) node[above] {Car A};
+                        \draw[thick, blue, arrows={latex-}] (1.0,0) -- (1.8,0) node[midway, below] {$\frac{dx}{dt}$};
+                        \node[black] at (0.9,-0.3) {$x$};
+                        
+                        % Position of Car B (on y-axis, moving north/up)
+                        \fill[blue] (0,1.4) circle (0.06) node[left] {Car B};
+                        \draw[thick, blue, arrows={latex-}] (0,0.8) -- (0,1.4) node[midway, right] {$\frac{dy}{dt}$};
+                        \node[black] at (-0.3,0.7) {$y$};
+                        
+                        % Distance between cars (Hypotenuse)
+                        \draw[thick, red] (1.8,0) -- (0,1.4) node[midway, above right] {$z$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            Let <m>x</m> be the distance from Car A to the intersection, 
+            let <m>y</m> be the distance from Car B to the intersection, 
+            and let <m>z</m> be the distance between the two cars. 
+        </p>
+        <p>
+            Because the positions of the cars form a right-angled triangle with the intersection, we apply the Pythagorean theorem:
+            <men xml:id="eqn-cars-pythag"> x^2 + y^2 = z^2</men>
+            Since both cars are moving toward the intersection, their distances <m>x</m> and <m>y</m> are decreasing over time <m>t</m>. This implies their rates of change are negative:
+            <me>\frac{dx}{dt} = -50\text{ mi/hr} \quad \text{and} \quad \frac{dy}{dt} = -60\text{ mi/hr}</me>
+        </p>
+        <p>
+            We evaluate the system at the exact moment when <m>x = 0.3\text{ mi}</m> and <m>y = 0.4\text{ mi}</m>. First, compute the instantaneous distance <m>z</m> using <xref ref="eqn-cars-pythag" />:
+            <me>z = \sqrt{(0.3)^2 + (0.4)^2} = \sqrt{0.09 + 0.16} = \sqrt{0.25} = 0.5\text{ mi}</me>
+        </p>
+        <p>
+            Next, differentiate <xref ref="eqn-cars-pythag" /> implicitly with respect to time <m>t</m>:
+            <me>2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 2z\frac{dz}{dt} \implies x\frac{dx}{dt} + y\frac{dy}{dt} = z\frac{dz}{dt}</me>
+            Substitute the known static values and rates into this relationship to isolate <m>\frac{dz}{dt}</m>:
+            <me>(0.3)(-50) + (0.4)(-60) = (0.5)\frac{dz}{dt}</me>
+            <me>-15 - 24 = 0.5\frac{dz}{dt}</me>
+            <me>-39 = 0.5\frac{dz}{dt} \implies \frac{dz}{dt} = \frac{-39}{0.5} = -78\text{ mi/hr}</me>
+        </p>
+        <p>
+            The negative sign confirms that the distance between the two vehicles is shrinking. Thus, the cars are approaching each other at a rate of <m>78\text{ mi/hr}</m>.
+        </p>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-lighthouse-beacon">
+    <statement>
+        <p>
+            A revolving beacon in a lighthouse makes one revolution every 15 seconds. The beacon is 200 feet from the nearest point P on a straight shoreline. Find the rate at which a ray from the light moves along the shore at a point 400 feet from P.
+        </p>
+        <figure xml:id="fig-lighthouse-diagram">
+            <caption>Right triangle tracking a lighthouse beacon ray moving along a straight shoreline.</caption>
+            <image xml:id="img-lighthouse-diagram" width="80%">
+                <description>A right triangle where the lighthouse is a vertex opposite a straight shoreline. The perpendicular distance to point P is 200, the distance along the shore is x, and the angle at the lighthouse is theta.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Perpendicular shoreline path
+                        \draw[thick, gray] (-0.5,0) -- (4.5,0) node[right, black] {Shoreline};
+                        
+                        % Points markers
+                        \fill (0,0) circle (0.05) node[below] {$P$};
+                        \fill (0,-2.0) circle (0.06) node[below] {Lighthouse};
+                        \fill (3.0,0) circle (0.05) node[above] {Light Spot};
+                        
+                        % Connecting triangle lines
+                        \draw[thick, dashed] (0,-2.0) -- (0,0) node[midway, left] {$200\text{ ft}$};
+                        \draw[thick] (0,0) -- (3.0,0) node[midway, below] {$x$};
+                        \draw[ultra thick, blue] (0,-2.0) -- (3.0,0);
+                        
+                        % Right angle marker
+                        \draw (0.2,0) -- (0.2,0.2) -- (0,0.2);
+                        
+                        % Angle theta at the lighthouse vertex
+                        \draw (0,-1.5) arc (90:33.69:0.5);
+                        \node at (0.25,-1.3) {$\theta$};
+                        
+                        % Rate of progression arrow using universal format syntax
+                        \draw[thick, red, -latex] (3.0,0.3) -- (4.0,0.3) node[midway, above] {$\frac{dx}{dt}$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            Let <m>P</m> be the point on the shoreline closest to the lighthouse, and let <m>x</m> be the distance from <m>P</m> to the spot of light moving down the shore. Let <m>\theta</m> be the angle between the perpendicular line of length <m>200</m> ft and the light beam.
+        </p>
+        <p>
+            The beacon rotates at a constant rate of <m>1</m> revolution every <m>15</m> seconds. Converting revolutions to radians yields the angular velocity:
+            <me>\frac{d\theta}{dt} = \frac{1\text{ rev}}{15\text{ sec}} \cdot \frac{2\pi\text{ rad}}{1\text{ rev}} = \frac{2\pi}{15}\text{ rad/sec}</me>
+        </p>
+        <p>
+            Using right-triangle trigonometry (SOHCAHTOA), we relate the position variable <m>x</m> to the rotation angle <m>\theta</m>:
+            <me>\tan \theta = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{x}{200} \implies x = 200 \tan \theta</me>
+        </p>
+        <p>
+            Differentiating both sides of the equation implicitly with respect to time <m>t</m> yields:
+            <men xml:id="eqn-lighthouse-rate">\frac{dx}{dt} = 200 \sec^2 \theta \frac{d\theta}{dt}</men>
+        </p>
+        <p>
+            We evaluate the system at the exact snapshot moment when the beam is <m>x = 400</m> feet away from <m>P</m>. Rather than calculating <m>\theta</m> explicitly, we use the reference right triangle components to determine <m>\sec^2 \theta</m>. The hypotenuse length at this instant is:
+            <me>\text{Hypotenuse} = \sqrt{200^2 + 400^2} = \sqrt{40000 + 160000} = \sqrt{200000} = 200\sqrt{5}\text{ feet}</me>
+            From SOHCAHTOA, <m>\sec \theta = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \frac{200\sqrt{5}}{200} = \sqrt{5}</m>, which means:
+            <me>\sec^2 \theta = (\sqrt{5})^2 = 5</me>
+        </p>
+        <p>
+            Substitute the values <m>\sec^2 \theta = 5</m> and <m>\frac{d\theta}{dt} = \frac{2\pi}{15}</m> into our rate equation <xref ref="eqn-lighthouse-rate"/>:
+            <me>\frac{dx}{dt} = 200 (5) \left(\frac{2\pi}{15}\right) = 1000 \cdot \frac{2\pi}{15} = \frac{400\pi}{3}\text{ ft/sec}</me>
+        </p>
+        <p>
+            Thus, when the ray is 400 feet from <m>P</m>, the spot of light is moving along the shoreline at a rate of <m>\frac{400\pi}{3}\text{ ft/sec}</m> (or approximately <m>418.88\text{ ft/sec}</m>).
+        </p>
+    </solution>
+</exercise>
+
+<exercise xml:id="exercise-flying-kite">
+    <statement>
+        <p>
+            A person flying a kite holds the string 5 feet above ground level, and the string is payed out at a rate of 2 ft/sec as the kite moves horizontally at an altitude of 105 feet. Assuming there is no sag in the string, find the rate at which the kite is moving when 125 feet of string has been payed out.
+        </p>
+        <figure xml:id="fig-kite-diagram">
+            <caption>Right triangle modeling a flying kite tracking string length versus horizontal distance.</caption>
+            <image xml:id="img-kite-diagram" width="60%">
+                <description>A right triangle where the vertical side represents the relative height of 100 feet, the horizontal side represents the ground distance x, and the hypotenuse represents the string length s.</description>
+                <latex-image>
+                    \begin{tikzpicture}[scale=1.2]
+                        % Draw reference ground and relative level
+                        \draw[thick, gray] (-0.5,0) -- (3.5,0);
+                        
+                        % Draw right triangle vertices
+                        % Base vertex at hand level (0,0), kite vertex at (2.5,2.0)
+                        \draw[thick, dashed] (0,0) -- (2.5,0) node[midway, below] {$x$};
+                        \draw[thick, dashed] (2.5,0) -- (2.5,2.0) node[midway, right] {$y = 100\text{ ft}$};
+                        \draw[ultra thick, blue] (0,0) -- (2.5,2.0) node[midway, above left] {$s$};
+                        
+                        % Point markers
+                        \fill (0,0) circle (0.05) node[below left] {Hand};
+                        \fill (2.5,2.0) circle (0.05) node[above right] {Kite};
+                        
+                        % Right angle marker
+                        \draw (2.3,0) -- (2.3,0.2) -- (2.5,0.2);
+                        
+                        % Rate arrow for horizontal motion
+                        \draw[thick, red, -latex] (2.5,2.3) -- (3.3,2.3) node[midway, above] {$\frac{dx}{dt}$};
+                    \end{tikzpicture}
+                </latex-image>
+            </image>
+        </figure>
+    </statement>
+    <solution>
+        <p>
+            Let <m>x</m> represent the horizontal distance from the person to the point directly underneath the kite, and let <m>s</m> represent the length of the string that has been payed out. 
+        </p>
+        <p>
+            The total altitude of the kite is <m>105</m> feet above the ground. Because the string is held <m>5</m> feet above ground level, the vertical height of the right triangle is a constant:
+            <me>y = 105 - 5 = 100\text{ feet}</me>
+        </p>
+        <p>
+            Applying the Pythagorean theorem to this geometric system yields the relationship:
+            <men xml:id="eqn-kite-pythag">x^2 + 100^2 = s^2 \implies x^2 + 10000 = s^2</men>
+        </p>
+        <p>
+            We evaluate the system at the exact snapshot moment when <m>s = 125</m> feet. First, compute the horizontal distance <m>x</m> using <xref ref="eqn-kite-pythag" />:
+            <me>x^2 + 10000 = (125)^2</me>
+            <me>x^2 + 10000 = 15625 \implies x^2 = 5625 \implies x = \sqrt{5625} = 75\text{ feet}</me>
+        </p>
+        <p>
+            Next, differentiate <xref ref="eqn-kite-pythag" /> implicitly with respect to time <m>t</m> via the chain rule:
+            <men xml:id="eqn-kite-deriv">2x\frac{dx}{dt} + 0 = 2s\frac{ds}{dt} \implies x\frac{dx}{dt} = s\frac{ds}{dt}</men>
+        </p>
+        <p>
+            We are given that the string is being payed out at a rate of <m>\frac{ds}{dt} = 2</m> ft/sec. Substitute our known snapshot parameters (<m>x = 75</m>, <m>s = 125</m>, and <m>\frac{ds}{dt} = 2</m>) into <xref ref="eqn-kite-deriv" /> to isolate <m>\frac{dx}{dt}</m>:
+            <me>75\frac{dx}{dt} = (125)(2)</me>
+            <me>75\frac{dx}{dt} = 250 \implies \frac{dx}{dt} = \frac{250}{75} = \frac{10}{3}\text{ ft/sec}</me>
+        </p>
+        <p>
+            Thus, the kite is moving horizontally at a rate of <m>\frac{10}{3}</m> feet per second (or approximately <m>3.33</m> ft/sec).
+        </p>
+    </solution>
+</exercise>
+
+<exercise xml:id="exercise-coffee-drainage-with-figures">
+    <introduction>
+        <p>
+            Coffee is draining from a conical filter into a cylindrical coffeepot at the rate of <m>10\text{ in}^3/\text{min}</m>. The filter cone and the coffee pot both have a height of 6 inches and a diameter of 6 inches.
+        </p>
+        <figure xml:id="fig-coffee-drainage-diagram">
+    <caption>Conical filter draining into a cylindrical pot.</caption>
+    <image source="Coffee.png" width="60%">
+        <description>3D textbook graphic showing coffee draining from an upper inverted cone down into a lower upright cylinder.</description>
+    </image>
+</figure>
+    </introduction>
+
+<task xml:id="task-pot-rising">
+        <statement>
+        <p>How fast is the level in the pot rising when the coffee in the cone is 5 in. deep?</p>
+        </statement>
+        <solution>
+
+        <sidebyside widths="50% 50%">
+            <figure xml:id="fig-filter-cone">
+                <caption>Conical filter cross-section showing falling height <m>h</m> and radius <m>r</m>.</caption>
+                <image xml:id="img-filter-cone">
+                    <description>An inverted triangle representing a conical filter of height 6 and top radius 3. Liquid fills it to a height h with radius r.</description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            % Draw outer cone frame
+                            \draw[thick] (-3,6) -- (0,0) -- (3,6) -- cycle;
+                            
+                            % Draw active fluid volume layer
+                            \fill[blue!10] (-2.5,5) -- (0,0) -- (2.5,5) -- cycle;
+                            \draw[blue, thick] (-2.5,5) -- (2.5,5);
+                            
+                            % Draw central tracking vertical axis
+                            \draw[gray, dashed] (0,0) -- (0,6.5);
+                            
+                            % Outer reference labels using compatible arrow format
+                            \draw[gray, arrows={latex-latex}] (0,6.3) -- (3,6.3) node[midway, above, black] {$R = 3$};
+                            \draw[gray, arrows={latex-latex}] (3.5,0) -- (3.5,6) node[midway, right, black] {$H = 6$};
+                            
+                            % Variable dynamic annotations
+                            \draw[blue!70!black, thick] (0,5) -- (2.5,5) node[midway, above] {$r$};
+                            \draw[blue!70!black, thick] (0,0) -- (0,5) node[midway, left] {$h$};
+                            
+                            % Draining output rate vector indicator
+                            \draw[ultra thick, red, -latex] (0,0) -- (0,-1.0) node[right] {$\frac{dV_c}{dt} = -10$};
+                            
+                            % Right angle tracker
+                            \draw (0,5) -- (0.2,5) -- (0.2,5.2);
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+
+            <figure xml:id="fig-coffee-pot">
+                <caption>Cylindrical coffeepot cross-section showing rising level <m>y</m>.</caption>
+                <image xml:id="img-coffee-pot">
+                    <description>A rectangle cross-section representing a cylindrical coffeepot of height 6 and constant radius 3. Liquid fills it to a height y.</description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=0.8]
+                            % Draw outer rectangular cylinder box
+                            \draw[thick] (-3,0) -- (-3,6) -- (3,6) -- (3,0) -- cycle;
+                            
+                            % Draw active fluid level contents inside
+                            \fill[blue!10] (-3,0) rectangle (3,2.5);
+                            \draw[blue, thick] (-3,2.5) -- (3,2.5);
+                            
+                            % Constant container labels
+                            \draw[gray, arrows={latex-latex}] (-3,-0.4) -- (3,-0.4) node[midway, below, black] {$\text{Diameter} = 6$};
+                            \draw[gray, arrows={latex-latex}] (-3.5,0) -- (-3.5,6) node[midway, left, black] {$6$};
+                            
+                            % Variable height tracking components
+                            \draw[blue!70!black, thick, arrows={latex-latex}] (0,0) -- (0,2.5) node[midway, right] {$y$};
+                            \draw[blue!70!black, dashed] (0,2.5) -- (3,2.5) node[midway, above] {$R_p = 3$};
+                            
+                            % Incoming filling stream arrow indicator
+                            \draw[ultra thick, red, -latex] (0,6.5) -- (0,4.5) node[right] {$\frac{dV_p}{dt} = 10$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+        </sidebyside>
+
+            <p>
+                Let <m>V_p</m> be the volume of coffee in the cylindrical pot, <m>R_p = 3\text{ in}</m> be the constant radius of the cylinder, and <m>y</m> be the height of the coffee level. The formula for the volume is:
+                <me>V_p = \pi R_p^2 y = \pi (3)^2 y = 9\pi y</me>
+                Differentiating both sides implicitly with respect to time <m>t</m> yields:
+                <me>\frac{dV_p}{dt} = 9\pi \frac{dy}{dt}</me>
+            </p>
+            <p>
+                Since coffee is draining into the pot at a constant rate of <m>\dfrac{dV_p}{dt} = 10\text{ in}^3/\text{min}</m>, this filling rate is completely independent of the fluid height inside the top filter. Substituting this constant into our derivative relation gives:
+                <me>10 = 9\pi \frac{dy}{dt} \implies \frac{dy}{dt} = \frac{10}{9\pi}\text{ in/min}</me>
+                Thus, the coffee level in the pot is rising at a rate of <m>\dfrac{10}{9\pi} \approx 0.35\text{ in/min}</m>.
+            </p>
+        </solution>
+    </task>
+
+    <task xml:id="task-cone-falling">
+        <statement>
+            <p>How fast is the level in the cone falling then?</p>
+        </statement>
+        <solution>
+            <p>
+                Let <m>V_c</m> be the volume of coffee inside the conical filter, <m>r</m> be the radius of the liquid surface, and <m>h</m> be the depth of the liquid. The formula for the volume of a cone is:
+                <me>V_c = \frac{1}{3}\pi r^2 h</me>
+                As seen in <xref ref="fig-filter-cone" />, similar right triangles relate the changing water dimensions to the fixed filter dimensions (<m>\text{Radius} = 3</m>, <m>\text{Height} = 6</m>):
+                <me>\frac{r}{h} = \frac{3}{6} \implies r = \frac{1}{2}h</me>
+            </p>
+            <p>
+                Substitute this proportion back into the volume formula to eliminate <m>r</m>:
+                <me>V_c = \frac{1}{3}\pi \left(\frac{1}{2}h\right)^2 h = \frac{1}{12}\pi h^3</me>
+                Differentiating implicitly with respect to time <m>t</m> via the chain rule gives:
+                <me>\frac{dV_c}{dt} = \frac{1}{12}\pi \left(3h^2 \dfrac{dh}{dt}\right) = \dfrac{1}{4}\pi h^2 \frac{dh}{dt}</me>
+            </p>
+            <p>
+                Because the cone is losing volume as it drains, <m>\dfrac{dV_c}{dt} = -10\text{ in}^3/\text{min}</m>. 
+                We substitute this value along with the target snapshot depth of <m>h = 5\text{ in}</m> to isolate <m>\dfrac{dh}{dt}</m>:
+                <me>-10 = \frac{1}{4}\pi (5)^2 \frac{dh}{dt}</me>
+                <me>-10 = \frac{25\pi}{4}\frac{dh}{dt} \implies \frac{dh}{dt} = -10 \cdot \frac{4}{25\pi} = -\frac{8}{5\pi}\text{ in/min}</me>
+                The negative sign confirms the level is dropping. 
+                Thus, the coffee level in the filter cone is falling at a rate of <m>\dfrac{8}{5\pi} \approx 0.51\text{ in/min}</m>.
+            </p>
+        </solution>
+    </task>
+</exercise>
+
+
+
+
+
+
+
+
+
+
+</section>

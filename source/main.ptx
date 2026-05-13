@@ -54,7 +54,9 @@
         <xi:include href="./notes/24ChainRule.ptx"/>
         <xi:include href="./notes/25ImplicitDiff.ptx"/>
         <xi:include href="./notes/26DerivativesLogFunctions.ptx"/>
-        
+        <xi:include href="./notes/27DerivativesInverseTrig.ptx"/>
+        <xi:include href="./notes/28RelatedRates.ptx"/>
+
         <!-- Include lecture notes, activities, and homework related to differentiation rules -->
     </chapter>
 

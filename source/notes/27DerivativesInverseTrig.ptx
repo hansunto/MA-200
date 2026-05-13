@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-Derivatives-Inverse-Trig-Functions" class="notes">
+    <title>Derivatives of Inverse Trigonometric Functions</title>
+<introduction>
+    <p> In this section, we develop the differentiation formulas for the inverse trigonometric functions. 
+        By applying implicit differentiation to our geometric and algebraic definitions of these functions,
+         we can find their rates of change explicitly in terms of the independent variable <m>x</m>.
+    </p>
+    </introduction>
+<definition xml:id="definition-inverse-trig-functions">
+    <title>Inverse Trigonometric Functions</title>
+    <statement>
+        <p>
+        <ol>
+         <li>
+            <p> <m>y=\sin^{-1}x=\arcsin x</m> is the number in <m>[-\pi/2,\pi/2]</m> for which <m>\sin y=x</m>. </p>
+         </li>
+         <li>
+            <p> <m>y=\cos^{-1}x=\arccos x</m> is the number in <m>[0,\pi]</m> for which <m>\cos y=x</m>. </p>
+         </li>
+         <li>
+            <p> <m>y=\tan^{-1}x=\arctan x</m> is the number in <m>(-\pi/2,\pi/2)</m> for which <m>\tan y=x</m>. </p>
+         </li>
+        </ol>
+        </p>
+    </statement>
+</definition>
+
+<example xml:id="example-evaluate-inverse-trig-angles">
+<introduction>
+<p>
+Find the exact angle in radians for each of the following expressions:
+</p>
+</introduction>
+<task>
+<statement>
+    <p> <m>\sin^{-1}(1/\sqrt{2})</m> </p>
+</statement>
+<solution>
+<p>
+Let <m>y = \sin^{-1}(1/\sqrt{2})</m>. By definition, this means:
+<me>\sin y = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}</me>
+where <m>y</m> must lie in the restricted principal interval <m>[-\pi/2, \pi/2]</m>. 
+Looking at the standard unit circle in the first quadrant, the unique angle matching this condition is:
+<me>y = \frac{\pi}{4}</me>
+</p>
+</solution>
+</task>
+<task>
+        <statement>
+         <p> <m>\cos^{-1}(-1/2)</m> </p>
+        </statement>
+    <solution>
+    <p>
+    Let <m>y = \cos^{-1}(-1/2)</m>. This is equivalent to solving:
+    <me>\cos y = -\frac{1}{2}</me>
+    where <m>y</m> must lie in the restricted principal interval <m>[0, \pi]</m>.
+    Since the cosine value is negative, the angle must terminate in the second quadrant. 
+    The reference angle whose cosine equals <m>1/2</m> is <m>\pi/3</m>. Subtracting this reference angle from <m>\pi</m> yields:
+    <me>y = \pi - \frac{\pi}{3} = \frac{2\pi}{3}</me>
+    </p>
+    </solution>
+</task>
+<task>
+    <statement>
+        <p><m>\tan^{-1}(-1/\sqrt{3})</m></p>
+    </statement>
+    <solution>
+        <p>
+     Let <m>y = \tan^{-1}(-1/\sqrt{3})</m>. This implies:
+    <me>\tan y = -\frac{1}{\sqrt{3}} = -\frac{\sqrt{3}}{3}</me>
+     where <m>y</m> must lie in the open principal interval <m>(-\pi/2, \pi/2)</m>.
+     Since the tangent value is negative, the angle must terminate in the fourth quadrant.
+    The reference angle whose tangent is <m>1/\sqrt{3}</m> is <m>\pi/6</m>. 
+    Expressing this within the required fourth-quadrant range yields a negative rotation:
+    <me>y = -\frac{\pi}{6}</me>
+    </p>
+    </solution>
+    </task>
+</example>
+<example xml:id="example-inverse-trig-limits">
+    <introduction>
+        <p> Find each of the following limits: </p>
+    </introduction>
+    <task>
+    <statement>
+        <p><m>\displaystyle \lim_{x\to 1^-} \sin^{-1}x</m></p>
+    </statement>
+    <solution>
+         <p>
+        The function <m>f(x) = \sin^{-1}x</m> is continuous on its closed domain <m>[-1, 1]</m>. 
+        Therefore, we evaluate the left-hand limit approaching <m>1</m> by direct substitution:
+        <me>\lim_{x\to 1^-} \sin^{-1}x = \sin^{-1}(1)</me>
+        Since <m>\sin(\pi/2) = 1</m> and <m>\pi/2</m> falls within the principal range interval <m>[-\pi/2, \pi/2]</m>, we get:                <me>\lim_{x\to 1^-} \sin^{-1}x = \frac{\pi}{2}</me>
+        </p>
+    </solution>
+    </task>
+    <task>
+    <statement>
+         <p> <m>\displaystyle \lim_{x\to \infty} \tan^{-1}x</m> </p>
+    </statement>
+    <solution>
+        <p>
+        As <m>x</m> grows infinitely large without bound (<m>x \to \infty</m>), we are looking for the angle <m>y</m> in the principal open interval <m>(-\pi/2, \pi/2)</m> whose tangent value approaches infinity.
+        Geometrically, this corresponds to the location of the right-hand horizontal asymptote on the graph of the arctangent function:
+        <me>\lim_{x\to \infty} \tan^{-1}x = \frac{\pi}{2}</me>
+        </p>
+    </solution>
+    </task>
+    <task>
+    <statement>
+        <p><m>\displaystyle \lim_{x\to \infty} \sec^{-1}x</m> </p>
+    </statement>
+    <solution>
+        <p>
+        By definition, the inverse secant function can be rewritten using the reciprocal identity:
+        <me>\sec^{-1}x = \cos^{-1}\left(\frac{1}{x}\right)</me>
+        Taking the limit as <m>x \to \infty</m> means the inner component <m>\frac{1}{x} \to 0^+</m>:
+        <me>\lim_{x\to \infty} \sec^{-1}x = \lim_{x\to \infty} \cos^{-1}\left(\frac{1}{x}\right) = \cos^{-1}(0)</me>
+        Since <m>\cos(\pi/2) = 0</m> and <m>\pi/2</m> falls within the principal range interval <m>[0, \pi]</m>, we conclude:
+        <me>\lim_{x\to \infty} \sec^{-1}x = \frac{\pi}{2}</me>
+        </p>
+    </solution>
+    </task>
+</example>
+   
+<assemblage xml:id="assemblage-inverse-trig-derivatives">
+    <title>Derivatives of Inverse Trigonometric Functions</title>
+    <p>
+        Let <m>u</m> be a differentiable function of <m>x</m>. The derivatives of the primary inverse trigonometric functions are defined as follows:
+        <me>\frac{d}{dx}(\arcsin u) = \frac{1}{\sqrt{1-u^2}} \frac{du}{dx}, \quad |u| \lt 1</me>
+        <me>\frac{d}{dx}(\arccos u) = -\frac{1}{\sqrt{1-u^2}} \frac{du}{dx}, \quad |u| \lt 1</me>
+        <me>\frac{d}{dx}(\arctan u) = \frac{1}{1+u^2} \frac{du}{dx}</me>
+    </p>
+</assemblage>
+
+<subsection xml:id="subsection-derivation-arcsin">
+<title>Derivation of the Derivative of <m>\arcsin x</m></title>
+    <p>
+        To find the derivative of <m>y = \arcsin x</m>, we begin with its defining algebraic constraint:
+        <me>\sin y = x \quad \text{for } -\frac{\pi}{2} \le y \le \frac{\pi}{2}</me>
+        Differentiating both sides implicitly with respect to <m>x</m> yields:
+        <me>\cos y \cdot \frac{dy}{dx} = 1</me>
+        Isolating the derivative component gives us:
+        <me>\frac{dy}{dx} = \frac{1}{\cos y}</me>
+        Because <m>y</m> is restricted to the interval <m>[-\pi/2, \pi/2]</m>, the cosine value remains non-negative (<m>\cos y \ge 0</m>). We apply the fundamental Pythagorean trigonometric identity <m>\sin^2 y + \cos^2 y = 1</m> to isolate <m>\cos y</m>:
+        <me>\cos y = \sqrt{1 - \sin^2 y}</me>
+        Substituting <m>\sin y = x</m> directly back into the square root expression completes our calculation:
+        <me>\frac{d}{dx}(\arcsin x) = \frac{1}{\sqrt{1 - x^2}}</me>
+    </p>
+</subsection>
+<example xml:id="example-derivative-inverse-trig-chain-rule">
+    <introduction>
+        <p> Differentiate each of the following expressions: </p>
+    </introduction>
+    <task>
+    <statement>
+        <p> <m>\displaystyle \frac{d}{dx}(\sin^{-1}x^2)</m> </p>
+    </statement>
+    <solution>
+     <p> <alert>Method 1: Formula Method (Chain Rule)</alert>
+    We apply the inverse sine derivative rule with the chain rule, setting the inner function <m>u = x^2</m>:
+    <me>\frac{d}{dx}(\sin^{-1}u) = \frac{1}{\sqrt{1-u^2}} \cdot \frac{du}{dx}</me>
+    Substituting <m>u = x^2</m> and its inner derivative <m>\frac{du}{dx} = 2x</m> yields:
+    <me>\frac{d}{dx}(\sin^{-1}x^2) = \frac{1}{\sqrt{1-(x^2)^2}} \cdot \frac{d}{dx}(x^2)</me>
+    <me>= \frac{1}{\sqrt{1-x^4}} \cdot 2x = \frac{2x}{\sqrt{1-x^4}}</me>
+     </p>
+     <p>
+                <alert>Method 2: Geometric SOHCAHTOA and Implicit Differentiation</alert>
+                Let <m>y = \sin^{-1}x^2</m>, which means <m>\sin y = \frac{x^2}{1}</m>. Using SOHCAHTOA, <m>\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}}</m>. We sketch a reference right triangle with an angle <m>y</m>, opposite side <m>x^2</m>, and hypotenuse <m>1</m>.
+            </p>
+            <figure xml:id="fig-triangle-arcsin">
+                <caption>Reference triangle for <m>\sin y = x^2</m></caption>
+                <image xml:id="img-triangle-arcsin" width="40%">
+                    <description>A right triangle with angle y, opposite side x squared, hypotenuse 1, and adjacent side square root of 1 minus x to the fourth power.</description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.5]
+                            \draw[thick] (0,0) -- (2,0) node[midway, below] {$\sqrt{1-x^4}$} -- (2,1.5) node[midway, right] {$x^2$} -- cycle;
+                            \draw (2,0) ++(-0.2,0) -- ++(0,0.2) -- ++(0.2,0);
+                            \draw (0.3,0.1) arc (0:36.87:0.3);
+                            \node at (0.45,0.15) {$y$};
+                            \path (0,0) -- (2,1.5) node[midway, above left] {$1$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                By the Pythagorean theorem, the adjacent side is <m>\sqrt{1^2 - (x^2)^2} = \sqrt{1-x^4}</m>. From the triangle, we find <m>\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{\sqrt{1-x^4}}{1}</m>.
+            </p>
+            <p>
+                Now differentiate <m>\sin y = x^2</m> implicitly with respect to <m>x</m>:
+                <me>\cos y \cdot \frac{dy}{dx} = 2x \implies \frac{dy}{dx} = \frac{2x}{\cos y}</me>
+                Substitute <m>\cos y = \sqrt{1-x^4}</m> into the expression:
+                <me>\frac{dy}{dx} = \frac{2x}{\sqrt{1-x^4}}</me>
+            </p>
+    </solution>
+    </task>
+    <task>
+    <statement>
+        <p> <m>\displaystyle \frac{d}{dx}(\tan^{-1}5x^3)</m> </p>
+    </statement>
+    <solution>
+        <p><alert>Method 1: Formula Method (Chain Rule)</alert>
+        We apply the inverse tangent derivative rule combined with the chain rule, setting the inner function <m>u = 5x^3</m>:
+        <me>\frac{d}{dx}(\tan^{-1}u) = \frac{1}{1+u^2} \cdot \frac{du}{dx}</me>
+        Substituting <m>u = 5x^3</m> and computing its inner derivative <m>\frac{du}{dx} = 15x^2</m> gives:
+        <me>\frac{d}{dx}(\tan^{-1}5x^3) = \frac{1}{1+(5x^3)^2} \cdot \frac{d}{dx}(5x^3)</me>
+        <me>= \frac{1}{1+25x^6} \cdot 15x^2 = \frac{15x^2}{1+25x^6}</me>
+        </p>
+    <p>
+                <alert>Method 2: Geometric SOHCAHTOA and Implicit Differentiation</alert>
+                Let <m>y = \tan^{-1}5x^3</m>, meaning <m>\tan y = \frac{5x^3}{1} = \frac{\text{Opposite}}{\text{Adjacent}}</m>. We sketch a reference right triangle with angle <m>y</m>, opposite side <m>5x^3</m>, and adjacent side <m>1</m>.
+            </p>
+            <figure xml:id="fig-triangle-arctan">
+                <caption>Reference triangle for <m>\tan y = 5x^3</m></caption>
+                <image xml:id="img-triangle-arctan" width="40%">
+                    <description>A right triangle with angle y, opposite side 5x cubed, adjacent side 1, and hypotenuse square root of 1 plus 25x to the sixth power.</description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.5]
+                            \draw[thick] (0,0) -- (2,0) node[midway, below] {$1$} -- (2,1.5) node[midway, right] {$5x^3$} -- cycle;
+                            \draw (2,0) ++(-0.2,0) -- ++(0,0.2) -- ++(0.2,0);
+                            \draw (0.3,0.1) arc (0:36.87:0.3);
+                            \node at (0.45,0.15) {$y$};
+                            \path (0,0) -- (2,1.5) node[midway, above left] {$\sqrt{1+25x^6}$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                The hypotenuse is <m>\sqrt{1^2 + (5x^3)^2} = \sqrt{1+25x^6}</m>. From the triangle, we find <m>\sec y = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \sqrt{1+25x^6}</m>, which means <m>\sec^2 y = 1+25x^6</m>.
+            </p>
+            <p>
+                Now differentiate <m>\tan y = 5x^3</m> implicitly with respect to <m>x</m>:
+                <me>\sec^2 y \cdot \frac{dy}{dx} = 15x^2 \implies \frac{dy}{dx} = \frac{15x^2}{\sec^2 y}</me>
+                Substitute <m>\sec^2 y = 1+25x^6</m> into the expression:
+                <me>\frac{dy}{dx} = \frac{15x^2}{1+25x^6}</me>
+            </p>
+    </solution>
+    </task>
+    <task>
+    <statement>
+        <p> <m>\displaystyle \frac{d}{dx}(\sec^{-1}(x^2+3))</m> </p>
+    </statement>
+    <solution>
+        <p><alert>Method 1: Formula Method (Chain Rule)</alert>
+        We apply the inverse secant derivative rule with the chain rule, setting the inner function <m>u = x^2+3</m>:
+        <me>\frac{d}{dx}(\sec^{-1}u) = \frac{1}{|u|\sqrt{u^2-1}} \cdot \frac{du}{dx}</me>
+        Substituting <m>u = x^2+3</m> and its inner derivative <m>\frac{du}{dx} = 2x</m> gives:
+        <me>\frac{d}{dx}(\sec^{-1}(x^2+3)) = \frac{1}{|x^2+3|\sqrt{(x^2+3)^2-1}} \cdot \frac{d}{dx}(x^2+3)</me>
+        Since <m>x^2+3 \gt 0</m> for all real numbers, we can safely remove the absolute value bars:
+        <me>= \frac{2x}{(x^2+3)\sqrt{(x^4+6x^2+9)-1}} = \frac{2x}{(x^2+3)\sqrt{x^4+6x^2+8}}</me>
+       </p>
+<p>
+                <alert>Method 2: Geometric SOHCAHTOA and Implicit Differentiation</alert>
+                Let <m>y = \sec^{-1}(x^2+3)</m>, meaning <m>\sec y = \frac{x^2+3}{1} = \frac{\text{Hypotenuse}}{\text{Adjacent}}</m>. We sketch a reference right triangle with angle <m>y</m>, hypotenuse <m>x^2+3</m>, and adjacent side <m>1</m>.
+            </p>
+            <figure xml:id="fig-triangle-arcsec">
+                <caption>Reference triangle for <m>\sec y = x^2+3</m></caption>
+                <image xml:id="img-triangle-arcsec" width="40%">
+                    <description>A right triangle with angle y, hypotenuse x squared plus 3, adjacent side 1, and opposite side square root of x to the fourth plus 6x squared plus 8.</description>
+                    <latex-image>
+                        \begin{tikzpicture}[scale=1.5]
+                            \draw[thick] (0,0) -- (2,0) node[midway, below] {$1$} -- (2,1.5) node[midway, right] {$\sqrt{x^4+6x^2+8}$} -- cycle;
+                            \draw (2,0) ++(-0.2,0) -- ++(0,0.2) -- ++(0.2,0);
+                            \draw (0.3,0.1) arc (0:36.87:0.3);
+                            \node at (0.45,0.15) {$y$};
+                            \path (0,0) -- (2,1.5) node[midway, above left] {$x^2+3$};
+                        \end{tikzpicture}
+                    </latex-image>
+                </image>
+            </figure>
+            <p>
+                The opposite side length matches <m>\sqrt{(x^2+3)^2 - 1^2} = \sqrt{x^4+6x^2+8}</m>. From the triangle, we find <m>\tan y = \frac{\text{Opposite}}{\text{Adjacent}} = \sqrt{x^4+6x^2+8}</m>.
+            </p>
+            <p>
+                Now differentiate <m>\sec y = x^2+3</m> implicitly with respect to <m>x</m>:
+                <me>\sec y \tan y \cdot \frac{dy}{dx} = 2x \implies \frac{dy}{dx} = \frac{2x}{\sec y \tan y}</me>
+                Substitute <m>\sec y = x^2+3</m> and <m>\tan y = \sqrt{x^4+6x^2+8}</m> back into the expression:
+                <me>\frac{dy}{dx} = \frac{2x}{(x^2+3)\sqrt{x^4+6x^2+8}}</me>
+            </p>
+    </solution>
+    </task>
+</example>
+
+<exercises xml:id="exercises-inverse-trig-derivatives-geometric">
+    <title>Exercises on Inverse Trigonometric Derivatives (Geometric Method)</title>
+    <introduction>
+        <p>
+            Differentiate each of the following functions with respect to its independent variable using right triangle geometry, SOHCAHTOA relationships, and implicit differentiation.
+        </p>
+    </introduction>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\cos^{-1}(1/x)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Rewrite the function as <m>\cos y = \frac{1}{x}</m>. Using SOHCAHTOA, <m>\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}}</m>. 
+                We envision a right triangle with an angle <m>y</m>, adjacent side <m>1</m>, and hypotenuse <m>x</m>.
+                By the Pythagorean theorem, the opposite side is <m>\sqrt{x^2 - 1^2} = \sqrt{x^2 - 1}</m>.
+                From this geometry, we find <m>\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{\sqrt{x^2 - 1}}{x}</m>.
+            </p>
+            <p>
+                Now, differentiate <m>\cos y = x^{-1}</m> implicitly with respect to <m>x</m>:
+                <me>-\sin y \cdot \frac{dy}{dx} = -x^{-2}</me>
+                <me>\frac{dy}{dx} = \frac{1}{x^2 \sin y}</me>
+                Substitute <m>\sin y = \frac{\sqrt{x^2 - 1}}{x}</m> back into the equation:
+                <me>\frac{dy}{dx} = \frac{1}{x^2 \left(\frac{\sqrt{x^2 - 1}}{x}\right)} = \frac{1}{x\sqrt{x^2 - 1}}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\sin^{-1}(\sqrt{2}t)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Rewrite the function as <m>\sin y = \frac{\sqrt{2}t}{1}</m>. Using SOHCAHTOA, <m>\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}}</m>.
+                We envision a right triangle with an angle <m>y</m>, opposite side <m>\sqrt{2}t</m>, and hypotenuse <m>1</m>.
+                By the Pythagorean theorem, the adjacent side is <m>\sqrt{1^2 - (\sqrt{2}t)^2} = \sqrt{1 - 2t^2}</m>.
+                From this geometry, we find <m>\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{\sqrt{1 - 2t^2}}{1} = \sqrt{1 - 2t^2}</m>.
+            </p>
+            <p>
+                Now, differentiate <m>\sin y = \sqrt{2}t</m> implicitly with respect to <m>t</m>:
+                <me>\cos y \cdot \frac{dy}{dt} = \sqrt{2}</me>
+                <me>\frac{dy}{dt} = \frac{\sqrt{2}}{\cos y}</me>
+                Substitute <m>\cos y = \sqrt{1 - 2t^2}</m> back into the equation:
+                <me>\frac{dy}{dt} = \frac{\sqrt{2}}{\sqrt{1 - 2t^2}}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\csc^{-1}(x/2)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Rewrite the function as <m>\csc y = \frac{x}{2}</m>. Using SOHCAHTOA, <m>\csc y = \frac{\text{Hypotenuse}}{\text{Opposite}}</m>.
+                We envision a right triangle with an angle <m>y</m>, hypotenuse <m>x</m>, and opposite side <m>2</m>.
+                By the Pythagorean theorem, the adjacent side is <m>\sqrt{x^2 - 2^2} = \sqrt{x^2 - 4}</m>.
+                From this geometry, we find <m>\cot y = \frac{\text{Adjacent}}{\text{Opposite}} = \frac{\sqrt{x^2 - 4}}{2}</m>.
+            </p>
+            <p>
+                Now, differentiate <m>\csc y = \frac{x}{2}</m> implicitly with respect to <m>x</m>:
+                <me>-\csc y \cot y \cdot \frac{dy}{dx} = \frac{1}{2}</me>
+                <me>\frac{dy}{dx} = -\frac{1}{2 \csc y \cot y}</me>
+                Substitute <m>\csc y = \frac{x}{2}</m> and <m>\cot y = \frac{\sqrt{x^2 - 4}}{2}</m> back into the equation:
+                <me>\frac{dy}{dx} = -\frac{1}{2 \left(\frac{x}{2}\right) \left(\frac{\sqrt{x^2 - 4}}{2}\right)} = -\frac{2}{x\sqrt{x^2 - 4}}</me>
+                <em>Note:</em> For negative values of <m>x</m>, absolute value bars <m>|x|</m> are required to ensure a proper positive range for the derivative of a cosecant root, yielding <m>-\frac{2}{|x|\sqrt{x^2 - 4}}</m>.
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\tan^{-1}(x/2)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Rewrite the function as <m>\tan y = \frac{x}{2}</m>. Using SOHCAHTOA, <m>\tan y = \frac{\text{Opposite}}{\text{Adjacent}}</m>.
+                We envision a right triangle with an angle <m>y</m>, opposite side <m>x</m>, and adjacent side <m>2</m>.
+                By the Pythagorean theorem, the hypotenuse is <m>\sqrt{2^2 + x^2} = \sqrt{4 + x^2}</m>.
+                From this geometry, we find <m>\sec y = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \frac{\sqrt{4 + x^2}}{2}</m>, which means <m>\sec^2 y = \frac{4 + x^2}{4}</m>.
+            </p>
+            <p>
+                Now, differentiate <m>\tan y = \frac{x}{2}</m> implicitly with respect to <m>x</m>:
+                <me>\sec^2 y \cdot \frac{dy}{dx} = \frac{1}{2}</me>
+                <me>\frac{dy}{dx} = \frac{1}{2 \sec^2 y}</me>
+                Substitute <m>\sec^2 y = \frac{4 + x^2}{4}</m> back into the equation:
+                <me>\frac{dy}{dx} = \frac{1}{2 \left(\frac{4 + x^2}{4}\right)} = \frac{1}{\frac{4 + x^2}{2}} = \frac{2}{4 + x^2}</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\ln(x^2+4)-x\tan^{-1}(x/2)</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We differentiate each part separately, applying the product rule to the second term:
+                <me>\frac{dy}{dx} = \frac{d}{dx}\left[\ln(x^2+4)\right] - \frac{d}{dx}\left[x\tan^{-1}(x/2)\right]</me>
+                The derivative of the first term via the natural log chain rule is <m>\frac{2x}{x^2+4}</m>. 
+                For the second term, we use the product rule: <m>(1)\cdot\tan^{-1}(x/2) + x\cdot\frac{d}{dx}\left[\tan^{-1}(x/2)\right]</m>.
+            </p>
+            <p>
+                To geometric-style differentiate the inner item <m>\theta = \tan^{-1}(x/2)</m>, rewrite it as <m>\tan \theta = \frac{x}{2}</m> where <m>\text{Opposite}=x</m> and <m>\text{Adjacent}=2</m>. 
+                The hypotenuse is <m>\sqrt{4+x^2}</m>, meaning <m>\sec \theta = \frac{\sqrt{4+x^2}}{2}</m> and <m>\sec^2 \theta = \frac{4+x^2}{4}</m>. Implicitly differentiating yields:
+                <me>\sec^2 \theta \cdot \frac{d\theta}{dx} = \frac{1}{2} \implies \frac{d\theta}{dx} = \frac{1}{2\left(\frac{4+x^2}{4}\right)} = \frac{2}{4+x^2}</me>
+            </p>
+            <p>
+                Combine both main parts back together and subtract:
+                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \left(\tan^{-1}(x/2) + x\cdot\frac{2}{4+x^2}\right)</me>
+                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \tan^{-1}(x/2) - \frac{2x}{x^2+4} = -\tan^{-1}\left(\frac{x}{2}\right)</me>
+            </p>
+        </solution>
+    </exercise>
+    <exercise>
+        <statement>
+            <p>
+                <m>y=\cos^{-1}(e^{-t})</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Rewrite the function as <m>\cos y = \frac{e^{-t}}{1}</m>. Using SOHCAHTOA, <m>\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}}</m>.
+                We envision a right triangle with an angle <m>y</m>, adjacent side <m>e^{-t}</m>, and hypotenuse <m>1</m>.
+                By the Pythagorean theorem, the opposite side length matches <m>\sqrt{1^2 - (e^{-t})^2} = \sqrt{1 - e^{-2t}}</m>.
+                From this geometry, we find <m>\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{\sqrt{1 - e^{-2t}}}{1} = \sqrt{1 - e^{-2t}}</m>.
+            </p>
+            <p>
+                Now, differentiate <m>\cos y = e^{-t}</m> implicitly with respect to <m>t</m>:
+                <me>-\sin y \cdot \frac{dy}{dt} = -e^{-t}</me>
+                <me>\frac{dy}{dt} = \frac{e^{-t}}{\sin y}</me>
+                Substitute <m>\sin y = \sqrt{1 - e^{-2t}}</m> back into the equation:
+                <me>\frac{dy}{dt} = \frac{e^{-t}}{\sqrt{1 - e^{-2t}}}</me>
+            </p>
+        </solution>
+    </exercise>
+</exercises>
+
+
+</section>

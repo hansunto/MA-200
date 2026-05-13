@@ -88,7 +88,7 @@
         <me>\frac{d}{dx}(\ln |x|)=\frac{1}{x}</me>
     </p>
 </assemblage>
-    </subsection>
+   
     <example xml:id="example-derivative-ln-variants">
     <introduction>
         <p>
@@ -393,5 +393,5 @@
 </exercises>
 
 
-
+ </subsection>
     </section>

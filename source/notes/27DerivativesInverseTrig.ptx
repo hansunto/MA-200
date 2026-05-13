@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <section xml:id="sec-Derivatives-Inverse-Trig-Functions" class="notes">
     <title>Derivatives of Inverse Trigonometric Functions</title>
-<introduction>
+
+    <introduction>
     <p> In this section, we develop the differentiation formulas for the inverse trigonometric functions. 
         By applying implicit differentiation to our geometric and algebraic definitions of these functions,
          we can find their rates of change explicitly in terms of the independent variable <m>x</m>.
@@ -149,6 +151,7 @@ Looking at the standard unit circle in the first quadrant, the unique angle matc
         <me>\frac{d}{dx}(\arcsin x) = \frac{1}{\sqrt{1 - x^2}}</me>
     </p>
 </subsection>
+
 <example xml:id="example-derivative-inverse-trig-chain-rule">
     <introduction>
         <p> Differentiate each of the following expressions: </p>
@@ -380,9 +383,7 @@ Looking at the standard unit circle in the first quadrant, the unique angle matc
     </exercise>
     <exercise>
         <statement>
-            <p>
-                <m>y=\ln(x^2+4)-x\tan^{-1}(x/2)</m>
-            </p>
+            <p> <m>y=\ln(x^2+4)-x\tan^{-1}(x/2)</m></p>
         </statement>
         <solution>
             <p>
@@ -398,8 +399,8 @@ Looking at the standard unit circle in the first quadrant, the unique angle matc
             </p>
             <p>
                 Combine both main parts back together and subtract:
-                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \left(\tan^{-1}(x/2) + x\cdot\frac{2}{4+x^2}\right)</me>
-                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \tan^{-1}(x/2) - \frac{2x}{x^2+4} = -\tan^{-1}\left(\frac{x}{2}\right)</me>
+                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \left(\tan^{-1}\left(\frac{x}{2}\right) + \frac{2x}{4+x^2}\right)</me>
+                <me>\frac{dy}{dx} = \frac{2x}{x^2+4} - \tan^{-1}\left(\frac{x}{2}\right) - \frac{2x}{x^2+4} = -\tan^{-1}\left(\frac{x}{2}\right)</me>
             </p>
         </solution>
     </exercise>

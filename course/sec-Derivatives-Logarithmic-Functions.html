@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Derivatives of Logarithmic Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Implicit-Differentiation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-differentiation-rules.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Derivatives-Logarithmic-Functions"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Logarithmic Functions</span>
+</h2>
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-2">In this section, we will find the derivatives of logarithmic functions. We will start with the natural logarithm and then extend our results to logarithms with other bases.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="sec-Derivatives-Logarithmic-Functions-3"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">181</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Laws of Logarithm.</span>
+</h3>
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-3-2-1">Let <span class="process-math">\(a,M,\)</span> and <span class="process-math">\(N\)</span> be positive real numbers with <span class="process-math">\(a\not=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="sec-Derivatives-Logarithmic-Functions-3-2-2">
+<ol class="decimal" id="sec-Derivatives-Logarithmic-Functions-3-2-2-1">
+<li id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-1">
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-1-1">(product rule) <span class="process-math">\(\log_aMN=\log_aM+\log_aN\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-2">
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-2-1">(quotient rule) <span class="process-math">\(\log_a\left(\frac{M}{N}\right)=\log_aM-\log_aN\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-3">
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-3-2-2-1-3-1">(power rule) <span class="process-math">\(\log_aM^p=p\log_a M\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 181: Laws of Logarithm"><a href="#sec-Derivatives-Logarithmic-Functions-3" title="Copy heading and permalink for Theorem 181: Laws of Logarithm" aria-label="Copy heading and permalink for Theorem 181: Laws of Logarithm">🔗</a></div></article><article class="assemblage assemblage-like" id="sec-Derivatives-Logarithmic-Functions-4"><h3 class="heading"><span class="title">The change-of-base Property.</span></h3>
+<div class="para" id="sec-Derivatives-Logarithmic-Functions-4-2">
+<span class="process-math">\(\log_ax=\dfrac{\ln x}{\ln a}\quad (a&gt;0,~a\not= 1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: The change-of-base Property"><a href="#sec-Derivatives-Logarithmic-Functions-4" title="Copy heading and permalink for Assemblage: The change-of-base Property" aria-label="Copy heading and permalink for Assemblage: The change-of-base Property">🔗</a></div></article><div class="para" id="sec-Derivatives-Logarithmic-Functions-5">The natural logarithm function, denoted as <span class="process-math">\(\ln(x)\text{,}\)</span> is the inverse of the exponential function <span class="process-math">\(e^x\text{.}\)</span> To find the derivative of <span class="process-math">\(\ln(x)\text{,}\)</span> we can use implicit differentiation. Let <span class="process-math">\(y = \ln(x)\text{,}\)</span> which implies that <span class="process-math">\(e^y = x\text{.}\)</span> Differentiating both sides with respect to <span class="process-math">\(x\text{,}\)</span> we get:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Logarithmic-Functions-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="subsection" id="subsection-derivation-cases"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How to Derive the Derivative Formula</span>
+</h3>
+<div class="para" id="subsection-derivation-cases-2">Case 1: <span class="process-math">\(u = x\)</span> (where <span class="process-math">\(x \gt 0\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#subsection-derivation-cases-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsection-derivation-cases-3">
+<div class="para">Let <span class="process-math">\(y = \ln x\text{.}\)</span> We rewrite the logarithmic equation in its equivalent exponential form:</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-3-2">
+\begin{equation*}
+e^y = x
+\end{equation*}
+</div>
+<div class="para">Next, we differentiate both sides implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-3-4">
+\begin{equation*}
+\frac{d}{dx}(e^y) = \frac{d}{dx}(x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-3-5">
+\begin{equation*}
+e^y \cdot \frac{dy}{dx} = 1
+\end{equation*}
+</div>
+<div class="para">Now we isolate <span class="process-math">\(\dfrac{dy}{dx}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-3-7">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{e^y}
+\end{equation*}
+</div>
+<div class="para">Finally, substituting <span class="process-math">\(e^y = x\)</span> back into the denominator yields the identity:</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-3-9">
+\begin{equation*}
+\frac{d}{dx}(\ln x) = \frac{1}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-derivation-cases-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsection-derivation-cases-4">Case 2: <span class="process-math">\(y = \ln u\)</span> (Chain Rule for <span class="process-math">\(u \gt 0\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#subsection-derivation-cases-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsection-derivation-cases-5">
+<div class="para">We apply the Calculus Chain Rule, which states:</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-5-1">
+\begin{equation*}
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="para">Substituting the known derivative from Case 1 where <span class="process-math">\(\dfrac{dy}{du} = \dfrac{1}{u}\text{,}\)</span> we get:</div>
+<div class="displaymath process-math" id="subsection-derivation-cases-5-3">
+\begin{equation*}
+\frac{d}{dx}(\ln u) = \frac{1}{u} \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-derivation-cases-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-derivative-natural-log"><h4 class="heading"><span class="title">Derivative of the Natural Logarithm Function.</span></h4>
+<div class="para logical" id="assemblage-derivative-natural-log-2">
+<div class="para">For a differentiable function <span class="process-math">\(u\)</span> where <span class="process-math">\(u \gt 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="assemblage-derivative-natural-log-2-3">
+\begin{equation*}
+\frac{d}{dx}(\ln u)=\frac{1}{u}\frac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-derivative-natural-log-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-derivative-natural-log-3">
+<div class="para">For <span class="process-math">\(x \neq 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="assemblage-derivative-natural-log-3-2">
+\begin{equation*}
+\frac{d}{dx}(\ln |x|)=\frac{1}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-derivative-natural-log-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Derivative of the Natural Logarithm Function"><a href="#assemblage-derivative-natural-log" title="Copy heading and permalink for Assemblage: Derivative of the Natural Logarithm Function" aria-label="Copy heading and permalink for Assemblage: Derivative of the Natural Logarithm Function">🔗</a></div></article><div class="autopermalink" data-description="Subsection: How to Derive the Derivative Formula"><a href="#subsection-derivation-cases" title="Copy heading and permalink for Subsection: How to Derive the Derivative Formula" aria-label="Copy heading and permalink for Subsection: How to Derive the Derivative Formula">🔗</a></div></section><details id="example-derivative-ln-variants" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">182</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="example-derivative-ln-variants-1"><div class="para" id="example-derivative-ln-variants-1-1">Differentiate each of the following functions:<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-derivative-ln-variants-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="example-derivative-ln-variants-2-1-1">
+<span class="process-math">\(y=\ln 2x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-ln-variants-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-ln-variants-2-2-1">
+<div class="para">1. We apply the chain rule by setting the inner function <span class="process-math">\(u = 2x\text{.}\)</span> The derivative is given by:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-2-2-1-2">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2x} \cdot \frac{d}{dx}(2x)
+\end{equation*}
+</div>
+<div class="para">Evaluating the inner derivative yields:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-2-2-1-3">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2x} \cdot 2 = \frac{1}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-ln-variants-2-2-2">
+<div class="para">2. Alternatively, applying the product rule of logarithms first gives:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-2-2-2-1">
+\begin{equation*}
+y = \ln 2 + \ln x
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\ln 2\)</span> is a constant, differentiating both sides directly gives:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-2-2-2-3">
+\begin{equation*}
+\frac{dy}{dx} = 0 + \frac{1}{x} = \frac{1}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 182.a.1"><a href="#example-derivative-ln-variants-2-2" title="Copy heading and permalink for Solution 182.a.1" aria-label="Copy heading and permalink for Solution 182.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 182.a"><a href="#example-derivative-ln-variants-2" title="Copy heading and permalink for Task 182.a" aria-label="Copy heading and permalink for Task 182.a">🔗</a></div></article><article class="task exercise-like" id="example-derivative-ln-variants-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="example-derivative-ln-variants-3-1-1">
+<span class="process-math">\(y=\ln \left(\dfrac{2x+1}{3x}\right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-ln-variants-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-ln-variants-3-2-1">
+<div class="para">We use the properties of logarithms to expand the quotient before differentiating:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-3-2-1-1">
+\begin{equation*}
+y = \ln(2x+1) - \ln(3x)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-3-2-1-2">
+\begin{equation*}
+y = \ln(2x+1) - (\ln 3 + \ln x) = \ln(2x+1) - \ln 3 - \ln x
+\end{equation*}
+</div>
+<div class="para">Next, we take the derivative of each individual term:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-3-2-1-3">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2x+1} \cdot \frac{d}{dx}(2x+1) - 0 - \frac{1}{x}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-3-2-1-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2}{2x+1} - \frac{1}{x}
+\end{equation*}
+</div>
+<div class="para">To find a single fractional expression, we find a common denominator:</div>
+<div class="displaymath process-math" id="example-derivative-ln-variants-3-2-1-5">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2x - (2x+1)}{x(2x+1)} = \frac{-1}{x(2x+1)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-ln-variants-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 182.b.1"><a href="#example-derivative-ln-variants-3-2" title="Copy heading and permalink for Solution 182.b.1" aria-label="Copy heading and permalink for Solution 182.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 182.b"><a href="#example-derivative-ln-variants-3" title="Copy heading and permalink for Task 182.b" aria-label="Copy heading and permalink for Task 182.b">🔗</a></div></article><div class="autopermalink" data-description="Example 182"><a href="#example-derivative-ln-variants" title="Copy heading and permalink for Example 182" aria-label="Copy heading and permalink for Example 182">🔗</a></div></article></details><details id="exercise-expand-logarithmic-derivatives" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">183</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><article class="task exercise-like" id="exercise-expand-logarithmic-derivatives-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exercise-expand-logarithmic-derivatives-2-1-1">
+<span class="process-math">\(\log_2(x\sqrt{x^2+1})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-expand-logarithmic-derivatives-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-2-2-1">
+<div class="para">First, apply the product rule and power rule of logarithms to fully expand the expression:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-1-1">
+\begin{equation*}
+\log_2(x\sqrt{x^2+1}) = \log_2 x + \log_2(x^2+1)^{1/2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-1-2">
+\begin{equation*}
+= \log_2 x + \frac{1}{2}\log_2(x^2+1)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-2-2-2">
+<div class="para">Next, use the base change formula to rewrite the expressions in terms of natural logarithms for easier differentiation:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-2-1">
+\begin{equation*}
+= \frac{\ln x}{\ln 2} + \frac{1}{2\ln 2}\ln(x^2+1)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-2-2-3">
+<div class="para">Now, find the derivative with respect to <span class="process-math">\(x\)</span> using the chain rule on the second term:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-3-2">
+\begin{equation*}
+\frac{d}{dx}\left[ \frac{\ln x}{\ln 2} + \frac{\ln(x^2+1)}{2\ln 2} \right] = \frac{1}{x\ln 2} + \frac{1}{2\ln 2} \cdot \frac{1}{x^2+1} \cdot 2x
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-3-3">
+\begin{equation*}
+= \frac{1}{x\ln 2} + \frac{x}{(x^2+1)\ln 2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-2-2-4">
+<div class="para">Combine the expressions over a common denominator:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-2-2-4-1">
+\begin{equation*}
+= \frac{(x^2+1) + x^2}{x(x^2+1)\ln 2} = \frac{2x^2+1}{x(x^2+1)\ln 2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 183.a.1"><a href="#exercise-expand-logarithmic-derivatives-2-2" title="Copy heading and permalink for Solution 183.a.1" aria-label="Copy heading and permalink for Solution 183.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 183.a"><a href="#exercise-expand-logarithmic-derivatives-2" title="Copy heading and permalink for Task 183.a" aria-label="Copy heading and permalink for Task 183.a">🔗</a></div></article><article class="task exercise-like" id="exercise-expand-logarithmic-derivatives-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exercise-expand-logarithmic-derivatives-3-1-1">
+<span class="process-math">\(\ln\left(\dfrac{\sqrt[3]{x^4+12}}{(x+16)\sqrt{x-3}} \right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-expand-logarithmic-derivatives-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-3-2-1">
+<div class="para">First, completely expand the quotient, products, and fractional powers using log laws:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-1-1">
+\begin{equation*}
+= \ln\sqrt[3]{x^4+12} - \ln\left((x+16)\sqrt{x-3}\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-1-2">
+\begin{equation*}
+= \ln(x^4+12)^{1/3} - \left[ \ln(x+16) + \ln(x-3)^{1/2} \right]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-1-3">
+\begin{equation*}
+= \frac{1}{3}\ln(x^4+12) - \ln(x+16) - \frac{1}{2}\ln(x-3)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-expand-logarithmic-derivatives-3-2-2">
+<div class="para">Next, differentiate each isolated logarithmic term applying the chain rule where necessary:</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-2-1">
+\begin{equation*}
+\frac{d}{dx}\left[ \frac{1}{3}\ln(x^4+12) - \ln(x+16) - \frac{1}{2}\ln(x-3) \right]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-2-2">
+\begin{equation*}
+= \frac{1}{3} \cdot \frac{4x^3}{x^4+12} - \frac{1}{x+16} - \frac{1}{2} \cdot \frac{1}{x-3}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-expand-logarithmic-derivatives-3-2-2-3">
+\begin{equation*}
+= \frac{4x^3}{3(x^4+12)} - \frac{1}{x+16} - \frac{1}{2(x-3)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-expand-logarithmic-derivatives-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 183.b.1"><a href="#exercise-expand-logarithmic-derivatives-3-2" title="Copy heading and permalink for Solution 183.b.1" aria-label="Copy heading and permalink for Solution 183.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 183.b"><a href="#exercise-expand-logarithmic-derivatives-3" title="Copy heading and permalink for Task 183.b" aria-label="Copy heading and permalink for Task 183.b">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 183"><a href="#exercise-expand-logarithmic-derivatives" title="Copy heading and permalink for Checkpoint 183" aria-label="Copy heading and permalink for Checkpoint 183">🔗</a></div></article></details><article class="assemblage assemblage-like" id="assemblage-derivatives-general-base"><h3 class="heading"><span class="title">Derivatives of <span class="process-math">\(a^u\)</span> and <span class="process-math">\(\log_au\)</span>.</span></h3>
+<div class="para logical" id="assemblage-derivatives-general-base-2">
+<div class="para">Every exponential function can be expressed as a power of the natural exponential function:</div>
+<div class="displaymath process-math" id="assemblage-derivatives-general-base-2-1">
+\begin{equation*}
+a^x=e^{x\ln a}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-derivatives-general-base-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-derivatives-general-base-3">
+<div class="para">For constants <span class="process-math">\(a \gt 0\)</span> and <span class="process-math">\(a \neq 1\text{,}\)</span> the derivatives are given by:</div>
+<div class="displaymath process-math" id="assemblage-derivatives-general-base-3-3">
+\begin{equation*}
+\frac{d}{dx}(a^u)=a^u \ln a \frac{du}{dx} \qquad \frac{d}{dx}(\log_a u)=\frac{1}{u\ln a} \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-derivatives-general-base-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Derivatives of a^u and \log_au"><a href="#assemblage-derivatives-general-base" title="Copy heading and permalink for Assemblage: Derivatives of a^u and \log_au" aria-label="Copy heading and permalink for Assemblage: Derivatives of a^u and \log_au">🔗</a></div></article><details id="example-derivative-general-exponential" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">184</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-derivative-general-exponential-1-1">Differentiate: <span class="process-math">\(y=2^x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-exponential-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-general-exponential-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-general-exponential-2-1">
+<div class="para">We apply the derivative rule for general exponential functions, <span class="process-math">\(\dfrac{d}{dx}(a^x) = a^x \ln a\text{,}\)</span> where the base is <span class="process-math">\(a = 2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-general-exponential-2-1-3">
+\begin{equation*}
+\frac{dy}{dx} = 2^x \ln 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-exponential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-general-exponential-2-2">
+<div class="para">Alternatively, we can rewrite the function using base <span class="process-math">\(e\)</span> before differentiating:</div>
+<div class="displaymath process-math" id="example-derivative-general-exponential-2-2-2">
+\begin{equation*}
+y = e^{x \ln 2}
+\end{equation*}
+</div>
+<div class="para">Applying the chain rule yields:</div>
+<div class="displaymath process-math" id="example-derivative-general-exponential-2-2-3">
+\begin{equation*}
+\frac{dy}{dx} = e^{x \ln 2} \cdot \frac{d}{dx}(x \ln 2) = e^{x \ln 2} \cdot \ln 2
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(e^{x \ln 2} = 2^x\)</span> back into the expression gives the identical result:</div>
+<div class="displaymath process-math" id="example-derivative-general-exponential-2-2-5">
+\begin{equation*}
+\frac{dy}{dx} = 2^x \ln 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-exponential-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 184.1"><a href="#example-derivative-general-exponential-2" title="Copy heading and permalink for Solution 184.1" aria-label="Copy heading and permalink for Solution 184.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 184"><a href="#example-derivative-general-exponential" title="Copy heading and permalink for Example 184" aria-label="Copy heading and permalink for Example 184">🔗</a></div></article></details><details id="example-derivative-general-log-logarithmic-diff" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">185</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><article class="task exercise-like" id="example-derivative-general-log-logarithmic-diff-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="example-derivative-general-log-logarithmic-diff-2-1-1">
+<span class="process-math">\(y=\log_5 e^x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-log-logarithmic-diff-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-general-log-logarithmic-diff-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-general-log-logarithmic-diff-2-2-1">
+<div class="para">We can simplify the expression first using the properties of logarithms. By bringing down the exponent <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-2-2-1-2">
+\begin{equation*}
+y = x \log_5 e
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\log_5 e\)</span> is a constant coefficient, we differentiate directly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-2-2-1-5">
+\begin{equation*}
+\frac{dy}{dx} = \log_5 e
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-log-logarithmic-diff-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-general-log-logarithmic-diff-2-2-2">
+<div class="para">Alternatively, we can use the change-of-base formula to rewrite the expression in terms of natural logarithms:</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-2-2-2-1">
+\begin{equation*}
+y = \frac{\ln(e^x)}{\ln 5} = \frac{x}{\ln 5}
+\end{equation*}
+</div>
+<div class="para">Differentiating this linear expression gives:</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-2-2-2-2">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{\ln 5}
+\end{equation*}
+</div>
+<div class="para">Note that both forms are equivalent because <span class="process-math">\(\log_5 e = \frac{1}{\ln 5}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-log-logarithmic-diff-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 185.a.1"><a href="#example-derivative-general-log-logarithmic-diff-2-2" title="Copy heading and permalink for Solution 185.a.1" aria-label="Copy heading and permalink for Solution 185.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 185.a"><a href="#example-derivative-general-log-logarithmic-diff-2" title="Copy heading and permalink for Task 185.a" aria-label="Copy heading and permalink for Task 185.a">🔗</a></div></article><article class="task exercise-like" id="example-derivative-general-log-logarithmic-diff-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="example-derivative-general-log-logarithmic-diff-3-1-1">
+<span class="process-math">\(y=\dfrac{(x^2+1)(x+3)^{1/2}}{x-1}, \quad x \gt 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-log-logarithmic-diff-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-general-log-logarithmic-diff-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-general-log-logarithmic-diff-3-2-1">
+<div class="para">Given the complex product and quotient structure, we use logarithmic differentiation. First, take the natural logarithm of both sides:</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-3-2-1-1">
+\begin{equation*}
+\ln y = \ln\left( \frac{(x^2+1)(x+3)^{1/2}}{x-1} \right)
+\end{equation*}
+</div>
+<div class="para">Expand the right side completely using the product, quotient, and power laws of logarithms:</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-3-2-1-2">
+\begin{equation*}
+\ln y = \ln(x^2+1) + \frac{1}{2}\ln(x+3) - \ln(x-1)
+\end{equation*}
+</div>
+<div class="para">Next, differentiate both sides implicitly with respect to <span class="process-math">\(x\text{,}\)</span> applying the chain rule:</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-3-2-1-4">
+\begin{equation*}
+\frac{1}{y}\frac{dy}{dx} = \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1}
+\end{equation*}
+</div>
+<div class="para">Finally, isolate <span class="process-math">\(\frac{dy}{dx}\)</span> by multiplying both sides by <span class="process-math">\(y\text{,}\)</span> and substitute the original algebraic expression back in for <span class="process-math">\(y\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-3-2-1-8">
+\begin{equation*}
+\frac{dy}{dx} = y \left[ \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1} \right]
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-derivative-general-log-logarithmic-diff-3-2-1-9">
+\begin{equation*}
+\frac{dy}{dx} = \frac{(x^2+1)(x+3)^{1/2}}{x-1} \left[ \frac{2x}{x^2+1} + \frac{1}{2(x+3)} - \frac{1}{x-1} \right]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-general-log-logarithmic-diff-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 185.b.1"><a href="#example-derivative-general-log-logarithmic-diff-3-2" title="Copy heading and permalink for Solution 185.b.1" aria-label="Copy heading and permalink for Solution 185.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 185.b"><a href="#example-derivative-general-log-logarithmic-diff-3" title="Copy heading and permalink for Task 185.b" aria-label="Copy heading and permalink for Task 185.b">🔗</a></div></article><div class="autopermalink" data-description="Example 185"><a href="#example-derivative-general-log-logarithmic-diff" title="Copy heading and permalink for Example 185" aria-label="Copy heading and permalink for Example 185">🔗</a></div></article></details><section class="exercises" id="exercises-logarithmic-differentiation"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises on Logarithmic Differentiation</span>
+</h3>
+<section class="introduction" id="exercises-logarithmic-differentiation-2"><div class="para" id="exercises-logarithmic-differentiation-2-1">Differentiate each of the following functions with respect to its independent variable:<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-3"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-3-1-1">
+<span class="process-math">\(y=\ln (t^2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-3-2-1">
+<div class="para">First, apply logarithmic properties to simplify the expression by bringing down the exponent:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-3-2-1-1">
+\begin{equation*}
+y = 2\ln t
+\end{equation*}
+</div>
+<div class="para">Differentiating directly with respect to <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-3-2-1-3">
+\begin{equation*}
+\frac{dy}{dt} = 2 \cdot \frac{1}{t} = \frac{2}{t}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#exercises-logarithmic-differentiation-3-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#exercises-logarithmic-differentiation-3" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-4"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-4-1-1">
+<span class="process-math">\(y=\ln(\ln x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-4-2-1">
+<div class="para">We apply the chain rule, treating the outer function as <span class="process-math">\(\ln(u)\)</span> where <span class="process-math">\(u = \ln x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-4-2-1-3">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{\ln x} \cdot \frac{d}{dx}(\ln x)
+\end{equation*}
+</div>
+<div class="para">Evaluating the inner derivative yields:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-4-2-1-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{\ln x} \cdot \frac{1}{x} = \frac{1}{x\ln x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#exercises-logarithmic-differentiation-4-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#exercises-logarithmic-differentiation-4" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-5"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-5-1-1">
+<span class="process-math">\(y=\log(\sec \theta +\tan \theta)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-5-2-1">
+<div class="para">Assuming <span class="process-math">\(\log\)</span> denotes the common logarithm (base 10), we first apply the general logarithm derivative rule <span class="process-math">\(\dfrac{d}{d\theta}(\log_a u) = \dfrac{1}{u\ln a}\dfrac{du}{d\theta}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-5-2-1-3">
+\begin{equation*}
+\frac{dy}{d\theta} = \frac{1}{(\sec \theta + \tan \theta)\ln 10} \cdot \frac{d}{d\theta}(\sec \theta + \tan \theta)
+\end{equation*}
+</div>
+<div class="para">Compute the derivatives of the trigonometric functions:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-5-2-1-4">
+\begin{equation*}
+\frac{dy}{d\theta} = \frac{\sec \theta \tan \theta + \sec^2 \theta}{(\sec \theta + \tan \theta)\ln 10}
+\end{equation*}
+</div>
+<div class="para">Factor out <span class="process-math">\(\sec \theta\)</span> in the numerator to cancel common terms:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-5-2-1-6">
+\begin{equation*}
+\frac{dy}{d\theta} = \frac{\sec \theta (\tan \theta + \sec \theta)}{(\sec \theta + \tan \theta)\ln 10} = \frac{\sec \theta}{\ln 10}
+\end{equation*}
+</div>
+<div class="para">
+<em class="emphasis">Note:</em> If <span class="process-math">\(\log\)</span> refers to the natural logarithm in your context, the <span class="process-math">\(\ln 10\)</span> factor is omitted, yielding <span class="process-math">\(\sec \theta\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#exercises-logarithmic-differentiation-5-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3"><a href="#exercises-logarithmic-differentiation-5" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-6"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-6-1-1">
+<span class="process-math">\(y= \dfrac{1+\ln t}{1-\ln t}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-6-2-1">
+<div class="para">We apply the quotient rule <span class="process-math">\(\left(\dfrac{f}{g}\right)' = \dfrac{f'g - fg'}{g^2}\)</span> with respect to <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-6-2-1-3">
+\begin{equation*}
+\frac{dy}{dt} = \frac{\dfrac{1}{t}(1-\ln t) - (1+\ln t)\left(-\dfrac{1}{t}\right)}{(1-\ln t)^2}
+\end{equation*}
+</div>
+<div class="para">Factor out <span class="process-math">\(\dfrac{1}{t}\)</span> in the numerator to simplify the terms:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-6-2-1-5">
+\begin{equation*}
+\dfrac{dy}{dt} = \dfrac{\dfrac{1}{t}\left[(1-\ln t) + (1+\ln t)\right]}{(1-\ln t)^2}
+\end{equation*}
+</div>
+<div class="para">Combine terms to get the final simplified expression:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-6-2-1-6">
+\begin{equation*}
+\dfrac{dy}{dt} = \dfrac{2}{t(1-\ln t)^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#exercises-logarithmic-differentiation-6-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#exercises-logarithmic-differentiation-6" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-7"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-7-1-1">
+<span class="process-math">\(y=e^{(\cos t+\ln t)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-7-2-1">
+<div class="para">First, use exponent rules to simplify the function before differentiating:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-7-2-1-1">
+\begin{equation*}
+y = e^{\cos t} \cdot e^{\ln t} = t e^{\cos t}
+\end{equation*}
+</div>
+<div class="para">Now, apply the product rule to evaluate the derivative:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-7-2-1-2">
+\begin{equation*}
+\frac{dy}{dt} = 1 \cdot e^{\cos t} + t \cdot \left(e^{\cos t} \cdot (-\sin t)\right)
+\end{equation*}
+</div>
+<div class="para">Factor out <span class="process-math">\(e^{\cos t}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-7-2-1-4">
+\begin{equation*}
+\frac{dy}{dt} = e^{\cos t}(1 - t\sin t)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#exercises-logarithmic-differentiation-7-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#exercises-logarithmic-differentiation-7" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-logarithmic-differentiation-8"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-logarithmic-differentiation-8-1-1">
+<span class="process-math">\(\ln y=e^y \sin x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-logarithmic-differentiation-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-logarithmic-differentiation-8-2-1">
+<div class="para">Since the equation defines <span class="process-math">\(y\)</span> implicitly, we use implicit differentiation with respect to <span class="process-math">\(x\text{.}\)</span> Differentiate both sides:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-8-2-1-3">
+\begin{equation*}
+\dfrac{1}{y}\frac{dy}{dx} = \left(e^y \cdot \dfrac{dy}{dx}\right)\sin x + e^y(\cos x)
+\end{equation*}
+</div>
+<div class="para">Gather all terms involving <span class="process-math">\(\dfrac{dy}{dx}\)</span> onto the left side of the equation:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-8-2-1-5">
+\begin{equation*}
+\dfrac{1}{y}\dfrac{dy}{dx} - e^y \sin x \dfrac{dy}{dx} = e^y \cos x
+\end{equation*}
+</div>
+<div class="para">Factor out <span class="process-math">\(\dfrac{dy}{dx}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-8-2-1-7">
+\begin{equation*}
+\dfrac{dy}{dx}\left(\dfrac{1}{y} - e^y \sin x\right) = e^y \cos x
+\end{equation*}
+</div>
+<div class="para">Isolate <span class="process-math">\(\dfrac{dy}{dx}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-8-2-1-9">
+\begin{equation*}
+\dfrac{dy}{dx} = \dfrac{e^y \cos x}{\dfrac{1}{y} - e^y \sin x}
+\end{equation*}
+</div>
+<div class="para">Multiply the numerator and denominator by <span class="process-math">\(y\)</span> to clear the complex fraction:</div>
+<div class="displaymath process-math" id="exercises-logarithmic-differentiation-8-2-1-11">
+\begin{equation*}
+\dfrac{dy}{dx} = \dfrac{y e^y \cos x}{1 - y e^y \sin x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-logarithmic-differentiation-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#exercises-logarithmic-differentiation-8-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#exercises-logarithmic-differentiation-8" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises on Logarithmic Differentiation"><a href="#exercises-logarithmic-differentiation" title="Copy heading and permalink for Exercises: Exercises on Logarithmic Differentiation" aria-label="Copy heading and permalink for Exercises: Exercises on Logarithmic Differentiation">🔗</a></div></section><div class="autopermalink" data-description="Section: Derivatives of Logarithmic Functions"><a href="#sec-Derivatives-Logarithmic-Functions" title="Copy heading and permalink for Section: Derivatives of Logarithmic Functions" aria-label="Copy heading and permalink for Section: Derivatives of Logarithmic Functions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-Implicit-Differentiation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -1927,6 +1927,114 @@ var ptx_lunr_docs = [
   "body": "  Find if .    First derivative:   Second derivative (using Quotient Rule):   To finish, substitute the expression for back into this equation.   "
 },
 {
+  "id": "sec-Derivatives-Logarithmic-Functions",
+  "level": "1",
+  "url": "sec-Derivatives-Logarithmic-Functions.html",
+  "type": "Section",
+  "number": "",
+  "title": "Derivatives of Logarithmic Functions",
+  "body": " Derivatives of Logarithmic Functions  In this section, we will find the derivatives of logarithmic functions. We will start with the natural logarithm and then extend our results to logarithms with other bases.   Laws of Logarithm   Let and be positive real numbers with .     (product rule)     (quotient rule)     (power rule)         The change-of-base Property      The natural logarithm function, denoted as , is the inverse of the exponential function . To find the derivative of , we can use implicit differentiation. Let , which implies that . Differentiating both sides with respect to , we get:   How to Derive the Derivative Formula   Case 1: (where )   Let . We rewrite the logarithmic equation in its equivalent exponential form: Next, we differentiate both sides implicitly with respect to :  Now we isolate : Finally, substituting back into the denominator yields the identity:    Case 2: (Chain Rule for )   We apply the Calculus Chain Rule, which states: Substituting the known derivative from Case 1 where , we get:    Derivative of the Natural Logarithm Function  For a differentiable function where :   For :       Differentiate each of the following functions:          1. We apply the chain rule by setting the inner function . The derivative is given by: Evaluating the inner derivative yields:   2. Alternatively, applying the product rule of logarithms first gives: Since is a constant, differentiating both sides directly gives:            We use the properties of logarithms to expand the quotient before differentiating:  Next, we take the derivative of each individual term:  To find a single fractional expression, we find a common denominator:        Expand the logarithmic expression and find the derivatives:          First, apply the product rule and power rule of logarithms to fully expand the expression:    Next, use the base change formula to rewrite the expressions in terms of natural logarithms for easier differentiation:   Now, find the derivative with respect to using the chain rule on the second term:    Combine the expressions over a common denominator:            First, completely expand the quotient, products, and fractional powers using log laws:     Next, differentiate each isolated logarithmic term applying the chain rule where necessary:         Derivatives of and  Every exponential function can be expressed as a power of the natural exponential function:   For constants and , the derivatives are given by:      Differentiate:     We apply the derivative rule for general exponential functions, , where the base is :   Alternatively, we can rewrite the function using base before differentiating: Applying the chain rule yields: Substituting back into the expression gives the identical result:       Differentiate each of the following functions:          We can simplify the expression first using the properties of logarithms. By bringing down the exponent : Since is a constant coefficient, we differentiate directly with respect to :   Alternatively, we can use the change-of-base formula to rewrite the expression in terms of natural logarithms: Differentiating this linear expression gives: Note that both forms are equivalent because .           Given the complex product and quotient structure, we use logarithmic differentiation. First, take the natural logarithm of both sides: Expand the right side completely using the product, quotient, and power laws of logarithms: Next, differentiate both sides implicitly with respect to , applying the chain rule: Finally, isolate by multiplying both sides by , and substitute the original algebraic expression back in for :        Exercises on Logarithmic Differentiation   Differentiate each of the following functions with respect to its independent variable:          First, apply logarithmic properties to simplify the expression by bringing down the exponent: Differentiating directly with respect to yields:            We apply the chain rule, treating the outer function as where : Evaluating the inner derivative yields:            Assuming denotes the common logarithm (base 10), we first apply the general logarithm derivative rule : Compute the derivatives of the trigonometric functions: Factor out in the numerator to cancel common terms:  Note: If refers to the natural logarithm in your context, the factor is omitted, yielding .           We apply the quotient rule with respect to : Factor out in the numerator to simplify the terms: Combine terms to get the final simplified expression:            First, use exponent rules to simplify the function before differentiating: Now, apply the product rule to evaluate the derivative: Factor out :            Since the equation defines implicitly, we use implicit differentiation with respect to . Differentiate both sides: Gather all terms involving onto the left side of the equation: Factor out : Isolate : Multiply the numerator and denominator by to clear the complex fraction:      "
+},
+{
+  "id": "sec-Derivatives-Logarithmic-Functions-3",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#sec-Derivatives-Logarithmic-Functions-3",
+  "type": "Theorem",
+  "number": "181",
+  "title": "Laws of Logarithm.",
+  "body": " Laws of Logarithm   Let and be positive real numbers with .     (product rule)     (quotient rule)     (power rule)       "
+},
+{
+  "id": "example-derivative-ln-variants",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#example-derivative-ln-variants",
+  "type": "Example",
+  "number": "182",
+  "title": "",
+  "body": "  Differentiate each of the following functions:          1. We apply the chain rule by setting the inner function . The derivative is given by: Evaluating the inner derivative yields:   2. Alternatively, applying the product rule of logarithms first gives: Since is a constant, differentiating both sides directly gives:            We use the properties of logarithms to expand the quotient before differentiating:  Next, we take the derivative of each individual term:  To find a single fractional expression, we find a common denominator:     "
+},
+{
+  "id": "exercise-expand-logarithmic-derivatives",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercise-expand-logarithmic-derivatives",
+  "type": "Checkpoint",
+  "number": "183",
+  "title": "",
+  "body": "  Expand the logarithmic expression and find the derivatives:          First, apply the product rule and power rule of logarithms to fully expand the expression:    Next, use the base change formula to rewrite the expressions in terms of natural logarithms for easier differentiation:   Now, find the derivative with respect to using the chain rule on the second term:    Combine the expressions over a common denominator:            First, completely expand the quotient, products, and fractional powers using log laws:     Next, differentiate each isolated logarithmic term applying the chain rule where necessary:       "
+},
+{
+  "id": "example-derivative-general-exponential",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#example-derivative-general-exponential",
+  "type": "Example",
+  "number": "184",
+  "title": "",
+  "body": "  Differentiate:     We apply the derivative rule for general exponential functions, , where the base is :   Alternatively, we can rewrite the function using base before differentiating: Applying the chain rule yields: Substituting back into the expression gives the identical result:    "
+},
+{
+  "id": "example-derivative-general-log-logarithmic-diff",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#example-derivative-general-log-logarithmic-diff",
+  "type": "Example",
+  "number": "185",
+  "title": "",
+  "body": "  Differentiate each of the following functions:          We can simplify the expression first using the properties of logarithms. By bringing down the exponent : Since is a constant coefficient, we differentiate directly with respect to :   Alternatively, we can use the change-of-base formula to rewrite the expression in terms of natural logarithms: Differentiating this linear expression gives: Note that both forms are equivalent because .           Given the complex product and quotient structure, we use logarithmic differentiation. First, take the natural logarithm of both sides: Expand the right side completely using the product, quotient, and power laws of logarithms: Next, differentiate both sides implicitly with respect to , applying the chain rule: Finally, isolate by multiplying both sides by , and substitute the original algebraic expression back in for :      "
+},
+{
+  "id": "exercises-logarithmic-differentiation-3",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-3",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "       First, apply logarithmic properties to simplify the expression by bringing down the exponent: Differentiating directly with respect to yields:    "
+},
+{
+  "id": "exercises-logarithmic-differentiation-4",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-4",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "       We apply the chain rule, treating the outer function as where : Evaluating the inner derivative yields:    "
+},
+{
+  "id": "exercises-logarithmic-differentiation-5",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-5",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "       Assuming denotes the common logarithm (base 10), we first apply the general logarithm derivative rule : Compute the derivatives of the trigonometric functions: Factor out in the numerator to cancel common terms:  Note: If refers to the natural logarithm in your context, the factor is omitted, yielding .   "
+},
+{
+  "id": "exercises-logarithmic-differentiation-6",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-6",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "       We apply the quotient rule with respect to : Factor out in the numerator to simplify the terms: Combine terms to get the final simplified expression:    "
+},
+{
+  "id": "exercises-logarithmic-differentiation-7",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-7",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "       First, use exponent rules to simplify the function before differentiating: Now, apply the product rule to evaluate the derivative: Factor out :    "
+},
+{
+  "id": "exercises-logarithmic-differentiation-8",
+  "level": "2",
+  "url": "sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation-8",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "       Since the equation defines implicitly, we use implicit differentiation with respect to . Differentiate both sides: Gather all terms involving onto the left side of the equation: Factor out : Isolate : Multiply the numerator and denominator by to clear the complex fraction:    "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",

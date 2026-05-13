@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Derivatives of Inverse Trigonometric Functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Derivatives-Logarithmic-Functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-differentiation-rules.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-related-rates.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html" class="internal"><span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#subsection-derivation-arcsin" class="internal"><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#exercises-inverse-trig-derivatives-geometric" class="internal"><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">Related Rates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Derivatives-Inverse-Trig-Functions"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Inverse Trigonometric Functions</span>
+</h2>
+<section class="introduction" id="sec-Derivatives-Inverse-Trig-Functions-2"><div class="para" id="sec-Derivatives-Inverse-Trig-Functions-2-1">In this section, we develop the differentiation formulas for the inverse trigonometric functions. By applying implicit differentiation to our geometric and algebraic definitions of these functions, we can find their rates of change explicitly in terms of the independent variable <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Derivatives-Inverse-Trig-Functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="definition definition-like" id="definition-inverse-trig-functions"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">186</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Trigonometric Functions.</span>
+</h3>
+<div class="para logical" id="definition-inverse-trig-functions-2-1">
+<ol class="decimal" id="definition-inverse-trig-functions-2-1-1">
+<li id="definition-inverse-trig-functions-2-1-1-1">
+<div class="para" id="definition-inverse-trig-functions-2-1-1-1-1">
+<span class="process-math">\(y=\sin^{-1}x=\arcsin x\)</span> is the number in <span class="process-math">\([-\pi/2,\pi/2]\)</span> for which <span class="process-math">\(\sin y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-inverse-trig-functions-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#definition-inverse-trig-functions-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="definition-inverse-trig-functions-2-1-1-2">
+<div class="para" id="definition-inverse-trig-functions-2-1-1-2-1">
+<span class="process-math">\(y=\cos^{-1}x=\arccos x\)</span> is the number in <span class="process-math">\([0,\pi]\)</span> for which <span class="process-math">\(\cos y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-inverse-trig-functions-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#definition-inverse-trig-functions-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="definition-inverse-trig-functions-2-1-1-3">
+<div class="para" id="definition-inverse-trig-functions-2-1-1-3-1">
+<span class="process-math">\(y=\tan^{-1}x=\arctan x\)</span> is the number in <span class="process-math">\((-\pi/2,\pi/2)\)</span> for which <span class="process-math">\(\tan y=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#definition-inverse-trig-functions-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#definition-inverse-trig-functions-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#definition-inverse-trig-functions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 186: Inverse Trigonometric Functions"><a href="#definition-inverse-trig-functions" title="Copy heading and permalink for Definition 186: Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Definition 186: Inverse Trigonometric Functions">🔗</a></div></article><details id="example-evaluate-inverse-trig-angles" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">187</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="example-evaluate-inverse-trig-angles-1"><div class="para" id="example-evaluate-inverse-trig-angles-1-1">Find the exact angle in radians for each of the following expressions:<div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-evaluate-inverse-trig-angles-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="example-evaluate-inverse-trig-angles-2-1-1">
+<span class="process-math">\(\sin^{-1}(1/\sqrt{2})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-evaluate-inverse-trig-angles-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-evaluate-inverse-trig-angles-2-2-1">
+<div class="para">Let <span class="process-math">\(y = \sin^{-1}(1/\sqrt{2})\text{.}\)</span> By definition, this means:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-2-2-1-2">
+\begin{equation*}
+\sin y = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y\)</span> must lie in the restricted principal interval <span class="process-math">\([-\pi/2, \pi/2]\text{.}\)</span> Looking at the standard unit circle in the first quadrant, the unique angle matching this condition is:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-2-2-1-5">
+\begin{equation*}
+y = \frac{\pi}{4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 187.a.1"><a href="#example-evaluate-inverse-trig-angles-2-2" title="Copy heading and permalink for Solution 187.a.1" aria-label="Copy heading and permalink for Solution 187.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 187.a"><a href="#example-evaluate-inverse-trig-angles-2" title="Copy heading and permalink for Task 187.a" aria-label="Copy heading and permalink for Task 187.a">🔗</a></div></article><article class="task exercise-like" id="example-evaluate-inverse-trig-angles-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="example-evaluate-inverse-trig-angles-3-1-1">
+<span class="process-math">\(\cos^{-1}(-1/2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-evaluate-inverse-trig-angles-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-evaluate-inverse-trig-angles-3-2-1">
+<div class="para">Let <span class="process-math">\(y = \cos^{-1}(-1/2)\text{.}\)</span> This is equivalent to solving:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-3-2-1-2">
+\begin{equation*}
+\cos y = -\frac{1}{2}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y\)</span> must lie in the restricted principal interval <span class="process-math">\([0, \pi]\text{.}\)</span> Since the cosine value is negative, the angle must terminate in the second quadrant. The reference angle whose cosine equals <span class="process-math">\(1/2\)</span> is <span class="process-math">\(\pi/3\text{.}\)</span> Subtracting this reference angle from <span class="process-math">\(\pi\)</span> yields:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-3-2-1-8">
+\begin{equation*}
+y = \pi - \frac{\pi}{3} = \frac{2\pi}{3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 187.b.1"><a href="#example-evaluate-inverse-trig-angles-3-2" title="Copy heading and permalink for Solution 187.b.1" aria-label="Copy heading and permalink for Solution 187.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 187.b"><a href="#example-evaluate-inverse-trig-angles-3" title="Copy heading and permalink for Task 187.b" aria-label="Copy heading and permalink for Task 187.b">🔗</a></div></article><article class="task exercise-like" id="example-evaluate-inverse-trig-angles-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="example-evaluate-inverse-trig-angles-4-1-1">
+<span class="process-math">\(\tan^{-1}(-1/\sqrt{3})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-evaluate-inverse-trig-angles-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-evaluate-inverse-trig-angles-4-2-1">
+<div class="para">Let <span class="process-math">\(y = \tan^{-1}(-1/\sqrt{3})\text{.}\)</span> This implies:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-4-2-1-2">
+\begin{equation*}
+\tan y = -\frac{1}{\sqrt{3}} = -\frac{\sqrt{3}}{3}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y\)</span> must lie in the open principal interval <span class="process-math">\((-\pi/2, \pi/2)\text{.}\)</span> Since the tangent value is negative, the angle must terminate in the fourth quadrant. The reference angle whose tangent is <span class="process-math">\(1/\sqrt{3}\)</span> is <span class="process-math">\(\pi/6\text{.}\)</span> Expressing this within the required fourth-quadrant range yields a negative rotation:</div>
+<div class="displaymath process-math" id="example-evaluate-inverse-trig-angles-4-2-1-7">
+\begin{equation*}
+y = -\frac{\pi}{6}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-evaluate-inverse-trig-angles-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 187.c.1"><a href="#example-evaluate-inverse-trig-angles-4-2" title="Copy heading and permalink for Solution 187.c.1" aria-label="Copy heading and permalink for Solution 187.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 187.c"><a href="#example-evaluate-inverse-trig-angles-4" title="Copy heading and permalink for Task 187.c" aria-label="Copy heading and permalink for Task 187.c">🔗</a></div></article><div class="autopermalink" data-description="Example 187"><a href="#example-evaluate-inverse-trig-angles" title="Copy heading and permalink for Example 187" aria-label="Copy heading and permalink for Example 187">🔗</a></div></article></details><details id="example-inverse-trig-limits" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">188</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="example-inverse-trig-limits-1"><div class="para" id="example-inverse-trig-limits-1-1">Find each of the following limits:<div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-inverse-trig-limits-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="example-inverse-trig-limits-2-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to 1^-} \sin^{-1}x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-inverse-trig-limits-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-inverse-trig-limits-2-2-1">
+<div class="para">The function <span class="process-math">\(f(x) = \sin^{-1}x\)</span> is continuous on its closed domain <span class="process-math">\([-1, 1]\text{.}\)</span> Therefore, we evaluate the left-hand limit approaching <span class="process-math">\(1\)</span> by direct substitution:</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-2-2-1-4">
+\begin{equation*}
+\lim_{x\to 1^-} \sin^{-1}x = \sin^{-1}(1)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\sin(\pi/2) = 1\)</span> and <span class="process-math">\(\pi/2\)</span> falls within the principal range interval <span class="process-math">\([-\pi/2, \pi/2]\text{,}\)</span> we get:</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-2-2-1-8">
+\begin{equation*}
+\lim_{x\to 1^-} \sin^{-1}x = \frac{\pi}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 188.a.1"><a href="#example-inverse-trig-limits-2-2" title="Copy heading and permalink for Solution 188.a.1" aria-label="Copy heading and permalink for Solution 188.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 188.a"><a href="#example-inverse-trig-limits-2" title="Copy heading and permalink for Task 188.a" aria-label="Copy heading and permalink for Task 188.a">🔗</a></div></article><article class="task exercise-like" id="example-inverse-trig-limits-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="example-inverse-trig-limits-3-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to \infty} \tan^{-1}x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-inverse-trig-limits-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-inverse-trig-limits-3-2-1">
+<div class="para">As <span class="process-math">\(x\)</span> grows infinitely large without bound (<span class="process-math">\(x \to \infty\)</span>), we are looking for the angle <span class="process-math">\(y\)</span> in the principal open interval <span class="process-math">\((-\pi/2, \pi/2)\)</span> whose tangent value approaches infinity. Geometrically, this corresponds to the location of the right-hand horizontal asymptote on the graph of the arctangent function:</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-3-2-1-5">
+\begin{equation*}
+\lim_{x\to \infty} \tan^{-1}x = \frac{\pi}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 188.b.1"><a href="#example-inverse-trig-limits-3-2" title="Copy heading and permalink for Solution 188.b.1" aria-label="Copy heading and permalink for Solution 188.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 188.b"><a href="#example-inverse-trig-limits-3" title="Copy heading and permalink for Task 188.b" aria-label="Copy heading and permalink for Task 188.b">🔗</a></div></article><article class="task exercise-like" id="example-inverse-trig-limits-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="example-inverse-trig-limits-4-1-1">
+<span class="process-math">\(\displaystyle \lim_{x\to \infty} \sec^{-1}x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-inverse-trig-limits-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-inverse-trig-limits-4-2-1">
+<div class="para">By definition, the inverse secant function can be rewritten using the reciprocal identity:</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-4-2-1-1">
+\begin{equation*}
+\sec^{-1}x = \cos^{-1}\left(\frac{1}{x}\right)
+\end{equation*}
+</div>
+<div class="para">Taking the limit as <span class="process-math">\(x \to \infty\)</span> means the inner component <span class="process-math">\(\frac{1}{x} \to 0^+\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-4-2-1-4">
+\begin{equation*}
+\lim_{x\to \infty} \sec^{-1}x = \lim_{x\to \infty} \cos^{-1}\left(\frac{1}{x}\right) = \cos^{-1}(0)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\cos(\pi/2) = 0\)</span> and <span class="process-math">\(\pi/2\)</span> falls within the principal range interval <span class="process-math">\([0, \pi]\text{,}\)</span> we conclude:</div>
+<div class="displaymath process-math" id="example-inverse-trig-limits-4-2-1-8">
+\begin{equation*}
+\lim_{x\to \infty} \sec^{-1}x = \frac{\pi}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-inverse-trig-limits-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 188.c.1"><a href="#example-inverse-trig-limits-4-2" title="Copy heading and permalink for Solution 188.c.1" aria-label="Copy heading and permalink for Solution 188.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 188.c"><a href="#example-inverse-trig-limits-4" title="Copy heading and permalink for Task 188.c" aria-label="Copy heading and permalink for Task 188.c">🔗</a></div></article><div class="autopermalink" data-description="Example 188"><a href="#example-inverse-trig-limits" title="Copy heading and permalink for Example 188" aria-label="Copy heading and permalink for Example 188">🔗</a></div></article></details><article class="assemblage assemblage-like" id="assemblage-inverse-trig-derivatives"><h3 class="heading"><span class="title">Derivatives of Inverse Trigonometric Functions.</span></h3>
+<div class="para logical" id="assemblage-inverse-trig-derivatives-2">
+<div class="para">Let <span class="process-math">\(u\)</span> be a differentiable function of <span class="process-math">\(x\text{.}\)</span> The derivatives of the primary inverse trigonometric functions are defined as follows:</div>
+<div class="displaymath process-math" id="assemblage-inverse-trig-derivatives-2-3">
+\begin{equation*}
+\frac{d}{dx}(\arcsin u) = \frac{1}{\sqrt{1-u^2}} \frac{du}{dx}, \quad |u| \lt 1
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="assemblage-inverse-trig-derivatives-2-4">
+\begin{equation*}
+\frac{d}{dx}(\arccos u) = -\frac{1}{\sqrt{1-u^2}} \frac{du}{dx}, \quad |u| \lt 1
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="assemblage-inverse-trig-derivatives-2-5">
+\begin{equation*}
+\frac{d}{dx}(\arctan u) = \frac{1}{1+u^2} \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-inverse-trig-derivatives-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Derivatives of Inverse Trigonometric Functions"><a href="#assemblage-inverse-trig-derivatives" title="Copy heading and permalink for Assemblage: Derivatives of Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Assemblage: Derivatives of Inverse Trigonometric Functions">🔗</a></div></article><section class="subsection" id="subsection-derivation-arcsin"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span>
+</h3>
+<div class="para logical" id="subsection-derivation-arcsin-2">
+<div class="para">To find the derivative of <span class="process-math">\(y = \arcsin x\text{,}\)</span> we begin with its defining algebraic constraint:</div>
+<div class="displaymath process-math" id="subsection-derivation-arcsin-2-2">
+\begin{equation*}
+\sin y = x \quad \text{for } -\frac{\pi}{2} \le y \le \frac{\pi}{2}
+\end{equation*}
+</div>
+<div class="para">Differentiating both sides implicitly with respect to <span class="process-math">\(x\)</span> yields:</div>
+<div class="displaymath process-math" id="subsection-derivation-arcsin-2-4">
+\begin{equation*}
+\cos y \cdot \frac{dy}{dx} = 1
+\end{equation*}
+</div>
+<div class="para">Isolating the derivative component gives us:</div>
+<div class="displaymath process-math" id="subsection-derivation-arcsin-2-5">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{\cos y}
+\end{equation*}
+</div>
+<div class="para">Because <span class="process-math">\(y\)</span> is restricted to the interval <span class="process-math">\([-\pi/2, \pi/2]\text{,}\)</span> the cosine value remains non-negative (<span class="process-math">\(\cos y \ge 0\)</span>). We apply the fundamental Pythagorean trigonometric identity <span class="process-math">\(\sin^2 y + \cos^2 y = 1\)</span> to isolate <span class="process-math">\(\cos y\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="subsection-derivation-arcsin-2-11">
+\begin{equation*}
+\cos y = \sqrt{1 - \sin^2 y}
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(\sin y = x\)</span> directly back into the square root expression completes our calculation:</div>
+<div class="displaymath process-math" id="subsection-derivation-arcsin-2-13">
+\begin{equation*}
+\frac{d}{dx}(\arcsin x) = \frac{1}{\sqrt{1 - x^2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsection-derivation-arcsin-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Derivation of the Derivative of \arcsin x"><a href="#subsection-derivation-arcsin" title="Copy heading and permalink for Subsection: Derivation of the Derivative of \arcsin x" aria-label="Copy heading and permalink for Subsection: Derivation of the Derivative of \arcsin x">🔗</a></div></section><details id="example-derivative-inverse-trig-chain-rule" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">189</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="example-derivative-inverse-trig-chain-rule-1"><div class="para" id="example-derivative-inverse-trig-chain-rule-1-1">Differentiate each of the following expressions:<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="example-derivative-inverse-trig-chain-rule-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-2-1-1">
+<span class="process-math">\(\displaystyle \frac{d}{dx}(\sin^{-1}x^2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-inverse-trig-chain-rule-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-2-2-1">
+<div class="para">
+<em class="alert">Method 1: Formula Method (Chain Rule)</em> We apply the inverse sine derivative rule with the chain rule, setting the inner function <span class="process-math">\(u = x^2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-2-2-1-3">
+\begin{equation*}
+\frac{d}{dx}(\sin^{-1}u) = \frac{1}{\sqrt{1-u^2}} \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(u = x^2\)</span> and its inner derivative <span class="process-math">\(\frac{du}{dx} = 2x\)</span> yields:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-2-2-1-6">
+\begin{equation*}
+\frac{d}{dx}(\sin^{-1}x^2) = \frac{1}{\sqrt{1-(x^2)^2}} \cdot \frac{d}{dx}(x^2)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-2-2-1-7">
+\begin{equation*}
+= \frac{1}{\sqrt{1-x^4}} \cdot 2x = \frac{2x}{\sqrt{1-x^4}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-2-2-2">
+<em class="alert">Method 2: Geometric SOHCAHTOA and Implicit Differentiation</em> Let <span class="process-math">\(y = \sin^{-1}x^2\text{,}\)</span> which means <span class="process-math">\(\sin y = \frac{x^2}{1}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}}\text{.}\)</span> We sketch a reference right triangle with an angle <span class="process-math">\(y\text{,}\)</span> opposite side <span class="process-math">\(x^2\text{,}\)</span> and hypotenuse <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-triangle-arcsin"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/img-triangle-arcsin.svg" role="img" class="contained" alt="A right triangle with angle y, opposite side x squared, hypotenuse 1, and adjacent side square root of 1 minus x to the fourth power."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">190<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Reference triangle for <span class="process-math">\(\sin y = x^2\)</span><div class="autopermalink" data-description="Figure 190"><a href="#fig-triangle-arcsin" title="Copy heading and permalink for Figure 190" aria-label="Copy heading and permalink for Figure 190">🔗</a></div></figcaption></figure><div class="para" id="example-derivative-inverse-trig-chain-rule-2-2-4">By the Pythagorean theorem, the adjacent side is <span class="process-math">\(\sqrt{1^2 - (x^2)^2} = \sqrt{1-x^4}\text{.}\)</span> From the triangle, we find <span class="process-math">\(\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{\sqrt{1-x^4}}{1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-2-2-5">
+<div class="para">Now differentiate <span class="process-math">\(\sin y = x^2\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-2-2-5-3">
+\begin{equation*}
+\cos y \cdot \frac{dy}{dx} = 2x \implies \frac{dy}{dx} = \frac{2x}{\cos y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\cos y = \sqrt{1-x^4}\)</span> into the expression:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-2-2-5-5">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2x}{\sqrt{1-x^4}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 189.a.1"><a href="#example-derivative-inverse-trig-chain-rule-2-2" title="Copy heading and permalink for Solution 189.a.1" aria-label="Copy heading and permalink for Solution 189.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 189.a"><a href="#example-derivative-inverse-trig-chain-rule-2" title="Copy heading and permalink for Task 189.a" aria-label="Copy heading and permalink for Task 189.a">🔗</a></div></article><article class="task exercise-like" id="example-derivative-inverse-trig-chain-rule-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-3-1-1">
+<span class="process-math">\(\displaystyle \frac{d}{dx}(\tan^{-1}5x^3)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-inverse-trig-chain-rule-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-3-2-1">
+<div class="para">
+<em class="alert">Method 1: Formula Method (Chain Rule)</em> We apply the inverse tangent derivative rule combined with the chain rule, setting the inner function <span class="process-math">\(u = 5x^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-3-2-1-3">
+\begin{equation*}
+\frac{d}{dx}(\tan^{-1}u) = \frac{1}{1+u^2} \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(u = 5x^3\)</span> and computing its inner derivative <span class="process-math">\(\frac{du}{dx} = 15x^2\)</span> gives:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-3-2-1-6">
+\begin{equation*}
+\frac{d}{dx}(\tan^{-1}5x^3) = \frac{1}{1+(5x^3)^2} \cdot \frac{d}{dx}(5x^3)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-3-2-1-7">
+\begin{equation*}
+= \frac{1}{1+25x^6} \cdot 15x^2 = \frac{15x^2}{1+25x^6}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-3-2-2">
+<em class="alert">Method 2: Geometric SOHCAHTOA and Implicit Differentiation</em> Let <span class="process-math">\(y = \tan^{-1}5x^3\text{,}\)</span> meaning <span class="process-math">\(\tan y = \frac{5x^3}{1} = \frac{\text{Opposite}}{\text{Adjacent}}\text{.}\)</span> We sketch a reference right triangle with angle <span class="process-math">\(y\text{,}\)</span> opposite side <span class="process-math">\(5x^3\text{,}\)</span> and adjacent side <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-triangle-arctan"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/img-triangle-arctan.svg" role="img" class="contained" alt="A right triangle with angle y, opposite side 5x cubed, adjacent side 1, and hypotenuse square root of 1 plus 25x to the sixth power."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">191<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Reference triangle for <span class="process-math">\(\tan y = 5x^3\)</span><div class="autopermalink" data-description="Figure 191"><a href="#fig-triangle-arctan" title="Copy heading and permalink for Figure 191" aria-label="Copy heading and permalink for Figure 191">🔗</a></div></figcaption></figure><div class="para" id="example-derivative-inverse-trig-chain-rule-3-2-4">The hypotenuse is <span class="process-math">\(\sqrt{1^2 + (5x^3)^2} = \sqrt{1+25x^6}\text{.}\)</span> From the triangle, we find <span class="process-math">\(\sec y = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \sqrt{1+25x^6}\text{,}\)</span> which means <span class="process-math">\(\sec^2 y = 1+25x^6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-3-2-5">
+<div class="para">Now differentiate <span class="process-math">\(\tan y = 5x^3\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-3-2-5-3">
+\begin{equation*}
+\sec^2 y \cdot \frac{dy}{dx} = 15x^2 \implies \frac{dy}{dx} = \frac{15x^2}{\sec^2 y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\sec^2 y = 1+25x^6\)</span> into the expression:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-3-2-5-5">
+\begin{equation*}
+\frac{dy}{dx} = \frac{15x^2}{1+25x^6}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-3-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 189.b.1"><a href="#example-derivative-inverse-trig-chain-rule-3-2" title="Copy heading and permalink for Solution 189.b.1" aria-label="Copy heading and permalink for Solution 189.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 189.b"><a href="#example-derivative-inverse-trig-chain-rule-3" title="Copy heading and permalink for Task 189.b" aria-label="Copy heading and permalink for Task 189.b">🔗</a></div></article><article class="task exercise-like" id="example-derivative-inverse-trig-chain-rule-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-4-1-1">
+<span class="process-math">\(\displaystyle \frac{d}{dx}(\sec^{-1}(x^2+3))\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-derivative-inverse-trig-chain-rule-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-4-2-1">
+<div class="para">
+<em class="alert">Method 1: Formula Method (Chain Rule)</em> We apply the inverse secant derivative rule with the chain rule, setting the inner function <span class="process-math">\(u = x^2+3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-4-2-1-3">
+\begin{equation*}
+\frac{d}{dx}(\sec^{-1}u) = \frac{1}{|u|\sqrt{u^2-1}} \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="para">Substituting <span class="process-math">\(u = x^2+3\)</span> and its inner derivative <span class="process-math">\(\frac{du}{dx} = 2x\)</span> gives:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-4-2-1-6">
+\begin{equation*}
+\frac{d}{dx}(\sec^{-1}(x^2+3)) = \frac{1}{|x^2+3|\sqrt{(x^2+3)^2-1}} \cdot \frac{d}{dx}(x^2+3)
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(x^2+3 \gt 0\)</span> for all real numbers, we can safely remove the absolute value bars:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-4-2-1-8">
+\begin{equation*}
+= \frac{2x}{(x^2+3)\sqrt{(x^4+6x^2+9)-1}} = \frac{2x}{(x^2+3)\sqrt{x^4+6x^2+8}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-derivative-inverse-trig-chain-rule-4-2-2">
+<em class="alert">Method 2: Geometric SOHCAHTOA and Implicit Differentiation</em> Let <span class="process-math">\(y = \sec^{-1}(x^2+3)\text{,}\)</span> meaning <span class="process-math">\(\sec y = \frac{x^2+3}{1} = \frac{\text{Hypotenuse}}{\text{Adjacent}}\text{.}\)</span> We sketch a reference right triangle with angle <span class="process-math">\(y\text{,}\)</span> hypotenuse <span class="process-math">\(x^2+3\text{,}\)</span> and adjacent side <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-triangle-arcsec"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/img-triangle-arcsec.svg" role="img" class="contained" alt="A right triangle with angle y, hypotenuse x squared plus 3, adjacent side 1, and opposite side square root of x to the fourth plus 6x squared plus 8."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">192<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Reference triangle for <span class="process-math">\(\sec y = x^2+3\)</span><div class="autopermalink" data-description="Figure 192"><a href="#fig-triangle-arcsec" title="Copy heading and permalink for Figure 192" aria-label="Copy heading and permalink for Figure 192">🔗</a></div></figcaption></figure><div class="para" id="example-derivative-inverse-trig-chain-rule-4-2-4">The opposite side length matches <span class="process-math">\(\sqrt{(x^2+3)^2 - 1^2} = \sqrt{x^4+6x^2+8}\text{.}\)</span> From the triangle, we find <span class="process-math">\(\tan y = \frac{\text{Opposite}}{\text{Adjacent}} = \sqrt{x^4+6x^2+8}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-derivative-inverse-trig-chain-rule-4-2-5">
+<div class="para">Now differentiate <span class="process-math">\(\sec y = x^2+3\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-4-2-5-3">
+\begin{equation*}
+\sec y \tan y \cdot \frac{dy}{dx} = 2x \implies \frac{dy}{dx} = \frac{2x}{\sec y \tan y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\sec y = x^2+3\)</span> and <span class="process-math">\(\tan y = \sqrt{x^4+6x^2+8}\)</span> back into the expression:</div>
+<div class="displaymath process-math" id="example-derivative-inverse-trig-chain-rule-4-2-5-6">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2x}{(x^2+3)\sqrt{x^4+6x^2+8}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-derivative-inverse-trig-chain-rule-4-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 189.c.1"><a href="#example-derivative-inverse-trig-chain-rule-4-2" title="Copy heading and permalink for Solution 189.c.1" aria-label="Copy heading and permalink for Solution 189.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 189.c"><a href="#example-derivative-inverse-trig-chain-rule-4" title="Copy heading and permalink for Task 189.c" aria-label="Copy heading and permalink for Task 189.c">🔗</a></div></article><div class="autopermalink" data-description="Example 189"><a href="#example-derivative-inverse-trig-chain-rule" title="Copy heading and permalink for Example 189" aria-label="Copy heading and permalink for Example 189">🔗</a></div></article></details><section class="exercises" id="exercises-inverse-trig-derivatives-geometric"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span>
+</h3>
+<section class="introduction" id="exercises-inverse-trig-derivatives-geometric-2"><div class="para" id="exercises-inverse-trig-derivatives-geometric-2-1">Differentiate each of the following functions with respect to its independent variable using right triangle geometry, SOHCAHTOA relationships, and implicit differentiation.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-3"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-3-1-1">
+<span class="process-math">\(y=\cos^{-1}(1/x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-3-2-1">Rewrite the function as <span class="process-math">\(\cos y = \frac{1}{x}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}}\text{.}\)</span> We envision a right triangle with an angle <span class="process-math">\(y\text{,}\)</span> adjacent side <span class="process-math">\(1\text{,}\)</span> and hypotenuse <span class="process-math">\(x\text{.}\)</span> By the Pythagorean theorem, the opposite side is <span class="process-math">\(\sqrt{x^2 - 1^2} = \sqrt{x^2 - 1}\text{.}\)</span> From this geometry, we find <span class="process-math">\(\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{\sqrt{x^2 - 1}}{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-3-2-2">
+<div class="para">Now, differentiate <span class="process-math">\(\cos y = x^{-1}\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-3-2-2-3">
+\begin{equation*}
+-\sin y \cdot \frac{dy}{dx} = -x^{-2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-3-2-2-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{x^2 \sin y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\sin y = \frac{\sqrt{x^2 - 1}}{x}\)</span> back into the equation:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-3-2-2-6">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{x^2 \left(\frac{\sqrt{x^2 - 1}}{x}\right)} = \frac{1}{x\sqrt{x^2 - 1}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1"><a href="#exercises-inverse-trig-derivatives-geometric-3-2" title="Copy heading and permalink for Solution 1.1" aria-label="Copy heading and permalink for Solution 1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1"><a href="#exercises-inverse-trig-derivatives-geometric-3" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-4"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-4-1-1">
+<span class="process-math">\(y=\sin^{-1}(\sqrt{2}t)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-4-2-1">Rewrite the function as <span class="process-math">\(\sin y = \frac{\sqrt{2}t}{1}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}}\text{.}\)</span> We envision a right triangle with an angle <span class="process-math">\(y\text{,}\)</span> opposite side <span class="process-math">\(\sqrt{2}t\text{,}\)</span> and hypotenuse <span class="process-math">\(1\text{.}\)</span> By the Pythagorean theorem, the adjacent side is <span class="process-math">\(\sqrt{1^2 - (\sqrt{2}t)^2} = \sqrt{1 - 2t^2}\text{.}\)</span> From this geometry, we find <span class="process-math">\(\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{\sqrt{1 - 2t^2}}{1} = \sqrt{1 - 2t^2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-4-2-2">
+<div class="para">Now, differentiate <span class="process-math">\(\sin y = \sqrt{2}t\)</span> implicitly with respect to <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-4-2-2-3">
+\begin{equation*}
+\cos y \cdot \frac{dy}{dt} = \sqrt{2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-4-2-2-4">
+\begin{equation*}
+\frac{dy}{dt} = \frac{\sqrt{2}}{\cos y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\cos y = \sqrt{1 - 2t^2}\)</span> back into the equation:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-4-2-2-6">
+\begin{equation*}
+\frac{dy}{dt} = \frac{\sqrt{2}}{\sqrt{1 - 2t^2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.1"><a href="#exercises-inverse-trig-derivatives-geometric-4-2" title="Copy heading and permalink for Solution 2.1" aria-label="Copy heading and permalink for Solution 2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2"><a href="#exercises-inverse-trig-derivatives-geometric-4" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-5"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-5-1-1">
+<span class="process-math">\(y=\csc^{-1}(x/2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-5-2-1">Rewrite the function as <span class="process-math">\(\csc y = \frac{x}{2}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\csc y = \frac{\text{Hypotenuse}}{\text{Opposite}}\text{.}\)</span> We envision a right triangle with an angle <span class="process-math">\(y\text{,}\)</span> hypotenuse <span class="process-math">\(x\text{,}\)</span> and opposite side <span class="process-math">\(2\text{.}\)</span> By the Pythagorean theorem, the adjacent side is <span class="process-math">\(\sqrt{x^2 - 2^2} = \sqrt{x^2 - 4}\text{.}\)</span> From this geometry, we find <span class="process-math">\(\cot y = \frac{\text{Adjacent}}{\text{Opposite}} = \frac{\sqrt{x^2 - 4}}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-5-2-2">
+<div class="para">Now, differentiate <span class="process-math">\(\csc y = \frac{x}{2}\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-5-2-2-3">
+\begin{equation*}
+-\csc y \cot y \cdot \frac{dy}{dx} = \frac{1}{2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-5-2-2-4">
+\begin{equation*}
+\frac{dy}{dx} = -\frac{1}{2 \csc y \cot y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\csc y = \frac{x}{2}\)</span> and <span class="process-math">\(\cot y = \frac{\sqrt{x^2 - 4}}{2}\)</span> back into the equation:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-5-2-2-7">
+\begin{equation*}
+\frac{dy}{dx} = -\frac{1}{2 \left(\frac{x}{2}\right) \left(\frac{\sqrt{x^2 - 4}}{2}\right)} = -\frac{2}{x\sqrt{x^2 - 4}}
+\end{equation*}
+</div>
+<div class="para">
+<em class="emphasis">Note:</em> For negative values of <span class="process-math">\(x\text{,}\)</span> absolute value bars <span class="process-math">\(|x|\)</span> are required to ensure a proper positive range for the derivative of a cosecant root, yielding <span class="process-math">\(-\frac{2}{|x|\sqrt{x^2 - 4}}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1"><a href="#exercises-inverse-trig-derivatives-geometric-5-2" title="Copy heading and permalink for Solution 3.1" aria-label="Copy heading and permalink for Solution 3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3"><a href="#exercises-inverse-trig-derivatives-geometric-5" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-6"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-6-1-1">
+<span class="process-math">\(y=\tan^{-1}(x/2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-6-2-1">Rewrite the function as <span class="process-math">\(\tan y = \frac{x}{2}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\tan y = \frac{\text{Opposite}}{\text{Adjacent}}\text{.}\)</span> We envision a right triangle with an angle <span class="process-math">\(y\text{,}\)</span> opposite side <span class="process-math">\(x\text{,}\)</span> and adjacent side <span class="process-math">\(2\text{.}\)</span> By the Pythagorean theorem, the hypotenuse is <span class="process-math">\(\sqrt{2^2 + x^2} = \sqrt{4 + x^2}\text{.}\)</span> From this geometry, we find <span class="process-math">\(\sec y = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \frac{\sqrt{4 + x^2}}{2}\text{,}\)</span> which means <span class="process-math">\(\sec^2 y = \frac{4 + x^2}{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-6-2-2">
+<div class="para">Now, differentiate <span class="process-math">\(\tan y = \frac{x}{2}\)</span> implicitly with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-6-2-2-3">
+\begin{equation*}
+\sec^2 y \cdot \frac{dy}{dx} = \frac{1}{2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-6-2-2-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2 \sec^2 y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\sec^2 y = \frac{4 + x^2}{4}\)</span> back into the equation:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-6-2-2-6">
+\begin{equation*}
+\frac{dy}{dx} = \frac{1}{2 \left(\frac{4 + x^2}{4}\right)} = \frac{1}{\frac{4 + x^2}{2}} = \frac{2}{4 + x^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#exercises-inverse-trig-derivatives-geometric-6-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#exercises-inverse-trig-derivatives-geometric-6" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-7"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-7-1-1">
+<span class="process-math">\(y=\ln(x^2+4)-x\tan^{-1}(x/2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-7-2-1">
+<div class="para">We differentiate each part separately, applying the product rule to the second term:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-7-2-1-1">
+\begin{equation*}
+\frac{dy}{dx} = \frac{d}{dx}\left[\ln(x^2+4)\right] - \frac{d}{dx}\left[x\tan^{-1}(x/2)\right]
+\end{equation*}
+</div>
+<div class="para">The derivative of the first term via the natural log chain rule is <span class="process-math">\(\frac{2x}{x^2+4}\text{.}\)</span> For the second term, we use the product rule: <span class="process-math">\((1)\cdot\tan^{-1}(x/2) + x\cdot\frac{d}{dx}\left[\tan^{-1}(x/2)\right]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-7-2-2">
+<div class="para">To geometric-style differentiate the inner item <span class="process-math">\(\theta = \tan^{-1}(x/2)\text{,}\)</span> rewrite it as <span class="process-math">\(\tan \theta = \frac{x}{2}\)</span> where <span class="process-math">\(\text{Opposite}=x\)</span> and <span class="process-math">\(\text{Adjacent}=2\text{.}\)</span> The hypotenuse is <span class="process-math">\(\sqrt{4+x^2}\text{,}\)</span> meaning <span class="process-math">\(\sec \theta = \frac{\sqrt{4+x^2}}{2}\)</span> and <span class="process-math">\(\sec^2 \theta = \frac{4+x^2}{4}\text{.}\)</span> Implicitly differentiating yields:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-7-2-2-8">
+\begin{equation*}
+\sec^2 \theta \cdot \frac{d\theta}{dx} = \frac{1}{2} \implies \frac{d\theta}{dx} = \frac{1}{2\left(\frac{4+x^2}{4}\right)} = \frac{2}{4+x^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-7-2-3">
+<div class="para">Combine both main parts back together and subtract:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-7-2-3-1">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2x}{x^2+4} - \left(\tan^{-1}(x/2) + x\cdot\frac{2}{4+x^2}\right)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-7-2-3-2">
+\begin{equation*}
+\frac{dy}{dx} = \frac{2x}{x^2+4} - \tan^{-1}(x/2) - \frac{2x}{x^2+4} = -\tan^{-1}\left(\frac{x}{2}\right)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#exercises-inverse-trig-derivatives-geometric-7-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#exercises-inverse-trig-derivatives-geometric-7" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-inverse-trig-derivatives-geometric-8"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-8-1-1">
+<span class="process-math">\(y=\cos^{-1}(e^{-t})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-inverse-trig-derivatives-geometric-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-inverse-trig-derivatives-geometric-8-2-1">Rewrite the function as <span class="process-math">\(\cos y = \frac{e^{-t}}{1}\text{.}\)</span> Using SOHCAHTOA, <span class="process-math">\(\cos y = \frac{\text{Adjacent}}{\text{Hypotenuse}}\text{.}\)</span> We envision a right triangle with an angle <span class="process-math">\(y\text{,}\)</span> adjacent side <span class="process-math">\(e^{-t}\text{,}\)</span> and hypotenuse <span class="process-math">\(1\text{.}\)</span> By the Pythagorean theorem, the opposite side length matches <span class="process-math">\(\sqrt{1^2 - (e^{-t})^2} = \sqrt{1 - e^{-2t}}\text{.}\)</span> From this geometry, we find <span class="process-math">\(\sin y = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{\sqrt{1 - e^{-2t}}}{1} = \sqrt{1 - e^{-2t}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercises-inverse-trig-derivatives-geometric-8-2-2">
+<div class="para">Now, differentiate <span class="process-math">\(\cos y = e^{-t}\)</span> implicitly with respect to <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-8-2-2-3">
+\begin{equation*}
+-\sin y \cdot \frac{dy}{dt} = -e^{-t}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-8-2-2-4">
+\begin{equation*}
+\frac{dy}{dt} = \frac{e^{-t}}{\sin y}
+\end{equation*}
+</div>
+<div class="para">Substitute <span class="process-math">\(\sin y = \sqrt{1 - e^{-2t}}\)</span> back into the equation:</div>
+<div class="displaymath process-math" id="exercises-inverse-trig-derivatives-geometric-8-2-2-6">
+\begin{equation*}
+\frac{dy}{dt} = \frac{e^{-t}}{\sqrt{1 - e^{-2t}}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercises-inverse-trig-derivatives-geometric-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.1"><a href="#exercises-inverse-trig-derivatives-geometric-8-2" title="Copy heading and permalink for Solution 6.1" aria-label="Copy heading and permalink for Solution 6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6"><a href="#exercises-inverse-trig-derivatives-geometric-8" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises on Inverse Trigonometric Derivatives (Geometric Method)"><a href="#exercises-inverse-trig-derivatives-geometric" title="Copy heading and permalink for Exercises: Exercises on Inverse Trigonometric Derivatives (Geometric Method)" aria-label="Copy heading and permalink for Exercises: Exercises on Inverse Trigonometric Derivatives (Geometric Method)">🔗</a></div></section><div class="autopermalink" data-description="Section: Derivatives of Inverse Trigonometric Functions"><a href="#sec-Derivatives-Inverse-Trig-Functions" title="Copy heading and permalink for Section: Derivatives of Inverse Trigonometric Functions" aria-label="Copy heading and permalink for Section: Derivatives of Inverse Trigonometric Functions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-Derivatives-Logarithmic-Functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-related-rates.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

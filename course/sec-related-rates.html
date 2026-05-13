@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Related Rates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Derivatives-Inverse-Trig-Functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-differentiation-rules.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html" class="internal"><span class="title">Derivatives of Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#subsection-derivation-arcsin" class="internal"><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#exercises-inverse-trig-derivatives-geometric" class="internal"><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">Related Rates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-related-rates"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Related Rates</span>
+</h2>
+<section class="introduction" id="sec-related-rates-2"><div class="para" id="sec-related-rates-2-1">In many real-world applications, several variables vary simultaneously with respect to time. When an algebraic or geometric equation connects these variables, we can differentiate the entire relationship implicitly with respect to time. This allows us to calculate how the rate of change of one quantity directly drives or restricts the rate of change of another.<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="theorem theorem-like" id="theorem-related-rates-chain-rule"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">193</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Related Rates Identity.</span>
+</h3>
+<div class="para logical" id="theorem-related-rates-chain-rule-2-1">
+<div class="para">Suppose that <span class="process-math">\(y\)</span> is a differentiable function of <span class="process-math">\(x\)</span> given by <span class="process-math">\(y=f(x)\text{,}\)</span> where <span class="process-math">\(x\)</span> varies continuously with time <span class="process-math">\(t\text{.}\)</span> Because <span class="process-math">\(y\)</span> depends functionally on <span class="process-math">\(x\)</span> and <span class="process-math">\(x\)</span> depends on <span class="process-math">\(t\text{,}\)</span> the quantity <span class="process-math">\(y\)</span> implicitly depends on <span class="process-math">\(t\text{.}\)</span> The Calculus Chain Rule dictates the following relationship:</div>
+<div class="displaymath process-math" id="theorem-related-rates-chain-rule-2-1-12">
+\begin{equation*}
+\frac{dy}{dt}=\frac{dy}{dx}\cdot\frac{dx}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-related-rates-chain-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 193: Related Rates Identity"><a href="#theorem-related-rates-chain-rule" title="Copy heading and permalink for Theorem 193: Related Rates Identity" aria-label="Copy heading and permalink for Theorem 193: Related Rates Identity">🔗</a></div></article><div class="para" id="sec-related-rates-4-1">A ladder is leaning precariously against a wall. It starts to slide down, and as it does, the distance <span class="process-math">\(X\)</span> between the bottom of the ladder and the wall increases at a certain rate <span class="process-math">\(X' = \dfrac{dX}{dt}\text{;}\)</span> at the same time, the height <span class="process-math">\(H\)</span> of the top of the ladder decreases at the rate <span class="process-math">\(H' = \dfrac{dH}{dt}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="sec-related-rates-4-2">
+<div class="para">Since the ladder, the wall, and the ground form a right triangle, the parameters in the problem are related by the Pythagorean theorem (where <span class="process-math">\(L\)</span> is the constant length of the ladder):</div>
+<div class="displaymath process-math" id="equation-ladder-pythagorean">
+\begin{equation}
+H^2 + X^2 = L^2\tag{1}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="sec-related-rates-4-3">
+<div class="para">We can differentiate <a href="sec-related-rates.html#equation-ladder-pythagorean" class="xref" data-knowl="./knowl/xref/equation-ladder-pythagorean.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">(1)</a> with respect to the time variable <span class="process-math">\(t\)</span> in order to obtain a relationship between the parameters and their rates of change:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation-ladder-pythagorean.html" id="equation-ladder-derivative">
+\begin{equation}
+H H' + X X' = 0 \quad \text{(Note: } L = \text{constant so } L' = 0\text{)}\tag{2}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-related-rates-4-4">Thus we have five variables (<span class="process-math">\(H, X, L, H', X'\)</span>); if we are given values for three of them, we can use our two equations to solve for the others.<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="sec-related-rates-4-5">For example, suppose we know that the ladder is <span class="process-math">\(25\)</span> feet long, and the base is sliding away at the rate <span class="process-math">\(X' = 4\)</span> fps (feet per second). How fast is the top sliding down when the base is <span class="process-math">\(18\)</span> feet from the wall?<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-related-rates-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="sec-related-rates-5-1">
+<div class="para">The data provided translate to the following mathematical conditions:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation-ladder-pythagorean.html" id="sec-related-rates-5-1-1">
+\begin{equation*}
+L = 25, \text{ and } X' = 4 \text{ when } X = 18
+\end{equation*}
+</div>
+<div class="para">Using the Pythagorean relationship in <a href="sec-related-rates.html#equation-ladder-pythagorean" class="xref" data-knowl="./knowl/xref/equation-ladder-pythagorean.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">(1)</a>, we isolate and compute <span class="process-math">\(H\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation-ladder-pythagorean.html" id="sec-related-rates-5-1-4">
+\begin{equation*}
+H = \sqrt{25^2 - 18^2} = \sqrt{625 - 324} = \sqrt{301} \approx 17.35\text{ feet}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-related-rates-5-2">
+<div class="para">Now, we feed these static values at this precise moment into the related rates equation from <a href="sec-related-rates.html#equation-ladder-derivative" class="xref" data-knowl="./knowl/xref/equation-ladder-derivative.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">(2)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation-ladder-derivative.html ./knowl/xref/equation-ladder-substitution.html" id="equation-ladder-substitution">
+\begin{equation}
+17.35 \cdot H' + 18 \cdot 4 = 0\tag{3}
+\end{equation}
+</div>
+<div class="para">Solving <a href="sec-related-rates.html#equation-ladder-substitution" class="xref" data-knowl="./knowl/xref/equation-ladder-substitution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">(3)</a> for <span class="process-math">\(H'\)</span> yields:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/equation-ladder-derivative.html ./knowl/xref/equation-ladder-substitution.html" id="sec-related-rates-5-2-5">
+\begin{equation*}
+17.35 \cdot H' + 72 = 0 \implies H' = -\frac{72}{17.35} \approx -4.15\text{ fps}
+\end{equation*}
+</div>
+<div class="para">Thus, the top of the ladder is sliding down the wall at a rate of approximately <span class="process-math">\(4.15\)</span> feet per second.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-related-rates-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1"><a href="#sec-related-rates-5" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details><details id="example-implicit-related-rates" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">194</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-implicit-related-rates-1-1">
+<div class="para">The variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both differentiable functions of <span class="process-math">\(t\)</span> and are related by the equation:</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-1-1-4">
+\begin{equation*}
+x^3-2y^2+5x=16
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(\dfrac{dx}{dt}=4\)</span> when <span class="process-math">\(x=2\)</span> and <span class="process-math">\(y=-1\text{,}\)</span> find the corresponding value of <span class="process-math">\(\dfrac{dy}{dt}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-implicit-related-rates-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="example-implicit-related-rates-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-implicit-related-rates-2-1">
+<div class="para">We begin by differentiating both sides of the given equation implicitly with respect to time <span class="process-math">\(t\text{,}\)</span> applying the chain rule to each term:</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-1-2">
+\begin{equation*}
+\frac{d}{dt}(x^3) - \frac{d}{dt}(2y^2) + \frac{d}{dt}(5x) = \frac{d}{dt}(16)
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-1-3">
+\begin{equation*}
+3x^2 \frac{dx}{dt} - 4y \frac{dy}{dt} + 5 \frac{dx}{dt} = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-implicit-related-rates-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-implicit-related-rates-2-2">
+<div class="para">Next, we substitute the known values (<span class="process-math">\(x = 2\text{,}\)</span> <span class="process-math">\(y = -1\text{,}\)</span> and <span class="process-math">\(\frac{dx}{dt} = 4\)</span>) into this differentiated equation to isolate <span class="process-math">\(\frac{dy}{dt}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-2-5">
+\begin{equation*}
+3(2)^2(4) - 4(-1)\frac{dy}{dt} + 5(4) = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-2-6">
+\begin{equation*}
+3(4)(4) + 4\frac{dy}{dt} + 20 = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-2-7">
+\begin{equation*}
+48 + 4\frac{dy}{dt} + 20 = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-implicit-related-rates-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-implicit-related-rates-2-3">
+<div class="para">Combine the constant terms and solve for the remaining rate:</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-3-1">
+\begin{equation*}
+68 + 4\frac{dy}{dt} = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-3-2">
+\begin{equation*}
+4\frac{dy}{dt} = -68
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="example-implicit-related-rates-2-3-3">
+\begin{equation*}
+\frac{dy}{dt} = -17
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-implicit-related-rates-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 194.1"><a href="#example-implicit-related-rates-2" title="Copy heading and permalink for Solution 194.1" aria-label="Copy heading and permalink for Solution 194.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 194"><a href="#example-implicit-related-rates" title="Copy heading and permalink for Example 194" aria-label="Copy heading and permalink for Example 194">🔗</a></div></article></details><details id="example-expanding-circular-area" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">195</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-expanding-circular-area-1-1">A restaurant supplier services the restaurants in a circular area in such a way that the radius <span class="process-math">\(r\)</span> is increasing at the rate of <span class="process-math">\(2\)</span> mi per year at the moment when <span class="process-math">\(r\)</span> goes through the value <span class="process-math">\(r=5\)</span> mi. At that moment, how fast is the area increasing?<div class="autopermalink" data-description="Paragraph"><a href="#example-expanding-circular-area-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-expanding-circle"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-expanding-circle.svg" role="img" class="contained" alt="A circle with a solid line radius r, surrounded by dashed concentric lines showing outward expansion."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">196<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Expanding circular service area with an increasing radius <span class="process-math">\(r\)</span><div class="autopermalink" data-description="Figure 196"><a href="#fig-expanding-circle" title="Copy heading and permalink for Figure 196" aria-label="Copy heading and permalink for Figure 196">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-expanding-circular-area-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-expanding-circular-area-2-1">
+<div class="para">We model the geometric shape of the service zone using the standard formula for the area of a circle:</div>
+<div class="displaymath process-math" id="example-expanding-circular-area-2-1-1">
+\begin{equation*}
+A = \pi r^2
+\end{equation*}
+</div>
+<div class="para">Both the area <span class="process-math">\(A\)</span> and the radius <span class="process-math">\(r\)</span> are implicit functions of time <span class="process-math">\(t\text{.}\)</span> Differentiating both sides of the equation implicitly with respect to <span class="process-math">\(t\)</span> using the chain rule yields:</div>
+<div class="displaymath process-math" id="example-expanding-circular-area-2-1-6">
+\begin{equation*}
+\frac{dA}{dt} = 2\pi r \frac{dr}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-expanding-circular-area-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-expanding-circular-area-2-2">
+<div class="para">We are given the rate of change of the radius and the instantaneous radius at this specific moment:</div>
+<div class="displaymath process-math" id="example-expanding-circular-area-2-2-1">
+\begin{equation*}
+\frac{dr}{dt} = 2 \text{ mi/year} \quad \text{when} \quad r = 5 \text{ mi}
+\end{equation*}
+</div>
+<div class="para">Substituting these parameters into our rate relationship gives:</div>
+<div class="displaymath process-math" id="example-expanding-circular-area-2-2-2">
+\begin{equation*}
+\frac{dA}{dt} = 2\pi (5)(2) = 20\pi
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-expanding-circular-area-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-expanding-circular-area-2-3">Thus, at that exact moment, the circular service area is increasing at a rate of <span class="process-math">\(20\pi \approx 62.83\)</span> square miles per year.<div class="autopermalink" data-description="Paragraph"><a href="#example-expanding-circular-area-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 195.1"><a href="#example-expanding-circular-area-2" title="Copy heading and permalink for Solution 195.1" aria-label="Copy heading and permalink for Solution 195.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 195"><a href="#example-expanding-circular-area" title="Copy heading and permalink for Example 195" aria-label="Copy heading and permalink for Example 195">🔗</a></div></article></details><details id="example-ripples-circumference" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">197</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-ripples-circumference-1-1">A stone is dropped into a lake, causing circular waves whose radii increase at a constant rate of <span class="process-math">\(0.5\)</span> m/sec. At what rate is the circumference of a wave changing when its radius is <span class="process-math">\(4\)</span> meters?<div class="autopermalink" data-description="Paragraph"><a href="#example-ripples-circumference-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-expanding-ripple"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-expanding-ripple.svg" role="img" class="contained" alt="Concentric circles expanding outward with arrows illustrating a radial rate of change."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">198<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Concentric circular ripples expanding outward from a central entry point.<div class="autopermalink" data-description="Figure 198"><a href="#fig-expanding-ripple" title="Copy heading and permalink for Figure 198" aria-label="Copy heading and permalink for Figure 198">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-ripples-circumference-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="example-ripples-circumference-2-1">
+<div class="para">We represent the boundary path length of a circular wave using the standard formula for the circumference of a circle:</div>
+<div class="displaymath process-math" id="example-ripples-circumference-2-1-1">
+\begin{equation*}
+C = 2\pi r
+\end{equation*}
+</div>
+<div class="para">Both the circumference <span class="process-math">\(C\)</span> and the radius <span class="process-math">\(r\)</span> vary continuously over time <span class="process-math">\(t\text{.}\)</span> Differentiating both sides of this relationship implicitly with respect to <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="example-ripples-circumference-2-1-6">
+\begin{equation*}
+\frac{dC}{dt} = 2\pi \frac{dr}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-ripples-circumference-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-ripples-circumference-2-2">
+<div class="para">We are given that the radius increases at a constant rate of <span class="process-math">\(\frac{dr}{dt} = 0.5\)</span> m/sec. Substituting this value into our rate equation gives:</div>
+<div class="displaymath process-math" id="example-ripples-circumference-2-2-2">
+\begin{equation*}
+\frac{dC}{dt} = 2\pi (0.5) = \pi
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-ripples-circumference-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-ripples-circumference-2-3">Notice that the rate of change of the circumference depends entirely on the rate of change of the radius and is independent of the instantaneous radius value itself. Thus, when <span class="process-math">\(r = 4\)</span> meters (or any other size), the circumference increases at a constant rate of <span class="process-math">\(\pi \approx 3.14\)</span> meters per second.<div class="autopermalink" data-description="Paragraph"><a href="#example-ripples-circumference-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 197.1"><a href="#example-ripples-circumference-2" title="Copy heading and permalink for Solution 197.1" aria-label="Copy heading and permalink for Solution 197.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 197"><a href="#example-ripples-circumference" title="Copy heading and permalink for Example 197" aria-label="Copy heading and permalink for Example 197">🔗</a></div></article></details><details id="example-sliding-ladder-10ft" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">199</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-sliding-ladder-10ft-1-1">A ladder 10 feet long leans against a vertical building. If the bottom of the ladder slides away from the building horizontally at a rate of 2 feet/sec, how fast is the ladder sliding down the building when the top of the ladder is 6 feet above the ground?<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-sliding-ladder-diagram"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-sliding-ladder-diagram.svg" role="img" class="contained" alt="A right-angled triangle showing a ladder of length 10 as the hypotenuse, a vertical height h along the y-axis, and a horizontal distance x along the x-axis."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">200<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right triangle formed by a ladder leaning against a vertical wall.<div class="autopermalink" data-description="Figure 200"><a href="#fig-sliding-ladder-diagram" title="Copy heading and permalink for Figure 200" aria-label="Copy heading and permalink for Figure 200">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-sliding-ladder-10ft-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-sliding-ladder-10ft-2-1">Let <span class="process-math">\(x\)</span> represent the horizontal distance from the bottom of the ladder to the building, and let <span class="process-math">\(h\)</span> represent the vertical height from the top of the ladder to the ground. The length of the ladder is a constant <span class="process-math">\(L = 10\)</span> feet.<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-sliding-ladder-10ft-2-2">
+<div class="para">The ladder, ground, and wall form a right triangle. By the Pythagorean theorem, these parameters are related by:</div>
+<div class="displaymath process-math" id="eqn-ladder-10ft-pythag">
+\begin{equation}
+x^2 + h^2 = 10^2 \implies x^2 + h^2 = 100\tag{4}
+\end{equation}
+</div>
+<div class="para">Both <span class="process-math">\(x\)</span> and <span class="process-math">\(h\)</span> change with respect to time <span class="process-math">\(t\text{.}\)</span> Differentiating both sides implicitly with respect to <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="eqn-ladder-10ft-deriv">
+\begin{equation}
+2x \frac{dx}{dt} + 2h \frac{dh}{dt} = 0 \implies x \frac{dx}{dt} + h \frac{dh}{dt} = 0\tag{5}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-sliding-ladder-10ft-2-3">
+<div class="para">We are given that <span class="process-math">\(\frac{dx}{dt} = 2\)</span> ft/sec at the exact moment when <span class="process-math">\(h = 6\)</span> feet. Before substituting into our rate equation, we use <a href="sec-related-rates.html#eqn-ladder-10ft-pythag" class="xref" data-knowl="./knowl/xref/eqn-ladder-10ft-pythag.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4">(4)</a> to calculate the corresponding value of <span class="process-math">\(x\)</span> at this instant:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-ladder-10ft-pythag.html" id="example-sliding-ladder-10ft-2-3-5">
+\begin{equation*}
+x^2 + 6^2 = 100 \implies x^2 + 36 = 100 \implies x^2 = 64 \implies x = 8 \text{ feet}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-sliding-ladder-10ft-2-4">
+<div class="para">Now, substitute the values <span class="process-math">\(x = 8\text{,}\)</span> <span class="process-math">\(h = 6\text{,}\)</span> and <span class="process-math">\(\frac{dx}{dt} = 2\)</span> into our differentiated relation <a href="sec-related-rates.html#eqn-ladder-10ft-deriv" class="xref" data-knowl="./knowl/xref/eqn-ladder-10ft-deriv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5">(5)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-ladder-10ft-deriv.html" id="example-sliding-ladder-10ft-2-4-5">
+\begin{equation*}
+(8)(2) + (6)\frac{dh}{dt} = 0
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-ladder-10ft-deriv.html" id="example-sliding-ladder-10ft-2-4-6">
+\begin{equation*}
+16 + 6\frac{dh}{dt} = 0 \implies 6\frac{dh}{dt} = -16 \implies \frac{dh}{dt} = -\frac{8}{3} \approx -2.67 \text{ ft/sec}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-sliding-ladder-10ft-2-5">The negative sign confirms the height is decreasing. Therefore, the ladder is sliding down the building at a rate of <span class="process-math">\(\frac{8}{3}\)</span> feet per second (or approximately <span class="process-math">\(2.67\)</span> ft/sec).<div class="autopermalink" data-description="Paragraph"><a href="#example-sliding-ladder-10ft-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 199.1"><a href="#example-sliding-ladder-10ft-2" title="Copy heading and permalink for Solution 199.1" aria-label="Copy heading and permalink for Solution 199.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 199"><a href="#example-sliding-ladder-10ft" title="Copy heading and permalink for Example 199" aria-label="Copy heading and permalink for Example 199">🔗</a></div></article></details><details id="exercise-sliding-ladder-13ft" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">201</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="exercise-sliding-ladder-13ft-1">
+<div class="para" id="exercise-sliding-ladder-13ft-1-1">A 13-ft ladder is leaning against a house when its base starts to slide away. By the time the base is 12 ft from the house, the base is moving at the rate of 5 ft/sec.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-sliding-ladder-13ft-diagram"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-sliding-ladder-13ft-diagram.svg" role="img" class="contained" alt="A right-angled triangle showing a ladder of length 13 as the hypotenuse, a vertical height y along the wall, a horizontal distance x along the ground, and an angle theta between the ladder and the ground."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">202<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right triangle formed by a 13-ft ladder leaning against a house.<div class="autopermalink" data-description="Figure 202"><a href="#fig-sliding-ladder-13ft-diagram" title="Copy heading and permalink for Figure 202" aria-label="Copy heading and permalink for Figure 202">🔗</a></div></figcaption></figure>
+</div>
+<article class="task exercise-like" id="exercise-sliding-ladder-13ft-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exercise-sliding-ladder-13ft-2-1-1">How fast is the top of the ladder sliding down from the wall then?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-sliding-ladder-13ft-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercise-sliding-ladder-13ft-2-2-1">Let <span class="process-math">\(x\)</span> be the distance from the base to the wall, and <span class="process-math">\(y\)</span> be the height of the top of the ladder. The ladder forms a right triangle where <span class="process-math">\(x^2 + y^2 = 13^2 = 169\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-sliding-ladder-13ft-2-2-2">
+<div class="para">At the given moment, <span class="process-math">\(x = 12\)</span> ft. We solve for <span class="process-math">\(y\)</span> using the Pythagorean theorem:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-2-2-2-3">
+\begin{equation*}
+12^2 + y^2 = 169 \implies 144 + y^2 = 169 \implies y^2 = 25 \implies y = 5\text{ ft}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-sliding-ladder-13ft-2-2-3">
+<div class="para">Differentiating <span class="process-math">\(x^2 + y^2 = 169\)</span> implicitly with respect to time <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-2-2-3-3">
+\begin{equation*}
+2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0 \implies x\frac{dx}{dt} + y\frac{dy}{dt} = 0
+\end{equation*}
+</div>
+<div class="para">Substitute the known snapshot parameters (<span class="process-math">\(x = 12\text{,}\)</span> <span class="process-math">\(y = 5\text{,}\)</span> and <span class="process-math">\(\frac{dx}{dt} = 5\)</span>):</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-2-2-3-7">
+\begin{equation*}
+(12)(5) + (5)\frac{dy}{dt} = 0 \implies 60 + 5\frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -12\text{ ft/sec}
+\end{equation*}
+</div>
+<div class="para">The top of the ladder is sliding down at a rate of <span class="process-math">\(12\)</span> ft/sec.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 201.a.1"><a href="#exercise-sliding-ladder-13ft-2-2" title="Copy heading and permalink for Solution 201.a.1" aria-label="Copy heading and permalink for Solution 201.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 201.a"><a href="#exercise-sliding-ladder-13ft-2" title="Copy heading and permalink for Task 201.a" aria-label="Copy heading and permalink for Task 201.a">🔗</a></div></article><article class="task exercise-like" id="exercise-sliding-ladder-13ft-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exercise-sliding-ladder-13ft-3-1-1">At what rate is the area of the triangle formed by the ladder, wall, and ground changing then?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-sliding-ladder-13ft-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-sliding-ladder-13ft-3-2-1">
+<div class="para">The area <span class="process-math">\(A\)</span> of the right triangle is modeled by:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-3-2-1-2">
+\begin{equation*}
+A = \frac{1}{2}xy
+\end{equation*}
+</div>
+<div class="para">Differentiating both sides with respect to time <span class="process-math">\(t\)</span> via the product rule yields:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-3-2-1-4">
+\begin{equation*}
+\frac{dA}{dt} = \frac{1}{2}\left( y\frac{dx}{dt} + x\frac{dy}{dt} \right)
+\end{equation*}
+</div>
+<div class="para">Substitute our snapshot values (<span class="process-math">\(x = 12\text{,}\)</span> <span class="process-math">\(y = 5\text{,}\)</span> <span class="process-math">\(\frac{dx}{dt} = 5\text{,}\)</span> and <span class="process-math">\(\frac{dy}{dt} = -12\)</span>):</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-3-2-1-9">
+\begin{equation*}
+\frac{dA}{dt} = \frac{1}{2}\left( (5)(5) + (12)(-12) \right) = \frac{1}{2}(25 - 144) = \frac{1}{2}(-119) = -59.5\text{ ft}^2\text{/sec}
+\end{equation*}
+</div>
+<div class="para">The area of the triangle is decreasing at a rate of <span class="process-math">\(59.5\)</span> square feet per second.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 201.b.1"><a href="#exercise-sliding-ladder-13ft-3-2" title="Copy heading and permalink for Solution 201.b.1" aria-label="Copy heading and permalink for Solution 201.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 201.b"><a href="#exercise-sliding-ladder-13ft-3" title="Copy heading and permalink for Task 201.b" aria-label="Copy heading and permalink for Task 201.b">🔗</a></div></article><article class="task exercise-like" id="exercise-sliding-ladder-13ft-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exercise-sliding-ladder-13ft-4-1-1">At what rate is the angle <span class="process-math">\(\theta\)</span> between the ladder and the ground changing then?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercise-sliding-ladder-13ft-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-sliding-ladder-13ft-4-2-1">
+<div class="para">We relate the angle <span class="process-math">\(\theta\)</span> to the moving base distance <span class="process-math">\(x\)</span> using the cosine relationship:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-4-2-1-3">
+\begin{equation*}
+\cos \theta = \frac{x}{13} \implies \theta = \cos^{-1}\left(\frac{x}{13}\right)
+\end{equation*}
+</div>
+<div class="para">Using the geometric right triangle method to find the rate of change, differentiate <span class="process-math">\(\cos \theta = \frac{x}{13}\)</span> implicitly:</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-4-2-1-5">
+\begin{equation*}
+-\sin \theta \frac{d\theta}{dt} = \frac{1}{13}\frac{dx}{dt}
+\end{equation*}
+</div>
+<div class="para">From the triangle values at this instant (<span class="process-math">\(y = 5\text{,}\)</span> <span class="process-math">\(\text{hypotenuse} = 13\)</span>), we find <span class="process-math">\(\sin \theta = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{5}{13}\text{.}\)</span> Substituting <span class="process-math">\(\sin \theta\)</span> and <span class="process-math">\(\frac{dx}{dt} = 5\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercise-sliding-ladder-13ft-4-2-1-11">
+\begin{equation*}
+-\left(\frac{5}{13}\right)\frac{d\theta}{dt} = \frac{1}{13}(5) \implies -5\frac{d\theta}{dt} = 5 \implies \frac{d\theta}{dt} = -1\text{ rad/sec}
+\end{equation*}
+</div>
+<div class="para">The angle between the ladder and the ground is decreasing at a rate of <span class="process-math">\(1\)</span> radian per second.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-sliding-ladder-13ft-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 201.c.1"><a href="#exercise-sliding-ladder-13ft-4-2" title="Copy heading and permalink for Solution 201.c.1" aria-label="Copy heading and permalink for Solution 201.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 201.c"><a href="#exercise-sliding-ladder-13ft-4" title="Copy heading and permalink for Task 201.c" aria-label="Copy heading and permalink for Task 201.c">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 201"><a href="#exercise-sliding-ladder-13ft" title="Copy heading and permalink for Checkpoint 201" aria-label="Copy heading and permalink for Checkpoint 201">🔗</a></div></article></details><details id="exercise-inflating-balloon" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">203</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="exercise-inflating-balloon-1-1">Air is being pumped into a spherical balloon so that its volume increases at a rate of <span class="process-math">\(100\text{ cm}^3/\text{s}\text{.}\)</span> How fast is the radius of the balloon increasing when the diameter is <span class="process-math">\(50\text{ cm}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-inflating-balloon-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-expanding-sphere"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-expanding-sphere.svg" role="img" class="contained" alt="A shaded sphere with a clear radius variable r extending outward, accented by dashed outermost bounds showing expansion."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">204<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Spherical balloon expanding under a constant volumetric growth rate.<div class="autopermalink" data-description="Figure 204"><a href="#fig-expanding-sphere" title="Copy heading and permalink for Figure 204" aria-label="Copy heading and permalink for Figure 204">🔗</a></div></figcaption></figure><div class="solutions"><details id="exercise-inflating-balloon-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercise-inflating-balloon-2-1">
+<div class="para">We model the physical system using the standard geometric equation for the volume of a sphere:</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-1-1">
+\begin{equation*}
+V = \frac{4}{3}\pi r^3
+\end{equation*}
+</div>
+<div class="para">Both the volume <span class="process-math">\(V\)</span> and the radius <span class="process-math">\(r\)</span> are implicit functions of time <span class="process-math">\(t\text{.}\)</span> Differentiating both sides of the equation implicitly with respect to <span class="process-math">\(t\)</span> via the power rule and chain rule yields:</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-1-6">
+\begin{equation*}
+\frac{dV}{dt} = \frac{4}{3}\pi \cdot \left(3r^2 \frac{dr}{dt}\right) \implies \frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-inflating-balloon-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-inflating-balloon-2-2">
+<div class="para">We are given that the instantaneous volumetric growth rate is <span class="process-math">\(\frac{dV}{dt} = 100\text{ cm}^3/\text{s}\text{.}\)</span> The problem specifies this evaluation happens exactly when the diameter is <span class="process-math">\(50\text{ cm}\text{.}\)</span> Since diameter <span class="process-math">\(d = 2r\text{,}\)</span> we calculate the corresponding radius profile at this snapshot moment:</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-2-4">
+\begin{equation*}
+r = \frac{50}{2} = 25\text{ cm}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-inflating-balloon-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-inflating-balloon-2-3">
+<div class="para">Substitute the known static numerical constants (<span class="process-math">\(\frac{dV}{dt} = 100\)</span> and <span class="process-math">\(r = 25\)</span>) into our rate relationship to isolate <span class="process-math">\(\frac{dr}{dt}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-3-4">
+\begin{equation*}
+100 = 4\pi (25)^2 \frac{dr}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-3-5">
+\begin{equation*}
+100 = 4\pi (625) \frac{dr}{dt} \implies 100 = 2500\pi \frac{dr}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-inflating-balloon-2-3-6">
+\begin{equation*}
+\frac{dr}{dt} = \frac{100}{2500\pi} = \frac{1}{25\pi}\text{ cm/s}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-inflating-balloon-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-inflating-balloon-2-4">Thus, at that exact instant, the radius of the balloon is expanding at a speed of <span class="process-math">\(\frac{1}{25\pi}\text{ cm/s}\)</span> (or approximately <span class="process-math">\(0.0127\text{ cm/s}\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#exercise-inflating-balloon-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 203.1"><a href="#exercise-inflating-balloon-2" title="Copy heading and permalink for Solution 203.1" aria-label="Copy heading and permalink for Solution 203.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 203"><a href="#exercise-inflating-balloon" title="Copy heading and permalink for Checkpoint 203" aria-label="Copy heading and permalink for Checkpoint 203">🔗</a></div></article></details><details id="exercise-conical-water-tank" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">205</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="exercise-conical-water-tank-1">
+<div class="para" id="exercise-conical-water-tank-1-1">A water tank has the shape of an inverted right circular cone of altitude <span class="process-math">\(4\text{ m}\)</span> and base radius <span class="process-math">\(2\text{ m}\text{.}\)</span> If water is being pumped into the tank at a rate of <span class="process-math">\(2\text{ m}^3/\text{min}\text{,}\)</span> find the rate at which the water level is rising when the water is <span class="process-math">\(3\text{ m}\)</span> deep.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-conical-water-tank-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-conical-tank"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-conical-tank.svg" role="img" class="contained" alt="An inverted cone of total height 4 and top radius 2, partially filled with fluid up to height h with surface radius r."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">206<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Cross-section of an inverted conical tank with water level tracker.<div class="autopermalink" data-description="Figure 206"><a href="#fig-conical-tank" title="Copy heading and permalink for Figure 206" aria-label="Copy heading and permalink for Figure 206">🔗</a></div></figcaption></figure>
+</div>
+<details id="exercise-conical-water-tank-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="figure figure-like" id="fig-conical-tank-cross-section"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-conical-tank-cross-section.svg" role="img" class="contained" alt="A 2D cross section triangle representing an inverted cone with similar right triangles mapped out on the right side to illustrate the structural relationship between the water radius and height."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">207<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two-dimensional cross-section showing similar right triangles inside the inverted conical tank.<div class="autopermalink" data-description="Figure 207"><a href="#fig-conical-tank-cross-section" title="Copy heading and permalink for Figure 207" aria-label="Copy heading and permalink for Figure 207">🔗</a></div></figcaption></figure><div class="para logical" id="exercise-conical-water-tank-2-2">
+<div class="para">The volume <span class="process-math">\(V\)</span> of water inside a right circular cone is given by the formula:</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-2-2">
+\begin{equation*}
+V = \frac{1}{3}\pi r^2 h
+\end{equation*}
+</div>
+<div class="para">Here, both the water radius <span class="process-math">\(r\)</span> and the water depth <span class="process-math">\(h\)</span> vary over time <span class="process-math">\(t\text{.}\)</span> To eliminate <span class="process-math">\(r\text{,}\)</span> we look at the matching cross-sectional profile. Similar right triangles form a fixed proportional geometric profile:</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-2-7">
+\begin{equation*}
+\frac{r}{h} = \frac{\text{Base Radius}}{\text{Altitude}} = \frac{2}{4} \implies r = \frac{1}{2}h
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-conical-water-tank-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-conical-water-tank-2-3">
+<div class="para">Substituting this proportional relation back into the volume formula yields a single variable equation tracking depth:</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-3-1">
+\begin{equation*}
+V = \frac{1}{3}\pi \left(\frac{1}{2}h\right)^2 h = \frac{1}{3}\pi \left(\frac{1}{4}h^2\right) h = \frac{1}{12}\pi h^3
+\end{equation*}
+</div>
+<div class="para">Now, differentiate both sides implicitly with respect to time <span class="process-math">\(t\)</span> via the chain rule:</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-3-3">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{12}\pi \left(3h^2 \frac{dh}{dt}\right) \implies \frac{dV}{dt} = \frac{1}{4}\pi h^2 \frac{dh}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-conical-water-tank-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-conical-water-tank-2-4">
+<div class="para">We are given that <span class="process-math">\(\frac{dV}{dt} = 2\text{ m}^3/\text{min}\text{.}\)</span> Substituting this value alongside the target evaluation depth <span class="process-math">\(h = 3\text{ m}\)</span> into our rate mapping formula yields:</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-4-3">
+\begin{equation*}
+2 = \frac{1}{4}\pi (3)^2 \frac{dh}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exercise-conical-water-tank-2-4-4">
+\begin{equation*}
+2 = \frac{9\pi}{4}\frac{dh}{dt} \implies \frac{dh}{dt} = 2 \cdot \frac{4}{9\pi} = \frac{8}{9\pi}\text{ m/min}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-conical-water-tank-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-conical-water-tank-2-5">Thus, at that exact instant, the water level is rising at a rate of <span class="process-math">\(\frac{8}{9\pi}\text{ m/min}\)</span> (or approximately <span class="process-math">\(0.283\text{ m/min}\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#exercise-conical-water-tank-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 205.1"><a href="#exercise-conical-water-tank-2" title="Copy heading and permalink for Solution 205.1" aria-label="Copy heading and permalink for Solution 205.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Checkpoint 205"><a href="#exercise-conical-water-tank" title="Copy heading and permalink for Checkpoint 205" aria-label="Copy heading and permalink for Checkpoint 205">🔗</a></div></article></details><article class="insight remark-like" id="insight-solving-related-rates"><h3 class="heading">
+<span class="type">Insight</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">208</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Related Rates Problems.</span>
+</h3>
+<div class="para" id="insight-solving-related-rates-2">To systematically analyze and solve problems involving related rates of change, apply the following structured protocol:<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="insight-solving-related-rates-3">
+<li id="insight-solving-related-rates-3-1">
+<div class="para" id="insight-solving-related-rates-3-1-1">Read the problem carefully to fully comprehend the changing system.<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#insight-solving-related-rates-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-2">
+<div class="para" id="insight-solving-related-rates-3-2-1">Draw a geometric diagram whenever possible to visualize spatial relationships.<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#insight-solving-related-rates-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-3">
+<div class="para" id="insight-solving-related-rates-3-3-1">Introduce explicit notation, assigning mathematical symbols to all quantities that function as variables over time.<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#insight-solving-related-rates-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-4">
+<div class="para" id="insight-solving-related-rates-3-4-1">Express all given numeric information and the targeted unknown rate explicitly as derivatives with respect to time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#insight-solving-related-rates-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-5">
+<div class="para" id="insight-solving-related-rates-3-5-1">Write an algebraic or geometric equation that mathematically links the various moving quantities of the problem.<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#insight-solving-related-rates-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-6">
+<div class="para" id="insight-solving-related-rates-3-6-1">Apply the Calculus Chain Rule to differentiate both sides of the relational equation implicitly with respect to time <span class="process-math">\(t\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#insight-solving-related-rates-3-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="insight-solving-related-rates-3-7">
+<div class="para" id="insight-solving-related-rates-3-7-1">Substitute the instantaneous snapshot values and known rates into the differentiated equation, then solve algebraically for the targeted unknown rate.<div class="autopermalink" data-description="Paragraph"><a href="#insight-solving-related-rates-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#insight-solving-related-rates-3-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Insight 208: Solving Related Rates Problems"><a href="#insight-solving-related-rates" title="Copy heading and permalink for Insight 208: Solving Related Rates Problems" aria-label="Copy heading and permalink for Insight 208: Solving Related Rates Problems">🔗</a></div></article><details id="example-approaching-cars" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">209</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Approaching Cars Intersection Problem.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-approaching-cars-2-1">Car A is traveling west at <span class="process-math">\(50\text{ mi/hr}\)</span> and car B is traveling north at <span class="process-math">\(60\text{ mi/hr}\text{.}\)</span> Both are headed for the intersection of two perpendicular roads. At what rate are the cars approaching each other when car A is <span class="process-math">\(0.3\text{ mi}\)</span> and car B is <span class="process-math">\(0.4\text{ mi}\)</span> from the intersection?<div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-intersection-cars"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/img-intersection-cars.svg" role="img" class="contained" alt="A right-angled triangle with the right angle at the intersection point. Car A approaches along the horizontal x-axis from the right, and Car B approaches along the vertical y-axis from the bottom. The hypotenuse z represents the distance between them."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">210<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right triangle formed by two cars approaching a common intersection.<div class="autopermalink" data-description="Figure 210"><a href="#fig-intersection-cars" title="Copy heading and permalink for Figure 210" aria-label="Copy heading and permalink for Figure 210">🔗</a></div></figcaption></figure><div class="solutions"><details id="example-approaching-cars-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="example-approaching-cars-3-1">Let <span class="process-math">\(x\)</span> be the distance from Car A to the intersection, let <span class="process-math">\(y\)</span> be the distance from Car B to the intersection, and let <span class="process-math">\(z\)</span> be the distance between the two cars.<div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-approaching-cars-3-2">
+<div class="para">Because the positions of the cars form a right-angled triangle with the intersection, we apply the Pythagorean theorem:</div>
+<div class="displaymath process-math" id="eqn-cars-pythag">
+\begin{equation}
+x^2 + y^2 = z^2\tag{6}
+\end{equation}
+</div>
+<div class="para">Since both cars are moving toward the intersection, their distances <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are decreasing over time <span class="process-math">\(t\text{.}\)</span> This implies their rates of change are negative:</div>
+<div class="displaymath process-math" id="example-approaching-cars-3-2-5">
+\begin{equation*}
+\frac{dx}{dt} = -50\text{ mi/hr} \quad \text{and} \quad \frac{dy}{dt} = -60\text{ mi/hr}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-approaching-cars-3-3">
+<div class="para">We evaluate the system at the exact moment when <span class="process-math">\(x = 0.3\text{ mi}\)</span> and <span class="process-math">\(y = 0.4\text{ mi}\text{.}\)</span> First, compute the instantaneous distance <span class="process-math">\(z\)</span> using <a href="sec-related-rates.html#eqn-cars-pythag" class="xref" data-knowl="./knowl/xref/eqn-cars-pythag.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6">(6)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-cars-pythag.html" id="example-approaching-cars-3-3-5">
+\begin{equation*}
+z = \sqrt{(0.3)^2 + (0.4)^2} = \sqrt{0.09 + 0.16} = \sqrt{0.25} = 0.5\text{ mi}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="example-approaching-cars-3-4">
+<div class="para">Next, differentiate <a href="sec-related-rates.html#eqn-cars-pythag" class="xref" data-knowl="./knowl/xref/eqn-cars-pythag.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6">(6)</a> implicitly with respect to time <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-cars-pythag.html" id="example-approaching-cars-3-4-3">
+\begin{equation*}
+2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 2z\frac{dz}{dt} \implies x\frac{dx}{dt} + y\frac{dy}{dt} = z\frac{dz}{dt}
+\end{equation*}
+</div>
+<div class="para">Substitute the known static values and rates into this relationship to isolate <span class="process-math">\(\frac{dz}{dt}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-cars-pythag.html" id="example-approaching-cars-3-4-5">
+\begin{equation*}
+(0.3)(-50) + (0.4)(-60) = (0.5)\frac{dz}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-cars-pythag.html" id="example-approaching-cars-3-4-6">
+\begin{equation*}
+-15 - 24 = 0.5\frac{dz}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-cars-pythag.html" id="example-approaching-cars-3-4-7">
+\begin{equation*}
+-39 = 0.5\frac{dz}{dt} \implies \frac{dz}{dt} = \frac{-39}{0.5} = -78\text{ mi/hr}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="example-approaching-cars-3-5">The negative sign confirms that the distance between the two vehicles is shrinking. Thus, the cars are approaching each other at a rate of <span class="process-math">\(78\text{ mi/hr}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-approaching-cars-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 209.1"><a href="#example-approaching-cars-3" title="Copy heading and permalink for Solution 209.1" aria-label="Copy heading and permalink for Solution 209.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 209: Approaching Cars Intersection Problem"><a href="#example-approaching-cars" title="Copy heading and permalink for Example 209: Approaching Cars Intersection Problem" aria-label="Copy heading and permalink for Example 209: Approaching Cars Intersection Problem">🔗</a></div></article></details><details id="exercise-lighthouse-beacon" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">211</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="exercise-lighthouse-beacon-1-1">A revolving beacon in a lighthouse makes one revolution every 15 seconds. The beacon is 200 feet from the nearest point P on a straight shoreline. Find the rate at which a ray from the light moves along the shore at a point 400 feet from P.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-lighthouse-diagram"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/img-lighthouse-diagram.svg" role="img" class="contained" alt="A right triangle where the lighthouse is a vertex opposite a straight shoreline. The perpendicular distance to point P is 200, the distance along the shore is x, and the angle at the lighthouse is theta."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">212<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right triangle tracking a lighthouse beacon ray moving along a straight shoreline.<div class="autopermalink" data-description="Figure 212"><a href="#fig-lighthouse-diagram" title="Copy heading and permalink for Figure 212" aria-label="Copy heading and permalink for Figure 212">🔗</a></div></figcaption></figure><div class="solutions"><details id="exercise-lighthouse-beacon-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercise-lighthouse-beacon-2-1">Let <span class="process-math">\(P\)</span> be the point on the shoreline closest to the lighthouse, and let <span class="process-math">\(x\)</span> be the distance from <span class="process-math">\(P\)</span> to the spot of light moving down the shore. Let <span class="process-math">\(\theta\)</span> be the angle between the perpendicular line of length <span class="process-math">\(200\)</span> ft and the light beam.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-lighthouse-beacon-2-2">
+<div class="para">The beacon rotates at a constant rate of <span class="process-math">\(1\)</span> revolution every <span class="process-math">\(15\)</span> seconds. Converting revolutions to radians yields the angular velocity:</div>
+<div class="displaymath process-math" id="exercise-lighthouse-beacon-2-2-3">
+\begin{equation*}
+\frac{d\theta}{dt} = \frac{1\text{ rev}}{15\text{ sec}} \cdot \frac{2\pi\text{ rad}}{1\text{ rev}} = \frac{2\pi}{15}\text{ rad/sec}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-lighthouse-beacon-2-3">
+<div class="para">Using right-triangle trigonometry (SOHCAHTOA), we relate the position variable <span class="process-math">\(x\)</span> to the rotation angle <span class="process-math">\(\theta\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exercise-lighthouse-beacon-2-3-3">
+\begin{equation*}
+\tan \theta = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{x}{200} \implies x = 200 \tan \theta
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-lighthouse-beacon-2-4">
+<div class="para">Differentiating both sides of the equation implicitly with respect to time <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="eqn-lighthouse-rate">
+\begin{equation}
+\frac{dx}{dt} = 200 \sec^2 \theta \frac{d\theta}{dt}\tag{7}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-lighthouse-beacon-2-5">
+<div class="para">We evaluate the system at the exact snapshot moment when the beam is <span class="process-math">\(x = 400\)</span> feet away from <span class="process-math">\(P\text{.}\)</span> Rather than calculating <span class="process-math">\(\theta\)</span> explicitly, we use the reference right triangle components to determine <span class="process-math">\(\sec^2 \theta\text{.}\)</span> The hypotenuse length at this instant is:</div>
+<div class="displaymath process-math" id="exercise-lighthouse-beacon-2-5-5">
+\begin{equation*}
+\text{Hypotenuse} = \sqrt{200^2 + 400^2} = \sqrt{40000 + 160000} = \sqrt{200000} = 200\sqrt{5}\text{ feet}
+\end{equation*}
+</div>
+<div class="para">From SOHCAHTOA, <span class="process-math">\(\sec \theta = \frac{\text{Hypotenuse}}{\text{Adjacent}} = \frac{200\sqrt{5}}{200} = \sqrt{5}\text{,}\)</span> which means:</div>
+<div class="displaymath process-math" id="exercise-lighthouse-beacon-2-5-7">
+\begin{equation*}
+\sec^2 \theta = (\sqrt{5})^2 = 5
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-lighthouse-beacon-2-6">
+<div class="para">Substitute the values <span class="process-math">\(\sec^2 \theta = 5\)</span> and <span class="process-math">\(\frac{d\theta}{dt} = \frac{2\pi}{15}\)</span> into our rate equation <a href="sec-related-rates.html#eqn-lighthouse-rate" class="xref" data-knowl="./knowl/xref/eqn-lighthouse-rate.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7">(7)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-lighthouse-rate.html" id="exercise-lighthouse-beacon-2-6-4">
+\begin{equation*}
+\frac{dx}{dt} = 200 (5) \left(\frac{2\pi}{15}\right) = 1000 \cdot \frac{2\pi}{15} = \frac{400\pi}{3}\text{ ft/sec}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-lighthouse-beacon-2-7">Thus, when the ray is 400 feet from <span class="process-math">\(P\text{,}\)</span> the spot of light is moving along the shoreline at a rate of <span class="process-math">\(\frac{400\pi}{3}\text{ ft/sec}\)</span> (or approximately <span class="process-math">\(418.88\text{ ft/sec}\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#exercise-lighthouse-beacon-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 211.1"><a href="#exercise-lighthouse-beacon-2" title="Copy heading and permalink for Solution 211.1" aria-label="Copy heading and permalink for Solution 211.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 211"><a href="#exercise-lighthouse-beacon" title="Copy heading and permalink for Checkpoint 211" aria-label="Copy heading and permalink for Checkpoint 211">🔗</a></div></article></details><details id="exercise-flying-kite" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">213</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="exercise-flying-kite-1-1">A person flying a kite holds the string 5 feet above ground level, and the string is payed out at a rate of 2 ft/sec as the kite moves horizontally at an altitude of 105 feet. Assuming there is no sag in the string, find the rate at which the kite is moving when 125 feet of string has been payed out.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-kite-diagram"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-kite-diagram.svg" role="img" class="contained" alt="A right triangle where the vertical side represents the relative height of 100 feet, the horizontal side represents the ground distance x, and the hypotenuse represents the string length s."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">214<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Right triangle modeling a flying kite tracking string length versus horizontal distance.<div class="autopermalink" data-description="Figure 214"><a href="#fig-kite-diagram" title="Copy heading and permalink for Figure 214" aria-label="Copy heading and permalink for Figure 214">🔗</a></div></figcaption></figure><div class="solutions"><details id="exercise-flying-kite-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercise-flying-kite-2-1">Let <span class="process-math">\(x\)</span> represent the horizontal distance from the person to the point directly underneath the kite, and let <span class="process-math">\(s\)</span> represent the length of the string that has been payed out.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-flying-kite-2-2">
+<div class="para">The total altitude of the kite is <span class="process-math">\(105\)</span> feet above the ground. Because the string is held <span class="process-math">\(5\)</span> feet above ground level, the vertical height of the right triangle is a constant:</div>
+<div class="displaymath process-math" id="exercise-flying-kite-2-2-3">
+\begin{equation*}
+y = 105 - 5 = 100\text{ feet}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-flying-kite-2-3">
+<div class="para">Applying the Pythagorean theorem to this geometric system yields the relationship:</div>
+<div class="displaymath process-math" id="eqn-kite-pythag">
+\begin{equation}
+x^2 + 100^2 = s^2 \implies x^2 + 10000 = s^2\tag{8}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-flying-kite-2-4">
+<div class="para">We evaluate the system at the exact snapshot moment when <span class="process-math">\(s = 125\)</span> feet. First, compute the horizontal distance <span class="process-math">\(x\)</span> using <a href="sec-related-rates.html#eqn-kite-pythag" class="xref" data-knowl="./knowl/xref/eqn-kite-pythag.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8">(8)</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-kite-pythag.html" id="exercise-flying-kite-2-4-4">
+\begin{equation*}
+x^2 + 10000 = (125)^2
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-kite-pythag.html" id="exercise-flying-kite-2-4-5">
+\begin{equation*}
+x^2 + 10000 = 15625 \implies x^2 = 5625 \implies x = \sqrt{5625} = 75\text{ feet}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-flying-kite-2-5">
+<div class="para">Next, differentiate <a href="sec-related-rates.html#eqn-kite-pythag" class="xref" data-knowl="./knowl/xref/eqn-kite-pythag.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8">(8)</a> implicitly with respect to time <span class="process-math">\(t\)</span> via the chain rule:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-kite-pythag.html" id="eqn-kite-deriv">
+\begin{equation}
+2x\frac{dx}{dt} + 0 = 2s\frac{ds}{dt} \implies x\frac{dx}{dt} = s\frac{ds}{dt}\tag{9}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exercise-flying-kite-2-6">
+<div class="para">We are given that the string is being payed out at a rate of <span class="process-math">\(\frac{ds}{dt} = 2\)</span> ft/sec. Substitute our known snapshot parameters (<span class="process-math">\(x = 75\text{,}\)</span> <span class="process-math">\(s = 125\text{,}\)</span> and <span class="process-math">\(\frac{ds}{dt} = 2\)</span>) into <a href="sec-related-rates.html#eqn-kite-deriv" class="xref" data-knowl="./knowl/xref/eqn-kite-deriv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9">(9)</a> to isolate <span class="process-math">\(\frac{dx}{dt}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-kite-deriv.html" id="exercise-flying-kite-2-6-7">
+\begin{equation*}
+75\frac{dx}{dt} = (125)(2)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eqn-kite-deriv.html" id="exercise-flying-kite-2-6-8">
+\begin{equation*}
+75\frac{dx}{dt} = 250 \implies \frac{dx}{dt} = \frac{250}{75} = \frac{10}{3}\text{ ft/sec}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-flying-kite-2-7">Thus, the kite is moving horizontally at a rate of <span class="process-math">\(\frac{10}{3}\)</span> feet per second (or approximately <span class="process-math">\(3.33\)</span> ft/sec).<div class="autopermalink" data-description="Paragraph"><a href="#exercise-flying-kite-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 213.1"><a href="#exercise-flying-kite-2" title="Copy heading and permalink for Solution 213.1" aria-label="Copy heading and permalink for Solution 213.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 213"><a href="#exercise-flying-kite" title="Copy heading and permalink for Checkpoint 213" aria-label="Copy heading and permalink for Checkpoint 213">🔗</a></div></article></details><details id="exercise-coffee-drainage-with-figures" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">215</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="exercise-coffee-drainage-with-figures-1">
+<div class="para" id="exercise-coffee-drainage-with-figures-1-1">Coffee is draining from a conical filter into a cylindrical coffeepot at the rate of <span class="process-math">\(10\text{ in}^3/\text{min}\text{.}\)</span> The filter cone and the coffee pot both have a height of 6 inches and a diameter of 6 inches.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-coffee-drainage-with-figures-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-coffee-drainage-diagram"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/Coffee.png" class="contained" alt="3D textbook graphic showing coffee draining from an upper inverted cone down into a lower upright cylinder."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">216<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Conical filter draining into a cylindrical pot.<div class="autopermalink" data-description="Figure 216"><a href="#fig-coffee-drainage-diagram" title="Copy heading and permalink for Figure 216" aria-label="Copy heading and permalink for Figure 216">🔗</a></div></figcaption></figure>
+</div>
+<article class="task exercise-like" id="task-pot-rising"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="task-pot-rising-1-1">How fast is the level in the pot rising when the coffee in the cone is 5 in. deep?<div class="autopermalink" data-description="Paragraph"><a href="#task-pot-rising-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-pot-rising-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-filter-cone"><div class="image-box"><img src="generated/latex-image/img-filter-cone.svg" role="img" class="contained" alt="An inverted triangle representing a conical filter of height 6 and top radius 3. Liquid fills it to a height h with radius r."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">217<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Conical filter cross-section showing falling height <span class="process-math">\(h\)</span> and radius <span class="process-math">\(r\text{.}\)</span><div class="autopermalink" data-description="Figure 217"><a href="#fig-filter-cone" title="Copy heading and permalink for Figure 217" aria-label="Copy heading and permalink for Figure 217">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--top top" style=""><figure class="figure figure-like" id="fig-coffee-pot"><div class="image-box"><img src="generated/latex-image/img-coffee-pot.svg" role="img" class="contained" alt="A rectangle cross-section representing a cylindrical coffeepot of height 6 and constant radius 3. Liquid fills it to a height y."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">218<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Cylindrical coffeepot cross-section showing rising level <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Figure 218"><a href="#fig-coffee-pot" title="Copy heading and permalink for Figure 218" aria-label="Copy heading and permalink for Figure 218">🔗</a></div></figcaption></figure></div>
+</div></div>
+<div class="para logical" id="task-pot-rising-2-2">
+<div class="para">Let <span class="process-math">\(V_p\)</span> be the volume of coffee in the cylindrical pot, <span class="process-math">\(R_p = 3\text{ in}\)</span> be the constant radius of the cylinder, and <span class="process-math">\(y\)</span> be the height of the coffee level. The formula for the volume is:</div>
+<div class="displaymath process-math" id="task-pot-rising-2-2-4">
+\begin{equation*}
+V_p = \pi R_p^2 y = \pi (3)^2 y = 9\pi y
+\end{equation*}
+</div>
+<div class="para">Differentiating both sides implicitly with respect to time <span class="process-math">\(t\)</span> yields:</div>
+<div class="displaymath process-math" id="task-pot-rising-2-2-6">
+\begin{equation*}
+\frac{dV_p}{dt} = 9\pi \frac{dy}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-pot-rising-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="task-pot-rising-2-3">
+<div class="para">Since coffee is draining into the pot at a constant rate of <span class="process-math">\(\dfrac{dV_p}{dt} = 10\text{ in}^3/\text{min}\text{,}\)</span> this filling rate is completely independent of the fluid height inside the top filter. Substituting this constant into our derivative relation gives:</div>
+<div class="displaymath process-math" id="task-pot-rising-2-3-2">
+\begin{equation*}
+10 = 9\pi \frac{dy}{dt} \implies \frac{dy}{dt} = \frac{10}{9\pi}\text{ in/min}
+\end{equation*}
+</div>
+<div class="para">Thus, the coffee level in the pot is rising at a rate of <span class="process-math">\(\dfrac{10}{9\pi} \approx 0.35\text{ in/min}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-pot-rising-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 215.a.1"><a href="#task-pot-rising-2" title="Copy heading and permalink for Solution 215.a.1" aria-label="Copy heading and permalink for Solution 215.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 215.a"><a href="#task-pot-rising" title="Copy heading and permalink for Task 215.a" aria-label="Copy heading and permalink for Task 215.a">🔗</a></div></article><article class="task exercise-like" id="task-cone-falling"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="task-cone-falling-1-1">How fast is the level in the cone falling then?<div class="autopermalink" data-description="Paragraph"><a href="#task-cone-falling-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-cone-falling-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="task-cone-falling-2-1">
+<div class="para">Let <span class="process-math">\(V_c\)</span> be the volume of coffee inside the conical filter, <span class="process-math">\(r\)</span> be the radius of the liquid surface, and <span class="process-math">\(h\)</span> be the depth of the liquid. The formula for the volume of a cone is:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-filter-cone.html" id="task-cone-falling-2-1-4">
+\begin{equation*}
+V_c = \frac{1}{3}\pi r^2 h
+\end{equation*}
+</div>
+<div class="para">As seen in <a href="sec-related-rates.html#fig-filter-cone" class="xref" data-knowl="./knowl/xref/fig-filter-cone.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 217">Figure 217</a>, similar right triangles relate the changing water dimensions to the fixed filter dimensions (<span class="process-math">\(\text{Radius} = 3\text{,}\)</span> <span class="process-math">\(\text{Height} = 6\)</span>):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-filter-cone.html" id="task-cone-falling-2-1-8">
+\begin{equation*}
+\frac{r}{h} = \frac{3}{6} \implies r = \frac{1}{2}h
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-cone-falling-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="task-cone-falling-2-2">
+<div class="para">Substitute this proportion back into the volume formula to eliminate <span class="process-math">\(r\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="task-cone-falling-2-2-2">
+\begin{equation*}
+V_c = \frac{1}{3}\pi \left(\frac{1}{2}h\right)^2 h = \frac{1}{12}\pi h^3
+\end{equation*}
+</div>
+<div class="para">Differentiating implicitly with respect to time <span class="process-math">\(t\)</span> via the chain rule gives:</div>
+<div class="displaymath process-math" id="task-cone-falling-2-2-4">
+\begin{equation*}
+\frac{dV_c}{dt} = \frac{1}{12}\pi \left(3h^2 \dfrac{dh}{dt}\right) = \dfrac{1}{4}\pi h^2 \frac{dh}{dt}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-cone-falling-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="task-cone-falling-2-3">
+<div class="para">Because the cone is losing volume as it drains, <span class="process-math">\(\dfrac{dV_c}{dt} = -10\text{ in}^3/\text{min}\text{.}\)</span> We substitute this value along with the target snapshot depth of <span class="process-math">\(h = 5\text{ in}\)</span> to isolate <span class="process-math">\(\dfrac{dh}{dt}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="task-cone-falling-2-3-4">
+\begin{equation*}
+-10 = \frac{1}{4}\pi (5)^2 \frac{dh}{dt}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="task-cone-falling-2-3-5">
+\begin{equation*}
+-10 = \frac{25\pi}{4}\frac{dh}{dt} \implies \frac{dh}{dt} = -10 \cdot \frac{4}{25\pi} = -\frac{8}{5\pi}\text{ in/min}
+\end{equation*}
+</div>
+<div class="para">The negative sign confirms the level is dropping. Thus, the coffee level in the filter cone is falling at a rate of <span class="process-math">\(\dfrac{8}{5\pi} \approx 0.51\text{ in/min}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-cone-falling-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 215.b.1"><a href="#task-cone-falling-2" title="Copy heading and permalink for Solution 215.b.1" aria-label="Copy heading and permalink for Solution 215.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 215.b"><a href="#task-cone-falling" title="Copy heading and permalink for Task 215.b" aria-label="Copy heading and permalink for Task 215.b">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 215"><a href="#exercise-coffee-drainage-with-figures" title="Copy heading and permalink for Checkpoint 215" aria-label="Copy heading and permalink for Checkpoint 215">🔗</a></div></article></details><div class="autopermalink" data-description="Section: Related Rates"><a href="#sec-related-rates" title="Copy heading and permalink for Section: Related Rates" aria-label="Copy heading and permalink for Section: Related Rates">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-Derivatives-Inverse-Trig-Functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -2265,8 +2265,8 @@ var ptx_lunr_docs = [
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
   "type": "Section",
   "number": "",
-  "title": "Limits and Derivatives - Chapter Exercises",
-  "body": " Limits and Derivatives - Chapter Exercises   This section contains exercises related to limits and continuity. These exercises are designed to reinforce the concepts covered in the chapter and provide practice with various types of limit evaluations, continuity analysis, and applications of these concepts in different contexts.     Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.       Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .     Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :      Mixed Limit Evaluations   Find the following limits if they exist:             Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .   Multiply by the conjugate : .    Use the special limit : .         Evaluate the following limits:                       The degrees of the numerator and denominator are the same (both 2). The limit is the ratio of the leading coefficients: .    The degree of the denominator (4) is greater than the degree of the numerator (1). Therefore: .    The degree of the numerator (5) is greater than the degree of the denominator (2). Examining the leading terms: .       Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .      Find and if .    To find the limits at infinity, we identify the dominant terms. In the numerator, dominates. In the denominator, dominates.  For , : .  For , : .      Find .    To evaluate this limit, we multiply by the conjugate: Simplifying the numerator: As , the denominator grows without bound while the numerator remains constant. Therefore: .     Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .     Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .        A function is given by . Find:                    Simplify the fraction and take the limit .                         Simplifying the numerator: Taking the limit:         "
+  "title": "1. Limits and Derivatives - Chapter Exercises",
+  "body": " 1. Limits and Derivatives - Chapter Exercises   This section contains exercises related to limits and continuity. These exercises are designed to reinforce the concepts covered in the chapter and provide practice with various types of limit evaluations, continuity analysis, and applications of these concepts in different contexts.     Graphical Limit Analysis   Referencing the provided graph of , determine which of the following statements are true. Explain your answers.   Visualizing Limits and Continuity for       Does exist?  Does exist?  Does exist?  Is continuous at ?  Does exist?  Does exist?  Does exist?  Is continuous at ?     Based on the piecewise behavior described in the TikZ\/Picture code:  Yes . As , approaches .  Yes . As , approaches .  No . The left-hand limit ( ) and right-hand limit ( ) are not equal.  No . Continuity requires the limit to exist.  Yes . As , approaches .  Yes . As , approaches .  Yes . Both one-sided limits equal .  No . While the limit exists ( ), the point is defined at . Since , it is not continuous.       Continuity of Rational Functions   At what points is the function continuous?    A rational function is continuous everywhere except where the denominator is zero. Factor the denominator: . The function is continuous on .     Average Rate of Change   Find the average rate of change of over the interval .    The average rate of change is :      Mixed Limit Evaluations   Find the following limits if they exist:             Multiply by conjugate: .  Highest power of is . The limit is the ratio of coefficients: .  As from the left, is a very small negative number. Thus, the limit is .   Multiply by the conjugate : .    Use the special limit : .         Evaluate the following limits:                       The degrees of the numerator and denominator are the same (both 2). The limit is the ratio of the leading coefficients: .    The degree of the denominator (4) is greater than the degree of the numerator (1). Therefore: .    The degree of the numerator (5) is greater than the degree of the denominator (2). Examining the leading terms: .       Limit from Existing Derivative Definition   If , find .    Since the limit exists and the denominator approaches , the numerator must also approach (otherwise the limit would be infinite). Therefore, , which implies .      Find and if .    To find the limits at infinity, we identify the dominant terms. In the numerator, dominates. In the denominator, dominates.  For , : .  For , : .      Find .    To evaluate this limit, we multiply by the conjugate: Simplifying the numerator: As , the denominator grows without bound while the numerator remains constant. Therefore: .     Piecewise Continuity   For what value of is continuous at every ?    For continuity at , the one-sided limits must be equal:  Set them equal: .     Kinematics: Velocity and Acceleration   A body moves such that . Find the speed and acceleration at seconds.      Velocity: . At , m\/s. Speed is m\/s.  Acceleration: m\/s .        A function is given by . Find:                    Simplify the fraction and take the limit .                         Simplifying the numerator: Taking the limit:         "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises-3-1",
@@ -2366,6 +2366,96 @@ var ptx_lunr_docs = [
   "number": "11",
   "title": "",
   "body": "  A function is given by . Find:                    Simplify the fraction and take the limit .                         Simplifying the numerator: Taking the limit:       "
+},
+{
+  "id": "notes-Differentiation-Rules-chapter-exercises",
+  "level": "1",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html",
+  "type": "Section",
+  "number": "",
+  "title": "2. Differentiation Rules- Chapter Exercises",
+  "body": " 2. Differentiation Rules- Chapter Exercises   This section contains exercises covering the foundational differentiation techniques —including the Product Rule, Quotient Rule, Chain Rule, implicit differentiation, logarithmic differentiation —and their geometric applications such as related rates problems.       Differentiate the following functions:               For (a), remember that any term without an explicit variable like is a constant; its derivative is zero.  For (b) and (e), apply the Product Rule: .  For (c), apply the Quotient Rule and simplify the numerator using trig identities.  For (d), (f), (g), and (h), apply the Chain Rule: .         By the Power Rule, noting that is a constant:     By the Product Rule :     By the Quotient Rule :      By the Chain Rule:     By the Product Rule:      By the Chain Rule (nested twice):     By the Chain Rule:           Suppose that functions and and their derivatives with respect to have the values shown in the table below:           2  8  2      3  3    5    Find the value of the following derivatives at the specified points:  at  at  at  at      Convert the combinations into formula notations before substituting numbers. For part (d), write the Chain Rule expansion out explicitly: , and find the inner value first.       The derivative profile is . Substituting table values: .    By the Product Rule: . Substituting values: .    By the Quotient Rule: . Substituting values: .    By the Chain Rule: . Since , this evaluates to . Substituting values: .          For , find the first and second derivatives.    Rewrite the expression as .  First Derivative via Power\/Chain Rules: Second Derivative:        Find the slope of the tangent line to the implicitly defined curve at the point .    Differentiate every term with respect to . Treat as an implicit function of , which means appending a factor whenever you differentiate a expression containing . Don't forget the Product Rule on .    Differentiate both sides with respect to , using the Product Rule on the first term: Isolate : Evaluate at and , noting that :        Use logarithmic differentiation to find the derivative of with respect to :     Apply the natural log to both sides first. Use the expansion properties: and to break down the right side into separate, simple logarithms before differentiating.    Take the natural logarithm of both sides and expand using log laws: Differentiate implicitly with respect to :  Multiply by to solve for :        Differentiate by modeling the expression geometrically as a right triangle using SOHCAHTOA.    Let . The equation means that . Use the TOA definition ( ) to label a right triangle and determine its hypotenuse.   Geometric right triangle representation of .   A right triangle with an angle labeled y. The side opposite to y is labeled x^2+3x, the adjacent side is labeled 1, and the hypotenuse is labeled with the square root of 1 plus the quantity x^2+3x squared.        Method 1: To evaluate this using the geometric model, rewrite the inverse equation as a direct trigonometric relationship: According to SOHCAHTOA, . We construct a right triangle with an angle , setting and .  By the Pythagorean Theorem, the hypotenuse of this triangle is:   Now, differentiate both sides of implicitly with respect to : Isolate the derivative term:   Using our geometric model triangle and the CAH rule ( ), read the value of directly from the diagram: Squaring both sides yields:   Substitute this value back into the isolated derivative equation to reach the final answer:    Method 2: Using the rule :        A police cruiser, approaching a right-angled intersection from the north, is chasing a speeding car that has turned the corner and is now moving straight east. When the cruiser is north of the intersection and the car is to the east, the police determine with radar that the distance between them and the car is increasing at .  If the cruiser is moving at at the instant of measurement, what is the speed of the car?   Geometry of the vehicles relative to the right-angle intersection.   A right triangle diagram mapping the position of the police cruiser traveling south along the vertical y-axis, and the car moving east along the horizontal x-axis.       Model this setup as a right triangle where . Note carefully that because the police cruiser is moving closer to the intersection, its rate of change must be entered as a negative value ( ).    Let be the distance of the cruiser north of the intersection, be the distance of the car east of the intersection, and be the straight-line distance between them. By the Pythagorean Theorem:   At the given instant, and . Thus: Because the cruiser is traveling south, its distance from the intersection is decreasing, so . The radar shows .  Differentiating the primary equation implicitly with respect to time : Substitute the known parameters to solve for the speed of the car, :  The speeding car is traveling at .       Find the points on the graph of at which the tangent line is parallel to the line .    First, identify the required target slope. Rewriting the line as shows its slope is .  Next, compute the derivative of the target function to represent the general tangent slope: Set this derivative equal to the target slope of : Multiply the entire equation by the common denominator (where ): Let . This converts the relation into a manageable quadratic template: This yields roots or . Because , we discard the negative value. Thus, .  Substitute back into the original curve equation to find the corresponding -coordinate: The only point on the graph with a tangent parallel to the given line is .       Derivative Reference Sheet  Below is the reference guide matching the limit definitions and algebraic rules requested from the chapter footer, using the foundational limit definition of the derivative:    The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                  "
+},
+{
+  "id": "ex-diff-skills-1",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-diff-skills-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Differentiate the following functions:               For (a), remember that any term without an explicit variable like is a constant; its derivative is zero.  For (b) and (e), apply the Product Rule: .  For (c), apply the Quotient Rule and simplify the numerator using trig identities.  For (d), (f), (g), and (h), apply the Chain Rule: .         By the Power Rule, noting that is a constant:     By the Product Rule :     By the Quotient Rule :      By the Chain Rule:     By the Product Rule:      By the Chain Rule (nested twice):     By the Chain Rule:       "
+},
+{
+  "id": "ex-tabular-derivatives",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-tabular-derivatives",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Suppose that functions and and their derivatives with respect to have the values shown in the table below:           2  8  2      3  3    5    Find the value of the following derivatives at the specified points:  at  at  at  at      Convert the combinations into formula notations before substituting numbers. For part (d), write the Chain Rule expansion out explicitly: , and find the inner value first.       The derivative profile is . Substituting table values: .    By the Product Rule: . Substituting values: .    By the Quotient Rule: . Substituting values: .    By the Chain Rule: . Since , this evaluates to . Substituting values: .      "
+},
+{
+  "id": "ex-second-derivative",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-second-derivative",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  For , find the first and second derivatives.    Rewrite the expression as .  First Derivative via Power\/Chain Rules: Second Derivative:    "
+},
+{
+  "id": "ex-implicit-slope",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-implicit-slope",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Find the slope of the tangent line to the implicitly defined curve at the point .    Differentiate every term with respect to . Treat as an implicit function of , which means appending a factor whenever you differentiate a expression containing . Don't forget the Product Rule on .    Differentiate both sides with respect to , using the Product Rule on the first term: Isolate : Evaluate at and , noting that :    "
+},
+{
+  "id": "ex-log-diff",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-log-diff",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Use logarithmic differentiation to find the derivative of with respect to :     Apply the natural log to both sides first. Use the expansion properties: and to break down the right side into separate, simple logarithms before differentiating.    Take the natural logarithm of both sides and expand using log laws: Differentiate implicitly with respect to :  Multiply by to solve for :    "
+},
+{
+  "id": "ex-arctan-diff",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-arctan-diff",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Differentiate by modeling the expression geometrically as a right triangle using SOHCAHTOA.    Let . The equation means that . Use the TOA definition ( ) to label a right triangle and determine its hypotenuse.   Geometric right triangle representation of .   A right triangle with an angle labeled y. The side opposite to y is labeled x^2+3x, the adjacent side is labeled 1, and the hypotenuse is labeled with the square root of 1 plus the quantity x^2+3x squared.        Method 1: To evaluate this using the geometric model, rewrite the inverse equation as a direct trigonometric relationship: According to SOHCAHTOA, . We construct a right triangle with an angle , setting and .  By the Pythagorean Theorem, the hypotenuse of this triangle is:   Now, differentiate both sides of implicitly with respect to : Isolate the derivative term:   Using our geometric model triangle and the CAH rule ( ), read the value of directly from the diagram: Squaring both sides yields:   Substitute this value back into the isolated derivative equation to reach the final answer:    Method 2: Using the rule :    "
+},
+{
+  "id": "ex-police-chase",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-police-chase",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  A police cruiser, approaching a right-angled intersection from the north, is chasing a speeding car that has turned the corner and is now moving straight east. When the cruiser is north of the intersection and the car is to the east, the police determine with radar that the distance between them and the car is increasing at .  If the cruiser is moving at at the instant of measurement, what is the speed of the car?   Geometry of the vehicles relative to the right-angle intersection.   A right triangle diagram mapping the position of the police cruiser traveling south along the vertical y-axis, and the car moving east along the horizontal x-axis.       Model this setup as a right triangle where . Note carefully that because the police cruiser is moving closer to the intersection, its rate of change must be entered as a negative value ( ).    Let be the distance of the cruiser north of the intersection, be the distance of the car east of the intersection, and be the straight-line distance between them. By the Pythagorean Theorem:   At the given instant, and . Thus: Because the cruiser is traveling south, its distance from the intersection is decreasing, so . The radar shows .  Differentiating the primary equation implicitly with respect to time : Substitute the known parameters to solve for the speed of the car, :  The speeding car is traveling at .   "
+},
+{
+  "id": "ex-parallel-tangent",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#ex-parallel-tangent",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Find the points on the graph of at which the tangent line is parallel to the line .    First, identify the required target slope. Rewriting the line as shows its slope is .  Next, compute the derivative of the target function to represent the general tangent slope: Set this derivative equal to the target slope of : Multiply the entire equation by the common denominator (where ): Let . This converts the relation into a manageable quadratic template: This yields roots or . Because , we discard the negative value. Thus, .  Substitute back into the original curve equation to find the corresponding -coordinate: The only point on the graph with a tangent parallel to the given line is .   "
+},
+{
+  "id": "table-derivative-limit-definitions",
+  "level": "2",
+  "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
+  "type": "Table",
+  "number": "222",
+  "title": "The derivative Table",
+  "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },
 {
   "id": "notes-week-01",

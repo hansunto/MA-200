@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Calculus 1</title>
+<title>3.1 Extreme Values of Functions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -136,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -221,9 +221,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">2.8 Related Rates</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
@@ -280,20 +280,58 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="root-1-2"><nav class="summary-links"><ul>
-<li><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></li>
-<li><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></li>
-<li><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">1. Limits and Derivatives</span></a></li>
-<li><a href="ch-differentiation-rules.html" class="internal"><span class="title">2. Differentiation Rules</span></a></li>
-<li><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></li>
-<li><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></li>
-<li><a href="ch-review.html" class="internal"><span class="title">Review</span></a></li>
-<li><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></li>
-<li><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></li>
-<li><a href="homework.html" class="internal"><span class="title">Homework</span></a></li>
-</ul></nav><div class="autopermalink" data-description="Book: Calculus 1"><a href="#root-1-2" title="Copy heading and permalink for Book: Calculus 1" aria-label="Copy heading and permalink for Book: Calculus 1">🔗</a></div></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Extreme-values"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3.1 Extreme Values of Functions</span>
+</h2>
+<div class="para" id="sec-Extreme-values-2">This section introduces the foundational concepts used to identify where functions reach their largest and smallest values.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-increasing-decreasing"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">219</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Increasing and Decreasing Functions.</span>
+</h3>
+<div class="para" id="def-increasing-decreasing-2-1">If the graph of a function rises from left to right over an interval <span class="process-math">\(I\text{,}\)</span> it is said to be <em class="alert">increasing</em> on <span class="process-math">\(I\text{.}\)</span> If the graph of a function drops from left to right over an interval <span class="process-math">\(I\text{,}\)</span> it is said to be <em class="alert">decreasing</em> on <span class="process-math">\(I\text{.}\)</span> Let a function <span class="process-math">\(f\)</span> be defined on an interval <span class="process-math">\(I\text{,}\)</span> and let <span class="process-math">\(x_{1}, x_{2}\)</span> denote numbers in <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-increasing-decreasing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="def-increasing-decreasing-2-2">
+<li id="def-increasing-decreasing-2-2-1">
+<div class="para" id="def-increasing-decreasing-2-2-1-1">
+<span class="process-math">\(f\)</span> is <em class="alert">increasing</em> on <span class="process-math">\(I\)</span> if <span class="process-math">\(f(x_{1}) \lt f(x_{2})\)</span> for <span class="process-math">\(x_{1} \lt x_{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-increasing-decreasing-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-increasing-decreasing-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-increasing-decreasing-2-2-2">
+<div class="para" id="def-increasing-decreasing-2-2-2-1">
+<span class="process-math">\(f\)</span> is <em class="alert">decreasing</em> on <span class="process-math">\(I\)</span> if <span class="process-math">\(f(x_{1}) \gt f(x_{2})\)</span> for <span class="process-math">\(x_{1} \lt x_{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-increasing-decreasing-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-increasing-decreasing-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="def-increasing-decreasing-2-2-3">
+<div class="para" id="def-increasing-decreasing-2-2-3-1">
+<span class="process-math">\(f\)</span> is <em class="alert">constant</em> on <span class="process-math">\(I\)</span> if <span class="process-math">\(f(x_{1}) = f(x_{2})\)</span> for <span class="process-math">\(x_{1} \lt x_{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-increasing-decreasing-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def-increasing-decreasing-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Definition 219: Increasing and Decreasing Functions"><a href="#def-increasing-decreasing" title="Copy heading and permalink for Definition 219: Increasing and Decreasing Functions" aria-label="Copy heading and permalink for Definition 219: Increasing and Decreasing Functions">🔗</a></div></article><article class="definition definition-like" id="def-absolute-extrema"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">220</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Maximum and Minimum Values.</span>
+</h3>
+<div class="para" id="def-absolute-extrema-2-1">Let a function <span class="process-math">\(f\)</span> be defined on a set <span class="process-math">\(S\)</span> of real numbers, and let <span class="process-math">\(c\)</span> be a number in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-absolute-extrema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal" id="def-absolute-extrema-2-2">
+<li id="def-absolute-extrema-2-2-1">
+<div class="para" id="def-absolute-extrema-2-2-1-1">
+<span class="process-math">\(f(c)\)</span> is the <em class="alert">maximum value</em> of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span> if <span class="process-math">\(f(x) \le f(c)\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-absolute-extrema-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-absolute-extrema-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-absolute-extrema-2-2-2">
+<div class="para" id="def-absolute-extrema-2-2-2-1">
+<span class="process-math">\(f(c)\)</span> is the <em class="alert">minimum value</em> of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\)</span> if <span class="process-math">\(f(x) \ge f(c)\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-absolute-extrema-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-absolute-extrema-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Definition 220: Maximum and Minimum Values"><a href="#def-absolute-extrema" title="Copy heading and permalink for Definition 220: Maximum and Minimum Values" aria-label="Copy heading and permalink for Definition 220: Maximum and Minimum Values">🔗</a></div></article><div class="para" id="sec-Extreme-values-5">If <span class="process-math">\(f(c)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{,}\)</span> we say that <span class="process-math">\(f\)</span> takes on its maximum value at <span class="process-math">\(c\text{.}\)</span> The point <span class="process-math">\((c,f(c))\)</span> is a highest point on the graph of <span class="process-math">\(f\text{.}\)</span> If <span class="process-math">\(f(c)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{,}\)</span> we say that <span class="process-math">\(f\)</span> takes on its minimum value at <span class="process-math">\(c\text{.}\)</span> The point <span class="process-math">\((c,f(c))\)</span> is a lowest point on the graph of <span class="process-math">\(f\text{.}\)</span> Maximum and minimum values are sometimes called <em class="alert">extreme values</em> or <em class="alert">extrema</em> of <span class="process-math">\(f\text{.}\)</span> If <span class="process-math">\(D\)</span> is the domain of <span class="process-math">\(f\text{,}\)</span> then the maximum and minimum values of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{,}\)</span> if they exist, are called the <em class="alert">absolute maximum</em> and <em class="alert">absolute minimum</em> of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section: 3.1 Extreme Values of Functions"><a href="#sec-Extreme-values" title="Copy heading and permalink for Section: 3.1 Extreme Values of Functions" aria-label="Copy heading and permalink for Section: 3.1 Extreme Values of Functions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

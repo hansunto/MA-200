@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="sec-chain-rule">
-    <title>The Chain Rule</title>
+    <title>2.4 The Chain Rule</title>
         <introduction>
             <p>
             In this section, we will explore the Chain Rule, a fundamental differentiation rule that allows us to find the derivative of composite functions. 

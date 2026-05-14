@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="sec-derivative-rate-change" type="notes">
-  <title>The Derivative as a Rate of Change</title>
+  <title>1.8 The Derivative as a Rate of Change</title>
     <p>
         In the previous section, we defined the derivative of a function at a point as the limit of the difference quotient. 
         In this section, we will explore how the derivative can be interpreted as a rate of change. 

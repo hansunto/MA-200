@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     
 <section xml:id="sec-limits-concept">
-<title>Introduction to Limits</title>
+<title>1.1 Introduction to Limits</title>
             
 <p>
 Consider the function <m>f(x) = 3x+5</m>. What happens as <m>x \to 1</m>?

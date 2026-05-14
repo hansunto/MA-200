@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-Extreme-values" class="notes">
+    <title>3.1 Extreme Values of Functions</title>
+    <p>
+        This section introduces the foundational concepts used to identify where functions reach their largest and smallest values.
+    </p>
+<definition xml:id="def-increasing-decreasing">
+    <title>Increasing and Decreasing Functions</title>
+    <statement>
+        <p>
+            If the graph of a function rises from left to right over an interval <m>I</m>, it is said to be <alert>increasing</alert> on <m>I</m>.
+            If the graph of a function drops from left to right over an interval <m>I</m>, it is said to be <alert>decreasing</alert> on <m>I</m>.
+            Let a function <m>f</m> be defined on an interval <m>I</m>, and let <m>x_{1}, x_{2}</m> denote numbers in <m>I</m>.
+        </p>
+        <ol>
+            <li>
+                <p> <m>f</m> is <alert>increasing</alert> on <m>I</m> if <m>f(x_{1}) \lt f(x_{2})</m> for <m>x_{1} \lt x_{2}</m>. </p>
+            </li>
+            <li>
+                <p> <m>f</m> is <alert>decreasing</alert> on <m>I</m> if <m>f(x_{1}) \gt f(x_{2})</m> for <m>x_{1} \lt x_{2}</m>. </p>
+            </li>
+            <li>
+                <p> <m>f</m> is <alert>constant</alert> on <m>I</m> if <m>f(x_{1}) = f(x_{2})</m> for <m>x_{1} \lt x_{2}</m>. </p>
+            </li>
+        </ol>
+    </statement>
+</definition>
+<definition xml:id="def-absolute-extrema">
+<title>Maximum and Minimum Values</title>
+    <statement> 
+    <p>    
+    Let a function <m>f</m> be defined on a set <m>S</m> of real numbers, and let <m>c</m> be a number in <m>S</m>. </p>
+    <ol>
+     <li>
+        <p> <m>f(c)</m> is the <alert>maximum value</alert> of <m>f</m> on <m>S</m> if <m>f(x) \le f(c)</m> for every <m>x</m> in <m>S</m>.
+        </p>
+     </li>
+     <li>
+        <p> <m>f(c)</m> is the <alert>minimum value</alert> of <m>f</m> on <m>S</m> if <m>f(x) \ge f(c)</m> for every <m>x</m> in <m>S</m>.
+        </p>
+     </li>
+    </ol>
+    </statement>
+</definition>
+
+<p>
+    If <m>f(c)</m> is the maximum value of <m>f</m> on <m>S</m>, we say that <m>f</m> takes on its maximum value at <m>c</m>.
+    The point <m>(c,f(c))</m> is a highest point on the graph of <m>f</m>.
+    If <m>f(c)</m> is the minimum value of <m>f</m> on <m>S</m>, we say that <m>f</m> takes on its minimum value at <m>c</m>.
+    The point <m>(c,f(c))</m> is a lowest point on the graph of <m>f</m>.
+    Maximum and minimum values are sometimes called <alert>extreme values</alert> or <alert>extrema</alert> of <m>f</m>.
+    If <m>D</m> is the domain of <m>f</m>, then the maximum and minimum values of <m>f</m> on <m>D</m>, if they exist, are called the <alert>absolute maximum</alert> and <alert>absolute minimum</alert> of <m>f</m>.
+</p>
+
+
+
+
+
+
+
+</section>

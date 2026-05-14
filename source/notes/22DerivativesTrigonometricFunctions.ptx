@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   
 <section xml:id="sec-trig-derivatives">
-  <title>Derivatives of the Trigonometric Functions</title>
+  <title>2.2 Derivatives of the Trigonometric Functions</title>
 
   <p>
     In this section, we will find the derivatives of the six trigonometric functions: sine, cosine, tangent, cotangent, secant, and cosecant. We will use the limit definition of the derivative to find these derivatives.

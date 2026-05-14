@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <section xml:id="sec-techniques-limits">
-    <title>Techniques for Finding Limits</title>
+    <title>1.2 Techniques for Finding Limits</title>
 
 <theorem xml:id="thm-limit-principles">
  <title>Limit Principles</title>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <section xml:id="sec-rate-change-tangent-curves" class="notes">
-  <title>Rate of Change and Tangent Curves</title>
+  <title>1.6 Rate of Change and Tangent Curves</title>
   <p>
     The rate of change of a function at a point is the slope of the tangent line to the graph of the function at that point. It can be calculated using limits.
   </p>

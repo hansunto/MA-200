@@ -23,7 +23,7 @@
     </chapter>
 
     <chapter xml:id="ch-Limits-and-Derivatives">
-      <title>Limits and Derivatives</title>
+      <title>1. Limits and Derivatives</title>
       <introduction>
         <p>
           This chapter contains materials related to limits and derivatives, including lecture notes, activities, and homework.
@@ -40,8 +40,9 @@
       
         <!-- Include lecture notes, activities, and homework related to limits and derivatives -->
       </chapter>
+
     <chapter xml:id="ch-differentiation-rules">
-      <title>Differentiation Rules</title>
+      <title>2. Differentiation Rules</title>
       
       <introduction>
         <p>
@@ -60,6 +61,16 @@
         <!-- Include lecture notes, activities, and homework related to differentiation rules -->
     </chapter>
 
+    <chapter xml:id="ch-Applications-of-Derivatives">
+      <title>3. Applications of Derivatives</title>
+      <introduction>
+        <p>
+          
+        </p>
+      </introduction>
+      <xi:include href="./notes/31ExtremeValues.ptx" />
+
+    </chapter>
 
    <!----> <chapter xml:id="course-notes">
       <title>Chapter Exercises</title>

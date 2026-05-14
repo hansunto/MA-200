@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- This file contains the lecture notes for the section on limits at infinity. -->
   <section xml:id="limits-at-infinity">
-    <title>Limits at Infinity</title>
+    <title>1.5 Limits at Infinity</title>
     <p>
       In this section, we will explore limits at infinity, which describe the behavior of a function as the input grows without bound.
     </p>

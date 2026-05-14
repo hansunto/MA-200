@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="sec-derivative-functions" type="notes">
-  <title>The Derivative as a Function</title>
+  <title>1.7 The Derivative as a Function</title>
 
   <p>
     In the previous section, we defined the derivative at a point as the limit of the difference quotient. 

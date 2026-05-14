@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="sec-Implicit-Differentiation" class="notes">
-    <title>Implicit Differentiation</title>
+    <title>2.5 Implicit Differentiation</title>
     <p>
         In the previous sections, we have focused on finding derivatives of functions that are explicitly defined as <m>y = f(x)</m>. 
         However, there are many situations where we encounter equations that define <m>y</m> implicitly in terms of <m>x</m>. 

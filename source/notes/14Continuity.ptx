@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- This file contains the lecture notes for the section on continuity. -->
   <section xml:id="continuity-definition">
-    <title>Continuity</title>
+    <title>1.4 Continuity</title>
  <introduction>
     <p>
       In this section, we will discuss the concept of continuity and how it relates to limits and derivatives.

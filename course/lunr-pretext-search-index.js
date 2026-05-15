@@ -2719,6 +2719,42 @@ var ptx_lunr_docs = [
   "body": " Closest Point    Find the point on the parabola that is closest to the point .   A plot of the horizontal parabola x equals y squared over 2. The external point (1,4) is plotted, along with a line segment connecting it to the closest point on the curve at (2,2).       We use our 9-step max-min strategy to solve this distance optimization problem:     Draw and label a picture. Let represent an arbitrary point lying directly on the parabola curve , as sketched in the figure. We are looking for the coordinates that minimize the distance to the static coordinate point .     Find the objective function. By the standard distance formula, the distance between and is: To make the calculus cleaner, we can choose to optimize the square of the distance, , because the value that minimizes the squared distance will also minimize the true distance:      Identify the constraints. The point must remain strictly bound to the parabola, which gives us our constraint equation:      Reduce the objective function to one variable. Substituting the expression for directly into the squared-distance objective equation leaves us with a single independent variable equation in terms of : Expanding the algebraic components yields:      Identify the domain of the objective function. The vertical coordinate value can technically be any real number along the continuous open tracking interval, making our domain .     Differentiate the objective function. Differentiating with respect to using the power rule yields:      Find the critical numbers. We set the first derivative to zero: The coordinate value serves as our single real interior critical number.     Test the critical numbers. We apply the First Derivative Test around our critical number :  For , (the distance squared function is decreasing).  For , (the distance squared function is increasing).  Since the derivative changes sign from negative to positive at , it represents an absolute minimum.     Answer the question. Substituting the optimal vertical parameter back into our isolated curve constraint formula calculates the remaining coordinate value:   The point on the parabola that is closest to is exactly .     "
 },
 {
+  "id": "sec-lHopitals-rule",
+  "level": "1",
+  "url": "sec-lHopitals-rule.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.6 L’Hopital’s Rule",
+  "body": " 3.6 L'Hopital's Rule    L'Hôpital's Rule is a powerful calculus theorem used to evaluate limits that result in an indeterminate form like or upon direct substitution. Named after the French mathematician Guillaume de l'Hôpital, the rule allows you to bypass complex algebraic factoring or simplification by taking the derivatives of the numerator and denominator separately to find the limit.  The indeterminate forms: and and other indeterminate forms , , and . We'd like to know the behavior of the limit: This limit cannot be solved algebraically since the limit of the denominator is . In fact, the numerator approaches , and is not defined.  In general, if we have a limit of the form: where and as , then this limit may or may not exist and is called an indeterminate form of type 0\/0 .    Cancel Common Factors   Evaluate the following limit by canceling common factors:     Direct substitution of results in the indeterminate form . We can resolve this by factoring both the numerator and the denominator: Now, evaluating the limit by direct substitution yields:      Use a Geometric Argument   Evaluate the following limit using a geometric argument on the unit circle:      Graph of with a hole at .   A plot of the function sin(x)\/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.     Setting up the inequality based on these areas gives: Multiplying all parts by simplifies the inequality to:   Since , . We can divide the entire inequality chain by : Taking the reciprocal of each term reverses the inequalities: which can be rewritten in standard order as:   Now, applying the Squeeze Theorem as : Since both the lower and upper bounds approach , the middle limit is forced to match:     "
+},
+{
+  "id": "sec-lHopitals-rule-2-1",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#sec-lHopitals-rule-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "L'Hôpital's Rule indeterminate form "
+},
+{
+  "id": "example-cancel-common-factors",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#example-cancel-common-factors",
+  "type": "Example",
+  "number": "275",
+  "title": "Cancel Common Factors.",
+  "body": " Cancel Common Factors   Evaluate the following limit by canceling common factors:     Direct substitution of results in the indeterminate form . We can resolve this by factoring both the numerator and the denominator: Now, evaluating the limit by direct substitution yields:    "
+},
+{
+  "id": "example-geometric-argument",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#example-geometric-argument",
+  "type": "Example",
+  "number": "276",
+  "title": "Use a Geometric Argument.",
+  "body": " Use a Geometric Argument   Evaluate the following limit using a geometric argument on the unit circle:      Graph of with a hole at .   A plot of the function sin(x)\/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.     Setting up the inequality based on these areas gives: Multiplying all parts by simplifies the inequality to:   Since , . We can divide the entire inequality chain by : Taking the reciprocal of each term reverses the inequalities: which can be rewritten in standard order as:   Now, applying the Squeeze Theorem as : Since both the lower and upper bounds approach , the middle limit is forced to match:    "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
@@ -2912,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "278",
+  "number": "281",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

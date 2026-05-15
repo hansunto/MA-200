@@ -73,6 +73,7 @@
       <xi:include href="./notes/33Concavity.ptx" />
       <xi:include href="./notes/34Graph.ptx" />
       <xi:include href="./notes/35Optimization.ptx"/>
+      <xi:include href="./notes/36LHopital.ptx"/>
 
     </chapter>
 

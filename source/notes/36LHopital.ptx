@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-lHopitals-rule" class="notes">
+    <title>3.6 L'Hopital's Rule</title>
+    
+<introduction>
+    <p>
+    <term>L'Hôpital's Rule</term> is a powerful calculus theorem used to evaluate limits that 
+    result in an <term>indeterminate form</term> like <m>\dfrac{0}{0}</m> or 
+    <m>\dfrac{\infty}{\infty}</m> upon direct substitution. 
+    Named after the French mathematician Guillaume de l'Hôpital, 
+    the rule allows you to bypass complex algebraic factoring or simplification by taking 
+    the derivatives of the numerator and denominator separately to find the limit.
+    </p>
+    <p>
+    The indeterminate forms: <m>\dfrac{0}{0}</m> and <m>\dfrac{\infty}{\infty}</m> and other indeterminate forms <m>0^{0}</m>, 
+    <m>\infty^{0}</m>, and <m>1^{\infty}</m>. We'd like to know the behavior of the limit:
+    <me>\lim_{x\to 1}\dfrac{\ln x}{x-1}</me>
+    This limit cannot be solved algebraically since the limit of the denominator is <m>0</m>. 
+    In fact, the numerator approaches <m>\ln(1)=0</m>, and <m>\dfrac{0}{0}</m> is not defined.
+    </p>
+    <p>
+    In general, if we have a limit of the form:
+    <me>\lim_{x\to a}\dfrac{f(x)}{g(x)}</me>
+    where <m>f(x)\to 0</m> and <m>g(x)\to 0</m> as <m>x\to a</m>, 
+    then this limit may or may not exist and is called an <alert>indeterminate form of type 0/0</alert>.
+    </p>
+</introduction>
+<example xml:id="example-cancel-common-factors">
+    <title>Cancel Common Factors</title>
+    <statement>
+        <p>
+            Evaluate the following limit by canceling common factors:
+            <me>\lim_{x\to 1}\frac{x^{2}-x}{x^{2}-1}</me>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Direct substitution of <m>x = 1</m> results in the indeterminate form <m>\frac{0}{0}</m>. We can resolve this by factoring both the numerator and the denominator:
+            <md>
+                <mrow>\lim_{x\to 1}\frac{x^{2}-x}{x^{2}-1} \amp = \lim_{x\to 1}\frac{x(x-1)}{(x-1)(x+1)}</mrow>
+                <mrow>\amp = \lim_{x\to 1}\frac{x}{x+1}</mrow>
+            </md>
+            Now, evaluating the limit by direct substitution yields:
+            <me>\frac{1}{1+1} = \frac{1}{2}</me>
+        </p>
+    </solution>
+</example>
+
+<example xml:id="example-geometric-argument">
+    <title>Use a Geometric Argument</title>
+    <statement>
+        <p>
+            Evaluate the following limit using a geometric argument on the unit circle:
+            <me>\lim_{x\to 0}\dfrac{\sin x}{x}=1</me>
+        </p>
+    </statement>
+    <solution>
+<figure xml:id="fig-graph-sin-x-over-x">
+    <caption>Graph of <m>f(x) = \frac{\sin x}{x}</m> with a hole at <m>x = 0</m>.</caption>
+    <image width="70%">
+        <description>A plot of the function sin(x)/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.</description>
+        <latex-image>
+            \begin{tikzpicture}
+                \begin{axis}[
+                    axis lines = middle,
+                    xlabel = {$x$},
+                    ylabel = {$y$},
+                    ymin = -0.5, ymax = 1.5,
+                    xmin = -10.5, xmax = 10.5,
+                    restrict y to domain=-1:2,
+                    samples=200,
+                    every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+                    every axis y label/.style={at={(current axis.above origin)},anchor=south}
+                ]
+                    % Plot the left side of the curve
+                    \addplot [domain=-10:0.01, thick, blue] {sin(deg(x))/x};
+                    
+                    % Plot the right side of the curve
+                    \addplot [domain=0.01:10, thick, blue] {sin(deg(x))/x};
+                    
+                    % Add the open circle at (0,1) to show the limit point
+                    \addplot[only marks, mark=o, mark size=2.5pt, draw=blue, fill=white, thick] coordinates {(0,1)};
+                \end{axis}
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+</figure>
+
+        <p>
+            Setting up the inequality based on these areas gives:
+            <me>\dfrac{1}{2}\sin x \lt \frac{1}{2}x \lt \frac{1}{2}\tan x</me>
+            Multiplying all parts by <m>2</m> simplifies the inequality to:
+            <me>\sin x \lt x \lt \tan x=\dfrac{\sin x}{\cos x}</me>
+        </p>
+        <p>
+            Since <m>0 \lt x \lt \dfrac{\pi}{2}</m>, <m>\sin x \gt 0</m>. 
+            We can divide the entire inequality chain by <m>\sin x</m>:
+            <me>1 \lt \dfrac{x}{\sin x} \lt \frac{1}{\cos x}</me>
+            Taking the reciprocal of each term reverses the inequalities:
+            <me>1 \gt \dfrac{\sin x}{x} \gt \cos x</me>
+            which can be rewritten in standard order as:
+            <me>\cos x \lt \dfrac{\sin x}{x} \lt 1</me>
+        </p>
+        <p>
+            Now, applying the <term>Squeeze Theorem</term> as <m>x \to 0</m>:
+            <me>\lim_{x \to 0} \cos x = 1 \quad \text{and} \quad \lim_{x \to 0} 1 = 1</me>
+            Since both the lower and upper bounds approach <m>1</m>, the middle limit is forced to match:
+            <me>\lim_{x\to 0}\frac{\sin x}{x}=1</me>
+        </p>
+    </solution>
+</example>
+
+
+
+</section>

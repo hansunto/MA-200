@@ -147,8 +147,764 @@
     </solution>
 </example>
 
+<exercise xml:id="ex-graphing-cubic-two">
+  <introduction>
+    <p>
+      Graph the function <m>f</m> given by:
+      <me>f(x)=x^3-3x+2</me>
+    </p>
+    <p>
+      <ol>
+        <li><p>Determine the domain and continuity of <m>f</m>.</p></li>
+        <li><p>Find the <m>x</m>- and <m>y</m>-intercepts.</p></li>
+        <li><p>Find <m>f'</m> and <m>f''</m>.</p></li>
+        <li><p>Find the critical points.</p></li>
+        <li><p>Determine intervals of increase and decrease, and locate relative extrema.</p></li>
+        <li><p>Find inflection points and determine concavity.</p></li>
+        <li><p>Sketch the graph.</p></li>
+      </ol>
+    </p>
+  </introduction>
 
+  <solution>
+    <task>
+      <title>Domain and Continuity</title>
+      <p>
+        As a polynomial function, the domain of <m>f</m> is all real numbers, <m>(-\infty, \infty)</m>, and it is continuous everywhere.
+      </p>
+    </task>
 
+    <task>
+      <title>Intercepts</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <m>y</m>-intercept is found at <m>f(0) = 2</m>, giving the coordinate point <m>(0, 2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Setting <m>f(x) = 0</m> means solving <m>x^3-3x+2 = 0</m>. 
+              By factoring, we find <m>(x-1)^2(x+2) = 0</m>, yielding the <m>x</m>-intercepts at <m>(-2, 0)</m> and <m>(1, 0)</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </task>
+
+    <task>
+      <title>Derivatives</title>
+      <p>
+        <me>f'(x) = 3x^2 - 3</me>
+        <me>f''(x) = 6x</me>
+      </p>
+    </task>
+
+    <task>
+      <title>Critical Points</title>
+      <p>
+        Setting <m>f'(x) = 0</m>:
+        <me>3(x^2 - 1) = 0 \implies 3(x-1)(x+1) = 0</me>
+        The critical numbers are <m>x = -1</m> and <m>x = 1</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Relative Extrema</title>
+      <p>
+        We analyze the sign changes of <m>f'(x)</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -1)</m></cell>
+          <cell><m>(-1, 1)</m></cell>
+          <cell><m>(1, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has a local maximum at <m>x = -1</m> 
+        with value <m>f(-1) = 4</m>, and a local minimum at <m>x = 1</m> 
+        with value <m>f(1) = 0</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Inflection Points and Concavity</title>
+      <p>
+        Setting <m>f''(x) = 0</m> gives <m>6x = 0 \implies x = 0</m>.
+        <ul>
+          <li><p>On <m>(-\infty, 0)</m>, <m>f''(x) \lt 0</m>, 
+            so the graph is concave down (<m>\cap</m>).</p></li>
+          <li><p>On <m>(0, \infty)</m>, <m>f''(x) \gt 0</m>, 
+            so the graph is concave up (<m>\cup</m>).</p></li>
+        </ul>
+        Since concavity changes direction, <m>(0, f(0)) = (0, 2)</m> 
+        is a point of inflection.
+      </p>
+    </task>
+
+       <task>
+      <title>Sketch the Graph</title>
+      <p>
+        Plotting key features yields the curve below:
+      </p>
+      <p>
+        <image xml:id="img-cubic-two" width="70%">
+          <description>A cubic polynomial with local maximum at (-1,4), inflection point at (0,2), and local minimum at (1,0).</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -3.5,
+              xmax = 3.5,
+              ymin = -4,
+              ymax = 7,
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth,
+              height = 7.5cm
+            ]
+            \addplot [domain=-2.4:2.2, samples=100, color=blue, very thick] {x^3 - 3*x + 2};
+            \addplot[only marks, mark=*, color=red] coordinates {(-1,4) (1,0)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(0,2)};
+            \node[above left] at (axis cs:-1,4) {Local Max $(-1,4)$};
+            \node[below right] at (axis cs:1,0) {Local Min $(1,0)$};
+            \node[above right] at (axis cs:0,2) {IP $(0,2)$};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-graphing-quartic">
+  <introduction>
+    <p>
+      Graph the function <m>f</m> given by:
+      <me>f(x) = x^4 - 2x^2</me>
+    </p>
+    <p>
+      <ol>
+        <li><p>Determine the domain and continuity of <m>f</m>.</p></li>
+        <li><p>Find the <m>x</m>- and <m>y</m>-intercepts.</p></li>
+        <li><p>Find <m>f'</m> and <m>f''</m>.</p></li>
+        <li><p>Find the critical points.</p></li>
+        <li><p>Determine intervals of increase and decrease, and locate relative extrema.</p></li>
+        <li><p>Find inflection points and determine concavity.</p></li>
+        <li><p>Sketch the graph.</p></li>
+      </ol>
+    </p>
+  </introduction>
+
+  <solution>
+    <task>
+      <title>Domain and Continuity</title>
+      <p>
+        As a polynomial function, the domain of <m>f</m> is all real numbers, <m>(-\infty, \infty)</m>, and it is continuous everywhere.
+      </p>
+    </task>
+
+    <task>
+      <title>Intercepts</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <m>y</m>-intercept is at <m>f(0) = 0</m>, giving the point <m>(0, 0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Setting <m>f(x) = 0</m> yields <m>x^2(x^2 - 2) = 0</m>. This provides three distinct <m>x</m>-intercepts at <m>(0,0)</m>, <m>(-\sqrt{2}, 0)</m>, and <m>(\sqrt{2}, 0)</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </task>
+
+    <task>
+      <title>Derivatives</title>
+      <p>
+        <me>f'(x) = 4x^3 - 4x</me>
+        <me>f''(x) = 12x^2 - 4</me>
+      </p>
+    </task>
+
+    <task>
+      <title>Critical Points</title>
+      <p>
+        Setting the first derivative to zero:
+        <me>4x(x^2 - 1) = 0 \implies 4x(x-1)(x+1) = 0</me>
+        The critical numbers are <m>x = -1</m>, <m>x = 0</m>, and <m>x = 1</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Relative Extrema</title>
+      <p>
+        We analyze the sign changes of <m>f'(x)</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -1)</m></cell>
+          <cell><m>(-1, 0)</m></cell>
+          <cell><m>(0, 1)</m></cell>
+          <cell><m>(1, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has local minima at <m>x = -1</m> and <m>x = 1</m> with value <m>f(\pm 1) = -1</m>. It has a local maximum at <m>x = 0</m> with value <m>f(0) = 0</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Inflection Points and Concavity</title>
+      <p>
+        Setting <m>f''(x) = 0</m> yields <m>12x^2 - 4 = 0 \implies x = \pm \frac{1}{\sqrt{3}} \approx \pm 0.58</m>.
+        <ul>
+          <li><p>On <m>(-\infty, -\dfrac{1}{\sqrt{3}})</m> and <m>(\dfrac{1}{\sqrt{3}}, \infty)</m>, <m>f''(x) \gt 0</m> (concave up <m>\cup</m>).</p></li>
+          <li><p>On <m>(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}})</m>, <m>f''(x) \lt 0</m> (concave down <m>\cap</m>).</p></li>
+        </ul>
+        The inflection points are located at <m>(-\dfrac{1}{\sqrt{3}}, -\dfrac{5}{9})</m> and <m>(\dfrac{1}{\sqrt{3}}, -\dfrac{5}{9})</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Sketch the Graph</title>
+      <p>
+        Plotting the critical points and checking structural behaviors results in the W-shaped curve below:
+      </p>
+      <p>
+        <image xml:id="img-quartic-plot" width="70%">
+          <description>A W-shaped quartic polynomial with local minima at (-1,-1) and (1,-1), a local maximum at (0,0), and inflection points near x = -0.58 and x = 0.58.</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -2.2,
+              xmax = 2.2,
+              ymin = -1.8,
+              ymax = 2.5,
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth,
+              height = 7.5cm
+            ]
+            \addplot [domain=-1.65:1.65, samples=100, color=blue, very thick] {x^4 - 2*x^2};
+            \addplot[only marks, mark=*, color=red] coordinates {(-1,-1) (1,-1) (0,0)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(-0.577,-0.556) (0.577,-0.556)};
+            \node[below] at (axis cs:-1,-1) {Min $(-1,-1)$};
+            \node[below] at (axis cs:1,-1) {Min $(1,-1)$};
+            \node[above right] at (axis cs:0,0) {Max $(0,0)$};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-graphing-cubic-rational">
+  <introduction>
+    <p>
+      Graph the function <m>f</m> given by:
+      <me>f(x) = x^2 - \frac{x^3}{6}</me>
+    </p>
+    <p>
+      <ol>
+        <li><p>Determine the domain and continuity of <m>f</m>.</p></li>
+        <li><p>Find the <m>x</m>- and <m>y</m>-intercepts.</p></li>
+        <li><p>Find <m>f'</m> and <m>f''</m>.</p></li>
+        <li><p>Find the critical points.</p></li>
+        <li><p>Determine intervals of increase and decrease, and locate relative extrema.</p></li>
+        <li><p>Find inflection points and determine concavity.</p></li>
+        <li><p>Sketch the graph.</p></li>
+      </ol>
+    </p>
+  </introduction>
+
+  <solution>
+    <task>
+      <title>Domain and Continuity</title>
+      <p>
+        As a polynomial function, the domain of <m>f</m> is all real numbers, <m>(-\infty, \infty)</m>, and it is continuous everywhere.
+      </p>
+    </task>
+
+    <task>
+      <title>Intercepts</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <m>y</m>-intercept is found at <m>f(0) = 0</m>, giving the coordinate point <m>(0, 0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Setting <m>f(x) = 0</m> yields <m>x^2\left(1 - \frac{x}{6}\right) = 0</m>. This provides two distinct <m>x</m>-intercepts at <m>(0,0)</m> and <m>(6, 0)</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </task>
+
+    <task>
+      <title>Derivatives</title>
+      <p>
+        <me>f'(x) = 2x - \frac{1}{2}x^2</me>
+        <me>f''(x) = 2 - x</me>
+      </p>
+    </task>
+
+    <task>
+      <title>Critical Points</title>
+      <p>
+        Setting the first derivative to zero:
+        <me>x\left(2 - \frac{1}{2}x\right) = 0</me>
+        The critical numbers are <m>x = 0</m> and <m>x = 4</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Relative Extrema</title>
+      <p>
+        We analyze the sign changes of <m>f'(x)</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, 0)</m></cell>
+          <cell><m>(0, 4)</m></cell>
+          <cell><m>(4, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has a local minimum at <m>x = 0</m> with value <m>f(0) = 0</m>, and a local maximum at <m>x = 4</m> with value <m>f(4) = \frac{16}{3} \approx 5.33</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Inflection Points and Concavity</title>
+      <p>
+        Setting <m>f''(x) = 0</m> yields <m>2 - x = 0 \implies x = 2</m>.
+        <ul>
+          <li><p>On <m>(-\infty, 2)</m>, <m>f''(x) \gt 0</m>, so the graph is concave up (<m>\cup</m>).</p></li>
+          <li><p>On <m>(2, \infty)</m>, <m>f''(x) \lt 0</m>, so the graph is concave down (<m>\cap</m>).</p></li>
+        </ul>
+        Since the concavity changes direction, the inflection point is located at <m>(2, f(2)) = \left(2, \frac{8}{3}\right) \approx (2, 2.67)</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Sketch the Graph</title>
+      <p>
+        Plotting key features yields the cubic curve below:
+      </p>
+      <p>
+        <image xml:id="img-cubic-fraction-plot" width="70%">
+          <description>A cubic polynomial with a local minimum at (0,0), an inflection point at (2, 2.67), a local maximum at (4, 5.33), and an x-intercept at (6,0).</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -2.5,
+              xmax = 7.5,
+              ymin = -3,
+              ymax = 7,
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth,
+              height = 7.5cm
+            ]
+            \addplot [domain=-2.1:6.5, samples=100, color=blue, very thick] {x^2 - (x^3)/6};
+            \addplot[only marks, mark=*, color=red] coordinates {(0,0) (4,5.333)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(2,2.667)};
+            \node[below left] at (axis cs:2,0) {Local Min $(0,0)$};
+            \node[above] at (axis cs:4,5.333) {Local Max $(4, 5.33)$};
+            \node[right] at (axis cs:2,2.667) {IP $(2, 2.67)$};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-graphing-exponential-product">
+  <introduction>
+    <p>
+      Graph the function <m>f</m> given by:
+      <me>f(x) = xe^x</me>
+    </p>
+    <p>
+      <ol>
+        <li><p>Determine the domain, continuity, and asymptotic behavior of <m>f</m>.</p></li>
+        <li><p>Find the <m>x</m>- and <m>y</m>-intercepts.</p></li>
+        <li><p>Find <m>f'</m> and <m>f''</m>.</p></li>
+        <li><p>Find the critical points.</p></li>
+        <li><p>Determine intervals of increase and decrease, and locate relative extrema.</p></li>
+        <li><p>Find inflection points and determine concavity.</p></li>
+        <li><p>Sketch the graph.</p></li>
+      </ol>
+    </p>
+  </introduction>
+
+  <solution>
+    <task>
+      <title>Domain, Continuity, and Asymptotes</title>
+      <p>
+        The domain of <m>f</m> consists of all real numbers, <m>(-\infty, \infty)</m>, and the function is continuous everywhere. As <m>x \to \infty</m>, <m>f(x) \to \infty</m>. By L'Hôpital's Rule, the behavior as <m>x \to -\infty</m> is evaluated as:
+        <me>\lim_{x \to -\infty} xe^x = \lim_{x \to -\infty} \frac{x}{e^{-x}} = \lim_{x \to -\infty} \frac{1}{-e^{-x}} = 0</me>
+        Thus, there is a horizontal asymptote at <m>y = 0</m> as <m>x \to -\infty</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Intercepts</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <m>y</m>-intercept is found at <m>f(0) = 0 \cdot e^0 = 0</m>, yielding the coordinate point <m>(0, 0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Setting <m>f(x) = 0</m> means solving <m>xe^x = 0</m>. Since <m>e^x \neq 0</m> for all real values, the only solution is <m>x = 0</m>. The single <m>x</m>-intercept is at <m>(0, 0)</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </task>
+
+    <task>
+      <title>Derivatives</title>
+      <p>
+        Using the Product Rule:
+        <me>f'(x) = e^x + xe^x = (x + 1)e^x</me>
+        <me>f''(x) = e^x + (x + 1)e^x = (x + 2)e^x</me>
+      </p>
+    </task>
+
+    <task>
+      <title>Critical Points</title>
+      <p>
+        Setting the first derivative to zero:
+        <me>(x + 1)e^x = 0</me>
+        Since <m>e^x \gt 0</m>, the only critical number is <m>x = -1</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Relative Extrema</title>
+      <p>
+        We analyze the sign changes of <m>f'(x)</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -1)</m></cell>
+          <cell><m>(-1, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has a local minimum at <m>x = -1</m> with value 
+        <m>f(-1) = -1e^{-1} = -\dfrac{1}{e} \approx -0.368</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Inflection Points and Concavity</title>
+      <p>
+        Setting <m>f''(x) = 0</m> yields <m>(x + 2)e^x = 0 \implies x = -2</m>.
+        <ul>
+          <li><p>On <m>(-\infty, -2)</m>, <m>f''(x) \lt 0</m>, so the graph is concave down (<m>\cap</m>).</p></li>
+          <li><p>On <m>(-2, \infty)</m>, <m>f''(x) \gt 0</m>, so the graph is concave up (<m>\cup</m>).</p></li>
+        </ul>
+        Since the concavity changes direction, the inflection point is located at <m>(-2, f(-2)) = \left(-2, -2e^{-2}\right) = \left(-2, -\dfrac{2}{e^2}\right) \approx (-2, -0.271)</m>.
+      </p>
+    </task>
+
+    <task>
+      <title>Sketch the Graph</title>
+      <p>
+        Plotting key features yields the graph below, showing the tail flattening toward the negative x-axis:
+      </p>
+      <p>
+        <image xml:id="img-exponential-product-plot" width="70%">
+          <description>The graph of x times e^x showing a horizontal asymptote at y=0 on the left, an inflection point at (-2, -0.271), a minimum point at (-1, -0.368), and passing through the origin.</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -5.5,
+              xmax = 1.5,
+              ymin = -0.8,
+              ymax = 1.5,
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth,
+              height = 7.5cm
+            ]
+            \addplot [domain=-5.2:0.8, samples=150, color=blue, very thick] {x*exp(x)};
+            \addplot[only marks, mark=*, color=red] coordinates {(-1,-0.368)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(-2,-0.271)};
+            \node[below] at (axis cs:-1,-0.5) {Local Min $(-1, -e^{-1})$};
+            \node[below left] at (axis cs:-2,-0.3) {IP $(-2, -2e^{-2})$};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-analysis-derivative-one">
+  <statement>
+    <p>
+      The first derivative of a function <m>f(x)</m> is given by <m>y' = 16 - x^2</m>.
+      <ol marker="a">
+        <li><p>At what points, if any, does the graph of <m>f</m> have a local maximum, local minimum, or inflection point?</p></li>
+        <li><p>Sketch the general shape of the graph.</p></li>
+      </ol>
+    </p>
+  </statement>
+
+  <solution>
+    <task>
+      <title>Local Extrema and Inflection Points</title>
+      <p>
+        To find the critical numbers, we set the first derivative equal to zero:
+        <me>16 - x^2 = 0 \implies (4 - x)(4 + x) = 0</me>
+        The critical numbers are <m>x = -4</m> and <m>x = 4</m>.
+      </p>
+      <p>
+        We analyze the sign changes of <m>y'</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -4)</m></cell>
+          <cell><m>(-4, 4)</m></cell>
+          <cell><m>(4, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>y'</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has a <strong>local minimum at <m>x = -4</m></strong> and a <strong>local maximum at <m>x = 4</m></strong>.
+      </p>
+      <p>
+        To find inflection points, we compute the second derivative:
+        <me>y'' = -2x</me>
+        Setting <m>y'' = 0</m> yields <m>x = 0</m>. Since <m>y'' \gt 0</m> for <m>x \lt 0</m> (concave up) and <m>y'' \lt 0</m> for <m>x \gt 0</m> (concave down), the graph has an <strong>inflection point at <m>x = 0</m></strong>.
+      </p>
+    </task>
+
+    <task>
+      <title>General Shape Sketch</title>
+      <p>
+        Plotting the general behavior yields a cubic curve extended to explicitly cross the x-axis:
+      </p>
+      <p>
+        <image xml:id="img-derivative-one-plot" width="60%">
+          <description>A cubic polynomial shape with a local minimum at x = -4, an inflection point at the origin, and a local maximum at x = 4, crossing the x-axis at three points.</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -8, xmax = 8,
+              ymin = -65, ymax = 65,
+              ticks = none,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth, height = 6cm
+            ]
+            \addplot [domain=-7.3:7.3, samples=100, color=blue, very thick] {16*x - (x^3)/3};
+            \addplot[only marks, mark=*, color=red] coordinates {(-4,-42.67) (4,42.67)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(0,0)};
+            \node[below] at (axis cs:-4,-42.67) {Local Min ($x=-4$)};
+            \node[above] at (axis cs:4,42.67) {Local Max ($x=4$)};
+            \node[above right] at (axis cs:0,0) {IP ($x=0$)};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-analysis-derivative-two">
+  <statement>
+    <p>
+      The first derivative of a function <m>f(x)</m> is given by <m>y' = 6x(x+1)(x-2)</m>.
+      <ol marker="a">
+        <li><p>At what points, if any, does the graph of <m>f</m> have a local maximum, local minimum, or inflection point?</p></li>
+        <li><p>Sketch the general shape of the graph.</p></li>
+      </ol>
+    </p>
+  </statement>
+
+  <solution>
+    <task>
+      <title>Local Extrema and Inflection Points</title>
+      <p>
+        Setting the first derivative equal to zero:
+        <me>6x(x+1)(x-2) = 0</me>
+        The critical numbers are <m>x = -1</m>, <m>x = 0</m>, and <m>x = 2</m>.
+      </p>
+      <p>
+        We perform a sign analysis on <m>y'</m> across the intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -1)</m></cell>
+          <cell><m>(-1, 0)</m></cell>
+          <cell><m>(0, 2)</m></cell>
+          <cell><m>(2, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>y'</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test:
+        <ul>
+          <li><p><strong>Local minima</strong> occur at <m>x = -1</m> and <m>x = 2</m>.</p></li>
+          <li><p>A <strong>local maximum</strong> occurs at <m>x = 0</m>.</p></li>
+        </ul>
+      </p>
+      <p>
+        To evaluate concavity, expand <m>y' = 6x^3 - 6x^2 - 12x</m> and find <m>y''</m>:
+        <me>y'' = 18x^2 - 12x - 12 = 6(3x^2 - 2x - 2)</me>
+        Setting <m>y'' = 0</m> and solving yields critical values at <m>x \approx -0.55</m> and <m>x \approx 1.22</m>. The graph has two <strong>inflection points at <m>x \approx -0.55</m> and <m>x \approx 1.22</m></strong>.
+      </p>
+    </task>
+
+    <task>
+      <title>General Shape Sketch</title>
+      <p>
+        Plotting the critical key frames yields a classic W-shaped quartic curve extended to pass through the x-axis:
+      </p>
+      <p>
+        <image xml:id="img-derivative-two-plot" width="60%">
+          <description>A W-shaped quartic polynomial graph featuring local minima at x = -1 and x = 2, and a local maximum at x = 0, extended to rise past the x-axis on both ends.</description>
+          <latex-image>
+            \begin{tikzpicture}
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -2.0, xmax = 3.5,
+              ymin = -20, ymax = 10,
+              ticks = none,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth, height = 6cm
+            ]
+            \addplot [domain=-1.7:3.1, samples=100, color=blue, very thick] {1.5*x^4 - 2*x^3 - 6*x^2};
+            \addplot[only marks, mark=*, color=red] coordinates {(-1,-2.5) (0,0) (2,-16)};
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {(-0.549,-1.33) (1.215,-9.24)};
+            \node[above left] at (axis cs:-1,-2.5) {Min ($x=-1$)};
+            \node[above right] at (axis cs:0,0) {Max ($x=0$)};
+            \node[below] at (axis cs:2,-16) {Min ($x=2$)};
+            \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </p>
+    </task>
+  </solution>
+</exercise>
 
 
 

@@ -136,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-the-first-derivative-test.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -223,7 +223,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
-<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li></ul>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
@@ -329,9 +334,437 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Definition 220: Maximum and Minimum Values"><a href="#def-absolute-extrema" title="Copy heading and permalink for Definition 220: Maximum and Minimum Values" aria-label="Copy heading and permalink for Definition 220: Maximum and Minimum Values">🔗</a></div></article><div class="para" id="sec-Extreme-values-5">If <span class="process-math">\(f(c)\)</span> is the maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{,}\)</span> we say that <span class="process-math">\(f\)</span> takes on its maximum value at <span class="process-math">\(c\text{.}\)</span> The point <span class="process-math">\((c,f(c))\)</span> is a highest point on the graph of <span class="process-math">\(f\text{.}\)</span> If <span class="process-math">\(f(c)\)</span> is the minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(S\text{,}\)</span> we say that <span class="process-math">\(f\)</span> takes on its minimum value at <span class="process-math">\(c\text{.}\)</span> The point <span class="process-math">\((c,f(c))\)</span> is a lowest point on the graph of <span class="process-math">\(f\text{.}\)</span> Maximum and minimum values are sometimes called <em class="alert">extreme values</em> or <em class="alert">extrema</em> of <span class="process-math">\(f\text{.}\)</span> If <span class="process-math">\(D\)</span> is the domain of <span class="process-math">\(f\text{,}\)</span> then the maximum and minimum values of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{,}\)</span> if they exist, are called the <em class="alert">absolute maximum</em> and <em class="alert">absolute minimum</em> of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section: 3.1 Extreme Values of Functions"><a href="#sec-Extreme-values" title="Copy heading and permalink for Section: 3.1 Extreme Values of Functions" aria-label="Copy heading and permalink for Section: 3.1 Extreme Values of Functions">🔗</a></div></section></div>
+<details id="sec-Extreme-values-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">221</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="sec-Extreme-values-6-1">
+<div class="para" id="sec-Extreme-values-6-1-1">Let <span class="process-math">\(f(x)=4-x^{2}\text{.}\)</span> Find the extrema of <span class="process-math">\(f\)</span> on the following intervals:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-quadratic-extrema"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-parabola.svg" role="img" class="contained" alt="A downward-opening parabola with vertex at (0,4) intersecting the x-axis at (-2,0) and (2,0)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">222<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x) = 4 - x^2\text{.}\)</span><div class="autopermalink" data-description="Figure 222"><a href="#fig-quadratic-extrema" title="Copy heading and permalink for Figure 222" aria-label="Copy heading and permalink for Figure 222">🔗</a></div></figcaption></figure>
+</div>
+<article class="task exercise-like" id="sec-Extreme-values-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Extreme-values-6-2-1-1">(a) <span class="process-math">\([-2,1]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-6-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-6-2-2-1">The critical point is <span class="process-math">\(x = 0\text{.}\)</span> Evaluating key points yields <span class="process-math">\(f(0)=4\text{,}\)</span> <span class="process-math">\(f(-2)=0\text{,}\)</span> and <span class="process-math">\(f(1)=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-6-2-2-2">The absolute maximum is <span class="process-math">\(4\)</span> at <span class="process-math">\(x=0\text{.}\)</span> The absolute minimum is <span class="process-math">\(0\)</span> at <span class="process-math">\(x=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 221.a.1"><a href="#sec-Extreme-values-6-2-2" title="Copy heading and permalink for Solution 221.a.1" aria-label="Copy heading and permalink for Solution 221.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 221.a"><a href="#sec-Extreme-values-6-2" title="Copy heading and permalink for Task 221.a" aria-label="Copy heading and permalink for Task 221.a">🔗</a></div></article><article class="task exercise-like" id="sec-Extreme-values-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Extreme-values-6-3-1-1">(b) <span class="process-math">\((-2,1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-6-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-6-3-2-1">The critical point <span class="process-math">\(x = 0\)</span> lies inside the interval. As <span class="process-math">\(x \to -2^+\text{,}\)</span> the function value approaches <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-6-3-2-2">The absolute maximum is <span class="process-math">\(4\)</span> at <span class="process-math">\(x=0\text{.}\)</span> There is no absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 221.b.1"><a href="#sec-Extreme-values-6-3-2" title="Copy heading and permalink for Solution 221.b.1" aria-label="Copy heading and permalink for Solution 221.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 221.b"><a href="#sec-Extreme-values-6-3" title="Copy heading and permalink for Task 221.b" aria-label="Copy heading and permalink for Task 221.b">🔗</a></div></article><article class="task exercise-like" id="sec-Extreme-values-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Extreme-values-6-4-1-1">(c) <span class="process-math">\((1,2]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-6-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-6-4-2-1">No critical points lie within this interval. As <span class="process-math">\(x \to 1^+\text{,}\)</span> the function value approaches <span class="process-math">\(3\text{.}\)</span> At the boundary, <span class="process-math">\(f(2)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-6-4-2-2">There is no absolute maximum. The absolute minimum is <span class="process-math">\(0\)</span> at <span class="process-math">\(x=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 221.c.1"><a href="#sec-Extreme-values-6-4-2" title="Copy heading and permalink for Solution 221.c.1" aria-label="Copy heading and permalink for Solution 221.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 221.c"><a href="#sec-Extreme-values-6-4" title="Copy heading and permalink for Task 221.c" aria-label="Copy heading and permalink for Task 221.c">🔗</a></div></article><article class="task exercise-like" id="sec-Extreme-values-6-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-Extreme-values-6-5-1-1">(d) <span class="process-math">\((1,2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-6-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-6-5-2-1">No critical points lie within this open interval. As <span class="process-math">\(x \to 1^+\text{,}\)</span> <span class="process-math">\(f(x) \to 3\text{,}\)</span> and as <span class="process-math">\(x \to 2^-\text{,}\)</span> <span class="process-math">\(f(x) \to 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-6-5-2-2">There is no absolute maximum and no absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-6-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 221.d.1"><a href="#sec-Extreme-values-6-5-2" title="Copy heading and permalink for Solution 221.d.1" aria-label="Copy heading and permalink for Solution 221.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 221.d"><a href="#sec-Extreme-values-6-5" title="Copy heading and permalink for Task 221.d" aria-label="Copy heading and permalink for Task 221.d">🔗</a></div></article><div class="autopermalink" data-description="Example 221"><a href="#sec-Extreme-values-6" title="Copy heading and permalink for Example 221" aria-label="Copy heading and permalink for Example 221">🔗</a></div></article></details><details id="sec-Extreme-values-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">223</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sec-Extreme-values-7-1">
+<div class="para" id="sec-Extreme-values-7-1-1">Let <span class="process-math">\(f(x)=\frac{1}{x^{2}}\text{.}\)</span> Find the extrema of <span class="process-math">\(f\)</span> on the following intervals:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-rational-extrema"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-rational-curve.svg" role="img" class="contained" alt="The graph of 1 over x squared, showing curves in quadrants 1 and 2 that approach infinity near the vertical asymptote x=0."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">224<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x) = \frac{1}{x^2}\text{.}\)</span><div class="autopermalink" data-description="Figure 224"><a href="#fig-rational-extrema" title="Copy heading and permalink for Figure 224" aria-label="Copy heading and permalink for Figure 224">🔗</a></div></figcaption></figure>
+</div>
+<article class="task exercise-like" id="sec-Extreme-values-7-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Extreme-values-7-2-1-1">(a) <span class="process-math">\([-1,2]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-7-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-7-2-2-1">The interval contains an infinite discontinuity at <span class="process-math">\(x = 0\text{.}\)</span> As <span class="process-math">\(x \to 0\text{,}\)</span> <span class="process-math">\(f(x) \to \infty\text{,}\)</span> so there is no absolute maximum.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-7-2-2-2">Evaluating the included endpoints gives <span class="process-math">\(f(-1) = 1\)</span> and <span class="process-math">\(f(2) = \frac{1}{4}\text{.}\)</span> Since the function is strictly decreasing on <span class="process-math">\((0, \infty)\text{,}\)</span> the absolute minimum is <span class="process-math">\(\frac{1}{4}\)</span> at <span class="process-math">\(x=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 223.a.1"><a href="#sec-Extreme-values-7-2-2" title="Copy heading and permalink for Solution 223.a.1" aria-label="Copy heading and permalink for Solution 223.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 223.a"><a href="#sec-Extreme-values-7-2" title="Copy heading and permalink for Task 223.a" aria-label="Copy heading and permalink for Task 223.a">🔗</a></div></article><article class="task exercise-like" id="sec-Extreme-values-7-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Extreme-values-7-3-1-1">(b) <span class="process-math">\([-1,2)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-Extreme-values-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Extreme-values-7-3-2-1">As in part (a), the vertical asymptote at <span class="process-math">\(x = 0\)</span> means <span class="process-math">\(f(x) \to \infty\text{,}\)</span> so there is no absolute maximum.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Extreme-values-7-3-2-2">As <span class="process-math">\(x \to 2^-\text{,}\)</span> <span class="process-math">\(f(x) \to \frac{1}{4}\text{.}\)</span> Because the endpoint <span class="process-math">\(x = 2\)</span> is excluded from this open boundary, and all other points in the interval yield values greater than <span class="process-math">\(\frac{1}{4}\text{,}\)</span> there is no absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-7-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 223.b.1"><a href="#sec-Extreme-values-7-3-2" title="Copy heading and permalink for Solution 223.b.1" aria-label="Copy heading and permalink for Solution 223.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 223.b"><a href="#sec-Extreme-values-7-3" title="Copy heading and permalink for Task 223.b" aria-label="Copy heading and permalink for Task 223.b">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 223"><a href="#sec-Extreme-values-7" title="Copy heading and permalink for Checkpoint 223" aria-label="Copy heading and permalink for Checkpoint 223">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-extreme-value"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">225</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extreme Value Theorem.</span>
+</h3>
+<div class="para" id="thm-extreme-value-2-1">If a function <span class="process-math">\(f\)</span> is continuous on a closed interval <span class="process-math">\([a,b]\text{,}\)</span> then <span class="process-math">\(f\)</span> takes on a maximum value and a minimum value at least once in <span class="process-math">\([a,b]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-extreme-value-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 225: Extreme Value Theorem"><a href="#thm-extreme-value" title="Copy heading and permalink for Theorem 225: Extreme Value Theorem" aria-label="Copy heading and permalink for Theorem 225: Extreme Value Theorem">🔗</a></div></article><div class="para" id="sec-Extreme-values-9">The importance of this theorem is that it guarantee the existence of extrema if <span class="process-math">\(f\)</span> is continuous on a closed interval. But, extrema may occur on intervals that are not closed and for functions that are not continuous.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-local-extrema"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">226</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Local Extrema.</span>
+</h3>
+<div class="para logical" id="def-local-extrema-2-1">
+<div class="para">Let <span class="process-math">\(c\)</span> be a number in the domain of a function <span class="process-math">\(f\text{.}\)</span>
+</div>
+<ol class="decimal" id="def-local-extrema-2-1-3">
+<li id="def-local-extrema-2-1-3-1">
+<div class="para" id="def-local-extrema-2-1-3-1-1">
+<span class="process-math">\(f(c)\)</span> is a <dfn class="terminology">local maximum</dfn> of <span class="process-math">\(f\)</span> if there exists an open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(c\)</span> such that <span class="process-math">\(f(x)\leq f(c)\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\((a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-local-extrema-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-local-extrema-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-local-extrema-2-1-3-2">
+<div class="para" id="def-local-extrema-2-1-3-2-1">
+<span class="process-math">\(f(c)\)</span> is a <dfn class="terminology">local minimum</dfn> of <span class="process-math">\(f\)</span> if there exists an open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(c\)</span> such that <span class="process-math">\(f(x)\geq f(c)\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\((a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-local-extrema-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-local-extrema-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-local-extrema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 226: Local Extrema"><a href="#def-local-extrema" title="Copy heading and permalink for Definition 226: Local Extrema" aria-label="Copy heading and permalink for Definition 226: Local Extrema">🔗</a></div></article><article class="assemblage assemblage-like" id="asm-local-theorem"><h3 class="heading"><span class="title">Local Extrema.</span></h3>
+<div class="para logical" id="asm-local-theorem-2">
+<div class="para">If a function <span class="process-math">\(f\)</span> has a local (relative) extreme value <span class="process-math">\(f(c)\)</span> on an open interval, then <span class="process-math">\(c\)</span> is a critical point, meaning that either:</div>
+<div class="displaymath process-math" id="asm-local-theorem-2-4">
+\begin{equation*}
+f'(c)=0 \quad \text{or} \quad f'(c) \text{ does not exist.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#asm-local-theorem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Local Extrema"><a href="#asm-local-theorem" title="Copy heading and permalink for Assemblage: Local Extrema" aria-label="Copy heading and permalink for Assemblage: Local Extrema">🔗</a></div></article><div class="para" id="sec-Extreme-values-12">Note that when we are looking for points that are relative extrema, the only points we need consider are those where the derivative is 0 or where the derivative does not exist.<div class="autopermalink" data-description="Paragraph"><a href="#sec-Extreme-values-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-critical-point"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">227</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Critical Point.</span>
+</h3>
+<div class="para logical" id="def-critical-point-2-1">
+<div class="para">A <dfn class="terminology">critical point</dfn> of a function is an interior point <span class="process-math">\(c\)</span> of its domain at which the tangent line to the graph at <span class="process-math">\((c,f(c))\)</span> is horizontal or at which the derivative does not exist. That is, <span class="process-math">\(c\)</span> is a critical point if:</div>
+<div class="displaymath process-math" id="def-critical-point-2-1-5">
+\begin{equation*}
+f'(c)=0 \quad \text{or} \quad f'(c) \text{ does not exist.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-critical-point-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 227: Critical Point"><a href="#def-critical-point" title="Copy heading and permalink for Definition 227: Critical Point" aria-label="Copy heading and permalink for Definition 227: Critical Point">🔗</a></div></article><details id="ex-cubic-extrema" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">228</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-cubic-extrema-1-1">If <span class="process-math">\(f(x)=x^{3}-12x\text{,}\)</span> find the maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([-3,5]\)</span> and sketch the graph of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-cubic-extrema-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-cubic-extrema-2-1">
+<div class="para">First, we locate the critical points by finding the derivative of <span class="process-math">\(f(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cubic-extrema-2-1-2">
+\begin{equation*}
+f'(x) = 3x^2 - 12
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cubic-extrema-2-2">
+<div class="para">Setting the derivative equal to zero to find the critical numbers:</div>
+<div class="displaymath process-math" id="ex-cubic-extrema-2-2-1">
+\begin{equation*}
+3x^2 - 12 = 0 \implies 3(x-2)(x+2) = 0
+\end{equation*}
+</div>
+<div class="para">This yields the interior critical numbers <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(x = -2\text{.}\)</span> Both values lie within the given closed interval <span class="process-math">\([-3,5]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cubic-extrema-2-3">
+<div class="para">Next, we evaluate the function at the critical points and the boundary endpoints:</div>
+<ul class="disc" id="ex-cubic-extrema-2-3-1">
+<li id="ex-cubic-extrema-2-3-1-1">
+<div class="para" id="ex-cubic-extrema-2-3-1-1-1">Left endpoint: <span class="process-math">\(f(-3) = (-3)^3 - 12(-3) = -27 + 36 = 9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-extrema-2-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cubic-extrema-2-3-1-2">
+<div class="para" id="ex-cubic-extrema-2-3-1-2-1">Critical point: <span class="process-math">\(f(-2) = (-2)^3 - 12(-2) = -8 + 24 = 16\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-extrema-2-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cubic-extrema-2-3-1-3">
+<div class="para" id="ex-cubic-extrema-2-3-1-3-1">Critical point: <span class="process-math">\(f(2) = (2)^3 - 12(2) = 8 - 24 = -16\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-extrema-2-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cubic-extrema-2-3-1-4">
+<div class="para" id="ex-cubic-extrema-2-3-1-4-1">Right endpoint: <span class="process-math">\(f(5) = (5)^3 - 12(5) = 125 - 60 = 65\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-extrema-2-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cubic-extrema-2-4">By comparing these values, the absolute maximum value is <span class="process-math">\(65\)</span> occurring at the right endpoint <span class="process-math">\(x = 5\text{.}\)</span> The absolute minimum value is <span class="process-math">\(-16\)</span> occurring at the critical point <span class="process-math">\(x = 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-extrema-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-cubic-extrema-plot"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-cubic-curve.svg" role="img" class="contained" alt="The graph of x cubed minus 12x on the interval from negative 3 to 5. The curve peaks at a local maximum of (minus 2, 16), drops to a local minimum of (2, minus 16), and rises sharply to an absolute maximum at the right endpoint (5, 65)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">229<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x) = x^3 - 12x\)</span> on <span class="process-math">\([-3,5]\text{.}\)</span><div class="autopermalink" data-description="Figure 229"><a href="#fig-cubic-extrema-plot" title="Copy heading and permalink for Figure 229" aria-label="Copy heading and permalink for Figure 229">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 228.1"><a href="#ex-cubic-extrema-2" title="Copy heading and permalink for Solution 228.1" aria-label="Copy heading and permalink for Solution 228.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 228"><a href="#ex-cubic-extrema" title="Copy heading and permalink for Example 228" aria-label="Copy heading and permalink for Example 228">🔗</a></div></article></details><details id="ex-cubic-no-extrema" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">230</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-cubic-no-extrema-1-1">If <span class="process-math">\(f(x)=x^{3}\text{,}\)</span> prove that <span class="process-math">\(f\)</span> has no local extremum.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-cubic-no-extrema-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-cubic-no-extrema-2-1">
+<div class="para">To find potential local extrema, we compute the first derivative of <span class="process-math">\(f(x) = x^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cubic-no-extrema-2-1-2">
+\begin{equation*}
+f'(x) = 3x^2 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cubic-no-extrema-2-2">
+<div class="para">Setting the derivative equal to zero gives our critical number:</div>
+<div class="displaymath process-math" id="ex-cubic-no-extrema-2-2-1">
+\begin{equation*}
+3x^2 = 0 \implies x = 0 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cubic-no-extrema-2-3">
+<div class="para">To determine if a local extremum exists at <span class="process-math">\(x = 0\text{,}\)</span> we examine the behavior of <span class="process-math">\(f'(x)\)</span> on either side of this critical number:</div>
+<ul class="disc" id="ex-cubic-no-extrema-2-3-3">
+<li id="ex-cubic-no-extrema-2-3-3-1">
+<div class="para" id="ex-cubic-no-extrema-2-3-3-1-1">For <span class="process-math">\(x \lt 0\text{,}\)</span> <span class="process-math">\(f'(x) = 3x^2 \gt 0\text{,}\)</span> which means <span class="process-math">\(f\)</span> is strictly increasing.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-no-extrema-2-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cubic-no-extrema-2-3-3-2">
+<div class="para" id="ex-cubic-no-extrema-2-3-3-2-1">For <span class="process-math">\(x \gt 0\text{,}\)</span> <span class="process-math">\(f'(x) = 3x^2 \gt 0\text{,}\)</span> which means <span class="process-math">\(f\)</span> is also strictly increasing.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cubic-no-extrema-2-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cubic-no-extrema-2-4">Because <span class="process-math">\(f'(x)\)</span> does not change sign at <span class="process-math">\(x = 0\text{,}\)</span> the First Derivative Test confirms that the point <span class="process-math">\((0,0)\)</span> is an inflection point rather than a local extremum. Since there are no other critical numbers, the function <span class="process-math">\(f\)</span> has no local extremum.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cubic-no-extrema-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-cubic-pure-plot"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-cubic-pure.svg" role="img" class="contained" alt="The graph of x cubed, passing through the origin. The curve is strictly increasing throughout its entire domain, flattening out momentarily at the horizontal tangent at (0,0)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">231<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x) = x^3\text{.}\)</span><div class="autopermalink" data-description="Figure 231"><a href="#fig-cubic-pure-plot" title="Copy heading and permalink for Figure 231" aria-label="Copy heading and permalink for Figure 231">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 230.1"><a href="#ex-cubic-no-extrema-2" title="Copy heading and permalink for Solution 230.1" aria-label="Copy heading and permalink for Solution 230.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 230"><a href="#ex-cubic-no-extrema" title="Copy heading and permalink for Example 230" aria-label="Copy heading and permalink for Example 230">🔗</a></div></article></details><details id="ex-cusp-extrema" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">232</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-cusp-extrema-1-1">If <span class="process-math">\(f(x)=(x-1)^{2/3}\text{,}\)</span> find the maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0,9]\)</span> and sketch the graph of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-cusp-extrema-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-cusp-extrema-2-1">
+<div class="para">First, we differentiate <span class="process-math">\(f(x)\)</span> using the Chain Rule to locate the critical numbers:</div>
+<div class="displaymath process-math" id="ex-cusp-extrema-2-1-2">
+\begin{equation*}
+f'(x) = \dfrac{2}{3}(x-1)^{-1/3} = \dfrac{2}{3\sqrt[3]{x-1}} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cusp-extrema-2-2">
+<div class="para">We analyze the derivative to discover critical points inside the interior domain <span class="process-math">\((0,9)\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-cusp-extrema-2-2-2">
+<li id="ex-cusp-extrema-2-2-2-1">
+<div class="para" id="ex-cusp-extrema-2-2-2-1-1">The equation <span class="process-math">\(f'(x) = 0\)</span> has no solution because the numerator is a constant (<span class="process-math">\(2 \neq 0\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cusp-extrema-2-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cusp-extrema-2-2-2-2">
+<div class="para" id="ex-cusp-extrema-2-2-2-2-1">The derivative <span class="process-math">\(f'(x)\)</span> does not exist when the denominator equals zero: <span class="process-math">\(3\sqrt[3]{x-1} = 0 \implies x = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cusp-extrema-2-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Since <span class="process-math">\(x = 1\)</span> lies in the domain of <span class="process-math">\(f\text{,}\)</span> it is our critical point. The vertical tangent profile indicates a sharp cusp point at this coordinate.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-cusp-extrema-2-3">
+<div class="para">Next, we evaluate the function values at the critical point and the two interval boundaries:</div>
+<ul class="disc" id="ex-cusp-extrema-2-3-1">
+<li id="ex-cusp-extrema-2-3-1-1">
+<div class="para" id="ex-cusp-extrema-2-3-1-1-1">Left endpoint: <span class="process-math">\(f(0) = (0-1)^{2/3} = (-1)^{2/3} = 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cusp-extrema-2-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cusp-extrema-2-3-1-2">
+<div class="para" id="ex-cusp-extrema-2-3-1-2-1">Critical point: <span class="process-math">\(f(1) = (1-1)^{2/3} = 0^{2/3} = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cusp-extrema-2-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cusp-extrema-2-3-1-3">
+<div class="para" id="ex-cusp-extrema-2-3-1-3-1">Right endpoint: <span class="process-math">\(f(9) = (9-1)^{2/3} = 8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cusp-extrema-2-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cusp-extrema-2-4">Comparing these values, the absolute minimum value is <span class="process-math">\(0\)</span> occurring at the critical point cusp <span class="process-math">\(x = 1\text{.}\)</span> The absolute maximum value is <span class="process-math">\(4\)</span> occurring at the right endpoint boundary <span class="process-math">\(x = 9\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cusp-extrema-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-cusp-extrema-plot"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-cusp-curve.svg" role="img" class="contained" alt="The graph of (x-1) to the 2/3 power. The curve decreases from the left endpoint (0,1) down to a sharp point or cusp at the horizontal axis (1,0), then rises continuously to the right endpoint at (9,4)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">233<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f(x) = (x-1)^{2/3}\)</span> on <span class="process-math">\([0,9]\text{.}\)</span><div class="autopermalink" data-description="Figure 233"><a href="#fig-cusp-extrema-plot" title="Copy heading and permalink for Figure 233" aria-label="Copy heading and permalink for Figure 233">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 232.1"><a href="#ex-cusp-extrema-2" title="Copy heading and permalink for Solution 232.1" aria-label="Copy heading and permalink for Solution 232.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 232"><a href="#ex-cusp-extrema" title="Copy heading and permalink for Example 232" aria-label="Copy heading and permalink for Example 232">🔗</a></div></article></details><details id="ex-find-critical-numbers-derivative" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">234</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-find-critical-numbers-derivative-1-1">Find the critical numbers of <span class="process-math">\(f\)</span> if <span class="process-math">\(\displaystyle f'(x)=\frac{(x+5)(x-2)}{x^{2}-9}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-critical-numbers-derivative-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-find-critical-numbers-derivative-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-find-critical-numbers-derivative-2-1">By definition, a critical number of a function <span class="process-math">\(f\)</span> must lie within the domain of <span class="process-math">\(f\)</span> where either <span class="process-math">\(f'(x) = 0\)</span> or <span class="process-math">\(f'(x)\)</span> does not exist. We begin by evaluating where these conditions occur for the given rational derivative.<div class="autopermalink" data-description="Paragraph"><a href="#ex-find-critical-numbers-derivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-find-critical-numbers-derivative-2-2">
+<div class="para">First, we find where <span class="process-math">\(f'(x) = 0\text{.}\)</span> A fraction equals zero when its numerator equals zero, provided the denominator is non-zero:</div>
+<div class="displaymath process-math" id="ex-find-critical-numbers-derivative-2-2-2">
+\begin{equation*}
+(x+5)(x-2) = 0 \implies x = -5 \text{ or } x = 2 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-find-critical-numbers-derivative-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-find-critical-numbers-derivative-2-3">
+<div class="para">Next, we look for values where <span class="process-math">\(f'(x)\)</span> does not exist. A rational function fails to exist where its denominator equals zero:</div>
+<div class="displaymath process-math" id="ex-find-critical-numbers-derivative-2-3-2">
+\begin{equation*}
+x^2 - 9 = 0 \implies (x-3)(x+3) = 0 \implies x = 3 \text{ or } x = -3 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-find-critical-numbers-derivative-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-find-critical-numbers-derivative-2-4">Because we are given the explicit formula for <span class="process-math">\(f'(x)\)</span> without the original function <span class="process-math">\(f(x)\text{,}\)</span> the natural domain of <span class="process-math">\(f\)</span> must exclude the vertical asymptotes of its derivative at <span class="process-math">\(x = \pm 3\text{,}\)</span> where the function itself is undefined. Therefore, only the values making the derivative zero qualify as interior domain critical numbers.<div class="autopermalink" data-description="Paragraph"><a href="#ex-find-critical-numbers-derivative-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 234.1"><a href="#ex-find-critical-numbers-derivative-2" title="Copy heading and permalink for Solution 234.1" aria-label="Copy heading and permalink for Solution 234.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 234"><a href="#ex-find-critical-numbers-derivative" title="Copy heading and permalink for Example 234" aria-label="Copy heading and permalink for Example 234">🔗</a></div></article></details><details id="ex-critical-polynomial" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">235</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-critical-polynomial-1-1">Find the critical numbers of <span class="process-math">\(f\)</span> if <span class="process-math">\(f(x)=x^{3}-2x+4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-polynomial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-polynomial-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-critical-polynomial-2-1">
+<div class="para">We find the critical numbers by differentiating the polynomial function <span class="process-math">\(f(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-critical-polynomial-2-1-2">
+\begin{equation*}
+f'(x) = 3x^2 - 2 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-polynomial-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-critical-polynomial-2-2">
+<div class="para">Since <span class="process-math">\(f'(x)\)</span> is a polynomial, it is defined everywhere. We set <span class="process-math">\(f'(x) = 0\)</span> to find the critical numbers:</div>
+<div class="displaymath process-math" id="ex-critical-polynomial-2-2-3">
+\begin{equation*}
+3x^2 - 2 = 0 \implies x^2 = \dfrac{2}{3} \implies x = \pm\sqrt{\dfrac{2}{3}} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-polynomial-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-critical-polynomial-2-3">Both values belong to the domain of <span class="process-math">\(f\text{.}\)</span> Thus, the critical numbers are <span class="process-math">\(x = \sqrt{\dfrac{2}{3}}\)</span> and <span class="process-math">\(x = -\sqrt{\dfrac{2}{3}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-polynomial-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 235.1"><a href="#ex-critical-polynomial-2" title="Copy heading and permalink for Solution 235.1" aria-label="Copy heading and permalink for Solution 235.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 235"><a href="#ex-critical-polynomial" title="Copy heading and permalink for Checkpoint 235" aria-label="Copy heading and permalink for Checkpoint 235">🔗</a></div></article></details><details id="ex-critical-logarithmic" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">236</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-critical-logarithmic-1-1">Find the critical numbers of <span class="process-math">\(f\)</span> if <span class="process-math">\(f(x)=x\ln x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-logarithmic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-logarithmic-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-critical-logarithmic-2-1">
+<div class="para">The natural domain of <span class="process-math">\(f(x) = x\ln x\)</span> is restricted to <span class="process-math">\((0, \infty)\)</span> due to the logarithmic term. We apply the Product Rule to compute the derivative:</div>
+<div class="displaymath process-math" id="ex-critical-logarithmic-2-1-3">
+\begin{equation*}
+f'(x) = (1)\ln x + x\left(\frac{1}{x}\right) = \ln x + 1 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-logarithmic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-critical-logarithmic-2-2">
+<div class="para">The derivative <span class="process-math">\(f'(x)\)</span> is defined for all values in the function’s domain <span class="process-math">\((0, \infty)\text{.}\)</span> Setting the derivative equal to zero yields:</div>
+<div class="displaymath process-math" id="ex-critical-logarithmic-2-2-3">
+\begin{equation*}
+\ln x + 1 = 0 \implies \ln x = -1 \implies x = e^{-1} = \frac{1}{e} 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-logarithmic-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-critical-logarithmic-2-3">Since <span class="process-math">\(\dfrac{1}{e} \gt 0\text{,}\)</span> it lies within the domain. Therefore, the only critical number is <span class="process-math">\(x = \dfrac{1}{e}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-logarithmic-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 236.1"><a href="#ex-critical-logarithmic-2" title="Copy heading and permalink for Solution 236.1" aria-label="Copy heading and permalink for Solution 236.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 236"><a href="#ex-critical-logarithmic" title="Copy heading and permalink for Checkpoint 236" aria-label="Copy heading and permalink for Checkpoint 236">🔗</a></div></article></details><details id="ex-critical-trigonometric" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">237</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-critical-trigonometric-1-1">If <span class="process-math">\(f(x)=2\sin x+ \cos 2x\text{,}\)</span> find the critical numbers of <span class="process-math">\(f\)</span> that are in the interval <span class="process-math">\([0,2\pi]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-trigonometric-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-critical-trigonometric-2-1">
+<div class="para">We differentiate <span class="process-math">\(f(x)\)</span> using the Chain Rule on the second term:</div>
+<div class="displaymath process-math" id="ex-critical-trigonometric-2-1-2">
+\begin{equation*}
+f'(x) = 2\cos x - 2\sin 2x 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-critical-trigonometric-2-2">
+<div class="para">Using the double-angle identity <span class="process-math">\(\sin 2x = 2\sin x\cos x\text{,}\)</span> we rewrite the derivative equation:</div>
+<div class="displaymath process-math" id="ex-critical-trigonometric-2-2-2">
+\begin{equation*}
+f'(x) = 2\cos x - 4\sin x\cos x = 2\cos x(1 - 2\sin x) 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-critical-trigonometric-2-3">
+<div class="para">The derivative exists everywhere. We locate the critical numbers inside <span class="process-math">\([0, 2\pi]\)</span> by setting <span class="process-math">\(f'(x) = 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-critical-trigonometric-2-3-3">
+\begin{equation*}
+2\cos x(1 - 2\sin x) = 0 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-critical-trigonometric-2-4">
+<div class="para">This produces two separate trigonometric cases to evaluate on the given interval:</div>
+<ul class="disc" id="ex-critical-trigonometric-2-4-1">
+<li id="ex-critical-trigonometric-2-4-1-1">
+<div class="para" id="ex-critical-trigonometric-2-4-1-1-1">
+<span class="process-math">\(\cos x = 0 \implies x = \dfrac{\pi}{2}\)</span> or <span class="process-math">\(x = \dfrac{3\pi}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-critical-trigonometric-2-4-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-critical-trigonometric-2-4-1-2">
+<div class="para" id="ex-critical-trigonometric-2-4-1-2-1">
+<span class="process-math">\(1 - 2\sin x = 0 \implies \sin x = \dfrac{1}{2} \implies x = \dfrac{\pi}{6}\)</span> or <span class="process-math">\(x = \dfrac{5\pi}{6}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-critical-trigonometric-2-4-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-critical-trigonometric-2-5">Thus, the critical numbers in the interval <span class="process-math">\([0, 2\pi]\)</span> are <span class="process-math">\(x = \dfrac{\pi}{6}\text{,}\)</span> <span class="process-math">\(x = \dfrac{\pi}{2}\text{,}\)</span> <span class="process-math">\(x = \dfrac{5\pi}{6}\text{,}\)</span> and <span class="process-math">\(x = \dfrac{3\pi}{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-trigonometric-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 237.1"><a href="#ex-critical-trigonometric-2" title="Copy heading and permalink for Solution 237.1" aria-label="Copy heading and permalink for Solution 237.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 237"><a href="#ex-critical-trigonometric" title="Copy heading and permalink for Checkpoint 237" aria-label="Copy heading and permalink for Checkpoint 237">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 3.1 Extreme Values of Functions"><a href="#sec-Extreme-values" title="Copy heading and permalink for Section: 3.1 Extreme Values of Functions" aria-label="Copy heading and permalink for Section: 3.1 Extreme Values of Functions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-Applications-of-Derivatives.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-the-first-derivative-test.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

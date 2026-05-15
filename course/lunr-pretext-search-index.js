@@ -2266,7 +2266,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.1 Extreme Values of Functions",
-  "body": " 3.1 Extreme Values of Functions  This section introduces the foundational concepts used to identify where functions reach their largest and smallest values.   Increasing and Decreasing Functions   If the graph of a function rises from left to right over an interval , it is said to be increasing on . If the graph of a function drops from left to right over an interval , it is said to be decreasing on . Let a function be defined on an interval , and let denote numbers in .     is increasing on if for .     is decreasing on if for .     is constant on if for .       Maximum and Minimum Values   Let a function be defined on a set of real numbers, and let be a number in .     is the maximum value of on if for every in .     is the minimum value of on if for every in .      If is the maximum value of on , we say that takes on its maximum value at . The point is a highest point on the graph of . If is the minimum value of on , we say that takes on its minimum value at . The point is a lowest point on the graph of . Maximum and minimum values are sometimes called extreme values or extrema of . If is the domain of , then the maximum and minimum values of on , if they exist, are called the absolute maximum and absolute minimum of .  "
+  "body": " 3.1 Extreme Values of Functions  This section introduces the foundational concepts used to identify where functions reach their largest and smallest values.   Increasing and Decreasing Functions   If the graph of a function rises from left to right over an interval , it is said to be increasing on . If the graph of a function drops from left to right over an interval , it is said to be decreasing on . Let a function be defined on an interval , and let denote numbers in .     is increasing on if for .     is decreasing on if for .     is constant on if for .       Maximum and Minimum Values   Let a function be defined on a set of real numbers, and let be a number in .     is the maximum value of on if for every in .     is the minimum value of on if for every in .      If is the maximum value of on , we say that takes on its maximum value at . The point is a highest point on the graph of . If is the minimum value of on , we say that takes on its minimum value at . The point is a lowest point on the graph of . Maximum and minimum values are sometimes called extreme values or extrema of . If is the domain of , then the maximum and minimum values of on , if they exist, are called the absolute maximum and absolute minimum of .    Let . Find the extrema of on the following intervals:   The graph of .   A downward-opening parabola with vertex at (0,4) intersecting the x-axis at (-2,0) and (2,0).        (a)     The critical point is . Evaluating key points yields , , and .  The absolute maximum is at . The absolute minimum is at .      (b)     The critical point lies inside the interval. As , the function value approaches .  The absolute maximum is at . There is no absolute minimum.      (c)     No critical points lie within this interval. As , the function value approaches . At the boundary, .  There is no absolute maximum. The absolute minimum is at .      (d)     No critical points lie within this open interval. As , , and as , .  There is no absolute maximum and no absolute minimum.       Let . Find the extrema of on the following intervals:   The graph of .   The graph of 1 over x squared, showing curves in quadrants 1 and 2 that approach infinity near the vertical asymptote x=0.        (a)     The interval contains an infinite discontinuity at . As , , so there is no absolute maximum.  Evaluating the included endpoints gives and . Since the function is strictly decreasing on , the absolute minimum is at .      (b)     As in part (a), the vertical asymptote at means , so there is no absolute maximum.  As , . Because the endpoint is excluded from this open boundary, and all other points in the interval yield values greater than , there is no absolute minimum.      Extreme Value Theorem   If a function is continuous on a closed interval , then takes on a maximum value and a minimum value at least once in .    The importance of this theorem is that it guarantee the existence of extrema if is continuous on a closed interval. But, extrema may occur on intervals that are not closed and for functions that are not continuous.   Local Extrema   Let be a number in the domain of a function .    is a local maximum of if there exists an open interval containing such that for every in .     is a local minimum of if there exists an open interval containing such that for every in .        Local Extrema  If a function has a local (relative) extreme value on an open interval, then is a critical point, meaning that either:    Note that when we are looking for points that are relative extrema, the only points we need consider are those where the derivative is 0 or where the derivative does not exist.   Critical Point   A critical point of a function is an interior point of its domain at which the tangent line to the graph at is horizontal or at which the derivative does not exist. That is, is a critical point if:       If , find the maximum and minimum values of on the interval and sketch the graph of .    First, we locate the critical points by finding the derivative of :   Setting the derivative equal to zero to find the critical numbers: This yields the interior critical numbers and . Both values lie within the given closed interval .  Next, we evaluate the function at the critical points and the boundary endpoints:   Left endpoint:    Critical point:    Critical point:    Right endpoint:     By comparing these values, the absolute maximum value is occurring at the right endpoint . The absolute minimum value is occurring at the critical point .   The graph of on .   The graph of x cubed minus 12x on the interval from negative 3 to 5. The curve peaks at a local maximum of (minus 2, 16), drops to a local minimum of (2, minus 16), and rises sharply to an absolute maximum at the right endpoint (5, 65).         If , prove that has no local extremum.    To find potential local extrema, we compute the first derivative of :   Setting the derivative equal to zero gives our critical number:   To determine if a local extremum exists at , we examine the behavior of on either side of this critical number:   For , , which means is strictly increasing.    For , , which means is also strictly increasing.     Because does not change sign at , the First Derivative Test confirms that the point is an inflection point rather than a local extremum. Since there are no other critical numbers, the function has no local extremum.   The graph of .   The graph of x cubed, passing through the origin. The curve is strictly increasing throughout its entire domain, flattening out momentarily at the horizontal tangent at (0,0).         If , find the maximum and minimum values of on the interval and sketch the graph of .    First, we differentiate using the Chain Rule to locate the critical numbers:   We analyze the derivative to discover critical points inside the interior domain :   The equation has no solution because the numerator is a constant ( ).    The derivative does not exist when the denominator equals zero: .   Since lies in the domain of , it is our critical point. The vertical tangent profile indicates a sharp cusp point at this coordinate.  Next, we evaluate the function values at the critical point and the two interval boundaries:   Left endpoint:    Critical point:    Right endpoint:     Comparing these values, the absolute minimum value is occurring at the critical point cusp . The absolute maximum value is occurring at the right endpoint boundary .   The graph of on .   The graph of (x-1) to the 2\/3 power. The curve decreases from the left endpoint (0,1) down to a sharp point or cusp at the horizontal axis (1,0), then rises continuously to the right endpoint at (9,4).         Find the critical numbers of if .    By definition, a critical number of a function must lie within the domain of where either or does not exist. We begin by evaluating where these conditions occur for the given rational derivative.  First, we find where . A fraction equals zero when its numerator equals zero, provided the denominator is non-zero:   Next, we look for values where does not exist. A rational function fails to exist where its denominator equals zero:   Because we are given the explicit formula for without the original function , the natural domain of must exclude the vertical asymptotes of its derivative at , where the function itself is undefined. Therefore, only the values making the derivative zero qualify as interior domain critical numbers.       Find the critical numbers of if .    We find the critical numbers by differentiating the polynomial function :   Since is a polynomial, it is defined everywhere. We set to find the critical numbers:   Both values belong to the domain of . Thus, the critical numbers are and .      Find the critical numbers of if .    The natural domain of is restricted to due to the logarithmic term. We apply the Product Rule to compute the derivative:   The derivative is defined for all values in the function's domain . Setting the derivative equal to zero yields:   Since , it lies within the domain. Therefore, the only critical number is .      If , find the critical numbers of that are in the interval .    We differentiate using the Chain Rule on the second term:   Using the double-angle identity , we rewrite the derivative equation:   The derivative exists everywhere. We locate the critical numbers inside by setting :   This produces two separate trigonometric cases to evaluate on the given interval:    or      or      Thus, the critical numbers in the interval are , , , and .    "
 },
 {
   "id": "def-increasing-decreasing",
@@ -2285,6 +2285,276 @@ var ptx_lunr_docs = [
   "number": "220",
   "title": "Maximum and Minimum Values.",
   "body": " Maximum and Minimum Values   Let a function be defined on a set of real numbers, and let be a number in .     is the maximum value of on if for every in .     is the minimum value of on if for every in .     "
+},
+{
+  "id": "sec-Extreme-values-6",
+  "level": "2",
+  "url": "sec-Extreme-values.html#sec-Extreme-values-6",
+  "type": "Example",
+  "number": "221",
+  "title": "",
+  "body": "  Let . Find the extrema of on the following intervals:   The graph of .   A downward-opening parabola with vertex at (0,4) intersecting the x-axis at (-2,0) and (2,0).        (a)     The critical point is . Evaluating key points yields , , and .  The absolute maximum is at . The absolute minimum is at .      (b)     The critical point lies inside the interval. As , the function value approaches .  The absolute maximum is at . There is no absolute minimum.      (c)     No critical points lie within this interval. As , the function value approaches . At the boundary, .  There is no absolute maximum. The absolute minimum is at .      (d)     No critical points lie within this open interval. As , , and as , .  There is no absolute maximum and no absolute minimum.    "
+},
+{
+  "id": "sec-Extreme-values-7",
+  "level": "2",
+  "url": "sec-Extreme-values.html#sec-Extreme-values-7",
+  "type": "Checkpoint",
+  "number": "223",
+  "title": "",
+  "body": "  Let . Find the extrema of on the following intervals:   The graph of .   The graph of 1 over x squared, showing curves in quadrants 1 and 2 that approach infinity near the vertical asymptote x=0.        (a)     The interval contains an infinite discontinuity at . As , , so there is no absolute maximum.  Evaluating the included endpoints gives and . Since the function is strictly decreasing on , the absolute minimum is at .      (b)     As in part (a), the vertical asymptote at means , so there is no absolute maximum.  As , . Because the endpoint is excluded from this open boundary, and all other points in the interval yield values greater than , there is no absolute minimum.    "
+},
+{
+  "id": "thm-extreme-value",
+  "level": "2",
+  "url": "sec-Extreme-values.html#thm-extreme-value",
+  "type": "Theorem",
+  "number": "225",
+  "title": "Extreme Value Theorem.",
+  "body": " Extreme Value Theorem   If a function is continuous on a closed interval , then takes on a maximum value and a minimum value at least once in .   "
+},
+{
+  "id": "def-local-extrema",
+  "level": "2",
+  "url": "sec-Extreme-values.html#def-local-extrema",
+  "type": "Definition",
+  "number": "226",
+  "title": "Local Extrema.",
+  "body": " Local Extrema   Let be a number in the domain of a function .    is a local maximum of if there exists an open interval containing such that for every in .     is a local minimum of if there exists an open interval containing such that for every in .      "
+},
+{
+  "id": "def-critical-point",
+  "level": "2",
+  "url": "sec-Extreme-values.html#def-critical-point",
+  "type": "Definition",
+  "number": "227",
+  "title": "Critical Point.",
+  "body": " Critical Point   A critical point of a function is an interior point of its domain at which the tangent line to the graph at is horizontal or at which the derivative does not exist. That is, is a critical point if:    "
+},
+{
+  "id": "ex-cubic-extrema",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-cubic-extrema",
+  "type": "Example",
+  "number": "228",
+  "title": "",
+  "body": "  If , find the maximum and minimum values of on the interval and sketch the graph of .    First, we locate the critical points by finding the derivative of :   Setting the derivative equal to zero to find the critical numbers: This yields the interior critical numbers and . Both values lie within the given closed interval .  Next, we evaluate the function at the critical points and the boundary endpoints:   Left endpoint:    Critical point:    Critical point:    Right endpoint:     By comparing these values, the absolute maximum value is occurring at the right endpoint . The absolute minimum value is occurring at the critical point .   The graph of on .   The graph of x cubed minus 12x on the interval from negative 3 to 5. The curve peaks at a local maximum of (minus 2, 16), drops to a local minimum of (2, minus 16), and rises sharply to an absolute maximum at the right endpoint (5, 65).      "
+},
+{
+  "id": "ex-cubic-no-extrema",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-cubic-no-extrema",
+  "type": "Example",
+  "number": "230",
+  "title": "",
+  "body": "  If , prove that has no local extremum.    To find potential local extrema, we compute the first derivative of :   Setting the derivative equal to zero gives our critical number:   To determine if a local extremum exists at , we examine the behavior of on either side of this critical number:   For , , which means is strictly increasing.    For , , which means is also strictly increasing.     Because does not change sign at , the First Derivative Test confirms that the point is an inflection point rather than a local extremum. Since there are no other critical numbers, the function has no local extremum.   The graph of .   The graph of x cubed, passing through the origin. The curve is strictly increasing throughout its entire domain, flattening out momentarily at the horizontal tangent at (0,0).      "
+},
+{
+  "id": "ex-cusp-extrema",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-cusp-extrema",
+  "type": "Example",
+  "number": "232",
+  "title": "",
+  "body": "  If , find the maximum and minimum values of on the interval and sketch the graph of .    First, we differentiate using the Chain Rule to locate the critical numbers:   We analyze the derivative to discover critical points inside the interior domain :   The equation has no solution because the numerator is a constant ( ).    The derivative does not exist when the denominator equals zero: .   Since lies in the domain of , it is our critical point. The vertical tangent profile indicates a sharp cusp point at this coordinate.  Next, we evaluate the function values at the critical point and the two interval boundaries:   Left endpoint:    Critical point:    Right endpoint:     Comparing these values, the absolute minimum value is occurring at the critical point cusp . The absolute maximum value is occurring at the right endpoint boundary .   The graph of on .   The graph of (x-1) to the 2\/3 power. The curve decreases from the left endpoint (0,1) down to a sharp point or cusp at the horizontal axis (1,0), then rises continuously to the right endpoint at (9,4).      "
+},
+{
+  "id": "ex-find-critical-numbers-derivative",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-find-critical-numbers-derivative",
+  "type": "Example",
+  "number": "234",
+  "title": "",
+  "body": "  Find the critical numbers of if .    By definition, a critical number of a function must lie within the domain of where either or does not exist. We begin by evaluating where these conditions occur for the given rational derivative.  First, we find where . A fraction equals zero when its numerator equals zero, provided the denominator is non-zero:   Next, we look for values where does not exist. A rational function fails to exist where its denominator equals zero:   Because we are given the explicit formula for without the original function , the natural domain of must exclude the vertical asymptotes of its derivative at , where the function itself is undefined. Therefore, only the values making the derivative zero qualify as interior domain critical numbers.    "
+},
+{
+  "id": "ex-critical-polynomial",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-critical-polynomial",
+  "type": "Checkpoint",
+  "number": "235",
+  "title": "",
+  "body": "  Find the critical numbers of if .    We find the critical numbers by differentiating the polynomial function :   Since is a polynomial, it is defined everywhere. We set to find the critical numbers:   Both values belong to the domain of . Thus, the critical numbers are and .   "
+},
+{
+  "id": "ex-critical-logarithmic",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-critical-logarithmic",
+  "type": "Checkpoint",
+  "number": "236",
+  "title": "",
+  "body": "  Find the critical numbers of if .    The natural domain of is restricted to due to the logarithmic term. We apply the Product Rule to compute the derivative:   The derivative is defined for all values in the function's domain . Setting the derivative equal to zero yields:   Since , it lies within the domain. Therefore, the only critical number is .   "
+},
+{
+  "id": "ex-critical-trigonometric",
+  "level": "2",
+  "url": "sec-Extreme-values.html#ex-critical-trigonometric",
+  "type": "Checkpoint",
+  "number": "237",
+  "title": "",
+  "body": "  If , find the critical numbers of that are in the interval .    We differentiate using the Chain Rule on the second term:   Using the double-angle identity , we rewrite the derivative equation:   The derivative exists everywhere. We locate the critical numbers inside by setting :   This produces two separate trigonometric cases to evaluate on the given interval:    or      or      Thus, the critical numbers in the interval are , , , and .   "
+},
+{
+  "id": "sec-the-first-derivative-test",
+  "level": "1",
+  "url": "sec-the-first-derivative-test.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.2 The first derivative test",
+  "body": " 3.2 The first derivative test   This section introduces how the first derivative of a function determines where its graph rises or falls, providing a foundation for locating local extrema.    Increasing\/Decreasing Test  Let be continuous on and differentiable on .   If for all in , then is increasing on .    If for all in , then is decreasing on .        Find where the function is increasing and where it is decreasing.    To apply the Increasing\/Decreasing Test, we first find the derivative of :   Next, we locate the critical numbers by factoring the derivative expression completely and setting it equal to zero: This gives three critical numbers: , , and . These points split the real line domain into four distinct test intervals.  We choose a test value within each open interval to determine the arithmetic sign of :    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    By checking where the signs are positive or negative, we conclude that the function is increasing on the intervals and , and it is decreasing on the intervals and .      Find where the function is increasing and where it is decreasing.    First, we find the derivative of to locate the critical numbers:   Setting the derivative equal to zero, we factor the quadratic equation: These two critical numbers partition the real number line into three separate open intervals.  We choose a test value within each interval to determine the arithmetic sign of :    Interval       Test Value       Sign of       Behavior of  Increasing  Decreasing  Increasing    Therefore, the function is increasing on the intervals and , and it is decreasing on the interval .     The First Derivative Test   Let be a critical number for , and suppose is continuous at and differentiable on an open interval containing , except possibly at itself.    F1.  has a local minimum at if on and on . That is, is decreasing to the left of and increasing to the right of .     F2.  has a local maximum at if on and on . That is, is increasing to the left of and decreasing to the right of .     F3.  has neither a local maximum nor a local minimum at if has the same sign on and on .         Given the function given by: find the local extrema.    To find the local extrema, we first find the first derivative of the function:   Next, we find the critical numbers by setting and factoring the quadratic expression: This gives two critical numbers: and .  We set up a sign chart to analyze the behavior of across the intervals determined by these critical numbers:    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    We now apply the First Derivative Test to classify each critical number:   At , changes from positive to negative (F2). Therefore, has a local maximum at . The local maximum value is:     At , changes from negative to positive (F1). Therefore, has a local minimum at . The local minimum value is:      In conclusion, has a local maximum value of at and a local minimum value of at .      If , find the local extrema of .    First, we find the first derivative of to locate the critical numbers:   Setting the derivative equal to zero, we factor the quadratic expression: These two critical numbers partition the domain into three open intervals. We construct a sign chart to analyze the behavior of :    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    We apply the First Derivative Test to classify the critical numbers:   At , changes from positive to negative (F2), yielding a local maximum value:     At , changes from negative to positive (F1), yielding a local minimum value:      Therefore, has a local maximum value of at and a local minimum value of at .      If , find the local extrema of .    We expand the function first to simplify differentiation:   Now, we find the first derivative using the Power Rule:   We find the critical numbers by looking for where or where does not exist:    when the numerator is zero: .     is undefined when the denominator is zero: .   Since , , and are all in the domain of , they are our critical numbers. We construct a sign chart to analyze the derivative:    Interval        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    We apply the First Derivative Test to classify the critical numbers and evaluate their functional outputs:   At , changes from negative to positive, yielding a local minimum:     At , changes from positive to negative, yielding a local maximum (a sharp cusp):     At , changes from negative to positive, yielding a local minimum:      Therefore, has a local maximum value of at , and local minimum values of at both .     Role of the Derivative in Graphing  The derivative is used to find the critical points of . The test values, in the intervals defined by the critical points, are substituted into the derivative , and the function values are found using the original function . Use the derivative to find information about the shape of the graph of .     Find the local extrema of the function, if they exist. Then sketch the graph.          First, we find the first derivative of :   Setting gives the critical numbers and . We construct an interval sign chart:    Interval       Sign of       Behavior of  Increasing  Increasing  Decreasing    Applying the First Derivative Test:   At , does not change sign. There is no local extremum at (it is an inflection point).    At , changes from positive to negative, yielding a local maximum value:       The graph of .   The graph of 2x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a local maximum at (1.5, 1.6875), and then falls sharply towards negative infinity.              First, we find the first derivative of :   Setting gives the critical numbers and . We analyze the interval sign chart:    Interval       Sign of       Behavior of  Increasing  Increasing  Decreasing    Applying the First Derivative Test:   At , does not change sign. There is no local extremum at .    At , changes from positive to negative, yielding a local maximum value:       The graph of .   The graph of x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a small local maximum at (0.75, 0.1055), and then turns downward toward negative infinity.        "
+},
+{
+  "id": "ex-increasing-decreasing-polynomial",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-increasing-decreasing-polynomial",
+  "type": "Example",
+  "number": "238",
+  "title": "",
+  "body": "  Find where the function is increasing and where it is decreasing.    To apply the Increasing\/Decreasing Test, we first find the derivative of :   Next, we locate the critical numbers by factoring the derivative expression completely and setting it equal to zero: This gives three critical numbers: , , and . These points split the real line domain into four distinct test intervals.  We choose a test value within each open interval to determine the arithmetic sign of :    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    By checking where the signs are positive or negative, we conclude that the function is increasing on the intervals and , and it is decreasing on the intervals and .   "
+},
+{
+  "id": "ex-inc-dec-cubic-polynomial",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-inc-dec-cubic-polynomial",
+  "type": "Checkpoint",
+  "number": "239",
+  "title": "",
+  "body": "  Find where the function is increasing and where it is decreasing.    First, we find the derivative of to locate the critical numbers:   Setting the derivative equal to zero, we factor the quadratic equation: These two critical numbers partition the real number line into three separate open intervals.  We choose a test value within each interval to determine the arithmetic sign of :    Interval       Test Value       Sign of       Behavior of  Increasing  Decreasing  Increasing    Therefore, the function is increasing on the intervals and , and it is decreasing on the interval .   "
+},
+{
+  "id": "thm-first-derivative-test",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#thm-first-derivative-test",
+  "type": "Theorem",
+  "number": "240",
+  "title": "The First Derivative Test.",
+  "body": " The First Derivative Test   Let be a critical number for , and suppose is continuous at and differentiable on an open interval containing , except possibly at itself.    F1.  has a local minimum at if on and on . That is, is decreasing to the left of and increasing to the right of .     F2.  has a local maximum at if on and on . That is, is increasing to the left of and decreasing to the right of .     F3.  has neither a local maximum nor a local minimum at if has the same sign on and on .      "
+},
+{
+  "id": "ex-find-local-extrema-cubic",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-find-local-extrema-cubic",
+  "type": "Example",
+  "number": "241",
+  "title": "",
+  "body": "  Given the function given by: find the local extrema.    To find the local extrema, we first find the first derivative of the function:   Next, we find the critical numbers by setting and factoring the quadratic expression: This gives two critical numbers: and .  We set up a sign chart to analyze the behavior of across the intervals determined by these critical numbers:    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    We now apply the First Derivative Test to classify each critical number:   At , changes from positive to negative (F2). Therefore, has a local maximum at . The local maximum value is:     At , changes from negative to positive (F1). Therefore, has a local minimum at . The local minimum value is:      In conclusion, has a local maximum value of at and a local minimum value of at .   "
+},
+{
+  "id": "ex-local-extrema-cubic-polynomial",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-local-extrema-cubic-polynomial",
+  "type": "Checkpoint",
+  "number": "242",
+  "title": "",
+  "body": "  If , find the local extrema of .    First, we find the first derivative of to locate the critical numbers:   Setting the derivative equal to zero, we factor the quadratic expression: These two critical numbers partition the domain into three open intervals. We construct a sign chart to analyze the behavior of :    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    We apply the First Derivative Test to classify the critical numbers:   At , changes from positive to negative (F2), yielding a local maximum value:     At , changes from negative to positive (F1), yielding a local minimum value:      Therefore, has a local maximum value of at and a local minimum value of at .   "
+},
+{
+  "id": "ex-local-extrema-fractional-exponent",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-local-extrema-fractional-exponent",
+  "type": "Checkpoint",
+  "number": "243",
+  "title": "",
+  "body": "  If , find the local extrema of .    We expand the function first to simplify differentiation:   Now, we find the first derivative using the Power Rule:   We find the critical numbers by looking for where or where does not exist:    when the numerator is zero: .     is undefined when the denominator is zero: .   Since , , and are all in the domain of , they are our critical numbers. We construct a sign chart to analyze the derivative:    Interval        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    We apply the First Derivative Test to classify the critical numbers and evaluate their functional outputs:   At , changes from negative to positive, yielding a local minimum:     At , changes from positive to negative, yielding a local maximum (a sharp cusp):     At , changes from negative to positive, yielding a local minimum:      Therefore, has a local maximum value of at , and local minimum values of at both .   "
+},
+{
+  "id": "rem-derivative-graph-relationship",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#rem-derivative-graph-relationship",
+  "type": "Remark",
+  "number": "244",
+  "title": "Role of the Derivative in Graphing.",
+  "body": " Role of the Derivative in Graphing  The derivative is used to find the critical points of . The test values, in the intervals defined by the critical points, are substituted into the derivative , and the function values are found using the original function . Use the derivative to find information about the shape of the graph of .  "
+},
+{
+  "id": "ex-group-local-extrema-polynomials",
+  "level": "2",
+  "url": "sec-the-first-derivative-test.html#ex-group-local-extrema-polynomials",
+  "type": "Checkpoint",
+  "number": "245",
+  "title": "",
+  "body": "  Find the local extrema of the function, if they exist. Then sketch the graph.          First, we find the first derivative of :   Setting gives the critical numbers and . We construct an interval sign chart:    Interval       Sign of       Behavior of  Increasing  Increasing  Decreasing    Applying the First Derivative Test:   At , does not change sign. There is no local extremum at (it is an inflection point).    At , changes from positive to negative, yielding a local maximum value:       The graph of .   The graph of 2x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a local maximum at (1.5, 1.6875), and then falls sharply towards negative infinity.              First, we find the first derivative of :   Setting gives the critical numbers and . We analyze the interval sign chart:    Interval       Sign of       Behavior of  Increasing  Increasing  Decreasing    Applying the First Derivative Test:   At , does not change sign. There is no local extremum at .    At , changes from positive to negative, yielding a local maximum value:       The graph of .   The graph of x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a small local maximum at (0.75, 0.1055), and then turns downward toward negative infinity.       "
+},
+{
+  "id": "sec-concavity-test",
+  "level": "1",
+  "url": "sec-concavity-test.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.3 Concavity and Curve Sketching",
+  "body": " 3.3 Concavity and Curve Sketching   This section explores how the rate of change of the first derivative determines the bending behavior, or concavity, of a function's graph.    Concavity   Suppose that is a function whose derivative exists at every point in an open interval . Then:    is concave up on the interval , if is increasing over .     is concave down on the interval , if is decreasing over .        The Concavity Test   Let be a twice-differentiable function on an interval .   If for all in , then the graph of is concave up on .    If for all in , then the graph of is concave down on .         If , determine intervals on which the graph of is concave up or down.    To apply the Concavity Test, we find the first and second derivatives of :    We find where the second derivative is zero to identify potential inflection points: This point divides the domain into two open intervals. We construct a sign chart to analyze :    Interval      Sign of      Concavity of  Concave Down  Concave Up    Therefore, the graph of is concave down on the interval and concave up on the interval .   The graph of highlighting its inflection point.   A cubic function graph transitioning from concave down to concave up through a point of inflection located at x equals negative one third.        Point of Inflection   A point of inflection is a point across which the direction of concavity changes. A point on the graph of is a point of inflection if:    is continuous at .    There is an open interval containing such that the graph is concave up on and concave down on , or vice versa.        The Second Derivative Test   Suppose that is a function for which exists for every in an open interval contained in its domain, and that there is a critical point in for which . Then:    is a local minimum if .     is a local maximum if .     The test is inconclusive if or if does not exist. In such cases, the First Derivative Test must be used instead.     Finding Points of Inflection  If a function has a point of inflection, it occurs at a point in its domain where either:      If , use the second derivative test to find the local extrema of . Determine the concavity and find the points of inflection.    We begin by computing the first and second derivatives of the function:     Part 1: Local Extrema (Second Derivative Test)   Setting gives our critical numbers: , , and . We evaluate the sign of at each critical number:   At : . By the Second Derivative Test, has a local minimum at . The local minimum value is .    At : . By the Second Derivative Test, has a local maximum at . The local maximum value is .    At : . By the Second Derivative Test, has a local maximum at . The local maximum value is .      Part 2: Concavity and Points of Inflection   To find potential inflection points, we set : These values divide the real line into three open intervals. We construct a sign chart to evaluate the concavity of :    Interval       Sign of       Concavity of  Concave Down  Concave Up  Concave Down    The graph of is concave down on and , and concave up on .  Since the concavity changes directions at both and , both locations are inflection points. We evaluate their corresponding -values: Thus, the points of inflection are and .   The graph of with extrema and inflection points.   A M-shaped quartic curve. It features a local minimum at (0,12), two local maximums at (-1,13) and (1,13), and two points of inflection located symmetrically near x equals plus or minus 0.58.       "
+},
+{
+  "id": "def-concavity",
+  "level": "2",
+  "url": "sec-concavity-test.html#def-concavity",
+  "type": "Definition",
+  "number": "248",
+  "title": "Concavity.",
+  "body": " Concavity   Suppose that is a function whose derivative exists at every point in an open interval . Then:    is concave up on the interval , if is increasing over .     is concave down on the interval , if is decreasing over .      "
+},
+{
+  "id": "thm-concavity-test",
+  "level": "2",
+  "url": "sec-concavity-test.html#thm-concavity-test",
+  "type": "Theorem",
+  "number": "249",
+  "title": "The Concavity Test.",
+  "body": " The Concavity Test   Let be a twice-differentiable function on an interval .   If for all in , then the graph of is concave up on .    If for all in , then the graph of is concave down on .      "
+},
+{
+  "id": "ex-concavity-cubic-polynomial",
+  "level": "2",
+  "url": "sec-concavity-test.html#ex-concavity-cubic-polynomial",
+  "type": "Example",
+  "number": "250",
+  "title": "",
+  "body": "  If , determine intervals on which the graph of is concave up or down.    To apply the Concavity Test, we find the first and second derivatives of :    We find where the second derivative is zero to identify potential inflection points: This point divides the domain into two open intervals. We construct a sign chart to analyze :    Interval      Sign of      Concavity of  Concave Down  Concave Up    Therefore, the graph of is concave down on the interval and concave up on the interval .   The graph of highlighting its inflection point.   A cubic function graph transitioning from concave down to concave up through a point of inflection located at x equals negative one third.      "
+},
+{
+  "id": "def-inflection-point",
+  "level": "2",
+  "url": "sec-concavity-test.html#def-inflection-point",
+  "type": "Definition",
+  "number": "252",
+  "title": "Point of Inflection.",
+  "body": " Point of Inflection   A point of inflection is a point across which the direction of concavity changes. A point on the graph of is a point of inflection if:    is continuous at .    There is an open interval containing such that the graph is concave up on and concave down on , or vice versa.      "
+},
+{
+  "id": "thm-second-derivative-test",
+  "level": "2",
+  "url": "sec-concavity-test.html#thm-second-derivative-test",
+  "type": "Theorem",
+  "number": "253",
+  "title": "The Second Derivative Test.",
+  "body": " The Second Derivative Test   Suppose that is a function for which exists for every in an open interval contained in its domain, and that there is a critical point in for which . Then:    is a local minimum if .     is a local maximum if .     The test is inconclusive if or if does not exist. In such cases, the First Derivative Test must be used instead.   "
+},
+{
+  "id": "ex-second-derivative-test-polynomial",
+  "level": "2",
+  "url": "sec-concavity-test.html#ex-second-derivative-test-polynomial",
+  "type": "Example",
+  "number": "254",
+  "title": "",
+  "body": "  If , use the second derivative test to find the local extrema of . Determine the concavity and find the points of inflection.    We begin by computing the first and second derivatives of the function:     Part 1: Local Extrema (Second Derivative Test)   Setting gives our critical numbers: , , and . We evaluate the sign of at each critical number:   At : . By the Second Derivative Test, has a local minimum at . The local minimum value is .    At : . By the Second Derivative Test, has a local maximum at . The local maximum value is .    At : . By the Second Derivative Test, has a local maximum at . The local maximum value is .      Part 2: Concavity and Points of Inflection   To find potential inflection points, we set : These values divide the real line into three open intervals. We construct a sign chart to evaluate the concavity of :    Interval       Sign of       Concavity of  Concave Down  Concave Up  Concave Down    The graph of is concave down on and , and concave up on .  Since the concavity changes directions at both and , both locations are inflection points. We evaluate their corresponding -values: Thus, the points of inflection are and .   The graph of with extrema and inflection points.   A M-shaped quartic curve. It features a local minimum at (0,12), two local maximums at (-1,13) and (1,13), and two points of inflection located symmetrically near x equals plus or minus 0.58.      "
+},
+{
+  "id": "sec-Summary-of-Graphical-Methods",
+  "level": "1",
+  "url": "sec-Summary-of-Graphical-Methods.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.4 Summary of Graphical Methods",
+  "body": " 3.4 Summary of Graphical Methods   This section combines our tools for evaluating first and second derivatives to form a comprehensive, step-by-step strategy for analyzing and drawing accurate function curves.    Method for Sketching Graphs  To systematically analyze and sketch the graph of a function , follow these steps:   Determine the domain and analyze the continuity of .    Find the -intercepts and -intercept.    Compute the first derivative and second derivative .    Find the critical points of the function.    Determine the intervals of increase and decrease, and locate local (relative) extrema.    Find the candidate inflection points.    Determine the intervals of concavity.    Identify vertical, horizontal, or slant asymptotes, if any exist.    Sketch the graph by plotting the key points and connecting them according to the established behaviors.        Graph the function given by:     Determine the domain and continuity of .  Find the - and -intercepts.  Find and .  Find the critical points.  Determine intervals of increase and decrease, and locate relative extrema.  Find inflection points and determine concavity.  Sketch the graph.       1. Domain and Continuity: As a polynomial function, the domain of is all real numbers, , and it is continuous everywhere.   2. Intercepts:    The -intercept is found at , giving the coordinate point .    Setting and solving yields three real roots near , , and .      3. Derivatives:      4. Critical Points: Setting : The interior critical numbers are and .   5. Relative Extrema: We analyze the sign changes of across the domain intervals:    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    By the First Derivative Test, has a local maximum at with value , and a local minimum at with value .   6. Inflection Points and Concavity: Setting gives .  On , , so the graph is concave down ( ).  On , , so the graph is concave up ( ).  Since concavity changes direction, is a point of inflection.   7. Sketch the Graph: Plotting the turning points and inflection point yields the curve below:   The graph of .   A cubic polynomial with local maximum at (-3,15), inflection point at (-1,-1), and local minimum at (1,-17).       "
+},
+{
+  "id": "ex-graphing-cubic-polynomial",
+  "level": "2",
+  "url": "sec-Summary-of-Graphical-Methods.html#ex-graphing-cubic-polynomial",
+  "type": "Example",
+  "number": "256",
+  "title": "",
+  "body": "  Graph the function given by:     Determine the domain and continuity of .  Find the - and -intercepts.  Find and .  Find the critical points.  Determine intervals of increase and decrease, and locate relative extrema.  Find inflection points and determine concavity.  Sketch the graph.       1. Domain and Continuity: As a polynomial function, the domain of is all real numbers, , and it is continuous everywhere.   2. Intercepts:    The -intercept is found at , giving the coordinate point .    Setting and solving yields three real roots near , , and .      3. Derivatives:      4. Critical Points: Setting : The interior critical numbers are and .   5. Relative Extrema: We analyze the sign changes of across the domain intervals:    Interval       Sign of       Behavior of  Increasing  Decreasing  Increasing    By the First Derivative Test, has a local maximum at with value , and a local minimum at with value .   6. Inflection Points and Concavity: Setting gives .  On , , so the graph is concave down ( ).  On , , so the graph is concave up ( ).  Since concavity changes direction, is a point of inflection.   7. Sketch the Graph: Plotting the turning points and inflection point yields the curve below:   The graph of .   A cubic polynomial with local maximum at (-3,15), inflection point at (-1,-1), and local minimum at (1,-17).      "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
@@ -2480,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "224",
+  "number": "261",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

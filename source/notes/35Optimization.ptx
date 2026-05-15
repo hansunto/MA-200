@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-Optimization" class="notes">
+    <title>3.5 Optimization</title>
+    <introduction>
+        <p> Optimization problems represent one of the most direct 
+            and practical applications of differential calculus. 
+            In these problems, our objective is to find the most efficient 
+            solution to a real-world scenario by identifying either the 
+            absolute maximum value (such as maximizing area, volume, 
+            or profit) or the absolute minimum value 
+            (such as minimizing material cost, waste, or time). </p>
+        <p> The core workflow for solving any applied optimization 
+            problem relies on a structured, multi-step calculus framework: </p>
+    </introduction>
+
+<paragraphs xml:id="pars-strategy-max-min">
+  <title>A Strategy for Solving Max-Min Problems</title>
+  <p>
+    When addressing optimization problems, use the following structured approach:
+  </p>
+  <ol>
+    <li>
+      <p>
+        <alert>Draw and label a picture.</alert> Optimization problems often involve geometry. Draw a picture of the situation. Include any information you are given in the problem. Identify the quantities under your control and assign variables to them.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Find the objective function.</alert> What is the quantity you want to maximize or minimize? Write a formula for it in terms of the variables in your picture.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Identify the constraints.</alert> If your objective function has more than one variable, you will need to use one or more constraints in the problem to write equations that relate the variables together.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Reduce the objective function to one variable.</alert> Solve each of the constraint equations for one of the variables and substitute this into the objective function. At the end, the objective function should contain just one variable.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Identify the domain of the objective function.</alert> Now that your objective function has a single variable, what values of that variable make sense in the problem? Think about what the variable means in the problem<ndash />for example, lengths cannot be negative. There may be both a lower bound and an upper bound for meaningful values of the variable; if so, make sure you identify both of them. If the domain has both a lower and an upper bound, and the endpoints of this interval do not cause any mathematical problems in the objective function (such as division by zero), consider including the endpoints even if they don't quite make sense in the problem; this will allow you to use the Closed Interval Method in step 8.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Differentiate the objective function.</alert> Find the derivative of the objective function with respect to your chosen variable.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Find the critical numbers.</alert> Critical numbers are values of the variable that cause the derivative to equal zero or be undefined. These numbers are potential local maxima or minima. Ignore any critical numbers that are outside the domain of the objective function.
+      </p>
+    </li>
+    <li>
+      <p>
+        <alert>Test the critical numbers</alert> (and possibly the endpoints of the domain). The critical numbers are not automatically the answer. You need to test each one to see if it's a local minimum, a local maximum, or neither. Usually you can use one of the following tests:
+      </p>
+      <ol>
+        <li>
+          <p>
+            <alert>Closed Interval Method.</alert> 
+            <em>Requirements:</em> The domain of the objective function must be a closed, bounded interval (that is, an interval that has endpoints on both ends, and includes those endpoints). 
+            <em>Test:</em> Evaluate the objective function at all critical numbers and at the endpoints of the domain, and choose the largest value (if you are maximizing) or the smallest value (if you are minimizing).
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>First Derivative Test.</alert> 
+            <em>Requirements:</em> There must be only one critical number in the domain. 
+            <em>Test:</em> Evaluate the first derivative of the objective function at two numbers in the domain, one of which is less than the critical number and the other of which is greater than the critical number. If the first derivative is positive to the left of the critical number and negative to the right, then the critical number represents the absolute maximum. If the first derivative is negative to the left of the critical number and positive to the right, then the critical number represents the absolute minimum.
+          </p>
+        </li>
+        <li>
+          <p>
+            <alert>Second Derivative Test.</alert> 
+            <em>Requirements:</em> There must be only one critical number in the domain.
+            <em>Test:</em> Find the second derivative of the objective function and evaluate it at the critical number. If this value is negative, then the critical number represents the absolute maximum. If the value is positive, then the critical number represents the absolute minimum.
+          </p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        <alert>Answer the question.</alert> The critical number itself may not be the answer to the question. Reread the question to see exactly what it is asking for. If it is asking for the dimensions of a rectangle, for example, make sure you give the width and height of the rectangle, not just the area. And don't forget units!
+      </p>
+    </li>
+  </ol>
+</paragraphs>
+
+<example xml:id="ex-train-display-optimization">
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A hobby store has <m>20</m> ft of fencing to fence off a rectangular area for an electric train in one corner of its display room. The two sides up against the wall require no fence. What dimensions of the rectangle will maximize the area? What is the maximum area?
+      </p>
+      <image xml:id="img-train-corner-layout">
+        <description>A rectangular region enclosed in the top-right corner of a room, labeled with width x and length y, with the outer sides representing the fence.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.15]
+            % Draw Walls (Thick Lines)
+            \draw[ultra thick, gray] (0,25) -- (25,25) -- (25,0);
+            
+            % Labels for Walls
+            \node[above, gray] at (12.5,25) {Room Wall};
+            \node[right, rotate=-90, gray] at (25,12.5) {Room Wall};
+            
+            % Draw Fenced Rectangle Enclosure
+            \draw[very thick, blue, dashed] (5,5) -- (5,25);
+            \draw[very thick, blue, dashed] (5,5) -- (25,5);
+            
+            % Dimension Labels
+            \node[left, blue] at (5,15) {$x$};
+            \node[below, blue] at (15,5) {$y$};
+            
+            % Shading the enclosed pasture area
+            \fill[blue!10, opacity=0.5] (5,5) rectangle (25,25);
+            \node at (15,15) {\small Enclosed Display};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our structured strategy to optimize the corner layout:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the width of the enclosed display and <m>y</m> represent its length. Because the layout sits in a corner, only one width side and one length side require actual fencing.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to maximize the total floor area, <m>A</m>:
+          <me>A = xy</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The structural boundary is limited by our total physical fencing length:
+          <me>x + y = 20</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Isolate <m>y</m> in the constraint equation to get <m>y = 20 - x</m>. Substituting this expression back into our area equation creates a single independent variable target:
+          <me>A(x) = x(20 - x) = 20x - x^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> Length parameters must remain positive, meaning <m>x \ge 0</m>. Because the fence total is capped at <m>20</m> ft, <m>x \le 20</m>. This limits our mathematical search scope to the closed domain interval <m>[0, 20]</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Taking the first derivative with respect to <m>x</m> yields:
+          <me>A'(x) = 20 - 2x</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> Setting the derivative to zero:
+          <me>20 - 2x = 0 \implies x = 10</me>
+          The value <m>x = 10</m> is our single interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> Applying the Closed Interval Method across our domain boundary points:
+          <ul>
+            <li><p><m>A(0) = 20(0) - (0)^2 = 0</m> sq ft</p></li>
+            <li><p><m>A(10) = 20(10) - (10)^2 = 100</m> sq ft</p></li>
+            <li><p><m>A(20) = 20(20) - (20)^2 = 0</m> sq ft</p></li>
+          </ul>
+          The mathematical maximum occurs when <m>x = 10</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Setting <m>x = 10</m> ft requires a corresponding length side of <m>y = 20 - 10 = 10</m> ft.
+        </p>
+        <p>
+          The optimal dimensions for the train enclosure are <strong>10 ft by 10 ft</strong>, producing an absolute maximum area of <strong>100 sq ft</strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</example>
+
+<example xml:id="ex-cardboard-box-optimization">
+  <statement>
+    <p>
+      From a square piece of cardboard measuring <m>8</m> in. by <m>8</m> in., square corners are cut out so that the sides can be folded up to make an open-top box. What dimensions will yield a box with the maximum volume? What is the maximum volume?
+    </p>
+    <sidebyside widths="45% 45%" valigns="bottom bottom" margins="auto">
+   
+      <image xml:id="img-box-cutout-layout">
+        <description>A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.45]
+            % Draw main 8x8 cardboard grid body
+            \draw[thick, black] (0,0) rectangle (8,8);
+            
+            % Draw cutout corner squares
+            \draw[thick, fill=gray!20] (0,0) rectangle (1.5,1.5);
+            \draw[thick, fill=gray!20] (0,8) rectangle (1.5,6.5);
+            \draw[thick, fill=gray!20] (8,0) rectangle (6.5,1.5);
+            \draw[thick, fill=gray!20] (8,8) rectangle (6.5,6.5);
+            
+            % Draw dashed folding internal boundaries
+            \draw[dashed, blue, thick] (1.5,1.5) -- (1.5,6.5);
+            \draw[dashed, blue, thick] (6.5,1.5) -- (6.5,6.5);
+            \draw[dashed, blue, thick] (1.5,1.5) -- (6.5,1.5);
+            \draw[dashed, blue, thick] (1.5,6.5) -- (6.5,6.5);
+            
+            % Label the variable cutout size x
+            \node at (0.75,0.75) {$x$};
+            \draw[&lt;-&gt;] (0, -0.4) -- (8, -0.4);
+            \node[below] at (4, -0.4) {8 in.};
+            \draw[&lt;-&gt;] (-0.4, 0) -- (-0.4, 8);
+            \node[left] at (-0.4, 4) {8 in.};
+          \end{tikzpicture}
+        </latex-image>
+      </image>   
+        
+      <image xml:id="img-folded-box-3d">
+        <description>A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 8 minus 2x.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.55]
+            % Coordinates for 3D perspective box projection
+            % Front Face
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (5,0);
+            \coordinate (C) at (5,2);
+            \coordinate (D) at (0,2);
+            
+            % Back Face corners
+            \coordinate (E) at (2,1.5);
+            \coordinate (F) at (7,1.5);
+            \coordinate (G) at (7,3.5);
+            \coordinate (H) at (2,3.5);
+            
+            % Fill/Draw panels from back to front for proper occlusion
+            \fill[blue!5, draw=blue!50] (E) -- (F) -- (G) -- (H) -- cycle; % Interior Back Wall
+            \fill[blue!10, draw=blue!50] (A) -- (D) -- (H) -- (E) -- cycle; % Interior Left Wall
+            \fill[blue!12, draw=blue!50] (B) -- (C) -- (G) -- (F) -- cycle; % Interior Right Wall
+            \fill[blue!15, draw=blue!40] (A) -- (B) -- (F) -- (E) -- cycle; % Base floor floor panel
+            
+            % Outer structural frame drawing
+            \draw[thick, black] (A) -- (B) -- (C) -- (D) -- cycle; % Front Panel outline
+            \draw[thick, black] (C) -- (G);
+            \draw[thick, black] (D) -- (H);
+            \draw[thick, black] (G) -- (H);
+            
+            % Dotted internal corner seam hidden from sight lines
+            \draw[dashed, gray] (A) -- (E) -- (F);
+            \draw[dashed, gray] (E) -- (H);
+            
+            % Dimensioning arrows and variable markers
+            \draw[&lt;-&gt;] (-0.3,0) -- (-0.3,2);
+            \node[left] at (-0.3,1) {$x$}; % Height
+            
+            \draw[&lt;-&gt;] (0,-0.4) -- (5,-0.4);
+            \node[below] at (2.5,-0.4) {\small $8-2x$}; % Length
+            
+            \draw[&lt;-&gt;] (5.4,-0.2) -- (7.2,1.2);
+            \node[below right] at (6.3,0.5) {\small $8-2x$}; % Width
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We execute our step-by-step max-min problem-solving strategy:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the side length of the square corners being removed. When the four flaps are folded up along the dashed lines, <m>x</m> becomes the absolute vertical height of the resulting open box.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> The volume <m>V</m> of a rectangular prism is given by:
+          <me>V = \text{length} \times \text{width} \times \text{height}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The initial length and width of the cardboard sheet are both <m>8</m> inches. Cutting out two corners of size <m>x</m> from each dimension reduces both the remaining interior base length and width to <m>8 - 2x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Substituting our expressions for height, width, and length into the volume formula leaves us with a single independent variable equation:
+          <me>V(x) = x(8 - 2x)(8 - 2x) = x(64 - 32x + 4x^2) = 4x^3 - 32x^2 + 64x</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The cutout height must be positive (<m>x \ge 0</m>). Additionally, because you cannot cut out more than half of the total width of the cardboard sheet, <m>2x \le 8 \implies x \le 4</m>. The continuous closed domain interval is <m>[0, 4]</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Taking the derivative with respect to <m>x</m>:
+          <me>V'(x) = 12x^2 - 64x + 64</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero and factor the expression:
+          <me>4(3x^2 - 16x + 16) = 0 \implies 4(3x - 4)(x - 4) = 0</me>
+          This reveals critical numbers at <m>x = \dfrac{4}{3}</m> and <m>x = 4</m>. Both values lie within our established interval.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We use the Closed Interval Method to evaluate the volume output:
+          <ul>
+            <li><p><m>V(0) = 4(0)^3 - 32(0)^2 + 64(0) = 0</m> cubic inches.</p></li>
+            <li><p><m>V(4) = 4(4)^3 - 32(4)^2 + 64(4) = 0</m> cubic inches.</p></li>
+            <li><p><m>V\left(\dfrac{4}{3}\right) 
+                = 4\left(\dfrac{4}{3}\right)^3 - 32\left(\dfrac{4}{3}\right)^2 + 64\left(\dfrac{4}{3}\right) 
+                = \dfrac{256}{27} \approx 9.48</m> cubic inches.</p></li>
+          </ul>
+          The maximum volume is generated at the peak value 
+          <m>x = \dfrac{4}{3}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> The optimal height is 
+          <m>x = \dfrac{4}{3}</m> in. The base dimensions are:
+          <me>\text{Length} = \text{Width} = 8 - 2\left(\dfrac{4}{3}\right) 
+            = \dfrac{12}{3} = \dfrac{16}{3} \approx 5.33\text{ in.}</me>
+        </p>
+        <p>
+          The maximum volume is achieved when the box has dimensions of 
+          <strong>5.33 in. by 5.33 in. by 1.33 in.</strong>, 
+          yielding a total maximum volume of <strong>9.48 cubic inches</strong> 
+          (or exactly <m>\dfrac{256}{27}\text{ in}^3</m>).
+        </p>
+      </li>
+    </ol>
+  </solution>
+</example>
+
+<example xml:id="ex-minimize-surface-area">
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A container firm is designing an open-top rectangular box, with a square base, that will hold <m>108\text{ cm}^3</m>. What dimensions yield the minimum surface area? What is the minimum surface area?
+      </p>
+      <image xml:id="img-open-box-3d">
+        <description>A 3D perspective vector sketch of an open-top rectangular box with a square base of sides x by x and height h.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.6]
+            % Coordinates
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (C) at (4,3);
+            \coordinate (D) at (0,3);
+            \coordinate (E) at (1.5,1.2);
+            \coordinate (F) at (5.5,1.2);
+            \coordinate (G) at (5.5,4.2);
+            \coordinate (H) at (1.5,4.2);
+            
+            % Fills for open-top look
+            \fill[blue!5, draw=blue!40] (E) -- (F) -- (G) -- (H) -- cycle;
+            \fill[blue!10, draw=blue!40] (A) -- (D) -- (H) -- (E) -- cycle;
+            \fill[blue!12, draw=blue!40] (B) -- (C) -- (G) -- (F) -- cycle;
+            \fill[blue!15, draw=blue!30] (A) -- (B) -- (F) -- (E) -- cycle;
+            
+            % Outer lines
+            \draw[thick, black] (A) -- (B) -- (C) -- (D) -- cycle;
+            \draw[thick, black] (C) -- (G);
+            \draw[thick, black] (D) -- (H);
+            \draw[thick, black] (G) -- (H);
+            \draw[dashed, gray] (A) -- (E) -- (F);
+            \draw[dashed, gray] (E) -- (H);
+            
+            % Labels
+            \draw[&lt;-&gt;] (0,-0.3) -- (4,-0.3);
+            \node[below] at (2,-0.3) {$x$};
+            \draw[&lt;-&gt;] (4.3,-0.1) -- (5.7,1.1);
+            \node[below right] at (5,0.5) {$x$};
+            \draw[&lt;-&gt;] (5.9,1.2) -- (5.9,4.2);
+            \node[right] at (5.9,2.7) {$h$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our structured strategy to minimize structural material:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the side length of the square base, and let <m>h</m> represent the vertical height of the box.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to minimize the total surface area, <m>S</m>. Since the box is open-top, it consists of one square base and four identical vertical sides:
+          <me>S = x^2 + 4xh</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The volume of the box is fixed at <m>108\text{ cm}^3</m>:
+          <me>V = x^2h = 108</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Isolating <m>h</m> in the volume constraint gives <m>h = \frac{108}{x^2}</m>. Substituting this into our surface area equation gives:
+          <me>S(x) = x^2 + 4x\left(\frac{108}{x^2}\right) = x^2 + \frac{432}{x}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The base dimension must be positive, and there is no upper algebraic restriction. Thus, the physical domain is the open interval <m>(0, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Taking the first derivative with respect to <m>x</m> yields:
+          <me>S'(x) = 2x - \frac{432}{x^2}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> Setting the derivative equal to zero:
+          <me>2x = \frac{432}{x^2} \implies 2x^3 = 432 \implies x^3 = 216 \implies x = 6</me>
+          The value <m>x = 6</m> is our single interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the Second Derivative Test:
+          <me>S''(x) = 2 + \frac{864}{x^3}</me>
+          Evaluating at our critical number: <m>S''(6) = 2 + \frac{864}{216} = 2 + 4 = 6 \gt 0</m>. Because the second derivative is positive, the graph is concave up, confirming that <m>x = 6</m> provides an absolute minimum.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Substituting <m>x = 6</m> back into our constraint formula yields the height:
+          <me>h = \frac{108}{6^2} = \frac{108}{36} = 3\text{ cm}</me>
+          The minimum surface area value is:
+          <me>S(6) = (6)^2 + \frac{432}{6} = 36 + 72 = 108\text{ cm}^2</me>
+        </p>
+        <p>
+          The optimal dimensions are a base of <strong>6 cm by 6 cm</strong> and a height of <strong>3 cm</strong>, yielding a minimum surface area of <strong>108 cm<m>^2</m></strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</example>
+
+<exercise xml:id="ex-minimize-perimeter">
+    <title>Minimize Perimeter</title>
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        What is the smallest perimeter possible for a rectangle whose area is <m>16\text{ in}^2</m> and what are its dimensions?
+      </p>
+      <image xml:id="img-perimeter-rectangle">
+        <description>A simple rectangle with width labeled x and height labeled y, illustrating the perimeter optimization parameters.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.6]
+            % Draw the geometric bounding box rectangle
+            \draw[very thick, blue] (0,0) rectangle (5,3.5);
+            
+            % Area notation inside the layout
+            \node at (2.5,1.75) {\small $A = 16\text{ in}^2$};
+            
+            % Dimension variables
+            \node[below, blue] at (2.5,-0.2) {$x$};
+            \node[right, blue] at (5.2,1.75) {$y$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We execute our step-by-step max-min strategy:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the width of the rectangle, and let <m>y</m> represent its height.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to minimize the total perimeter, <m>P</m>:
+          <me>P = 2x + 2y</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The area of the rectangular region is fixed at <m>16\text{ in}^2</m>:
+          <me>A = xy = 16</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Solving the constraint equation for <m>y</m> yields <m>y = \frac{16}{x}</m>. Substituting this into the perimeter equation gives:
+          <me>P(x) = 2x + 2\left(\frac{16}{x}\right) = 2x + \frac{32}{x}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The physical length must be strictly greater than zero, with no upper restriction. The domain is the open interval <m>(0, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Differentiating <m>P(x)</m> with respect to <m>x</m> gives:
+          <me>P'(x) = 2 - \frac{32}{x^2}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> Setting the derivative to zero:
+          <me>2 = \frac{32}{x^2} \implies 2x^2 = 32 \implies x^2 = 16 \implies x = 4</me>
+          (We discard the negative root <m>x = -4</m> since it falls outside our geometric domain).
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the First Derivative Test around our critical number <m>x = 4</m> on the interval <m>(0, \infty)</m>:
+          <ul>
+            <li><p>For <m>x \in (0, 4)</m>, test <m>x = 2</m>: <m>P'(2) = 2 - \frac{32}{4} = -6 \lt 0</m> (decreasing).</p></li>
+            <li><p>For <m>x \in (4, \infty)</m>, test <m>x = 8</m>: <m>P'(8) = 2 - \frac{32}{64} = 1.5 \gt 0</m> (increasing).</p></li>
+          </ul>
+          Because the derivative switches from negative to positive, <m>x = 4</m> is an absolute minimum point.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Using our constraint equation, the remaining side is <m>y = \frac{16}{4} = 4\text{ in}</m>. The absolute minimum perimeter value is:
+          <me>P(4) = 2(4) + 2(4) = 16\text{ in}</me>
+        </p>
+        <p>
+          The smallest possible perimeter is <strong>16 inches</strong>, achieved by a square with dimensions of <strong>4 in. by 4 in.</strong>
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-river-fence-optimization">
+    <title>River Fence Optimization</title>
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A farmer has <m>1200</m> ft of fencing and wants to fence off a rectangular field that borders a straight river. He needs no fence along the river. What are the dimensions of the field that has the largest area?
+      </p>
+      <image xml:id="img-river-pasture-layout">
+        <description>A rectangular plot bordering a straight blue river on top. The three sides of fencing are labeled with width x and length y.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.5]
+            % Draw the straight river boundary on top
+            \fill[blue!20] (-1,4) rectangle (6,5);
+            \draw[thick, blue] (-1,4) -- (6,4);
+            \node[above, blue] at (2.5,4.2) {\small Straight River};
+            
+            % Draw the 3-sided fence boundary below the river
+            \draw[very thick, black, dashed] (0,4) -- (0,1) -- (5,1) -- (5,4);
+            
+            % Variable dimension labels
+            \node[left] at (0,2.5) {$x$};
+            \node[right] at (5,2.5) {$x$};
+            \node[below] at (2.5,1) {$y$};
+            
+            % Shaded pasture region
+            \fill[green!10, opacity=0.4] (0,4) rectangle (5,1);
+            \node at (2.5,2.5) {\small Maximize Area};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our structured max-min strategy to maximize the pasture area:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the length of the two matching sides perpendicular to the river bank, and let <m>y</m> represent the single long side running parallel to the river bank.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to maximize the total area enclosed, <m>A</m>:
+          <me>A = xy</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The total perimeter of physical fencing used for the three sides is limited to <m>1200</m> ft:
+          <me>2x + y = 1200</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Isolate <m>y</m> in our perimeter constraint equation to find <m>y = 1200 - 2x</m>. Substituting this value directly back into the area equation simplifies our target objective function to a single variable:
+          <me>A(x) = x(1200 - 2x) = 1200x - 2x^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> All physical side dimensions must stay positive, meaning <m>x \ge 0</m>. Furthermore, since the total layout fencing is capped at <m>1200</m> ft and must cover two widths, <m>2x \le 1200 \implies x \le 600</m>. This yields a realistic mathematical closed domain interval of <m></m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Finding the first derivative of <m>A(x)</m> with respect to <m>x</m> yields:
+          <me>A'(x) = 1200 - 4x</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> Setting our derivative to zero:
+          <me>1200 - 4x = 0 \implies 4x = 1200 \implies x = 300</me>
+          The coordinate value <m>x = 300</m> serves as our single interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> Evaluating the function outputs at the interval boundaries using the Closed Interval Method:
+          <ul>
+            <li><p><m>A(0) = 1200(0) - 2(0)^2 = 0</m> sq ft</p></li>
+            <li><p><m>A(300) = 1200(300) - 2(300)^2 = 360,000 - 180,000 = 180,000</m> sq ft</p></li>
+            <li><p><m>A(600) = 1200(600) - 2(600)^2 = 720,000 - 720,000 = 0</m> sq ft</p></li>
+          </ul>
+          The point <m>x = 300</m> produces the absolute highest possible area output.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Substituting our optimal width <m>x = 300</m> ft back into the constraint equation determines our final parameter requirement:
+          <me>y = 1200 - 2(300) = 600\text{ ft}</me>
+        </p>
+        <p>
+          The optimal dimensions of the field are a width of <strong>300 feet</strong> (perpendicular to the river) and a length of <strong>600 feet</strong> (parallel to the river), producing a maximum possible area of <strong>180,000 square feet</strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-rain-gutter-optimization">
+<title>Rain Gutter Optimization</title>
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A long rectangular sheet of metal, <m>12</m> inches wide, is to be made into a rain gutter by turning up two sides so that they are perpendicular to the sheet. How many inches should be turned up to give the gutter its greatest capacity?
+      </p>
+      <image xml:id="img-gutter-cross-section">
+        <description>Cross-section diagram of a rectangular rain gutter with height x on the left and right, and a base width of 12 minus 2x.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.5]
+            % Draw the unbent flat sheet baseline guide (light gray)
+            \draw[lightgray, thick, dashed] (-1,0) -- (7,0);
+            
+            % Draw the bent rectangular cross-section of the gutter
+            \draw[ultra thick, blue] (0,3) -- (0,0) -- (6,0) -- (6,3);
+            
+            % Dimension arrows for height (turned up sides)
+            \draw[&lt;-&gt;] (-0.4,0) -- (-0.4,3);
+            \node[left, blue] at (-0.4,1.5) {$x$};
+            
+            \draw[&lt;-&gt;] (6.4,0) -- (6.4,3);
+            \node[right, blue] at (6.4,1.5) {$x$};
+            
+            % Dimension arrow for the base width
+            \draw[&lt;-&gt;] (0,-0.5) -- (6,-0.5);
+            \node[below, blue] at (3,-0.5) {$12 - 2x$};
+            
+            % Annotate initial width text
+            \node[below, lightgray] at (3,4) {\small Initial Width = 12 in.};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our step-by-step problem-solving strategy to maximize the cross-sectional capacity:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>x</m> represent the length (in inches) of the metal sheet turned up on each side to create the vertical walls of the gutter.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> The volume capacity of a long gutter is directly proportional to its cross-sectional area, <m>A</m>. We want to maximize this rectangular area:
+          <me>A = \text{base} \times \text{height}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The total flat width of the initial sheet of metal is fixed at <m>12</m> inches. Subtracting the two vertical side bends of length <m>x</m> leaves an available interior base width of:
+          <me>\text{base} = 12 - 2x</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Substituting the base expression into our geometric area function yields a clean, single-variable objective equation:
+          <me>A(x) = (12 - 2x)x = 12x - 2x^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The length turned up must be non-negative (<m>x \ge 0</m>). Additionally, turning up both sides cannot consume more than the total original width of the sheet, meaning <m>2x \le 12 \implies x \le 6</m>. This outlines our realistic mathematical interval domain as <m>[0, 6]</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Finding the first derivative of <m>A(x)</m> with respect to <m>x</m> yields:
+          <me>A'(x) = 12 - 4x</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We evaluate when the derivative is equal to zero:
+          <me>12 - 4x = 0 \implies 4x = 12 \implies x = 3</me>
+          The value <m>x = 3</m> is our single interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the Closed Interval Method to verify the maximum profile bounds:
+          <ul>
+            <li><p><m>A(0) = 12(0) - 2(0)^2 = 0</m> square inches.</p></li>
+            <li><p><m>A(3) = 12(3) - 2(3)^2 = 36 - 18 = 18</m> square inches.</p></li>
+            <li><p><m>A(6) = 12(6) - 2(6)^2 = 72 - 72 = 0</m> square inches.</p></li>
+          </ul>
+          The mathematical max capacity strictly corresponds to the critical point value <m>x = 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> The parameter requiring evaluation is how many inches should be turned up.
+        </p>
+        <p>
+          To give the gutter its greatest capacity, exactly <strong>3 inches</strong> of the metal sheet should be turned up on each side.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-cylindrical-can-optimization">
+    <title>Cylindrical Can Optimization</title>
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A cylindrical can is to be made to hold <m>1\text{ L}</m> of oil. Find the dimensions that will minimize the cost of the metal to manufacture the can.
+      </p>
+      <image xml:id="img-cylindrical-can-diagram">
+        <description>A 3D perspective diagram of a cylindrical can showing the radius r on the top circular lid and height h along the vertical edge.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.5]
+            % Draw the shaded body of the cylinder
+            \fill[gray!10] (-2,0) rectangle (2,4);
+            \fill[gray!20] (0,0) ellipse (2 and 0.6);
+            \fill[gray!5] (0,4) ellipse (2 and 0.6);
+            
+            % Outlines
+            \draw[thick, black] (-2,0) -- (-2,4);
+            \draw[thick, black] (2,0) -- (2,4);
+            \draw[thick, black] (0,4) ellipse (2 and 0.6);
+            
+            % Bottom rim dashed logic for perspective
+            \draw[thick, black] (-2,0) arc (180:360:2 and 0.6);
+            \draw[dashed, gray] (-2,0) arc (180:0:2 and 0.6);
+            
+            % Center axis indicators
+            \coordinate (TopCenter) at (0,4);
+            \coordinate (TopEdge) at (2,4);
+            \draw[thick, blue, -&gt;] (TopCenter) -- (TopEdge);
+            \node[above, blue] at (1,4) {$r$};
+            
+            \draw[&lt;-&gt;, blue] (-2.4,0) -- (-2.4,4);
+            \node[left, blue] at (-2.4,2) {$h$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our structured 9-step max-min strategy to minimize material manufacturing costs:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>r</m> represent the radius of the circular base and top lid (in centimeters), and let <m>h</m> represent the vertical height of the cylinder (in centimeters).
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> Minimizing the cost of the manufacturing metal means minimizing the total surface area, <m>A</m>, of the closed cylinder:
+          <me>A = 2\pi r^2 + 2\pi rh</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The volume capacity is fixed at <m>1\text{ L}</m>. Converting this to standard geometric metrics gives <m>1\text{ L} = 1000\text{ cm}^3</m>:
+          <me>V = \pi r^2 h = 1000</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Isolating <m>h</m> in our volume constraint formula gives <m>h = \frac{1000}{\pi r^2}</m>. Substituting this directly into the area objective equation yields:
+          <me>A(r) = 2\pi r^2 + 2\pi r \left(\frac{1000}{\pi r^2}\right) = 2\pi r^2 + \frac{2000}{r}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> Because the radius must be physically real, <m>r \gt 0</m>. There is no upper restriction on the radius, so the physical domain is the open interval <m>(0, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Differentiating <m>A(r)</m> with respect to <m>r</m> yields:
+          <me>A'(r) = 4\pi r - \frac{2000}{r^2}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero to locate potential extrema:
+          <me>4\pi r = \frac{2000}{r^2} \implies 4\pi r^3 = 2000 \implies r^3 = \frac{500}{\pi}</me>
+          Taking the cube root reveals our single interior critical number:
+          <me>r = \sqrt[3]{\frac{500}{\pi}} \approx 5.42\text{ cm}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the Second Derivative Test to confirm a minimum point:
+          <me>A''(r) = 4\pi + \frac{4000}{r^3}</me>
+          Since <m>r \gt 0</m>, the value of <m>A''(r)</m> is always strictly positive, which indicates that the curve is concave up everywhere on its domain. This verifies that our critical value creates an absolute minimum.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Substituting the optimal radius <m>r = \sqrt[3]{\frac{500}{\pi}}</m> back into our isolated height constraint:
+          <me>h = \frac{1000}{\pi r^2} = \frac{2 \cdot 500}{\pi \left(\frac{500}{\pi}\right)^{2/3}} = 2\sqrt[3]{\frac{500}{\pi}} = 2r</me>
+          Evaluating the numerical dimensions gives:
+          <me>r \approx 5.42\text{ cm} \quad \text{and} \quad h \approx 2(5.42) = 10.84\text{ cm}</me>
+        </p>
+        <p>
+          To minimize the cost of the manufacturing metal, the can should be designed so that its height is exactly twice its radius (<m>h = 2r</m>), yielding a radius of approximately <strong>5.42 cm</strong> and a height of approximately <strong>10.84 cm</strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-cylindrical-cost-optimization">
+    <title>Cylindrical Cost Optimization</title>
+  <statement>
+    <sidebyside widths="60% 35%" valigns="middle middle">
+      <p>
+        A circular cylindrical container, open at the top, is to have a capacity of <m>24\pi\text{ in}^3</m>. The cost of the material used for the bottom of the container is <m>15</m> cents per <m>\text{in}^2</m> and that of the material used for the curved part is <m>5</m> cents per <m>\text{in}^2</m>. If there is no waste of material, find the dimensions that will minimize the cost of the material.
+      </p>
+      <image xml:id="img-open-cylindrical-cost">
+        <description>An open-top cylindrical container showing a radius r on the bottom base and a height h along the side panel.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.6]
+            % Draw the body of the cylinder
+            \fill[gray!10] (-2,0) rectangle (2,4);
+            \fill[gray!25] (0,0) ellipse (2 and 0.6); % Shaded bottom base
+            
+            % Outlines
+            \draw[thick, black] (-2,0) -- (-2,4);
+            \draw[thick, black] (2,0) -- (2,4);
+            
+            % Top opening lip ellipses
+            \draw[thick, black] (0,4) ellipse (2 and 0.6);
+            \draw[thick, black] (-2,0) arc (180:360:2 and 0.6);
+            \draw[dashed, gray] (-2,0) arc (180:0:2 and 0.6);
+            
+            % Annotations for cost and variables
+            \coordinate (BaseCenter) at (0,0);
+            \coordinate (BaseEdge) at (2,0);
+            \draw[thick, blue, -&gt;] (BaseCenter) -- (BaseEdge);
+            \node[below, blue] at (1,0) {$r$};
+            
+            \draw[&lt;-&gt;, blue] (-2.4,0) -- (-2.4,4);
+            \node[left, blue] at (-2.4,2) {$h$};
+            
+            \node[below, darkgray] at (0,-0.8) {\small Base: 15\textcent/$\text{in}^2$};
+            \node[right, darkgray] at (2.2,2) {\small Side: 5\textcent/$\text{in}^2$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We apply our structured 9-step max-min strategy to minimize total component costs:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>r</m> represent the radius of the circular base (in inches) and <m>h</m> represent the vertical height of the cylinder (in inches).
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to minimize the total material manufacturing cost, <m>C</m>, in cents. The cost is the sum of the base cost and the side panel cost:
+          <me>C = (\text{Cost of Base}) \times (\text{Area of Base}) + (\text{Cost of Side}) \times (\text{Area of Side})</me>
+          <me>C = 15(\pi r^2) + 5(2\pi rh) = 15\pi r^2 + 10\pi rh</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The target capacity volume of the open cylinder is constrained to exactly <m>24\pi\text{ in}^3</m>:
+          <me>V = \pi r^2 h = 24\pi</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Simplifying the volume constraint equation allows us to isolate <m>h</m>:
+          <me>r^2 h = 24 \implies h = \frac{24}{r^2}</me>
+          Substituting this back into our cost expression removes the independent variable height dimension:
+          <me>C(r) = 15\pi r^2 + 10\pi r \left(\frac{24}{r^2}\right) = 15\pi r^2 + \frac{240\pi}{r}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The physical radius must be positive, and there is no maximum mathematical restriction. The domain is the open interval <m>(0, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Taking the derivative of <m>C(r)</m> with respect to <m>r</m> yields:
+          <me>C'(r) = 30\pi r - \frac{240\pi}{r^2}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero:
+          <me>30\pi r = \frac{240\pi}{r^2} \implies 30\pi r^3 = 240\pi \implies r^3 = 8 \implies r = 2</me>
+          The single interior critical number is <m>r = 2</m> inches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the Second Derivative Test to confirm a minimum cost value:
+          <me>C''(r) = 30\pi + \frac{480\pi}{r^3}</me>
+          Evaluating at our critical number: <m>C''(2) = 30\pi + \frac{480\pi}{8} = 30\pi + 60\pi = 90\pi \gt 0</m>. Since the second derivative is positive, the function is concave up, verifying an absolute minimum.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Substituting the optimal radius <m>r = 2</m> inches back into the constraint equation yields the height parameter:
+          <me>h = \frac{24}{(2)^2} = \frac{24}{4} = 6\text{ inches}</me>
+        </p>
+        <p>
+          The dimensions that will minimize the total material cost are a radius of <strong>2 inches</strong> and a height of <strong>6 inches</strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-cylinder-in-sphere-optimization">
+    <title>Cylinder in Sphere Optimization</title>
+  <statement>
+    <p>
+      Find the dimensions of the right circular cylinder of greatest volume that can be inscribed in a sphere of radius <m>3</m>.
+    </p>
+    <sidebyside widths="45% 45%" valigns="bottom bottom" margins="auto">
+      <image xml:id="img-inscribed-cylinder-3d">
+        <description>A 3D transparent wireframe sphere of radius 3 enclosing a blue inscribed right circular cylinder with radius r and height h.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.75]
+            % Draw the background sphere shading outline
+            \draw[thick, gray!70] (0,0) circle (3);
+            
+            % Draw a 2D path approximation of the sphere's equatorial horizon ellipse
+            \draw[gray!40, dashed] (3,0) arc [start angle=0, end angle=180, x radius=3, y radius=0.9];
+            \draw[gray!40] (-3,0) arc [start angle=180, end angle=360, x radius=3, y radius=0.9];
+            
+            % Draw the cylinder body background shading inside the sphere bounds
+            % Using r = 2.45, h = 3.46 scaled proportionally
+            \fill[blue!8, opacity=0.5] (-2.45,-1.73) rectangle (2.45,1.73);
+            
+            % Top circular lid ellipse of the cylinder drawn using native ellipse syntax
+            \fill[blue!15, opacity=0.4] (0,1.73) ellipse [x radius=2.45, y radius=0.6];
+            \draw[blue, thick] (0,1.73) ellipse [x radius=2.45, y radius=0.6];
+            
+            % Bottom base rim arcs split explicitly for solid (front) and dashed (back) 3D look
+            \draw[blue, thick] (-2.45,-1.73) arc [start angle=180, end angle=360, x radius=2.45, y radius=0.6];
+            \draw[blue, dashed] (-2.45,-1.73) arc [start angle=180, end angle=0, x radius=2.45, y radius=0.6];
+            
+            % Vertical side boundaries
+            \draw[blue, thick] (-2.45,-1.73) -- (-2.45,1.73);
+            \draw[blue, thick] (2.45,-1.73) -- (2.45,1.73);
+            
+            % Center axis marker lines
+            \draw[dashed, darkgray] (0,-1.73) -- (0,1.73);
+            
+            % Dimension and vector arrow tags
+            \node[blue, right] at (2.45,0) {$h$};
+            \draw[blue, ->] (0,1.73) -- (2.45,1.73) node[midway, above] {$r$};
+            \node[gray] at (2.2,2.6) {\small Sphere ($R=3$)};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+
+      <image xml:id="img-cylinder-cross-section">
+        <description>A 2D cross-section view showing a rectangle inscribed inside a circle of radius 3. A right triangle links the origin to a corner with hypotenuse 3, base r, and height h over 2.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.75]
+            % Bounding circle cross-section
+            \draw[thick, black] (0,0) circle (3);
+            
+            % Cartesian reference axes
+            \draw[lightgray, dashed] (-3.3,0) -- (3.3,0);
+            \draw[lightgray, dashed] (0,-3.3) -- (0,3.3);
+            
+            % Inscribed rectangle section represent cylinder profile
+            \draw[blue, very thick] (-2.45,-1.73) rectangle (2.45,1.73);
+            
+            % Essential Right Triangle for Constraint Relationship
+            \draw[red, ultra thick] (0,0) -- (2.45,1.73) node[midway, above left, xshift=2pt] {$3$};
+            \draw[blue, ultra thick] (0,0) -- (2.45,0) node[midway, below] {$r$};
+            \draw[blue, ultra thick] (2.45,0) -- (2.45,1.73) node[midway, left] {$\frac{h}{2}$};
+ 
+            % Square right angle marker block
+            \draw[darkgray] (2.25,0) -- (2.25,0.2) -- (2.45,0.2);
+            
+            % Origin point dot
+            \fill[black] (0,0) circle (2pt);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We use our 9-step max-min process, mapping the 3D dimensions to the 2D cross-section right triangle:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>r</m> be the radius of the cylinder and <m>h</m> be its overall height. Looking at the 2D cross-section slicing through the center, the cylinder appears as an inscribed rectangle of width <m>2r</m> and height <m>h</m> inside a circle of radius <m>3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to maximize the total internal volume, <m>V</m>, of a standard cylinder:
+          <me>V = \pi r^2 h</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> From the origin out to a corner of the cylinder, a right triangle is formed with a base of <m>r</m>, a vertical height of <m>\frac{h}{2}</m>, and a hypotenuse equal to the sphere's radius, <m>3</m>. Applying the Pythagorean theorem yields:
+          <me>r^2 + \left(\frac{h}{2}\right)^2 = 3^2 \implies r^2 + \frac{h^2}{4} = 9</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> It is easiest to isolate <m>r^2</m> in the constraint equation: <m>r^2 = 9 - \frac{h^2}{4}</m>. Substituting this directly into the volume objective equation removes the radius variable:
+          <me>V(h) = \pi \left(9 - \frac{h^2}{4}\right)h = 9\pi h - \frac{\pi}{4}h^3</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The vertical height must be positive, and it cannot exceed the total diameter of the surrounding sphere. This bounds our independent variable to the closed interval <m></m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Differentiating <m>V(h)</m> with respect to <m>h</m> yields:
+          <me>V'(h) = 9\pi - \frac{3\pi}{4}h^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero:
+          <me>9\pi - \frac{3\pi}{4}h^2 = 0 \implies \frac{3}{4}h^2 = 9 \implies h^2 = 12</me>
+          Taking the square root gives our single meaningful interior critical number:
+          <me>h = \sqrt{12} = 2\sqrt{3} \approx 3.46\text{ in.}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> Evaluating the boundary interval endpoints alongside our critical number using the Closed Interval Method:
+          <ul>
+            <li><p><m>V(0) = 0</m></p></li>
+            <li><p><m>V(6) = 9\pi(6) - \frac{\pi}{4}(6)^3 = 54\pi - 54\pi = 0</m></p></li>
+            <li><p><m>V(2\sqrt{3}) = 9\pi(2\sqrt{3}) - \frac{\pi}{4}(2\sqrt{3})^3 = 18\sqrt{3}\pi - 6\sqrt{3}\pi = 12\sqrt{3}\pi \approx 65.30</m></p></li>
+          </ul>
+          The height value <m>h = 2\sqrt{3}</m> yields the absolute maximum possible volume.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Find the matching radius component by substituting <m>h^2 = 12</m> back into our isolated constraint relationship formula:
+          <me>r^2 = 9 - \frac{12}{4} = 9 - 3 = 6 \implies r = \sqrt{6} \approx 2.45\text{ in.}</me>
+        </p>
+        <p>
+          The dimensions that yield the maximum cylinder volume are a radius of <m>r = \sqrt{6} \approx \mathbf{2.45}</m> and a height of <m>h = 2\sqrt{3} \approx \mathbf{3.46}</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-cylinder-in-cone-optimization">
+    <title>Cylinder in Cone Optimization</title>
+  <statement>
+    <p>
+      Find the maximum volume of a right circular cylinder that can be inscribed in a cone of altitude <m>12</m> centimeters and base radius <m>4</m> centimeters, if the axes of the cylinder and cone coincide.
+    </p>
+    <sidebyside widths="45% 45%" valigns="bottom bottom" margins="auto">
+      <image xml:id="img-cylinder-cone-3d">
+        <description>A 3D perspective projection of an outer cone of height 12 and base radius 4 enclosing an inscribed cylinder of radius r and height h.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.35]
+            % Bounding Outer Cone base ellipse (back half dashed, front solid)
+            \draw[gray!40, dashed] (-4,0) arc (180:0:4 and 1.2);
+            \draw[thick, gray!70] (-4,0) arc (180:360:4 and 1.2);
+            
+            % Outer Cone Lateral Walls pointing to vertex at (0,12)
+            \draw[thick, gray!70] (-4,0) -- (0,12) -- (4,0);
+            
+            % Inscribed Cylinder Body shading (proportionally scaled: r = 2.67, h = 4)
+            \fill[blue!8, opacity=0.5] (-2.67,0) rectangle (2.67,4);
+            
+            % Cylinder Bottom Base Rim (visible front part)
+            \draw[blue, thick] (-2.67,0) arc (180:360:2.67 and 0.8);
+            \draw[blue, dashed] (-2.67,0) arc (180:0:2.67 and 0.8);
+            
+            % Cylinder Top Lid Ellipse
+            \fill[blue!15, opacity=0.4] (0,4) ellipse (2.67 and 0.8);
+            \draw[blue, thick] (0,4) ellipse (2.67 and 0.8);
+            
+            % Cylinder Vertical Walls
+            \draw[blue, thick] (-2.67,0) -- (-2.67,4);
+            \draw[blue, thick] (2.67,0) -- (2.67,4);
+            
+            % Central Altitude line
+            \draw[dashed, darkgray] (0,0) -- (0,12);
+            
+            % Labels
+            \draw[blue, ->] (0,4) -- (2.67,4) node[midway, above] {$r$};
+            \node[blue, right] at (2.67,2) {$h$};
+            \node[gray, left] at (-2,6) {\small Cone};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+
+      <image xml:id="img-cylinder-cone-cross-section">
+        <description>A 2D cross-section view showing a rectangle inscribed inside an isosceles triangle. Similar triangles link the height of the cone, its base radius, and the variables r and h.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.35]
+            % Outer Cone Isosceles Profile (Triangle)
+            \draw[thick, black] (-4,0) -- (0,12) -- (4,0) -- cycle;
+            
+            % Central Axis Line
+            \draw[gray, dashed] (0,0) -- (0,12);
+            
+            % Inscribed Cylinder Profile (Rectangle)
+            \fill[blue!10, draw=blue, very thick] (-2.67,0) rectangle (2.67,4);
+            
+            % Core Dimension Indicators
+            \draw[&lt;-&gt;] (0,-1.5) -- (4,-1.5) node[midway, below] {$4$};
+            \draw[&lt;-&gt;] (-5.5,0) -- (-5.5,12) node[midway, left] {$12$};
+            
+            % Variable Indicators
+            \draw[blue, &lt;-&gt;] (0,5) -- (2.67,5) node[midway, above] {$r$};
+            \draw[blue, &lt;-&gt;] (3,0) -- (3,4) node[midway, right] {$h$};
+            
+            % Upper small triangle height indicator (12 - h)
+            \draw[red, &lt;-&gt;] (-0.5,4) -- (-0.5,12) node[midway, left] {$12-h$};
+            
+            % Origin base center
+            \fill[black] (0,0) circle (4pt);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </sidebyside>
+  </statement>
+  <solution>
+    <p>
+      We use our 9-step max-min process, utilizing similar triangles from the cross-section to build the constraint:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>r</m> represent the radius of the inscribed cylinder and <m>h</m> represent its height. The 2D cross-section cutting vertically through the vertex shows a rectangle inscribed inside an isosceles triangle of base width <m>8</m> and altitude <m>12</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> We want to maximize the total volume, <m>V</m>, of the cylinder:
+          <me>V = \pi r^2 h</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> Looking at the right-hand side of the vertical center axis in the cross-section diagram, the small top triangle is similar to the large overall right triangle. This sets up a proportional geometric ratio:
+          <me>\frac{12 - h}{r} = \frac{12}{4} \implies \frac{12 - h}{r} = 3</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Isolating <m>h</m> in our proportion yields <m>12 - h = 3r \implies h = 12 - 3r</m>. Substituting this directly into the cylinder volume objective formula eliminates the height variable:
+          <me>V(r) = \pi r^2 (12 - 3r) = 12\pi r^2 - 3\pi r^3</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The cylinder's radius must be non-negative, and it cannot exceed the total base radius of the surrounding cone. This limits our independent variable to the closed interval <m></m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Differentiating <m>V(r)</m> with respect to <m>r</m> yields:
+          <me>V'(r) = 24\pi r - 9\pi r^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero:
+          <me>3\pi r(8 - 3r) = 0 \implies r = 0 \quad \text{or} \quad r = \frac{8}{3}</me>
+          The value <m>r = \frac{8}{3} \approx 2.67\text{ cm}</m> serves as our single interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> Evaluating the boundary interval endpoints alongside our interior critical number using the Closed Interval Method:
+          <ul>
+            <li><p><m>V(0) = 0\text{ cm}^3</m></p></li>
+            <li><p><m>V(4) = 12\pi(4)^2 - 3\pi(4)^3 = 192\pi - 192\pi = 0\text{ cm}^3</m></p></li>
+            <li><p><m>V\left(\dfrac{8}{3}\right) = 12\pi\left(\dfrac{8}{3}\right)^2 - 3\pi\left(\dfrac{8}{3}\right)^3 
+                = \dfrac{256\pi}{3} - \dfrac{512\pi}{9} = \dfrac{256\pi}{9}\text{ cm}^3</m></p></li>
+          </ul>
+          The radius value <m>r = \dfrac{8}{3}</m> yields the absolute maximum possible volume.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> The problem asks for the maximum volume of the cylinder.
+          <me>V_{\text{max}} = \dfrac{256\pi}{9} \approx 89.36\text{ cm}^3</me>
+        </p>
+        <p>
+          The maximum volume of a right circular cylinder inscribed 
+          within the specified cone is exactly <strong><m>\dfrac{256\pi}{9}\text{ cm}^3</m></strong>
+           (or approximately <strong>89.36 cubic centimeters</strong>).
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-closest-point-parabola">
+    <title>Closest Point</title>
+    
+    
+  <statement>
+    <!--<sidebyside widths="45% 55%" valigns="middle middle">-->
+      <p>
+        Find the point on the parabola <m>y^2 = 2x</m> that is closest to the point <m>(1,4)</m>.
+      </p>
+            <image xml:id="img-parabola-closest-point">
+        <description>A plot of the horizontal parabola x equals y squared over 2. The external point (1,4) is plotted, along with a line segment connecting it to the closest point on the curve at (2,2).</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=1.0]
+            \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -0.5, xmax = 4.0,
+              ymin = -1.5, ymax = 4.0,
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = \linewidth, height = 7cm
+            ]
+            % Plot the horizontal parabola by treating the parameter as y
+            \addplot [domain=-1.2:3.2, samples=100, color=blue, very thick] ({x^2/2}, {x});
+            
+            % Plot the fixed point and closest point
+            \addplot[only marks, mark=*, color=red] coordinates {(1,4)};
+            \addplot[only marks, mark=*, color=black] coordinates {(2,2)};
+            
+            % Draw connecting shortest line segment
+            \draw[thick, dashed, purple] (axis cs:1,4) -- (axis cs:2,2);
+            
+            % Labels - fixed point text lowered and shifted right to fit inside ymax=4.0
+            \node[below left, red] at (axis cs:1,4) {$(1,4)$};
+            \node[below right] at (axis cs:2,2) {$(2,2)$};
+            \node[blue, right] at (axis cs:2.75,2.0) {$y^2=2x$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+
+    <!--</sidebyside>-->
+  </statement>
+  <solution>
+    <p>
+      We use our 9-step max-min strategy to solve this distance optimization problem:
+    </p>
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Draw and label a picture.</alert> Let <m>(x, y)</m> represent an arbitrary point lying directly on the parabola curve <m>y^2 = 2x</m>, as sketched in the figure. We are looking for the coordinates that minimize the distance to the static coordinate point <m>(1, 4)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the objective function.</alert> By the standard distance formula, the distance <m>d</m> between <m>(x,y)</m> and <m>(1,4)</m> is:
+          <me>d = \sqrt{(x - 1)^2 + (y - 4)^2}</me>
+          To make the calculus cleaner, we can choose to optimize the square of the distance, <m>D = d^2</m>, because the value that minimizes the squared distance will also minimize the true distance:
+          <me>D = (x - 1)^2 + (y - 4)^2</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the constraints.</alert> The point must remain strictly bound to the parabola, which gives us our constraint equation:
+          <me>y^2 = 2x \implies x = \frac{y^2}{2}</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reduce the objective function to one variable.</alert> Substituting the expression for <m>x</m> directly into the squared-distance objective equation leaves us with a single independent variable equation in terms of <m>y</m>:
+          <me>D(y) = \left(\frac{y^2}{2} - 1\right)^2 + (y - 4)^2</me>
+          Expanding the algebraic components yields:
+          <me>D(y) = \left(\frac{y^4}{4} - y^2 + 1\right) + (y^2 - 8y + 16) = \frac{y^4}{4} - 8y + 17</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Identify the domain of the objective function.</alert> The vertical coordinate value <m>y</m> can technically be any real number along the continuous open tracking interval, making our domain <m>(-\infty, \infty)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Differentiate the objective function.</alert> Differentiating <m>D(y)</m> with respect to <m>y</m> using the power rule yields:
+          <me>D'(y) = y^3 - 8</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Find the critical numbers.</alert> We set the first derivative to zero:
+          <me>y^3 - 8 = 0 \implies y^3 = 8 \implies y = 2</me>
+          The coordinate value <m>y = 2</m> serves as our single real interior critical number.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test the critical numbers.</alert> We apply the First Derivative Test around our critical number <m>y = 2</m>:
+          <ul>
+            <li><p>For <m>y \lt 2</m>, <m>D'(y) \lt 0</m> (the distance squared function is decreasing).</p></li>
+            <li><p>For <m>y \gt 2</m>, <m>D'(y) \gt 0</m> (the distance squared function is increasing).</p></li>
+          </ul>
+          Since the derivative changes sign from negative to positive at <m>y = 2</m>, it represents an absolute minimum.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Answer the question.</alert> Substituting the optimal vertical parameter <m>y = 2</m> back into our isolated curve constraint formula calculates the remaining coordinate value:
+          <me>x = \frac{(2)^2}{2} = \frac{4}{2} = 2</me>
+        </p>
+        <p>
+          The point on the parabola <m>y^2 = 2x</m> that is closest to <m>(1,4)</m> is exactly <strong><m>(2,2)</m></strong>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+
+
+</section>

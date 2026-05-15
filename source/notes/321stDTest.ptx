@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-the-first-derivative-test" class="notes">
+<title>3.2 The first derivative test </title>
+<introduction>
+    <p>
+      This section introduces how the first derivative of a function determines 
+      where its graph rises or falls, providing a foundation for locating local extrema.
+    </p>
+  </introduction>
+
+<assemblage xml:id="asm-increasing-decreasing-test">
+  <title>Increasing/Decreasing Test</title>
+  <p>
+    Let <m>f</m> be continuous on <m>[a,b]</m> and differentiable on <m>(a,b)</m>.
+    <ul>
+      <li>
+        <p> If <m>f'(x) \gt 0</m> for all <m>x</m> in <m>(a,b)</m>, then <m>f</m> is increasing on <m>[a,b]</m>.
+        </p>
+      </li>
+      <li>
+        <p> If <m>f'(x) \lt 0</m> for all <m>x</m> in <m>(a,b)</m>, then <m>f</m> is decreasing on <m>[a,b]</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+
+<example xml:id="ex-increasing-decreasing-polynomial">
+  <statement>
+    <p>
+      Find where the function <m>f(x)=3x^{4}-4x^{3}-12x^{2}+5</m> is increasing and where it is decreasing.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To apply the Increasing/Decreasing Test, we first find the derivative of <m>f(x)</m>:
+      <me>
+        f'(x) = 12x^3 - 12x^2 - 24x
+      </me>
+    </p>
+    <p>
+      Next, we locate the critical numbers by factoring the derivative expression completely and setting it equal to zero:
+      <me>
+        12x(x^2 - x - 2) = 0 \implies 12x(x-2)(x+1) = 0
+      </me>
+      This gives three critical numbers: <m>x = -1</m>, <m>x = 0</m>, 
+      and <m>x = 2</m>. These points split the real line domain into four distinct test intervals.
+    </p>
+    <p> We choose a test value within each open interval 
+        to determine the arithmetic sign of <m>f'(x)</m>: </p>
+<tabular bottom="minor" top="minor" left="minor" right="minor">
+  <row>
+    <cell header="yes">Interval</cell>
+    <cell><m>(-\infty, -1)</m></cell>
+    <cell><m>(-1, 0)</m></cell>
+    <cell><m>(0, 2)</m></cell>
+    <cell><m>(2, \infty)</m></cell>
+  </row>
+  <row>
+    <cell header="yes">Test Value</cell>
+    <cell><m>x = -2</m></cell>
+    <cell><m>x = -0.5</m></cell>
+    <cell><m>x = 1</m></cell>
+    <cell><m>x = 3</m></cell>
+  </row>
+  <row>
+    <cell header="yes">Sign of <m>f'(x)</m></cell>
+    <cell><m>f'(-2) = -48 \lt 0</m></cell>
+    <cell><m>f'(-0.5) = 7.5 \gt 0</m></cell>
+    <cell><m>f'(1) = -24 \lt 0</m></cell>
+    <cell><m>f'(3) = 144 \gt 0</m></cell>
+  </row>
+  <row>
+    <cell header="yes">Behavior of <m>f</m></cell>
+    <cell>Decreasing</cell>
+    <cell>Increasing</cell>
+    <cell>Decreasing</cell>
+    <cell>Increasing</cell>
+  </row>
+</tabular>
+    <p>
+      By checking where the signs are positive or negative, 
+      we conclude that the function <m>f</m> is increasing on the intervals <m>(-1, 0]</m>
+       and <m>(2, \infty)</m>, and it is decreasing on the intervals <m>(-\infty, -1)</m> and <m>(0, 2)</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="ex-inc-dec-cubic-polynomial">
+  <statement>
+    <p>
+      Find where the function <m>f(x)=x^{3}+x^{2}-5x-5</m> is increasing and where it is decreasing.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the derivative of <m>f(x)</m> to locate the critical numbers:
+      <me>
+        f'(x) = 3x^2 + 2x - 5
+      </me>
+    </p>
+    <p>
+      Setting the derivative equal to zero, we factor the quadratic equation:
+      <me>
+        (3x + 5)(x - 1) = 0 \implies x = -\frac{5}{3} \text{ or } x = 1
+      </me>
+      These two critical numbers partition the real number line into three separate open intervals.
+    </p>
+    <p>
+      We choose a test value within each interval to determine the arithmetic sign of <m>f'(x)</m>:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>\left(-\infty, -\frac{5}{3}\right)</m></cell>
+        <cell><m>\left(-\frac{5}{3}, 1\right)</m></cell>
+        <cell><m>(1, \infty)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Test Value</cell>
+        <cell><m>x = -2</m></cell>
+        <cell><m>x = 0</m></cell>
+        <cell><m>x = 2</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f'(x)</m></cell>
+        <cell><m>f'(-2) = 3 \gt 0</m></cell>
+        <cell><m>f'(0) = -5 \lt 0</m></cell>
+        <cell><m>f'(2) = 11 \gt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Behavior of <m>f</m></cell>
+        <cell>Increasing</cell>
+        <cell>Decreasing</cell>
+        <cell>Increasing</cell>
+      </row>
+    </tabular>
+    <p>
+      Therefore, the function <m>f</m> is increasing on the intervals 
+      <m>\left(-\infty, -\dfrac{5}{3}\right)</m> and <m>(1, \infty)</m>, 
+      and it is decreasing on the interval <m>\left(-\dfrac{5}{3}, 1\right)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<theorem xml:id="thm-first-derivative-test">
+  <title>The First Derivative Test</title>
+  <statement>
+<p>
+Let <m>c</m> be a critical number for <m>f</m>, and suppose <m>f</m> is continuous at <m>c</m> and differentiable on an open interval <m>I</m> containing <m>c</m>, except possibly at <m>c</m> itself.
+<ul>
+ <li>
+  <p> <strong>F1.</strong> <m>f</m> has a local minimum at <m>c</m> if <m>f'(x) \lt 0</m> on <m>(a,c)</m> 
+    and <m>f'(x) \gt 0</m> on <m>(c,b)</m>. That is, <m>f</m> is decreasing to the left of <m>c</m> and increasing to the right of <m>c</m>.  </p>
+ </li>
+ <li>
+  <p> <strong>F2.</strong> <m>f</m> has a local maximum at <m>c</m> if <m>f'(x) \gt 0</m> on <m>(a,c)</m> and <m>f'(x) \lt 0</m> on <m>(c,b)</m>. 
+    That is, <m>f</m> is increasing to the left of <m>c</m> and decreasing to the right of <m>c</m>. </p>
+ </li>
+ <li>
+  <p> <strong>F3.</strong> <m>f</m> has neither a local maximum nor a local minimum at <m>c</m> 
+    if <m>f'(x)</m> has the same sign on <m>(a,c)</m> and on <m>(c,b)</m>. </p>
+ </li>
+</ul>
+</p>
+  </statement>
+</theorem>
+
+<example xml:id="ex-find-local-extrema-cubic">
+  <statement>
+    <p>
+      Given the function <m>f</m> given by:
+      <me>
+        f(x)=2x^{3}-3x^{2}-12x+12
+      </me>
+      find the local extrema.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the local extrema, we first find the first derivative of the function:
+      <me>
+        f'(x) = 6x^2 - 6x - 12
+      </me>
+    </p>
+    <p>
+      Next, we find the critical numbers by setting <m>f'(x) = 0</m> and factoring the quadratic expression:
+      <me>
+        6(x^2 - x - 2) = 0 \implies 6(x-2)(x+1) = 0
+      </me>
+      This gives two critical numbers: <m>x = -1</m> and <m>x = 2</m>.
+    </p>
+    <p>
+      We set up a sign chart to analyze the behavior of <m>f'(x)</m> across the intervals determined by these critical numbers:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>(-\infty, -1)</m></cell>
+        <cell><m>(-1, 2)</m></cell>
+        <cell><m>(2, \infty)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f'(x)</m></cell>
+        <cell><m>\gt 0</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Behavior of <m>f</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+        <cell>Decreasing <m>\searrow</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+      </row>
+    </tabular>
+    <p>
+      We now apply the First Derivative Test to classify each critical number:
+      <ul>
+        <li>
+          <p>
+            At <m>x = -1</m>, <m>f'(x)</m> changes from positive to negative (F2). Therefore, <m>f</m> has a local maximum at <m>x = -1</m>. The local maximum value is:
+            <me>
+              f(-1) = 2(-1)^3 - 3(-1)^2 - 12(-1) + 12 = -2 - 3 + 12 + 12 = 19
+            </me>
+          </p>
+        </li>
+        <li>
+          <p>
+            At <m>x = 2</m>, <m>f'(x)</m> changes from negative to positive (F1). Therefore, <m>f</m> has a local minimum at <m>x = 2</m>. The local minimum value is:
+            <me>
+              f(2) = 2(2)^3 - 3(2)^2 - 12(2) + 12 = 16 - 12 - 24 + 12 = -8
+            </me>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      In conclusion, <m>f</m> has a local maximum value of <m>19</m> at <m>x = -1</m> and a local minimum value of <m>-8</m> at <m>x = 2</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="ex-local-extrema-cubic-polynomial">
+  <statement>
+    <p> If <m>f(x)=x^{3}+x^{2}-5x-5</m>, find the local extrema of <m>f</m>. </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the first derivative of <m>f(x)</m> to locate the critical numbers:
+      <me> f'(x) = 3x^2 + 2x - 5 </me>
+    </p>
+    <p>
+      Setting the derivative equal to zero, we factor the quadratic expression:
+      <me> (3x + 5)(x - 1) = 0 \implies x = -\dfrac{5}{3} \text{ or } x = 1 </me>
+      These two critical numbers partition the domain into three open intervals. 
+      We construct a sign chart to analyze the behavior of <m>f'(x)</m>:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>\left(-\infty, -\frac{5}{3}\right)</m></cell>
+        <cell><m>\left(-\frac{5}{3}, 1\right)</m></cell>
+        <cell><m>(1, \infty)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f'(x)</m></cell>
+        <cell><m>\gt 0</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Behavior of <m>f</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+        <cell>Decreasing <m>\searrow</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+      </row>
+    </tabular>
+    <p>
+      We apply the First Derivative Test to classify the critical numbers:
+      <ul>
+        <li>
+         <p> At <m>x = -\dfrac{5}{3}</m>, <m>f'(x)</m> changes from positive to negative (F2), 
+        yielding a local maximum value:
+        <me> f\left(-\frac{5}{3}\right) = \left(-\frac{5}{3}\right)^3 + \left(-\frac{5}{3}\right)^2 - 5\left(-\frac{5}{3}\right) - 5 = -\frac{125}{27} + \frac{25}{9} + \frac{25}{3} - 5 = \frac{40}{27} </me>
+        </p>
+        </li>
+        <li>
+        <p> At <m>x = 1</m>, <m>f'(x)</m> changes from negative to positive (F1), 
+            yielding a local minimum value:
+        <me> f(1) = (1)^3 + (1)^2 - 5(1) - 5 = 1 + 1 - 5 - 5 = -8 </me>
+        </p>
+        </li>
+      </ul>
+    </p>
+    <p> Therefore, <m>f</m> has a local maximum value of <m>\dfrac{40}{27}</m> at 
+        <m>x = -\dfrac{5}{3}</m> and a local minimum value of <m>-8</m> at <m>x = 1</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-local-extrema-fractional-exponent">
+  <statement>
+    <p> If <m>f(x)=x^{2/3}(x^{2}-8)</m>, find the local extrema of <m>f</m>. </p>
+  </statement>
+  <solution>
+    <p>
+      We expand the function first to simplify differentiation:
+      <me> f(x) = x^{8/3} - 8x^{2/3} </me>
+    </p>
+    <p>
+      Now, we find the first derivative using the Power Rule:
+      <me> f'(x) = \frac{8}{3}x^{5/3} - \frac{16}{3}x^{-1/3} = \frac{8x^{2} - 16}{3x^{1/3}} = \frac{8(x^2 - 2)}{3x^{1/3}} </me>
+    </p>
+    <p>
+      We find the critical numbers by looking for where <m>f'(x) = 0</m> or where <m>f'(x)</m> does not exist:
+      <ul>
+        <li> <p> <m>f'(x) = 0</m> when the numerator is zero: <m>8(x^2 - 2) = 0 \implies x = \pm\sqrt{2}</m>. </p> </li>
+        <li> <p> <m>f'(x)</m> is undefined when the denominator is zero: <m>3x^{1/3} = 0 \implies x = 0</m>. </p> </li>
+      </ul>
+      Since <m>x = -\sqrt{2}</m>, <m>x = 0</m>, 
+      and <m>x = \sqrt{2}</m> are all in the domain of <m>f</m>, 
+      they are our critical numbers. We construct a sign chart to analyze the derivative:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>(-\infty, -\sqrt{2})</m></cell>
+        <cell><m>(-\sqrt{2}, 0)</m></cell>
+        <cell><m>(0, \sqrt{2})</m></cell>
+        <cell><m>(\sqrt{2}, \infty)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f'(x)</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Behavior of <m>f</m></cell>
+        <cell>Decreasing <m>\searrow</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+        <cell>Decreasing <m>\searrow</m></cell>
+        <cell>Increasing <m>\nearrow</m></cell>
+      </row>
+    </tabular>
+    <p>
+      We apply the First Derivative Test to classify the critical numbers and evaluate their functional outputs:
+      <ul>
+        <li> <p>
+        At <m>x = -\sqrt{2}</m>, <m>f'(x)</m> changes from negative to positive, yielding a local minimum:
+        <me>
+        f(-\sqrt{2}) = (-\sqrt{2})^{2/3}((-\sqrt{2})^2 - 8) = 2^{1/3}(2 - 8) = -6\sqrt[3]{2}
+        </me>
+        </p> </li>
+        <li> <p>
+            At <m>x = 0</m>, <m>f'(x)</m> changes from positive to negative, yielding a local maximum (a sharp cusp):
+            <me> f(0) = (0)^{2/3}(0 - 8) = 0 </me>
+        </p> </li>
+        <li> <p>
+            At <m>x = \sqrt{2}</m>, <m>f'(x)</m> changes from negative to positive, yielding a local minimum:
+            <me> f(\sqrt{2}) = (\sqrt{2})^{2/3}((\sqrt{2})^2 - 8) = 2^{1/3}(2 - 8) = -6\sqrt[3]{2} </me>
+          </p> </li>
+      </ul>
+    </p>
+    <p>
+      Therefore, <m>f</m> has a local maximum value of <m>0</m> at <m>x = 0</m>, 
+      and local minimum values of <m>-6\sqrt[3]{2}</m> at both <m>x = \pm\sqrt{2}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<remark xml:id="rem-derivative-graph-relationship">
+  <title>Role of the Derivative in Graphing</title>
+  <p>
+    The derivative <m>f'</m> is used to find the critical points of <m>f</m>. 
+    The test values, in the intervals defined by the critical points, 
+    are substituted into the derivative <m>f'</m>, 
+    and the function values are found using the original function <m>f</m>. 
+    Use the derivative <m>f'</m> to find information about the shape of the graph of 
+    <m>f</m>.
+  </p>
+</remark>
+
+<exercise xml:id="ex-group-local-extrema-polynomials">
+  <introduction>
+    <p>
+      Find the local extrema of the function, if they exist. Then sketch the graph.
+    </p>
+  </introduction>
+
+  <task>
+    <statement>
+      <p> <m>f(x)=2x^{3}-x^{4}</m> </p>
+    </statement>
+    <solution>
+      <p>
+        First, we find the first derivative of <m>f(x)</m>:
+        <me>
+          f'(x) = 6x^2 - 4x^3 = 2x^2(3 - 2x)
+        </me>
+      </p>
+      <p>
+        Setting <m>f'(x) = 0</m> gives the critical numbers <m>x = 0</m> and <m>x = \frac{3}{2}</m>. We construct an interval sign chart:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, 0)</m></cell>
+          <cell><m>\left(0, \frac{3}{2}\right)</m></cell>
+          <cell><m>\left(\frac{3}{2}, \infty\right)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        Applying the First Derivative Test:
+        <ul>
+          <li>
+            <p>
+              At <m>x = 0</m>, <m>f'(x)</m> does not change sign. There is no local extremum at <m>x = 0</m> (it is an inflection point).
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>x = \dfrac{3}{2}</m>, <m>f'(x)</m> changes from positive to negative, yielding a local maximum value:
+              <me>
+                f\left(\frac{3}{2}\right) = 2\left(\frac{3}{2}\right)^3 - \left(\frac{3}{2}\right)^4 = \frac{54}{8} - \frac{81}{16} = \frac{27}{16}
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+    <figure xml:id="fig-poly-extrema-1">
+        <caption>The graph of <m>f(x) = 2x^3 - x^4</m>.</caption>
+        <image xml:id="img-poly-curve-1" width="70%">
+          <description>The graph of 2x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a local maximum at (1.5, 1.6875), and then falls sharply towards negative infinity.</description>
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$},
+                  ylabel = {$y$},
+                  xmin = -1.2, xmax = 2.5,
+                  ymin = -2.5, ymax = 2.5,
+                  xtick = {-1,0,1,1.5,2},
+                  ytick = {-2,-1,1,1.6875,2},
+                  grid = both,
+                  grid style = {dashed, gray!30},
+                  width = 0.8\linewidth,
+                  height = 6cm
+              ]
+              \addplot [
+                  domain=-1.1:2.1, 
+                  samples=100, 
+                  color=blue,
+                  very thick
+              ] {2*x^3 - x^4};
+              \addplot[only marks, mark=*, color=red] coordinates {
+                  (0,0) 
+                  (1.5,1.6875)
+              };
+              \node[below left] at (axis cs:0,0) {$(0,0)$};
+              \node[above right] at (axis cs:1.15,1.6875) {Local Max $\left(\frac{3}{2}, \frac{27}{16}\right)$};
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p> <m>f(x)=x^{3}-x^{4}</m> </p>
+    </statement>
+    <solution>
+      <p>
+        First, we find the first derivative of <m>f(x)</m>:
+        <me>
+          f'(x) = 3x^2 - 4x^3 = x^2(3 - 4x)
+        </me>
+      </p>
+      <p>
+        Setting <m>f'(x) = 0</m> gives the critical numbers <m>x = 0</m> and <m>x = \frac{3}{4}</m>. We analyze the interval sign chart:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, 0)</m></cell>
+          <cell><m>\left(0, \frac{3}{4}\right)</m></cell>
+          <cell><m>\left(\frac{3}{4}, \infty\right)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        Applying the First Derivative Test:
+        <ul>
+          <li>
+            <p>
+              At <m>x = 0</m>, <m>f'(x)</m> does not change sign. There is no local extremum at <m>x = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              At <m>x = \dfrac{3}{4}</m>, <m>f'(x)</m> changes from positive to negative, yielding a local maximum value:
+              <me>
+                f\left(\frac{3}{4}\right) = \left(\frac{3}{4}\right)^3 - \left(\frac{3}{4}\right)^4 = \frac{27}{64} - \frac{81}{256} = \frac{27}{256}
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+    <figure xml:id="fig-poly-extrema-2">
+        <caption>The graph of <m>f(x) = x^3 - x^4</m>.</caption>
+        <image xml:id="img-poly-curve-2" width="70%">
+          <description>The graph of x cubed minus x to the fourth power. The curve rises from negative infinity, flattens at an inflection point at the origin (0,0), continues rising to a small local maximum at (0.75, 0.1055), and then turns downward toward negative infinity.</description>
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$},
+                  ylabel = {$y$},
+                  xmin = -0.8, xmax = 1.5,
+                  ymin = -1.2, ymax = 0.5,
+                  xtick = {-0.5,0,0.75,1},
+                  ytick = {-1,-0.5,0.1055,0.5},
+                  grid = both,
+                  grid style = {dashed, gray!30},
+                  width = 0.8\linewidth,
+                  height = 6cm
+              ]
+              \addplot [
+                  domain=-0.7:1.3, 
+                  samples=100, 
+                  color=blue,
+                  very thick
+              ] {x^3 - x^4};
+              \addplot[only marks, mark=*, color=red] coordinates {
+                  (0,0) 
+                  (0.75,0.10546)
+              };
+              \node[below left] at (axis cs:0,0) {$(0,0)$};
+              \node[above right] at (axis cs:0.5,0.10546) {Local Max $\left(\frac{3}{4}, \frac{27}{256}\right)$};
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </solution>
+  </task>
+</exercise>
+
+
+
+
+
+
+</section>

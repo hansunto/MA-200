@@ -69,6 +69,9 @@
         </p>
       </introduction>
       <xi:include href="./notes/31ExtremeValues.ptx" />
+      <xi:include href="./notes/321stDTest.ptx" />
+      <xi:include href="./notes/33Concavity.ptx" />
+      <xi:include href="./notes/34Graph.ptx" />
 
     </chapter>
 

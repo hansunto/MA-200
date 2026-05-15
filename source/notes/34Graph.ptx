@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-Summary-of-Graphical-Methods" class="notes">
+<title>3.4 Summary of Graphical Methods</title>
+<introduction>
+    <p>
+    This section combines our tools for evaluating first and second derivatives to form 
+    a comprehensive, step-by-step strategy for analyzing and drawing accurate function curves.
+    </p>
+  </introduction>
+<assemblage xml:id="asm-method-sketching-graphs">
+  <title>Method for Sketching Graphs</title>
+  <p>
+    To systematically analyze and sketch the graph of a function <m>f</m>, follow these steps:
+    <ol>
+      <li> <p>Determine the domain and analyze the continuity of <m>f</m>.</p> </li>
+      <li> <p>Find the <m>x</m>-intercepts and <m>y</m>-intercept.</p> </li>
+      <li> <p>Compute the first derivative <m>f'</m> and second derivative <m>f''</m>.</p> </li>
+      <li> <p>Find the critical points of the function.</p> </li>
+      <li> <p>Determine the intervals of increase and decrease, and locate local (relative) extrema.</p> </li>
+      <li> <p>Find the candidate inflection points.</p> </li>
+      <li> <p>Determine the intervals of concavity.</p> </li>
+      <li> <p>Identify vertical, horizontal, or slant asymptotes, if any exist.</p> </li>
+      <li> <p>Sketch the graph by plotting the key points and connecting them according to the established behaviors.</p> </li>
+    </ol>
+  </p>
+</assemblage>
+
+<example xml:id="ex-graphing-cubic-polynomial">
+   <statement>
+    <p>
+      Graph the function <m>f</m> given by:
+      <me> f(x)=x^3+3x^2-9x-12 </me>
+    </p>
+    <p>
+        <ol>
+          <li><p>Determine the domain and continuity of <m>f</m>.</p></li>
+          <li><p>Find the <m>x</m>- and <m>y</m>-intercepts.</p></li>
+          <li><p>Find <m>f'</m> and <m>f''</m>.</p></li>
+          <li><p>Find the critical points.</p></li>
+          <li><p>Determine intervals of increase and decrease, and locate relative extrema.</p></li>
+          <li><p>Find inflection points and determine concavity.</p></li>
+          <li><p>Sketch the graph.</p></li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <strong>1. Domain and Continuity:</strong> As a polynomial function, the domain of <m>f</m> is all real numbers, <m>(-\infty, \infty)</m>, and it is continuous everywhere.
+      </p>
+      <p>
+        <strong>2. Intercepts:</strong>
+        <ul>
+          <li>
+            <p>
+              The <m>y</m>-intercept is found at <m>f(0) = -12</m>, giving the coordinate point <m>(0, -12)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Setting <m>f(x) = 0</m> and solving <m>x^3+3x^2-9x-12 = 0</m> yields three real roots near <m>x \approx -3.85</m>, <m>x \approx -1.14</m>, and <m>x \approx 2.00</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <strong>3. Derivatives:</strong>
+        <me>
+          f'(x) = 3x^2 + 6x - 9
+        </me>
+        <me>
+          f''(x) = 6x + 6
+        </me>
+      </p>
+      <p>
+        <strong>4. Critical Points:</strong> Setting <m>f'(x) = 0</m>:
+        <me>
+          3(x^2 + 2x - 3) = 0 \implies 3(x+3)(x-1) = 0
+        </me>
+        The interior critical numbers are <m>x = -3</m> and <m>x = 1</m>.
+      </p>
+      <p>
+        <strong>5. Relative Extrema:</strong> We analyze the sign changes of <m>f'(x)</m> across the domain intervals:
+      </p>
+      <tabular bottom="minor" top="minor" left="minor" right="minor">
+        <row>
+          <cell header="yes">Interval</cell>
+          <cell><m>(-\infty, -3)</m></cell>
+          <cell><m>(-3, 1)</m></cell>
+          <cell><m>(1, \infty)</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Sign of <m>f'(x)</m></cell>
+          <cell><m>\gt 0</m></cell>
+          <cell><m>\lt 0</m></cell>
+          <cell><m>\gt 0</m></cell>
+        </row>
+        <row>
+          <cell header="yes">Behavior of <m>f</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+          <cell>Decreasing <m>\searrow</m></cell>
+          <cell>Increasing <m>\nearrow</m></cell>
+        </row>
+      </tabular>
+      <p>
+        By the First Derivative Test, <m>f</m> has a local maximum at <m>x = -3</m> with value <m>f(-3) = 15</m>, and a local minimum at <m>x = 1</m> with value <m>f(1) = -17</m>.
+      </p>
+      <p>
+        <strong>6. Inflection Points and Concavity:</strong> Setting <m>f''(x) = 0</m> gives <m>6x + 6 = 0 \implies x = -1</m>.
+        <ul>
+          <li><p>On <m>(-\infty, -1)</m>, <m>f''(x) \lt 0</m>, so the graph is concave down (<m>\cap</m>).</p></li>
+          <li><p>On <m>(-1, \infty)</m>, <m>f''(x) \gt 0</m>, so the graph is concave up (<m>\cup</m>).</p></li>
+        </ul>
+        Since concavity changes direction, <m>(-1, f(-1)) = (-1, -1)</m> is a point of inflection.
+      </p>
+      <p>
+        <strong>7. Sketch the Graph:</strong> Plotting the turning points and inflection point yields the curve below:
+      </p>
+      <figure xml:id="fig-cubic-final-plot">
+        <caption>The graph of <m>f(x) = x^3 + 3x^2 - 9x - 12</m>.</caption>
+        <image xml:id="img-cubic-final" width="70%">
+          <description>A cubic polynomial with local maximum at (-3,15), inflection point at (-1,-1), and local minimum at (1,-17).</description>
+          <latex-image>
+            \begin{tikzpicture}
+              \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$},
+                  ylabel = {$y$},
+                  xmin = -5.5, xmax = 3.5,
+                  ymin = -22, ymax = 22,
+                  grid = both,
+                  grid style = {dashed, gray!30},
+                  width = 0.8\linewidth,
+                  height = 7.5cm
+              ]
+              \addplot [domain=-4.8:2.8, samples=100, color=blue, very thick] {x^3 + 3*x^2 - 9*x - 12};
+              \addplot[only marks, mark=*, color=red] coordinates {(-3,15) (1,-17)};
+              \addplot[only marks, mark=square*, color=darkgray] coordinates {(-1,-1)};
+              \node[above] at (axis cs:-3,15) {Local Max $(-3,15)$};
+              \node[below right] at (axis cs:0,-17) {Local Min $(1,-17)$};
+              \node[right] at (axis cs:-1,-1) {IP $(-1,-1)$};
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </solution>
+</example>
+
+
+
+
+
+
+</section>

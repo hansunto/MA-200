@@ -52,6 +52,579 @@
     Maximum and minimum values are sometimes called <alert>extreme values</alert> or <alert>extrema</alert> of <m>f</m>.
     If <m>D</m> is the domain of <m>f</m>, then the maximum and minimum values of <m>f</m> on <m>D</m>, if they exist, are called the <alert>absolute maximum</alert> and <alert>absolute minimum</alert> of <m>f</m>.
 </p>
+<example>
+  <introduction>
+    <p>
+      Let <m>f(x)=4-x^{2}</m>. Find the extrema of <m>f</m> on the following intervals:
+    </p>
+<figure xml:id="fig-quadratic-extrema">
+      <caption>The graph of <m>f(x) = 4 - x^2</m>.</caption>
+      <image xml:id="img-parabola" width="60%">
+        <description>A downward-opening parabola with vertex at (0,4) intersecting the x-axis at (-2,0) and (2,0).</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -2.5, xmax = 2.5,
+                ymin = -0.5, ymax = 4.5,
+                xtick = {-2,-1,0,1,2},
+                ytick = {1,2,3,4},
+                grid = both,
+                grid style = {dashed, gray!30}
+            ]
+            \addplot [
+                domain=-2.2:2.2, 
+                samples=100, 
+                color=blue,
+                very thick
+            ] {4 - x^2};
+            \addplot[only marks, mark=*, color=red] coordinates {
+                (0,4) 
+                (-2,0) 
+                (1,3) 
+                (2,0)
+            };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+</introduction>
+
+  <task>
+    <statement>
+      <p>
+        (a) <m>[-2,1]</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The critical point is <m>x = 0</m>. Evaluating key points yields <m>f(0)=4</m>, <m>f(-2)=0</m>, and <m>f(1)=3</m>. 
+      </p>
+      <p>
+        The absolute maximum is <m>4</m> at <m>x=0</m>. The absolute minimum is <m>0</m> at <m>x=-2</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        (b) <m>(-2,1)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The critical point <m>x = 0</m> lies inside the interval. As <m>x \to -2^+</m>, the function value approaches <m>0</m>.
+      </p>
+      <p>
+        The absolute maximum is <m>4</m> at <m>x=0</m>. There is no absolute minimum.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        (c) <m>(1,2]</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        No critical points lie within this interval. As <m>x \to 1^+</m>, the function value approaches <m>3</m>. At the boundary, <m>f(2)=0</m>.
+      </p>
+      <p>
+        There is no absolute maximum. The absolute minimum is <m>0</m> at <m>x=2</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        (d) <m>(1,2)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        No critical points lie within this open interval. As <m>x \to 1^+</m>, <m>f(x) \to 3</m>, and as <m>x \to 2^-</m>, <m>f(x) \to 0</m>.
+      </p>
+      <p>
+        There is no absolute maximum and no absolute minimum.
+      </p>
+    </solution>
+  </task>
+</example>
+
+<exercise>
+  <introduction>
+    <p>
+      Let <m>f(x)=\frac{1}{x^{2}}</m>. Find the extrema of <m>f</m> on the following intervals:
+    </p>
+    <figure xml:id="fig-rational-extrema">
+      <caption>The graph of <m>f(x) = \frac{1}{x^2}</m>.</caption>
+      <image xml:id="img-rational-curve" width="60%">
+        <description>The graph of 1 over x squared, showing curves in quadrants 1 and 2 that approach infinity near the vertical asymptote x=0.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -1.5, xmax = 2.5,
+                ymin = -0.5, ymax = 5.5,
+                xtick = {-1,0,1,2},
+                ytick = {1,2,3,4,5},
+                grid = both,
+                grid style = {dashed, gray!30}
+            ]
+            \addplot [
+                domain=-1.2:-0.45, 
+                samples=50, 
+                color=blue,
+                very thick
+            ] {1/x^2};
+            \addplot [
+                domain=0.45:2.2, 
+                samples=50, 
+                color=blue,
+                very thick
+            ] {1/x^2};
+            \addplot[only marks, mark=*, color=red] coordinates {
+                (-1,1) 
+                (2,0.25)
+            };
+            \draw[dashed, red, thick] (axis cs:0,-0.5) -- (axis cs:0,5.5);
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+</introduction>
+
+  <task>
+    <statement>
+      <p>
+        (a) <m>[-1,2]</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The interval contains an infinite discontinuity at <m>x = 0</m>. As <m>x \to 0</m>, <m>f(x) \to \infty</m>, so there is no absolute maximum.
+      </p>
+      <p>
+        Evaluating the included endpoints gives <m>f(-1) = 1</m> and <m>f(2) = \frac{1}{4}</m>. Since the function is strictly decreasing on <m>(0, \infty)</m>, the absolute minimum is <m>\frac{1}{4}</m> at <m>x=2</m>.
+      </p>
+    </solution>
+  </task>
+
+  <task>
+    <statement>
+      <p>
+        (b) <m>[-1,2)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        As in part (a), the vertical asymptote at <m>x = 0</m> means <m>f(x) \to \infty</m>, so there is no absolute maximum.
+      </p>
+      <p>
+        As <m>x \to 2^-</m>, <m>f(x) \to \frac{1}{4}</m>. Because the endpoint <m>x = 2</m> is excluded from this open boundary, and all other points in the interval yield values greater than <m>\frac{1}{4}</m>, there is no absolute minimum.
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<theorem xml:id="thm-extreme-value">
+  <title>Extreme Value Theorem</title>
+  <statement>
+    <p>
+      If a function <m>f</m> is continuous on a closed interval <m>[a,b]</m>, then <m>f</m> takes on a maximum value and a minimum value at least once in <m>[a,b]</m>.
+    </p>
+  </statement>
+</theorem>
+<p>
+The importance of this theorem is that it guarantee the existence of extrema 
+if <m>f</m> is continuous on a closed interval. But, extrema may occur on intervals 
+that are not closed and for functions that are not continuous.
+</p>
+<definition xml:id="def-local-extrema">
+  <title>Local Extrema</title>
+  <statement>
+    <p> Let <m>c</m> be a number in the domain of a function <m>f</m>.
+      <ol>
+        <li>
+        <p> <m>f(c)</m> is a <term>local maximum</term> of <m>f</m> 
+            if there exists an open interval <m>(a,b)</m> containing <m>c</m> 
+            such that <m>f(x)\leq f(c)</m> for every <m>x</m> in <m>(a,b)</m>. </p>
+        </li>
+        <li>
+        <p> <m>f(c)</m> is a <term>local minimum</term> of <m>f</m> 
+            if there exists an open interval <m>(a,b)</m> containing <m>c</m> 
+            such that <m>f(x)\geq f(c)</m> for every <m>x</m> in <m>(a,b)</m>. </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</definition>
+<assemblage xml:id="asm-local-theorem">
+  <title>Local Extrema</title>
+  <p>
+    If a function <m>f</m> has a local (relative) extreme value <m>f(c)</m> on an open interval, then <m>c</m> is a critical point, meaning that either:
+    <me>
+      f'(c)=0 \quad \text{or} \quad f'(c) \text{ does not exist.}
+    </me>
+  </p>
+</assemblage>
+<p>
+Note that when we are looking for points that are relative extrema, 
+the only points we need consider are those where the derivative is 0 or 
+where the derivative does not exist.
+</p>
+<definition xml:id="def-critical-point">
+  <title>Critical Point</title>
+  <statement>
+    <p>
+      A <term>critical point</term> of a function is an interior point <m>c</m> of its domain at which the tangent line to the graph at <m>(c,f(c))</m> is horizontal or at which the derivative does not exist. That is, <m>c</m> is a critical point if:
+      <me>
+        f'(c)=0 \quad \text{or} \quad f'(c) \text{ does not exist.}
+      </me>
+    </p>
+  </statement>
+</definition>
+<example xml:id="ex-cubic-extrema">
+  <statement>
+    <p>
+      If <m>f(x)=x^{3}-12x</m>, find the maximum and minimum values of <m>f</m> on the interval <m>[-3,5]</m> and sketch the graph of <m>f</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we locate the critical points by finding the derivative of <m>f(x)</m>:
+      <me>
+        f'(x) = 3x^2 - 12
+      </me>
+    </p>
+    <p>
+      Setting the derivative equal to zero to find the critical numbers:
+      <me>
+        3x^2 - 12 = 0 \implies 3(x-2)(x+2) = 0
+      </me>
+      This yields the interior critical numbers <m>x = 2</m> and <m>x = -2</m>. Both values lie within the given closed interval <m>[-3,5]</m>.
+    </p>
+    <p>
+      Next, we evaluate the function at the critical points and the boundary endpoints:
+      <ul>
+        <li>
+          <p>Left endpoint: <m>f(-3) = (-3)^3 - 12(-3) = -27 + 36 = 9</m></p>
+        </li>
+        <li>
+          <p>Critical point: <m>f(-2) = (-2)^3 - 12(-2) = -8 + 24 = 16</m></p>
+        </li>
+        <li>
+          <p>Critical point: <m>f(2) = (2)^3 - 12(2) = 8 - 24 = -16</m></p>
+        </li>
+        <li>
+          <p>Right endpoint: <m>f(5) = (5)^3 - 12(5) = 125 - 60 = 65</m></p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      By comparing these values, the absolute maximum value is <m>65</m> occurring at the right endpoint <m>x = 5</m>. The absolute minimum value is <m>-16</m> occurring at the critical point <m>x = 2</m>.
+    </p>
+    <figure xml:id="fig-cubic-extrema-plot">
+      <caption>The graph of <m>f(x) = x^3 - 12x</m> on <m>[-3,5]</m>.</caption>
+      <image xml:id="img-cubic-curve" width="60%">
+        <description>The graph of x cubed minus 12x on the interval from negative 3 to 5. The curve peaks at a local maximum of (minus 2, 16), drops to a local minimum of (2, minus 16), and rises sharply to an absolute maximum at the right endpoint (5, 65).</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -3.5, xmax = 5.5,
+                ymin = -20, ymax = 70,
+                xtick = {-3,-2,0,2,5},
+                ytick = {-16,0,9,16,65},
+                grid = both,
+                grid style = {dashed, gray!30},
+                width = 0.8\linewidth,
+                height = 7cm
+            ]
+            \addplot [
+                domain=-3:5, 
+                samples=100, 
+                color=blue,
+                very thick
+            ] {x^3 - 12*x};
+            \addplot[only marks, mark=*, color=red] coordinates {
+                (-3,9) 
+                (-2,16) 
+                (2,-16) 
+                (5,65)
+            };
+            \node[above right] at (axis cs:-3,17) {Local Max $(-2,16)$};
+            \node[above right] at (axis cs:1.75,-14.5) {Abs Min $(2,-16)$};
+            \node[above left] at (axis cs:5,60) {Abs Max $(5,65)$};
+            \node[below right] at (axis cs:-3.5,10) {$(-3,9)$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </solution>
+</example>
+
+<example xml:id="ex-cubic-no-extrema">
+  <statement>
+    <p>
+      If <m>f(x)=x^{3}</m>, prove that <m>f</m> has no local extremum.
+    </p>
+  </statement>
+  <solution>
+    <p> To find potential local extrema, we compute the first derivative of 
+     <m>f(x) = x^3</m>:
+      <me> f'(x) = 3x^2 </me>
+    </p>
+    <p> Setting the derivative equal to zero gives our critical number:
+      <me> 3x^2 = 0 \implies x = 0 </me>
+    </p>
+    <p>
+      To determine if a local extremum exists at <m>x = 0</m>, 
+      we examine the behavior of <m>f'(x)</m> on either side of this critical number:
+      <ul>
+        <li>
+          <p>For <m>x \lt 0</m>, <m>f'(x) = 3x^2 \gt 0</m>, which means <m>f</m> is strictly increasing.</p>
+        </li>
+        <li>
+          <p>For <m>x \gt 0</m>, <m>f'(x) = 3x^2 \gt 0</m>, which means <m>f</m> is also strictly increasing.</p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Because <m>f'(x)</m> does not change sign at <m>x = 0</m>, the First Derivative Test confirms that the point <m>(0,0)</m> is an inflection point rather than a local extremum. Since there are no other critical numbers, the function <m>f</m> has no local extremum.
+    </p>
+    <figure xml:id="fig-cubic-pure-plot">
+      <caption>The graph of <m>f(x) = x^3</m>.</caption>
+      <image xml:id="img-cubic-pure" width="60%">
+        <description>The graph of x cubed, passing through the origin. The curve is strictly increasing throughout its entire domain, flattening out momentarily at the horizontal tangent at (0,0).</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -2.5, xmax = 2.5,
+                ymin = -9, ymax = 9,
+                xtick = {-2,-1,0,1,2},
+                ytick = {-8,-4,4,8},
+                grid = both,
+                grid style = {dashed, gray!30},
+                width = 0.8\linewidth,
+                height = 7cm
+            ]
+            \addplot [
+                domain=-2.1:2.1, 
+                samples=100, 
+                color=blue,
+                very thick
+            ] {x^3};
+            \addplot[only marks, mark=*, color=red] coordinates {(0,0)};
+            \node[above left] at (axis cs:0,0) {$(0,0)$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </solution>
+</example>
+
+<example xml:id="ex-cusp-extrema">
+  <statement>
+    <p> If <m>f(x)=(x-1)^{2/3}</m>, find the maximum and minimum values of <m>f</m> on the interval <m>[0,9]</m> and sketch the graph of <m>f</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we differentiate <m>f(x)</m> using the Chain Rule to locate the critical numbers:
+      <me> f'(x) = \dfrac{2}{3}(x-1)^{-1/3} = \dfrac{2}{3\sqrt[3]{x-1}} </me>
+    </p>
+    <p>
+      We analyze the derivative to discover critical points inside the interior domain <m>(0,9)</m>:
+      <ul>
+        <li>
+          <p>
+            The equation <m>f'(x) = 0</m> has no solution because the numerator is a constant (<m>2 \neq 0</m>).
+          </p>
+        </li>
+        <li>
+          <p>
+            The derivative <m>f'(x)</m> does not exist when the denominator equals zero: <m>3\sqrt[3]{x-1} = 0 \implies x = 1</m>.
+          </p>
+        </li>
+      </ul>
+      Since <m>x = 1</m> lies in the domain of <m>f</m>, it is our critical point. The vertical tangent profile indicates a sharp cusp point at this coordinate.
+    </p>
+    <p>
+      Next, we evaluate the function values at the critical point and the two interval boundaries:
+      <ul>
+        <li>
+          <p>Left endpoint: <m>f(0) = (0-1)^{2/3} = (-1)^{2/3} = 1</m></p>
+        </li>
+        <li>
+          <p>Critical point: <m>f(1) = (1-1)^{2/3} = 0^{2/3} = 0</m></p>
+        </li>
+        <li>
+          <p>Right endpoint: <m>f(9) = (9-1)^{2/3} = 8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4</m></p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Comparing these values, the absolute minimum value is <m>0</m> occurring at the critical point cusp <m>x = 1</m>. The absolute maximum value is <m>4</m> occurring at the right endpoint boundary <m>x = 9</m>.
+    </p>
+     <figure xml:id="fig-cusp-extrema-plot">
+      <caption>The graph of <m>f(x) = (x-1)^{2/3}</m> on <m>[0,9]</m>.</caption>
+      <image xml:id="img-cusp-curve" width="60%">
+        <description>The graph of (x-1) to the 2/3 power. The curve decreases from the left endpoint (0,1) down to a sharp point or cusp at the horizontal axis (1,0), then rises continuously to the right endpoint at (9,4).</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -0.5, xmax = 9.5,
+                ymin = -0.5, ymax = 4.5,
+                xtick = {0,1,5,9},
+                ytick = {1,2,3,4},
+                grid = both,
+                grid style = {dashed, gray!30},
+                width = 0.8\linewidth,
+                height = 7cm
+            ]
+            \addplot [
+                domain=0:9, 
+                samples=200, 
+                color=blue,
+                very thick
+            ] {abs(x-1)^(2/3)};
+            \addplot[only marks, mark=*, color=red] coordinates {
+                (0,1) 
+                (1,0) 
+                (9,4)
+            };
+            \node[above right] at (axis cs:0,1) {$(0,1)$};
+            \node[above right] at (axis cs:1.25,-0.1) {Cusp Abs Min $(1,0)$};
+            \node[above left] at (axis cs:9,4) {Abs Max $(9,4)$};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </solution>
+</example>
+
+<example xml:id="ex-find-critical-numbers-derivative">
+  <statement>
+    <p>
+      Find the critical numbers of <m>f</m> if <m>\displaystyle f'(x)=\frac{(x+5)(x-2)}{x^{2}-9}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      By definition, a critical number of a function <m>f</m> must lie within the domain of <m>f</m> where either <m>f'(x) = 0</m> or <m>f'(x)</m> does not exist. We begin by evaluating where these conditions occur for the given rational derivative.
+    </p>
+    <p>
+      First, we find where <m>f'(x) = 0</m>. A fraction equals zero when its numerator equals zero, provided the denominator is non-zero:
+      <me> (x+5)(x-2) = 0 \implies x = -5 \text{ or } x = 2 </me>
+    </p>
+    <p>
+      Next, we look for values where <m>f'(x)</m> does not exist. A rational function fails to exist where its denominator equals zero:
+      <me> x^2 - 9 = 0 \implies (x-3)(x+3) = 0 \implies x = 3 \text{ or } x = -3 </me>
+    </p>
+    <p>
+      Because we are given the explicit formula for <m>f'(x)</m> without the original function <m>f(x)</m>, the natural domain of <m>f</m> must exclude the vertical asymptotes of its derivative at <m>x = \pm 3</m>, where the function itself is undefined. Therefore, only the values making the derivative zero qualify as interior domain critical numbers.
+    </p>
+    <!--<p> Thus, the critical numbers of <m>f</m> are <m>x = -5</m> and <m>x = 2</m>. </p>-->
+  </solution>
+</example>
+
+<exercise xml:id="ex-critical-polynomial">
+  <statement>
+    <p> Find the critical numbers of <m>f</m> if <m>f(x)=x^{3}-2x+4</m>. </p>
+  </statement>
+  <solution>
+    <p> We find the critical numbers by differentiating the polynomial function 
+        <m>f(x)</m>:
+      <me> f'(x) = 3x^2 - 2 </me>
+    </p>
+    <p> Since <m>f'(x)</m> is a polynomial, it is defined everywhere. 
+        We set <m>f'(x) = 0</m> to find the critical numbers:
+      <me> 3x^2 - 2 = 0 \implies x^2 = \dfrac{2}{3} \implies x = \pm\sqrt{\dfrac{2}{3}} </me>
+    </p>
+    <p> Both values belong to the domain of <m>f</m>. 
+        Thus, the critical numbers are <m>x = \sqrt{\dfrac{2}{3}}</m> 
+        and <m>x = -\sqrt{\dfrac{2}{3}}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-critical-logarithmic">
+  <statement>
+    <p> Find the critical numbers of <m>f</m> if <m>f(x)=x\ln x</m>. </p>
+  </statement>
+  <solution>
+    <p> The natural domain of <m>f(x) = x\ln x</m> is restricted to 
+        <m>(0, \infty)</m> due to the logarithmic term. 
+        We apply the Product Rule to compute the derivative:
+      <me> f'(x) = (1)\ln x + x\left(\frac{1}{x}\right) = \ln x + 1 </me>
+    </p>
+    <p> The derivative <m>f'(x)</m> is defined for all values in the function's domain <m>(0, \infty)</m>. Setting the derivative equal to zero yields:
+      <me> \ln x + 1 = 0 \implies \ln x = -1 \implies x = e^{-1} = \frac{1}{e} </me>
+    </p>
+    <p> Since <m>\dfrac{1}{e} \gt 0</m>, it lies within the domain. 
+        Therefore, the only critical number is <m>x = \dfrac{1}{e}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="ex-critical-trigonometric">
+  <statement>
+    <p> If <m>f(x)=2\sin x+ \cos 2x</m>, 
+        find the critical numbers of <m>f</m> that are in the interval <m>[0,2\pi]</m>.
+    </p>
+  </statement>
+  <solution>
+    <p> We differentiate <m>f(x)</m> using the Chain Rule on the second term:
+      <me> f'(x) = 2\cos x - 2\sin 2x </me>
+    </p>
+    <p> Using the double-angle identity <m>\sin 2x = 2\sin x\cos x</m>, 
+        we rewrite the derivative equation:
+      <me> f'(x) = 2\cos x - 4\sin x\cos x = 2\cos x(1 - 2\sin x) </me>
+    </p>
+    <p> The derivative exists everywhere. 
+        We locate the critical numbers inside <m>[0, 2\pi]</m> by setting 
+        <m>f'(x) = 0</m>:
+      <me> 2\cos x(1 - 2\sin x) = 0 </me>
+    </p>
+    <p> This produces two separate trigonometric cases to evaluate on the given interval:
+      <ul>
+        <li>
+          <p> <m>\cos x = 0 \implies x = \dfrac{\pi}{2}</m> or <m>x = \dfrac{3\pi}{2}</m> </p>
+        </li>
+        <li>
+          <p> <m>1 - 2\sin x = 0 \implies \sin x = \dfrac{1}{2} \implies x = \dfrac{\pi}{6}</m> or <m>x = \dfrac{5\pi}{6}</m> </p>
+        </li>
+      </ul>
+    </p>
+    <p> Thus, the critical numbers in the interval <m>[0, 2\pi]</m> are 
+    <m>x = \dfrac{\pi}{6}</m>, <m>x = \dfrac{\pi}{2}</m>, <m>x = \dfrac{5\pi}{6}</m>, 
+    and <m>x = \dfrac{3\pi}{2}</m>. </p>
+  </solution>
+</exercise>
+
+
 
 
 

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-concavity-test" class="notes">
+<title>3.3 Concavity and Curve Sketching</title>
+<introduction>
+<p>
+    This section explores how the rate of change of the first derivative determines the bending behavior, 
+    or concavity, of a function's graph.
+</p>
+</introduction>
+
+<definition xml:id="def-concavity">
+  <title>Concavity</title>
+  <statement>
+    <p>
+      Suppose that <m>f</m> is a function whose derivative <m>f'</m> exists at every point in an open interval <m>I</m>. Then:
+    <ol>
+     <li>
+        <p>
+        <m>f</m> is <term>concave up</term> on the interval <m>I</m>, 
+        if <m>f'</m> is increasing over <m>I</m>.
+        </p>
+     </li>
+     <li>
+        <p>
+        <m>f</m> is <term>concave down</term> on the interval <m>I</m>, 
+        if <m>f'</m> is decreasing over <m>I</m>.
+        </p>
+     </li>
+    </ol>
+    </p>
+  </statement>
+</definition>
+
+<theorem xml:id="thm-concavity-test">
+  <title>The Concavity Test</title>
+  <statement>
+    <p>
+      Let <m>f</m> be a twice-differentiable function on an interval <m>I</m>.
+      <ol>
+        <li> <p> If <m>f''(x) \gt 0</m> for all <m>x</m> in <m>I</m>, 
+        then the graph of <m>f</m> is <term>concave up</term> on <m>I</m>. </p> </li>
+        <li> <p> If <m>f''(x) \lt 0</m> for all <m>x</m> in <m>I</m>, 
+        then the graph of <m>f</m> is <term>concave down</term> on <m>I</m>. </p> </li>
+      </ol>
+    </p>
+  </statement>
+</theorem>
+
+<example xml:id="ex-concavity-cubic-polynomial">
+  <statement>
+    <p>
+      If <m>f(x)=x^{3}+x^{2}-5x-5</m>, determine intervals on which the graph of <m>f</m> is concave up or down.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To apply the Concavity Test, we find the first and second derivatives of <m>f(x)</m>:
+      <me>
+        f'(x) = 3x^2 + 2x - 5
+      </me>
+      <me>
+        f''(x) = 6x + 2
+      </me>
+    </p>
+    <p>
+      We find where the second derivative is zero to identify potential inflection points:
+      <me>
+        6x + 2 = 0 \implies x = -\frac{1}{3}
+      </me>
+      This point divides the domain into two open intervals. We construct a sign chart to analyze <m>f''(x)</m>:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>\left(-\infty, -\dfrac{1}{3}\right)</m></cell>
+        <cell><m>\left(-\dfrac{1}{3}, \infty\right)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f''(x)</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Concavity of <m>f</m></cell>
+        <cell>Concave Down <m>\cap</m></cell>
+        <cell>Concave Up <m>\cup</m></cell>
+      </row>
+    </tabular>
+    <p>
+      Therefore, the graph of <m>f</m> is concave down on the interval 
+      <m>\left(-\infty, -\dfrac{1}{3}\right)</m> and concave up on the interval 
+      <m>\left(-\dfrac{1}{3}, \infty\right)</m>.
+    </p>
+    <figure xml:id="fig-cubic-concavity">
+    <caption>The graph of <m>f(x) = x^3 + x^2 - 5x - 5</m> highlighting its inflection point.</caption>
+    <image xml:id="img-cubic-concavity-curve" width="60%">
+      <description>A cubic function graph transitioning from concave down to concave up through a point of inflection located at x equals negative one third.</description>
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+              axis lines = middle,
+              xlabel = {$x$},
+              ylabel = {$y$},
+              xmin = -3.2, xmax = 2.5,
+              ymin = -10, ymax = 5,
+              xtick = {-3,-2,-1,0,1,2},
+              ytick = {-8,-6,-4,-2,2,4},
+              grid = both,
+              grid style = {dashed, gray!30},
+              width = 0.8\linewidth,
+              height = 7cm
+          ]
+          \addplot [
+              domain=-3.1:2.5, 
+              samples=100, 
+              color=blue,
+              very thick
+          ] {x^3 + x^2 - 5*x - 5};
+          \addplot[only marks, mark=square*, color=darkgray] coordinates {
+              (-0.333,-3.259)
+          };
+          \node[above left] at (axis cs:-0.333,-3.259) {IP $\left(-\frac{1}{3}, -\frac{88}{27}\right)$};
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  </solution>
+</example>
+
+<definition xml:id="def-inflection-point">
+  <title>Point of Inflection</title>
+  <statement>
+    <p>
+      A <term>point of inflection</term> is a point across which the direction of concavity changes. A point <m>(c,f(c))</m> on the graph of <m>f</m> is a point of inflection if:
+      <ol>
+        <li> <p> <m>f</m> is continuous at <m>c</m>. </p> </li>
+        <li> <p> There is an open interval <m>(a,b)</m> containing <m>c</m> such that the graph is concave up on <m>(a,c)</m> and concave down on <m>(c,b)</m>, or vice versa. </p> </li>
+      </ol>
+    </p>
+  </statement>
+</definition>
+
+<theorem xml:id="thm-second-derivative-test">
+  <title>The Second Derivative Test</title>
+  <statement>
+    <p>
+      Suppose that <m>f</m> is a function for which <m>f'(x)</m> exists for every <m>x</m> in an open interval <m>(a,b)</m> contained in its domain, and that there is a critical point <m>c</m> in <m>(a,b)</m> for which <m>f'(c)=0</m>. Then:
+      <ol>
+        <li>
+          <p> <m>f(c)</m> is a local minimum if <m>f''(c) \gt 0</m>. </p>
+        </li>
+        <li>
+          <p> <m>f(c)</m> is a local maximum if <m>f''(c) \lt 0</m>. </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      The test is inconclusive if <m>f''(c)=0</m> or if <m>f''(c)</m> does not exist. In such cases, the First Derivative Test must be used instead.
+    </p>
+  </statement>
+</theorem>
+
+<assemblage xml:id="asm-finding-inflection-points">
+  <title>Finding Points of Inflection</title>
+  <p>
+    If a function <m>f</m> has a point of inflection, it occurs at a point <m>x_{0}</m> in its domain where either:
+    <me>
+      f''(x_{0})=0 \quad \text{or} \quad f''(x_{0}) \text{ does not exist.}
+    </me>
+  </p>
+</assemblage>
+
+<example xml:id="ex-second-derivative-test-polynomial">
+  <statement>
+    <p>
+      If <m>f(x)=12+2x^{2}-x^{4}</m>, use the second derivative test to find the local extrema of <m>f</m>. Determine the concavity and find the points of inflection.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We begin by computing the first and second derivatives of the function:
+      <me>
+        f'(x) = 4x - 4x^3 = 4x(1 - x^2) = 4x(1-x)(1+x)
+      </me>
+      <me>
+        f''(x) = 4 - 12x^2 = 4(1 - 3x^2)
+      </me>
+    </p>
+
+    <p>
+      <strong>Part 1: Local Extrema (Second Derivative Test)</strong>
+    </p>
+    <p>
+      Setting <m>f'(x) = 0</m> gives our critical numbers: <m>x = 0</m>, <m>x = 1</m>, and <m>x = -1</m>. We evaluate the sign of <m>f''(x)</m> at each critical number:
+      <ul>
+        <li>
+          <p>
+            At <m>x = 0</m>: <m>f''(0) = 4(1 - 0) = 4 \gt 0</m>. By the Second Derivative Test, <m>f</m> has a local minimum at <m>x = 0</m>. The local minimum value is <m>f(0) = 12</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            At <m>x = 1</m>: <m>f''(1) = 4 - 12(1)^2 = -8 \lt 0</m>. By the Second Derivative Test, <m>f</m> has a local maximum at <m>x = 1</m>. The local maximum value is <m>f(1) = 12 + 2(1)^2 - (1)^4 = 13</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            At <m>x = -1</m>: <m>f''(-1) = 4 - 12(-1)^2 = -8 \lt 0</m>. By the Second Derivative Test, <m>f</m> has a local maximum at <m>x = -1</m>. The local maximum value is <m>f(-1) = 12 + 2(-1)^2 - (-1)^4 = 13</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      <strong>Part 2: Concavity and Points of Inflection</strong>
+    </p>
+    <p>
+      To find potential inflection points, we set <m>f''(x) = 0</m>:
+      <me>
+        4 - 12x^2 = 0 \implies x^2 = \frac{1}{3} \implies x = \pm\frac{1}{\sqrt{3}}
+      </me>
+      These values divide the real line into three open intervals. We construct a sign chart to evaluate the concavity of <m>f</m>:
+    </p>
+    <tabular bottom="minor" top="minor" left="minor" right="minor">
+      <row>
+        <cell header="yes">Interval</cell>
+        <cell><m>\left(-\infty, -\dfrac{1}{\sqrt{3}}\right)</m></cell>
+        <cell><m>\left(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}}\right)</m></cell>
+        <cell><m>\left(\dfrac{1}{\sqrt{3}}, \infty\right)</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Sign of <m>f''(x)</m></cell>
+        <cell><m>\lt 0</m></cell>
+        <cell><m>\gt 0</m></cell>
+        <cell><m>\lt 0</m></cell>
+      </row>
+      <row>
+        <cell header="yes">Concavity of <m>f</m></cell>
+        <cell>Concave Down <m>\cap</m></cell>
+        <cell>Concave Up <m>\cup</m></cell>
+        <cell>Concave Down <m>\cap</m></cell>
+      </row>
+    </tabular>
+    <p>
+      The graph of <m>f</m> is concave down on <m>\left(-\infty, -\dfrac{1}{\sqrt{3}}\right)</m> and
+       <m>\left(\dfrac{1}{\sqrt{3}}, \infty\right)</m>, and concave up on <m>\left(-\dfrac{1}{\sqrt{3}}, \dfrac{1}{\sqrt{3}}\right)</m>.
+    </p>
+    <p>
+      Since the concavity changes directions at both <m>x = -\dfrac{1}{\sqrt{3}}</m> and <m>x = \dfrac{1}{\sqrt{3}}</m>, 
+      both locations are inflection points. We evaluate their corresponding <m>y</m>-values:
+      <me>
+        f\left(\pm\frac{1}{\sqrt{3}}\right) = 12 + 2\left(\frac{1}{3}\right) - \left(\frac{1}{9}\right) = 12 + \frac{6}{9} - \frac{1}{9} = 12 + \frac{5}{9} = \frac{113}{9}
+      </me>
+      Thus, the points of inflection are <m>\left(-\dfrac{1}{\sqrt{3}}, \dfrac{113}{9}\right)</m> and <m>\left(\dfrac{1}{\sqrt{3}}, \dfrac{113}{9}\right)</m>.
+    </p>
+    <figure xml:id="fig-quartic-extrema-concavity">
+      <caption>The graph of <m>f(x) = 12 + 2x^2 - x^4</m> with extrema and inflection points.</caption>
+      <image xml:id="img-quartic-curve" width="60%">
+        <description>A M-shaped quartic curve. It features a local minimum at (0,12), two local maximums at (-1,13) and (1,13), and two points of inflection located symmetrically near x equals plus or minus 0.58.</description>
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$},
+                ylabel = {$y$},
+                xmin = -2.2, xmax = 2.2,
+                ymin = 5, ymax = 15,
+                xtick = {-2,-1,0,1,2},
+                ytick = {6,8,10,12,13,14},
+                grid = both,
+                grid style = {dashed, gray!30},
+                width = 0.8\linewidth,
+                height = 7cm
+            ]
+            \addplot [
+                domain=-1.8:1.8, 
+                samples=100, 
+                color=blue,
+                very thick
+            ] {12 + 2*x^2 - x^4};
+            \addplot[only marks, mark=*, color=red] coordinates {
+                (0,12) 
+                (-1,13) 
+                (1,13)
+            };
+            \addplot[only marks, mark=square*, color=darkgray] coordinates {
+                (-0.577,12.556) 
+                (0.577,12.556)
+            };
+            \node[below right] at (axis cs:0,12) {Local Min $(0,12)$};
+            \node[above left] at (axis cs:-0.5,13) {Local Max $(-1,13)$};
+            \node[above right] at (axis cs:0.5,13) {Local Max $(1,13)$};
+            \node[left] at (axis cs:-0.577,12.556) {IP};
+            \node[right] at (axis cs:0.577,12.556) {IP};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </solution>
+</example>
+
+
+
+
+</section>

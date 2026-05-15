@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3.5 Optimization</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Summary-of-Graphical-Methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">1. Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">1.1 Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">1.2 Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">1.3 One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">1.4 Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">1.5 Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">1.6 Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">1.7 The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">1.8 The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">2. Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">2.1 Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">2.2 Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">2.3 Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">2.4 The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">2.5 Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">2.6 Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html" class="internal"><span class="title">2.7 Derivatives of Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#subsection-derivation-arcsin" class="internal"><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#exercises-inverse-trig-derivatives-geometric" class="internal"><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">2.8 Related Rates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">1. Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html" class="internal"><span class="title">2. Differentiation Rules- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#notes-Differentiation-Rules-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#subsec-derivative-reference-sheet" class="internal"><span class="title">Derivative Reference Sheet</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Optimization"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3.5 Optimization</span>
+</h2>
+<section class="introduction" id="sec-Optimization-2"><div class="para" id="sec-Optimization-2-1">Optimization problems represent one of the most direct and practical applications of differential calculus. In these problems, our objective is to find the most efficient solution to a real-world scenario by identifying either the absolute maximum value (such as maximizing area, volume, or profit) or the absolute minimum value (such as minimizing material cost, waste, or time).<div class="autopermalink" data-description="Paragraph"><a href="#sec-Optimization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-Optimization-2-2">The core workflow for solving any applied optimization problem relies on a structured, multi-step calculus framework:<div class="autopermalink" data-description="Paragraph"><a href="#sec-Optimization-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="paragraphs" id="pars-strategy-max-min"><h3 class="heading"><span class="title">A Strategy for Solving Max-Min Problems.</span></h3>
+<div class="para" id="pars-strategy-max-min-2">When addressing optimization problems, use the following structured approach:<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="pars-strategy-max-min-3">
+<li id="pars-strategy-max-min-3-1">
+<div class="para" id="pars-strategy-max-min-3-1-1">
+<em class="alert">Draw and label a picture.</em> Optimization problems often involve geometry. Draw a picture of the situation. Include any information you are given in the problem. Identify the quantities under your control and assign variables to them.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#pars-strategy-max-min-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-2">
+<div class="para" id="pars-strategy-max-min-3-2-1">
+<em class="alert">Find the objective function.</em> What is the quantity you want to maximize or minimize? Write a formula for it in terms of the variables in your picture.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#pars-strategy-max-min-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-3">
+<div class="para" id="pars-strategy-max-min-3-3-1">
+<em class="alert">Identify the constraints.</em> If your objective function has more than one variable, you will need to use one or more constraints in the problem to write equations that relate the variables together.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#pars-strategy-max-min-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-4">
+<div class="para" id="pars-strategy-max-min-3-4-1">
+<em class="alert">Reduce the objective function to one variable.</em> Solve each of the constraint equations for one of the variables and substitute this into the objective function. At the end, the objective function should contain just one variable.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#pars-strategy-max-min-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-5">
+<div class="para" id="pars-strategy-max-min-3-5-1">
+<em class="alert">Identify the domain of the objective function.</em> Now that your objective function has a single variable, what values of that variable make sense in the problem? Think about what the variable means in the problem–for example, lengths cannot be negative. There may be both a lower bound and an upper bound for meaningful values of the variable; if so, make sure you identify both of them. If the domain has both a lower and an upper bound, and the endpoints of this interval do not cause any mathematical problems in the objective function (such as division by zero), consider including the endpoints even if they don’t quite make sense in the problem; this will allow you to use the Closed Interval Method in step 8.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#pars-strategy-max-min-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-6">
+<div class="para" id="pars-strategy-max-min-3-6-1">
+<em class="alert">Differentiate the objective function.</em> Find the derivative of the objective function with respect to your chosen variable.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#pars-strategy-max-min-3-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-7">
+<div class="para" id="pars-strategy-max-min-3-7-1">
+<em class="alert">Find the critical numbers.</em> Critical numbers are values of the variable that cause the derivative to equal zero or be undefined. These numbers are potential local maxima or minima. Ignore any critical numbers that are outside the domain of the objective function.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#pars-strategy-max-min-3-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-8">
+<div class="para" id="pars-strategy-max-min-3-8-1">
+<em class="alert">Test the critical numbers</em> (and possibly the endpoints of the domain). The critical numbers are not automatically the answer. You need to test each one to see if it’s a local minimum, a local maximum, or neither. Usually you can use one of the following tests:<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="pars-strategy-max-min-3-8-2">
+<li id="pars-strategy-max-min-3-8-2-1">
+<div class="para" id="pars-strategy-max-min-3-8-2-1-1">
+<em class="alert">Closed Interval Method.</em> <em class="emphasis">Requirements:</em> The domain of the objective function must be a closed, bounded interval (that is, an interval that has endpoints on both ends, and includes those endpoints). <em class="emphasis">Test:</em> Evaluate the objective function at all critical numbers and at the endpoints of the domain, and choose the largest value (if you are maximizing) or the smallest value (if you are minimizing).<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-8-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.a"><a href="#pars-strategy-max-min-3-8-2-1" title="Copy heading and permalink for Item 8.a" aria-label="Copy heading and permalink for Item 8.a">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-8-2-2">
+<div class="para" id="pars-strategy-max-min-3-8-2-2-1">
+<em class="alert">First Derivative Test.</em> <em class="emphasis">Requirements:</em> There must be only one critical number in the domain. <em class="emphasis">Test:</em> Evaluate the first derivative of the objective function at two numbers in the domain, one of which is less than the critical number and the other of which is greater than the critical number. If the first derivative is positive to the left of the critical number and negative to the right, then the critical number represents the absolute maximum. If the first derivative is negative to the left of the critical number and positive to the right, then the critical number represents the absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-8-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.b"><a href="#pars-strategy-max-min-3-8-2-2" title="Copy heading and permalink for Item 8.b" aria-label="Copy heading and permalink for Item 8.b">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-8-2-3">
+<div class="para" id="pars-strategy-max-min-3-8-2-3-1">
+<em class="alert">Second Derivative Test.</em> <em class="emphasis">Requirements:</em> There must be only one critical number in the domain. <em class="emphasis">Test:</em> Find the second derivative of the objective function and evaluate it at the critical number. If this value is negative, then the critical number represents the absolute maximum. If the value is positive, then the critical number represents the absolute minimum.<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-8-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8.c"><a href="#pars-strategy-max-min-3-8-2-3" title="Copy heading and permalink for Item 8.c" aria-label="Copy heading and permalink for Item 8.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Item 8"><a href="#pars-strategy-max-min-3-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="pars-strategy-max-min-3-9">
+<div class="para" id="pars-strategy-max-min-3-9-1">
+<em class="alert">Answer the question.</em> The critical number itself may not be the answer to the question. Reread the question to see exactly what it is asking for. If it is asking for the dimensions of a rectangle, for example, make sure you give the width and height of the rectangle, not just the area. And don’t forget units!<div class="autopermalink" data-description="Paragraph"><a href="#pars-strategy-max-min-3-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9"><a href="#pars-strategy-max-min-3-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraphs: A Strategy for Solving Max-Min Problems"><a href="#pars-strategy-max-min" title="Copy heading and permalink for Paragraphs: A Strategy for Solving Max-Min Problems" aria-label="Copy heading and permalink for Paragraphs: A Strategy for Solving Max-Min Problems">🔗</a></div></section><details id="ex-train-display-optimization" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">264</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-train-display-optimization-1-1-1">A hobby store has <span class="process-math">\(20\)</span> ft of fencing to fence off a rectangular area for an electric train in one corner of its display room. The two sides up against the wall require no fence. What dimensions of the rectangle will maximize the area? What is the maximum area?<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-train-corner-layout.svg" role="img" class="contained" alt="A rectangular region enclosed in the top-right corner of a room, labeled with width x and length y, with the outer sides representing the fence."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-train-display-optimization-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-train-display-optimization-2-1">We apply our structured strategy to optimize the corner layout:<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-train-display-optimization-2-2">
+<li id="ex-train-display-optimization-2-2-1">
+<div class="para" id="ex-train-display-optimization-2-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the width of the enclosed display and <span class="process-math">\(y\)</span> represent its length. Because the layout sits in a corner, only one width side and one length side require actual fencing.<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-train-display-optimization-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-2">
+<div class="para logical" id="ex-train-display-optimization-2-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to maximize the total floor area, <span class="process-math">\(A\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-train-display-optimization-2-2-2-1-3">
+\begin{equation*}
+A = xy
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-train-display-optimization-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-3">
+<div class="para logical" id="ex-train-display-optimization-2-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The structural boundary is limited by our total physical fencing length:</div>
+<div class="displaymath process-math" id="ex-train-display-optimization-2-2-3-1-2">
+\begin{equation*}
+x + y = 20
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ex-train-display-optimization-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-4">
+<div class="para logical" id="ex-train-display-optimization-2-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Isolate <span class="process-math">\(y\)</span> in the constraint equation to get <span class="process-math">\(y = 20 - x\text{.}\)</span> Substituting this expression back into our area equation creates a single independent variable target:</div>
+<div class="displaymath process-math" id="ex-train-display-optimization-2-2-4-1-4">
+\begin{equation*}
+A(x) = x(20 - x) = 20x - x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ex-train-display-optimization-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-5">
+<div class="para" id="ex-train-display-optimization-2-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> Length parameters must remain positive, meaning <span class="process-math">\(x \ge 0\text{.}\)</span> Because the fence total is capped at <span class="process-math">\(20\)</span> ft, <span class="process-math">\(x \le 20\text{.}\)</span> This limits our mathematical search scope to the closed domain interval <span class="process-math">\([0, 20]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#ex-train-display-optimization-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-6">
+<div class="para logical" id="ex-train-display-optimization-2-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Taking the first derivative with respect to <span class="process-math">\(x\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-train-display-optimization-2-2-6-1-3">
+\begin{equation*}
+A'(x) = 20 - 2x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#ex-train-display-optimization-2-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-7">
+<div class="para logical" id="ex-train-display-optimization-2-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> Setting the derivative to zero:</div>
+<div class="displaymath process-math" id="ex-train-display-optimization-2-2-7-1-2">
+\begin{equation*}
+20 - 2x = 0 \implies x = 10
+\end{equation*}
+</div>
+<div class="para">The value <span class="process-math">\(x = 10\)</span> is our single interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#ex-train-display-optimization-2-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-8">
+<div class="para logical" id="ex-train-display-optimization-2-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> Applying the Closed Interval Method across our domain boundary points:</div>
+<ul class="disc" id="ex-train-display-optimization-2-2-8-1-2">
+<li id="ex-train-display-optimization-2-2-8-1-2-1">
+<div class="para" id="ex-train-display-optimization-2-2-8-1-2-1-1">
+<span class="process-math">\(A(0) = 20(0) - (0)^2 = 0\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-train-display-optimization-2-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-8-1-2-2">
+<div class="para" id="ex-train-display-optimization-2-2-8-1-2-2-1">
+<span class="process-math">\(A(10) = 20(10) - (10)^2 = 100\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-train-display-optimization-2-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-8-1-2-3">
+<div class="para" id="ex-train-display-optimization-2-2-8-1-2-3-1">
+<span class="process-math">\(A(20) = 20(20) - (20)^2 = 0\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-train-display-optimization-2-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The mathematical maximum occurs when <span class="process-math">\(x = 10\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#ex-train-display-optimization-2-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="ex-train-display-optimization-2-2-9">
+<div class="para" id="ex-train-display-optimization-2-2-9-1">
+<em class="alert">Answer the question.</em> Setting <span class="process-math">\(x = 10\)</span> ft requires a corresponding length side of <span class="process-math">\(y = 20 - 10 = 10\)</span> ft.<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-train-display-optimization-2-2-9-2">The optimal dimensions for the train enclosure are 10 ft by 10 ft, producing an absolute maximum area of 100 sq ft.<div class="autopermalink" data-description="Paragraph"><a href="#ex-train-display-optimization-2-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9"><a href="#ex-train-display-optimization-2-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 264.1"><a href="#ex-train-display-optimization-2" title="Copy heading and permalink for Solution 264.1" aria-label="Copy heading and permalink for Solution 264.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 264"><a href="#ex-train-display-optimization" title="Copy heading and permalink for Example 264" aria-label="Copy heading and permalink for Example 264">🔗</a></div></article></details><details id="ex-cardboard-box-optimization" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">265</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-cardboard-box-optimization-1-1">From a square piece of cardboard measuring <span class="process-math">\(8\)</span> in. by <span class="process-math">\(8\)</span> in., square corners are cut out so that the sides can be folded up to make an open-top box. What dimensions will yield a box with the maximum volume? What is the maximum volume?<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-box-cutout-layout.svg" role="img" class="contained" alt="A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box."></div></div>
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-folded-box-3d.svg" role="img" class="contained" alt="A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 8 minus 2x."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-cardboard-box-optimization-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-cardboard-box-optimization-2-1">We execute our step-by-step max-min problem-solving strategy:<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-cardboard-box-optimization-2-2">
+<li id="ex-cardboard-box-optimization-2-2-1">
+<div class="para" id="ex-cardboard-box-optimization-2-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the side length of the square corners being removed. When the four flaps are folded up along the dashed lines, <span class="process-math">\(x\)</span> becomes the absolute vertical height of the resulting open box.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-cardboard-box-optimization-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-2">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> The volume <span class="process-math">\(V\)</span> of a rectangular prism is given by:</div>
+<div class="displaymath process-math" id="ex-cardboard-box-optimization-2-2-2-1-3">
+\begin{equation*}
+V = \text{length} \times \text{width} \times \text{height}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-cardboard-box-optimization-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-3">
+<div class="para" id="ex-cardboard-box-optimization-2-2-3-1">
+<em class="alert">Identify the constraints.</em> The initial length and width of the cardboard sheet are both <span class="process-math">\(8\)</span> inches. Cutting out two corners of size <span class="process-math">\(x\)</span> from each dimension reduces both the remaining interior base length and width to <span class="process-math">\(8 - 2x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ex-cardboard-box-optimization-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-4">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Substituting our expressions for height, width, and length into the volume formula leaves us with a single independent variable equation:</div>
+<div class="displaymath process-math" id="ex-cardboard-box-optimization-2-2-4-1-2">
+\begin{equation*}
+V(x) = x(8 - 2x)(8 - 2x) = x(64 - 32x + 4x^2) = 4x^3 - 32x^2 + 64x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ex-cardboard-box-optimization-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-5">
+<div class="para" id="ex-cardboard-box-optimization-2-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The cutout height must be positive (<span class="process-math">\(x \ge 0\)</span>). Additionally, because you cannot cut out more than half of the total width of the cardboard sheet, <span class="process-math">\(2x \le 8 \implies x \le 4\text{.}\)</span> The continuous closed domain interval is <span class="process-math">\([0, 4]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#ex-cardboard-box-optimization-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-6">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Taking the derivative with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cardboard-box-optimization-2-2-6-1-3">
+\begin{equation*}
+V'(x) = 12x^2 - 64x + 64
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#ex-cardboard-box-optimization-2-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-7">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero and factor the expression:</div>
+<div class="displaymath process-math" id="ex-cardboard-box-optimization-2-2-7-1-2">
+\begin{equation*}
+4(3x^2 - 16x + 16) = 0 \implies 4(3x - 4)(x - 4) = 0
+\end{equation*}
+</div>
+<div class="para">This reveals critical numbers at <span class="process-math">\(x = \dfrac{4}{3}\)</span> and <span class="process-math">\(x = 4\text{.}\)</span> Both values lie within our established interval.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#ex-cardboard-box-optimization-2-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-8">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We use the Closed Interval Method to evaluate the volume output:</div>
+<ul class="disc" id="ex-cardboard-box-optimization-2-2-8-1-2">
+<li id="ex-cardboard-box-optimization-2-2-8-1-2-1">
+<div class="para" id="ex-cardboard-box-optimization-2-2-8-1-2-1-1">
+<span class="process-math">\(V(0) = 4(0)^3 - 32(0)^2 + 64(0) = 0\)</span> cubic inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-8-1-2-2">
+<div class="para" id="ex-cardboard-box-optimization-2-2-8-1-2-2-1">
+<span class="process-math">\(V(4) = 4(4)^3 - 32(4)^2 + 64(4) = 0\)</span> cubic inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-8-1-2-3">
+<div class="para" id="ex-cardboard-box-optimization-2-2-8-1-2-3-1">
+<span class="process-math">\(V\left(\dfrac{4}{3}\right) 
+= 4\left(\dfrac{4}{3}\right)^3 - 32\left(\dfrac{4}{3}\right)^2 + 64\left(\dfrac{4}{3}\right) 
+= \dfrac{256}{27} \approx 9.48\)</span> cubic inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cardboard-box-optimization-2-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The maximum volume is generated at the peak value <span class="process-math">\(x = \dfrac{4}{3}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#ex-cardboard-box-optimization-2-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="ex-cardboard-box-optimization-2-2-9">
+<div class="para logical" id="ex-cardboard-box-optimization-2-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> The optimal height is <span class="process-math">\(x = \dfrac{4}{3}\)</span> in. The base dimensions are:</div>
+<div class="displaymath process-math" id="ex-cardboard-box-optimization-2-2-9-1-3">
+\begin{equation*}
+\text{Length} = \text{Width} = 8 - 2\left(\dfrac{4}{3}\right) 
+= \dfrac{12}{3} = \dfrac{16}{3} \approx 5.33\text{ in.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cardboard-box-optimization-2-2-9-2">The maximum volume is achieved when the box has dimensions of 5.33 in. by 5.33 in. by 1.33 in., yielding a total maximum volume of 9.48 cubic inches (or exactly <span class="process-math">\(\dfrac{256}{27}\text{ in}^3\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#ex-cardboard-box-optimization-2-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9"><a href="#ex-cardboard-box-optimization-2-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 265.1"><a href="#ex-cardboard-box-optimization-2" title="Copy heading and permalink for Solution 265.1" aria-label="Copy heading and permalink for Solution 265.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 265"><a href="#ex-cardboard-box-optimization" title="Copy heading and permalink for Example 265" aria-label="Copy heading and permalink for Example 265">🔗</a></div></article></details><details id="ex-minimize-surface-area" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">266</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-minimize-surface-area-1-1-1">A container firm is designing an open-top rectangular box, with a square base, that will hold <span class="process-math">\(108\text{ cm}^3\text{.}\)</span> What dimensions yield the minimum surface area? What is the minimum surface area?<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-open-box-3d.svg" role="img" class="contained" alt="A 3D perspective vector sketch of an open-top rectangular box with a square base of sides x by x and height h."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-minimize-surface-area-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-minimize-surface-area-2-1">We apply our structured strategy to minimize structural material:<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-minimize-surface-area-2-2">
+<li id="ex-minimize-surface-area-2-2-1">
+<div class="para" id="ex-minimize-surface-area-2-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the side length of the square base, and let <span class="process-math">\(h\)</span> represent the vertical height of the box.<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-minimize-surface-area-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-2">
+<div class="para logical" id="ex-minimize-surface-area-2-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to minimize the total surface area, <span class="process-math">\(S\text{.}\)</span> Since the box is open-top, it consists of one square base and four identical vertical sides:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-2-1-3">
+\begin{equation*}
+S = x^2 + 4xh
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-minimize-surface-area-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-3">
+<div class="para logical" id="ex-minimize-surface-area-2-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The volume of the box is fixed at <span class="process-math">\(108\text{ cm}^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-3-1-3">
+\begin{equation*}
+V = x^2h = 108
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ex-minimize-surface-area-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-4">
+<div class="para logical" id="ex-minimize-surface-area-2-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Isolating <span class="process-math">\(h\)</span> in the volume constraint gives <span class="process-math">\(h = \frac{108}{x^2}\text{.}\)</span> Substituting this into our surface area equation gives:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-4-1-4">
+\begin{equation*}
+S(x) = x^2 + 4x\left(\frac{108}{x^2}\right) = x^2 + \frac{432}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ex-minimize-surface-area-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-5">
+<div class="para" id="ex-minimize-surface-area-2-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The base dimension must be positive, and there is no upper algebraic restriction. Thus, the physical domain is the open interval <span class="process-math">\((0, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#ex-minimize-surface-area-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-6">
+<div class="para logical" id="ex-minimize-surface-area-2-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Taking the first derivative with respect to <span class="process-math">\(x\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-6-1-3">
+\begin{equation*}
+S'(x) = 2x - \frac{432}{x^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6"><a href="#ex-minimize-surface-area-2-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-7">
+<div class="para logical" id="ex-minimize-surface-area-2-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> Setting the derivative equal to zero:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-7-1-2">
+\begin{equation*}
+2x = \frac{432}{x^2} \implies 2x^3 = 432 \implies x^3 = 216 \implies x = 6
+\end{equation*}
+</div>
+<div class="para">The value <span class="process-math">\(x = 6\)</span> is our single interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7"><a href="#ex-minimize-surface-area-2-2-7" title="Copy heading and permalink for Item 7" aria-label="Copy heading and permalink for Item 7">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-8">
+<div class="para logical" id="ex-minimize-surface-area-2-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the Second Derivative Test:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-8-1-2">
+\begin{equation*}
+S''(x) = 2 + \frac{864}{x^3}
+\end{equation*}
+</div>
+<div class="para">Evaluating at our critical number: <span class="process-math">\(S''(6) = 2 + \frac{864}{216} = 2 + 4 = 6 \gt 0\text{.}\)</span> Because the second derivative is positive, the graph is concave up, confirming that <span class="process-math">\(x = 6\)</span> provides an absolute minimum.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 8"><a href="#ex-minimize-surface-area-2-2-8" title="Copy heading and permalink for Item 8" aria-label="Copy heading and permalink for Item 8">🔗</a></div>
+</li>
+<li id="ex-minimize-surface-area-2-2-9">
+<div class="para logical" id="ex-minimize-surface-area-2-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Substituting <span class="process-math">\(x = 6\)</span> back into our constraint formula yields the height:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-9-1-3">
+\begin{equation*}
+h = \frac{108}{6^2} = \frac{108}{36} = 3\text{ cm}
+\end{equation*}
+</div>
+<div class="para">The minimum surface area value is:</div>
+<div class="displaymath process-math" id="ex-minimize-surface-area-2-2-9-1-4">
+\begin{equation*}
+S(6) = (6)^2 + \frac{432}{6} = 36 + 72 = 108\text{ cm}^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-minimize-surface-area-2-2-9-2">The optimal dimensions are a base of 6 cm by 6 cm and a height of 3 cm, yielding a minimum surface area of 108 cm<span class="process-math">\(^2\)</span>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-surface-area-2-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 9"><a href="#ex-minimize-surface-area-2-2-9" title="Copy heading and permalink for Item 9" aria-label="Copy heading and permalink for Item 9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 266.1"><a href="#ex-minimize-surface-area-2" title="Copy heading and permalink for Solution 266.1" aria-label="Copy heading and permalink for Solution 266.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 266"><a href="#ex-minimize-surface-area" title="Copy heading and permalink for Example 266" aria-label="Copy heading and permalink for Example 266">🔗</a></div></article></details><details id="ex-minimize-perimeter" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">267</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Minimize Perimeter.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-minimize-perimeter-2-1-1">What is the smallest perimeter possible for a rectangle whose area is <span class="process-math">\(16\text{ in}^2\)</span> and what are its dimensions?<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-perimeter-rectangle.svg" role="img" class="contained" alt="A simple rectangle with width labeled x and height labeled y, illustrating the perimeter optimization parameters."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-minimize-perimeter-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-minimize-perimeter-3-1">We execute our step-by-step max-min strategy:<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-minimize-perimeter-3-2">
+<li id="ex-minimize-perimeter-3-2-1">
+<div class="para" id="ex-minimize-perimeter-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the width of the rectangle, and let <span class="process-math">\(y\)</span> represent its height.<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.1"><a href="#ex-minimize-perimeter-3-2-1" title="Copy heading and permalink for Item 267.1" aria-label="Copy heading and permalink for Item 267.1">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-2">
+<div class="para logical" id="ex-minimize-perimeter-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to minimize the total perimeter, <span class="process-math">\(P\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-2-1-3">
+\begin{equation*}
+P = 2x + 2y
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.2"><a href="#ex-minimize-perimeter-3-2-2" title="Copy heading and permalink for Item 267.2" aria-label="Copy heading and permalink for Item 267.2">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-3">
+<div class="para logical" id="ex-minimize-perimeter-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The area of the rectangular region is fixed at <span class="process-math">\(16\text{ in}^2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-3-1-3">
+\begin{equation*}
+A = xy = 16
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.3"><a href="#ex-minimize-perimeter-3-2-3" title="Copy heading and permalink for Item 267.3" aria-label="Copy heading and permalink for Item 267.3">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-4">
+<div class="para logical" id="ex-minimize-perimeter-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Solving the constraint equation for <span class="process-math">\(y\)</span> yields <span class="process-math">\(y = \frac{16}{x}\text{.}\)</span> Substituting this into the perimeter equation gives:</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-4-1-4">
+\begin{equation*}
+P(x) = 2x + 2\left(\frac{16}{x}\right) = 2x + \frac{32}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.4"><a href="#ex-minimize-perimeter-3-2-4" title="Copy heading and permalink for Item 267.4" aria-label="Copy heading and permalink for Item 267.4">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-5">
+<div class="para" id="ex-minimize-perimeter-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The physical length must be strictly greater than zero, with no upper restriction. The domain is the open interval <span class="process-math">\((0, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.5"><a href="#ex-minimize-perimeter-3-2-5" title="Copy heading and permalink for Item 267.5" aria-label="Copy heading and permalink for Item 267.5">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-6">
+<div class="para logical" id="ex-minimize-perimeter-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Differentiating <span class="process-math">\(P(x)\)</span> with respect to <span class="process-math">\(x\)</span> gives:</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-6-1-4">
+\begin{equation*}
+P'(x) = 2 - \frac{32}{x^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.6"><a href="#ex-minimize-perimeter-3-2-6" title="Copy heading and permalink for Item 267.6" aria-label="Copy heading and permalink for Item 267.6">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-7">
+<div class="para logical" id="ex-minimize-perimeter-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> Setting the derivative to zero:</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-7-1-2">
+\begin{equation*}
+2 = \frac{32}{x^2} \implies 2x^2 = 32 \implies x^2 = 16 \implies x = 4
+\end{equation*}
+</div>
+<div class="para">(We discard the negative root <span class="process-math">\(x = -4\)</span> since it falls outside our geometric domain).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.7"><a href="#ex-minimize-perimeter-3-2-7" title="Copy heading and permalink for Item 267.7" aria-label="Copy heading and permalink for Item 267.7">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-8">
+<div class="para logical" id="ex-minimize-perimeter-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the First Derivative Test around our critical number <span class="process-math">\(x = 4\)</span> on the interval <span class="process-math">\((0, \infty)\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-minimize-perimeter-3-2-8-1-4">
+<li id="ex-minimize-perimeter-3-2-8-1-4-1">
+<div class="para" id="ex-minimize-perimeter-3-2-8-1-4-1-1">For <span class="process-math">\(x \in (0, 4)\text{,}\)</span> test <span class="process-math">\(x = 2\text{:}\)</span> <span class="process-math">\(P'(2) = 2 - \frac{32}{4} = -6 \lt 0\)</span> (decreasing).<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-8-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-minimize-perimeter-3-2-8-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-8-1-4-2">
+<div class="para" id="ex-minimize-perimeter-3-2-8-1-4-2-1">For <span class="process-math">\(x \in (4, \infty)\text{,}\)</span> test <span class="process-math">\(x = 8\text{:}\)</span> <span class="process-math">\(P'(8) = 2 - \frac{32}{64} = 1.5 \gt 0\)</span> (increasing).<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-8-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-minimize-perimeter-3-2-8-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Because the derivative switches from negative to positive, <span class="process-math">\(x = 4\)</span> is an absolute minimum point.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.8"><a href="#ex-minimize-perimeter-3-2-8" title="Copy heading and permalink for Item 267.8" aria-label="Copy heading and permalink for Item 267.8">🔗</a></div>
+</li>
+<li id="ex-minimize-perimeter-3-2-9">
+<div class="para logical" id="ex-minimize-perimeter-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Using our constraint equation, the remaining side is <span class="process-math">\(y = \frac{16}{4} = 4\text{ in}\text{.}\)</span> The absolute minimum perimeter value is:</div>
+<div class="displaymath process-math" id="ex-minimize-perimeter-3-2-9-1-3">
+\begin{equation*}
+P(4) = 2(4) + 2(4) = 16\text{ in}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-minimize-perimeter-3-2-9-2">The smallest possible perimeter is 16 inches, achieved by a square with dimensions of 4 in. by 4 in.<div class="autopermalink" data-description="Paragraph"><a href="#ex-minimize-perimeter-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 267.9"><a href="#ex-minimize-perimeter-3-2-9" title="Copy heading and permalink for Item 267.9" aria-label="Copy heading and permalink for Item 267.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 267.1"><a href="#ex-minimize-perimeter-3" title="Copy heading and permalink for Solution 267.1" aria-label="Copy heading and permalink for Solution 267.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 267: Minimize Perimeter"><a href="#ex-minimize-perimeter" title="Copy heading and permalink for Checkpoint 267: Minimize Perimeter" aria-label="Copy heading and permalink for Checkpoint 267: Minimize Perimeter">🔗</a></div></article></details><details id="ex-river-fence-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">268</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">River Fence Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-river-fence-optimization-2-1-1">A farmer has <span class="process-math">\(1200\)</span> ft of fencing and wants to fence off a rectangular field that borders a straight river. He needs no fence along the river. What are the dimensions of the field that has the largest area?<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-river-pasture-layout.svg" role="img" class="contained" alt="A rectangular plot bordering a straight blue river on top. The three sides of fencing are labeled with width x and length y."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-river-fence-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-river-fence-optimization-3-1">We apply our structured max-min strategy to maximize the pasture area:<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-river-fence-optimization-3-2">
+<li id="ex-river-fence-optimization-3-2-1">
+<div class="para" id="ex-river-fence-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the length of the two matching sides perpendicular to the river bank, and let <span class="process-math">\(y\)</span> represent the single long side running parallel to the river bank.<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.1"><a href="#ex-river-fence-optimization-3-2-1" title="Copy heading and permalink for Item 268.1" aria-label="Copy heading and permalink for Item 268.1">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-2">
+<div class="para logical" id="ex-river-fence-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to maximize the total area enclosed, <span class="process-math">\(A\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-2-1-3">
+\begin{equation*}
+A = xy
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.2"><a href="#ex-river-fence-optimization-3-2-2" title="Copy heading and permalink for Item 268.2" aria-label="Copy heading and permalink for Item 268.2">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-3">
+<div class="para logical" id="ex-river-fence-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The total perimeter of physical fencing used for the three sides is limited to <span class="process-math">\(1200\)</span> ft:</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-3-1-3">
+\begin{equation*}
+2x + y = 1200
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.3"><a href="#ex-river-fence-optimization-3-2-3" title="Copy heading and permalink for Item 268.3" aria-label="Copy heading and permalink for Item 268.3">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-4">
+<div class="para logical" id="ex-river-fence-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Isolate <span class="process-math">\(y\)</span> in our perimeter constraint equation to find <span class="process-math">\(y = 1200 - 2x\text{.}\)</span> Substituting this value directly back into the area equation simplifies our target objective function to a single variable:</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-4-1-4">
+\begin{equation*}
+A(x) = x(1200 - 2x) = 1200x - 2x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.4"><a href="#ex-river-fence-optimization-3-2-4" title="Copy heading and permalink for Item 268.4" aria-label="Copy heading and permalink for Item 268.4">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-5">
+<div class="para" id="ex-river-fence-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> All physical side dimensions must stay positive, meaning <span class="process-math">\(x \ge 0\text{.}\)</span> Furthermore, since the total layout fencing is capped at <span class="process-math">\(1200\)</span> ft and must cover two widths, <span class="process-math">\(2x \le 1200 \implies x \le 600\text{.}\)</span> This yields a realistic mathematical closed domain interval of <span class="process-math">\(\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.5"><a href="#ex-river-fence-optimization-3-2-5" title="Copy heading and permalink for Item 268.5" aria-label="Copy heading and permalink for Item 268.5">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-6">
+<div class="para logical" id="ex-river-fence-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Finding the first derivative of <span class="process-math">\(A(x)\)</span> with respect to <span class="process-math">\(x\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-6-1-4">
+\begin{equation*}
+A'(x) = 1200 - 4x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.6"><a href="#ex-river-fence-optimization-3-2-6" title="Copy heading and permalink for Item 268.6" aria-label="Copy heading and permalink for Item 268.6">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-7">
+<div class="para logical" id="ex-river-fence-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> Setting our derivative to zero:</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-7-1-2">
+\begin{equation*}
+1200 - 4x = 0 \implies 4x = 1200 \implies x = 300
+\end{equation*}
+</div>
+<div class="para">The coordinate value <span class="process-math">\(x = 300\)</span> serves as our single interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.7"><a href="#ex-river-fence-optimization-3-2-7" title="Copy heading and permalink for Item 268.7" aria-label="Copy heading and permalink for Item 268.7">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-8">
+<div class="para logical" id="ex-river-fence-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> Evaluating the function outputs at the interval boundaries using the Closed Interval Method:</div>
+<ul class="disc" id="ex-river-fence-optimization-3-2-8-1-2">
+<li id="ex-river-fence-optimization-3-2-8-1-2-1">
+<div class="para" id="ex-river-fence-optimization-3-2-8-1-2-1-1">
+<span class="process-math">\(A(0) = 1200(0) - 2(0)^2 = 0\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-river-fence-optimization-3-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-8-1-2-2">
+<div class="para" id="ex-river-fence-optimization-3-2-8-1-2-2-1">
+<span class="process-math">\(A(300) = 1200(300) - 2(300)^2 = 360,000 - 180,000 = 180,000\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-river-fence-optimization-3-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-8-1-2-3">
+<div class="para" id="ex-river-fence-optimization-3-2-8-1-2-3-1">
+<span class="process-math">\(A(600) = 1200(600) - 2(600)^2 = 720,000 - 720,000 = 0\)</span> sq ft<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-river-fence-optimization-3-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The point <span class="process-math">\(x = 300\)</span> produces the absolute highest possible area output.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.8"><a href="#ex-river-fence-optimization-3-2-8" title="Copy heading and permalink for Item 268.8" aria-label="Copy heading and permalink for Item 268.8">🔗</a></div>
+</li>
+<li id="ex-river-fence-optimization-3-2-9">
+<div class="para logical" id="ex-river-fence-optimization-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Substituting our optimal width <span class="process-math">\(x = 300\)</span> ft back into the constraint equation determines our final parameter requirement:</div>
+<div class="displaymath process-math" id="ex-river-fence-optimization-3-2-9-1-3">
+\begin{equation*}
+y = 1200 - 2(300) = 600\text{ ft}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-river-fence-optimization-3-2-9-2">The optimal dimensions of the field are a width of 300 feet (perpendicular to the river) and a length of 600 feet (parallel to the river), producing a maximum possible area of 180,000 square feet.<div class="autopermalink" data-description="Paragraph"><a href="#ex-river-fence-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 268.9"><a href="#ex-river-fence-optimization-3-2-9" title="Copy heading and permalink for Item 268.9" aria-label="Copy heading and permalink for Item 268.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 268.1"><a href="#ex-river-fence-optimization-3" title="Copy heading and permalink for Solution 268.1" aria-label="Copy heading and permalink for Solution 268.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 268: River Fence Optimization"><a href="#ex-river-fence-optimization" title="Copy heading and permalink for Checkpoint 268: River Fence Optimization" aria-label="Copy heading and permalink for Checkpoint 268: River Fence Optimization">🔗</a></div></article></details><details id="ex-rain-gutter-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">269</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Rain Gutter Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-rain-gutter-optimization-2-1-1">A long rectangular sheet of metal, <span class="process-math">\(12\)</span> inches wide, is to be made into a rain gutter by turning up two sides so that they are perpendicular to the sheet. How many inches should be turned up to give the gutter its greatest capacity?<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-gutter-cross-section.svg" role="img" class="contained" alt="Cross-section diagram of a rectangular rain gutter with height x on the left and right, and a base width of 12 minus 2x."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-rain-gutter-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-rain-gutter-optimization-3-1">We apply our step-by-step problem-solving strategy to maximize the cross-sectional capacity:<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-rain-gutter-optimization-3-2">
+<li id="ex-rain-gutter-optimization-3-2-1">
+<div class="para" id="ex-rain-gutter-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(x\)</span> represent the length (in inches) of the metal sheet turned up on each side to create the vertical walls of the gutter.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.1"><a href="#ex-rain-gutter-optimization-3-2-1" title="Copy heading and permalink for Item 269.1" aria-label="Copy heading and permalink for Item 269.1">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-2">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> The volume capacity of a long gutter is directly proportional to its cross-sectional area, <span class="process-math">\(A\text{.}\)</span> We want to maximize this rectangular area:</div>
+<div class="displaymath process-math" id="ex-rain-gutter-optimization-3-2-2-1-3">
+\begin{equation*}
+A = \text{base} \times \text{height}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.2"><a href="#ex-rain-gutter-optimization-3-2-2" title="Copy heading and permalink for Item 269.2" aria-label="Copy heading and permalink for Item 269.2">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-3">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The total flat width of the initial sheet of metal is fixed at <span class="process-math">\(12\)</span> inches. Subtracting the two vertical side bends of length <span class="process-math">\(x\)</span> leaves an available interior base width of:</div>
+<div class="displaymath process-math" id="ex-rain-gutter-optimization-3-2-3-1-4">
+\begin{equation*}
+\text{base} = 12 - 2x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.3"><a href="#ex-rain-gutter-optimization-3-2-3" title="Copy heading and permalink for Item 269.3" aria-label="Copy heading and permalink for Item 269.3">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-4">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Substituting the base expression into our geometric area function yields a clean, single-variable objective equation:</div>
+<div class="displaymath process-math" id="ex-rain-gutter-optimization-3-2-4-1-2">
+\begin{equation*}
+A(x) = (12 - 2x)x = 12x - 2x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.4"><a href="#ex-rain-gutter-optimization-3-2-4" title="Copy heading and permalink for Item 269.4" aria-label="Copy heading and permalink for Item 269.4">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-5">
+<div class="para" id="ex-rain-gutter-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The length turned up must be non-negative (<span class="process-math">\(x \ge 0\)</span>). Additionally, turning up both sides cannot consume more than the total original width of the sheet, meaning <span class="process-math">\(2x \le 12 \implies x \le 6\text{.}\)</span> This outlines our realistic mathematical interval domain as <span class="process-math">\([0, 6]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.5"><a href="#ex-rain-gutter-optimization-3-2-5" title="Copy heading and permalink for Item 269.5" aria-label="Copy heading and permalink for Item 269.5">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-6">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Finding the first derivative of <span class="process-math">\(A(x)\)</span> with respect to <span class="process-math">\(x\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-rain-gutter-optimization-3-2-6-1-4">
+\begin{equation*}
+A'(x) = 12 - 4x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.6"><a href="#ex-rain-gutter-optimization-3-2-6" title="Copy heading and permalink for Item 269.6" aria-label="Copy heading and permalink for Item 269.6">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-7">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We evaluate when the derivative is equal to zero:</div>
+<div class="displaymath process-math" id="ex-rain-gutter-optimization-3-2-7-1-2">
+\begin{equation*}
+12 - 4x = 0 \implies 4x = 12 \implies x = 3
+\end{equation*}
+</div>
+<div class="para">The value <span class="process-math">\(x = 3\)</span> is our single interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.7"><a href="#ex-rain-gutter-optimization-3-2-7" title="Copy heading and permalink for Item 269.7" aria-label="Copy heading and permalink for Item 269.7">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-8">
+<div class="para logical" id="ex-rain-gutter-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the Closed Interval Method to verify the maximum profile bounds:</div>
+<ul class="disc" id="ex-rain-gutter-optimization-3-2-8-1-2">
+<li id="ex-rain-gutter-optimization-3-2-8-1-2-1">
+<div class="para" id="ex-rain-gutter-optimization-3-2-8-1-2-1-1">
+<span class="process-math">\(A(0) = 12(0) - 2(0)^2 = 0\)</span> square inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-8-1-2-2">
+<div class="para" id="ex-rain-gutter-optimization-3-2-8-1-2-2-1">
+<span class="process-math">\(A(3) = 12(3) - 2(3)^2 = 36 - 18 = 18\)</span> square inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-8-1-2-3">
+<div class="para" id="ex-rain-gutter-optimization-3-2-8-1-2-3-1">
+<span class="process-math">\(A(6) = 12(6) - 2(6)^2 = 72 - 72 = 0\)</span> square inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rain-gutter-optimization-3-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The mathematical max capacity strictly corresponds to the critical point value <span class="process-math">\(x = 3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.8"><a href="#ex-rain-gutter-optimization-3-2-8" title="Copy heading and permalink for Item 269.8" aria-label="Copy heading and permalink for Item 269.8">🔗</a></div>
+</li>
+<li id="ex-rain-gutter-optimization-3-2-9">
+<div class="para" id="ex-rain-gutter-optimization-3-2-9-1">
+<em class="alert">Answer the question.</em> The parameter requiring evaluation is how many inches should be turned up.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-rain-gutter-optimization-3-2-9-2">To give the gutter its greatest capacity, exactly 3 inches of the metal sheet should be turned up on each side.<div class="autopermalink" data-description="Paragraph"><a href="#ex-rain-gutter-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 269.9"><a href="#ex-rain-gutter-optimization-3-2-9" title="Copy heading and permalink for Item 269.9" aria-label="Copy heading and permalink for Item 269.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 269.1"><a href="#ex-rain-gutter-optimization-3" title="Copy heading and permalink for Solution 269.1" aria-label="Copy heading and permalink for Solution 269.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 269: Rain Gutter Optimization"><a href="#ex-rain-gutter-optimization" title="Copy heading and permalink for Checkpoint 269: Rain Gutter Optimization" aria-label="Copy heading and permalink for Checkpoint 269: Rain Gutter Optimization">🔗</a></div></article></details><details id="ex-cylindrical-can-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">270</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylindrical Can Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-cylindrical-can-optimization-2-1-1">A cylindrical can is to be made to hold <span class="process-math">\(1\text{ L}\)</span> of oil. Find the dimensions that will minimize the cost of the metal to manufacture the can.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-cylindrical-can-diagram.svg" role="img" class="contained" alt="A 3D perspective diagram of a cylindrical can showing the radius r on the top circular lid and height h along the vertical edge."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-cylindrical-can-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-cylindrical-can-optimization-3-1">We apply our structured 9-step max-min strategy to minimize material manufacturing costs:<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-cylindrical-can-optimization-3-2">
+<li id="ex-cylindrical-can-optimization-3-2-1">
+<div class="para" id="ex-cylindrical-can-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(r\)</span> represent the radius of the circular base and top lid (in centimeters), and let <span class="process-math">\(h\)</span> represent the vertical height of the cylinder (in centimeters).<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.1"><a href="#ex-cylindrical-can-optimization-3-2-1" title="Copy heading and permalink for Item 270.1" aria-label="Copy heading and permalink for Item 270.1">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-2">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> Minimizing the cost of the manufacturing metal means minimizing the total surface area, <span class="process-math">\(A\text{,}\)</span> of the closed cylinder:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-2-1-3">
+\begin{equation*}
+A = 2\pi r^2 + 2\pi rh
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.2"><a href="#ex-cylindrical-can-optimization-3-2-2" title="Copy heading and permalink for Item 270.2" aria-label="Copy heading and permalink for Item 270.2">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-3">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The volume capacity is fixed at <span class="process-math">\(1\text{ L}\text{.}\)</span> Converting this to standard geometric metrics gives <span class="process-math">\(1\text{ L} = 1000\text{ cm}^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-3-1-4">
+\begin{equation*}
+V = \pi r^2 h = 1000
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.3"><a href="#ex-cylindrical-can-optimization-3-2-3" title="Copy heading and permalink for Item 270.3" aria-label="Copy heading and permalink for Item 270.3">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-4">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Isolating <span class="process-math">\(h\)</span> in our volume constraint formula gives <span class="process-math">\(h = \frac{1000}{\pi r^2}\text{.}\)</span> Substituting this directly into the area objective equation yields:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-4-1-4">
+\begin{equation*}
+A(r) = 2\pi r^2 + 2\pi r \left(\frac{1000}{\pi r^2}\right) = 2\pi r^2 + \frac{2000}{r}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.4"><a href="#ex-cylindrical-can-optimization-3-2-4" title="Copy heading and permalink for Item 270.4" aria-label="Copy heading and permalink for Item 270.4">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-5">
+<div class="para" id="ex-cylindrical-can-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> Because the radius must be physically real, <span class="process-math">\(r \gt 0\text{.}\)</span> There is no upper restriction on the radius, so the physical domain is the open interval <span class="process-math">\((0, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.5"><a href="#ex-cylindrical-can-optimization-3-2-5" title="Copy heading and permalink for Item 270.5" aria-label="Copy heading and permalink for Item 270.5">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-6">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Differentiating <span class="process-math">\(A(r)\)</span> with respect to <span class="process-math">\(r\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-6-1-4">
+\begin{equation*}
+A'(r) = 4\pi r - \frac{2000}{r^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.6"><a href="#ex-cylindrical-can-optimization-3-2-6" title="Copy heading and permalink for Item 270.6" aria-label="Copy heading and permalink for Item 270.6">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-7">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero to locate potential extrema:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-7-1-2">
+\begin{equation*}
+4\pi r = \frac{2000}{r^2} \implies 4\pi r^3 = 2000 \implies r^3 = \frac{500}{\pi}
+\end{equation*}
+</div>
+<div class="para">Taking the cube root reveals our single interior critical number:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-7-1-3">
+\begin{equation*}
+r = \sqrt[3]{\frac{500}{\pi}} \approx 5.42\text{ cm}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.7"><a href="#ex-cylindrical-can-optimization-3-2-7" title="Copy heading and permalink for Item 270.7" aria-label="Copy heading and permalink for Item 270.7">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-8">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the Second Derivative Test to confirm a minimum point:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-8-1-2">
+\begin{equation*}
+A''(r) = 4\pi + \frac{4000}{r^3}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(r \gt 0\text{,}\)</span> the value of <span class="process-math">\(A''(r)\)</span> is always strictly positive, which indicates that the curve is concave up everywhere on its domain. This verifies that our critical value creates an absolute minimum.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.8"><a href="#ex-cylindrical-can-optimization-3-2-8" title="Copy heading and permalink for Item 270.8" aria-label="Copy heading and permalink for Item 270.8">🔗</a></div>
+</li>
+<li id="ex-cylindrical-can-optimization-3-2-9">
+<div class="para logical" id="ex-cylindrical-can-optimization-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Substituting the optimal radius <span class="process-math">\(r = \sqrt[3]{\frac{500}{\pi}}\)</span> back into our isolated height constraint:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-9-1-3">
+\begin{equation*}
+h = \frac{1000}{\pi r^2} = \frac{2 \cdot 500}{\pi \left(\frac{500}{\pi}\right)^{2/3}} = 2\sqrt[3]{\frac{500}{\pi}} = 2r
+\end{equation*}
+</div>
+<div class="para">Evaluating the numerical dimensions gives:</div>
+<div class="displaymath process-math" id="ex-cylindrical-can-optimization-3-2-9-1-4">
+\begin{equation*}
+r \approx 5.42\text{ cm} \quad \text{and} \quad h \approx 2(5.42) = 10.84\text{ cm}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cylindrical-can-optimization-3-2-9-2">To minimize the cost of the manufacturing metal, the can should be designed so that its height is exactly twice its radius (<span class="process-math">\(h = 2r\)</span>), yielding a radius of approximately 5.42 cm and a height of approximately 10.84 cm.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-can-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 270.9"><a href="#ex-cylindrical-can-optimization-3-2-9" title="Copy heading and permalink for Item 270.9" aria-label="Copy heading and permalink for Item 270.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 270.1"><a href="#ex-cylindrical-can-optimization-3" title="Copy heading and permalink for Solution 270.1" aria-label="Copy heading and permalink for Solution 270.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 270: Cylindrical Can Optimization"><a href="#ex-cylindrical-can-optimization" title="Copy heading and permalink for Checkpoint 270: Cylindrical Can Optimization" aria-label="Copy heading and permalink for Checkpoint 270: Cylindrical Can Optimization">🔗</a></div></article></details><details id="ex-cylindrical-cost-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">271</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylindrical Cost Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;grid-template-columns:61.5384615384615% 35.8974358974359%;column-gap:2.5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="para" id="ex-cylindrical-cost-optimization-2-1-1">A circular cylindrical container, open at the top, is to have a capacity of <span class="process-math">\(24\pi\text{ in}^3\text{.}\)</span> The cost of the material used for the bottom of the container is <span class="process-math">\(15\)</span> cents per <span class="process-math">\(\text{in}^2\)</span> and that of the material used for the curved part is <span class="process-math">\(5\)</span> cents per <span class="process-math">\(\text{in}^2\text{.}\)</span> If there is no waste of material, find the dimensions that will minimize the cost of the material.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/img-open-cylindrical-cost.svg" role="img" class="contained" alt="An open-top cylindrical container showing a radius r on the bottom base and a height h along the side panel."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-cylindrical-cost-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-cylindrical-cost-optimization-3-1">We apply our structured 9-step max-min strategy to minimize total component costs:<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-cylindrical-cost-optimization-3-2">
+<li id="ex-cylindrical-cost-optimization-3-2-1">
+<div class="para" id="ex-cylindrical-cost-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(r\)</span> represent the radius of the circular base (in inches) and <span class="process-math">\(h\)</span> represent the vertical height of the cylinder (in inches).<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.1"><a href="#ex-cylindrical-cost-optimization-3-2-1" title="Copy heading and permalink for Item 271.1" aria-label="Copy heading and permalink for Item 271.1">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-2">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to minimize the total material manufacturing cost, <span class="process-math">\(C\text{,}\)</span> in cents. The cost is the sum of the base cost and the side panel cost:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-2-1-3">
+\begin{equation*}
+C = (\text{Cost of Base}) \times (\text{Area of Base}) + (\text{Cost of Side}) \times (\text{Area of Side})
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-2-1-4">
+\begin{equation*}
+C = 15(\pi r^2) + 5(2\pi rh) = 15\pi r^2 + 10\pi rh
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.2"><a href="#ex-cylindrical-cost-optimization-3-2-2" title="Copy heading and permalink for Item 271.2" aria-label="Copy heading and permalink for Item 271.2">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-3">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The target capacity volume of the open cylinder is constrained to exactly <span class="process-math">\(24\pi\text{ in}^3\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-3-1-3">
+\begin{equation*}
+V = \pi r^2 h = 24\pi
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.3"><a href="#ex-cylindrical-cost-optimization-3-2-3" title="Copy heading and permalink for Item 271.3" aria-label="Copy heading and permalink for Item 271.3">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-4">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Simplifying the volume constraint equation allows us to isolate <span class="process-math">\(h\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-4-1-3">
+\begin{equation*}
+r^2 h = 24 \implies h = \frac{24}{r^2}
+\end{equation*}
+</div>
+<div class="para">Substituting this back into our cost expression removes the independent variable height dimension:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-4-1-4">
+\begin{equation*}
+C(r) = 15\pi r^2 + 10\pi r \left(\frac{24}{r^2}\right) = 15\pi r^2 + \frac{240\pi}{r}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.4"><a href="#ex-cylindrical-cost-optimization-3-2-4" title="Copy heading and permalink for Item 271.4" aria-label="Copy heading and permalink for Item 271.4">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-5">
+<div class="para" id="ex-cylindrical-cost-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The physical radius must be positive, and there is no maximum mathematical restriction. The domain is the open interval <span class="process-math">\((0, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.5"><a href="#ex-cylindrical-cost-optimization-3-2-5" title="Copy heading and permalink for Item 271.5" aria-label="Copy heading and permalink for Item 271.5">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-6">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Taking the derivative of <span class="process-math">\(C(r)\)</span> with respect to <span class="process-math">\(r\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-6-1-4">
+\begin{equation*}
+C'(r) = 30\pi r - \frac{240\pi}{r^2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.6"><a href="#ex-cylindrical-cost-optimization-3-2-6" title="Copy heading and permalink for Item 271.6" aria-label="Copy heading and permalink for Item 271.6">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-7">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-7-1-2">
+\begin{equation*}
+30\pi r = \frac{240\pi}{r^2} \implies 30\pi r^3 = 240\pi \implies r^3 = 8 \implies r = 2
+\end{equation*}
+</div>
+<div class="para">The single interior critical number is <span class="process-math">\(r = 2\)</span> inches.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.7"><a href="#ex-cylindrical-cost-optimization-3-2-7" title="Copy heading and permalink for Item 271.7" aria-label="Copy heading and permalink for Item 271.7">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-8">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the Second Derivative Test to confirm a minimum cost value:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-8-1-2">
+\begin{equation*}
+C''(r) = 30\pi + \frac{480\pi}{r^3}
+\end{equation*}
+</div>
+<div class="para">Evaluating at our critical number: <span class="process-math">\(C''(2) = 30\pi + \frac{480\pi}{8} = 30\pi + 60\pi = 90\pi \gt 0\text{.}\)</span> Since the second derivative is positive, the function is concave up, verifying an absolute minimum.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.8"><a href="#ex-cylindrical-cost-optimization-3-2-8" title="Copy heading and permalink for Item 271.8" aria-label="Copy heading and permalink for Item 271.8">🔗</a></div>
+</li>
+<li id="ex-cylindrical-cost-optimization-3-2-9">
+<div class="para logical" id="ex-cylindrical-cost-optimization-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Substituting the optimal radius <span class="process-math">\(r = 2\)</span> inches back into the constraint equation yields the height parameter:</div>
+<div class="displaymath process-math" id="ex-cylindrical-cost-optimization-3-2-9-1-3">
+\begin{equation*}
+h = \frac{24}{(2)^2} = \frac{24}{4} = 6\text{ inches}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cylindrical-cost-optimization-3-2-9-2">The dimensions that will minimize the total material cost are a radius of 2 inches and a height of 6 inches.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylindrical-cost-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 271.9"><a href="#ex-cylindrical-cost-optimization-3-2-9" title="Copy heading and permalink for Item 271.9" aria-label="Copy heading and permalink for Item 271.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 271.1"><a href="#ex-cylindrical-cost-optimization-3" title="Copy heading and permalink for Solution 271.1" aria-label="Copy heading and permalink for Solution 271.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 271: Cylindrical Cost Optimization"><a href="#ex-cylindrical-cost-optimization" title="Copy heading and permalink for Checkpoint 271: Cylindrical Cost Optimization" aria-label="Copy heading and permalink for Checkpoint 271: Cylindrical Cost Optimization">🔗</a></div></article></details><details id="ex-cylinder-in-sphere-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">272</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylinder in Sphere Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-cylinder-in-sphere-optimization-2-1">Find the dimensions of the right circular cylinder of greatest volume that can be inscribed in a sphere of radius <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-inscribed-cylinder-3d.svg" role="img" class="contained" alt="A 3D transparent wireframe sphere of radius 3 enclosing a blue inscribed right circular cylinder with radius r and height h."></div></div>
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-cylinder-cross-section.svg" role="img" class="contained" alt="A 2D cross-section view showing a rectangle inscribed inside a circle of radius 3. A right triangle links the origin to a corner with hypotenuse 3, base r, and height h over 2."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-cylinder-in-sphere-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-1">We use our 9-step max-min process, mapping the 3D dimensions to the 2D cross-section right triangle:<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-cylinder-in-sphere-optimization-3-2">
+<li id="ex-cylinder-in-sphere-optimization-3-2-1">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(r\)</span> be the radius of the cylinder and <span class="process-math">\(h\)</span> be its overall height. Looking at the 2D cross-section slicing through the center, the cylinder appears as an inscribed rectangle of width <span class="process-math">\(2r\)</span> and height <span class="process-math">\(h\)</span> inside a circle of radius <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.1"><a href="#ex-cylinder-in-sphere-optimization-3-2-1" title="Copy heading and permalink for Item 272.1" aria-label="Copy heading and permalink for Item 272.1">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-2">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to maximize the total internal volume, <span class="process-math">\(V\text{,}\)</span> of a standard cylinder:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-2-1-3">
+\begin{equation*}
+V = \pi r^2 h
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.2"><a href="#ex-cylinder-in-sphere-optimization-3-2-2" title="Copy heading and permalink for Item 272.2" aria-label="Copy heading and permalink for Item 272.2">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-3">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> From the origin out to a corner of the cylinder, a right triangle is formed with a base of <span class="process-math">\(r\text{,}\)</span> a vertical height of <span class="process-math">\(\frac{h}{2}\text{,}\)</span> and a hypotenuse equal to the sphere’s radius, <span class="process-math">\(3\text{.}\)</span> Applying the Pythagorean theorem yields:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-3-1-5">
+\begin{equation*}
+r^2 + \left(\frac{h}{2}\right)^2 = 3^2 \implies r^2 + \frac{h^2}{4} = 9
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.3"><a href="#ex-cylinder-in-sphere-optimization-3-2-3" title="Copy heading and permalink for Item 272.3" aria-label="Copy heading and permalink for Item 272.3">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-4">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> It is easiest to isolate <span class="process-math">\(r^2\)</span> in the constraint equation: <span class="process-math">\(r^2 = 9 - \frac{h^2}{4}\text{.}\)</span> Substituting this directly into the volume objective equation removes the radius variable:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-4-1-4">
+\begin{equation*}
+V(h) = \pi \left(9 - \frac{h^2}{4}\right)h = 9\pi h - \frac{\pi}{4}h^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.4"><a href="#ex-cylinder-in-sphere-optimization-3-2-4" title="Copy heading and permalink for Item 272.4" aria-label="Copy heading and permalink for Item 272.4">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-5">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The vertical height must be positive, and it cannot exceed the total diameter of the surrounding sphere. This bounds our independent variable to the closed interval <span class="process-math">\(\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.5"><a href="#ex-cylinder-in-sphere-optimization-3-2-5" title="Copy heading and permalink for Item 272.5" aria-label="Copy heading and permalink for Item 272.5">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-6">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Differentiating <span class="process-math">\(V(h)\)</span> with respect to <span class="process-math">\(h\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-6-1-4">
+\begin{equation*}
+V'(h) = 9\pi - \frac{3\pi}{4}h^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.6"><a href="#ex-cylinder-in-sphere-optimization-3-2-6" title="Copy heading and permalink for Item 272.6" aria-label="Copy heading and permalink for Item 272.6">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-7">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-7-1-2">
+\begin{equation*}
+9\pi - \frac{3\pi}{4}h^2 = 0 \implies \frac{3}{4}h^2 = 9 \implies h^2 = 12
+\end{equation*}
+</div>
+<div class="para">Taking the square root gives our single meaningful interior critical number:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-7-1-3">
+\begin{equation*}
+h = \sqrt{12} = 2\sqrt{3} \approx 3.46\text{ in.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.7"><a href="#ex-cylinder-in-sphere-optimization-3-2-7" title="Copy heading and permalink for Item 272.7" aria-label="Copy heading and permalink for Item 272.7">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-8">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> Evaluating the boundary interval endpoints alongside our critical number using the Closed Interval Method:</div>
+<ul class="disc" id="ex-cylinder-in-sphere-optimization-3-2-8-1-2">
+<li id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-1">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-1-1">
+<span class="process-math">\(\displaystyle V(0) = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-2">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-2-1">
+<span class="process-math">\(\displaystyle V(6) = 9\pi(6) - \frac{\pi}{4}(6)^3 = 54\pi - 54\pi = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-3">
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-8-1-2-3-1">
+<span class="process-math">\(\displaystyle V(2\sqrt{3}) = 9\pi(2\sqrt{3}) - \frac{\pi}{4}(2\sqrt{3})^3 = 18\sqrt{3}\pi - 6\sqrt{3}\pi = 12\sqrt{3}\pi \approx 65.30\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The height value <span class="process-math">\(h = 2\sqrt{3}\)</span> yields the absolute maximum possible volume.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.8"><a href="#ex-cylinder-in-sphere-optimization-3-2-8" title="Copy heading and permalink for Item 272.8" aria-label="Copy heading and permalink for Item 272.8">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-sphere-optimization-3-2-9">
+<div class="para logical" id="ex-cylinder-in-sphere-optimization-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Find the matching radius component by substituting <span class="process-math">\(h^2 = 12\)</span> back into our isolated constraint relationship formula:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-sphere-optimization-3-2-9-1-3">
+\begin{equation*}
+r^2 = 9 - \frac{12}{4} = 9 - 3 = 6 \implies r = \sqrt{6} \approx 2.45\text{ in.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cylinder-in-sphere-optimization-3-2-9-2">The dimensions that yield the maximum cylinder volume are a radius of <span class="process-math">\(r = \sqrt{6} \approx \mathbf{2.45}\)</span> and a height of <span class="process-math">\(h = 2\sqrt{3} \approx \mathbf{3.46}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-sphere-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 272.9"><a href="#ex-cylinder-in-sphere-optimization-3-2-9" title="Copy heading and permalink for Item 272.9" aria-label="Copy heading and permalink for Item 272.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 272.1"><a href="#ex-cylinder-in-sphere-optimization-3" title="Copy heading and permalink for Solution 272.1" aria-label="Copy heading and permalink for Solution 272.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 272: Cylinder in Sphere Optimization"><a href="#ex-cylinder-in-sphere-optimization" title="Copy heading and permalink for Checkpoint 272: Cylinder in Sphere Optimization" aria-label="Copy heading and permalink for Checkpoint 272: Cylinder in Sphere Optimization">🔗</a></div></article></details><details id="ex-cylinder-in-cone-optimization" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">273</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylinder in Cone Optimization.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="ex-cylinder-in-cone-optimization-2-1">Find the maximum volume of a right circular cylinder that can be inscribed in a cone of altitude <span class="process-math">\(12\)</span> centimeters and base radius <span class="process-math">\(4\)</span> centimeters, if the axes of the cylinder and cone coincide.<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-cylinder-cone-3d.svg" role="img" class="contained" alt="A 3D perspective projection of an outer cone of height 12 and base radius 4 enclosing an inscribed cylinder of radius r and height h."></div></div>
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-cylinder-cone-cross-section.svg" role="img" class="contained" alt="A 2D cross-section view showing a rectangle inscribed inside an isosceles triangle. Similar triangles link the height of the cone, its base radius, and the variables r and h."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-cylinder-in-cone-optimization-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-1">We use our 9-step max-min process, utilizing similar triangles from the cross-section to build the constraint:<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-cylinder-in-cone-optimization-3-2">
+<li id="ex-cylinder-in-cone-optimization-3-2-1">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\(r\)</span> represent the radius of the inscribed cylinder and <span class="process-math">\(h\)</span> represent its height. The 2D cross-section cutting vertically through the vertex shows a rectangle inscribed inside an isosceles triangle of base width <span class="process-math">\(8\)</span> and altitude <span class="process-math">\(12\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.1"><a href="#ex-cylinder-in-cone-optimization-3-2-1" title="Copy heading and permalink for Item 273.1" aria-label="Copy heading and permalink for Item 273.1">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-2">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> We want to maximize the total volume, <span class="process-math">\(V\text{,}\)</span> of the cylinder:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-2-1-3">
+\begin{equation*}
+V = \pi r^2 h
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.2"><a href="#ex-cylinder-in-cone-optimization-3-2-2" title="Copy heading and permalink for Item 273.2" aria-label="Copy heading and permalink for Item 273.2">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-3">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> Looking at the right-hand side of the vertical center axis in the cross-section diagram, the small top triangle is similar to the large overall right triangle. This sets up a proportional geometric ratio:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-3-1-2">
+\begin{equation*}
+\frac{12 - h}{r} = \frac{12}{4} \implies \frac{12 - h}{r} = 3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.3"><a href="#ex-cylinder-in-cone-optimization-3-2-3" title="Copy heading and permalink for Item 273.3" aria-label="Copy heading and permalink for Item 273.3">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-4">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Isolating <span class="process-math">\(h\)</span> in our proportion yields <span class="process-math">\(12 - h = 3r \implies h = 12 - 3r\text{.}\)</span> Substituting this directly into the cylinder volume objective formula eliminates the height variable:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-4-1-4">
+\begin{equation*}
+V(r) = \pi r^2 (12 - 3r) = 12\pi r^2 - 3\pi r^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.4"><a href="#ex-cylinder-in-cone-optimization-3-2-4" title="Copy heading and permalink for Item 273.4" aria-label="Copy heading and permalink for Item 273.4">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-5">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The cylinder’s radius must be non-negative, and it cannot exceed the total base radius of the surrounding cone. This limits our independent variable to the closed interval <span class="process-math">\(\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.5"><a href="#ex-cylinder-in-cone-optimization-3-2-5" title="Copy heading and permalink for Item 273.5" aria-label="Copy heading and permalink for Item 273.5">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-6">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Differentiating <span class="process-math">\(V(r)\)</span> with respect to <span class="process-math">\(r\)</span> yields:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-6-1-4">
+\begin{equation*}
+V'(r) = 24\pi r - 9\pi r^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.6"><a href="#ex-cylinder-in-cone-optimization-3-2-6" title="Copy heading and permalink for Item 273.6" aria-label="Copy heading and permalink for Item 273.6">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-7">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-7-1-2">
+\begin{equation*}
+3\pi r(8 - 3r) = 0 \implies r = 0 \quad \text{or} \quad r = \frac{8}{3}
+\end{equation*}
+</div>
+<div class="para">The value <span class="process-math">\(r = \frac{8}{3} \approx 2.67\text{ cm}\)</span> serves as our single interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.7"><a href="#ex-cylinder-in-cone-optimization-3-2-7" title="Copy heading and permalink for Item 273.7" aria-label="Copy heading and permalink for Item 273.7">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-8">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> Evaluating the boundary interval endpoints alongside our interior critical number using the Closed Interval Method:</div>
+<ul class="disc" id="ex-cylinder-in-cone-optimization-3-2-8-1-2">
+<li id="ex-cylinder-in-cone-optimization-3-2-8-1-2-1">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-8-1-2-1-1">
+<span class="process-math">\(\displaystyle V(0) = 0\text{ cm}^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-8-1-2-2">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-8-1-2-2-1">
+<span class="process-math">\(\displaystyle V(4) = 12\pi(4)^2 - 3\pi(4)^3 = 192\pi - 192\pi = 0\text{ cm}^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-8-1-2-3">
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-8-1-2-3-1">
+<span class="process-math">\(\displaystyle V\left(\dfrac{8}{3}\right) = 12\pi\left(\dfrac{8}{3}\right)^2 - 3\pi\left(\dfrac{8}{3}\right)^3 
+= \dfrac{256\pi}{3} - \dfrac{512\pi}{9} = \dfrac{256\pi}{9}\text{ cm}^3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">The radius value <span class="process-math">\(r = \dfrac{8}{3}\)</span> yields the absolute maximum possible volume.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.8"><a href="#ex-cylinder-in-cone-optimization-3-2-8" title="Copy heading and permalink for Item 273.8" aria-label="Copy heading and permalink for Item 273.8">🔗</a></div>
+</li>
+<li id="ex-cylinder-in-cone-optimization-3-2-9">
+<div class="para logical" id="ex-cylinder-in-cone-optimization-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> The problem asks for the maximum volume of the cylinder.</div>
+<div class="displaymath process-math" id="ex-cylinder-in-cone-optimization-3-2-9-1-2">
+\begin{equation*}
+V_{\text{max}} = \dfrac{256\pi}{9} \approx 89.36\text{ cm}^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-cylinder-in-cone-optimization-3-2-9-2">The maximum volume of a right circular cylinder inscribed within the specified cone is exactly <span class="process-math">\(\dfrac{256\pi}{9}\text{ cm}^3\)</span> (or approximately 89.36 cubic centimeters).<div class="autopermalink" data-description="Paragraph"><a href="#ex-cylinder-in-cone-optimization-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 273.9"><a href="#ex-cylinder-in-cone-optimization-3-2-9" title="Copy heading and permalink for Item 273.9" aria-label="Copy heading and permalink for Item 273.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 273.1"><a href="#ex-cylinder-in-cone-optimization-3" title="Copy heading and permalink for Solution 273.1" aria-label="Copy heading and permalink for Solution 273.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 273: Cylinder in Cone Optimization"><a href="#ex-cylinder-in-cone-optimization" title="Copy heading and permalink for Checkpoint 273: Cylinder in Cone Optimization" aria-label="Copy heading and permalink for Checkpoint 273: Cylinder in Cone Optimization">🔗</a></div></article></details><details id="ex-closest-point-parabola" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">274</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Closest Point.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"> <div class="para" id="ex-closest-point-parabola-2-1">Find the point on the parabola <span class="process-math">\(y^2 = 2x\)</span> that is closest to the point <span class="process-math">\((1,4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/img-parabola-closest-point.svg" role="img" class="contained" alt="A plot of the horizontal parabola x equals y squared over 2. The external point (1,4) is plotted, along with a line segment connecting it to the closest point on the curve at (2,2)."></div> <div class="solutions"><details id="ex-closest-point-parabola-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-closest-point-parabola-3-1">We use our 9-step max-min strategy to solve this distance optimization problem:<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal ol-marker-1" id="ex-closest-point-parabola-3-2">
+<li id="ex-closest-point-parabola-3-2-1">
+<div class="para" id="ex-closest-point-parabola-3-2-1-1">
+<em class="alert">Draw and label a picture.</em> Let <span class="process-math">\((x, y)\)</span> represent an arbitrary point lying directly on the parabola curve <span class="process-math">\(y^2 = 2x\text{,}\)</span> as sketched in the figure. We are looking for the coordinates that minimize the distance to the static coordinate point <span class="process-math">\((1, 4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.1"><a href="#ex-closest-point-parabola-3-2-1" title="Copy heading and permalink for Item 274.1" aria-label="Copy heading and permalink for Item 274.1">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-2">
+<div class="para logical" id="ex-closest-point-parabola-3-2-2-1">
+<div class="para">
+<em class="alert">Find the objective function.</em> By the standard distance formula, the distance <span class="process-math">\(d\)</span> between <span class="process-math">\((x,y)\)</span> and <span class="process-math">\((1,4)\)</span> is:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-2-1-5">
+\begin{equation*}
+d = \sqrt{(x - 1)^2 + (y - 4)^2}
+\end{equation*}
+</div>
+<div class="para">To make the calculus cleaner, we can choose to optimize the square of the distance, <span class="process-math">\(D = d^2\text{,}\)</span> because the value that minimizes the squared distance will also minimize the true distance:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-2-1-7">
+\begin{equation*}
+D = (x - 1)^2 + (y - 4)^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.2"><a href="#ex-closest-point-parabola-3-2-2" title="Copy heading and permalink for Item 274.2" aria-label="Copy heading and permalink for Item 274.2">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-3">
+<div class="para logical" id="ex-closest-point-parabola-3-2-3-1">
+<div class="para">
+<em class="alert">Identify the constraints.</em> The point must remain strictly bound to the parabola, which gives us our constraint equation:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-3-1-2">
+\begin{equation*}
+y^2 = 2x \implies x = \frac{y^2}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.3"><a href="#ex-closest-point-parabola-3-2-3" title="Copy heading and permalink for Item 274.3" aria-label="Copy heading and permalink for Item 274.3">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-4">
+<div class="para logical" id="ex-closest-point-parabola-3-2-4-1">
+<div class="para">
+<em class="alert">Reduce the objective function to one variable.</em> Substituting the expression for <span class="process-math">\(x\)</span> directly into the squared-distance objective equation leaves us with a single independent variable equation in terms of <span class="process-math">\(y\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-4-1-4">
+\begin{equation*}
+D(y) = \left(\frac{y^2}{2} - 1\right)^2 + (y - 4)^2
+\end{equation*}
+</div>
+<div class="para">Expanding the algebraic components yields:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-4-1-5">
+\begin{equation*}
+D(y) = \left(\frac{y^4}{4} - y^2 + 1\right) + (y^2 - 8y + 16) = \frac{y^4}{4} - 8y + 17
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.4"><a href="#ex-closest-point-parabola-3-2-4" title="Copy heading and permalink for Item 274.4" aria-label="Copy heading and permalink for Item 274.4">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-5">
+<div class="para" id="ex-closest-point-parabola-3-2-5-1">
+<em class="alert">Identify the domain of the objective function.</em> The vertical coordinate value <span class="process-math">\(y\)</span> can technically be any real number along the continuous open tracking interval, making our domain <span class="process-math">\((-\infty, \infty)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.5"><a href="#ex-closest-point-parabola-3-2-5" title="Copy heading and permalink for Item 274.5" aria-label="Copy heading and permalink for Item 274.5">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-6">
+<div class="para logical" id="ex-closest-point-parabola-3-2-6-1">
+<div class="para">
+<em class="alert">Differentiate the objective function.</em> Differentiating <span class="process-math">\(D(y)\)</span> with respect to <span class="process-math">\(y\)</span> using the power rule yields:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-6-1-4">
+\begin{equation*}
+D'(y) = y^3 - 8
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.6"><a href="#ex-closest-point-parabola-3-2-6" title="Copy heading and permalink for Item 274.6" aria-label="Copy heading and permalink for Item 274.6">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-7">
+<div class="para logical" id="ex-closest-point-parabola-3-2-7-1">
+<div class="para">
+<em class="alert">Find the critical numbers.</em> We set the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-7-1-2">
+\begin{equation*}
+y^3 - 8 = 0 \implies y^3 = 8 \implies y = 2
+\end{equation*}
+</div>
+<div class="para">The coordinate value <span class="process-math">\(y = 2\)</span> serves as our single real interior critical number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.7"><a href="#ex-closest-point-parabola-3-2-7" title="Copy heading and permalink for Item 274.7" aria-label="Copy heading and permalink for Item 274.7">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-8">
+<div class="para logical" id="ex-closest-point-parabola-3-2-8-1">
+<div class="para">
+<em class="alert">Test the critical numbers.</em> We apply the First Derivative Test around our critical number <span class="process-math">\(y = 2\text{:}\)</span>
+</div>
+<ul class="disc" id="ex-closest-point-parabola-3-2-8-1-3">
+<li id="ex-closest-point-parabola-3-2-8-1-3-1">
+<div class="para" id="ex-closest-point-parabola-3-2-8-1-3-1-1">For <span class="process-math">\(y \lt 2\text{,}\)</span> <span class="process-math">\(D'(y) \lt 0\)</span> (the distance squared function is decreasing).<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-8-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-closest-point-parabola-3-2-8-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-8-1-3-2">
+<div class="para" id="ex-closest-point-parabola-3-2-8-1-3-2-1">For <span class="process-math">\(y \gt 2\text{,}\)</span> <span class="process-math">\(D'(y) \gt 0\)</span> (the distance squared function is increasing).<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-8-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-closest-point-parabola-3-2-8-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Since the derivative changes sign from negative to positive at <span class="process-math">\(y = 2\text{,}\)</span> it represents an absolute minimum.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.8"><a href="#ex-closest-point-parabola-3-2-8" title="Copy heading and permalink for Item 274.8" aria-label="Copy heading and permalink for Item 274.8">🔗</a></div>
+</li>
+<li id="ex-closest-point-parabola-3-2-9">
+<div class="para logical" id="ex-closest-point-parabola-3-2-9-1">
+<div class="para">
+<em class="alert">Answer the question.</em> Substituting the optimal vertical parameter <span class="process-math">\(y = 2\)</span> back into our isolated curve constraint formula calculates the remaining coordinate value:</div>
+<div class="displaymath process-math" id="ex-closest-point-parabola-3-2-9-1-3">
+\begin{equation*}
+x = \frac{(2)^2}{2} = \frac{4}{2} = 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-closest-point-parabola-3-2-9-2">The point on the parabola <span class="process-math">\(y^2 = 2x\)</span> that is closest to <span class="process-math">\((1,4)\)</span> is exactly <span class="process-math">\((2,2)\)</span>.<div class="autopermalink" data-description="Paragraph"><a href="#ex-closest-point-parabola-3-2-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 274.9"><a href="#ex-closest-point-parabola-3-2-9" title="Copy heading and permalink for Item 274.9" aria-label="Copy heading and permalink for Item 274.9">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 274.1"><a href="#ex-closest-point-parabola-3" title="Copy heading and permalink for Solution 274.1" aria-label="Copy heading and permalink for Solution 274.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 274: Closest Point"><a href="#ex-closest-point-parabola" title="Copy heading and permalink for Checkpoint 274: Closest Point" aria-label="Copy heading and permalink for Checkpoint 274: Closest Point">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 3.5 Optimization"><a href="#sec-Optimization" title="Copy heading and permalink for Section: 3.5 Optimization" aria-label="Copy heading and permalink for Section: 3.5 Optimization">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-Summary-of-Graphical-Methods.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

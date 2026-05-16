@@ -76,6 +76,7 @@
       <xi:include href="./notes/36LHopital.ptx"/>
       <xi:include href="./notes/37MeanValue.ptx"/>
       <xi:include href="./notes/38Linearization.ptx"/>
+      <xi:include href="./notes/39NewtonMethod.ptx"/>
 
 
     </chapter>

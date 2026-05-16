@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-the-mean-value-theorem" class="notes">
+<title>3.7 The Mean Value Thoerem</title>
+<introduction>
+    <p>
+      The Mean Value Theorem (MVT) connects the average rate of change of a function over 
+      an interval to its instantaneous rate of change at a specific point within that interval. 
+      It serves as a foundational building block for many core concepts in calculus, 
+      including Rolle's Theorem and the proof of the Fundamental Theorem of Calculus.
+    </p>
+  </introduction>
+  <theorem xml:id="thm-mvt">
+    <title>Mean Value Theorem</title>
+    <statement>
+    <p>
+     If <m>f</m> is continuous on a closed interval <m>[a,b]</m> and differentiable on the open interval <m>(a,b)</m>, then there exists a number <m>c</m> in <m>(a,b)</m> such that
+          <me> f'(c)=\frac{f(b)-f(a)}{b-a}, </me>
+          or, equivalently,
+          <me> f(b)-f(a)=f'(c)(b-a). </me>
+    </p>
+    </statement>
+    </theorem>
+
+<example xml:id="ex-mvt-quadratic">
+  <statement>
+    <p> If <m>f(x)=\dfrac{1}{4}x^{2}+1</m>, show that <m>f</m> satisfies the hypothesis of the Mean Value Theorem on the interval <m>[-1,4]</m>, 
+        and find a number <m>c</m> in <m>(-1,4)</m> that satisfies the conclusion of the theorem. </p>
+  </statement>
+  <solution>
+    <p> First, we must check the two hypotheses of the Mean Value Theorem: </p>
+    <p>
+      <ol>
+        <li> <p> The function <m>f(x)</m> is a polynomial, so it is continuous everywhere, 
+            including on the closed interval <m>[-1,4]</m>. </p> </li>
+        <li> <p> The derivative is <m>f'(x) = \frac{1}{2}x</m>, which exists everywhere, 
+            meaning <m>f</m> is differentiable on the open interval <m>(-1,4)</m>. </p> </li>
+      </ol>
+    </p>
+    <p>
+      Since both hypotheses are satisfied, there exists a number <m>c</m> in <m>(-1,4)</m> such that:
+      <me>f'(c) = \frac{f(4) - f(-1)}{4 - (-1)}</me>
+    </p>
+    <p>
+      Next, we evaluate the function at the endpoints:
+      <me>f(4) = \frac{1}{4}(4)^2 + 1 = 5</me>
+      <me>f(-1) = \frac{1}{4}(-1)^2 + 1 = \frac{5}{4}</me>
+    </p>
+    <p>
+      Now, calculate the average rate of change:
+      <me>\frac{5 - \frac{5}{4}}{4 - (-1)} = \frac{\frac{15}{4}}{5} = \frac{3}{4}</me>
+    </p>
+    <p>
+      Finally, set <m>f'(c) = \frac{3}{4}</m> and solve for <m>c</m>:
+      <me>\frac{1}{2}c = \frac{3}{4} \implies c = \frac{3}{2}</me>
+    </p>
+    <p>
+      Since <m>c = \frac{3}{2}</m> (or <m>1.5</m>) lies within the open interval <m>(-1,4)</m>, this value satisfies the conclusion of the theorem.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="exer-sine-mvt-proof">
+  <statement>
+    <p>
+      Prove that if <m>u</m> and <m>v</m> are any real numbers, then
+      <me>|\sin u -\sin v|\leq |u-v|.</me>
+    </p>
+    <p>
+      <title>Hint</title>
+      Apply the Mean Value Theorem with <m>f(x)=\sin x</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      If <m>u = v</m>, then <m>|\sin u - \sin v| = 0</m> and <m>|u - v| = 0</m>. The inequality holds as <m>0 \leq 0</m>.
+    </p>
+    <p>
+      Without loss of generality, assume <m>u \lt v</m>. Let <m>f(x) = \sin x</m> on the closed interval <m>[u, v]</m>. 
+    </p>
+    <p>
+      We check the hypotheses of the Mean Value Theorem:
+      <ol>
+        <li>
+        <p>
+        The function <m>f(x) = \sin x</m> is continuous everywhere, so it is continuous on <m>[u, v]</m>.
+        </p>
+        </li>
+        <li>
+        <p>
+        The derivative <m>f'(x) = \cos x</m> exists everywhere, so <m>f</m> is differentiable on <m>(u, v)</m>.
+        </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      By the Mean Value Theorem, there exists a number <m>c</m> in <m>(u, v)</m> such that:
+      <me>\frac{\sin v - \sin u}{v - u} = \cos c</me>
+    </p>
+    <p>
+      Taking the absolute value of both sides gives:
+      <me>\left| \frac{\sin v - \sin u}{v - u} \right| = |\cos c|</me>
+      <me>\frac{|\sin u - \sin v|}{|u - v|} = |\cos c|</me>
+    </p>
+    <p>
+      We know that for any real number <m>c</m>, <m>|\cos c| \leq 1</m>. Substituting this inequality yields:
+      <me>\frac{|\sin u - \sin v|}{|u - v|} \leq 1</me>
+    </p>
+    <p>
+      Multiplying both sides by the positive quantity <m>|u - v|</m> completes the proof:
+      <me>|\sin u - \sin v| \leq |u - v| \qquad \blacksquare</me>
+    </p>
+  </solution>
+</exercise>
+
+</section>

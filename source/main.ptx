@@ -74,6 +74,9 @@
       <xi:include href="./notes/34Graph.ptx" />
       <xi:include href="./notes/35Optimization.ptx"/>
       <xi:include href="./notes/36LHopital.ptx"/>
+      <xi:include href="./notes/37MeanValue.ptx"/>
+      <xi:include href="./notes/38Linearization.ptx"/>
+
 
     </chapter>
 

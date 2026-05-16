@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-linearization-differentials">
+  <title>3.8 Linearization and Differentials</title>
+
+  <introduction>
+    <p>
+      Linearization refers to finding the linear approximation to a function at a given point. This process allows us to approximate complex, non-linear functions using simple linear equations (tangent lines) near a specific point of interest. By analyzing how small changes or increments in the input affect the output, we establish the foundation for differentials and error estimation in calculus.
+    </p>
+    <p>
+      Consider the equation <m>y=f(x)</m>. If the variable <m>x</m> has an initial value <m>x_{0}</m> and then is assigned a different value <m>x_{1}</m>, the difference <m>x_{1}-x_{0}</m> is called an <alert>increment</alert> of <m>x</m>. We denote an increment of <m>x</m> by the symbol <m>\Delta x</m> (read as <q>delta x</q>):
+      <me>\Delta x=x_{1}-x_{0}.</me>
+    </p>
+    <p>
+      The corresponding increment of <m>y=f(x)</m> is denoted by <m>\Delta y</m>:
+      <me>\Delta y=y_{1}-y_{0}=f(x_{1})-f(x_{0}).</me>
+    </p>
+    <p>
+      Since <m>x_{1}=x_{0}+\Delta x</m>, we can rewrite this as:
+      <me>\Delta y=f(x_{0}+\Delta x)-f(x_{0}).</me>
+    </p>
+  </introduction>
+
+  <definition xml:id="def-increment-y">
+    <statement>
+      <p>
+        Let <m>y=f(x)</m> and <m>\Delta x</m> be an increment of <m>x</m>. 
+        The <alert>increment <m>\Delta y</m> of <m>y</m></alert> is:
+        <me>\Delta y=f(x+\Delta x)-f(x).</me>
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-increment-derivative">
+    <title>Increment Definition of Derivative</title>
+    <statement>
+      <p>
+        The derivative can be expressed using increments as:
+        <me>f'(x)=\lim_{\Delta x \rightarrow 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}
+            =\lim_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}.</me>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    So far we treated <m>\dfrac{dy}{dx}</m> as one single symbol. 
+    Now we define <m>dy</m> and <m>dx</m> separately; 
+    these are called <alert>differentials</alert>.
+  </p>
+
+  <definition xml:id="def-differentials">
+    <title>Differentials</title>
+    <statement>
+      <p>
+        For <m>y=f(x)</m>, we define:
+        <ul>
+          <li>
+            <p>
+              <m>dx</m>, called the <alert>differential of <m>x</m>,</alert> 
+              by <m>dx=\Delta x</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>dy</m>, called the <alert>differential of <m>y</m>,</alert> 
+              by <m>dy=f'(x)dx</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="def-derivative-quotient">
+    <title>Derivative as a Quotient of Differentials</title>
+    <statement>
+      <p>
+        If <m>y=f(x)</m>, then the notation can be explicitly separated into a quotient:
+        <me>\frac{dy}{dx}=\frac{f'(x)dx}{dx}=f'(x).</me>
+      </p>
+    </statement>
+  </definition>
+
+  <fact xml:id="fact-linear-approximation">
+    <title>Linear Approximation Formula</title>
+    <statement>
+      <p>
+        If <m>y=f(x)</m>, with <m>f</m> differentiable, and if <m>\Delta x</m> is an increment of <m>x</m>, then:
+        <me>f(x+\Delta x) \approx f(x)+dy.</me>
+      </p>
+    </statement>
+  </fact>
+
+  <example xml:id="ex-differentials-quadratic">
+    <statement>
+      <p>
+        Let <m>y=3x^{2}-5</m> and let <m>\Delta x</m> be an increment of <m>x</m>.
+        <ol>
+          <li>
+            <p>
+              Find general formulas for <m>\Delta y</m> and <m>dy</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x</m> changes from 2 to 2.1, find the values of <m>\Delta y</m> and <m>dy</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <strong>Part 1: Find general formulas for <m>\Delta y</m> and <m>dy</m>.</strong>
+      </p>
+      <p>
+        To find the general formula for the increment <m>\Delta y</m>, we apply the definition <m>\Delta y = f(x + \Delta x) - f(x)</m>:
+        <md>
+          <mrow>\Delta y \amp = \left[3(x + \Delta x)^2 - 5\right] - \left[3x^2 - 5\right]</mrow>
+          <mrow>\amp = 3(x^2 + 2x\Delta x + (\Delta x)^2) - 5 - 3x^2 + 5</mrow>
+          <mrow>\amp = 3x^2 + 6x\Delta x + 3(\Delta x)^2 - 3x^2</mrow>
+          <mrow>\amp = 6x\Delta x + 3(\Delta x)^2</mrow>
+        </md>
+      </p>
+      <p>
+        To find the differential <m>dy</m>, we compute the derivative <m>f'(x)</m> and multiply by <m>dx</m>:
+        <me>f'(x) = 6x \implies dy = 6x\,dx</me>
+      </p>
+      
+      <p>
+        <strong>Part 2: Calculate values when <m>x</m> changes from 2 to 2.1.</strong>
+      </p>
+      <p>
+        From the given values, we identify the initial position and the change:
+        <me>x = 2</me>
+        <me>\Delta x = dx = 2.1 - 2 = 0.1</me>
+      </p>
+      <p>
+        Substitute these values into our general formula for <m>\Delta y</m>:
+        <md>
+          <mrow>\Delta y \amp = 6(2)(0.1) + 3(0.1)^2</mrow>
+          <mrow>\amp = 1.2 + 3(0.01)</mrow>
+          <mrow>\amp = 1.2 + 0.03 = 1.23</mrow>
+        </md>
+      </p>
+      <p>
+        Substitute these values into our general formula for <m>dy</m>:
+        <me>dy = 6(2)(0.1) = 1.2</me>
+      </p>
+      <p>
+        Notice that the differential <m>dy = 1.2</m> provides a close approximation to the true change <m>\Delta y = 1.23</m>.
+      </p>
+    </solution>
+  </example>
+  <example xml:id="ex-differentials-trig">
+    <statement>
+      <p>
+        Use differentials to approximate the change in <m>\sin \theta</m> if <m>\theta</m> changes from <m>60^{\circ}</m> to <m>61^{\circ}</m>. Find a linear approximation to <m>\sin 61^{\circ}</m> as well.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>f(\theta) = \sin \theta</m>. The differential of <m>y</m> is given by:
+        <me>dy = f'(\theta)\,d\theta = \cos \theta\,d\theta</me>
+      </p>
+      <p>
+        <alert>Important Note:</alert> Before substituting values into trigonometric derivatives, all angles and their changes must be converted from degrees to radians.
+      </p>
+      <p>
+        The initial angle and its increment are:
+        <me>\theta = 60^{\circ} = \frac{\pi}{3} \text{ radians}</me>
+        <me>d\theta = 1^{\circ} = \frac{\pi}{180} \text{ radians}</me>
+      </p>
+      <p>
+        <strong>Step 1: Approximate the change in <m>\sin \theta</m>.</strong>
+      </p>
+      <p>
+        We compute the approximate change using the differential <m>dy</m>:
+        <md>
+          <mrow>dy \amp = \cos\left(\frac{\pi}{3}\right) \cdot \frac{\pi}{180}</mrow>
+          <mrow>\amp = \frac{1}{2} \cdot \frac{\pi}{180}</mrow>
+          <mrow>\amp = \frac{\pi}{360} \approx 0.00873</mrow>
+        </md>
+      </p>
+      <p>
+        <strong>Step 2: Find the linear approximation to <m>\sin 61^{\circ}</m>.</strong>
+      </p>
+      <p>
+        Using the linear approximation formula <m>f(\theta + d\theta) \approx f(\theta) + dy</m>, we have:
+        <md>
+          <mrow>\sin 61^{\circ} \amp \approx \sin 60^{\circ} + dy</mrow>
+          <mrow>\amp = \frac{\sqrt{3}}{2} + \frac{\pi}{360}</mrow>
+          <mrow>\amp \approx 0.86603 + 0.00873 = 0.87476</mrow>
+        </md>
+      </p>
+    </solution>
+  </example>
+
+
+
+</section>

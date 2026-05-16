@@ -23,7 +23,7 @@
     In general, if we have a limit of the form:
     <me>\lim_{x\to a}\dfrac{f(x)}{g(x)}</me>
     where <m>f(x)\to 0</m> and <m>g(x)\to 0</m> as <m>x\to a</m>, 
-    then this limit may or may not exist and is called an <alert>indeterminate form of type 0/0</alert>.
+    then this limit may or may not exist and is called an <alert>indeterminate form of type <m>\dfrac{0}{0}</m></alert>.
     </p>
 </introduction>
 <example xml:id="example-cancel-common-factors">
@@ -110,6 +110,405 @@
         </p>
     </solution>
 </example>
+
+<p>
+  If we have a limit of the form
+  <me>\lim_{x\to\infty}\dfrac{f(x)}{g(x)}</me>
+  where both <m>f(x)</m> and <m>g(x) \to \pm \infty</m>, 
+  then the limit may or may not exist and is called an <term>indeterminate form of type <m>\dfrac{\infty}{\infty}</m></term>.
+</p>
+
+<example>
+    <title>Finding Limits at Infinity</title>
+  <statement>
+    <p>
+      Evaluate the following limit by dividing the numerator and denominator by the highest power of <m>x</m> that occurs in the denominator:
+    </p>
+    <me>\lim_{x\to\infty}\dfrac{x^{2}-1}{2x^{2}+1}</me>
+  </statement>
+  
+  <solution>
+    <p>
+      The highest power of <m>x</m> in the denominator is <m>x^2</m>. We divide every term in both the numerator and denominator by <m>x^2</m>:
+    </p>
+    <md>
+      <mrow>\lim_{x\to\infty}\dfrac{x^{2}-1}{2x^{2}+1} \amp= \lim_{x\to\infty}\dfrac{\dfrac{x^2}{x^2}-\dfrac{1}{x^2}}{\dfrac{2x^2}{x^2}+\dfrac{1}{x^2}}</mrow>
+      <mrow>\amp= \lim_{x\to\infty}\dfrac{1-\dfrac{1}{x^2}}{2+\dfrac{1}{x^2}}</mrow>
+    </md>
+    <p>
+      As <m>x \to \infty</m>, the term <m>\dfrac{1}{x^2} \to 0</m>. 
+      Applying the limit laws gives:
+    </p>
+    <md>
+      <mrow>\amp= \dfrac{1-0}{2+0}</mrow>
+      <mrow>\amp= \dfrac{1}{2}</mrow>
+    </md>
+  </solution>
+</example>
+
+<theorem xml:id="thm-lhospitals-rule">
+  <title>L'Hospital's Rule</title>
+  <statement>
+    <p>
+      Suppose <m>f</m> and <m>g</m> are differentiable and <m>g'(x) \neq 0</m> on an open interval <m>I</m> that contains <m>a</m> (except possibly at <m>a</m>). Suppose that
+      <me>\lim_{x\to a}f(x)=0 \quad \text{and} \quad \lim_{x\to a}g(x)=0</me>
+      or that
+      <me>\lim_{x\to a}f(x)=\pm \infty \quad \text{and} \quad \lim_{x\to a}g(x)=\pm \infty</me>.
+      (In other words, we have an indeterminate form of type <m>0/0</m> or <m>\infty/\infty</m>). Then
+      <me>\lim_{x\to a}\dfrac{f(x)}{g(x)}=\lim_{x\to a}\dfrac{f'(x)}{g'(x)}</me>
+      if the limit on the right side exists (or is <m>\infty</m> or <m>-\infty</m>).
+    </p>
+  </statement>
+</theorem>
+<proof>
+  <p> We will establish the proof for the special case where 
+    <m>\lim_{x \to a} f(x) = 0</m> and <m>\lim_{x \to a} g(x) = 0</m>, 
+    using a right-hand limit <m>x \to a^+</m>. 
+    We can extend or define <m>f(a) = 0</m> and <m>g(a) = 0</m>, 
+    making both functions continuous at <m>x = a</m>. </p>
+  <p> Let <m>x</m> be a point in <m>I</m> such that <m>x &gt; a</m>. </p>
+    
+  <p>
+  Because <m>f</m> and <m>g</m> are continuous on the closed interval <m>[a, x]</m> 
+  and differentiable on the open interval <m>(a, x)</m>, we can apply Mean Value Theorem (the next section). 
+  This guarantees that there exists a number <m>c</m> strictly between <m>a</m> and <m>x</m> 
+  (<m>a &lt; c &lt; x</m>) such that:
+  <me>\frac{f'(c)}{g'(c)} = \frac{f(x) - f(a)}{g(x) - g(a)}</me>
+  </p>
+  <p>
+    Since we defined <m>f(a) = 0</m> and <m>g(a) = 0</m>, this identity simplifies to:
+    <me>\frac{f'(c)}{g'(c)} = \frac{f(x) - 0}{g(x) - 0} = \frac{f(x)}{g(x)}</me>
+  </p>
+  <p>
+    Now, we take the limit as <m>x \to a^+</m>. 
+    As <m>x</m> approaches <m>a</m> from the right, the value of <m>c</m> 
+    (which is squeezed between <m>a</m> and <m>x</m>) is forced to approach <m>a</m> as well 
+    (<m>c \to a^+</m>). Therefore:
+    <me>\lim_{x \to a^+} \frac{f(x)}{g(x)} = \lim_{x \to a^+} \frac{f'(c)}{g'(c)} 
+      = \lim_{c \to a^+} \frac{f'(c)}{g'(c)}</me>
+  </p>
+  <p>
+    A symmetrical argument applies to the left-hand limit as <m>x \to a^-</m>. 
+    Combining these results completes the proof for two-sided limits.  <m>\qquad \blacksquare</m>
+  </p>
+</proof>
+
+<remark>
+  <p>
+    The limit notation <m>x \to a</m> can be replaced by <m>x \to a^{+}</m>, <m>x \to a^{-}</m>, <m>x \to \infty</m>, or <m>x \to -\infty</m>.
+  </p>
+</remark>
+<p>
+  For the special case where <m>f(a)=g(a)=0</m>, 
+  if <m>f'</m> and <m>g'</m> are continuous and <m>g'(a) \neq 0</m>, 
+  then it is easy to see why L'Hospital's Rule is true.
+</p>
+
+<example xml:id="ex-lhospitals-mixed-practice">
+  <title>Evaluating Indeterminate Forms Using L'Hospital's Rule</title>
+  
+  <introduction>
+    <p>
+      Evaluate each of the following limits:
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 1}\dfrac{\ln x}{x-1}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form of type <m>0/0</m>. Applying L'Hospital's Rule:
+        <me>\lim_{x\to 1}\frac{\ln x}{x-1} = \lim_{x\to 1}\frac{1/x}{1} = \frac{1}{1} = 1</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 2 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to \infty}\dfrac{e^{x}}{x^{2}}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form of type <m>\infty/\infty</m>. Applying L'Hospital's Rule twice:
+        <me>\lim_{x\to \infty}\frac{e^{x}}{x^{2}} = \lim_{x\to \infty}\frac{e^{x}}{2x} = \lim_{x\to \infty}\frac{e^{x}}{2} = \infty</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 3 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to \pi^-}\dfrac{\sin x}{1-\cos x}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Direct substitution yields <m>\dfrac{\sin(\pi)}{1-\cos(\pi)} = \dfrac{0}{1 - (-1)} = \dfrac{0}{2} = 0</m>. This is not an indeterminate form, so L'Hospital's Rule is not needed.
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 4 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}x\ln x</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form of type <m>0 \cdot (-\infty)</m>. 
+        Rewrite it as a quotient:
+        <me>\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{1/x}</me>
+        Now it is of type <m>-\infty/\infty</m>. Applying L'Hospital's Rule:
+        <me>\lim_{x\to 0^+}\frac{1/x}{-1/x^2} = \lim_{x\to 0^+}(-x) = 0</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 5 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to (\pi/2)^-}(\sec x-\tan x)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form of type <m>\infty - \infty</m>. Rewrite using a common denominator:
+        <me>\lim_{x\to (\pi/2)^-}\left(\frac{1}{\cos x} - \frac{\sin x}{\cos x}\right) = \lim_{x\to (\pi/2)^-}\frac{1-\sin x}{\cos x}</me>
+        Now it is of type <m>0/0</m>. Applying L'Hospital's Rule:
+        <me>\lim_{x\to (\pi/2)^-}\frac{-\cos x}{-\sin x} = \frac{0}{1} = 0</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 6 -->
+  <task>
+    <statement>
+      <p>
+        Evaluate <m>\displaystyle\lim_{x\to 0^+}x^{x}</m> using the identity <m>[f(x)]^{g(x)}=e^{g(x)\ln f(x)}</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form of type <m>0^0</m>. We can rewrite the function using the natural exponential and logarithmic identity <m>x^x = e^{\ln(x^x)} = e^{x \ln x}</m>.
+      </p>
+      <p>
+        Because the exponential function is continuous, we can move the limit inside the exponent:
+        <me>\lim_{x\to 0^+} x^x = \lim_{x\to 0^+} e^{x \ln x} = e^{\displaystyle\lim_{x\to 0^+} x \ln x}</me>
+      </p>
+      <p>
+        Next, we evaluate the limit in the exponent. This forms an indeterminate product of type <m>0 \cdot (-\infty)</m>. We transform it into a fraction of type <m>-\infty/\infty</m> to apply L'Hospital's Rule:
+        <md>
+          <mrow>\lim_{x\to 0^+} x \ln x \amp= \lim_{x\to 0^+} \frac{\ln x}{1/x}</mrow>
+          <mrow>\amp= \lim_{x\to 0^+} \frac{\frac{d}{dx}[\ln x]}{\frac{d}{dx}[1/x]}</mrow>
+          <mrow>\amp= \lim_{x\to 0^+} \frac{1/x}{-1/x^2}</mrow>
+          <mrow>\amp= \lim_{x\to 0^+} (-x)</mrow>
+          <mrow>\amp= 0</mrow>
+        </md>
+      </p>
+      <p>
+        Finally, substitute this value back into the original exponent expression:
+        <me>e^{\displaystyle\lim_{x\to 0^+} x \ln x} = e^0 = 1</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 7 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}(1+\sin 2x)^{\cot x}</m>
+      </p>
+    </statement>
+   <solution>
+      <p>
+        This limit has the indeterminate form of type <m>1^\infty</m>. We rewrite the expression as a power of <m>e</m> using the property <m>y = e^{\ln y}</m>:
+        <me>(1+\sin 2x)^{\cot x} = e^{\ln\left[(1+\sin 2x)^{\cot x}\right]} = e^{\cot x \ln(1+\sin 2x)}</me>
+      </p>
+      <p>
+        Moving the limit into the exponent gives:
+        <me>\lim_{x\to 0^+} (1+\sin 2x)^{\cot x} = e^{\displaystyle\lim_{x\to 0^+} \cot x \ln(1+\sin 2x)}</me>
+      </p>
+      <p>
+        We now evaluate the limit of the exponent. Since <m>\cot x = \dfrac{1}{\tan x}</m>, we rewrite the product as a quotient to form an indeterminate type of <m>0/0</m>:
+        <me>\lim_{x\to 0^+} \cot x \ln(1+\sin 2x) = \lim_{x\to 0^+} \frac{\ln(1+\sin 2x)}{\tan x}</me>
+      </p>
+      <p>
+        Applying L'Hospital's Rule by differentiating the numerator and the denominator yields:
+        <md>
+          <mrow>\lim_{x\to 0^+} \frac{\ln(1+\sin 2x)}{\tan x} \amp= \lim_{x\to 0^+} \frac{\frac{2\cos 2x}{1+\sin 2x}}{\sec^2 x}</mrow>
+          <mrow>\amp= \frac{\frac{2\cos(0)}{1+\sin(0)}}{\sec^2(0)}</mrow>
+          <mrow>\amp= \frac{\frac{2(1)}{1+0}}{1}</mrow>
+          <mrow>\amp= 2</mrow>
+        </md>
+      </p>
+      <p>
+        Substituting the evaluated limit back into the exponent gives our final result:
+        <me>e^{\displaystyle\lim_{x\to 0^+} \cot x \ln(1+\sin 2x)} = e^2</me>
+      </p>
+    </solution>
+  </task>
+</example>
+
+<exercise xml:id="ex-lhospitals-additional-practice">
+  <title>Additional Indeterminate Forms Practice</title>
+  <introduction>
+    <p>
+      Before applying L'Hospital's Rule, you must first verify that the limit produces an indeterminate form of type <m>0/0</m> or <m>\infty/\infty</m> via direct substitution. For other indeterminate types—such as products (<m>0 \cdot \infty</m>), differences (<m>\infty - \infty</m>), or powers (<m>1^\infty, 0^0, \infty^0</m>)—you must first use algebraic strategies, common denominators, or logarithmic identities to rewrite the expression as a quotient before differentiating.
+    </p>
+    <p>
+      Evaluate each of the following limits using L'Hospital's Rule where appropriate:
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0}\dfrac{e^{x}+e^{-x}-2}{1-\cos 2x}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Direct substitution yields the indeterminate form <m>0/0</m>. Applying L'Hospital's Rule gives:
+        <me>\lim_{x\to 0}\dfrac{e^x - e^{-x}}{2\sin 2x}</me>
+        This still evaluates to <m>0/0</m>. Applying L'Hospital's Rule a second time yields:
+        <me>\lim_{x\to 0}\dfrac{e^x + e^{-x}}{4\cos 2x} = \dfrac{1+1}{4(1)} = \dfrac{2}{4} = \dfrac{1}{2}</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 2 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to (\pi/2)^-}\dfrac{4\tan x}{1+\sec x}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit yields the indeterminate form <m>\infty/\infty</m>. Applying L'Hospital's Rule:
+        <me>\lim_{x\to (\pi/2)^-}\dfrac{4\sec^2 x}{\sec x \tan x} = \lim_{x\to (\pi/2)^-}\dfrac{4\sec x}{\tan x}</me>
+        Rewriting the trigonometric functions in terms of sine and cosine:
+        <me>\lim_{x\to (\pi/2)^-} \dfrac{4}{\cos x} \cdot \dfrac{\cos x}{\sin x} = \lim_{x\to (\pi/2)^-} \dfrac{4}{\sin x} = \dfrac{4}{1} = 4</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 3 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0}\dfrac{e^{x}+e^{-x}}{x^{2}}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Direct substitution yields <m>\dfrac{1+1}{0} = \dfrac{2}{0}</m>. Since this is not an indeterminate form, L'Hospital's Rule does not apply. Because the numerator is positive and the denominator approaches zero through positive values:
+        <me>\lim_{x\to 0}\dfrac{e^{x}+e^{-x}}{x^{2}} = \infty</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 4 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}\dfrac{e^{-1/x}}{x}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit yields the indeterminate form <m>0/0</m>. To avoid a worsening algebraic loop, we rewrite it as an <m>\infty/\infty</m> form by shifting the exponential term to the denominator:
+        <me>\lim_{x\to 0^+}\dfrac{1/x}{e^{1/x}}</me>
+        Applying L'Hospital's Rule:
+        <me>\lim_{x\to 0^+}\dfrac{-1/x^2}{-1/x^2 \cdot e^{1/x}} = \lim_{x\to 0^+}\dfrac{1}{e^{1/x}} = 0</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 5 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}x^{2}\ln x</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate product form <m>0 \cdot (-\infty)</m>. Converting it to a quotient:
+        <me>\lim_{x\to 0^+}\dfrac{\ln x}{1/x^2}</me>
+        Applying L'Hospital's Rule:
+        <me>\lim_{x\to 0^+}\dfrac{1/x}{-2/x^3} = \lim_{x\to 0^+}\left(-\dfrac{x^2}{2}\right) = 0</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 6 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to (\pi/2)^-}(2x-\pi)\sec x</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate product form <m>0 \cdot \infty</m>. Rewriting using cosines:
+        <me>\lim_{x\to (\pi/2)^-}\dfrac{2x-\pi}{\cos x}</me>
+        Applying L'Hospital's Rule to this <m>0/0</m> form:
+        <me>\lim_{x\to (\pi/2)^-}\dfrac{2}{-\sin x} = \dfrac{2}{-1} = -2</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 7 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}(1+3x)^{1/(2x)}</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit has the indeterminate form <m>1^\infty</m>. Rewriting as an exponential base <m>e</m>:
+        <me>\lim_{x\to 0^+} e^{\dfrac{1}{2x}\ln(1+3x)} = e^{\displaystyle\lim_{x\to 0^+} \dfrac{\ln(1+3x)}{2x}}</me>
+        Applying L'Hospital's Rule to the exponent fraction:
+        <me>\lim_{x\to 0^+}\dfrac{\dfrac{3}{1+3x}}{2} = \dfrac{3}{2}</me>
+        Therefore, the complete evaluation yields <m>e^{3/2}</m>.
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 8 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle\lim_{x\to 0^+}\left(\dfrac{1}{e^{x}-1}-\dfrac{1}{x}\right)</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        This limit presents an indeterminate difference of type <m>\infty - \infty</m>. Combining fractions under a single denominator:
+        <me>\lim_{x\to 0^+}\dfrac{x - (e^x - 1)}{x(e^x - 1)} = \lim_{x\to 0^+}\dfrac{x - e^x + 1}{xe^x - x}</me>
+        This forms a <m>0/0</m> expression. Applying L'Hospital's Rule:
+        <me>\lim_{x\to 0^+}\dfrac{1 - e^x}{xe^x + e^x - 1}</me>
+        Evaluating again yields <m>0/0</m>. Applying L'Hospital's Rule a second time:
+        <me>\lim_{x\to 0^+}\dfrac{-e^x}{xe^x + e^x + e^x} = \dfrac{-1}{0 + 1 + 1} = -\dfrac{1}{2}</me>
+      </p>
+    </solution>
+  </task>
+</exercise>
 
 
 

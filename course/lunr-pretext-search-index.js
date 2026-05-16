@@ -2725,7 +2725,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.6 L’Hopital’s Rule",
-  "body": " 3.6 L'Hopital's Rule    L'Hôpital's Rule is a powerful calculus theorem used to evaluate limits that result in an indeterminate form like or upon direct substitution. Named after the French mathematician Guillaume de l'Hôpital, the rule allows you to bypass complex algebraic factoring or simplification by taking the derivatives of the numerator and denominator separately to find the limit.  The indeterminate forms: and and other indeterminate forms , , and . We'd like to know the behavior of the limit: This limit cannot be solved algebraically since the limit of the denominator is . In fact, the numerator approaches , and is not defined.  In general, if we have a limit of the form: where and as , then this limit may or may not exist and is called an indeterminate form of type 0\/0 .    Cancel Common Factors   Evaluate the following limit by canceling common factors:     Direct substitution of results in the indeterminate form . We can resolve this by factoring both the numerator and the denominator: Now, evaluating the limit by direct substitution yields:      Use a Geometric Argument   Evaluate the following limit using a geometric argument on the unit circle:      Graph of with a hole at .   A plot of the function sin(x)\/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.     Setting up the inequality based on these areas gives: Multiplying all parts by simplifies the inequality to:   Since , . We can divide the entire inequality chain by : Taking the reciprocal of each term reverses the inequalities: which can be rewritten in standard order as:   Now, applying the Squeeze Theorem as : Since both the lower and upper bounds approach , the middle limit is forced to match:     "
+  "body": " 3.6 L'Hopital's Rule    L'Hôpital's Rule is a powerful calculus theorem used to evaluate limits that result in an indeterminate form like or upon direct substitution. Named after the French mathematician Guillaume de l'Hôpital, the rule allows you to bypass complex algebraic factoring or simplification by taking the derivatives of the numerator and denominator separately to find the limit.  The indeterminate forms: and and other indeterminate forms , , and . We'd like to know the behavior of the limit: This limit cannot be solved algebraically since the limit of the denominator is . In fact, the numerator approaches , and is not defined.  In general, if we have a limit of the form: where and as , then this limit may or may not exist and is called an indeterminate form of type .    Cancel Common Factors   Evaluate the following limit by canceling common factors:     Direct substitution of results in the indeterminate form . We can resolve this by factoring both the numerator and the denominator: Now, evaluating the limit by direct substitution yields:      Use a Geometric Argument   Evaluate the following limit using a geometric argument on the unit circle:      Graph of with a hole at .   A plot of the function sin(x)\/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.     Setting up the inequality based on these areas gives: Multiplying all parts by simplifies the inequality to:   Since , . We can divide the entire inequality chain by : Taking the reciprocal of each term reverses the inequalities: which can be rewritten in standard order as:   Now, applying the Squeeze Theorem as : Since both the lower and upper bounds approach , the middle limit is forced to match:     If we have a limit of the form where both and , then the limit may or may not exist and is called an indeterminate form of type .   Finding Limits at Infinity   Evaluate the following limit by dividing the numerator and denominator by the highest power of that occurs in the denominator:     The highest power of in the denominator is . We divide every term in both the numerator and denominator by :   As , the term . Applying the limit laws gives:      L'Hospital's Rule   Suppose and are differentiable and on an open interval that contains (except possibly at ). Suppose that or that . (In other words, we have an indeterminate form of type or ). Then if the limit on the right side exists (or is or ).     We will establish the proof for the special case where and , using a right-hand limit . We can extend or define and , making both functions continuous at .  Let be a point in such that .  Because and are continuous on the closed interval and differentiable on the open interval , we can apply Mean Value Theorem (the next section). This guarantees that there exists a number strictly between and ( ) such that:   Since we defined and , this identity simplifies to:   Now, we take the limit as . As approaches from the right, the value of (which is squeezed between and ) is forced to approach as well ( ). Therefore:   A symmetrical argument applies to the left-hand limit as . Combining these results completes the proof for two-sided limits.     The limit notation can be replaced by , , , or .   For the special case where , if and are continuous and , then it is easy to see why L'Hospital's Rule is true.   Evaluating Indeterminate Forms Using L'Hospital's Rule   Evaluate each of the following limits:           This limit has the indeterminate form of type . Applying L'Hospital's Rule:             This limit has the indeterminate form of type . Applying L'Hospital's Rule twice:             Direct substitution yields . This is not an indeterminate form, so L'Hospital's Rule is not needed.            This limit has the indeterminate form of type . Rewrite it as a quotient: Now it is of type . Applying L'Hospital's Rule:             This limit has the indeterminate form of type . Rewrite using a common denominator: Now it is of type . Applying L'Hospital's Rule:        Evaluate using the identity .    This limit has the indeterminate form of type . We can rewrite the function using the natural exponential and logarithmic identity .  Because the exponential function is continuous, we can move the limit inside the exponent:   Next, we evaluate the limit in the exponent. This forms an indeterminate product of type . We transform it into a fraction of type to apply L'Hospital's Rule:   Finally, substitute this value back into the original exponent expression:             This limit has the indeterminate form of type . We rewrite the expression as a power of using the property :   Moving the limit into the exponent gives:   We now evaluate the limit of the exponent. Since , we rewrite the product as a quotient to form an indeterminate type of :   Applying L'Hospital's Rule by differentiating the numerator and the denominator yields:   Substituting the evaluated limit back into the exponent gives our final result:       Additional Indeterminate Forms Practice   Before applying L'Hospital's Rule, you must first verify that the limit produces an indeterminate form of type or via direct substitution. For other indeterminate types—such as products ( ), differences ( ), or powers ( )—you must first use algebraic strategies, common denominators, or logarithmic identities to rewrite the expression as a quotient before differentiating.  Evaluate each of the following limits using L'Hospital's Rule where appropriate:           Direct substitution yields the indeterminate form . Applying L'Hospital's Rule gives: This still evaluates to . Applying L'Hospital's Rule a second time yields:             This limit yields the indeterminate form . Applying L'Hospital's Rule: Rewriting the trigonometric functions in terms of sine and cosine:             Direct substitution yields . Since this is not an indeterminate form, L'Hospital's Rule does not apply. Because the numerator is positive and the denominator approaches zero through positive values:             This limit yields the indeterminate form . To avoid a worsening algebraic loop, we rewrite it as an form by shifting the exponential term to the denominator: Applying L'Hospital's Rule:             This limit has the indeterminate product form . Converting it to a quotient: Applying L'Hospital's Rule:             This limit has the indeterminate product form . Rewriting using cosines: Applying L'Hospital's Rule to this form:             This limit has the indeterminate form . Rewriting as an exponential base : Applying L'Hospital's Rule to the exponent fraction: Therefore, the complete evaluation yields .            This limit presents an indeterminate difference of type . Combining fractions under a single denominator: This forms a expression. Applying L'Hospital's Rule: Evaluating again yields . Applying L'Hospital's Rule a second time:      "
 },
 {
   "id": "sec-lHopitals-rule-2-1",
@@ -2753,6 +2753,177 @@ var ptx_lunr_docs = [
   "number": "276",
   "title": "Use a Geometric Argument.",
   "body": " Use a Geometric Argument   Evaluate the following limit using a geometric argument on the unit circle:      Graph of with a hole at .   A plot of the function sin(x)\/x from x equals minus 10 to 10. The curve reaches a height of 1 at x equals 0, where there is an open circle indicating the function is undefined but has a limit of 1.     Setting up the inequality based on these areas gives: Multiplying all parts by simplifies the inequality to:   Since , . We can divide the entire inequality chain by : Taking the reciprocal of each term reverses the inequalities: which can be rewritten in standard order as:   Now, applying the Squeeze Theorem as : Since both the lower and upper bounds approach , the middle limit is forced to match:    "
+},
+{
+  "id": "sec-lHopitals-rule-5",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#sec-lHopitals-rule-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "indeterminate form of type "
+},
+{
+  "id": "sec-lHopitals-rule-6",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#sec-lHopitals-rule-6",
+  "type": "Example",
+  "number": "278",
+  "title": "Finding Limits at Infinity.",
+  "body": " Finding Limits at Infinity   Evaluate the following limit by dividing the numerator and denominator by the highest power of that occurs in the denominator:     The highest power of in the denominator is . We divide every term in both the numerator and denominator by :   As , the term . Applying the limit laws gives:    "
+},
+{
+  "id": "thm-lhospitals-rule",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#thm-lhospitals-rule",
+  "type": "Theorem",
+  "number": "279",
+  "title": "L’Hospital’s Rule.",
+  "body": " L'Hospital's Rule   Suppose and are differentiable and on an open interval that contains (except possibly at ). Suppose that or that . (In other words, we have an indeterminate form of type or ). Then if the limit on the right side exists (or is or ).   "
+},
+{
+  "id": "sec-lHopitals-rule-8",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#sec-lHopitals-rule-8",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " We will establish the proof for the special case where and , using a right-hand limit . We can extend or define and , making both functions continuous at .  Let be a point in such that .  Because and are continuous on the closed interval and differentiable on the open interval , we can apply Mean Value Theorem (the next section). This guarantees that there exists a number strictly between and ( ) such that:   Since we defined and , this identity simplifies to:   Now, we take the limit as . As approaches from the right, the value of (which is squeezed between and ) is forced to approach as well ( ). Therefore:   A symmetrical argument applies to the left-hand limit as . Combining these results completes the proof for two-sided limits.   "
+},
+{
+  "id": "sec-lHopitals-rule-9",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#sec-lHopitals-rule-9",
+  "type": "Remark",
+  "number": "280",
+  "title": "",
+  "body": " The limit notation can be replaced by , , , or .  "
+},
+{
+  "id": "ex-lhospitals-mixed-practice",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#ex-lhospitals-mixed-practice",
+  "type": "Example",
+  "number": "281",
+  "title": "Evaluating Indeterminate Forms Using L’Hospital’s Rule.",
+  "body": " Evaluating Indeterminate Forms Using L'Hospital's Rule   Evaluate each of the following limits:           This limit has the indeterminate form of type . Applying L'Hospital's Rule:             This limit has the indeterminate form of type . Applying L'Hospital's Rule twice:             Direct substitution yields . This is not an indeterminate form, so L'Hospital's Rule is not needed.            This limit has the indeterminate form of type . Rewrite it as a quotient: Now it is of type . Applying L'Hospital's Rule:             This limit has the indeterminate form of type . Rewrite using a common denominator: Now it is of type . Applying L'Hospital's Rule:        Evaluate using the identity .    This limit has the indeterminate form of type . We can rewrite the function using the natural exponential and logarithmic identity .  Because the exponential function is continuous, we can move the limit inside the exponent:   Next, we evaluate the limit in the exponent. This forms an indeterminate product of type . We transform it into a fraction of type to apply L'Hospital's Rule:   Finally, substitute this value back into the original exponent expression:             This limit has the indeterminate form of type . We rewrite the expression as a power of using the property :   Moving the limit into the exponent gives:   We now evaluate the limit of the exponent. Since , we rewrite the product as a quotient to form an indeterminate type of :   Applying L'Hospital's Rule by differentiating the numerator and the denominator yields:   Substituting the evaluated limit back into the exponent gives our final result:     "
+},
+{
+  "id": "ex-lhospitals-additional-practice",
+  "level": "2",
+  "url": "sec-lHopitals-rule.html#ex-lhospitals-additional-practice",
+  "type": "Checkpoint",
+  "number": "282",
+  "title": "Additional Indeterminate Forms Practice.",
+  "body": " Additional Indeterminate Forms Practice   Before applying L'Hospital's Rule, you must first verify that the limit produces an indeterminate form of type or via direct substitution. For other indeterminate types—such as products ( ), differences ( ), or powers ( )—you must first use algebraic strategies, common denominators, or logarithmic identities to rewrite the expression as a quotient before differentiating.  Evaluate each of the following limits using L'Hospital's Rule where appropriate:           Direct substitution yields the indeterminate form . Applying L'Hospital's Rule gives: This still evaluates to . Applying L'Hospital's Rule a second time yields:             This limit yields the indeterminate form . Applying L'Hospital's Rule: Rewriting the trigonometric functions in terms of sine and cosine:             Direct substitution yields . Since this is not an indeterminate form, L'Hospital's Rule does not apply. Because the numerator is positive and the denominator approaches zero through positive values:             This limit yields the indeterminate form . To avoid a worsening algebraic loop, we rewrite it as an form by shifting the exponential term to the denominator: Applying L'Hospital's Rule:             This limit has the indeterminate product form . Converting it to a quotient: Applying L'Hospital's Rule:             This limit has the indeterminate product form . Rewriting using cosines: Applying L'Hospital's Rule to this form:             This limit has the indeterminate form . Rewriting as an exponential base : Applying L'Hospital's Rule to the exponent fraction: Therefore, the complete evaluation yields .            This limit presents an indeterminate difference of type . Combining fractions under a single denominator: This forms a expression. Applying L'Hospital's Rule: Evaluating again yields . Applying L'Hospital's Rule a second time:     "
+},
+{
+  "id": "sec-the-mean-value-theorem",
+  "level": "1",
+  "url": "sec-the-mean-value-theorem.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.7 The Mean Value Thoerem",
+  "body": " 3.7 The Mean Value Thoerem   The Mean Value Theorem (MVT) connects the average rate of change of a function over an interval to its instantaneous rate of change at a specific point within that interval. It serves as a foundational building block for many core concepts in calculus, including Rolle's Theorem and the proof of the Fundamental Theorem of Calculus.    Mean Value Theorem   If is continuous on a closed interval and differentiable on the open interval , then there exists a number in such that or, equivalently,       If , show that satisfies the hypothesis of the Mean Value Theorem on the interval , and find a number in that satisfies the conclusion of the theorem.    First, we must check the two hypotheses of the Mean Value Theorem:     The function is a polynomial, so it is continuous everywhere, including on the closed interval .    The derivative is , which exists everywhere, meaning is differentiable on the open interval .     Since both hypotheses are satisfied, there exists a number in such that:   Next, we evaluate the function at the endpoints:    Now, calculate the average rate of change:   Finally, set and solve for :   Since (or ) lies within the open interval , this value satisfies the conclusion of the theorem.      Prove that if and are any real numbers, then    Hint Apply the Mean Value Theorem with .    If , then and . The inequality holds as .  Without loss of generality, assume . Let on the closed interval .  We check the hypotheses of the Mean Value Theorem:   The function is continuous everywhere, so it is continuous on .    The derivative exists everywhere, so is differentiable on .     By the Mean Value Theorem, there exists a number in such that:   Taking the absolute value of both sides gives:    We know that for any real number , . Substituting this inequality yields:   Multiplying both sides by the positive quantity completes the proof:     "
+},
+{
+  "id": "thm-mvt",
+  "level": "2",
+  "url": "sec-the-mean-value-theorem.html#thm-mvt",
+  "type": "Theorem",
+  "number": "283",
+  "title": "Mean Value Theorem.",
+  "body": " Mean Value Theorem   If is continuous on a closed interval and differentiable on the open interval , then there exists a number in such that or, equivalently,    "
+},
+{
+  "id": "ex-mvt-quadratic",
+  "level": "2",
+  "url": "sec-the-mean-value-theorem.html#ex-mvt-quadratic",
+  "type": "Example",
+  "number": "284",
+  "title": "",
+  "body": "  If , show that satisfies the hypothesis of the Mean Value Theorem on the interval , and find a number in that satisfies the conclusion of the theorem.    First, we must check the two hypotheses of the Mean Value Theorem:     The function is a polynomial, so it is continuous everywhere, including on the closed interval .    The derivative is , which exists everywhere, meaning is differentiable on the open interval .     Since both hypotheses are satisfied, there exists a number in such that:   Next, we evaluate the function at the endpoints:    Now, calculate the average rate of change:   Finally, set and solve for :   Since (or ) lies within the open interval , this value satisfies the conclusion of the theorem.   "
+},
+{
+  "id": "exer-sine-mvt-proof",
+  "level": "2",
+  "url": "sec-the-mean-value-theorem.html#exer-sine-mvt-proof",
+  "type": "Checkpoint",
+  "number": "285",
+  "title": "",
+  "body": "  Prove that if and are any real numbers, then    Hint Apply the Mean Value Theorem with .    If , then and . The inequality holds as .  Without loss of generality, assume . Let on the closed interval .  We check the hypotheses of the Mean Value Theorem:   The function is continuous everywhere, so it is continuous on .    The derivative exists everywhere, so is differentiable on .     By the Mean Value Theorem, there exists a number in such that:   Taking the absolute value of both sides gives:    We know that for any real number , . Substituting this inequality yields:   Multiplying both sides by the positive quantity completes the proof:    "
+},
+{
+  "id": "sec-linearization-differentials",
+  "level": "1",
+  "url": "sec-linearization-differentials.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.8 Linearization and Differentials",
+  "body": " 3.8 Linearization and Differentials   Linearization refers to finding the linear approximation to a function at a given point. This process allows us to approximate complex, non-linear functions using simple linear equations (tangent lines) near a specific point of interest. By analyzing how small changes or increments in the input affect the output, we establish the foundation for differentials and error estimation in calculus.  Consider the equation . If the variable has an initial value and then is assigned a different value , the difference is called an increment of . We denote an increment of by the symbol (read as delta x ):   The corresponding increment of is denoted by :   Since , we can rewrite this as:      Let and be an increment of . The increment of is:      Increment Definition of Derivative   The derivative can be expressed using increments as:     So far we treated as one single symbol. Now we define and separately; these are called differentials .   Differentials   For , we define:    , called the differential of , by .     , called the differential of , by .        Derivative as a Quotient of Differentials   If , then the notation can be explicitly separated into a quotient:      Linear Approximation Formula   If , with differentiable, and if is an increment of , then:       Let and let be an increment of .   Find general formulas for and .    If changes from 2 to 2.1, find the values of and .        Part 1: Find general formulas for and .   To find the general formula for the increment , we apply the definition :   To find the differential , we compute the derivative and multiply by :    Part 2: Calculate values when changes from 2 to 2.1.   From the given values, we identify the initial position and the change:    Substitute these values into our general formula for :   Substitute these values into our general formula for :   Notice that the differential provides a close approximation to the true change .      Use differentials to approximate the change in if changes from to . Find a linear approximation to as well.    Let . The differential of is given by:    Important Note: Before substituting values into trigonometric derivatives, all angles and their changes must be converted from degrees to radians.  The initial angle and its increment are:     Step 1: Approximate the change in .   We compute the approximate change using the differential :    Step 2: Find the linear approximation to .   Using the linear approximation formula , we have:     "
+},
+{
+  "id": "def-increment-y",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#def-increment-y",
+  "type": "Definition",
+  "number": "286",
+  "title": "",
+  "body": "  Let and be an increment of . The increment of is:    "
+},
+{
+  "id": "def-increment-derivative",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#def-increment-derivative",
+  "type": "Definition",
+  "number": "287",
+  "title": "Increment Definition of Derivative.",
+  "body": " Increment Definition of Derivative   The derivative can be expressed using increments as:    "
+},
+{
+  "id": "def-differentials",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#def-differentials",
+  "type": "Definition",
+  "number": "288",
+  "title": "Differentials.",
+  "body": " Differentials   For , we define:    , called the differential of , by .     , called the differential of , by .      "
+},
+{
+  "id": "def-derivative-quotient",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#def-derivative-quotient",
+  "type": "Definition",
+  "number": "289",
+  "title": "Derivative as a Quotient of Differentials.",
+  "body": " Derivative as a Quotient of Differentials   If , then the notation can be explicitly separated into a quotient:    "
+},
+{
+  "id": "fact-linear-approximation",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#fact-linear-approximation",
+  "type": "Fact",
+  "number": "290",
+  "title": "Linear Approximation Formula.",
+  "body": " Linear Approximation Formula   If , with differentiable, and if is an increment of , then:    "
+},
+{
+  "id": "ex-differentials-quadratic",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#ex-differentials-quadratic",
+  "type": "Example",
+  "number": "291",
+  "title": "",
+  "body": "  Let and let be an increment of .   Find general formulas for and .    If changes from 2 to 2.1, find the values of and .        Part 1: Find general formulas for and .   To find the general formula for the increment , we apply the definition :   To find the differential , we compute the derivative and multiply by :    Part 2: Calculate values when changes from 2 to 2.1.   From the given values, we identify the initial position and the change:    Substitute these values into our general formula for :   Substitute these values into our general formula for :   Notice that the differential provides a close approximation to the true change .   "
+},
+{
+  "id": "ex-differentials-trig",
+  "level": "2",
+  "url": "sec-linearization-differentials.html#ex-differentials-trig",
+  "type": "Example",
+  "number": "292",
+  "title": "",
+  "body": "  Use differentials to approximate the change in if changes from to . Find a linear approximation to as well.    Let . The differential of is given by:    Important Note: Before substituting values into trigonometric derivatives, all angles and their changes must be converted from degrees to radians.  The initial angle and its increment are:     Step 1: Approximate the change in .   We compute the approximate change using the differential :    Step 2: Find the linear approximation to .   Using the linear approximation formula , we have:    "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
@@ -2948,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "281",
+  "number": "296",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

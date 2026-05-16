@@ -136,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Optimization.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Optimization.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-the-mean-value-theorem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -230,6 +230,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-lHopitals-rule.html" class="internal"><span class="title">3.6 L’Hopital’s Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -310,7 +312,7 @@ eBookConfig.enable_chatcodes =  false;
 \lim_{x\to a}\dfrac{f(x)}{g(x)}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(f(x)\to 0\)</span> and <span class="process-math">\(g(x)\to 0\)</span> as <span class="process-math">\(x\to a\text{,}\)</span> then this limit may or may not exist and is called an <em class="alert">indeterminate form of type 0/0</em>.</div>
+<div class="para">where <span class="process-math">\(f(x)\to 0\)</span> and <span class="process-math">\(g(x)\to 0\)</span> as <span class="process-math">\(x\to a\text{,}\)</span> then this limit may or may not exist and is called an <em class="alert">indeterminate form of type <span class="process-math">\(\dfrac{0}{0}\)</span></em>.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><details id="example-cancel-common-factors" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">275</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cancel Common Factors.</span>
@@ -410,9 +412,485 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Solution 276.1"><a href="#example-geometric-argument-3" title="Copy heading and permalink for Solution 276.1" aria-label="Copy heading and permalink for Solution 276.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Example 276: Use a Geometric Argument"><a href="#example-geometric-argument" title="Copy heading and permalink for Example 276: Use a Geometric Argument" aria-label="Copy heading and permalink for Example 276: Use a Geometric Argument">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 3.6 L’Hopital’s Rule"><a href="#sec-lHopitals-rule" title="Copy heading and permalink for Section: 3.6 L’Hopital’s Rule" aria-label="Copy heading and permalink for Section: 3.6 L’Hopital’s Rule">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Example 276: Use a Geometric Argument"><a href="#example-geometric-argument" title="Copy heading and permalink for Example 276: Use a Geometric Argument" aria-label="Copy heading and permalink for Example 276: Use a Geometric Argument">🔗</a></div></article></details><div class="para logical" id="sec-lHopitals-rule-5">
+<div class="para">If we have a limit of the form</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-5-1">
+\begin{equation*}
+\lim_{x\to\infty}\dfrac{f(x)}{g(x)}
+\end{equation*}
+</div>
+<div class="para">where both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x) \to \pm \infty\text{,}\)</span> then the limit may or may not exist and is called an <dfn class="terminology">indeterminate form of type <span class="process-math">\(\dfrac{\infty}{\infty}\)</span></dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-lHopitals-rule-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">278</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finding Limits at Infinity.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-lHopitals-rule-6-2-1">Evaluate the following limit by dividing the numerator and denominator by the highest power of <span class="process-math">\(x\)</span> that occurs in the denominator:<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-6-2-2">
+\begin{equation*}
+\lim_{x\to\infty}\dfrac{x^{2}-1}{2x^{2}+1}
+\end{equation*}
+</div>
+<div class="solutions"><details id="sec-lHopitals-rule-6-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-lHopitals-rule-6-3-1">The highest power of <span class="process-math">\(x\)</span> in the denominator is <span class="process-math">\(x^2\text{.}\)</span> We divide every term in both the numerator and denominator by <span class="process-math">\(x^2\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-6-3-2">
+\begin{align*}
+\lim_{x\to\infty}\dfrac{x^{2}-1}{2x^{2}+1} \amp= \lim_{x\to\infty}\dfrac{\dfrac{x^2}{x^2}-\dfrac{1}{x^2}}{\dfrac{2x^2}{x^2}+\dfrac{1}{x^2}}\\
+\amp= \lim_{x\to\infty}\dfrac{1-\dfrac{1}{x^2}}{2+\dfrac{1}{x^2}}
+\end{align*}
+</div>
+<div class="para" id="sec-lHopitals-rule-6-3-3">As <span class="process-math">\(x \to \infty\text{,}\)</span> the term <span class="process-math">\(\dfrac{1}{x^2} \to 0\text{.}\)</span> Applying the limit laws gives:<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-6-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-6-3-4">
+\begin{align*}
+\amp= \dfrac{1-0}{2+0}\\
+\amp= \dfrac{1}{2}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Solution 278.1"><a href="#sec-lHopitals-rule-6-3" title="Copy heading and permalink for Solution 278.1" aria-label="Copy heading and permalink for Solution 278.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 278: Finding Limits at Infinity"><a href="#sec-lHopitals-rule-6" title="Copy heading and permalink for Example 278: Finding Limits at Infinity" aria-label="Copy heading and permalink for Example 278: Finding Limits at Infinity">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-lhospitals-rule"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">279</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L’Hospital’s Rule.</span>
+</h3>
+<div class="para logical" id="thm-lhospitals-rule-2-1">
+<div class="para">Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable and <span class="process-math">\(g'(x) \neq 0\)</span> on an open interval <span class="process-math">\(I\)</span> that contains <span class="process-math">\(a\)</span> (except possibly at <span class="process-math">\(a\)</span>). Suppose that</div>
+<div class="displaymath process-math" id="thm-lhospitals-rule-2-1-7">
+\begin{equation*}
+\lim_{x\to a}f(x)=0 \quad \text{and} \quad \lim_{x\to a}g(x)=0
+\end{equation*}
+</div>
+<div class="para">or that</div>
+<div class="displaymath process-math" id="thm-lhospitals-rule-2-1-8">
+\begin{equation*}
+\lim_{x\to a}f(x)=\pm \infty \quad \text{and} \quad \lim_{x\to a}g(x)=\pm \infty\text{.}
+\end{equation*}
+</div>
+<div class="para">(In other words, we have an indeterminate form of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\)</span>). Then</div>
+<div class="displaymath process-math" id="thm-lhospitals-rule-2-1-11">
+\begin{equation*}
+\lim_{x\to a}\dfrac{f(x)}{g(x)}=\lim_{x\to a}\dfrac{f'(x)}{g'(x)}
+\end{equation*}
+</div>
+<div class="para">if the limit on the right side exists (or is <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\)</span>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-lhospitals-rule-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 279: L’Hospital’s Rule"><a href="#thm-lhospitals-rule" title="Copy heading and permalink for Theorem 279: L’Hospital’s Rule" aria-label="Copy heading and permalink for Theorem 279: L’Hospital’s Rule">🔗</a></div></article><details id="sec-lHopitals-rule-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-lHopitals-rule-8-1">We will establish the proof for the special case where <span class="process-math">\(\lim_{x \to a} f(x) = 0\)</span> and <span class="process-math">\(\lim_{x \to a} g(x) = 0\text{,}\)</span> using a right-hand limit <span class="process-math">\(x \to a^+\text{.}\)</span> We can extend or define <span class="process-math">\(f(a) = 0\)</span> and <span class="process-math">\(g(a) = 0\text{,}\)</span> making both functions continuous at <span class="process-math">\(x = a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-lHopitals-rule-8-2">Let <span class="process-math">\(x\)</span> be a point in <span class="process-math">\(I\)</span> such that <span class="process-math">\(x &gt; a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-lHopitals-rule-8-3">
+<div class="para">Because <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous on the closed interval <span class="process-math">\([a, x]\)</span> and differentiable on the open interval <span class="process-math">\((a, x)\text{,}\)</span> we can apply Mean Value Theorem (the next section). This guarantees that there exists a number <span class="process-math">\(c\)</span> strictly between <span class="process-math">\(a\)</span> and <span class="process-math">\(x\)</span> (<span class="process-math">\(a &lt; c &lt; x\)</span>) such that:</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-8-3-9">
+\begin{equation*}
+\frac{f'(c)}{g'(c)} = \frac{f(x) - f(a)}{g(x) - g(a)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-lHopitals-rule-8-4">
+<div class="para">Since we defined <span class="process-math">\(f(a) = 0\)</span> and <span class="process-math">\(g(a) = 0\text{,}\)</span> this identity simplifies to:</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-8-4-3">
+\begin{equation*}
+\frac{f'(c)}{g'(c)} = \frac{f(x) - 0}{g(x) - 0} = \frac{f(x)}{g(x)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-lHopitals-rule-8-5">
+<div class="para">Now, we take the limit as <span class="process-math">\(x \to a^+\text{.}\)</span> As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> from the right, the value of <span class="process-math">\(c\)</span> (which is squeezed between <span class="process-math">\(a\)</span> and <span class="process-math">\(x\)</span>) is forced to approach <span class="process-math">\(a\)</span> as well (<span class="process-math">\(c \to a^+\)</span>). Therefore:</div>
+<div class="displaymath process-math" id="sec-lHopitals-rule-8-5-9">
+\begin{equation*}
+\lim_{x \to a^+} \frac{f(x)}{g(x)} = \lim_{x \to a^+} \frac{f'(c)}{g'(c)} 
+= \lim_{c \to a^+} \frac{f'(c)}{g'(c)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-lHopitals-rule-8-6">A symmetrical argument applies to the left-hand limit as <span class="process-math">\(x \to a^-\text{.}\)</span> Combining these results completes the proof for two-sided limits.  <span class="process-math">\(\qquad \blacksquare\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-8-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#sec-lHopitals-rule-8" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div></article></details><article class="remark remark-like" id="sec-lHopitals-rule-9"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">280</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="sec-lHopitals-rule-9-1">The limit notation <span class="process-math">\(x \to a\)</span> can be replaced by <span class="process-math">\(x \to a^{+}\text{,}\)</span> <span class="process-math">\(x \to a^{-}\text{,}\)</span> <span class="process-math">\(x \to \infty\text{,}\)</span> or <span class="process-math">\(x \to -\infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 280"><a href="#sec-lHopitals-rule-9" title="Copy heading and permalink for Remark 280" aria-label="Copy heading and permalink for Remark 280">🔗</a></div></article><div class="para" id="sec-lHopitals-rule-10">For the special case where <span class="process-math">\(f(a)=g(a)=0\text{,}\)</span> if <span class="process-math">\(f'\)</span> and <span class="process-math">\(g'\)</span> are continuous and <span class="process-math">\(g'(a) \neq 0\text{,}\)</span> then it is easy to see why L’Hospital’s Rule is true.<div class="autopermalink" data-description="Paragraph"><a href="#sec-lHopitals-rule-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-lhospitals-mixed-practice" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">281</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Indeterminate Forms Using L’Hospital’s Rule.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="introduction" id="ex-lhospitals-mixed-practice-2"><div class="para" id="ex-lhospitals-mixed-practice-2-1">Evaluate each of the following limits:<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-lhospitals-mixed-practice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-3-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 1}\dfrac{\ln x}{x-1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-mixed-practice-3-2-1">
+<div class="para">This limit has the indeterminate form of type <span class="process-math">\(0/0\text{.}\)</span> Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-3-2-1-2">
+\begin{equation*}
+\lim_{x\to 1}\frac{\ln x}{x-1} = \lim_{x\to 1}\frac{1/x}{1} = \frac{1}{1} = 1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.a.1"><a href="#ex-lhospitals-mixed-practice-3-2" title="Copy heading and permalink for Solution 281.a.1" aria-label="Copy heading and permalink for Solution 281.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.a"><a href="#ex-lhospitals-mixed-practice-3" title="Copy heading and permalink for Task 281.a" aria-label="Copy heading and permalink for Task 281.a">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-4-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to \infty}\dfrac{e^{x}}{x^{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-mixed-practice-4-2-1">
+<div class="para">This limit has the indeterminate form of type <span class="process-math">\(\infty/\infty\text{.}\)</span> Applying L’Hospital’s Rule twice:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-4-2-1-2">
+\begin{equation*}
+\lim_{x\to \infty}\frac{e^{x}}{x^{2}} = \lim_{x\to \infty}\frac{e^{x}}{2x} = \lim_{x\to \infty}\frac{e^{x}}{2} = \infty
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.b.1"><a href="#ex-lhospitals-mixed-practice-4-2" title="Copy heading and permalink for Solution 281.b.1" aria-label="Copy heading and permalink for Solution 281.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.b"><a href="#ex-lhospitals-mixed-practice-4" title="Copy heading and permalink for Task 281.b" aria-label="Copy heading and permalink for Task 281.b">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-5-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to \pi^-}\dfrac{\sin x}{1-\cos x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-lhospitals-mixed-practice-5-2-1">Direct substitution yields <span class="process-math">\(\dfrac{\sin(\pi)}{1-\cos(\pi)} = \dfrac{0}{1 - (-1)} = \dfrac{0}{2} = 0\text{.}\)</span> This is not an indeterminate form, so L’Hospital’s Rule is not needed.<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.c.1"><a href="#ex-lhospitals-mixed-practice-5-2" title="Copy heading and permalink for Solution 281.c.1" aria-label="Copy heading and permalink for Solution 281.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.c"><a href="#ex-lhospitals-mixed-practice-5" title="Copy heading and permalink for Task 281.c" aria-label="Copy heading and permalink for Task 281.c">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-6-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}x\ln x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-mixed-practice-6-2-1">
+<div class="para">This limit has the indeterminate form of type <span class="process-math">\(0 \cdot (-\infty)\text{.}\)</span> Rewrite it as a quotient:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-6-2-1-2">
+\begin{equation*}
+\lim_{x\to 0^+}x\ln x=\lim_{x\to 0^+}\frac{\ln x}{1/x}
+\end{equation*}
+</div>
+<div class="para">Now it is of type <span class="process-math">\(-\infty/\infty\text{.}\)</span> Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-6-2-1-4">
+\begin{equation*}
+\lim_{x\to 0^+}\frac{1/x}{-1/x^2} = \lim_{x\to 0^+}(-x) = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.d.1"><a href="#ex-lhospitals-mixed-practice-6-2" title="Copy heading and permalink for Solution 281.d.1" aria-label="Copy heading and permalink for Solution 281.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.d"><a href="#ex-lhospitals-mixed-practice-6" title="Copy heading and permalink for Task 281.d" aria-label="Copy heading and permalink for Task 281.d">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-7-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to (\pi/2)^-}(\sec x-\tan x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-mixed-practice-7-2-1">
+<div class="para">This limit has the indeterminate form of type <span class="process-math">\(\infty - \infty\text{.}\)</span> Rewrite using a common denominator:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-7-2-1-2">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-}\left(\frac{1}{\cos x} - \frac{\sin x}{\cos x}\right) = \lim_{x\to (\pi/2)^-}\frac{1-\sin x}{\cos x}
+\end{equation*}
+</div>
+<div class="para">Now it is of type <span class="process-math">\(0/0\text{.}\)</span> Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-7-2-1-4">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-}\frac{-\cos x}{-\sin x} = \frac{0}{1} = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.e.1"><a href="#ex-lhospitals-mixed-practice-7-2" title="Copy heading and permalink for Solution 281.e.1" aria-label="Copy heading and permalink for Solution 281.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.e"><a href="#ex-lhospitals-mixed-practice-7" title="Copy heading and permalink for Task 281.e" aria-label="Copy heading and permalink for Task 281.e">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-8"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-8-1-1">Evaluate <span class="process-math">\(\displaystyle\lim_{x\to 0^+}x^{x}\)</span> using the identity <span class="process-math">\([f(x)]^{g(x)}=e^{g(x)\ln f(x)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-lhospitals-mixed-practice-8-2-1">This limit has the indeterminate form of type <span class="process-math">\(0^0\text{.}\)</span> We can rewrite the function using the natural exponential and logarithmic identity <span class="process-math">\(x^x = e^{\ln(x^x)} = e^{x \ln x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-8-2-2">
+<div class="para">Because the exponential function is continuous, we can move the limit inside the exponent:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-8-2-2-1">
+\begin{equation*}
+\lim_{x\to 0^+} x^x = \lim_{x\to 0^+} e^{x \ln x} = e^{\displaystyle\lim_{x\to 0^+} x \ln x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-8-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-8-2-3">
+<div class="para">Next, we evaluate the limit in the exponent. This forms an indeterminate product of type <span class="process-math">\(0 \cdot (-\infty)\text{.}\)</span> We transform it into a fraction of type <span class="process-math">\(-\infty/\infty\)</span> to apply L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-8-2-3-3">
+\begin{align*}
+\lim_{x\to 0^+} x \ln x \amp= \lim_{x\to 0^+} \frac{\ln x}{1/x}\\
+\amp= \lim_{x\to 0^+} \frac{\frac{d}{dx}[\ln x]}{\frac{d}{dx}[1/x]}\\
+\amp= \lim_{x\to 0^+} \frac{1/x}{-1/x^2}\\
+\amp= \lim_{x\to 0^+} (-x)\\
+\amp= 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-8-2-4">
+<div class="para">Finally, substitute this value back into the original exponent expression:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-8-2-4-1">
+\begin{equation*}
+e^{\displaystyle\lim_{x\to 0^+} x \ln x} = e^0 = 1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-8-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.f.1"><a href="#ex-lhospitals-mixed-practice-8-2" title="Copy heading and permalink for Solution 281.f.1" aria-label="Copy heading and permalink for Solution 281.f.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.f"><a href="#ex-lhospitals-mixed-practice-8" title="Copy heading and permalink for Task 281.f" aria-label="Copy heading and permalink for Task 281.f">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-mixed-practice-9"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="ex-lhospitals-mixed-practice-9-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}(1+\sin 2x)^{\cot x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-mixed-practice-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-mixed-practice-9-2-1">
+<div class="para">This limit has the indeterminate form of type <span class="process-math">\(1^\infty\text{.}\)</span> We rewrite the expression as a power of <span class="process-math">\(e\)</span> using the property <span class="process-math">\(y = e^{\ln y}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-9-2-1-4">
+\begin{equation*}
+(1+\sin 2x)^{\cot x} = e^{\ln\left[(1+\sin 2x)^{\cot x}\right]} = e^{\cot x \ln(1+\sin 2x)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-9-2-2">
+<div class="para">Moving the limit into the exponent gives:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-9-2-2-1">
+\begin{equation*}
+\lim_{x\to 0^+} (1+\sin 2x)^{\cot x} = e^{\displaystyle\lim_{x\to 0^+} \cot x \ln(1+\sin 2x)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-9-2-3">
+<div class="para">We now evaluate the limit of the exponent. Since <span class="process-math">\(\cot x = \dfrac{1}{\tan x}\text{,}\)</span> we rewrite the product as a quotient to form an indeterminate type of <span class="process-math">\(0/0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-9-2-3-3">
+\begin{equation*}
+\lim_{x\to 0^+} \cot x \ln(1+\sin 2x) = \lim_{x\to 0^+} \frac{\ln(1+\sin 2x)}{\tan x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-9-2-4">
+<div class="para">Applying L’Hospital’s Rule by differentiating the numerator and the denominator yields:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-9-2-4-1">
+\begin{align*}
+\lim_{x\to 0^+} \frac{\ln(1+\sin 2x)}{\tan x} \amp= \lim_{x\to 0^+} \frac{\frac{2\cos 2x}{1+\sin 2x}}{\sec^2 x}\\
+\amp= \frac{\frac{2\cos(0)}{1+\sin(0)}}{\sec^2(0)}\\
+\amp= \frac{\frac{2(1)}{1+0}}{1}\\
+\amp= 2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-lhospitals-mixed-practice-9-2-5">
+<div class="para">Substituting the evaluated limit back into the exponent gives our final result:</div>
+<div class="displaymath process-math" id="ex-lhospitals-mixed-practice-9-2-5-1">
+\begin{equation*}
+e^{\displaystyle\lim_{x\to 0^+} \cot x \ln(1+\sin 2x)} = e^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-mixed-practice-9-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 281.g.1"><a href="#ex-lhospitals-mixed-practice-9-2" title="Copy heading and permalink for Solution 281.g.1" aria-label="Copy heading and permalink for Solution 281.g.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 281.g"><a href="#ex-lhospitals-mixed-practice-9" title="Copy heading and permalink for Task 281.g" aria-label="Copy heading and permalink for Task 281.g">🔗</a></div></article><div class="autopermalink" data-description="Example 281: Evaluating Indeterminate Forms Using L’Hospital’s Rule"><a href="#ex-lhospitals-mixed-practice" title="Copy heading and permalink for Example 281: Evaluating Indeterminate Forms Using L’Hospital’s Rule" aria-label="Copy heading and permalink for Example 281: Evaluating Indeterminate Forms Using L’Hospital’s Rule">🔗</a></div></article></details><details id="ex-lhospitals-additional-practice" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">282</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Indeterminate Forms Practice.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="ex-lhospitals-additional-practice-2">
+<div class="para" id="ex-lhospitals-additional-practice-2-1">Before applying L’Hospital’s Rule, you must first verify that the limit produces an indeterminate form of type <span class="process-math">\(0/0\)</span> or <span class="process-math">\(\infty/\infty\)</span> via direct substitution. For other indeterminate types—such as products (<span class="process-math">\(0 \cdot \infty\)</span>), differences (<span class="process-math">\(\infty - \infty\)</span>), or powers (<span class="process-math">\(1^\infty, 0^0, \infty^0\)</span>)—you must first use algebraic strategies, common denominators, or logarithmic identities to rewrite the expression as a quotient before differentiating.<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-lhospitals-additional-practice-2-2">Evaluate each of the following limits using L’Hospital’s Rule where appropriate:<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="ex-lhospitals-additional-practice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-3-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0}\dfrac{e^{x}+e^{-x}-2}{1-\cos 2x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-3-2-1">
+<div class="para">Direct substitution yields the indeterminate form <span class="process-math">\(0/0\text{.}\)</span> Applying L’Hospital’s Rule gives:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-3-2-1-2">
+\begin{equation*}
+\lim_{x\to 0}\dfrac{e^x - e^{-x}}{2\sin 2x}
+\end{equation*}
+</div>
+<div class="para">This still evaluates to <span class="process-math">\(0/0\text{.}\)</span> Applying L’Hospital’s Rule a second time yields:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-3-2-1-4">
+\begin{equation*}
+\lim_{x\to 0}\dfrac{e^x + e^{-x}}{4\cos 2x} = \dfrac{1+1}{4(1)} = \dfrac{2}{4} = \dfrac{1}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.a.1"><a href="#ex-lhospitals-additional-practice-3-2" title="Copy heading and permalink for Solution 282.a.1" aria-label="Copy heading and permalink for Solution 282.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.a"><a href="#ex-lhospitals-additional-practice-3" title="Copy heading and permalink for Task 282.a" aria-label="Copy heading and permalink for Task 282.a">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-4-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to (\pi/2)^-}\dfrac{4\tan x}{1+\sec x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-4-2-1">
+<div class="para">This limit yields the indeterminate form <span class="process-math">\(\infty/\infty\text{.}\)</span> Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-4-2-1-2">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-}\dfrac{4\sec^2 x}{\sec x \tan x} = \lim_{x\to (\pi/2)^-}\dfrac{4\sec x}{\tan x}
+\end{equation*}
+</div>
+<div class="para">Rewriting the trigonometric functions in terms of sine and cosine:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-4-2-1-3">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-} \dfrac{4}{\cos x} \cdot \dfrac{\cos x}{\sin x} = \lim_{x\to (\pi/2)^-} \dfrac{4}{\sin x} = \dfrac{4}{1} = 4
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.b.1"><a href="#ex-lhospitals-additional-practice-4-2" title="Copy heading and permalink for Solution 282.b.1" aria-label="Copy heading and permalink for Solution 282.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.b"><a href="#ex-lhospitals-additional-practice-4" title="Copy heading and permalink for Task 282.b" aria-label="Copy heading and permalink for Task 282.b">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-5-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0}\dfrac{e^{x}+e^{-x}}{x^{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-5-2-1">
+<div class="para">Direct substitution yields <span class="process-math">\(\dfrac{1+1}{0} = \dfrac{2}{0}\text{.}\)</span> Since this is not an indeterminate form, L’Hospital’s Rule does not apply. Because the numerator is positive and the denominator approaches zero through positive values:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-5-2-1-2">
+\begin{equation*}
+\lim_{x\to 0}\dfrac{e^{x}+e^{-x}}{x^{2}} = \infty
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.c.1"><a href="#ex-lhospitals-additional-practice-5-2" title="Copy heading and permalink for Solution 282.c.1" aria-label="Copy heading and permalink for Solution 282.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.c"><a href="#ex-lhospitals-additional-practice-5" title="Copy heading and permalink for Task 282.c" aria-label="Copy heading and permalink for Task 282.c">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-6-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}\dfrac{e^{-1/x}}{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-6-2-1">
+<div class="para">This limit yields the indeterminate form <span class="process-math">\(0/0\text{.}\)</span> To avoid a worsening algebraic loop, we rewrite it as an <span class="process-math">\(\infty/\infty\)</span> form by shifting the exponential term to the denominator:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-6-2-1-3">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{1/x}{e^{1/x}}
+\end{equation*}
+</div>
+<div class="para">Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-6-2-1-4">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{-1/x^2}{-1/x^2 \cdot e^{1/x}} = \lim_{x\to 0^+}\dfrac{1}{e^{1/x}} = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.d.1"><a href="#ex-lhospitals-additional-practice-6-2" title="Copy heading and permalink for Solution 282.d.1" aria-label="Copy heading and permalink for Solution 282.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.d"><a href="#ex-lhospitals-additional-practice-6" title="Copy heading and permalink for Task 282.d" aria-label="Copy heading and permalink for Task 282.d">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-7-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}x^{2}\ln x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-7-2-1">
+<div class="para">This limit has the indeterminate product form <span class="process-math">\(0 \cdot (-\infty)\text{.}\)</span> Converting it to a quotient:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-7-2-1-2">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{\ln x}{1/x^2}
+\end{equation*}
+</div>
+<div class="para">Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-7-2-1-3">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{1/x}{-2/x^3} = \lim_{x\to 0^+}\left(-\dfrac{x^2}{2}\right) = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.e.1"><a href="#ex-lhospitals-additional-practice-7-2" title="Copy heading and permalink for Solution 282.e.1" aria-label="Copy heading and permalink for Solution 282.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.e"><a href="#ex-lhospitals-additional-practice-7" title="Copy heading and permalink for Task 282.e" aria-label="Copy heading and permalink for Task 282.e">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-8"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-8-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to (\pi/2)^-}(2x-\pi)\sec x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-8-2-1">
+<div class="para">This limit has the indeterminate product form <span class="process-math">\(0 \cdot \infty\text{.}\)</span> Rewriting using cosines:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-8-2-1-2">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-}\dfrac{2x-\pi}{\cos x}
+\end{equation*}
+</div>
+<div class="para">Applying L’Hospital’s Rule to this <span class="process-math">\(0/0\)</span> form:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-8-2-1-4">
+\begin{equation*}
+\lim_{x\to (\pi/2)^-}\dfrac{2}{-\sin x} = \dfrac{2}{-1} = -2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.f.1"><a href="#ex-lhospitals-additional-practice-8-2" title="Copy heading and permalink for Solution 282.f.1" aria-label="Copy heading and permalink for Solution 282.f.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.f"><a href="#ex-lhospitals-additional-practice-8" title="Copy heading and permalink for Task 282.f" aria-label="Copy heading and permalink for Task 282.f">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-9"><h4 class="heading"><span class="codenumber">(g)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-9-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}(1+3x)^{1/(2x)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-9-2-1">
+<div class="para">This limit has the indeterminate form <span class="process-math">\(1^\infty\text{.}\)</span> Rewriting as an exponential base <span class="process-math">\(e\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-9-2-1-3">
+\begin{equation*}
+\lim_{x\to 0^+} e^{\dfrac{1}{2x}\ln(1+3x)} = e^{\displaystyle\lim_{x\to 0^+} \dfrac{\ln(1+3x)}{2x}}
+\end{equation*}
+</div>
+<div class="para">Applying L’Hospital’s Rule to the exponent fraction:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-9-2-1-4">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{\dfrac{3}{1+3x}}{2} = \dfrac{3}{2}
+\end{equation*}
+</div>
+<div class="para">Therefore, the complete evaluation yields <span class="process-math">\(e^{3/2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.g.1"><a href="#ex-lhospitals-additional-practice-9-2" title="Copy heading and permalink for Solution 282.g.1" aria-label="Copy heading and permalink for Solution 282.g.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.g"><a href="#ex-lhospitals-additional-practice-9" title="Copy heading and permalink for Task 282.g" aria-label="Copy heading and permalink for Task 282.g">🔗</a></div></article><article class="task exercise-like" id="ex-lhospitals-additional-practice-10"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="ex-lhospitals-additional-practice-10-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^+}\left(\dfrac{1}{e^{x}-1}-\dfrac{1}{x}\right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhospitals-additional-practice-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhospitals-additional-practice-10-2-1">
+<div class="para">This limit presents an indeterminate difference of type <span class="process-math">\(\infty - \infty\text{.}\)</span> Combining fractions under a single denominator:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-10-2-1-2">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{x - (e^x - 1)}{x(e^x - 1)} = \lim_{x\to 0^+}\dfrac{x - e^x + 1}{xe^x - x}
+\end{equation*}
+</div>
+<div class="para">This forms a <span class="process-math">\(0/0\)</span> expression. Applying L’Hospital’s Rule:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-10-2-1-4">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{1 - e^x}{xe^x + e^x - 1}
+\end{equation*}
+</div>
+<div class="para">Evaluating again yields <span class="process-math">\(0/0\text{.}\)</span> Applying L’Hospital’s Rule a second time:</div>
+<div class="displaymath process-math" id="ex-lhospitals-additional-practice-10-2-1-6">
+\begin{equation*}
+\lim_{x\to 0^+}\dfrac{-e^x}{xe^x + e^x + e^x} = \dfrac{-1}{0 + 1 + 1} = -\dfrac{1}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhospitals-additional-practice-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 282.h.1"><a href="#ex-lhospitals-additional-practice-10-2" title="Copy heading and permalink for Solution 282.h.1" aria-label="Copy heading and permalink for Solution 282.h.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 282.h"><a href="#ex-lhospitals-additional-practice-10" title="Copy heading and permalink for Task 282.h" aria-label="Copy heading and permalink for Task 282.h">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 282: Additional Indeterminate Forms Practice"><a href="#ex-lhospitals-additional-practice" title="Copy heading and permalink for Checkpoint 282: Additional Indeterminate Forms Practice" aria-label="Copy heading and permalink for Checkpoint 282: Additional Indeterminate Forms Practice">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 3.6 L’Hopital’s Rule"><a href="#sec-lHopitals-rule" title="Copy heading and permalink for Section: 3.6 L’Hopital’s Rule" aria-label="Copy heading and permalink for Section: 3.6 L’Hopital’s Rule">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-Optimization.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-Optimization.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-the-mean-value-theorem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

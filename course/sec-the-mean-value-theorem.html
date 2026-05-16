@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>3. Applications of Derivatives</title>
+<title>3.7 The Mean Value Thoerem</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -136,7 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-related-rates.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="root-1-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-Extreme-values.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-lHopitals-rule.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-linearization-differentials.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
@@ -223,14 +223,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lHopitals-rule.html" class="internal"><span class="title">3.6 L’Hopital’s Rule</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></div></li>
 </ul>
 </li>
@@ -289,21 +289,175 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-Applications-of-Derivatives"><h2 class="heading hide-type">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3. Applications of Derivatives</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-the-mean-value-theorem"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3.7 The Mean Value Thoerem</span>
 </h2>
-<section class="introduction" id="ch-Applications-of-Derivatives-2"><div class="para" id="ch-Applications-of-Derivatives-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#ch-Applications-of-Derivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></section><nav class="summary-links"><ul>
-<li><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></li>
-<li><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></li>
-<li><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></li>
-<li><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></li>
-<li><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></li>
-<li><a href="sec-lHopitals-rule.html" class="internal"><span class="title">3.6 L’Hopital’s Rule</span></a></li>
-<li><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></li>
-<li><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></li>
-</ul></nav><div class="autopermalink" data-description="Chapter: 3. Applications of Derivatives"><a href="#ch-Applications-of-Derivatives" title="Copy heading and permalink for Chapter: 3. Applications of Derivatives" aria-label="Copy heading and permalink for Chapter: 3. Applications of Derivatives">🔗</a></div></section></div>
+<section class="introduction" id="sec-the-mean-value-theorem-2"><div class="para" id="sec-the-mean-value-theorem-2-1">The Mean Value Theorem (MVT) connects the average rate of change of a function over an interval to its instantaneous rate of change at a specific point within that interval. It serves as a foundational building block for many core concepts in calculus, including Rolle’s Theorem and the proof of the Fundamental Theorem of Calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-the-mean-value-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="theorem theorem-like" id="thm-mvt"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">283</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mean Value Theorem.</span>
+</h3>
+<div class="para logical" id="thm-mvt-2-1">
+<div class="para">If <span class="process-math">\(f\)</span> is continuous on a closed interval <span class="process-math">\([a,b]\)</span> and differentiable on the open interval <span class="process-math">\((a,b)\text{,}\)</span> then there exists a number <span class="process-math">\(c\)</span> in <span class="process-math">\((a,b)\)</span> such that</div>
+<div class="displaymath process-math" id="thm-mvt-2-1-6">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}, 
+\end{equation*}
+</div>
+<div class="para">or, equivalently,</div>
+<div class="displaymath process-math" id="thm-mvt-2-1-7">
+\begin{equation*}
+f(b)-f(a)=f'(c)(b-a). 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-mvt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 283: Mean Value Theorem"><a href="#thm-mvt" title="Copy heading and permalink for Theorem 283: Mean Value Theorem" aria-label="Copy heading and permalink for Theorem 283: Mean Value Theorem">🔗</a></div></article><details id="ex-mvt-quadratic" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">284</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-mvt-quadratic-1-1">If <span class="process-math">\(f(x)=\dfrac{1}{4}x^{2}+1\text{,}\)</span> show that <span class="process-math">\(f\)</span> satisfies the hypothesis of the Mean Value Theorem on the interval <span class="process-math">\([-1,4]\text{,}\)</span> and find a number <span class="process-math">\(c\)</span> in <span class="process-math">\((-1,4)\)</span> that satisfies the conclusion of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-mvt-quadratic-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-mvt-quadratic-2-1">First, we must check the two hypotheses of the Mean Value Theorem:<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-mvt-quadratic-2-2">
+<ol class="decimal" id="ex-mvt-quadratic-2-2-1">
+<li id="ex-mvt-quadratic-2-2-1-1">
+<div class="para" id="ex-mvt-quadratic-2-2-1-1-1">The function <span class="process-math">\(f(x)\)</span> is a polynomial, so it is continuous everywhere, including on the closed interval <span class="process-math">\([-1,4]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-mvt-quadratic-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-mvt-quadratic-2-2-1-2">
+<div class="para" id="ex-mvt-quadratic-2-2-1-2-1">The derivative is <span class="process-math">\(f'(x) = \frac{1}{2}x\text{,}\)</span> which exists everywhere, meaning <span class="process-math">\(f\)</span> is differentiable on the open interval <span class="process-math">\((-1,4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-mvt-quadratic-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-mvt-quadratic-2-3">
+<div class="para">Since both hypotheses are satisfied, there exists a number <span class="process-math">\(c\)</span> in <span class="process-math">\((-1,4)\)</span> such that:</div>
+<div class="displaymath process-math" id="ex-mvt-quadratic-2-3-3">
+\begin{equation*}
+f'(c) = \frac{f(4) - f(-1)}{4 - (-1)}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-mvt-quadratic-2-4">
+<div class="para">Next, we evaluate the function at the endpoints:</div>
+<div class="displaymath process-math" id="ex-mvt-quadratic-2-4-1">
+\begin{equation*}
+f(4) = \frac{1}{4}(4)^2 + 1 = 5
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-mvt-quadratic-2-4-2">
+\begin{equation*}
+f(-1) = \frac{1}{4}(-1)^2 + 1 = \frac{5}{4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-mvt-quadratic-2-5">
+<div class="para">Now, calculate the average rate of change:</div>
+<div class="displaymath process-math" id="ex-mvt-quadratic-2-5-1">
+\begin{equation*}
+\frac{5 - \frac{5}{4}}{4 - (-1)} = \frac{\frac{15}{4}}{5} = \frac{3}{4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-mvt-quadratic-2-6">
+<div class="para">Finally, set <span class="process-math">\(f'(c) = \frac{3}{4}\)</span> and solve for <span class="process-math">\(c\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-mvt-quadratic-2-6-3">
+\begin{equation*}
+\frac{1}{2}c = \frac{3}{4} \implies c = \frac{3}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-mvt-quadratic-2-7">Since <span class="process-math">\(c = \frac{3}{2}\)</span> (or <span class="process-math">\(1.5\)</span>) lies within the open interval <span class="process-math">\((-1,4)\text{,}\)</span> this value satisfies the conclusion of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#ex-mvt-quadratic-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 284.1"><a href="#ex-mvt-quadratic-2" title="Copy heading and permalink for Solution 284.1" aria-label="Copy heading and permalink for Solution 284.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 284"><a href="#ex-mvt-quadratic" title="Copy heading and permalink for Example 284" aria-label="Copy heading and permalink for Example 284">🔗</a></div></article></details><details id="exer-sine-mvt-proof" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">285</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exer-sine-mvt-proof-1-1">
+<div class="para">Prove that if <span class="process-math">\(u\)</span> and <span class="process-math">\(v\)</span> are any real numbers, then</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-1-1-3">
+\begin{equation*}
+|\sin u -\sin v|\leq |u-v|.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="exer-sine-mvt-proof-1-2"> Apply the Mean Value Theorem with <span class="process-math">\(f(x)=\sin x\text{.}\)</span><div class="autopermalink" data-description="Paragraph: Hint"><a href="#exer-sine-mvt-proof-1-2" title="Copy heading and permalink for Paragraph: Hint" aria-label="Copy heading and permalink for Paragraph: Hint">🔗</a></div>
+</div>
+<div class="solutions"><details id="exer-sine-mvt-proof-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exer-sine-mvt-proof-2-1">If <span class="process-math">\(u = v\text{,}\)</span> then <span class="process-math">\(|\sin u - \sin v| = 0\)</span> and <span class="process-math">\(|u - v| = 0\text{.}\)</span> The inequality holds as <span class="process-math">\(0 \leq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exer-sine-mvt-proof-2-2">Without loss of generality, assume <span class="process-math">\(u \lt v\text{.}\)</span> Let <span class="process-math">\(f(x) = \sin x\)</span> on the closed interval <span class="process-math">\([u, v]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exer-sine-mvt-proof-2-3">
+<div class="para">We check the hypotheses of the Mean Value Theorem:</div>
+<ol class="decimal" id="exer-sine-mvt-proof-2-3-1">
+<li id="exer-sine-mvt-proof-2-3-1-1">
+<div class="para" id="exer-sine-mvt-proof-2-3-1-1-1">The function <span class="process-math">\(f(x) = \sin x\)</span> is continuous everywhere, so it is continuous on <span class="process-math">\([u, v]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 285.1"><a href="#exer-sine-mvt-proof-2-3-1-1" title="Copy heading and permalink for Item 285.1" aria-label="Copy heading and permalink for Item 285.1">🔗</a></div>
+</li>
+<li id="exer-sine-mvt-proof-2-3-1-2">
+<div class="para" id="exer-sine-mvt-proof-2-3-1-2-1">The derivative <span class="process-math">\(f'(x) = \cos x\)</span> exists everywhere, so <span class="process-math">\(f\)</span> is differentiable on <span class="process-math">\((u, v)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 285.2"><a href="#exer-sine-mvt-proof-2-3-1-2" title="Copy heading and permalink for Item 285.2" aria-label="Copy heading and permalink for Item 285.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exer-sine-mvt-proof-2-4">
+<div class="para">By the Mean Value Theorem, there exists a number <span class="process-math">\(c\)</span> in <span class="process-math">\((u, v)\)</span> such that:</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-2-4-3">
+\begin{equation*}
+\frac{\sin v - \sin u}{v - u} = \cos c
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exer-sine-mvt-proof-2-5">
+<div class="para">Taking the absolute value of both sides gives:</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-2-5-1">
+\begin{equation*}
+\left| \frac{\sin v - \sin u}{v - u} \right| = |\cos c|
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-2-5-2">
+\begin{equation*}
+\frac{|\sin u - \sin v|}{|u - v|} = |\cos c|
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exer-sine-mvt-proof-2-6">
+<div class="para">We know that for any real number <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(|\cos c| \leq 1\text{.}\)</span> Substituting this inequality yields:</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-2-6-3">
+\begin{equation*}
+\frac{|\sin u - \sin v|}{|u - v|} \leq 1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exer-sine-mvt-proof-2-7">
+<div class="para">Multiplying both sides by the positive quantity <span class="process-math">\(|u - v|\)</span> completes the proof:</div>
+<div class="displaymath process-math" id="exer-sine-mvt-proof-2-7-2">
+\begin{equation*}
+|\sin u - \sin v| \leq |u - v| \qquad \blacksquare
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exer-sine-mvt-proof-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 285.1"><a href="#exer-sine-mvt-proof-2" title="Copy heading and permalink for Solution 285.1" aria-label="Copy heading and permalink for Solution 285.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 285"><a href="#exer-sine-mvt-proof" title="Copy heading and permalink for Checkpoint 285" aria-label="Copy heading and permalink for Checkpoint 285">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 3.7 The Mean Value Thoerem"><a href="#sec-the-mean-value-theorem" title="Copy heading and permalink for Section: 3.7 The Mean Value Thoerem" aria-label="Copy heading and permalink for Section: 3.7 The Mean Value Thoerem">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-related-rates.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-Extreme-values.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-lHopitals-rule.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-linearization-differentials.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

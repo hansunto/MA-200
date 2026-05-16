@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-newtons-method" class="notes">
+  <title>3.9 Newton's Method</title>
+
+  <introduction>
+    <p>
+      Since the slope of the tangent line is <m>f'(x_1)</m>, an equation of the tangent line at <m>(x_1, f(x_1))</m> is:
+      <me>y-f(x_1)=f'(x_1)(x-x_1).</me>
+    </p>
+    <p>
+      The <m>x</m>-intercept <m>x_2</m> of this line corresponds to the point <m>(x_2,0)</m>, which gives:
+      <me>0-f(x_1)=f'(x_1)(x_2-x_1).</me>
+    </p>
+    <p>
+      If <m>f'(x_1) \neq 0</m>, then solving for <m>x_2</m> yields the equation:
+      <me>x_2=x_1-\frac{f(x_1)}{f'(x_1)}.</me>
+    </p>
+    <p>
+      If we take <m>x_2</m> as a second approximation to a root, then the process may be repeated by using the tangent line at <m>(x_2,f(x_2))</m>. If <m>f'(x_2) \neq 0</m>, then a third approximation <m>x_3</m> is:
+      <me>x_3=x_2-\frac{f(x_2)}{f'(x_2)}.</me>
+    </p>
+    <p>
+      This technique of successive approximations of real zeros is referred to as <alert>Newton's method</alert>.
+    </p>
+  </introduction>
+
+  <algorithm xml:id="algo-newtons-method">
+    <title>Newton's Method</title>
+    <statement>
+      <p>
+        Let <m>f</m> be a differentiable function, and suppose <m>r</m> is a real zero of <m>f</m>. If <m>x_n</m> is an approximation to <m>r</m>, then the next approximation <m>x_{n+1}</m> is given by:
+        <me>x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)},</me>
+        provided that <m>f'(x_n) \neq 0</m>.
+      </p>
+    </statement>
+  </algorithm>
+
+  <example xml:id="ex-newton-sqrt7">
+    <statement>
+      <p>
+        Use Newton's method to approximate <m>\sqrt{7}</m> to five decimal places.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To approximate <m>\sqrt{7}</m>, we find the positive root of the function <m>f(x) = x^2 - 7</m>. The derivative is <m>f'(x) = 2x</m>.
+      </p>
+      <p>
+        The Newton's method iteration formula becomes:
+        <me>x_{n+1} = x_n - \frac{x_n^2 - 7}{2x_n} = \frac{x_n^2 + 7}{2x_n}</me>
+      </p>
+      <p>
+        Choosing a reasonable initial guess close to <m>\sqrt{7}</m>, such as <m>x_1 = 2.5</m>:
+        <ul>
+          <li>
+            <p>
+              <m>x_2 = \frac{2.5^2 + 7}{2(2.5)} = 2.65</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_3 = \frac{2.65^2 + 7}{2(2.65)} \approx 2.6457547</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_4 = \frac{2.6457547^2 + 7}{2(2.6457547)} \approx 2.6457513</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Rounding to five decimal places, we find <m>\sqrt{7} \approx 2.64575</m>.
+      </p>
+    </solution>
+  </example>
+
+   <exercise xml:id="exer-newton-cos">
+    <statement>
+      <p>
+        Approximate the real root of <m>x-\cos x=0</m> to three decimal places.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>f(x) = x - \cos x</m>. We want to find where <m>f(x) = 0</m>. First, we compute the derivative:
+        <me>f'(x) = 1 - (-\sin x) = 1 + \sin x</me>
+      </p>
+      <p>
+        The Newton's method iteration formula is:
+        <me>x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} = x_n - \frac{x_n - \cos x_n}{1 + \sin x_n}</me>
+      </p>
+      <p>
+        To pick an initial guess <m>x_1</m>, notice that <m>f(0) = 0 - 1 = -1</m> and <m>f(\frac{\pi}{2}) = \frac{\pi}{2} - 0 \approx 1.57</m>. By the Intermediate Value Theorem, a root exists between <m>0</m> and <m>\frac{\pi}{2}</m>. Let's choose <m>x_1 = 1</m> radian.
+      </p>
+      <p>
+        Applying the iteration formula (ensuring the calculator is set to radian mode):
+        <ul>
+          <li>
+            <p>
+              <m>x_2 = 1 - \frac{1 - \cos(1)}{1 + \sin(1)} \approx 1 - \frac{1 - 0.54030}{1 + 0.84147} \approx 0.75036</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_3 = 0.75036 - \frac{0.75036 - \cos(0.75036)}{1 + \sin(0.75036)} \approx 0.73911</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x_4 = 0.73911 - \frac{0.73911 - \cos(0.73911)}{1 + \sin(0.73911)} \approx 0.73909</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as <m>x \approx 0.739</m>.
+      </p>
+    </solution>
+  </exercise>
+
+
+</section>

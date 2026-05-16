@@ -2926,6 +2926,42 @@ var ptx_lunr_docs = [
   "body": "  Use differentials to approximate the change in if changes from to . Find a linear approximation to as well.    Let . The differential of is given by:    Important Note: Before substituting values into trigonometric derivatives, all angles and their changes must be converted from degrees to radians.  The initial angle and its increment are:     Step 1: Approximate the change in .   We compute the approximate change using the differential :    Step 2: Find the linear approximation to .   Using the linear approximation formula , we have:    "
 },
 {
+  "id": "sec-newtons-method",
+  "level": "1",
+  "url": "sec-newtons-method.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.9 Newton’s Method",
+  "body": " 3.9 Newton's Method   Since the slope of the tangent line is , an equation of the tangent line at is:   The -intercept of this line corresponds to the point , which gives:   If , then solving for yields the equation:   If we take as a second approximation to a root, then the process may be repeated by using the tangent line at . If , then a third approximation is:   This technique of successive approximations of real zeros is referred to as Newton's method .    Newton's Method   Let be a differentiable function, and suppose is a real zero of . If is an approximation to , then the next approximation is given by: provided that .      Use Newton's method to approximate to five decimal places.    To approximate , we find the positive root of the function . The derivative is .  The Newton's method iteration formula becomes:   Choosing a reasonable initial guess close to , such as :                   Rounding to five decimal places, we find .      Approximate the real root of to three decimal places.    Let . We want to find where . First, we compute the derivative:   The Newton's method iteration formula is:   To pick an initial guess , notice that and . By the Intermediate Value Theorem, a root exists between and . Let's choose radian.  Applying the iteration formula (ensuring the calculator is set to radian mode):                   Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as .    "
+},
+{
+  "id": "algo-newtons-method",
+  "level": "2",
+  "url": "sec-newtons-method.html#algo-newtons-method",
+  "type": "Algorithm",
+  "number": "293",
+  "title": "Newton’s Method.",
+  "body": " Newton's Method   Let be a differentiable function, and suppose is a real zero of . If is an approximation to , then the next approximation is given by: provided that .   "
+},
+{
+  "id": "ex-newton-sqrt7",
+  "level": "2",
+  "url": "sec-newtons-method.html#ex-newton-sqrt7",
+  "type": "Example",
+  "number": "294",
+  "title": "",
+  "body": "  Use Newton's method to approximate to five decimal places.    To approximate , we find the positive root of the function . The derivative is .  The Newton's method iteration formula becomes:   Choosing a reasonable initial guess close to , such as :                   Rounding to five decimal places, we find .   "
+},
+{
+  "id": "exer-newton-cos",
+  "level": "2",
+  "url": "sec-newtons-method.html#exer-newton-cos",
+  "type": "Checkpoint",
+  "number": "295",
+  "title": "",
+  "body": "  Approximate the real root of to three decimal places.    Let . We want to find where . First, we compute the derivative:   The Newton's method iteration formula is:   To pick an initial guess , notice that and . By the Intermediate Value Theorem, a root exists between and . Let's choose radian.  Applying the iteration formula (ensuring the calculator is set to radian mode):                   Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as .   "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
@@ -3119,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "296",
+  "number": "299",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

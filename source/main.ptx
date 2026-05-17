@@ -157,8 +157,8 @@
       
       
       <!-- Add more xi:include files here to include them in the main course -->
-      <xi:include href="./notes/week01.ptx"/>
-      <xi:include href="./notes/week02.ptx"/>
+      <!--<xi:include href="./notes/week01.ptx"/>
+      <xi:include href="./notes/week02.ptx"/>-->
       <!-- etc. -->
 
     </chapter>-->

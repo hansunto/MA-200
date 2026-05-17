@@ -3088,6 +3088,312 @@ var ptx_lunr_docs = [
   "body": "  Evaluate each of the following integrals using basic antiderivatives and algebraic manipulation:           Separate the fraction into two terms and integrate each term individually:             Integrate term by term using the exponential rule :             Rewrite the integrand using the Pythagorean identity , then apply known basic antiderivatives:             Simplify the integrand first by dividing each term in the numerator by the denominator using exponent rules, yielding . Then apply the Power Rule:             To avoid -substitution, fully expand the cubic binomial first using the binomial theorem or expansion rules:    Now compute the general antiderivative term-by-term using the basic Power Rule:     "
 },
 {
+  "id": "sec-area-summation",
+  "level": "1",
+  "url": "sec-area-summation.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.1 Area and Summation Notations",
+  "body": " 4.1 Area and Summation Notations  In development of the definite integral we shall employ sums of many numbers. To express such sums compactly, it is convenient to use summation notation.    Summation Notation   Given a collection of numbers the symbol represents the sum and is written as       Evaluate    We expand the summation by substituting the values into the expression:         Evaluate    We expand the summation by substituting the values into the expression:        Properties of Summation   If is any positive integer and and are sets of real numbers, then:           for every real number              Standard Summation Formulas                          Evaluate and .    For the first sum, we apply the identity with :   For the second sum, we apply the identity with :       Express in terms of    We first split the sum using linearity properties:   Substituting the standard summation formulas yields:      Equivalence of Index Shifts   Which formula is not equivalent to the other two?     We expand each summation term by term to compare their values:     First sum (let ): For , we get:     Second sum (let ): For , we get:     Third sum (let ): For , we get:      Comparing the terms shows that , while . Therefore, the second formula, , is not equivalent to the other two.     Linearity Properties of Sums   Suppose that and . Find the value of:     Using the linearity properties of summation notation, we split the target expression into three separate sums:   We are given the values for the first two sums, and we know that summing a constant from to results in (here, ). Substituting these values gives:      Simplifying Cube Identities   Evaluate the sum:     First, we factor out the constant from the first summation and compute the inner sum of the second term:   Using the formulas and for :    Substituting these evaluated pieces back into our original expression yields:     "
+},
+{
+  "id": "sec-area-summation-2",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "summation notation. "
+},
+{
+  "id": "def-summation-notation",
+  "level": "2",
+  "url": "sec-area-summation.html#def-summation-notation",
+  "type": "Definition",
+  "number": "309",
+  "title": "Summation Notation.",
+  "body": " Summation Notation   Given a collection of numbers the symbol represents the sum and is written as    "
+},
+{
+  "id": "sec-area-summation-4",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-4",
+  "type": "Example",
+  "number": "310",
+  "title": "",
+  "body": "  Evaluate    We expand the summation by substituting the values into the expression:      "
+},
+{
+  "id": "sec-area-summation-5",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-5",
+  "type": "Example",
+  "number": "311",
+  "title": "",
+  "body": "  Evaluate    We expand the summation by substituting the values into the expression:      "
+},
+{
+  "id": "thm-linearity-summation",
+  "level": "2",
+  "url": "sec-area-summation.html#thm-linearity-summation",
+  "type": "Theorem",
+  "number": "312",
+  "title": "Properties of Summation.",
+  "body": " Properties of Summation   If is any positive integer and and are sets of real numbers, then:           for every real number            "
+},
+{
+  "id": "thm-summation-formulas",
+  "level": "2",
+  "url": "sec-area-summation.html#thm-summation-formulas",
+  "type": "Theorem",
+  "number": "313",
+  "title": "Standard Summation Formulas.",
+  "body": " Standard Summation Formulas                       "
+},
+{
+  "id": "sec-area-summation-8",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-8",
+  "type": "Example",
+  "number": "314",
+  "title": "",
+  "body": "  Evaluate and .    For the first sum, we apply the identity with :   For the second sum, we apply the identity with :    "
+},
+{
+  "id": "sec-area-summation-9",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-9",
+  "type": "Example",
+  "number": "315",
+  "title": "",
+  "body": "  Express in terms of    We first split the sum using linearity properties:   Substituting the standard summation formulas yields:    "
+},
+{
+  "id": "sec-area-summation-10",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-10",
+  "type": "Checkpoint",
+  "number": "316",
+  "title": "Equivalence of Index Shifts.",
+  "body": " Equivalence of Index Shifts   Which formula is not equivalent to the other two?     We expand each summation term by term to compare their values:     First sum (let ): For , we get:     Second sum (let ): For , we get:     Third sum (let ): For , we get:      Comparing the terms shows that , while . Therefore, the second formula, , is not equivalent to the other two.   "
+},
+{
+  "id": "sec-area-summation-11",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-11",
+  "type": "Checkpoint",
+  "number": "317",
+  "title": "Linearity Properties of Sums.",
+  "body": " Linearity Properties of Sums   Suppose that and . Find the value of:     Using the linearity properties of summation notation, we split the target expression into three separate sums:   We are given the values for the first two sums, and we know that summing a constant from to results in (here, ). Substituting these values gives:    "
+},
+{
+  "id": "sec-area-summation-12",
+  "level": "2",
+  "url": "sec-area-summation.html#sec-area-summation-12",
+  "type": "Checkpoint",
+  "number": "318",
+  "title": "Simplifying Cube Identities.",
+  "body": " Simplifying Cube Identities   Evaluate the sum:     First, we factor out the constant from the first summation and compute the inner sum of the second term:   Using the formulas and for :    Substituting these evaluated pieces back into our original expression yields:    "
+},
+{
+  "id": "sec-definite-integral",
+  "level": "1",
+  "url": "sec-definite-integral.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.2 Definite Integrals",
+  "body": " 4.2 Definite Integrals  Our goal is to find the area under a curve. What is the area under the parabola between to ?  Suppose we divide the area into four strips and by drawing the vertical lines  and . We can approximate each strip by a rectangle whose base is the same as the strip and whose height is the same as the right edge of the strip.  Each rectangle has width and the heights are and . If we let be the sum of the areas of these approximating rectangles we get: We see that the area of is less than , so:    Right Riemann Sum Approximation with Point Labels ( )   Four right-endpoint rectangles with exact coordinate labels and true area shading.     We could use the smaller rectangles whose heights are values of at the left endpoints of the subintervals. Gathering the sum of the areas of these approximating rectangles we get: We see that the area of is larger than , so:    Left Riemann Sum Approximation with Point Labels ( )   Four left-endpoint rectangles with exact coordinate labels and true area shading.     We can repeat this process with a larger number of strips. We divide the region into eight strips of equal width. By computing the sum of the areas of the smaller rectangles and the sum of the areas of the larger rectangles we obtain better estimates for :   We could obtain better estimates by increasing the number of strips.  With 1000 strips we narrow it down even more. A good estimate is obtained by averaging these numbers:    The Definite Integral   Let be defined on a closed interval . The definite integral of from to , denoted by , is: provided that the limit exists.     Area as a Definite Integral   If is integrable and for every in , then the area of the region under the graph of from to is:      Area via Limit of Upper Sums   For the function , find a formula for the upper sum obtained by dividing the interval into equal subintervals. Then take the limit of this sum as to calculate the area under the curve.    First, we find the width of each subinterval, , by dividing the length of the interval into equal parts:   Because is a strictly increasing function on the interval , the maximum value of the function on any subinterval occurs at its right endpoint. The -th right endpoint is given by:   We evaluate the function at these right endpoints to find the heights of our upper sum rectangles:   Now, we formulate the upper Riemann sum, :   Using the linearity properties of summation, we separate the terms and factor out constants relative to the summation index :   Substituting the standard summation identities and yields:   To find the exact area under the curve, we calculate the limit of this expression as the number of subintervals approaches infinity ( ):     Verification via Definite Integration: We can independently confirm this area calculation by directly evaluating the definite integral using the Fundamental Theorem of Calculus: Both methods yield an identical area of .      Evaluating Integrals Using Geometry   Evaluate each of the following definite integrals:                          The integrand represents the upper half of a circle centered at the origin with a radius of (since ). We can evaluate these integrals by finding the areas of the corresponding geometric regions.   Geometric regions under   A semicircle centered at the origin with a radius of 4 extending from x=-4 to x=4.        The interval is , which covers the entire base of the semicircle. The area of a full semicircle of radius is: Therefore,     This integral has reversed limits of integration. Using the property , we negate the result from part 1:     Since the upper and lower limits of integration are identical ( ), the width of the region is zero. By definition, any integral with identical limits evaluates to zero:     The interval is , which represents exactly one-quarter of the circle (the blue region shaded in the first quadrant). Its geometric area is half of the semicircle: Therefore,         Properties of the Definite Integral   Properties of the Definite Integral   The following properties hold for definite integrals:   If is continuous on , then is integrable on .    If , then .    If exists, then .    If is a real number, then .    If and are integrable on and is any real number, then , , and are integrable on and:                If and if is integrable on both and , then is integrable on and:     If is integrable on and for every in , then .    If and are integrable on and for every in , then .        Applying Definite Integral Properties   Suppose that . Find the value of each of the following:                          We use the properties of the definite integral to evaluate each expression:   By the reversed limits of integration property, :     The variable of integration is a dummy variable. Changing the variable label from to does not affect the value of the definite integral over the same interval:     By the constant multiple property, we can factor out the negative sign (a constant coefficient of ):     By the constant multiple property, we factor out the scalar factor :         Integrating a Constant Function   Evaluate .    Using the constant function integration property, , where , , and :      Combining Integrals into One Vector   Express as one integral: .    First, we apply the reversed limits property to the second term to change its sign from negative to positive:   Substituting this back into our original expression gives:   Using the interval additivity property ( ), we arrange and combine the matching adjacent bounds:      Mean Value Theorem for Definite Integrals   If is continuous on a closed interval , then there is a number in the open interval such that:      Average Value of a Function   Let be continuous on . The average value  of on is defined as:      Finding the Average Value of a Function   Given that , find the average value of on the interval     We use the definition of the average value of a continuous function on an interval :   For this problem, the bounds are and , and the value of the integral is given as . Substituting these values into our formula yields:   Therefore, the average value of on the interval is .     Evaluating Integrals Graphically   Graph the integrands and use the areas to evaluate the integrals:                We evaluate each integral by identifying the geometric shape formed between the function's graph and the -axis over the given interval.     The integrand is the linear equation . Over the interval , the region under the line forms a trapezoid sitting entirely above the -axis.   Region under from to   A line with a negative slope, where a trapezoidal region underneath it is shaded between x=0.5 and x=1.5.     The width of the trapezoid base is . The parallel vertical heights are the function evaluations at the endpoints:  Using the geometric formula for the area of a trapezoid, :     The integrand is , which describes the upper half of a circle centered at the origin with a radius of .   Region under from to   A quarter circle region in the second quadrant shaded under the curve y = sqrt(16-x^2) from x=-4 to x=0.     The interval bounds a region sitting exclusively within the second quadrant, representing exactly one-quarter of the total circle's area. Because the region rests entirely above the -axis, the value of the integral is positive:         Average Value of a Quadratic Function   Find the average value of the function over the given interval:     By definition, the average value of a continuous function on a closed interval is given by:   For this problem, the bounds are and , giving a width of . We set up the average value expression:   To evaluate the integral, we first expand the quadratic integrand:   Now, we integrate term-by-term using the standard power rule:   Finally, we multiply the evaluated integral by the front fraction coefficient to get the average value:   Therefore, the exact average value of the function on the given interval is (or approximately ).     "
+},
+{
+  "id": "fig-right-sum-r4-labeled",
+  "level": "2",
+  "url": "sec-definite-integral.html#fig-right-sum-r4-labeled",
+  "type": "Figure",
+  "number": "319",
+  "title": "Right Riemann Sum Approximation with Point Labels (<span class=\"process-math\">\\(R_4\\)<\/span>)",
+  "body": " Right Riemann Sum Approximation with Point Labels ( )   Four right-endpoint rectangles with exact coordinate labels and true area shading.    "
+},
+{
+  "id": "fig-left-sum-l4-labeled",
+  "level": "2",
+  "url": "sec-definite-integral.html#fig-left-sum-l4-labeled",
+  "type": "Figure",
+  "number": "320",
+  "title": "Left Riemann Sum Approximation with Point Labels (<span class=\"process-math\">\\(L_4\\)<\/span>)",
+  "body": " Left Riemann Sum Approximation with Point Labels ( )   Four left-endpoint rectangles with exact coordinate labels and true area shading.    "
+},
+{
+  "id": "def-definite-integral",
+  "level": "2",
+  "url": "sec-definite-integral.html#def-definite-integral",
+  "type": "Definition",
+  "number": "321",
+  "title": "The Definite Integral.",
+  "body": " The Definite Integral   Let be defined on a closed interval . The definite integral of from to , denoted by , is: provided that the limit exists.   "
+},
+{
+  "id": "thm-area-as-definite-integral",
+  "level": "2",
+  "url": "sec-definite-integral.html#thm-area-as-definite-integral",
+  "type": "Theorem",
+  "number": "322",
+  "title": "Area as a Definite Integral.",
+  "body": " Area as a Definite Integral   If is integrable and for every in , then the area of the region under the graph of from to is:    "
+},
+{
+  "id": "ex-upper-sum-limit",
+  "level": "2",
+  "url": "sec-definite-integral.html#ex-upper-sum-limit",
+  "type": "Example",
+  "number": "323",
+  "title": "Area via Limit of Upper Sums.",
+  "body": " Area via Limit of Upper Sums   For the function , find a formula for the upper sum obtained by dividing the interval into equal subintervals. Then take the limit of this sum as to calculate the area under the curve.    First, we find the width of each subinterval, , by dividing the length of the interval into equal parts:   Because is a strictly increasing function on the interval , the maximum value of the function on any subinterval occurs at its right endpoint. The -th right endpoint is given by:   We evaluate the function at these right endpoints to find the heights of our upper sum rectangles:   Now, we formulate the upper Riemann sum, :   Using the linearity properties of summation, we separate the terms and factor out constants relative to the summation index :   Substituting the standard summation identities and yields:   To find the exact area under the curve, we calculate the limit of this expression as the number of subintervals approaches infinity ( ):     Verification via Definite Integration: We can independently confirm this area calculation by directly evaluating the definite integral using the Fundamental Theorem of Calculus: Both methods yield an identical area of .    "
+},
+{
+  "id": "exe-geometric-integrals",
+  "level": "2",
+  "url": "sec-definite-integral.html#exe-geometric-integrals",
+  "type": "Checkpoint",
+  "number": "324",
+  "title": "Evaluating Integrals Using Geometry.",
+  "body": " Evaluating Integrals Using Geometry   Evaluate each of the following definite integrals:                          The integrand represents the upper half of a circle centered at the origin with a radius of (since ). We can evaluate these integrals by finding the areas of the corresponding geometric regions.   Geometric regions under   A semicircle centered at the origin with a radius of 4 extending from x=-4 to x=4.        The interval is , which covers the entire base of the semicircle. The area of a full semicircle of radius is: Therefore,     This integral has reversed limits of integration. Using the property , we negate the result from part 1:     Since the upper and lower limits of integration are identical ( ), the width of the region is zero. By definition, any integral with identical limits evaluates to zero:     The interval is , which represents exactly one-quarter of the circle (the blue region shaded in the first quadrant). Its geometric area is half of the semicircle: Therefore,       "
+},
+{
+  "id": "thm-definite-integral-properties",
+  "level": "2",
+  "url": "sec-definite-integral.html#thm-definite-integral-properties",
+  "type": "Theorem",
+  "number": "326",
+  "title": "Properties of the Definite Integral.",
+  "body": " Properties of the Definite Integral   The following properties hold for definite integrals:   If is continuous on , then is integrable on .    If , then .    If exists, then .    If is a real number, then .    If and are integrable on and is any real number, then , , and are integrable on and:                If and if is integrable on both and , then is integrable on and:     If is integrable on and for every in , then .    If and are integrable on and for every in , then .      "
+},
+{
+  "id": "ex-definite-integral-properties-apply",
+  "level": "2",
+  "url": "sec-definite-integral.html#ex-definite-integral-properties-apply",
+  "type": "Example",
+  "number": "327",
+  "title": "Applying Definite Integral Properties.",
+  "body": " Applying Definite Integral Properties   Suppose that . Find the value of each of the following:                          We use the properties of the definite integral to evaluate each expression:   By the reversed limits of integration property, :     The variable of integration is a dummy variable. Changing the variable label from to does not affect the value of the definite integral over the same interval:     By the constant multiple property, we can factor out the negative sign (a constant coefficient of ):     By the constant multiple property, we factor out the scalar factor :       "
+},
+{
+  "id": "ex-integrate-constant",
+  "level": "2",
+  "url": "sec-definite-integral.html#ex-integrate-constant",
+  "type": "Example",
+  "number": "328",
+  "title": "Integrating a Constant Function.",
+  "body": " Integrating a Constant Function   Evaluate .    Using the constant function integration property, , where , , and :    "
+},
+{
+  "id": "ex-combine-integrals",
+  "level": "2",
+  "url": "sec-definite-integral.html#ex-combine-integrals",
+  "type": "Example",
+  "number": "329",
+  "title": "Combining Integrals into One Vector.",
+  "body": " Combining Integrals into One Vector   Express as one integral: .    First, we apply the reversed limits property to the second term to change its sign from negative to positive:   Substituting this back into our original expression gives:   Using the interval additivity property ( ), we arrange and combine the matching adjacent bounds:    "
+},
+{
+  "id": "thm-mvt-definite-integral",
+  "level": "2",
+  "url": "sec-definite-integral.html#thm-mvt-definite-integral",
+  "type": "Theorem",
+  "number": "330",
+  "title": "Mean Value Theorem for Definite Integrals.",
+  "body": " Mean Value Theorem for Definite Integrals   If is continuous on a closed interval , then there is a number in the open interval such that:    "
+},
+{
+  "id": "def-average-value-function",
+  "level": "2",
+  "url": "sec-definite-integral.html#def-average-value-function",
+  "type": "Definition",
+  "number": "331",
+  "title": "Average Value of a Function.",
+  "body": " Average Value of a Function   Let be continuous on . The average value  of on is defined as:    "
+},
+{
+  "id": "ex-average-value-calculation",
+  "level": "2",
+  "url": "sec-definite-integral.html#ex-average-value-calculation",
+  "type": "Example",
+  "number": "332",
+  "title": "Finding the Average Value of a Function.",
+  "body": " Finding the Average Value of a Function   Given that , find the average value of on the interval     We use the definition of the average value of a continuous function on an interval :   For this problem, the bounds are and , and the value of the integral is given as . Substituting these values into our formula yields:   Therefore, the average value of on the interval is .   "
+},
+{
+  "id": "exe-graphical-integration",
+  "level": "2",
+  "url": "sec-definite-integral.html#exe-graphical-integration",
+  "type": "Checkpoint",
+  "number": "333",
+  "title": "Evaluating Integrals Graphically.",
+  "body": " Evaluating Integrals Graphically   Graph the integrands and use the areas to evaluate the integrals:                We evaluate each integral by identifying the geometric shape formed between the function's graph and the -axis over the given interval.     The integrand is the linear equation . Over the interval , the region under the line forms a trapezoid sitting entirely above the -axis.   Region under from to   A line with a negative slope, where a trapezoidal region underneath it is shaded between x=0.5 and x=1.5.     The width of the trapezoid base is . The parallel vertical heights are the function evaluations at the endpoints:  Using the geometric formula for the area of a trapezoid, :     The integrand is , which describes the upper half of a circle centered at the origin with a radius of .   Region under from to   A quarter circle region in the second quadrant shaded under the curve y = sqrt(16-x^2) from x=-4 to x=0.     The interval bounds a region sitting exclusively within the second quadrant, representing exactly one-quarter of the total circle's area. Because the region rests entirely above the -axis, the value of the integral is positive:       "
+},
+{
+  "id": "exe-average-value-quadratic",
+  "level": "2",
+  "url": "sec-definite-integral.html#exe-average-value-quadratic",
+  "type": "Checkpoint",
+  "number": "336",
+  "title": "Average Value of a Quadratic Function.",
+  "body": " Average Value of a Quadratic Function   Find the average value of the function over the given interval:     By definition, the average value of a continuous function on a closed interval is given by:   For this problem, the bounds are and , giving a width of . We set up the average value expression:   To evaluate the integral, we first expand the quadratic integrand:   Now, we integrate term-by-term using the standard power rule:   Finally, we multiply the evaluated integral by the front fraction coefficient to get the average value:   Therefore, the exact average value of the function on the given interval is (or approximately ).   "
+},
+{
+  "id": "sec-fundamental-theorem-calculus",
+  "level": "1",
+  "url": "sec-fundamental-theorem-calculus.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.3 The Fundamental Theorem of Calculus",
+  "body": " 4.3 The Fundamental Theorem of Calculus   The Fundamental Theorem of Calculus   Suppose is continuous on a closed interval .   If the function is defined by for every in , then is an antiderivative of on . That is, .    If is any antiderivative of on , then         Evaluation Notation   If is continuous on and is any antiderivative of , then:      Substitution Rule for Definite Integrals   If , then      Definite Integrals of Symmetric Functions   Let be continuous on .   If is an even function, then .    If is an odd function, then .        Derivative of an Integral   Let be continuous on . If , then for every in :     "
+},
+{
+  "id": "thm-fundamental-theorem-calculus",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#thm-fundamental-theorem-calculus",
+  "type": "Theorem",
+  "number": "337",
+  "title": "The Fundamental Theorem of Calculus.",
+  "body": " The Fundamental Theorem of Calculus   Suppose is continuous on a closed interval .   If the function is defined by for every in , then is an antiderivative of on . That is, .    If is any antiderivative of on , then       "
+},
+{
+  "id": "cor-evaluation-notation",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#cor-evaluation-notation",
+  "type": "Corollary",
+  "number": "338",
+  "title": "Evaluation Notation.",
+  "body": " Evaluation Notation   If is continuous on and is any antiderivative of , then:    "
+},
+{
+  "id": "fact-u-substitution-definite",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#fact-u-substitution-definite",
+  "type": "Fact",
+  "number": "339",
+  "title": "Substitution Rule for Definite Integrals.",
+  "body": " Substitution Rule for Definite Integrals   If , then    "
+},
+{
+  "id": "fact-symmetry-integrals",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#fact-symmetry-integrals",
+  "type": "Fact",
+  "number": "340",
+  "title": "Definite Integrals of Symmetric Functions.",
+  "body": " Definite Integrals of Symmetric Functions   Let be continuous on .   If is an even function, then .    If is an odd function, then .      "
+},
+{
+  "id": "thm-Derivative of an Integral",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#thm-Derivative of an Integral",
+  "type": "Theorem",
+  "number": "341",
+  "title": "Derivative of an Integral.",
+  "body": " Derivative of an Integral   Let be continuous on . If , then for every in :    "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
@@ -3281,7 +3587,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "312",
+  "number": "345",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },
@@ -3419,24 +3725,6 @@ var ptx_lunr_docs = [
   "number": "14",
   "title": "",
   "body": "  For each given function, determine its derivative and its general indefinite integral.    Complete the table below by filling in the missing derivative and indefinite integral formulas:                                            The completed table values are evaluated as follows:                                         "
-},
-{
-  "id": "notes-week-01",
-  "level": "1",
-  "url": "notes-week-01.html",
-  "type": "Section",
-  "number": "",
-  "title": "Week 1",
-  "body": " Week 1   This is an outline of the topics we covered in the first week of class.     Monday 8\/22      Wednesday 8\/24      Friday 8\/26     "
-},
-{
-  "id": "notes-week-02",
-  "level": "1",
-  "url": "notes-week-02.html",
-  "type": "Section",
-  "number": "",
-  "title": "Week 2",
-  "body": " Week 2   Monday      Wednesday      Friday     "
 },
 {
   "id": "ch-review-3",

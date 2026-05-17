@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec-indefinite-integrals-substitution" class="notes">
+  <title>4.4 Indefinite Integrals and Substitution Rule</title>
+
+  <p>
+    The variable <m>x</m> can be replaced by a new variable <m>u</m> to find indefinite integrals. This technique is referred to as a <term>change of variable</term>, or the <term>method of substitution</term>.
+  </p>
+
+  <assemblage xml:id="method-substitution">
+    <title>Method of Substitution</title>
+    <p>
+      If <m>F</m> is an antiderivative of <m>f</m>, then:
+      <me>\int f(g(x))g'(x) \, dx = F(g(x))+C</me>
+      If <m>u=g(x)</m> and <m>du=g'(x) \, dx,</m> then:
+      <me>\int f(u) \, du=F(u)+C</me>
+    </p>
+  </assemblage>
+
+  <fact xml:id="fact-integral-tangent">
+  <title>Integral of the Tangent Function</title>
+  <statement>
+    <p>
+      The general indefinite integral of the tangent function is given by:
+      <me>\int \tan x \, dx = \ln|\sec x| + C \quad \text{or} \quad \int \tan x \, dx = -\ln|\cos x| + C</me>
+    </p>
+  </statement>
+  <proof>
+    <p>
+      We begin by rewriting the tangent function in terms of sine and cosine:
+      <me>\int \tan x \, dx = \int \frac{\sin x}{\cos x} \, dx</me>
+    </p>
+    <p>
+      We use the method of substitution by letting the denominator be our new variable:
+      <me>u = \cos x</me>
+      Taking the differential of both sides gives:
+      <me>du = -\sin x \, dx \implies \sin x \, dx = -du</me>
+    </p>
+    <p>
+      Substituting <m>u</m> and <m>-du</m> back into the integral equation yields:
+      <md>
+        <mrow>\int \frac{\sin x}{\cos x} \, dx \amp = \int \frac{-1}{u} \, du</mrow>
+        <mrow>\amp = -\ln|u| + C</mrow>
+      </md>
+    </p>
+    <p>
+      Replacing <m>u</m> with the original expression <m>\cos x</m> results in our first general form:
+      <me>= -\ln|\cos x| + C</me>
+    </p>
+    <p>
+      Using the logarithmic power property (<m>-1 \cdot \ln|A| = \ln|A^{-1}|</m>), we can rewrite the expression to eliminate the negative sign:
+      <md>
+        <mrow>-\ln|\cos x| + C \amp = \ln\left| (\cos x)^{-1} \right| + C</mrow>
+        <mrow>\amp = \ln\left| \frac{1}{\cos x} \right| + C</mrow>
+        <mrow>\amp = \ln|\sec x| + C</mrow>
+      </md>
+    </p>
+  </proof>
+</fact>
+
+<fact xml:id="fact-integral-secant">
+  <title>Integral of the Secant Function</title>
+  <statement>
+    <p>
+      The indefinite integral of the secant function is:
+      <me>\int \sec x \, dx = \ln|\sec x + \tan x| + C</me>
+    </p>
+  </statement>
+</fact>
+
+<example xml:id="ex-integral-secant-derivation">
+  <title>Deriving the Integral of Secant</title>
+  <statement>
+    <p>
+      Evaluate the indefinite integral <m>\int \sec x \, dx</m> to find its general formula.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We use a classic integration trick by multiplying the numerator and denominator by <m>(\sec x + \tan x)</m>:
+      <me>\int \sec x \, dx = \int \sec x \cdot \frac{\sec x + \tan x}{\sec x + \tan x} \, dx = \int \frac{\sec^2 x + \sec x \tan x}{\sec x + \tan x} \, dx</me>
+    </p>
+    <p>
+      Now, we apply the method of substitution by letting the denominator be our new variable:
+      <me>u = \sec x + \tan x</me>
+      Taking the differential of both sides yields:
+      <me>du = (\sec x \tan x + \sec^2 x) \, dx</me>
+    </p>
+    <p>
+      Notice that the numerator is an exact match for <m>du</m>. Substituting <m>u</m> and <m>du</m> back into our expression transforms it into a standard logarithmic integration form:
+      <md>
+        <mrow>\int \frac{\sec^2 x + \sec x \tan x}{\sec x + \tan x} \, dx \amp = \int \frac{1}{u} \, du</mrow>
+        <mrow>\amp = \ln|u| + C</mrow>
+        <mrow>\amp = \ln|\sec x + \tan x| + C</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+
+
+  <example xml:id="ex-substitution-examples">
+    <title>Evaluating Indefinite Integrals via Substitution</title>
+    <introduction>
+      <p>
+        Evaluate each of the following indefinite integrals:
+      </p>
+    </introduction>
+
+    <!-- TASK 1 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int x^2\sqrt{x^3+1} \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = x^3 + 1</m>. Then <m>du = 3x^2 \, dx</m>, which means <m>x^2 \, dx = \frac{1}{3} \, du</m>. Substituting these into the integral gives:
+          <md>
+            <mrow>\int x^2\sqrt{x^3+1} \, dx \amp = \int \sqrt{u} \cdot \frac{1}{3} \, du = \frac{1}{3} \int u^{1/2} \, du</mrow>
+            <mrow>\amp = \frac{1}{3} \left( \frac{2}{3}u^{3/2} \right) + C = \frac{2}{9}u^{3/2} + C</mrow>
+          </md>
+          Substituting back <m>u = x^3 + 1</m>:
+          <me>= \frac{2}{9}(x^3+1)^{3/2} + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 2 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int 4x e^{2x^2+1} \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = 2x^2 + 1</m>. Then <m>du = 4x \, dx</m>. The substitution is a direct match:
+          <md>
+            <mrow>\int 4x e^{2x^2+1} \, dx \amp = \int e^u \, du</mrow>
+            <mrow>\amp = e^u + C</mrow>
+          </md>
+          Substituting back <m>u = 2x^2 + 1</m>:
+          <me>= e^{2x^2+1} + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 3 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{3x^2+2}{x^3+2x} \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = x^3 + 2x</m>. Then <m>du = (3x^2 + 2) \, dx</m>. This yields the standard natural log integration form:
+          <md>
+            <mrow>\int \frac{3x^2+2}{x^3+2x} \, dx \amp = \int \frac{1}{u} \, du</mrow>
+            <mrow>\amp = \ln|u| + C</mrow>
+          </md>
+          Substituting back <m>u = x^3 + 2x</m>:
+          <me>= \ln|x^3+2x| + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 4 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \sqrt{5x+7} \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = 5x + 7</m>. Then <m>du = 5 \, dx</m>, which means <m>dx = \frac{1}{5} \, du</m>:
+          <md>
+            <mrow>\int \sqrt{5x+7} \, dx \amp = \int \sqrt{u} \cdot \frac{1}{5} \, du = \frac{1}{5} \int u^{1/2} \, du</mrow>
+            <mrow>\amp = \frac{1}{5} \left( \frac{2}{3}u^{3/2} \right) + C = \frac{2}{15}u^{3/2} + C</mrow>
+          </md>
+          Substituting back <m>u = 5x + 7</m>:
+          <me>= \frac{2}{15}(5x+7)^{3/2} + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 5 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \cos 4x \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = 4x</m>. Then <m>du = 4 \, dx</m>, which means <m>dx = \frac{1}{4} \, du</m>:
+          <md>
+            <mrow>\int \cos 4x \, dx \amp = \int \cos u \cdot \frac{1}{4} \, du = \frac{1}{4} \sin u + C</mrow>
+          </md>
+          Substituting back <m>u = 4x</m>:
+          <me>= \frac{1}{4}\sin 4x + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 6 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int (2x^3+1)^7x^2 \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = 2x^3 + 1</m>. Then <m>du = 6x^2 \, dx</m>, which means <m>x^2 \, dx = \frac{1}{6} \, du</m>:
+          <md>
+            <mrow>\int (2x^3+1)^7x^2 \, dx \amp = \int u^7 \cdot \frac{1}{6} \, du = \frac{1}{6} \left( \frac{u^8}{8} \right) + C</mrow>
+            <mrow>\amp = \frac{1}{48}u^8 + C</mrow>
+          </md>
+          Substituting back <m>u = 2x^3 + 1</m>:
+          <me>= \frac{1}{48}(2x^3+1)^8 + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 7 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \frac{(x^2-1)}{(x^3-3x+1)^6} \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = x^3 - 3x + 1</m>. Then <m>du = (3x^2 - 3) \, dx = 3(x^2 - 1) \, dx</m>, which means <m>(x^2 - 1) \, dx = \frac{1}{3} \, du</m>:
+          <md>
+            <mrow>\int \frac{(x^2-1)}{(x^3-3x+1)^6} \, dx \amp = \int \frac{1}{u^6} \cdot \frac{1}{3} \, du = \frac{1}{3} \int u^{-6} \, du</mrow>
+            <mrow>\amp = \frac{1}{3} \left( \frac{u^{-5}}{-5} \right) + C = -\frac{1}{15u^5} + C</mrow>
+          </md>
+          Substituting back <m>u = x^3 - 3x + 1</m>:
+          <me>= -\frac{1}{15(x^3-3x+1)^5} + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 8 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \cos^3 5x \sin 5x \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = \cos 5x</m>. Then <m>du = -5\sin 5x \, dx</m>, which implies <m>\sin 5x \, dx = -\frac{1}{5} \, du</m>:
+          <md>
+            <mrow>\int \cos^3 5x \sin 5x \, dx \amp = \int u^3 \cdot \left( -\frac{1}{5} \, du \right) = -\frac{1}{5} \left( \frac{u^4}{4} \right) + C</mrow>
+            <mrow>\amp = -\frac{1}{20}u^4 + C</mrow>
+          </md>
+          Substituting back <m>u = \cos 5x</m>:
+          <me>= -\frac{1}{20}\cos^4 5x + C</me>
+        </p>
+      </solution>
+    </task>
+
+    <!-- TASK 9 -->
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle \int \tan x \sec^2 x \, dx</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = \tan x</m>. Then <m>du = \sec^2 x \, dx</m>. This aligns perfectly with the standard power rule profile:
+          <md>
+            <mrow>\int \tan x \sec^2 x \, dx \amp = \int u \, du</mrow>
+            <mrow>\amp = \frac{1}{2}u^2 + C</mrow>
+          </md>
+          Substituting back <m>u = \tan x</m>:
+          <me>= \frac{1}{2}\tan^2 x + C</me>
+          <note>
+            <p>
+              An alternative choice of substitution <m>u = \sec x</m> (where <m>du = \sec x \tan x \, dx</m>) yields <m>\frac{1}{2}\sec^2 x + C_2</m>. Both answers are correct as they differ only by a trigonometric constant identity threshold (<m>\frac{1}{2}\sec^2 x = \frac{1}{2}\tan^2 x + \frac{1}{2}</m>).
+            </p>
+          </note>
+        </p>
+      </solution>
+    </task>
+  </example>
+
+  <exercise xml:id="exe-substitution-more-examples">
+  <title>Further Indefinite Integrals via Substitution</title>
+  <introduction>
+    <p>
+      Evaluate each of the following indefinite integrals:
+    </p>
+  </introduction>
+
+  <!-- TASK 1 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int x \sqrt[3]{7-6x^2} \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>u = 7 - 6x^2</m>. Then <m>du = -12x \, dx</m>, which means <m>x \, dx = -\frac{1}{12} \, du</m>. Substituting these into the integral gives:
+        <md>
+          <mrow>\int x \sqrt[3]{7-6x^2} \, dx \amp = \int \sqrt[3]{u} \cdot \left(-\frac{1}{12} \, du\right) = -\frac{1}{12} \int u^{1/3} \, du</mrow>
+          <mrow>\amp = -\frac{1}{12} \left( \frac{3}{4} u^{4/3} \right) + C</mrow>
+          <mrow>\amp = -\frac{1}{16} u^{4/3} + C</mrow>
+        </md>
+        Substituting back <m>u = 7 - 6x^2</m> yields:
+        <me>= -\frac{1}{16}(7 - 6x^2)^{4/3} + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 2 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>u = \sqrt{x} = x^{1/2}</m>. Then <m>du = \frac{1}{2}x^{-1/2} \, dx = \frac{1}{2\sqrt{x}} \, dx</m>, which implies <m>\frac{1}{\sqrt{x}} \, dx = 2 \, du</m>. Substituting these gives:
+        <md>
+          <mrow>\int \frac{\cos \sqrt{x}}{\sqrt{x}} \, dx \amp = \int \cos(u) \cdot 2 \, du = 2 \int \cos(u) \, du</mrow>
+          <mrow>\amp = 2\sin(u) + C</mrow>
+        </md>
+        Substituting back <m>u = \sqrt{x}</m> yields:
+        <me>= 2\sin\sqrt{x} + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 3 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int \frac{\sin 2x}{\sqrt{1-\cos 2x}} \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>u = 1 - \cos 2x</m>. Using the chain rule, <m>du = -(-\sin 2x \cdot 2) \, dx = 2\sin 2x \, dx</m>, which means <m>\sin 2x \, dx = \frac{1}{2} \, du</m>. Substituting these gives:
+        <md>
+          <mrow>\int \frac{\sin 2x}{\sqrt{1-\cos 2x}} \, dx \amp = \int \frac{1}{\sqrt{u}} \cdot \frac{1}{2} \, du = \frac{1}{2} \int u^{-1/2} \, du</mrow>
+          <mrow>\amp = \frac{1}{2} \left( 2u^{1/2} \right) + C = \sqrt{u} + C</mrow>
+        </md>
+        Substituting back <m>u = 1 - \cos 2x</m> yields:
+        <me>= \sqrt{1 - \cos 2x} + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 4 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int (\cos x + \sin x)^2 \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        First, expand the integrand algebraically before evaluating:
+        <me>(\cos x + \sin x)^2 = \cos^2 x + 2\sin x \cos x + \sin^2 x</me>
+      </p>
+      <p>
+        Using the Pythagorean identity <m>\cos^2 x + \sin^2 x = 1</m> and the double-angle identity <m>2\sin x \cos x = \sin 2x</m>, we rewrite the integral without needing a raw <m>u</m>-substitution:
+        <md>
+          <mrow>\int (\cos x + \sin x)^2 \, dx \amp = \int (1 + \sin 2x) \, dx</mrow>
+          <mrow>\amp = x - \frac{1}{2}\cos 2x + C</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 5 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int \frac{x}{\cos^2(x^2)} \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        First, rewrite the integrand using the identity <m>\frac{1}{\cos^2 \theta} = \sec^2 \theta</m>:
+        <me>\int x \sec^2(x^2) \, dx</me>
+        Let <m>u = x^2</m>. Then <m>du = 2x \, dx</m>, which means <m>x \, dx = \frac{1}{2} \, du</m>. Substituting these into the formula gives:
+        <md>
+          <mrow>\int x \sec^2(x^2) \, dx \amp = \int \sec^2(u) \cdot \frac{1}{2} \, du = \frac{1}{2} \int \sec^2(u) \, du</mrow>
+          <mrow>\amp = \frac{1}{2}\tan(u) + C</mrow>
+        </md>
+        Substituting back <m>u = x^2</m> yields:
+        <me>= \frac{1}{2}\tan(x^2) + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 6 -->
+  <task>
+    <statement>
+      <p>
+        <m>\displaystyle \int \frac{1}{\sin^2(5x)} \, dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite the integrand using the identity <m>\frac{1}{\sin^2 \theta} = \csc^2 \theta</m>:
+        <me>\int \csc^2(5x) \, dx</me>
+        Let <m>u = 5x</m>. Then <m>du = 5 \, dx</m>, which means <m>dx = \frac{1}{5} \, du</m>. Knowing that the antiderivative of <m>\csc^2 u</m> is <m>-\cot u</m>:
+        <md>
+          <mrow>\int \csc^2(5x) \, dx \amp = \int \csc^2(u) \cdot \frac{1}{5} \, du = \frac{1}{5} ( -\cot u ) + C</mrow>
+          <mrow>\amp = -\frac{1}{5}\cot(u) + C</mrow>
+        </md>
+        Substituting back <m>u = 5x</m> yields:
+        <me>= -\frac{1}{5}\cot(5x) + C</me>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<table xml:id="table-trig-integrals">
+  <title>Indefinite Integrals of the Six Trigonometric Functions</title>
+  <tabular halign="center" top="medium" bottom="medium" left="medium" right="medium">
+    <!-- Set explicit, perfectly balanced 50% / 50% proportional widths -->
+    <col percentage="50" right="medium"/>
+    <col percentage="50"/>
+    
+    <!-- Table Header Row -->
+    <row header="yes" bottom="medium">
+      <cell><m>f(x)</m></cell>
+      <cell><m>\int f(x) \, dx</m></cell>
+    </row>
+    
+    <!-- Sine -->
+    <row bottom="minor">
+      <cell><m>\sin x</m></cell>
+      <cell><m>-\cos x + C</m></cell>
+    </row>
+    
+    <!-- Cosine -->
+    <row bottom="minor">
+      <cell><m>\cos x</m></cell>
+      <cell><m>\sin x + C</m></cell>
+    </row>
+    
+    <!-- Tangent -->
+    <row bottom="minor">
+      <cell><m>\tan x</m></cell>
+      <cell><m>\ln|\sec x| + C</m></cell>
+    </row>
+    
+    <!-- Cotangent -->
+    <row bottom="minor">
+      <cell><m>\cot x</m></cell>
+      <cell><m>\ln|\sin x| + C</m></cell>
+    </row>
+    
+    <!-- Secant -->
+    <row bottom="minor">
+      <cell><m>\sec x</m></cell>
+      <cell><m>\ln|\sec x + \tan x| + C</m></cell>
+    </row>
+    
+    <!-- Cosecant -->
+    <row>
+      <cell><m>\csc x</m></cell>
+      <cell><m>-\ln|\csc x + \cot x| + C</m></cell>
+    </row>
+  </tabular>
+</table>
+
+
+</section>

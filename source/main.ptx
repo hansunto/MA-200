@@ -150,14 +150,10 @@
       <xi:include href="./notes/41Area.ptx" />
       <xi:include href="./notes/42DefiniteInt.ptx" />
       <xi:include href="./notes/43FTC.ptx" />
-      
-
-
+      <xi:include href="./notes/44Usubs.ptx" />
+      <xi:include href="./notes/45Area.ptx" />
 
   </chapter>
-
-
-
 
    <!----> <chapter xml:id="course-notes">
       <title>Chapter Exercises</title>

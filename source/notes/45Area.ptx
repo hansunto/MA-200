@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="sec-area-between-curves" class="notes">
+  <title>4.5 Area Between Curves</title>
+
+  <theorem xml:id="thm-area-between-curves">
+    <title>Area Between Bounded Graphs</title>
+    <statement>
+      <p>
+        If <m>f</m> and <m>g</m> are continuous and <m>f(x) \geq g(x)</m> for every <m>x</m> in <m>[a,b]</m>, then the area <m>A</m> of the region bounded by the graphs of <m>f</m> and <m>g</m>, and the vertical lines <m>x=a</m> and <m>x=b</m> is:
+        <me>A = \int^b_a [f(x) - g(x)] \, dx</me>
+      </p>
+    </statement>
+  </theorem>
+
+  <assemblage xml:id="guidelines-area">
+<title>Guidelines for Finding the Area of a Region</title>
+<p>
+    <ol marker="1">
+    <li> <p> Sketch the region, labeling the upper boundary <m>y=f(x)</m> and 
+            the lower boundary <m>y=g(x)</m>.
+    </p></li>
+    <li> <p> Find the smallest value <m>x=a</m> and the largest value <m>x=b</m> 
+            for points <m>(x,y)</m> in the region.
+    </p> </li>
+    <li> <p> Express the area as <m>\int_{a}^{b} [f(x) - g(x)] \, dx</m> and 
+        evaluate the definite integral.
+    </p> </li>
+    </ol>
+</p>
+  </assemblage>
+  
+  <!-- EXAMPLE 1 -->
+  <example xml:id="ex-area-exponential-linear">
+    <title>Area Bounded by Exponential and Linear Functions</title>
+    <statement>
+      <p>
+        Find the area of the region bounded above by <m>y=e^x</m>, 
+        bounded below by <m>y=x</m>, and bounded on the sides by <m>x=0</m> and <m>x=1</m>.
+      </p>
+    </statement>
+    <solution>
+
+<figure xml:id="fig-area-exponential-visual">
+  <title>Bounded Region for Example 1 (Custom Domain)</title>
+  <image xml:id="img-area-exponential-visual" width="60%">
+    <description>Graph of y=e^x and y=x over the domain from x=-1 to x=1.25 with the bounded region shaded between x=0 and x=1.</description>
+    <latex-image>
+      \begin{tikzpicture}[scale=1.5]
+        % Shade the region between y=e^x and y=x strictly from x=0 to x=1
+        \fill[blue!15] (0,0) -- plot[domain=0:1, samples=100] (\x, {exp(\x)}) -- (1,1) -- cycle;
+        
+        % Draw Axis Lines (extended to cover x from -1.3 to 1.6 and y from -1.5 to 4.0)
+        \draw[-&gt;, thick] (-1.3,0) -- (1.6,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-1.5) -- (0,4.0) node[above] {$y$};
+        
+        % Draw Graphs with the requested domain [-1.0:1.25]
+        \draw[very thick, blue, domain=-1.0:1.25, samples=100] plot (\x, {exp(\x)}) node[right] {$y=e^x$};
+        \draw[very thick, red, domain=-1.0:1.25, samples=100] plot (\x, {\x}) node[right] {$y=x$};
+        
+        % Boundaries and Reference Lines for the integrated region
+        \draw[dashed, gray] (1,0) -- (1, 2.718);
+        
+        % Axis Ticks and Labels
+        \node[below left] at (0,0) {$0$};
+        \draw (-1, 0.05) -- (-1, -0.05) node[below] {$-1$};
+        \draw (1, 0.05) -- (1, -0.05) node[below] {$1$};
+        \draw (1.25, 0.05) -- (1.25, -0.05) node[below] {$1.25$};
+        
+        % Positive and Negative Y-Axis Labels
+        \draw (0.05, 1) -- (-0.05, 1) node[left] {$1$};
+        \draw (0.05, 2.718) -- (-0.05, 2.718) node[left] {$e$};
+        \draw (0.05, -1) -- (-0.05, -1) node[left] {$-1$};
+        
+        % Area numerical annotation label
+        \node at (0.4, 1.1) [black, scale=0.9] {$A = e - \frac{3}{2}$};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+
+      <p>
+        On the interval <m></m>, the exponential function <m>y = e^x</m> is always greater than 
+        or equal to the linear function <m>y = x</m>. 
+        Setting up the integral using the upper function minus the lower function yields:
+        <md>
+          <mrow>A \amp = \int^{1}_{0} (e^x - x) \, dx</mrow>
+          <mrow>\amp = \left[ e^x - \frac{1}{2}x^2 \right]^{1}_{0}</mrow>
+          <mrow>\amp = \left( e^1 - \frac{1}{2}(1)^2 \right) - \left( e^0 - \frac{1}{2}(0)^2 \right)</mrow>
+          <mrow>\amp = \left( e - \frac{1}{2} \right) - (1 - 0) = e - \frac{3}{2}</mrow>
+        </md>
+      </p>
+    </solution>
+  </example>
+
+  <!-- EXAMPLE 2 -->
+  <example xml:id="ex-area-two-parabolas">
+    <title>Area Enclosed by Two Parabolas</title>
+    <statement>
+      <p>
+        Find the area of the region enclosed by the parabolas <m>y=x^2</m> and <m>y=2x-x^2</m>.
+      </p>
+    </statement>
+    <solution>
+
+    <figure xml:id="fig-area-parabol-visual">
+      <title>Bounded Region for Example 2</title>
+      <image xml:id="img-area-parabol-visual" width="60%">
+        <description>Graph of two intersecting parabolas y=x^2 and y=2x-x^2 showing the enclosed region between x=0 and x=1.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=1.5]
+            % Shade the region between the two parabolas
+            \fill[blue!15] plot[domain=0:1, samples=100] (\x, {\x*\x}) -- plot[domain=1:0, samples=100] (\x, {2*\x - \x*\x}) -- cycle;
+            
+            % Draw Axis Lines
+            \draw[-&gt;, thick] (-0.3,0) -- (1.5,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-0.3) -- (0,1.4) node[above] {$y$};
+            
+            % Draw Graphs
+            \draw[very thick, red, domain=-0.1:1.1, samples=100] plot (\x, {\x*\x}) node[right] {$y=x^2$};
+            \draw[very thick, blue, domain=-0.1:1.1, samples=100] plot (\x, {2*\x - \x*\x}) node[right] {$y=2x-x^2$};
+            
+            % Intersection Reference Guide
+            \draw[dashed, gray] (1,0) -- (1,1);
+            
+            % Labels
+            \node[below left] at (0,0) {$0$};
+            \node[below] at (1,0) {$1$};
+            \node[left] at (0,1) {$1$};
+            \node at (0.5, 0.5) [black, scale=0.9] {$A = \frac{1}{3}$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+      <p>
+        First, we find the limits of integration by locating the intersection points of the two curves. 
+        We set the quadratic equations equal to each other:
+        <md>
+          <mrow>x^2 \amp = 2x - x^2</mrow>
+          <mrow>2x^2 - 2x \amp = 0 \implies 2x(x - 1) = 0</mrow>
+        </md>
+        This gives intersection boundaries at <m>x = 0</m> and <m>x = 1</m>.
+      </p>
+      <p>
+        On the interval <m></m>, <m>2x - x^2 \geq x^2</m>. Therefore, <m>f(x) = 2x - x^2</m> is the upper boundary and <m>g(x) = x^2</m> is the lower boundary. We evaluate the definite integral:
+        <md>
+          <mrow>A \amp = \int^{1}_{0} \left[ (2x - x^2) - x^2 \right] \, dx</mrow>
+          <mrow>\amp = \int^{1}_{0} (2x - 2x^2) \, dx</mrow>
+          <mrow>\amp = \left[ x^2 - \frac{2}{3}x^3 \right]^{1}_{0} = 1 - \frac{2}{3} = \frac{1}{3}</mrow>
+        </md>
+      </p>
+    </solution>
+  </example>
+<exercise xml:id="exe-area-between-parabola-root">
+  <title>Area Between a Parabola and a Square Root Function</title>
+  <statement>
+    <p>
+      Find the area of the region bounded by the graphs of the equations <m>y=x^{2}</m> and <m>y=\sqrt{x}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the limits of integration by finding the points of intersection for the two curves. We set the equations equal to each other:
+      <md>
+        <mrow>x^2 \amp = \sqrt{x}</mrow>
+        <mrow>x^4 \amp = x \quad \text{(squaring both sides)}</mrow>
+        <mrow>x^4 - x \amp = 0</mrow>
+        <mrow>x(x^3 - 1) \amp = 0</mrow>
+      </md>
+      This gives real intersection boundaries at <m>x = 0</m> and <m>x = 1</m>.
+    </p>
+
+    <figure xml:id="fig-area-parabola-root">
+      <title>Bounded region between <m>y = \sqrt{x}</m> and <m>y = x^2</m></title>
+      <image xml:id="img-area-parabola-root" width="60%">
+        <description>Graphs of y=x^2 and y=sqrt(x) over the domain from x=-1 to x=1.5 with the bounded region shaded between x=0 and x=1.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=2.2]
+            % Shade the enclosed region strictly from x=0 to x=1
+            \fill[blue!15] plot[domain=0:1, samples=100] (\x, {sqrt(\x)}) -- plot[domain=1:0, samples=100] (\x, {\x*\x}) -- cycle;
+            
+            % Draw Axis Lines (Extended to anchor the requested domain and lower labels)
+            \draw[-&gt;, thick] (-1.3,0) -- (1.8,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-0.5) -- (0,2.5) node[above] {$y$};
+            
+            % Draw Curves over the requested domain [-1, 1.5]
+            % Note: sqrt(x) is only defined for x >= 0, so its plot starts at 0
+            \draw[very thick, blue, domain=0:1.5, samples=100] plot (\x, {sqrt(\x)}) node[right] {$y=\sqrt{x}$};
+            \draw[very thick, red, domain=-1.0:1.5, samples=100] plot (\x, {\x*\x}) node[above right] {$y=x^2$};
+            
+            % Reference Line for upper bound intersection
+            \draw[dashed, gray] (1,0) -- (1,1);
+            
+            % Axis Ticks and Labels
+            \node[below left] at (0,0) {$0$};
+            \draw (-1, 0.05) -- (-1, -0.05) node[below] {$-1$};
+            \draw (1, 0.05) -- (1, -0.05) node[below] {$1$};
+            \draw (1.5, 0.05) -- (1.5, -0.05) node[below] {$1.5$};
+            \draw (0.05, 1) -- (-0.05, 1) node[left] {$1$};
+            
+            % Area annotation text label
+            \node at (0.45, 0.45) [black, scale=0.85] {$A = \frac{1}{3}$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p> 
+      On the interval <m>[0,1]</m>, evaluating a test point like <m>x = 0.25</m> shows that 
+      <m>\sqrt{0.25} = 0.5 \gt (0.25)^2 = 0.0625</m>. Therefore, <m>f(x) = \sqrt{x}</m> is 
+      the upper boundary and <m>g(x) = x^2</m> is the lower boundary (see <xref ref="fig-area-parabola-root"/>).
+    </p>
+    <p>
+      We set up and evaluate the definite integral using the power rule:
+      <md>
+        <mrow>A \amp = \int^{1}_{0} \left( \sqrt{x} - x^2 \right) \, dx</mrow>
+        <mrow>\amp = \int^{1}_{0} \left( x^{1/2} - x^2 \right) \, dx</mrow>
+        <mrow>\amp = \left[ \frac{2}{3}x^{3/2} - \frac{x^3}{3} \right]^{1}_{0}</mrow>
+        <mrow>\amp = \left( \frac{2}{3}(1)^{3/2} - \frac{(1)^3}{3} \right) - (0 - 0)</mrow>
+        <mrow>\amp = \frac{2}{3} - \frac{1}{3} = \frac{1}{3}</mrow>
+      </md>
+    </p>
+    <p>
+      The exact area of the bounded region is <m>\dfrac{1}{3}</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-area-three-curves">
+  <title>Area Bounded by Three Intersecting Curves</title>
+  <statement>
+    <p>
+      Find the area of the region bounded by the graphs of the equations <m>y-x=6</m>, <m>y-x^{3}=0</m>, and <m>2y+x=0</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we rewrite each equation explicitly in terms of <m>y</m>:
+      <ul>
+        <li><p>Line 1 (<m>L_1</m>): <m>y = x + 6</m></p></li>
+        <li><p>Cubic Curve (<m>C</m>): <m>y = x^3</m></p></li>
+        <li><p>Line 2 (<m>L_2</m>): <m>y = -\frac{1}{2}x</m></p></li>
+      </ul>
+    </p>
+    <p>
+      Next, we find the three intersection points to define our boundaries:
+      <ol marker="1">
+        <li>
+          <p>
+            Intersection of <m>L_1</m> and <m>L_2</m>: 
+            <me>x + 6 = -\frac{1}{2}x \implies \frac{3}{2}x = -6 \implies x = -4</me>
+            This gives the vertex point <m>(-4, 2)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Intersection of <m>C</m> and <m>L_2</m>: 
+            <me>x^3 = -\frac{1}{2}x \implies x\left(x^2 + \frac{1}{2}\right) = 0 \implies x = 0</me>
+            This gives the vertex point <m>(0, 0)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Intersection of <m>L_1</m> and <m>C</m>: 
+            <me>x^3 = x + 6 \implies x^3 - x - 6 = 0 \implies (x-2)(x^2+2x+3) = 0 \implies x = 2</me>
+            This gives the vertex point <m>(2, 8)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <figure xml:id="fig-area-three-curves-graph">
+      <title>Region bounded by <m>y=x+6</m>, <m>y=x^3</m>, and <m>y=-\frac{1}{2}x</m></title>
+      <image xml:id="img-area-three-curves-graph" width="65%">
+        <description>Graph of the three functions on the domain from x=-5 to x=3, showing a split shaded region spanning from x=-4 to x=2.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.8]
+            % Shade Region 1 (x = -4 to 0)
+            \fill[blue!15] plot[domain=-4:0] (\x, {\x+6}) -- plot[domain=0:-4] (\x, {-0.5*\x}) -- cycle;
+            
+            % Shade Region 2 (x = 0 to 2)
+            \fill[blue!15] plot[domain=0:2] (\x, {\x+6}) -- plot[domain=2:0] (\x, {\x^3}) -- cycle;
+            
+            % Draw Axis Lines
+            \draw[-&gt;, thick] (-5.5,0) -- (3.5,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-2.5) -- (0,9.5) node[above] {$y$};
+            
+            % Draw Bounded Curves over custom domain
+            \draw[very thick, red, domain=-5.0:2.5, samples=100] plot (\x, {\x+6}) node[above left] {$y=x+6$};
+            \draw[very thick, blue, domain=-1.3:2.1, samples=100] plot (\x, {\x^3}) node[right] {$y=x^3$};
+            \draw[very thick, green!60!black, domain=-4.5:3.0, samples=100] plot (\x, {-0.5*\x}) node[below right] {$y=-\frac{1}{2}x$};
+            
+            % Dashed reference drops to vertices
+            \draw[dashed, gray] (-4,0) -- (-4,2);
+            \draw[dashed, gray] (2,0) -- (2,8);
+            
+            % Labels
+            \node[below left] at (0,0) {$0$};
+            \node[below] at (-4,0) {$-4$};
+            \node[below] at (2,0) {$2$};
+            \fill[black] (-4,2) circle (2pt) node[above left, scale=0.8] {$(-4,2)$};
+            \fill[black] (0,0) circle (2pt);
+            \fill[black] (2,8) circle (2pt) node[above left, scale=0.8] {$(2,8)$};
+            
+            % Area Region annotations
+            \node at (-2,2) [black, scale=0.9] {$A_1$};
+            \node at (0.8,4) [black, scale=0.9] {$A_2$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      As seen in <xref ref="fig-area-three-curves-graph"/>, the upper boundary of the region is always the line <m>y = x + 6</m>. However, the lower boundary changes at <m>x = 0</m>. Therefore, the area must be split into two separate definite integrals:
+      <me>A = \int_{-4}^{0} \left[ (x+6) - \left(-\frac{1}{2}x\right) \right] \, dx + \int_{0}^{2} \left[ (x+6) - x^3 \right] \, dx</me>
+    </p>
+    <p>
+      We evaluate the first area component (<m>A_1</m>) from <m>x = -4</m> to <m>x = 0</m>:
+      <md>
+        <mrow>A_1 \amp = \int_{-4}^{0} \left( \frac{3}{2}x + 6 \right) \, dx = \left[ \frac{3}{4}x^2 + 6x \right]_{-4}^{0}</mrow>
+        <mrow>\amp = (0) - \left( \frac{3}{4}(-4)^2 + 6(-4) \right)</mrow>
+        <mrow>\amp = -\left( \frac{3}{4}(16) - 24 \right) = -(12 - 24) = 12</mrow>
+      </md>
+    </p>
+    <p>
+      We evaluate the second area component (<m>A_2</m>) from <m>x = 0</m> to <m>x = 2</m>:
+      <md>
+        <mrow>A_2 \amp = \int_{0}^{2} \left( x + 6 - x^3 \right) \, dx = \left[ \frac{1}{2}x^2 + 6x - \frac{x^4}{4} \right]_{0}^{2}</mrow>
+        <mrow>\amp = \left( \frac{1}{2}(2)^2 + 6(2) - \frac{2^4}{4} \right) - (0)</mrow>
+        <mrow>\amp = (2 + 12 - 4) = 10</mrow>
+      </md>
+    </p>
+    <p>
+      Summing the two subregions yields the total area of the bounded space:
+      <me>A = A_1 + A_2 = 12 + 10 = 22</me>
+    </p>
+    <p>
+      Therefore, the total area of the bounded region is exactly <m>22</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-area-sine-cosine-split">
+  <title>Area Bounded by Sine and Cosine Functions</title>
+  <statement>
+    <p>
+      Find the area of the region bounded by the curves <m>y=\sin x</m>, <m>y=\cos x</m>, <m>x=0</m>, and <m>x=\pi/2</m>.
+    </p>
+  </statement>
+  <solution>
+    <figure xml:id="fig-area-sine-cosine-split-graph">
+  <title>Region bounded by <m>y=\sin x</m> and <m>y=\cos x</m> on <m>[0, \pi/2]</m></title>
+  <image xml:id="img-area-sine-cosine-split-graph" width="60%">
+    <description>Plot of sine and cosine intersecting at pi/4. The region where cosine is above sine from 0 to pi/4, and where sine is above cosine from pi/4 to pi/2, are both shaded in light blue.</description>
+    <latex-image>
+      \begin{tikzpicture}[scale=2.5]
+        % Shade Region 1 (0 to pi/4) where cos(x) >= sin(x)
+        \fill[blue!15] (0,0) -- plot[domain=0:0.7854, samples=50] (\x, {cos(\x r)}) -- plot[domain=0.7854:0, samples=50] (\x, {sin(\x r)}) -- cycle;
+        
+        % Shade Region 2 (pi/4 to pi/2) where sin(x) >= cos(x)
+        \fill[blue!15] (0.7854, 0.7071) -- plot[domain=0.7854:1.5708, samples=50] (\x, {sin(\x r)}) -- (1.5708,0) -- plot[domain=1.5708:0.7854, samples=50] (\x, {cos(\x r)}) -- cycle;
+        
+        % Draw Axis Lines
+        \draw[-&gt;, thick] (-0.2,0) -- (2.0,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-0.2) -- (0,1.4) node[above] {$y$};
+        
+        % Draw Function Graphs
+        \draw[very thick, red, domain=-0.1:1.7, samples=100] plot (\x, {sin(\x r)}) node[above right] {$y=\sin x$};
+        \draw[very thick, blue, domain=-0.1:1.7, samples=100] plot (\x, {cos(\x r)}) node[right] {$y=\cos x$};
+        
+        % Vertical dashed reference bounds
+        \draw[dashed, gray] (0.7854,0) -- (0.7854,0.7071);
+        \draw[dashed, gray] (1.5708,0) -- (1.5708,1.0);
+        
+        % Axis Labels and Ticks
+        \node[below left] at (0,0) {$0$};
+        \draw (0.7854,0.03) -- (0.7854,-0.03) node[below] {$\frac{\pi}{4}$};
+        \draw (1.5708,0.03) -- (1.5708,-0.03) node[below] {$\frac{\pi}{2}$};
+        \draw (0.03,1) -- (-0.03,1) node[left] {$1$};
+        
+        % Point coordinates
+        \fill[black] (0.7854,0.7071) circle (1.2pt) node[above, scale=0.8] {$(\frac{\pi}{4}, \frac{\sqrt{2}}{2})$};
+        
+        % Area Text Indicators
+        \node at (0.3, 0.4) [black, scale=0.85] {$A_1$};
+        \node at (1.2, 0.4) [black, scale=0.85] {$A_2$};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+    <p>
+      To find the total area of the bounded region, we first find where the two curves intersect on the interval <m>[0, \pi/2]</m>. We set the equations equal to each other:
+      <me>\sin x = \cos x \implies \tan x = 1 \implies x = \frac{\pi}{4}</me>
+    </p>
+    <p>
+      This intersection splits our interval into two symmetric subregions where the boundaries swap positions:
+      <ul>
+        <li><p>On <m>[0, \pi/4]</m>, <m>\cos x \geq \sin x</m> (Cosine is the upper boundary).</p></li>
+        <li><p>On <m>[\pi/4, \pi/2]</m>, <m>\sin x \geq \cos x</m> (Sine is the upper boundary).</p></li>
+      </ul>
+      We express the total area <m>A</m> as the sum of two separate definite integrals:
+      <me>A = \int_{0}^{\pi/4} (\cos x - \sin x) \, dx + \int_{\pi/4}^{\pi/2} (\sin x - \cos x) \, dx</me>
+    </p>
+    <p>
+      We evaluate the first definite integral component:
+      <md>
+        <mrow>\int_{0}^{\pi/4} (\cos x - \sin x) \, dx \amp = \left[ \sin x + \cos x \right]_{0}^{\pi/4}</mrow>
+        <mrow>\amp = \left( \sin\frac{\pi}{4} + \cos\frac{\pi}{4} \right) - (\sin 0 + \cos 0)</mrow>
+        <mrow>\amp = \left( \frac{\sqrt{2}}{2} + \frac{\sqrt{2}}{2} \right) - (0 + 1) = \sqrt{2} - 1</mrow>
+      </md>
+    </p>
+    <p>
+      We evaluate the second definite integral component:
+      <md>
+        <mrow>\int_{\pi/4}^{\pi/2} (\sin x - \cos x) \, dx \amp = \left[ -\cos x - \sin x \right]_{\pi/4}^{\pi/2}</mrow>
+        <mrow>\amp = \left( -\cos\frac{\pi}{2} - \sin\frac{\pi}{2} \right) - \left( -\cos\frac{\pi}{4} - \sin\frac{\pi}{4} \right)</mrow>
+        <mrow>\amp = (0 - 1) - \left( -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} \right) = -1 + \sqrt{2} = \sqrt{2} - 1</mrow>
+      </md>
+    </p>
+    <p>
+      Summing the two subregions yields the final area value:
+      <me>A = (\sqrt{2} - 1) + (\sqrt{2} - 1) = 2\sqrt{2} - 2</me>
+    </p>
+    <p>
+      Therefore, the exact area of the bounded region is <m>2\sqrt{2} - 2</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-area-parabola-line">
+  <title>Area Enclosed by a Parabola and a Line</title>
+  <statement>
+    <p>
+      Find the area of the region between <m>y=x^{2}</m> and <m>y=2x</m>.
+    </p>
+  </statement>
+  <solution>
+  <figure xml:id="fig-area-parabola-line-graph">
+  <title>Region enclosed by <m>y=2x</m> and <m>y=x^2</m></title>
+  <image xml:id="img-area-parabola-line-graph" width="55%">
+    <description>A line y=2x passing through the origin and intersecting the parabola y=x^2 at the point (2,4). The region enclosed between them is shaded in light blue with a perfect 1:1 ratio.</description>
+    <latex-image>
+      % Native TikZ locking of 1:1 aspect ratio using matching x and y step units
+      \begin{tikzpicture}[x=1.2cm, y=1.2cm]
+        % Shade the enclosed region from x=0 to x=2
+        \fill[blue!15] plot[domain=0:2, samples=100] (\x, {2*\x}) -- plot[domain=2:0, samples=100] (\x, {\x*\x}) -- cycle;
+        
+        % Draw Axis Lines
+        \draw[-&gt;, thick] (-0.5,0) -- (3.0,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-0.5) -- (0,5.0) node[above] {$y$};
+        
+        % Draw Function Graphs
+        \draw[very thick, red, domain=-0.2:2.2] plot (\x, {2*\x}) node[above left] {$y=2x$};
+        \draw[very thick, blue, domain=-0.2:2.2, samples=100] plot (\x, {\x*\x}) node[right] {$y=x^2$};
+        
+        % Grid reference drop lines
+        \draw[dashed, gray] (2,0) -- (2,4);
+        \draw[dashed, gray] (0,4) -- (2,4);
+        
+        % Axis Labels and Ticks
+        \node[below left] at (0,0) {$0$};
+        \draw (2,0.05) -- (2,-0.05) node[below] {$2$};
+        \draw (0.05,4) -- (-0.05,4) node[left] {$4$};
+        
+        % Marked Intersection Points
+        \fill[black] (0,0) circle (1.5pt);
+        \fill[black] (2,4) circle (1.5pt) node[above left, scale=0.8] {$(2,4)$};
+        
+        % Area marker inside region
+        \node at (1.0, 1.4) [black, scale=0.9] {$A = \frac{4}{3}$};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+
+    <p>
+      First, we find the limits of integration by finding the points of intersection for the two curves. We set the quadratic and linear expressions equal to each other:
+      <md>
+        <mrow>x^2 \amp = 2x</mrow>
+        <mrow>x^2 - 2x \amp = 0</mrow>
+        <mrow>x(x - 2) \amp = 0</mrow>
+      </md>
+      This gives intersection boundaries at <m>x = 0</m> and <m>x = 2</m>.
+    </p>
+    <p>
+      On the interval <m>[0, 2]</m>, testing a point like <m>x = 1</m> shows that <m>2(1) \gt (1)^2</m>. Therefore, the line <m>f(x) = 2x</m> is the upper boundary and the parabola <m>g(x) = x^2</m> is the lower boundary.
+    </p>
+    <p>
+      We set up and evaluate the definite integral using the standard power rule:
+      <md>
+        <mrow>A \amp = \int_{0}^{2} (2x - x^2) \, dx</mrow>
+        <mrow>\amp = \left[ x^2 - \frac{x^3}{3} \right]_{0}^{2}</mrow>
+        <mrow>\amp = \left( (2)^2 - \frac{(2)^3}{3} \right) - (0 - 0)</mrow>
+        <mrow>\amp = \left( 4 - \frac{8}{3} \right)</mrow>
+        <mrow>\amp = \frac{12}{3} - \frac{8}{3} = \frac{4}{3}</mrow>
+      </md>
+    </p>
+    <p>
+      The exact area of the enclosed region is <m>\frac{4}{3}</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+</section>

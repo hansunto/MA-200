@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="sec-antiderivatives" class="notes">
+    <title>3.10 Antiderivatives and Indefinite Integrals</title>
+      <introduction>
+        <p>
+          In this section, we reverse the process of differentiation. Instead of 
+          finding the derivative of a given function, we will find a function 
+          whose derivative is already known. This process is fundamental to the 
+          Fundamental Theorem of Calculus.
+        </p>
+      </introduction>
+      
+    <definition xml:id="defn-antiderivative">
+      <statement>
+        <p> A function, <m>F</m>, is an <term>antiderivative</term> of a function, <m>f</m>, on an interval <m>I</m> if 
+            <me>F'(x) = f(x) \text{ for all } x</me>
+        </p>
+      </statement>
+    </definition>
+
+      <example xml:id="ex-antiderivative-intro">
+        <statement>
+          <p>
+            If <m>f(x) = 5x^2</m> then <m>F(x) = </m>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            To find <m>F(x)</m>, we apply the power rule for antiderivatives, which states that 
+            <m>\int x^n \, dx = \dfrac{x^{n+1}}{n+1}</m>.
+            <me>F(x) = \dfrac{5x^{2+1}}{2+1} + C = \dfrac{5}{3}x^3 + C</me>
+          </p>
+        </solution>
+      </example>
+
+      <definition xml:id="defn-indefinite-integral">
+        <statement>
+          <p>
+            The notation
+            <me>\int f(x)dx=F(x)+C,</me>
+            where <m>F'(x)=f(x)</m> and <m>C</m> is an arbitrary constant, denotes the family of all antiderivatives of <m>f(x)</m> on an interval <m>I</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        So, if we know one antiderivative of <m>f(x)</m> on <m>I</m>, say <m>F(x)</m>, then we know them all. The family of antiderivatives is denoted using the notation:
+        <me>\int f(x)\,dx = F(x) + C \quad \text{where } C \text{ is an arbitrary constant}</me>
+      </p>
+
+    <example xml:id="ex-basic-integration">
+    <statement>
+    <p> Evaluate: <me>\int 5x^4\,dx = </me> </p>
+    </statement>
+    <solution> 
+    <p>
+    We apply the power rule for integration, which states that 
+    <m>\int x^n \, dx = \dfrac{x^{n+1}}{n+1}</m> for <m>n \neq -1</m>.
+    <me>\int 5x^4\,dx = 5 \cdot \frac{x^{4+1}}{4+1} + C = 5 \cdot \dfrac{x^5}{5} + C = x^5 + C </me>
+    </p>
+    </solution>
+    </example>
+
+    <example xml:id="ex-initial-value-simple">
+    <statement>
+    <p> Evaluate <m>\displaystyle \int 3x^2\,dx</m> that satisfies <m>F(1)=1</m>. </p>
+    </statement>
+    <solution>
+        <p>
+          First, find the general antiderivative by integrating term-by-term:
+          <me>F(x) = \int 3x^2\,dx = 3 \cdot \frac{x^3}{3} + C = x^3 + C</me>
+        </p>
+        <p>
+          Next, use the initial condition <m>F(1) = 1</m> to solve for the specific constant of integration <m>C</m>:
+          <me>F(1) = (1)^3 + C = 1</me>
+          <me>1 + C = 1 \implies C = 0</me>
+        </p>
+        <p>
+          Therefore, the particular solution that satisfies the initial value condition is:
+          <me>F(x) = x^3</me>
+        </p>
+    </solution>
+    </example>
+
+    <paragraphs xml:id="para-notation-guide">
+    <title>Notation Guide</title>
+    <p>
+          <ol>
+            <li><p><m>\displaystyle \int</m>: integral sign</p></li>
+            <li><p><m>\displaystyle \int f(x)\,dx</m>: indefinite integral</p></li>
+            <li><p><m>C</m>: constant of integration</p></li>
+            <li><p><m>dx</m>: tells us the variable of integration is <m>x</m></p></li>
+          </ol>
+        </p>
+    </paragraphs>
+
+    <exercise xml:id="exe-basic-integrals">
+    <statement>
+    <p>
+    <ol>
+        <li> <p> Power Rule: <me>\int x^n\,dx = \hspace{1.75in}, \text{ if } n \neq -1</me> </p> </li>
+        <li> <p> <m>\displaystyle \int 4x^3-3x^2+5x-8+\frac{1}{x}\, dx</m> </p> </li>
+        <li> <p> <m>\displaystyle \int \cos 2x \,dx</m> </p> </li>
+        <li> <p> <m>\displaystyle \int e^{2x} \,dx</m> </p> </li> 
+        <li> <p> <m>\dfrac{d}{dx}\left(\displaystyle \int e^{2x}\cos 2x \,dx\right)</m> </p> </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+     <ol>
+        <li> <p> By the Power Rule: <me>\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \text{ if } n \neq -1</me> </p> </li>
+        <li> <p> Integrate term by term:
+            <me>\int 4x^3\,dx - \int 3x^2\,dx + \int 5x\,dx - \int 8\,dx + \int \frac{1}{x}\,dx</me>
+            <me>= 4\left(\frac{x^4}{4}\right) - 3\left(\frac{x^3}{3}\right) + 5\left(\frac{x^2}{2}\right) - 8x + \ln|x| + C</me>
+            <me>= x^4 - x^3 + \frac{5}{2}x^2 - 8x + \ln|x| + C</me> </p>
+        </li>
+        <li> <p> Using the reverse chain rule for trigonometric functions where 
+            <m>\int \cos(kx)\,dx = \frac{1}{k}\sin(kx) + C</m>:
+            <me>\int \cos 2x \,dx = \frac{1}{2}\sin 2x + C</me> </p>
+        </li>
+        <li> <p> Using the reverse chain rule for exponential functions where <m>\int e^{kx}\,dx = \dfrac{1}{k}e^{kx} + C</m>:
+                  <me>\int e^{2x} \,dx = \frac{1}{2}e^{2x} + C</me> </p>
+        </li>
+        <li> <p> Differentiating an indefinite integral with respect to its variable of integration returns the original integrand:
+            <me>\dfrac{d}{dx}\left(\displaystyle \int e^{2x}\cos 2x \,dx\right) = e^{2x}\cos 2x</me> </p>
+        </li>
+     </ol>
+    </p>
+    </solution>
+    </exercise>
+
+    <insight>
+        <p> The Power Rule: <me>\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \text{ if } n \neq -1</me> </p>
+    </insight>
+
+    <subsection xml:id="subsec-differential-equations">
+    <title>Differential Equation: An equation that includes derivatives</title>
+
+        <definition xml:id="defn-differential-equation">
+          <statement>
+            <p>
+              Finding an antiderivative for a function <m>f(x)</m> is the same problem as finding a function <m>y(x)</m> that satisfies the equation
+              <me>\frac{dy}{dx}=f'(x)</me>
+              This is called a <term>differential equation</term>.
+            </p>
+            <p>
+              Suppose we fix the arbitrary constant arising in the antidifferentiation process by specifying an initial condition
+              <me>y(x_0)=y_0</me>
+              The combination of a differential equation and an initial condition is called an <term>initial value problem</term>.
+            </p>
+          </statement>
+        </definition>
+
+ <example xml:id="ex-particular-solution">
+    <statement>
+    <p> Suppose <m>f'(x) = 3x^2 - 8x</m> and <m>f(1) = 2</m>, 
+        find the particular solution of <m>f(x)</m>. </p>
+    </statement>
+    <solution>
+        <p> To find the general solution <m>f(x)</m>, we integrate the derivative function 
+            <m>f'(x)</m> with respect to <m>x</m>:
+            <me>f(x) = \int (3x^2 - 8x) \, dx</me>
+            Applying the power rule term by term gives:
+            <me>f(x) = 3\left(\frac{x^3}{3}\right) - 8\left(\frac{x^2}{2}\right) + C = x^3 - 4x^2 + C</me>
+        </p>
+        <p> Now, we use the initial condition <m>f(1) = 2</m> to solve for the specific constant <m>C</m>:
+            <me>f(1) = (1)^3 - 4(1)^2 + C = 2</me>
+            <me>1 - 4 + C = 2</me>
+            <me>-3 + C = 2 \implies C = 5</me>
+        </p>
+        <p> Substituting <m>C = 5</m> back into our general equation gives the particular solution:
+            <me>f(x) = x^3 - 4x^2 + 5</me>
+        </p>
+    </solution>
+ </example>
+
+ <example xml:id="ex-dropped-object">
+    <statement>
+    <p> An object is dropped from a height of <m>100</m> feet. Disregarding air resistance, find:
+    <ol>
+        <li><p>the distance it falls after <m>t</m> seconds</p></li>
+        <li><p>its velocity after 2 seconds</p></li>
+        <li><p>when it hits the ground</p></li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+     <ol>
+       <li>
+         <p> Begin with acceleration due to gravity <m>a(t) = -32</m>. Since <m>v'(t) = a(t) = -32</m>, we integrate to find velocity:
+            <me>v(t) = -32t + C_1</me>
+            Since the object is dropped, its initial velocity is zero, <m>v(0) = 0</m>, which yields <m>0 = -32(0) + C_1 \implies C_1 = 0</m>. Thus:
+            <me>v(t) = -32t</me>
+         </p>
+         <p> Since position <m>s'(t) = v(t)</m>, we integrate velocity to find the height function:
+            <me>s(t) = \int -32t \, dt = -16t^2 + C_2</me>
+            Since the initial height is 100 feet, <m>s(0) = 100</m>, which gives <m>100 = -16(0)^2 + C_2 \implies C_2 = 100</m>. Therefore, the height equation is:
+            <me>s(t) = -16t^2 + 100</me>
+            The downward distance fallen after <m>t</m> seconds is represented by <m>100 - s(t) = 16t^2</m> feet.
+         </p>
+       </li>
+       <li>
+         <p> Substitute <m>t = 2</m> into the velocity equation: 
+            <me>v(2) = -32(2) = -64 \text{ ft/sec}</me> </p>
+        </li>
+        <li>
+        <p> The object hits the ground when its height is zero, <m>s(t) = 0</m>:
+            <me>-16t^2 + 100 = 0 \implies 16t^2 = 100</me>
+            <me>t^2 = \frac{100}{16} = \frac{25}{4} \implies t = \frac{5}{2} = 2.5 \text{ seconds}</me>
+        </p>
+        </li>
+     </ol>
+    </p>
+</solution>
+ </example>
+
+ <exercise xml:id="exe-general-antiderivative">
+<statement>
+<p>
+  Find the general antiderivative of 
+  <me>f(x)=\frac{3}{\sqrt{x}}+\frac{\sqrt{x}}{3}+\sin 2x</me>
+</p>
+</statement>
+<solution>
+<p> First rewrite the radical terms as fractional exponents: <m>f(x) = 3x^{-1/2} + \frac{1}{3}x^{1/2} + \sin 2x</m>. Now integrate term by term:
+    <me>\int f(x)\,dx = 3\left(\frac{x^{1/2}}{1/2}\right) + \frac{1}{3}\left(\frac{x^{3/2}}{3/2}\right) - \frac{1}{2}\cos 2x + C</me>
+    <me>= 6\sqrt{x} + \frac{2}{9}x^{3/2} - \frac{1}{2}\cos 2x + C</me> </p>
+</solution>
+</exercise>
+
+<exercise xml:id="exe-ascending-balloon">
+  <statement>
+  <p> A balloon is ascending at the rate of 12 ft/sec and is at a height of 80 ft above the ground 
+    when a package is dropped. How long does it take the package to reach the ground? </p>
+  </statement>
+  <solution>
+  <p>
+    The acceleration due to gravity is <m>a(t) = -32 \text{ ft/sec}^2</m>. Integrating acceleration gives velocity: <m>v(t) = -32t + C_1</m>.
+    Because the package is dropped from an ascending balloon, it inherits the balloon's upward velocity as its initial velocity: <m>v(0) = 12 \implies C_1 = 12</m>.
+    <me>v(t) = -32t + 12</me>
+  </p>
+  <p>
+    Integrating velocity gives the position equation for height: <m>s(t) = -16t^2 + 12t + C_2</m>. 
+    The initial height is 80 feet, so <m>s(0) = 80 \implies C_2 = 80</m>.
+    <me>s(t) = -16t^2 + 12t + 80</me>
+  </p>
+  <p>
+    Set <m>s(t) = 0</m> to find when it hits the ground:
+    <me>-16t^2 + 12t + 80 = 0 \implies -4(4t^2 - 3t - 20) = 0</me>
+    Apply the quadratic formula to <m>4t^2 - 3t - 20 = 0</m>:
+    <me>t = \frac{-(-3) \pm \sqrt{(-3)^2 - 4(4)(-20)}}{2(4)} = \frac{3 \pm \sqrt{9 + 320}}{8} = \frac{3 \pm \sqrt{329}}{8}</me>
+    Since time must be positive, we evaluate the positive root:
+    <me>t = \frac{3 + \sqrt{329}}{8} \approx \frac{3 + 18.138}{8} \approx 2.64 \text{ seconds}</me>
+    </p>
+    </solution>
+</exercise>
+
+<exercise xml:id="exe-evaluate-integrals-list">
+  <introduction>
+    <p>
+      Evaluate each of the following integrals using basic antiderivatives and 
+      algebraic manipulation:
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task>
+    <statement>
+      <p> <m>\displaystyle \int \frac{1+\cos 2x}{2} \,dx</m> </p>
+    </statement>
+    <solution>
+      <p> Separate the fraction into two terms and integrate each term individually:
+        <me>\int \left(\frac{1}{2} + \frac{1}{2}\cos 2x\right)dx = \frac{1}{2}x + \frac{1}{4}\sin 2x + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 2 -->
+  <task xml:id="task-integral-exponential">
+    <statement>
+      <p>
+        <m>\displaystyle \int (e^{3x}+5e^{-x})\,dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Integrate term by term using the exponential rule <m>\int e^{kx}dx = \frac{1}{k}e^{kx}</m>:
+        <me>\int e^{3x}\,dx + \int 5e^{-x}\,dx = \frac{1}{3}e^{3x} - 5e^{-x} + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 3 -->
+  <task xml:id="task-integral-cotangent">
+    <statement>
+      <p>
+        <m>\displaystyle \int \cot^2 x\,dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Rewrite the integrand using the Pythagorean identity <m>\cot^2 x = \csc^2 x - 1</m>, then apply known basic antiderivatives:
+        <me>\int (\csc^2 x - 1)\,dx = -\cot x - x + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 4 -->
+  <task xml:id="task-integral-rational-power">
+    <statement>
+      <p>
+        <m>\displaystyle \int \frac{t\sqrt{t}+\sqrt{t}}{t^2}\,dt</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Simplify the integrand first by dividing each term in the numerator by the denominator using exponent rules, yielding 
+        <m>\dfrac{t^{3/2} + t^{1/2}}{t^2} = t^{-1/2} + t^{-3/2}</m>. Then apply the Power Rule:
+        <me>\int (t^{-1/2} + t^{-3/2})\,dt = \dfrac{t^{1/2}}{1/2} + \dfrac{t^{-1/2}}{-1/2} + C = 2\sqrt{t} - \dfrac{2}{\sqrt{t}} + C</me>
+      </p>
+    </solution>
+  </task>
+
+  <!-- Task 5 (Rewritten without u-substitution) -->
+  <task xml:id="task-integral-binomial-expansion">
+    <statement>
+      <p>
+        <m>\displaystyle \int (7x-2)^3\,dx</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To avoid <m>u</m>-substitution, fully expand the cubic binomial first using the binomial theorem or expansion rules:
+        <me>(7x - 2)^3 = (7x)^3 - 3(7x)^2(2) + 3(7x)(2)^2 - (2)^3</me>
+        <me>= 343x^3 - 294x^2 + 84x - 8</me>
+      </p>
+      <p>
+        Now compute the general antiderivative term-by-term using the basic Power Rule:
+  <md>
+  <mrow>\amp \int (343x^3 - 294x^2 + 84x - 8)\,dx </mrow>
+  <mrow>\amp = 343\left(\frac{x^4}{4}\right) - 294\left(\frac{x^3}{3}\right) + 84\left(\frac{x^2}{2}\right) - 8x + C</mrow>
+  <mrow>\amp = \frac{343}{4}x^4 - 98x^3 + 42x^2 - 8x + C</mrow>
+</md>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+
+  </subsection>
+</section>

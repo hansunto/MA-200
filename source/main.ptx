@@ -25,9 +25,34 @@
     <chapter xml:id="ch-Limits-and-Derivatives">
       <title>1. Limits and Derivatives</title>
       <introduction>
-        <p>
-          This chapter contains materials related to limits and derivatives, including lecture notes, activities, and homework.
-        </p>
+    <p>
+      Calculus is fundamentally the mathematics of change and motion. 
+      While classical geometry and algebra are excellent for analyzing static shapes and 
+      constant speeds, they struggle to describe quantities that change continuously, 
+      such as a spacecraft accelerating into orbit or the fluctuating rate of a chemical reaction. 
+      This chapter introduces the foundational framework that bridges classical mathematics and 
+      calculus: the concept of a limit.
+    </p>
+    <p>
+      We will begin by exploring the intuitive and geometric meaning of limits, 
+      learning how to analyze the behavior of functions as inputs get infinitesimally close to a 
+      specific value. From there, we will develop algebraic techniques to evaluate limits, 
+      examine one-sided behaviors, and formally define mathematical continuity. 
+      We will also investigate what happens to functions over the long term by looking at limits 
+      at infinity. Ultimately, we will use these limit concepts to solve the historic tangent line 
+      problem, allowing us to transition from average rates of change to instantaneous rates of 
+      change to the derivative.
+    </p>
+    <objectives>
+      <ul>
+        <li><p>Understand the conceptual and geometric definition of a limit from graphs and tables.</p></li>
+        <li><p>Apply algebraic properties and techniques to compute limits analytically.</p></li>
+        <li><p>Evaluate one-sided limits and apply them to determine the existence of a general limit.</p></li>
+        <li><p>Define continuity formally using limits and identify points of discontinuity.</p></li>
+        <li><p>Analyze horizontal asymptotes by evaluating limits as independent variables approach infinity.</p></li>
+        <li><p>Construct the formal limit definition of the derivative and use it to calculate instantaneous rates of change.</p></li>
+      </ul>
+    </objectives>
       </introduction>
         <xi:include href="./notes/11introlimits.ptx"/>
         <xi:include href="./notes/12TechLimits.ptx"/>
@@ -46,8 +71,20 @@
       
       <introduction>
         <p>
-          This chapter contains materials related to differentiation rules, including lecture notes, activities, and homework.
-        </p>
+      In the previous chapter, we established the foundational definition of the derivative using limits and the difference quotient. While that limit definition is essential for understanding what a derivative means conceptually, evaluating it algebraically for complex functions can quickly become tedious and impractical. This chapter shifts our focus from the theory of limits to the mechanics of efficient calculation.
+    </p>
+    <p>
+      Here, we will discover and master algebraic shortcuts known as differentiation rules. We will start with basic algebraic patterns, such as the Power, Product, and Quotient rules, before expanding our toolkit to compute rates of change for transcendental functions—including trigonometric, exponential, and logarithmic functions. We will then introduce the Chain Rule to differentiate composite functions, learn Implicit Differentiation to find slopes of curves not easily written in standard form, and conclude by applying these techniques to solve dynamic, real-world Related Rates problems.
+    </p>
+    <objectives>
+      <ul>
+        <li><p>Apply fundamental differentiation shortcuts, including the Power, Product, and Quotient Rules.</p></li>
+        <li><p>Compute derivatives for trigonometric, inverse trigonometric, exponential, and logarithmic functions.</p></li>
+        <li><p>Utilize the Chain Rule to differentiate composite functions efficiently.</p></li>
+        <li><p>Apply implicit differentiation to find derivatives of equations defining curves implicitly.</p></li>
+        <li><p>Model and solve related rates problems where multiple quantities change with respect to time.</p></li>
+      </ul>
+    </objectives>
       </introduction>
         <xi:include href="./notes/21DifferentiationRules.ptx"/>
         <xi:include href="./notes/22DerivativesTrigonometricFunctions.ptx"/>
@@ -64,10 +101,32 @@
     <chapter xml:id="ch-Applications-of-Derivatives">
       <title>3. Applications of Derivatives</title>
       <introduction>
-        <p>
-          
-        </p>
-      </introduction>
+        <p> In previous chapters, we focused on the definition of the derivative and 
+          learned the mechanics of how to calculate derivatives for various types of functions. 
+          In this chapter, we turn our attention to the powerful practical applications of 
+          differentiation. Derivatives allow us to analyze the behavior of dynamic systems, 
+          model changing rates, and find optimal solutions to real-world problems. </p>
+        <p> We will begin by studying how derivatives help us pinpoint absolute and local extreme 
+          values on a curve, utilizing tools like the First Derivative Test and concavity analysis 
+          to accurately sketch graphs without relying entirely on technology. 
+          We will then apply these geometric insights to solve complex optimization problems, 
+          evaluate indeterminate limits using L'Hôpital's Rule, and explore foundational theoretical 
+          concepts like the Mean Value Theorem. Finally, we will investigate how derivatives are used 
+          to approximate complex values linearly, find numerical roots via Newton's Method, 
+          and introduce the concept of an antiderivative—laying the essential groundwork for integral 
+          calculus. </p>
+      <objectives>
+      <ul>
+        <li><p>Identify and calculate extreme values of a function on an interval.</p></li>
+        <li><p>Use first and second derivatives to determine function behaviors like increasing, 
+          decreasing, and concavity.</p></li>
+        <li><p>Apply optimization techniques to solve geometric, physical, and economic problems.</p></li>
+        <li><p>Approximate roots and functions using linear approximations and iterative methods.</p></li>
+        <li><p>Reverse the process of differentiation to find general antiderivatives.</p></li>
+      </ul>
+      </objectives>
+  </introduction>
+
       <xi:include href="./notes/31ExtremeValues.ptx" />
       <xi:include href="./notes/321stDTest.ptx" />
       <xi:include href="./notes/33Concavity.ptx" />
@@ -77,6 +136,7 @@
       <xi:include href="./notes/37MeanValue.ptx"/>
       <xi:include href="./notes/38Linearization.ptx"/>
       <xi:include href="./notes/39NewtonMethod.ptx"/>
+      <xi:include href="./notes/310Antiderivatives.ptx"/>
 
 
     </chapter>
@@ -92,7 +152,9 @@
       </introduction>
 
       <xi:include href="./notes/limitschex.ptx"/>
-      <xi:include href="notes/DiffChEx.ptx"/>
+      <xi:include href="./notes/DiffChEx.ptx"/>
+      <xi:include href="./notes/AppChEx.ptx"/>
+      
       
       <!-- Add more xi:include files here to include them in the main course -->
       <xi:include href="./notes/week01.ptx"/>

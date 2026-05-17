@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-Applications-Derivatives-chapter-exercises">
+  <title>3. Applications of Derivatives- Chapter Exercises</title>
+
+<introduction>
+<p>
+This cumulative review module provides a comprehensive synthesis of the core applications of 
+differentiation and basic antidifferentiation methods covered throughout this chapter. 
+Working through these exercises will help reinforce your understanding of function optimization, 
+linear curve behavior analysis, limit evaluations, and numerical root approximations.
+</p>
+<p>
+These problems mimic standard exam configurations, prompting you to determine absolute boundaries 
+on closed domains, perform complete first and second derivative graphing tests, model dynamic 
+rate-of-change word problems, and seamlessly switch back and forth between derivative and integral 
+operations.
+</p>
+</introduction>
+
+<exercises xml:id="exercises-chapter-review">
+  <title>Exercises</title>
+
+  <!-- Problem 1 -->
+  <exercise xml:id="ex-absolute-extrema">
+    <statement>
+      <p> Find the absolute maximum and minimum values of each function on the given interval. </p>
+    </statement>
+    
+    <task>
+      <statement>
+        <p> <m>f(x)=x^2-1</m> on <m>[-1, 2]</m> </p>
+      </statement>
+      <solution>
+        <p>
+          First, find the critical numbers by setting the derivative to zero:
+          <me>f'(x) = 2x \implies 2x = 0 \implies x = 0</me>
+          Since <m>x = 0</m> is in the interval <m>[-1, 2]</m>, evaluate <m>f(x)</m> at the critical number and the endpoints:
+          <md>
+            <mrow>f(0) \amp = (0)^2 - 1 = -1</mrow>
+            <mrow>f(-1) \amp = (-1)^2 - 1 = 0</mrow>
+            <mrow>f(2) \amp = (2)^2 - 1 = 3</mrow>
+          </md>
+          Comparing these values, the absolute minimum is <m>-1</m> at <m>x = 0</m>, 
+          and the absolute maximum is <m>3</m> at <m>x = 2</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>g(x)=xe^{-x}</m> on <m>[-1, 1]</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Find the critical numbers using the product rule:
+          <me>g'(x) = 1 \cdot e^{-x} + x \cdot (-e^{-x}) = e^{-x}(1 - x)</me>
+          Setting <m>g'(x) = 0</m> gives <m>1 - x = 0 \implies x = 1</m>(since <m>e^{-x} \neq 0</m>). Evaluate <m>g(x)</m> at the boundary endpoints <m>x = -1</m> and <m>x = 1</m>:
+          <md>
+            <mrow>g(-1) \amp = -1 \cdot e^{-(-1)} = -e \approx -2.718</mrow>
+            <mrow>g(1) \amp = 1 \cdot e^{-1} = \frac{1}{e} \approx 0.368</mrow>
+          </md>
+          Therefore, the absolute minimum is <m>-e</m> at <m>x = -1</m>, 
+          and the absolute maximum is <m>\frac{1}{e}</m> at <m>x = 1</m>.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- Problem 2 -->
+  <exercise xml:id="ex-find-antiderivatives">
+    <statement>
+      <p> Find all possible functions with the given derivative (find the general antiderivative): </p>
+    </statement>
+    
+    <task>
+      <statement>
+        <p> <m>y'=2x</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Integrate using the power rule: <m>y = \int 2x \, dx = x^2 + C</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>y'=\dfrac{1}{x}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          The basic antiderivative of <m>\dfrac{1}{x}</m> is the natural logarithm function: 
+          <m>y = \int \dfrac{1}{x} \, dx = \ln|x| + C</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>y'=3x^2+2x-1</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Integrate term by term:
+          <me>y = \int (3x^2+2x-1) \, dx = 3\left(\frac{x^3}{3}\right) + 2\left(\frac{x^2}{2}\right) - x + C = x^3 + x^2 - x + C</me>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- Problem 3 -->
+  <exercise xml:id="ex-critical-numbers">
+    <introduction>
+      <p> Find the critical numbers of the functions. </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p> <m>\displaystyle f(x)=\frac{1+\sin x}{1-\sin x}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Apply the quotient rule to find <m>f'(x)</m>:
+          <md>
+            <mrow>f'(x) \amp = \frac{(\cos x)(1 - \sin x) - (1 + \sin x)(-\cos x)}{(1 - \sin x)^2}</mrow>
+            <mrow>\amp = \frac{\cos x - \sin x \cos x + \cos x + \sin x \cos x}{(1 - \sin x)^2} = \frac{2\cos x}{(1 - \sin x)^2}</mrow>
+          </md>
+          Set the numerator to zero: <m>2\cos x = 0 \implies x = \dfrac{\pi}{2} + k\pi</m> for any integer <m>k</m>. 
+          However, notice that when <m>x = \frac{\pi}{2} + 2k\pi</m>, <m>\sin x = 1</m>, 
+          causing the original function denominator to be zero (undefined). </p>
+        <p> Thus, the critical numbers are only where the derivative equals zero and the function is 
+            defined: <m>x = \dfrac{3\pi}{2} + 2k\pi</m> for <m>k \in \mathbb{Z}</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>K(z)=4z^3+5z^2-42z+7</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Differentiate and set equal to zero:
+          <me>K'(z) = 12z^2 + 10z - 42 = 2(6z^2 + 5z - 21) = 0</me>
+          Factor the quadratic binomial: <m>2(2z - 3)(3z + 7) = 0</m>. 
+          The critical numbers are <m>z = \dfrac{3}{2}</m> and <m>z = -\dfrac{7}{3}</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>f(x)=\sin(x)</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Differentiate and set to zero: <m>f'(x) = \cos x = 0</m>.
+          The critical numbers occur at <m>x = \dfrac{\pi}{2} + k\pi</m> for all integers <m>k</m>.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- Problem 4 -->
+  <exercise xml:id="ex-concavity-intervals">
+    <statement>
+      <p> If <m>f(x) = x^3+x^2-x-1</m>, determine intervals on which the graph of <m>f</m> is concave up or down. </p>
+    </statement>
+    <solution>
+    <p> Find the first and second derivatives:
+        <me>f'(x) = 3x^2 + 2x - 1 \implies f''(x) = 6x + 2</me>
+        Set <m>f''(x) = 0 \implies 6x + 2 = 0 \implies x = -\frac{1}{3}</m>. 
+    </p>
+            <p>
+          We test the intervals around the inflection point candidate <m>x = -\frac{1}{3}</m> using the sign of the second derivative:
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+          <row>
+            <cell header="yes">Interval</cell>
+            <cell><m>\left(-\infty, -\frac{1}{3}\right)</m></cell>
+            <cell><m>\left(-\frac{1}{3}, \infty\right)</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Test Value</cell>
+            <cell><m>x = -1</m></cell>
+            <cell><m>x = 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Sign of <m>f''(x)</m></cell>
+            <cell><m>f''(-1) = -4 \lt 0</m></cell>
+            <cell><m>f''(0) = 2 \gt 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Behavior / Concavity</cell>
+            <cell>Concave Down</cell>
+            <cell>Concave Up</cell>
+          </row>
+        </tabular>
+
+    </solution>
+  </exercise>
+
+  <!-- Problem 5 -->
+  <exercise xml:id="ex-local-extrema-inflection">
+    <statement>
+      <p> If <m>f'(x) = x^4-4x^3</m>, find the local extrema of <m>f</m>. Determine the concavity and find the point of inflection. </p>
+    </statement>
+    <solution>
+  <p>
+    Find critical numbers by setting the first derivative to zero: 
+    <me>f'(x) = x^4 - 4x^3 = x^3(x - 4) = 0 \implies x=0, \text{ or } x=4</me>
+  </p>
+  <p>
+    We test the intervals around our critical numbers using the first derivative sign test:
+  </p>
+  <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+    <row>
+      <cell header="yes">Interval</cell>
+      <cell><m>(-\infty, 0)</m></cell>
+      <cell><m>(0, 4)</m></cell>
+      <cell><m>(4, \infty)</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Test Value</cell>
+      <cell><m>x = -1</m></cell>
+      <cell><m>x = 1</m></cell>
+      <cell><m>x = 5</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Sign of <m>f'(x)</m></cell>
+      <cell><m>f'(-1) = 5 \gt 0</m></cell>
+      <cell><m>f'(1) = -3 \lt 0</m></cell>
+      <cell><m>f'(5) = 125 \gt 0</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Behavior of <m>f(x)</m></cell>
+      <cell>Increasing <m>\nearrow</m></cell>
+      <cell>Decreasing <m>\searrow</m></cell>
+      <cell>Increasing <m>\nearrow</m></cell>
+    </row>
+  </tabular>
+  <p>
+    Because the derivative changes from positive to negative at <m>x = 0</m>, 
+    there is a local maximum at <m>x = 0</m>. 
+    Because it changes from negative to positive at <m>x = 4</m>, there is a 
+    local minimum at <m>x = 4</m>.
+  </p>
+
+  <p>
+    Now compute the second derivative for concavity: 
+    <me>f''(x) = 4x^3 - 12x^2 = 4x^2(x - 3)</me>
+    Setting <m>f''(x) = 0 \implies x = 0</m> or <m>x = 3</m>. We analyze the intervals across these boundary targets:
+  </p>
+  <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+    <row>
+      <cell header="yes">Interval</cell>
+      <cell><m>(-\infty, 0)</m></cell>
+      <cell><m>(0, 3)</m></cell>
+      <cell><m>(3, \infty)</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Test Value</cell>
+      <cell><m>x = -1</m></cell>
+      <cell><m>x = 1</m></cell>
+      <cell><m>x = 4</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Sign of <m>f''(x)</m></cell>
+      <cell><m>f'(-1) = -16 \lt 0</m></cell>
+      <cell><m>f''(1) = -8 \lt 0</m></cell>
+      <cell><m>f''(4) = 64 \gt 0</m></cell>
+    </row>
+    <row>
+      <cell header="yes">Concavity</cell>
+      <cell>Concave Down</cell>
+      <cell>Concave Down</cell>
+      <cell>Concave Up</cell>
+    </row>
+  </tabular>
+  <p>
+    Because the concavity changes signs strictly at <m>x = 3</m>, 
+    the inflection point occurs at <m>x = 3</m>.
+  </p>
+</solution>
+
+  </exercise>
+
+  <!-- Problem 6 -->
+  <exercise xml:id="ex-curve-sketching">
+    <introduction>
+    <p> For each function below, perform a full derivative analysis to analyze its graph components:
+    </p>
+    </introduction>
+    <task>
+      <statement>
+        <p> <m>f(x)=x^4-8x^2+1</m> </p>
+      </statement>
+      <solution>
+        <p>
+          First, find the critical numbers by evaluating where <m>f'(x) = 0</m>:
+          <me>f'(x) = 4x^3 - 16x = 4x(x^2 - 4) = 0 \implies x = 0, \, x = -2, \, \text{or } x = 2</me>
+        </p>
+        <p>
+          We test the intervals around our critical numbers using the first derivative sign test:
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+          <row>
+            <cell header="yes">Interval</cell>
+            <cell><m>(-\infty, -2)</m></cell>
+            <cell><m>(-2, 0)</m></cell>
+            <cell><m>(0, 2)</m></cell>
+            <cell><m>(2, \infty)</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Test Value</cell>
+            <cell><m>x = -3</m></cell>
+            <cell><m>x = -1</m></cell>
+            <cell><m>x = 1</m></cell>
+            <cell><m>x = 3</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Sign of <m>f'(x)</m></cell>
+            <cell><m>f'(-3) = -60 \lt 0</m></cell>
+            <cell><m>f'(-1) = 12 \gt 0</m></cell>
+            <cell><m>f'(1) = -12 \lt 0</m></cell>
+            <cell><m>f'(3) = 60 \gt 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Behavior of <m>f(x)</m></cell>
+            <cell>Decreasing <m>\searrow</m></cell>
+            <cell>Increasing <m>\nearrow</m></cell>
+            <cell>Decreasing <m>\searrow</m></cell>
+            <cell>Increasing <m>\nearrow</m></cell>
+          </row>
+        </tabular>
+        <p>
+          Local minima occur at <m>x = -2</m> and <m>x = 2</m> with a value of <m>-15</m>. A local maximum occurs at <m>x = 0</m> with a value of <m>1</m>.
+        </p>
+
+        <p>
+          Next, compute the second derivative to evaluate concavity and identify inflection points:
+          <me>f''(x) = 12x^2 - 16 = 4(3x^2 - 4) = 0 \implies x = \pm \frac{2}{\sqrt{3}} \approx \pm 1.155</me>
+        </p>
+        <p>
+          We test the intervals across these structural boundary conditions:
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+          <row>
+            <cell header="yes">Interval</cell>
+            <cell><m>\left(-\infty, -\frac{2}{\sqrt{3}}\right)</m></cell>
+            <cell><m>\left(-\frac{2}{\sqrt{3}}, \frac{2}{\sqrt{3}}\right)</m></cell>
+            <cell><m>\left(\frac{2}{\sqrt{3}}, \infty\right)</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Test Value</cell>
+            <cell><m>x = -2</m></cell>
+            <cell><m>x = 0</m></cell>
+            <cell><m>x = 2</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Sign of <m>f''(x)</m></cell>
+            <cell><m>f''(-2) = 32 \gt 0</m></cell>
+            <cell><m>f''(0) = -16 \lt 0</m></cell>
+            <cell><m>f''(2) = 32 \gt 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Concavity</cell>
+            <cell>Concave Up</cell>
+            <cell>Concave Down</cell>
+            <cell>Concave Up</cell>
+          </row>
+        </tabular>
+        <p>
+          Inflection points occur at <m>x = \pm \frac{2}{\sqrt{3}}</m> where the coordinates are approximately <m>(\pm 1.16, -7.89)</m>.
+        </p>
+                <figure xml:id="fig-curve-sketch-1">
+          <caption>Graph of <m>f(x) = x^4 - 8x^2 + 1</m></caption>
+          <image xml:id="img-curve-sketch-1" width="70%">
+            <shortdescription>W-shaped polynomial curve extending through the x-axis to show real roots on both sides, with local minima at x equals plus or minus 2 and a local maximum at x equals 0.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=0.8]
+                \begin{axis}[
+                  axis lines = center,
+                  xlabel = {\(x\)},
+                  ylabel = {\(y\)},
+                  xmin = -3.5, xmax = 3.5,
+                  ymin = -18, ymax = 6,
+                  xtick = {-3, -2, -1, 0, 1, 2, 3},
+                  ytick = {-15, -10, -5, 0, 5},
+                  grid = major,
+                  width = 10cm,
+                  height = 8cm
+                ]
+                  % Plot the function extended to 2.9 to pass the x-axis (y=0) boundary smoothly
+                  \addplot [
+                    domain=-2.9:2.9, 
+                    samples=100, 
+                    color=blue, 
+                    very thick
+                  ] {x^4 - 8*x^2 + 1};
+                  
+                  % Add points
+                  \addplot[black, fill=black, mark=*] coordinates {(-2,-15)} node[below] {\small \((-2, -15)\)};
+                  \addplot[black, fill=black, mark=*] coordinates {(2,-15)} node[below] {\small \((2, -15)\)};
+                  \addplot[black, fill=black, mark=*] coordinates {(0,1)} node[above right] {\small \((0, 1)\)};
+                  \addplot[red, fill=red, mark=*] coordinates {(-1.155,-7.89)} node[left] {\small IP};
+                  \addplot[red, fill=red, mark=*] coordinates {(1.155,-7.89)} node[right] {\small IP};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>f(x)=x^4-x^2</m> </p>
+      </statement>
+      <solution>
+        <p>
+          First, find the critical numbers by setting the first derivative to zero:
+          <me>f'(x) = 4x^3 - 2x = 2x(2x^2 - 1) = 0 \implies x = 0, \, x = -\dfrac{1}{\sqrt{2}} \approx -0.707, \, \text{or } x = \dfrac{1}{\sqrt{2}} \approx 0.707</me>
+        </p>
+        <p>
+          We test the intervals around our critical numbers using the first derivative sign test:
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+          <row>
+            <cell header="yes">Interval</cell>
+            <cell><m>\left(-\infty, -\dfrac{1}{\sqrt{2}}\right)</m></cell>
+            <cell><m>\left(-\dfrac{1}{\sqrt{2}}, 0\right)</m></cell>
+            <cell><m>\left(0, \dfrac{1}{\sqrt{2}}\right)</m></cell>
+            <cell><m>\left(\dfrac{1}{\sqrt{2}}, \infty\right)</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Test Value</cell>
+            <cell><m>x = -1</m></cell>
+            <cell><m>x = -0.5</m></cell>
+            <cell><m>x = 0.5</m></cell>
+            <cell><m>x = 1</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Sign of <m>f'(x)</m></cell>
+            <cell><m>f'(-1) = -2 \lt 0</m></cell>
+            <cell><m>f'(-0.5) = 0.5 \gt 0</m></cell>
+            <cell><m>f'(0.5) = -0.5 \lt 0</m></cell>
+            <cell><m>f'(1) = 2 \gt 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Behavior of <m>f(x)</m></cell>
+            <cell>Decreasing <m>\searrow</m></cell>
+            <cell>Increasing <m>\nearrow</m></cell>
+            <cell>Decreasing <m>\searrow</m></cell>
+            <cell>Increasing <m>\nearrow</m></cell>
+          </row>
+        </tabular>
+        <p>
+          Local minima occur at <m>x = \pm \dfrac{1}{\sqrt{2}}</m> with a value of <m>-\dfrac{1}{4} = -0.25</m>. A local maximum occurs at <m>x = 0</m> with a value of <m>0</m>.
+        </p>
+
+        <p>
+          Next, compute the second derivative to evaluate concavity and identify inflection points:
+          <me>f''(x) = 12x^2 - 2 = 2(6x^2 - 1) = 0 \implies x = \pm \dfrac{1}{\sqrt{6}} \approx \pm 0.408</me>
+        </p>
+        <p>
+          We test the intervals across these boundary conditions:
+        </p>
+        <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+          <row>
+            <cell header="yes">Interval</cell>
+            <cell><m>\left(-\infty, -\dfrac{1}{\sqrt{6}}\right)</m></cell>
+            <cell><m>\left(-\dfrac{1}{\sqrt{6}}, \dfrac{1}{\sqrt{6}}\right)</m></cell>
+            <cell><m>\left(\dfrac{1}{\sqrt{6}}, \infty\right)</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Test Value</cell>
+            <cell><m>x = -1</m></cell>
+            <cell><m>x = 0</m></cell>
+            <cell><m>x = 1</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Sign of <m>f''(x)</m></cell>
+            <cell><m>f''(-1) = 10 \gt 0</m></cell>
+            <cell><m>f''(0) = -2 \lt 0</m></cell>
+            <cell><m>f''(1) = 10 \gt 0</m></cell>
+          </row>
+          <row>
+            <cell header="yes">Concavity</cell>
+            <cell>Concave Up</cell>
+            <cell>Concave Down</cell>
+            <cell>Concave Up</cell>
+          </row>
+        </tabular>
+        <p>
+          Inflection points occur at <m>x = \pm \dfrac{1}{\sqrt{6}}</m> where the coordinates are exactly <m>\left(\pm \dfrac{1}{\sqrt{6}}, -\dfrac{5}{36}\right) \approx (\pm 0.41, -0.14)</m>.
+        </p>
+        
+        <figure xml:id="fig-curve-sketch-2">
+          <caption>Graph of <m>f(x) = x^4 - x^2</m></caption>
+          <image xml:id="img-curve-sketch-2" width="70%">
+            <shortdescription>W-shaped polynomial curve centered at the origin, showing local minima at x equals plus or minus 0.707 and a local maximum at the origin. The curve crosses the x-axis at x equals plus or minus 1.</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}[scale=0.8]
+                \begin{axis}[
+                  axis lines = center,
+                  xlabel = {\(x\)},
+                  ylabel = {\(y\)},
+                  xmin = -1.6, xmax = 1.6,
+                  ymin = -0.6, ymax = 1.2,
+                  xtick = {-1.5, -1, -0.5, 0, 0.5, 1, 1.5},
+                  ytick = {-0.5, 0, 0.5, 1},
+                  grid = major,
+                  width = 10cm,
+                  height = 8cm
+                ]
+                  % Plot the function extended to 1.22 to pass the x-axis roots smoothly
+                  \addplot [
+                    domain=-1.22:1.22, 
+                    samples=100, 
+                    color=blue, 
+                    very thick
+                  ] {x^4 - x^2};
+                  
+                  % Add points
+                  \addplot[black, fill=black, mark=*] coordinates {(-0.707,-0.25)} node[below] {\small \((-\dfrac{1}{\sqrt{2}}, -\dfrac{1}{4})\)};
+                  \addplot[black, fill=black, mark=*] coordinates {(0.707,-0.25)} node[below] {\small \((\dfrac{1}{\sqrt{2}}, -\dfrac{1}{4})\)};
+                  \addplot[black, fill=black, mark=*] coordinates {(0,0)} node[above right] {\small \((0, 0)\)};
+                  \addplot[red, fill=red, mark=*] coordinates {(-0.408,-0.139)} node[left] {\small IP};
+                  \addplot[red, fill=red, mark=*] coordinates {(0.408,-0.139)} node[right] {\small IP};
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+      </solution>
+    </task>
+
+    
+
+
+
+
+  </exercise>
+
+  <!-- Problem 7 -->
+<exercise xml:id="ex-optimization-semicircle">
+    <statement>
+      <p> A rectangle is to be inscribed in a semicircle of radius 2. What is the largest area the rectangle can have? </p>
+      
+      <figure xml:id="fig-inscribed-rectangle-semicircle">
+        <caption>Rectangle inscribed inside a semicircle of radius 2.</caption>
+        <image xml:id="img-inscribed-rectangle-semicircle" width="60%">
+          <shortdescription>A mathematically perfect semicircle of radius 2 centered at the origin on an x-y coordinate plane, with an inscribed rectangle. The rectangle has width 2x and height y, with its top two vertices touching the curve of the semicircle.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=1.5]
+              % Draw grid for clear proportion check
+              \draw[lightgray, dashed] (-2.2,-0.2) grid (2.2,2.2);
+
+              % Draw axes
+              \draw[-&gt;, thick] (-2.5, 0) -- (2.5, 0) node[right] {\(x\)};
+              \draw[-&gt;, thick] (0, -0.3) -- (0, 2.5) node[above] {\(y\)};
+              
+              % Draw perfect Semicircle: radius 2 from 0 to 180 degrees
+              \draw[very thick, blue] (2,0) arc (0:180:2);
+              
+              % Label radius intercepts
+              \node[below left] at (-2, 0) {\small \(-2\)};
+              \node[below right] at (2, 0) {\small \(2\)};
+              \node[above left] at (0, 2) {\small \(2\)};
+              
+              % Exact optimal vertex positions on circle of radius 2 at 45 degrees 
+              % x = 2*cos(45) = sqrt(2) approx 1.414
+              % y = 2*sin(45) = sqrt(2) approx 1.414
+              \coordinate (A) at ({-2*cos(45)}, 0);
+              \coordinate (B) at ({2*cos(45)}, 0);
+              \coordinate (C) at ({2*cos(45)}, {2*sin(45)});
+              \coordinate (D) at ({-2*cos(45)}, {2*sin(45)});
+              
+              % Draw Shaded Inscribed Rectangle
+              \draw[thick, red, fill=red!10] (A) -- (B) -- (C) -- (D) -- cycle;
+              
+              % Label dimensions and vertices
+              \node[below] at (0.7, 0) {\small \(x\)};
+              \node[below] at (-0.7, 0) {\small \(x\)};
+              \draw[&lt;-&gt;, gray] ({2*cos(45)+0.2}, 0) -- ({2*cos(45)+0.2}, {2*sin(45)}) node[midway, right] {\(y\)};
+              
+              % Mark the vertex touching the circle
+              \filldraw[black] (C) circle (1.5pt) node[above right] {\small \((x, y)\)};
+              \filldraw[black] (D) circle (1.5pt);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </statement>
+    <solution>
+      <p>
+        Let the base of the rectangle lie along the <m>x</m>-axis, centered at the origin, with upper vertices touching the upper semicircle equation <m>y = \sqrt{4-x^2}</m>. The total base width is <m>2x</m> and the height is <m>y</m>.
+        <me>A(x) = 2xy = 2x\sqrt{4-x^2}</me>
+        Differentiate <m>A(x)</m> with respect to <m>x</m> using the product rule:
+        <me>A'(x) = 2\sqrt{4-x^2} + 2x \cdot \left(\dfrac{-x}{\sqrt{4-x^2}}\right) = \dfrac{2(4-x^2) - 2x^2}{\sqrt{4-x^2}} = \dfrac{8 - 4x^2}{\sqrt{4-x^2}}</me>
+        Set <m>A'(x) = 0 \implies 8 - 4x^2 = 0 \implies x^2 = 2 \implies x = \sqrt{2}</m>.
+        The largest area is <m>A(\sqrt{2}) = 2(\sqrt{2})\sqrt{4 - 2} = 2\sqrt{2}\sqrt{2} = 4</m>.
+      </p>
+    </solution>
+</exercise>
+
+  <!-- Problem 8 -->
+    <exercise xml:id="ex-optimization-parabola">
+    <statement>
+      <p> A rectangle has its base on the <m>x</m>-axis and its upper two vertices on the parabola 
+        <m>y=12-x^2</m>. What is the largest area the rectangle can have, and what are its dimensions? </p>
+
+      <figure xml:id="fig-inscribed-rectangle-parabola">
+        <caption>Rectangle inscribed underneath the parabola <m>y = 12 - x^2</m>.</caption>
+        <image xml:id="img-inscribed-rectangle-parabola" width="60%">
+          <shortdescription>A downward-opening parabola y equals 12 minus x squared centered on an axis system, with an inscribed rectangle. The rectangle has width 4 and height 8, with its top two vertices touching the curve of the parabola at x equals plus or minus 2.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=1.5]
+              \begin{axis}[
+                axis lines = center,
+                xlabel = {\(x\)},
+                ylabel = {\(y\)},
+                % Lowered the y-axis label position slightly down and to the left
+                ylabel style={at={(axis description cs:0.5,0.98)}, anchor=north east},
+                xmin = -4.5, xmax = 4.5,
+                ymin = -2, ymax = 14,
+                xtick = {-4, -3, -2, -1, 0, 1, 2, 3, 4},
+                ytick = {-2, 0, 2, 4, 6, 8, 10, 12},
+                grid = major,
+                width = 10cm,
+                height = 8cm
+              ]
+                % Plot the Parabola y = 12 - x^2
+                \addplot [
+                  domain=-3.7:3.7, 
+                  samples=100, 
+                  color=blue, 
+                  very thick
+                ] {12 - x^2};
+                
+                % Draw the optimal inscribed rectangle (x = 2, y = 8)
+                % Path: (-2,0) -> (2,0) -> (2,8) -> (-2,8) -> cycle
+                \draw[thick, red, fill=red!10] (axis cs:-2,0) -- (axis cs:2,0) -- (axis cs:2,8) -- (axis cs:-2,8) -- cycle;
+                
+                % Highlight and label the key curve vertex points
+                \addplot[black, fill=black, mark=*] coordinates {(2,8)} node[above right] {\small \((x, y)\)};
+                \addplot[black, fill=black, mark=*] coordinates {(-2,8)};
+                \addplot[black, fill=black, mark=*] coordinates {(0,12)} node[above right] {\small \(12\)};
+                
+                % Add dimension indicators for x and y
+                \node[above] at (axis cs:1,0) {\small \(x\)};
+                \node[above] at (axis cs:-1,0) {\small \(x\)};
+                \node[right, gray] at (axis cs:2,4) {\small \(y\)};
+                
+              \end{axis}
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </statement>
+    <solution>
+      <p>
+        The base of the rectangle spans from <m>-x</m> to <m>x</m>, giving a width of <m>2x</m>. The height is given by <m>y = 12-x^2</m>.
+        <me>A(x) = 2x(12 - x^2) = 24x - 2x^3</me>
+        Differentiate and locate critical roots:
+        <me>A'(x) = 24 - 6x^2 = 0 \implies 6x^2 = 24 \implies x^2 = 4 \implies x = 2</me>
+        The dimensions are width = <m>4</m> and height = <m>12 - (2)^2 = 8</m>. 
+        The maximum area is <m>A(2) = 4 \times 8 = 32</m>.
+      </p>
+    </solution>
+  </exercise>
+  
+  <!-- Problem 9 -->
+    <exercise xml:id="ex-opt-box">
+    <statement>
+      <p> 
+        An open-top rectangular box is constructed from a 10-in.-by-10-in. piece of cardboard by cutting squares of equal side length <m>x</m> from the corners and folding up the sides. Find analytically the dimensions of the box of largest volume and the maximum volume. 
+      </p>
+
+      <sidebyside widths="45% 45%" valigns="bottom bottom" margins="auto">
+        <image xml:id="img-box-layout">
+          <shortdescription>A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box with total width 10 in.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=0.45]
+              % Draw main 8x8 cardboard grid body
+              \draw[thick, black] (0,0) rectangle (8,8);
+              
+              % Draw cutout corner squares
+              \draw[thick, fill=gray!20] (0,0) rectangle (1.5,1.5);
+              \draw[thick, fill=gray!20] (0,8) rectangle (1.5,6.5);
+              \draw[thick, fill=gray!20] (8,0) rectangle (6.5,1.5);
+              \draw[thick, fill=gray!20] (8,8) rectangle (6.5,6.5);
+              
+              % Draw dashed folding internal boundaries
+              \draw[dashed, blue, thick] (1.5,1.5) -- (1.5,6.5);
+              \draw[dashed, blue, thick] (6.5,1.5) -- (6.5,6.5);
+              \draw[dashed, blue, thick] (1.5,1.5) -- (6.5,1.5);
+              \draw[dashed, blue, thick] (1.5,6.5) -- (6.5,6.5);
+              
+              % Label the variable cutout size x
+              \node at (0.75,0.75) {$x$};
+              
+              % FIXED: Changed raw XML entity &lt;-&gt; to standard LaTeX syntax
+              \draw[&lt;-&gt;] (0, -0.4) -- (8, -0.4);
+              \node[below] at (4, -0.4) {10 in.};
+              
+              % FIXED: Changed raw XML entity &lt;-&gt; to standard LaTeX syntax
+              \draw[&lt;-&gt;] (-0.4, 0) -- (-0.4, 8);
+              \node[left] at (-0.4, 4) {10 in.};
+            \end{tikzpicture}
+          </latex-image>
+        </image>   
+          
+        <image xml:id="img-fold-box-3d">
+          <shortdescription>A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 10 minus 2x.</shortdescription>
+          <latex-image>
+            \begin{tikzpicture}[scale=0.55]
+              % Coordinates for 3D perspective box projection
+              % Front Face
+              \coordinate (A) at (0,0);
+              \coordinate (B) at (5,0);
+              \coordinate (C) at (5,2);
+              \coordinate (D) at (0,2);
+              
+              % Back Face corners
+              \coordinate (E) at (2,1.5);
+              \coordinate (F) at (7,1.5);
+              \coordinate (G) at (7,3.5);
+              \coordinate (H) at (2,3.5);
+              
+              % Fill/Draw panels from back to front for proper occlusion
+              \fill[blue!5, draw=blue!50] (E) -- (F) -- (G) -- (H) -- cycle; % Interior Back Wall
+              \fill[blue!10, draw=blue!50] (A) -- (D) -- (H) -- (E) -- cycle; % Interior Left Wall
+              \fill[blue!12, draw=blue!50] (B) -- (C) -- (G) -- (F) -- cycle; % Interior Right Wall
+              \fill[blue!15, draw=blue!40] (A) -- (B) -- (F) -- (E) -- cycle; % Base floor panel
+              
+              % Outer structural frame drawing
+              \draw[thick, black] (A) -- (B) -- (C) -- (D) -- cycle; % Front Panel outline
+              \draw[thick, black] (C) -- (G);
+              \draw[thick, black] (D) -- (H);
+              \draw[thick, black] (G) -- (H);
+              
+              % Dotted internal corner seam hidden from sight lines
+              \draw[dashed, gray] (A) -- (E) -- (F);
+              \draw[dashed, gray] (E) -- (H);
+              
+              % FIXED: Changed raw XML entity &lt;-&gt; to standard LaTeX syntax
+              \draw[&lt;-&gt;] (-0.3,0) -- (-0.3,2);
+              \node[left] at (-0.3,1) {$x$}; % Height
+              
+              % FIXED: Changed raw XML entity &lt;-&gt; to standard LaTeX syntax
+              \draw[&lt;-&gt;] (0,-0.4) -- (5,-0.4);
+              \node[below] at (2.5,-0.4) {\small $10-2x$}; % Length
+              
+              % FIXED: Changed raw XML entity &lt;-&gt; to standard LaTeX syntax
+              \draw[&lt;-&gt;] (5.4,-0.2) -- (7.2,1.2);
+              \node[below right] at (6.3,0.5) {\small $10-2x$}; % Width
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </sidebyside>
+    </statement>
+    <solution>
+      <p>
+        The box length is <m>10-2x</m>, width is <m>10-2x</m>, and height is <m>x</m>.
+        <me>V(x) = x(10-2x)^2 = x(100 - 40x + 4x^2) = 4x^3 - 40x^2 + 100x</me>
+        Find the derivative and set it to zero:
+        <me>V'(x) = 12x^2 - 80x + 100 = 4(3x^2 - 20x + 25) = 4(3x - 5)(x - 5) = 0</me>
+        This yields roots <m>x = 5</m> (which cuts away the entire piece of cardboard) or <m>x = \dfrac{5}{3}</m>. 
+        The optimal corner cut length is <term><m>x = \dfrac{5}{3}</m> in.</term> The base dimensions are <term><m>\dfrac{20}{3}</m> in. by <m>\dfrac{20}{3}</m> in.</term>, creating a maximum volume of:
+        <me>V\left(\dfrac{5}{3}\right) = \dfrac{5}{3}\left(\dfrac{20}{3}\right)^2 = \dfrac{2000}{27} \approx 74.07 \text{ in}^3</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Problem 10 -->
+  <exercise xml:id="ex-linearization-trig">
+    <statement>
+      <p> Approximate <m>\cos(61^\circ)</m> from <m>\cos(60^\circ)</m> using linear approximation. </p>
+    </statement>
+    <solution>
+      <p>
+        Convert values to radians: center point <m>a = 60^\circ = \dfrac{\pi}{3}</m>, 
+        target point <m>x = 61^\circ = \dfrac{\pi}{3} + \dfrac{\pi}{180}</m>, 
+        meaning <m>dx = \dfrac{\pi}{180}</m>.
+        Let <m>f(x) = \cos x \implies f'(x) = -\sin x</m>.
+        <md>
+          <mrow>f(a) \amp = \cos\left(\frac{\pi}{3}\right) = \frac{1}{2}</mrow>
+          <mrow>f'(a) \amp = -\sin\left(\frac{\pi}{3}\right) = -\frac{\sqrt{3}}{2}</mrow>
+        </md>
+        Construct the linear tangent line: <m>L(x) = f(a) + f'(a)(x-a)</m>:
+        <me>\cos(61^\circ) \approx \frac{1}{2} - \frac{\sqrt{3}}{2}\left(\frac{\pi}{180}\right) \approx 0.5 - 0.86603(0.01745) \approx 0.4849</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Problem 11 -->
+  <exercise xml:id="ex-lhopital">
+    <introduction>
+      <p> Use l'Hôpital's rule to evaluate the limit. </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p> <m>\displaystyle\lim_{x\to 2}\frac{x-2}{x^2-4}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          This yields an indeterminate form of type <m>\frac{0}{0}</m>. Differentiating the numerator and denominator gives:
+          <me>\lim_{x\to 2}\frac{\frac{d}{dx}(x-2)}{\frac{d}{dx}(x^2-4)} = \lim_{x\to 2}\frac{1}{2x} = \frac{1}{2(2)} = \frac{1}{4}</me>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>\displaystyle\lim_{x\to -3}\frac{x^3-4x+15}{x^2-x-12}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          Direct substitution yields <m>\frac{(-3)^3-4(-3)+15}{(-3)^2-(-3)-12} = \frac{0}{0}</m>. Differentiate via L'Hôpital's rule:
+          <me>\lim_{x\to -3}\frac{3x^2-4}{2x-1} = \frac{3(-3)^2-4}{2(-3)-1} = \frac{27-4}{-6-1} = -\frac{23}{7}</me>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>\displaystyle\lim_{x\to \infty}\frac{5x^3-2x}{7x^3+3}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          This yields the form <m>\frac{\infty}{\infty}</m>. Differentiating three consecutive times or checking dominant trailing polynomial coefficients yields:
+          <me>\lim_{x\to \infty}\frac{15x^2-2}{21x^2} \implies \lim_{x\to \infty}\frac{30x}{42x} = \frac{30}{42} = \frac{5}{7}</me>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p> <m>\displaystyle\lim_{x\to 0^1}(1+x)^{1/x}</m> </p>
+      </statement>
+      <solution>
+        <p>
+          This is an indeterminate power form <m>1^\infty</m>. Let <m>y = (1+x)^{1/x}</m>, taking the natural log gives <m>\ln y = \frac{\ln(1+x)}{x}</m>.
+          Evaluate the limit using L'Hôpital's rule for <m>\frac{0}{0}</m>:
+          <me>\lim_{x\to 0^+}\frac{\ln(1+x)}{x} = \lim_{x\to 0^+}\frac{\frac{1}{1+x}}{1} = 1</me>
+          Since <m>\lim \ln y = 1</m>, raising back over base <m>e</m> yields <m>e^1 = e</m>.
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- Problem 12 -->
+  <exercise xml:id="ex-newtons-method">
+    <statement>
+      <p> Use Newton's method to estimate the solution of the equation <m>x^2+x-1=0</m>. Start with <m>x_0=-1</m> to find <m>x_2</m>. </p>
+    </statement>
+    <solution>
+      <p>
+        Let <m>f(x) = x^2 + x - 1 \implies f'(x) = 2x + 1</m>. The iterative formula is <m>x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}</m>.
+        <md>
+          <mrow>x_1 \amp = x_0 - \frac{f(-1)}{f'(-1)} = -1 - \frac{(-1)^2 + (-1) - 1}{2(-1) + 1} = -1 - \frac{-1}{-1} = -2</mrow>
+          <mrow>x_2 \amp = x_1 - \frac{f(-2)}{f'(-2)} = -2 - \frac{(-2)^2 + (-2) - 1}{2(-2) + 1} = -2 - \frac{1}{-3} = -2 + \frac{1}{3} = -\frac{5}{3} \approx -1.667</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Problem 13 -->
+  <exercise xml:id="ex-definite-integral">
+    <statement>
+      <p> Evaluate <m>\displaystyle\int^2_1 \dfrac{5~dx}{x}</m> </p>
+    </statement>
+    <solution>
+      <p>
+        Factor out the constant and integrate:
+        <me>\int^2_1 \frac{5}{x}\,dx = 5\left[\ln|x|\right]^2_1 = 5(\ln 2 - \ln 1) = 5\ln 2 \approx 3.465</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- Problem 14 -->
+    <exercise xml:id="ex-fill-in-blank-derivatives-integrals">
+    <introduction>
+      <p> For each given function, determine its derivative and its general indefinite integral. </p>
+    </introduction>
+    <statement>
+      <p>
+        Complete the table below by filling in the missing derivative and indefinite integral formulas:
+      </p>
+      <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell><m>f(x)</m></cell>
+          <cell><m>\dfrac{d}{dx}\left[f(x)\right]</m> <m>\qquad\qquad</m> </cell>
+          <cell><m>\displaystyle\int f(x)\,dx + C</m> <m>\qquad\qquad</m> </cell>
+        </row>
+        <row>
+          <cell><m>x^n \quad (n \neq -1)</m><m>\rule{0pt}{3ex}</m></cell>
+          <cell> <m>\qquad\qquad</m> </cell>
+          <cell> <m>\qquad\qquad</m> </cell>
+        </row>
+        <row fill="colortheme">
+          <cell><m>\sin 2x</m><m>\rule{0pt}{4ex}</m></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>\cos 3x</m><m>\rule{0pt}{4ex}</m></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row fill="colortheme">
+          <cell><m>\tan x</m><m>\rule{0pt}{4ex}</m></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>e^{-x}</m><m>\rule{0pt}{4ex}</m></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </statement>
+
+    <solution>
+      <p>
+        The completed table values are evaluated as follows:
+      </p>
+      <tabular halign="center" bottom="minor" top="minor" left="minor" right="minor">
+        <row header="yes">
+          <cell><m>f(x)</m></cell>
+          <cell><m>\dfrac{d}{dx}\left[f(x)\right]</m> <m>\qquad\qquad</m> </cell>
+          <cell><m>\displaystyle\int f(x)\,dx + C</m> <m>\qquad\qquad</m> </cell>
+        </row>
+        <row>
+          <cell><m>x^n \quad (n \neq -1)</m>  <m>\rule{0pt}{5ex}</m></cell>
+          <cell><m>n x^{n-1}</m> </cell>
+          <cell><m>\dfrac{x^{n+1}}{n+1} + C</m></cell>
+        </row>
+        <row fill="colortheme">
+          <cell><m>\sin 2x</m><m>\rule{0pt}{5ex}</m></cell>
+          <cell><m>2\cos 2x</m></cell>
+          <cell><m>-\dfrac{1}{2}\cos 2x + C</m></cell>
+        </row>
+        <row>
+          <cell><m>\cos 3x</m><m>\rule{0pt}{5ex}</m></cell>
+          <cell><m>-3\sin 3x</m></cell>
+          <cell><m>\dfrac{1}{3}\sin 3x + C</m></cell>
+        </row>
+        <row fill="colortheme">
+          <cell><m>\tan x</m><m>\rule{0pt}{5ex}</m></cell>
+          <cell><m>\sec^2 x</m></cell>
+          <cell><m>\ln|\sec x| + C</m></cell>
+        </row>
+        <row>
+          <cell><m>e^{-x}</m><m>\rule{0pt}{5ex}</m></cell>
+          <cell><m>-e^{-x}</m></cell>
+          <cell><m>-e^{-x} + C</m></cell>
+        </row>
+      </tabular>
+    </solution>
+  </exercise>
+
+</exercises>
+
+</section>

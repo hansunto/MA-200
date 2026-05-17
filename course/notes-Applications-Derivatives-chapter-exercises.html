@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3. Applications of Derivatives- Chapter Exercises</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="notes-Differentiation-Rules-chapter-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="notes-week-01.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">1. Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">1.1 Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">1.2 Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">1.3 One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">1.4 Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">1.5 Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">1.6 Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">1.7 The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">1.8 The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">2. Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">2.1 Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">2.2 Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">2.3 Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">2.4 The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">2.5 Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">2.6 Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html" class="internal"><span class="title">2.7 Derivatives of Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#subsection-derivation-arcsin" class="internal"><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#exercises-inverse-trig-derivatives-geometric" class="internal"><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">2.8 Related Rates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lHopitals-rule.html" class="internal"><span class="title">3.6 L’Hopital’s Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-newtons-method.html" class="internal"><span class="title">3.9 Newton’s Method</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-antiderivatives.html" class="internal"><span class="title">3.10 Antiderivatives and Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-antiderivatives.html#subsec-differential-equations" class="internal"><span class="title">Differential Equation: An equation that includes derivatives</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">1. Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html" class="internal"><span class="title">2. Differentiation Rules- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#notes-Differentiation-Rules-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#subsec-derivative-reference-sheet" class="internal"><span class="title">Derivative Reference Sheet</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html" class="internal"><span class="title">3. Applications of Derivatives- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html#exercises-chapter-review" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="notes-Applications-Derivatives-chapter-exercises"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3. Applications of Derivatives- Chapter Exercises</span>
+</h2>
+<section class="introduction" id="notes-Applications-Derivatives-chapter-exercises-2"><div class="para" id="notes-Applications-Derivatives-chapter-exercises-2-1">This cumulative review module provides a comprehensive synthesis of the core applications of differentiation and basic antidifferentiation methods covered throughout this chapter. Working through these exercises will help reinforce your understanding of function optimization, linear curve behavior analysis, limit evaluations, and numerical root approximations.<div class="autopermalink" data-description="Paragraph"><a href="#notes-Applications-Derivatives-chapter-exercises-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="notes-Applications-Derivatives-chapter-exercises-2-2">These problems mimic standard exam configurations, prompting you to determine absolute boundaries on closed domains, perform complete first and second derivative graphing tests, model dynamic rate-of-change word problems, and seamlessly switch back and forth between derivative and integral operations.<div class="autopermalink" data-description="Paragraph"><a href="#notes-Applications-Derivatives-chapter-exercises-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="exercises" id="exercises-chapter-review"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-absolute-extrema"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="task exercise-like" id="ex-absolute-extrema-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-absolute-extrema-2-1-1">
+<span class="process-math">\(f(x)=x^2-1\)</span> on <span class="process-math">\([-1, 2]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-absolute-extrema-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-absolute-extrema-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-absolute-extrema-2-2-1">
+<div class="para">First, find the critical numbers by setting the derivative to zero:</div>
+<div class="displaymath process-math" id="ex-absolute-extrema-2-2-1-1">
+\begin{equation*}
+f'(x) = 2x \implies 2x = 0 \implies x = 0
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(x = 0\)</span> is in the interval <span class="process-math">\([-1, 2]\text{,}\)</span> evaluate <span class="process-math">\(f(x)\)</span> at the critical number and the endpoints:</div>
+<div class="displaymath process-math" id="ex-absolute-extrema-2-2-1-5">
+\begin{align*}
+f(0) \amp = (0)^2 - 1 = -1\\
+f(-1) \amp = (-1)^2 - 1 = 0\\
+f(2) \amp = (2)^2 - 1 = 3
+\end{align*}
+</div>
+<div class="para">Comparing these values, the absolute minimum is <span class="process-math">\(-1\)</span> at <span class="process-math">\(x = 0\text{,}\)</span> and the absolute maximum is <span class="process-math">\(3\)</span> at <span class="process-math">\(x = 2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-absolute-extrema-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.a.1"><a href="#ex-absolute-extrema-2-2" title="Copy heading and permalink for Solution 1.a.1" aria-label="Copy heading and permalink for Solution 1.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 1.a"><a href="#ex-absolute-extrema-2" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div></article><article class="task exercise-like" id="ex-absolute-extrema-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-absolute-extrema-3-1-1">
+<span class="process-math">\(g(x)=xe^{-x}\)</span> on <span class="process-math">\([-1, 1]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-absolute-extrema-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-absolute-extrema-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-absolute-extrema-3-2-1">
+<div class="para">Find the critical numbers using the product rule:</div>
+<div class="displaymath process-math" id="ex-absolute-extrema-3-2-1-1">
+\begin{equation*}
+g'(x) = 1 \cdot e^{-x} + x \cdot (-e^{-x}) = e^{-x}(1 - x)
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(g'(x) = 0\)</span> gives <span class="process-math">\(1 - x = 0 \implies x = 1\)</span>(since <span class="process-math">\(e^{-x} \neq 0\)</span>). Evaluate <span class="process-math">\(g(x)\)</span> at the boundary endpoints <span class="process-math">\(x = -1\)</span> and <span class="process-math">\(x = 1\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-absolute-extrema-3-2-1-8">
+\begin{align*}
+g(-1) \amp = -1 \cdot e^{-(-1)} = -e \approx -2.718\\
+g(1) \amp = 1 \cdot e^{-1} = \frac{1}{e} \approx 0.368
+\end{align*}
+</div>
+<div class="para">Therefore, the absolute minimum is <span class="process-math">\(-e\)</span> at <span class="process-math">\(x = -1\text{,}\)</span> and the absolute maximum is <span class="process-math">\(\frac{1}{e}\)</span> at <span class="process-math">\(x = 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-absolute-extrema-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.b.1"><a href="#ex-absolute-extrema-3-2" title="Copy heading and permalink for Solution 1.b.1" aria-label="Copy heading and permalink for Solution 1.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 1.b"><a href="#ex-absolute-extrema-3" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 1"><a href="#ex-absolute-extrema" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div></article><article class="exercise exercise-like" id="ex-find-antiderivatives"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<article class="task exercise-like" id="ex-find-antiderivatives-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-find-antiderivatives-2-1-1">
+<span class="process-math">\(y'=2x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-find-antiderivatives-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-find-antiderivatives-2-2-1">Integrate using the power rule: <span class="process-math">\(y = \int 2x \, dx = x^2 + C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.a.1"><a href="#ex-find-antiderivatives-2-2" title="Copy heading and permalink for Solution 2.a.1" aria-label="Copy heading and permalink for Solution 2.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.a"><a href="#ex-find-antiderivatives-2" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div></article><article class="task exercise-like" id="ex-find-antiderivatives-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-find-antiderivatives-3-1-1">
+<span class="process-math">\(y'=\dfrac{1}{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-find-antiderivatives-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-find-antiderivatives-3-2-1">The basic antiderivative of <span class="process-math">\(\dfrac{1}{x}\)</span> is the natural logarithm function: <span class="process-math">\(y = \int \dfrac{1}{x} \, dx = \ln|x| + C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.b.1"><a href="#ex-find-antiderivatives-3-2" title="Copy heading and permalink for Solution 2.b.1" aria-label="Copy heading and permalink for Solution 2.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.b"><a href="#ex-find-antiderivatives-3" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div></article><article class="task exercise-like" id="ex-find-antiderivatives-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-find-antiderivatives-4-1-1">
+<span class="process-math">\(y'=3x^2+2x-1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-find-antiderivatives-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-find-antiderivatives-4-2-1">
+<div class="para">Integrate term by term:</div>
+<div class="displaymath process-math" id="ex-find-antiderivatives-4-2-1-1">
+\begin{equation*}
+y = \int (3x^2+2x-1) \, dx = 3\left(\frac{x^3}{3}\right) + 2\left(\frac{x^2}{2}\right) - x + C = x^3 + x^2 - x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-find-antiderivatives-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.c.1"><a href="#ex-find-antiderivatives-4-2" title="Copy heading and permalink for Solution 2.c.1" aria-label="Copy heading and permalink for Solution 2.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 2.c"><a href="#ex-find-antiderivatives-4" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 2"><a href="#ex-find-antiderivatives" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div></article><article class="exercise exercise-like" id="ex-critical-numbers"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-critical-numbers-1"><div class="para" id="ex-critical-numbers-1-1">Find the critical numbers of the functions.<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-critical-numbers-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-critical-numbers-2-1-1">
+<span class="process-math">\(\displaystyle f(x)=\frac{1+\sin x}{1-\sin x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-numbers-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-critical-numbers-2-2-1">
+<div class="para">Apply the quotient rule to find <span class="process-math">\(f'(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-critical-numbers-2-2-1-2">
+\begin{align*}
+f'(x) \amp = \frac{(\cos x)(1 - \sin x) - (1 + \sin x)(-\cos x)}{(1 - \sin x)^2}\\
+\amp = \frac{\cos x - \sin x \cos x + \cos x + \sin x \cos x}{(1 - \sin x)^2} = \frac{2\cos x}{(1 - \sin x)^2}
+\end{align*}
+</div>
+<div class="para">Set the numerator to zero: <span class="process-math">\(2\cos x = 0 \implies x = \dfrac{\pi}{2} + k\pi\)</span> for any integer <span class="process-math">\(k\text{.}\)</span> However, notice that when <span class="process-math">\(x = \frac{\pi}{2} + 2k\pi\text{,}\)</span> <span class="process-math">\(\sin x = 1\text{,}\)</span> causing the original function denominator to be zero (undefined).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-critical-numbers-2-2-2">Thus, the critical numbers are only where the derivative equals zero and the function is defined: <span class="process-math">\(x = \dfrac{3\pi}{2} + 2k\pi\)</span> for <span class="process-math">\(k \in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.a.1"><a href="#ex-critical-numbers-2-2" title="Copy heading and permalink for Solution 3.a.1" aria-label="Copy heading and permalink for Solution 3.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.a"><a href="#ex-critical-numbers-2" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div></article><article class="task exercise-like" id="ex-critical-numbers-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-critical-numbers-3-1-1">
+<span class="process-math">\(K(z)=4z^3+5z^2-42z+7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-numbers-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-critical-numbers-3-2-1">
+<div class="para">Differentiate and set equal to zero:</div>
+<div class="displaymath process-math" id="ex-critical-numbers-3-2-1-1">
+\begin{equation*}
+K'(z) = 12z^2 + 10z - 42 = 2(6z^2 + 5z - 21) = 0
+\end{equation*}
+</div>
+<div class="para">Factor the quadratic binomial: <span class="process-math">\(2(2z - 3)(3z + 7) = 0\text{.}\)</span> The critical numbers are <span class="process-math">\(z = \dfrac{3}{2}\)</span> and <span class="process-math">\(z = -\dfrac{7}{3}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.b.1"><a href="#ex-critical-numbers-3-2" title="Copy heading and permalink for Solution 3.b.1" aria-label="Copy heading and permalink for Solution 3.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.b"><a href="#ex-critical-numbers-3" title="Copy heading and permalink for Task 3.b" aria-label="Copy heading and permalink for Task 3.b">🔗</a></div></article><article class="task exercise-like" id="ex-critical-numbers-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-critical-numbers-4-1-1">
+<span class="process-math">\(f(x)=\sin(x)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-critical-numbers-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-critical-numbers-4-2-1">Differentiate and set to zero: <span class="process-math">\(f'(x) = \cos x = 0\text{.}\)</span> The critical numbers occur at <span class="process-math">\(x = \dfrac{\pi}{2} + k\pi\)</span> for all integers <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-critical-numbers-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.c.1"><a href="#ex-critical-numbers-4-2" title="Copy heading and permalink for Solution 3.c.1" aria-label="Copy heading and permalink for Solution 3.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.c"><a href="#ex-critical-numbers-4" title="Copy heading and permalink for Task 3.c" aria-label="Copy heading and permalink for Task 3.c">🔗</a></div></article><div class="autopermalink" data-description="Exercise 3"><a href="#ex-critical-numbers" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div></article><article class="exercise exercise-like" id="ex-concavity-intervals"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-concavity-intervals-1-1">If <span class="process-math">\(f(x) = x^3+x^2-x-1\text{,}\)</span> determine intervals on which the graph of <span class="process-math">\(f\)</span> is concave up or down.<div class="autopermalink" data-description="Paragraph"><a href="#ex-concavity-intervals-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-concavity-intervals-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-concavity-intervals-2-1">
+<div class="para">Find the first and second derivatives:</div>
+<div class="displaymath process-math" id="ex-concavity-intervals-2-1-1">
+\begin{equation*}
+f'(x) = 3x^2 + 2x - 1 \implies f''(x) = 6x + 2
+\end{equation*}
+</div>
+<div class="para">Set <span class="process-math">\(f''(x) = 0 \implies 6x + 2 = 0 \implies x = -\frac{1}{3}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-concavity-intervals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-concavity-intervals-2-2">We test the intervals around the inflection point candidate <span class="process-math">\(x = -\frac{1}{3}\)</span> using the sign of the second derivative:<div class="autopermalink" data-description="Paragraph"><a href="#ex-concavity-intervals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\infty, -\frac{1}{3}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\frac{1}{3}, \infty\right)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f''(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(-1) = -4 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(0) = 2 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Behavior / Concavity</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Down</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Solution 4.1"><a href="#ex-concavity-intervals-2" title="Copy heading and permalink for Solution 4.1" aria-label="Copy heading and permalink for Solution 4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 4"><a href="#ex-concavity-intervals" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div></article><article class="exercise exercise-like" id="ex-local-extrema-inflection"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-local-extrema-inflection-1-1">If <span class="process-math">\(f'(x) = x^4-4x^3\text{,}\)</span> find the local extrema of <span class="process-math">\(f\text{.}\)</span> Determine the concavity and find the point of inflection.<div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-local-extrema-inflection-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-local-extrema-inflection-2-1">
+<div class="para">Find critical numbers by setting the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-local-extrema-inflection-2-1-1">
+\begin{equation*}
+f'(x) = x^4 - 4x^3 = x^3(x - 4) = 0 \implies x=0, \text{ or } x=4
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-local-extrema-inflection-2-2">We test the intervals around our critical numbers using the first derivative sign test:<div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((0, 4)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((4, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 5\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f'(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-1) = 5 \gt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(1) = -3 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(5) = 125 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Behavior of <span class="process-math">\(f(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Decreasing <span class="process-math">\(\searrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+</tr>
+</table></div>
+<div class="para" id="ex-local-extrema-inflection-2-4">Because the derivative changes from positive to negative at <span class="process-math">\(x = 0\text{,}\)</span> there is a local maximum at <span class="process-math">\(x = 0\text{.}\)</span> Because it changes from negative to positive at <span class="process-math">\(x = 4\text{,}\)</span> there is a local minimum at <span class="process-math">\(x = 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-local-extrema-inflection-2-5">
+<div class="para">Now compute the second derivative for concavity:</div>
+<div class="displaymath process-math" id="ex-local-extrema-inflection-2-5-1">
+\begin{equation*}
+f''(x) = 4x^3 - 12x^2 = 4x^2(x - 3)
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(f''(x) = 0 \implies x = 0\)</span> or <span class="process-math">\(x = 3\text{.}\)</span> We analyze the intervals across these boundary targets:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((-\infty, 0)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((0, 3)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((3, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 4\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f''(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-1) = -16 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(1) = -8 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(4) = 64 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Concavity</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Down</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Down</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+</tr>
+</table></div>
+<div class="para" id="ex-local-extrema-inflection-2-7">Because the concavity changes signs strictly at <span class="process-math">\(x = 3\text{,}\)</span> the inflection point occurs at <span class="process-math">\(x = 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-local-extrema-inflection-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 5.1"><a href="#ex-local-extrema-inflection-2" title="Copy heading and permalink for Solution 5.1" aria-label="Copy heading and permalink for Solution 5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 5"><a href="#ex-local-extrema-inflection" title="Copy heading and permalink for Exercise 5" aria-label="Copy heading and permalink for Exercise 5">🔗</a></div></article><article class="exercise exercise-like" id="ex-curve-sketching"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-curve-sketching-1"><div class="para" id="ex-curve-sketching-1-1">For each function below, perform a full derivative analysis to analyze its graph components:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-curve-sketching-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-curve-sketching-2-1-1">
+<span class="process-math">\(f(x)=x^4-8x^2+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-curve-sketching-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-curve-sketching-2-2-1">
+<div class="para">First, find the critical numbers by evaluating where <span class="process-math">\(f'(x) = 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-curve-sketching-2-2-1-2">
+\begin{equation*}
+f'(x) = 4x^3 - 16x = 4x(x^2 - 4) = 0 \implies x = 0, \, x = -2, \, \text{or } x = 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-sketching-2-2-2">We test the intervals around our critical numbers using the first derivative sign test:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((-\infty, -2)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((-2, 0)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((0, 2)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\((2, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -3\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 3\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f'(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-3) = -60 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-1) = 12 \gt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(1) = -12 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(3) = 60 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Behavior of <span class="process-math">\(f(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Decreasing <span class="process-math">\(\searrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Decreasing <span class="process-math">\(\searrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+</tr>
+</table></div>
+<div class="para" id="ex-curve-sketching-2-2-4">Local minima occur at <span class="process-math">\(x = -2\)</span> and <span class="process-math">\(x = 2\)</span> with a value of <span class="process-math">\(-15\text{.}\)</span> A local maximum occurs at <span class="process-math">\(x = 0\)</span> with a value of <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-curve-sketching-2-2-5">
+<div class="para">Next, compute the second derivative to evaluate concavity and identify inflection points:</div>
+<div class="displaymath process-math" id="ex-curve-sketching-2-2-5-1">
+\begin{equation*}
+f''(x) = 12x^2 - 16 = 4(3x^2 - 4) = 0 \implies x = \pm \frac{2}{\sqrt{3}} \approx \pm 1.155
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-sketching-2-2-6">We test the intervals across these structural boundary conditions:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\infty, -\frac{2}{\sqrt{3}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\frac{2}{\sqrt{3}}, \frac{2}{\sqrt{3}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(\frac{2}{\sqrt{3}}, \infty\right)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 2\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f''(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(-2) = 32 \gt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(0) = -16 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(2) = 32 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Concavity</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Down</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+</tr>
+</table></div>
+<div class="para" id="ex-curve-sketching-2-2-8">Inflection points occur at <span class="process-math">\(x = \pm \frac{2}{\sqrt{3}}\)</span> where the coordinates are approximately <span class="process-math">\((\pm 1.16, -7.89)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-2-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-curve-sketch-1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/img-curve-sketch-1.svg" role="img" class="contained" alt="W-shaped polynomial curve extending through the x-axis to show real roots on both sides, with local minima at x equals plus or minus 2 and a local maximum at x equals 0."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">313<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph of <span class="process-math">\(f(x) = x^4 - 8x^2 + 1\)</span><div class="autopermalink" data-description="Figure 313"><a href="#fig-curve-sketch-1" title="Copy heading and permalink for Figure 313" aria-label="Copy heading and permalink for Figure 313">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 6.a.1"><a href="#ex-curve-sketching-2-2" title="Copy heading and permalink for Solution 6.a.1" aria-label="Copy heading and permalink for Solution 6.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 6.a"><a href="#ex-curve-sketching-2" title="Copy heading and permalink for Task 6.a" aria-label="Copy heading and permalink for Task 6.a">🔗</a></div></article><article class="task exercise-like" id="ex-curve-sketching-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-curve-sketching-3-1-1">
+<span class="process-math">\(f(x)=x^4-x^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-curve-sketching-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-curve-sketching-3-2-1">
+<div class="para">First, find the critical numbers by setting the first derivative to zero:</div>
+<div class="displaymath process-math" id="ex-curve-sketching-3-2-1-1">
+\begin{equation*}
+f'(x) = 4x^3 - 2x = 2x(2x^2 - 1) = 0 \implies x = 0, \, x = -\dfrac{1}{\sqrt{2}} \approx -0.707, \, \text{or } x = \dfrac{1}{\sqrt{2}} \approx 0.707
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-sketching-3-2-2">We test the intervals around our critical numbers using the first derivative sign test:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\infty, -\dfrac{1}{\sqrt{2}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\dfrac{1}{\sqrt{2}}, 0\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(0, \dfrac{1}{\sqrt{2}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(\dfrac{1}{\sqrt{2}}, \infty\right)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -0.5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 0.5\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 1\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f'(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-1) = -2 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(-0.5) = 0.5 \gt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(0.5) = -0.5 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f'(1) = 2 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Behavior of <span class="process-math">\(f(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Decreasing <span class="process-math">\(\searrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Decreasing <span class="process-math">\(\searrow\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Increasing <span class="process-math">\(\nearrow\)</span>
+</td>
+</tr>
+</table></div>
+<div class="para" id="ex-curve-sketching-3-2-4">Local minima occur at <span class="process-math">\(x = \pm \dfrac{1}{\sqrt{2}}\)</span> with a value of <span class="process-math">\(-\dfrac{1}{4} = -0.25\text{.}\)</span> A local maximum occurs at <span class="process-math">\(x = 0\)</span> with a value of <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-curve-sketching-3-2-5">
+<div class="para">Next, compute the second derivative to evaluate concavity and identify inflection points:</div>
+<div class="displaymath process-math" id="ex-curve-sketching-3-2-5-1">
+\begin{equation*}
+f''(x) = 12x^2 - 2 = 2(6x^2 - 1) = 0 \implies x = \pm \dfrac{1}{\sqrt{6}} \approx \pm 0.408
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-curve-sketching-3-2-6">We test the intervals across these boundary conditions:<div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">Interval</td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\infty, -\dfrac{1}{\sqrt{6}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(-\dfrac{1}{\sqrt{6}}, \dfrac{1}{\sqrt{6}}\right)\)</span></td>
+<td class="c m b1 r1 l0 t1 lines"><span class="process-math">\(\left(\dfrac{1}{\sqrt{6}}, \infty\right)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Test Value</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = -1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(x = 1\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Sign of <span class="process-math">\(f''(x)\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(-1) = 10 \gt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(0) = -2 \lt 0\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(f''(1) = 10 \gt 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">Concavity</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Down</td>
+<td class="c m b1 r1 l0 t0 lines">Concave Up</td>
+</tr>
+</table></div>
+<div class="para" id="ex-curve-sketching-3-2-8">Inflection points occur at <span class="process-math">\(x = \pm \dfrac{1}{\sqrt{6}}\)</span> where the coordinates are exactly <span class="process-math">\(\left(\pm \dfrac{1}{\sqrt{6}}, -\dfrac{5}{36}\right) \approx (\pm 0.41, -0.14)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-curve-sketching-3-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-curve-sketch-2"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/img-curve-sketch-2.svg" role="img" class="contained" alt="W-shaped polynomial curve centered at the origin, showing local minima at x equals plus or minus 0.707 and a local maximum at the origin. The curve crosses the x-axis at x equals plus or minus 1."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">314<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph of <span class="process-math">\(f(x) = x^4 - x^2\)</span><div class="autopermalink" data-description="Figure 314"><a href="#fig-curve-sketch-2" title="Copy heading and permalink for Figure 314" aria-label="Copy heading and permalink for Figure 314">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Solution 6.b.1"><a href="#ex-curve-sketching-3-2" title="Copy heading and permalink for Solution 6.b.1" aria-label="Copy heading and permalink for Solution 6.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 6.b"><a href="#ex-curve-sketching-3" title="Copy heading and permalink for Task 6.b" aria-label="Copy heading and permalink for Task 6.b">🔗</a></div></article><div class="autopermalink" data-description="Exercise 6"><a href="#ex-curve-sketching" title="Copy heading and permalink for Exercise 6" aria-label="Copy heading and permalink for Exercise 6">🔗</a></div></article><article class="exercise exercise-like" id="ex-optimization-semicircle"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-optimization-semicircle-1-1">A rectangle is to be inscribed in a semicircle of radius 2. What is the largest area the rectangle can have?<div class="autopermalink" data-description="Paragraph"><a href="#ex-optimization-semicircle-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-inscribed-rectangle-semicircle"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-inscribed-rectangle-semicircle.svg" role="img" class="contained" alt="A mathematically perfect semicircle of radius 2 centered at the origin on an x-y coordinate plane, with an inscribed rectangle. The rectangle has width 2x and height y, with its top two vertices touching the curve of the semicircle."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">315<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rectangle inscribed inside a semicircle of radius 2.<div class="autopermalink" data-description="Figure 315"><a href="#fig-inscribed-rectangle-semicircle" title="Copy heading and permalink for Figure 315" aria-label="Copy heading and permalink for Figure 315">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex-optimization-semicircle-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-optimization-semicircle-2-1">
+<div class="para">Let the base of the rectangle lie along the <span class="process-math">\(x\)</span>-axis, centered at the origin, with upper vertices touching the upper semicircle equation <span class="process-math">\(y = \sqrt{4-x^2}\text{.}\)</span> The total base width is <span class="process-math">\(2x\)</span> and the height is <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-optimization-semicircle-2-1-5">
+\begin{equation*}
+A(x) = 2xy = 2x\sqrt{4-x^2}
+\end{equation*}
+</div>
+<div class="para">Differentiate <span class="process-math">\(A(x)\)</span> with respect to <span class="process-math">\(x\)</span> using the product rule:</div>
+<div class="displaymath process-math" id="ex-optimization-semicircle-2-1-8">
+\begin{equation*}
+A'(x) = 2\sqrt{4-x^2} + 2x \cdot \left(\dfrac{-x}{\sqrt{4-x^2}}\right) = \dfrac{2(4-x^2) - 2x^2}{\sqrt{4-x^2}} = \dfrac{8 - 4x^2}{\sqrt{4-x^2}}
+\end{equation*}
+</div>
+<div class="para">Set <span class="process-math">\(A'(x) = 0 \implies 8 - 4x^2 = 0 \implies x^2 = 2 \implies x = \sqrt{2}\text{.}\)</span> The largest area is <span class="process-math">\(A(\sqrt{2}) = 2(\sqrt{2})\sqrt{4 - 2} = 2\sqrt{2}\sqrt{2} = 4\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-optimization-semicircle-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.1"><a href="#ex-optimization-semicircle-2" title="Copy heading and permalink for Solution 7.1" aria-label="Copy heading and permalink for Solution 7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 7"><a href="#ex-optimization-semicircle" title="Copy heading and permalink for Exercise 7" aria-label="Copy heading and permalink for Exercise 7">🔗</a></div></article><article class="exercise exercise-like" id="ex-optimization-parabola"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-optimization-parabola-1-1">A rectangle has its base on the <span class="process-math">\(x\)</span>-axis and its upper two vertices on the parabola <span class="process-math">\(y=12-x^2\text{.}\)</span> What is the largest area the rectangle can have, and what are its dimensions?<div class="autopermalink" data-description="Paragraph"><a href="#ex-optimization-parabola-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig-inscribed-rectangle-parabola"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-inscribed-rectangle-parabola.svg" role="img" class="contained" alt="A downward-opening parabola y equals 12 minus x squared centered on an axis system, with an inscribed rectangle. The rectangle has width 4 and height 8, with its top two vertices touching the curve of the parabola at x equals plus or minus 2."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">316<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rectangle inscribed underneath the parabola <span class="process-math">\(y = 12 - x^2\text{.}\)</span><div class="autopermalink" data-description="Figure 316"><a href="#fig-inscribed-rectangle-parabola" title="Copy heading and permalink for Figure 316" aria-label="Copy heading and permalink for Figure 316">🔗</a></div></figcaption></figure><div class="solutions"><details id="ex-optimization-parabola-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-optimization-parabola-2-1">
+<div class="para">The base of the rectangle spans from <span class="process-math">\(-x\)</span> to <span class="process-math">\(x\text{,}\)</span> giving a width of <span class="process-math">\(2x\text{.}\)</span> The height is given by <span class="process-math">\(y = 12-x^2\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-optimization-parabola-2-1-5">
+\begin{equation*}
+A(x) = 2x(12 - x^2) = 24x - 2x^3
+\end{equation*}
+</div>
+<div class="para">Differentiate and locate critical roots:</div>
+<div class="displaymath process-math" id="ex-optimization-parabola-2-1-6">
+\begin{equation*}
+A'(x) = 24 - 6x^2 = 0 \implies 6x^2 = 24 \implies x^2 = 4 \implies x = 2
+\end{equation*}
+</div>
+<div class="para">The dimensions are width = <span class="process-math">\(4\)</span> and height = <span class="process-math">\(12 - (2)^2 = 8\text{.}\)</span> The maximum area is <span class="process-math">\(A(2) = 4 \times 8 = 32\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-optimization-parabola-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 8.1"><a href="#ex-optimization-parabola-2" title="Copy heading and permalink for Solution 8.1" aria-label="Copy heading and permalink for Solution 8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 8"><a href="#ex-optimization-parabola" title="Copy heading and permalink for Exercise 8" aria-label="Copy heading and permalink for Exercise 8">🔗</a></div></article><article class="exercise exercise-like" id="ex-opt-box"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-opt-box-1-1">An open-top rectangular box is constructed from a 10-in.-by-10-in. piece of cardboard by cutting squares of equal side length <span class="process-math">\(x\)</span> from the corners and folding up the sides. Find analytically the dimensions of the box of largest volume and the maximum volume.<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-box-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-box-layout.svg" role="img" class="contained" alt="A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box with total width 10 in."></div></div>
+<div class="sbspanel sbspanel--bottom bottom" style=""><div class="image-box"><img src="generated/latex-image/img-fold-box-3d.svg" role="img" class="contained" alt="A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 10 minus 2x."></div></div>
+</div></div>
+<div class="solutions"><details id="ex-opt-box-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-opt-box-2-1">
+<div class="para">The box length is <span class="process-math">\(10-2x\text{,}\)</span> width is <span class="process-math">\(10-2x\text{,}\)</span> and height is <span class="process-math">\(x\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-opt-box-2-1-4">
+\begin{equation*}
+V(x) = x(10-2x)^2 = x(100 - 40x + 4x^2) = 4x^3 - 40x^2 + 100x
+\end{equation*}
+</div>
+<div class="para">Find the derivative and set it to zero:</div>
+<div class="displaymath process-math" id="ex-opt-box-2-1-5">
+\begin{equation*}
+V'(x) = 12x^2 - 80x + 100 = 4(3x^2 - 20x + 25) = 4(3x - 5)(x - 5) = 0
+\end{equation*}
+</div>
+<div class="para">This yields roots <span class="process-math">\(x = 5\)</span> (which cuts away the entire piece of cardboard) or <span class="process-math">\(x = \dfrac{5}{3}\text{.}\)</span> The optimal corner cut length is <dfn class="terminology"><span class="process-math">\(x = \dfrac{5}{3}\)</span> in.</dfn> The base dimensions are <dfn class="terminology"><span class="process-math">\(\dfrac{20}{3}\)</span> in. by <span class="process-math">\(\dfrac{20}{3}\)</span> in.</dfn>, creating a maximum volume of:</div>
+<div class="displaymath process-math" id="ex-opt-box-2-1-10">
+\begin{equation*}
+V\left(\dfrac{5}{3}\right) = \dfrac{5}{3}\left(\dfrac{20}{3}\right)^2 = \dfrac{2000}{27} \approx 74.07 \text{ in}^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-opt-box-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#ex-opt-box-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 9"><a href="#ex-opt-box" title="Copy heading and permalink for Exercise 9" aria-label="Copy heading and permalink for Exercise 9">🔗</a></div></article><article class="exercise exercise-like" id="ex-linearization-trig"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-linearization-trig-1-1">Approximate <span class="process-math">\(\cos(61^\circ)\)</span> from <span class="process-math">\(\cos(60^\circ)\)</span> using linear approximation.<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-trig-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-linearization-trig-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-linearization-trig-2-1">
+<div class="para">Convert values to radians: center point <span class="process-math">\(a = 60^\circ = \dfrac{\pi}{3}\text{,}\)</span> target point <span class="process-math">\(x = 61^\circ = \dfrac{\pi}{3} + \dfrac{\pi}{180}\text{,}\)</span> meaning <span class="process-math">\(dx = \dfrac{\pi}{180}\text{.}\)</span> Let <span class="process-math">\(f(x) = \cos x \implies f'(x) = -\sin x\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-linearization-trig-2-1-5">
+\begin{align*}
+f(a) \amp = \cos\left(\frac{\pi}{3}\right) = \frac{1}{2}\\
+f'(a) \amp = -\sin\left(\frac{\pi}{3}\right) = -\frac{\sqrt{3}}{2}
+\end{align*}
+</div>
+<div class="para">Construct the linear tangent line: <span class="process-math">\(L(x) = f(a) + f'(a)(x-a)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-linearization-trig-2-1-7">
+\begin{equation*}
+\cos(61^\circ) \approx \frac{1}{2} - \frac{\sqrt{3}}{2}\left(\frac{\pi}{180}\right) \approx 0.5 - 0.86603(0.01745) \approx 0.4849
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-linearization-trig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 10.1"><a href="#ex-linearization-trig-2" title="Copy heading and permalink for Solution 10.1" aria-label="Copy heading and permalink for Solution 10.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 10"><a href="#ex-linearization-trig" title="Copy heading and permalink for Exercise 10" aria-label="Copy heading and permalink for Exercise 10">🔗</a></div></article><article class="exercise exercise-like" id="ex-lhopital"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="ex-lhopital-1"><div class="para" id="ex-lhopital-1-1">Use l’Hôpital’s rule to evaluate the limit.<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-lhopital-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-lhopital-2-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 2}\frac{x-2}{x^2-4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhopital-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhopital-2-2-1">
+<div class="para">This yields an indeterminate form of type <span class="process-math">\(\frac{0}{0}\text{.}\)</span> Differentiating the numerator and denominator gives:</div>
+<div class="displaymath process-math" id="ex-lhopital-2-2-1-2">
+\begin{equation*}
+\lim_{x\to 2}\frac{\frac{d}{dx}(x-2)}{\frac{d}{dx}(x^2-4)} = \lim_{x\to 2}\frac{1}{2x} = \frac{1}{2(2)} = \frac{1}{4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.a.1"><a href="#ex-lhopital-2-2" title="Copy heading and permalink for Solution 11.a.1" aria-label="Copy heading and permalink for Solution 11.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 11.a"><a href="#ex-lhopital-2" title="Copy heading and permalink for Task 11.a" aria-label="Copy heading and permalink for Task 11.a">🔗</a></div></article><article class="task exercise-like" id="ex-lhopital-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-lhopital-3-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to -3}\frac{x^3-4x+15}{x^2-x-12}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhopital-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhopital-3-2-1">
+<div class="para">Direct substitution yields <span class="process-math">\(\frac{(-3)^3-4(-3)+15}{(-3)^2-(-3)-12} = \frac{0}{0}\text{.}\)</span> Differentiate via L’Hôpital’s rule:</div>
+<div class="displaymath process-math" id="ex-lhopital-3-2-1-2">
+\begin{equation*}
+\lim_{x\to -3}\frac{3x^2-4}{2x-1} = \frac{3(-3)^2-4}{2(-3)-1} = \frac{27-4}{-6-1} = -\frac{23}{7}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.b.1"><a href="#ex-lhopital-3-2" title="Copy heading and permalink for Solution 11.b.1" aria-label="Copy heading and permalink for Solution 11.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 11.b"><a href="#ex-lhopital-3" title="Copy heading and permalink for Task 11.b" aria-label="Copy heading and permalink for Task 11.b">🔗</a></div></article><article class="task exercise-like" id="ex-lhopital-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-lhopital-4-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to \infty}\frac{5x^3-2x}{7x^3+3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhopital-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhopital-4-2-1">
+<div class="para">This yields the form <span class="process-math">\(\frac{\infty}{\infty}\text{.}\)</span> Differentiating three consecutive times or checking dominant trailing polynomial coefficients yields:</div>
+<div class="displaymath process-math" id="ex-lhopital-4-2-1-2">
+\begin{equation*}
+\lim_{x\to \infty}\frac{15x^2-2}{21x^2} \implies \lim_{x\to \infty}\frac{30x}{42x} = \frac{30}{42} = \frac{5}{7}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.c.1"><a href="#ex-lhopital-4-2" title="Copy heading and permalink for Solution 11.c.1" aria-label="Copy heading and permalink for Solution 11.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 11.c"><a href="#ex-lhopital-4" title="Copy heading and permalink for Task 11.c" aria-label="Copy heading and permalink for Task 11.c">🔗</a></div></article><article class="task exercise-like" id="ex-lhopital-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ex-lhopital-5-1-1">
+<span class="process-math">\(\displaystyle\lim_{x\to 0^1}(1+x)^{1/x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-lhopital-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-lhopital-5-2-1">
+<div class="para">This is an indeterminate power form <span class="process-math">\(1^\infty\text{.}\)</span> Let <span class="process-math">\(y = (1+x)^{1/x}\text{,}\)</span> taking the natural log gives <span class="process-math">\(\ln y = \frac{\ln(1+x)}{x}\text{.}\)</span> Evaluate the limit using L’Hôpital’s rule for <span class="process-math">\(\frac{0}{0}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-lhopital-5-2-1-5">
+\begin{equation*}
+\lim_{x\to 0^+}\frac{\ln(1+x)}{x} = \lim_{x\to 0^+}\frac{\frac{1}{1+x}}{1} = 1
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\lim \ln y = 1\text{,}\)</span> raising back over base <span class="process-math">\(e\)</span> yields <span class="process-math">\(e^1 = e\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lhopital-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.d.1"><a href="#ex-lhopital-5-2" title="Copy heading and permalink for Solution 11.d.1" aria-label="Copy heading and permalink for Solution 11.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 11.d"><a href="#ex-lhopital-5" title="Copy heading and permalink for Task 11.d" aria-label="Copy heading and permalink for Task 11.d">🔗</a></div></article><div class="autopermalink" data-description="Exercise 11"><a href="#ex-lhopital" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div></article><article class="exercise exercise-like" id="ex-newtons-method"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-newtons-method-1-1">Use Newton’s method to estimate the solution of the equation <span class="process-math">\(x^2+x-1=0\text{.}\)</span> Start with <span class="process-math">\(x_0=-1\)</span> to find <span class="process-math">\(x_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-newtons-method-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-newtons-method-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-newtons-method-2-1">
+<div class="para">Let <span class="process-math">\(f(x) = x^2 + x - 1 \implies f'(x) = 2x + 1\text{.}\)</span> The iterative formula is <span class="process-math">\(x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-newtons-method-2-1-3">
+\begin{align*}
+x_1 \amp = x_0 - \frac{f(-1)}{f'(-1)} = -1 - \frac{(-1)^2 + (-1) - 1}{2(-1) + 1} = -1 - \frac{-1}{-1} = -2\\
+x_2 \amp = x_1 - \frac{f(-2)}{f'(-2)} = -2 - \frac{(-2)^2 + (-2) - 1}{2(-2) + 1} = -2 - \frac{1}{-3} = -2 + \frac{1}{3} = -\frac{5}{3} \approx -1.667
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-newtons-method-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#ex-newtons-method-2" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 12"><a href="#ex-newtons-method" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div></article><article class="exercise exercise-like" id="ex-definite-integral"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-definite-integral-1-1">Evaluate <span class="process-math">\(\displaystyle\int^2_1 \dfrac{5~dx}{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-definite-integral-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-definite-integral-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-definite-integral-2-1">
+<div class="para">Factor out the constant and integrate:</div>
+<div class="displaymath process-math" id="ex-definite-integral-2-1-1">
+\begin{equation*}
+\int^2_1 \frac{5}{x}\,dx = 5\left[\ln|x|\right]^2_1 = 5(\ln 2 - \ln 1) = 5\ln 2 \approx 3.465
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-definite-integral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.1"><a href="#ex-definite-integral-2" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 13"><a href="#ex-definite-integral" title="Copy heading and permalink for Exercise 13" aria-label="Copy heading and permalink for Exercise 13">🔗</a></div></article><article class="exercise exercise-like" id="ex-fill-in-blank-derivatives-integrals"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-fill-in-blank-derivatives-integrals-2-1">Complete the table below by filling in the missing derivative and indefinite integral formulas:<div class="autopermalink" data-description="Paragraph"><a href="#ex-fill-in-blank-derivatives-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines"><span class="process-math">\(f(x)\)</span></th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">
+<span class="process-math">\(\dfrac{d}{dx}\left[f(x)\right]\)</span> <span class="process-math">\(\qquad\qquad\)</span>
+</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">
+<span class="process-math">\(\displaystyle\int f(x)\,dx + C\)</span> <span class="process-math">\(\qquad\qquad\)</span>
+</th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(x^n \quad (n \neq -1)\)</span><span class="process-math">\(\rule{0pt}{3ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\qquad\qquad\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\qquad\qquad\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\sin 2x\)</span><span class="process-math">\(\rule{0pt}{4ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\cos 3x\)</span><span class="process-math">\(\rule{0pt}{4ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\tan x\)</span><span class="process-math">\(\rule{0pt}{4ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(e^{-x}\)</span><span class="process-math">\(\rule{0pt}{4ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r1 l0 t0 lines"></td>
+</tr>
+</table></div>
+<div class="solutions"><details id="ex-fill-in-blank-derivatives-integrals-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-fill-in-blank-derivatives-integrals-3-1">The completed table values are evaluated as follows:<div class="autopermalink" data-description="Paragraph"><a href="#ex-fill-in-blank-derivatives-integrals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l1 t1 lines"><span class="process-math">\(f(x)\)</span></th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">
+<span class="process-math">\(\dfrac{d}{dx}\left[f(x)\right]\)</span> <span class="process-math">\(\qquad\qquad\)</span>
+</th>
+<th scope="col" class="c m b1 r1 l0 t1 lines">
+<span class="process-math">\(\displaystyle\int f(x)\,dx + C\)</span> <span class="process-math">\(\qquad\qquad\)</span>
+</th>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(x^n \quad (n \neq -1)\)</span>  <span class="process-math">\(\rule{0pt}{5ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(n x^{n-1}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\dfrac{x^{n+1}}{n+1} + C\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\sin 2x\)</span><span class="process-math">\(\rule{0pt}{5ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\cos 2x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-\dfrac{1}{2}\cos 2x + C\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\cos 3x\)</span><span class="process-math">\(\rule{0pt}{5ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-3\sin 3x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\dfrac{1}{3}\sin 3x + C\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(\tan x\)</span><span class="process-math">\(\rule{0pt}{5ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\sec^2 x\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(\ln|\sec x| + C\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">
+<span class="process-math">\(e^{-x}\)</span><span class="process-math">\(\rule{0pt}{5ex}\)</span>
+</td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-e^{-x}\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(-e^{-x} + C\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Solution 14.1"><a href="#ex-fill-in-blank-derivatives-integrals-3" title="Copy heading and permalink for Solution 14.1" aria-label="Copy heading and permalink for Solution 14.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 14"><a href="#ex-fill-in-blank-derivatives-integrals" title="Copy heading and permalink for Exercise 14" aria-label="Copy heading and permalink for Exercise 14">🔗</a></div></article><div class="autopermalink" data-description="Exercises: Exercises"><a href="#exercises-chapter-review" title="Copy heading and permalink for Exercises: Exercises" aria-label="Copy heading and permalink for Exercises: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section: 3. Applications of Derivatives- Chapter Exercises"><a href="#notes-Applications-Derivatives-chapter-exercises" title="Copy heading and permalink for Section: 3. Applications of Derivatives- Chapter Exercises" aria-label="Copy heading and permalink for Section: 3. Applications of Derivatives- Chapter Exercises">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="notes-Differentiation-Rules-chapter-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="notes-week-01.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

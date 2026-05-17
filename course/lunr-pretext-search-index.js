@@ -2932,7 +2932,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.9 Newton’s Method",
-  "body": " 3.9 Newton's Method   Since the slope of the tangent line is , an equation of the tangent line at is:   The -intercept of this line corresponds to the point , which gives:   If , then solving for yields the equation:   If we take as a second approximation to a root, then the process may be repeated by using the tangent line at . If , then a third approximation is:   This technique of successive approximations of real zeros is referred to as Newton's method .    Newton's Method   Let be a differentiable function, and suppose is a real zero of . If is an approximation to , then the next approximation is given by: provided that .      Use Newton's method to approximate to five decimal places.    To approximate , we find the positive root of the function . The derivative is .  The Newton's method iteration formula becomes:   Choosing a reasonable initial guess close to , such as :                   Rounding to five decimal places, we find .      Approximate the real root of to three decimal places.    Let . We want to find where . First, we compute the derivative:   The Newton's method iteration formula is:   To pick an initial guess , notice that and . By the Intermediate Value Theorem, a root exists between and . Let's choose radian.  Applying the iteration formula (ensuring the calculator is set to radian mode):                   Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as .    "
+  "body": " 3.9 Newton's Method   Since the slope of the tangent line is , an equation of the tangent line at is:   The -intercept of this line corresponds to the point , which gives:    First iteration of Newton's Method showing the tangent line from x1 to x2 on a curve.    If , then solving for yields the equation:   If we take as a second approximation to a root, then the process may be repeated by using the tangent line at . If , then a third approximation is:    Geometric progression of Newton's Method approximations on a curve.    This technique of successive approximations of real zeros is referred to as Newton's method .    Newton's Method   Let be a differentiable function, and suppose is a real zero of . If is an approximation to , then the next approximation is given by: provided that .      Use Newton's method to approximate to five decimal places.    To approximate , we find the positive root of the function . The derivative is .  The Newton's method iteration formula becomes:   Choosing a reasonable initial guess close to , such as :                   Rounding to five decimal places, we find .      Approximate the real root of to three decimal places.    Let . We want to find where . First, we compute the derivative:   The Newton's method iteration formula is:   To pick an initial guess , notice that and . By the Intermediate Value Theorem, a root exists between and . Let's choose radian.  Applying the iteration formula (ensuring the calculator is set to radian mode):                   Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as .    "
 },
 {
   "id": "algo-newtons-method",
@@ -2960,6 +2960,132 @@ var ptx_lunr_docs = [
   "number": "295",
   "title": "",
   "body": "  Approximate the real root of to three decimal places.    Let . We want to find where . First, we compute the derivative:   The Newton's method iteration formula is:   To pick an initial guess , notice that and . By the Intermediate Value Theorem, a root exists between and . Let's choose radian.  Applying the iteration formula (ensuring the calculator is set to radian mode):                   Since the value has stabilized to four decimal places, rounding to three decimal places gives the root as .   "
+},
+{
+  "id": "sec-antiderivatives",
+  "level": "1",
+  "url": "sec-antiderivatives.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.10 Antiderivatives and Indefinite Integrals",
+  "body": " 3.10 Antiderivatives and Indefinite Integrals   In this section, we reverse the process of differentiation. Instead of finding the derivative of a given function, we will find a function whose derivative is already known. This process is fundamental to the Fundamental Theorem of Calculus.     A function, , is an antiderivative of a function, , on an interval if       If then     To find , we apply the power rule for antiderivatives, which states that .       The notation where and is an arbitrary constant, denotes the family of all antiderivatives of on an interval .    So, if we know one antiderivative of on , say , then we know them all. The family of antiderivatives is denoted using the notation:     Evaluate:     We apply the power rule for integration, which states that for .       Evaluate that satisfies .    First, find the general antiderivative by integrating term-by-term:   Next, use the initial condition to solve for the specific constant of integration :    Therefore, the particular solution that satisfies the initial value condition is:      Notation Guide    : integral sign  : indefinite integral  : constant of integration  : tells us the variable of integration is          Power Rule:                               By the Power Rule:     Integrate term by term:       Using the reverse chain rule for trigonometric functions where :     Using the reverse chain rule for exponential functions where :     Differentiating an indefinite integral with respect to its variable of integration returns the original integrand:         The Power Rule:     Differential Equation: An equation that includes derivatives    Finding an antiderivative for a function is the same problem as finding a function that satisfies the equation This is called a differential equation .  Suppose we fix the arbitrary constant arising in the antidifferentiation process by specifying an initial condition The combination of a differential equation and an initial condition is called an initial value problem .      Suppose and , find the particular solution of .    To find the general solution , we integrate the derivative function with respect to : Applying the power rule term by term gives:   Now, we use the initial condition to solve for the specific constant :     Substituting back into our general equation gives the particular solution:       An object is dropped from a height of feet. Disregarding air resistance, find:  the distance it falls after seconds  its velocity after 2 seconds  when it hits the ground         Begin with acceleration due to gravity . Since , we integrate to find velocity: Since the object is dropped, its initial velocity is zero, , which yields . Thus:   Since position , we integrate velocity to find the height function: Since the initial height is 100 feet, , which gives . Therefore, the height equation is: The downward distance fallen after seconds is represented by feet.    Substitute into the velocity equation:     The object hits the ground when its height is zero, :           Find the general antiderivative of     First rewrite the radical terms as fractional exponents: . Now integrate term by term:        A balloon is ascending at the rate of 12 ft\/sec and is at a height of 80 ft above the ground when a package is dropped. How long does it take the package to reach the ground?    The acceleration due to gravity is . Integrating acceleration gives velocity: . Because the package is dropped from an ascending balloon, it inherits the balloon's upward velocity as its initial velocity: .   Integrating velocity gives the position equation for height: . The initial height is 80 feet, so .   Set to find when it hits the ground: Apply the quadratic formula to : Since time must be positive, we evaluate the positive root:       Evaluate each of the following integrals using basic antiderivatives and algebraic manipulation:           Separate the fraction into two terms and integrate each term individually:             Integrate term by term using the exponential rule :             Rewrite the integrand using the Pythagorean identity , then apply known basic antiderivatives:             Simplify the integrand first by dividing each term in the numerator by the denominator using exponent rules, yielding . Then apply the Power Rule:             To avoid -substitution, fully expand the cubic binomial first using the binomial theorem or expansion rules:    Now compute the general antiderivative term-by-term using the basic Power Rule:       "
+},
+{
+  "id": "defn-antiderivative",
+  "level": "2",
+  "url": "sec-antiderivatives.html#defn-antiderivative",
+  "type": "Definition",
+  "number": "296",
+  "title": "",
+  "body": "  A function, , is an antiderivative of a function, , on an interval if    "
+},
+{
+  "id": "ex-antiderivative-intro",
+  "level": "2",
+  "url": "sec-antiderivatives.html#ex-antiderivative-intro",
+  "type": "Example",
+  "number": "297",
+  "title": "",
+  "body": "  If then     To find , we apply the power rule for antiderivatives, which states that .    "
+},
+{
+  "id": "defn-indefinite-integral",
+  "level": "2",
+  "url": "sec-antiderivatives.html#defn-indefinite-integral",
+  "type": "Definition",
+  "number": "298",
+  "title": "",
+  "body": "  The notation where and is an arbitrary constant, denotes the family of all antiderivatives of on an interval .   "
+},
+{
+  "id": "ex-basic-integration",
+  "level": "2",
+  "url": "sec-antiderivatives.html#ex-basic-integration",
+  "type": "Example",
+  "number": "299",
+  "title": "",
+  "body": "  Evaluate:     We apply the power rule for integration, which states that for .    "
+},
+{
+  "id": "ex-initial-value-simple",
+  "level": "2",
+  "url": "sec-antiderivatives.html#ex-initial-value-simple",
+  "type": "Example",
+  "number": "300",
+  "title": "",
+  "body": "  Evaluate that satisfies .    First, find the general antiderivative by integrating term-by-term:   Next, use the initial condition to solve for the specific constant of integration :    Therefore, the particular solution that satisfies the initial value condition is:    "
+},
+{
+  "id": "exe-basic-integrals",
+  "level": "2",
+  "url": "sec-antiderivatives.html#exe-basic-integrals",
+  "type": "Checkpoint",
+  "number": "301",
+  "title": "",
+  "body": "     Power Rule:                               By the Power Rule:     Integrate term by term:       Using the reverse chain rule for trigonometric functions where :     Using the reverse chain rule for exponential functions where :     Differentiating an indefinite integral with respect to its variable of integration returns the original integrand:       "
+},
+{
+  "id": "sec-antiderivatives-11",
+  "level": "2",
+  "url": "sec-antiderivatives.html#sec-antiderivatives-11",
+  "type": "Insight",
+  "number": "302",
+  "title": "",
+  "body": " The Power Rule:   "
+},
+{
+  "id": "defn-differential-equation",
+  "level": "2",
+  "url": "sec-antiderivatives.html#defn-differential-equation",
+  "type": "Definition",
+  "number": "303",
+  "title": "",
+  "body": "  Finding an antiderivative for a function is the same problem as finding a function that satisfies the equation This is called a differential equation .  Suppose we fix the arbitrary constant arising in the antidifferentiation process by specifying an initial condition The combination of a differential equation and an initial condition is called an initial value problem .   "
+},
+{
+  "id": "ex-particular-solution",
+  "level": "2",
+  "url": "sec-antiderivatives.html#ex-particular-solution",
+  "type": "Example",
+  "number": "304",
+  "title": "",
+  "body": "  Suppose and , find the particular solution of .    To find the general solution , we integrate the derivative function with respect to : Applying the power rule term by term gives:   Now, we use the initial condition to solve for the specific constant :     Substituting back into our general equation gives the particular solution:    "
+},
+{
+  "id": "ex-dropped-object",
+  "level": "2",
+  "url": "sec-antiderivatives.html#ex-dropped-object",
+  "type": "Example",
+  "number": "305",
+  "title": "",
+  "body": "  An object is dropped from a height of feet. Disregarding air resistance, find:  the distance it falls after seconds  its velocity after 2 seconds  when it hits the ground         Begin with acceleration due to gravity . Since , we integrate to find velocity: Since the object is dropped, its initial velocity is zero, , which yields . Thus:   Since position , we integrate velocity to find the height function: Since the initial height is 100 feet, , which gives . Therefore, the height equation is: The downward distance fallen after seconds is represented by feet.    Substitute into the velocity equation:     The object hits the ground when its height is zero, :        "
+},
+{
+  "id": "exe-general-antiderivative",
+  "level": "2",
+  "url": "sec-antiderivatives.html#exe-general-antiderivative",
+  "type": "Checkpoint",
+  "number": "306",
+  "title": "",
+  "body": "  Find the general antiderivative of     First rewrite the radical terms as fractional exponents: . Now integrate term by term:     "
+},
+{
+  "id": "exe-ascending-balloon",
+  "level": "2",
+  "url": "sec-antiderivatives.html#exe-ascending-balloon",
+  "type": "Checkpoint",
+  "number": "307",
+  "title": "",
+  "body": "  A balloon is ascending at the rate of 12 ft\/sec and is at a height of 80 ft above the ground when a package is dropped. How long does it take the package to reach the ground?    The acceleration due to gravity is . Integrating acceleration gives velocity: . Because the package is dropped from an ascending balloon, it inherits the balloon's upward velocity as its initial velocity: .   Integrating velocity gives the position equation for height: . The initial height is 80 feet, so .   Set to find when it hits the ground: Apply the quadratic formula to : Since time must be positive, we evaluate the positive root:    "
+},
+{
+  "id": "exe-evaluate-integrals-list",
+  "level": "2",
+  "url": "sec-antiderivatives.html#exe-evaluate-integrals-list",
+  "type": "Checkpoint",
+  "number": "308",
+  "title": "",
+  "body": "  Evaluate each of the following integrals using basic antiderivatives and algebraic manipulation:           Separate the fraction into two terms and integrate each term individually:             Integrate term by term using the exponential rule :             Rewrite the integrand using the Pythagorean identity , then apply known basic antiderivatives:             Simplify the integrand first by dividing each term in the numerator by the denominator using exponent rules, yielding . Then apply the Power Rule:             To avoid -substitution, fully expand the cubic binomial first using the binomial theorem or expansion rules:    Now compute the general antiderivative term-by-term using the basic Power Rule:     "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
@@ -3155,9 +3281,144 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "299",
+  "number": "312",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
+},
+{
+  "id": "notes-Applications-Derivatives-chapter-exercises",
+  "level": "1",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html",
+  "type": "Section",
+  "number": "",
+  "title": "3. Applications of Derivatives- Chapter Exercises",
+  "body": " 3. Applications of Derivatives- Chapter Exercises   This cumulative review module provides a comprehensive synthesis of the core applications of differentiation and basic antidifferentiation methods covered throughout this chapter. Working through these exercises will help reinforce your understanding of function optimization, linear curve behavior analysis, limit evaluations, and numerical root approximations.  These problems mimic standard exam configurations, prompting you to determine absolute boundaries on closed domains, perform complete first and second derivative graphing tests, model dynamic rate-of-change word problems, and seamlessly switch back and forth between derivative and integral operations.    Exercises     Find the absolute maximum and minimum values of each function on the given interval.      on     First, find the critical numbers by setting the derivative to zero: Since is in the interval , evaluate at the critical number and the endpoints: Comparing these values, the absolute minimum is at , and the absolute maximum is at .       on     Find the critical numbers using the product rule: Setting gives (since ). Evaluate at the boundary endpoints and : Therefore, the absolute minimum is at , and the absolute maximum is at .        Find all possible functions with the given derivative (find the general antiderivative):          Integrate using the power rule: .           The basic antiderivative of is the natural logarithm function: .           Integrate term by term:         Find the critical numbers of the functions.          Apply the quotient rule to find : Set the numerator to zero: for any integer . However, notice that when , , causing the original function denominator to be zero (undefined).  Thus, the critical numbers are only where the derivative equals zero and the function is defined: for .           Differentiate and set equal to zero: Factor the quadratic binomial: . The critical numbers are and .           Differentiate and set to zero: . The critical numbers occur at for all integers .        If , determine intervals on which the graph of is concave up or down.    Find the first and second derivatives: Set .  We test the intervals around the inflection point candidate using the sign of the second derivative:    Interval      Test Value      Sign of      Behavior \/ Concavity  Concave Down  Concave Up         If , find the local extrema of . Determine the concavity and find the point of inflection.    Find critical numbers by setting the first derivative to zero:   We test the intervals around our critical numbers using the first derivative sign test:    Interval       Test Value       Sign of       Behavior of  Increasing  Decreasing  Increasing    Because the derivative changes from positive to negative at , there is a local maximum at . Because it changes from negative to positive at , there is a local minimum at .  Now compute the second derivative for concavity: Setting or . We analyze the intervals across these boundary targets:    Interval       Test Value       Sign of       Concavity  Concave Down  Concave Down  Concave Up    Because the concavity changes signs strictly at , the inflection point occurs at .       For each function below, perform a full derivative analysis to analyze its graph components:          First, find the critical numbers by evaluating where :   We test the intervals around our critical numbers using the first derivative sign test:    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    Local minima occur at and with a value of . A local maximum occurs at with a value of .  Next, compute the second derivative to evaluate concavity and identify inflection points:   We test the intervals across these structural boundary conditions:    Interval       Test Value       Sign of       Concavity  Concave Up  Concave Down  Concave Up    Inflection points occur at where the coordinates are approximately .   Graph of   W-shaped polynomial curve extending through the x-axis to show real roots on both sides, with local minima at x equals plus or minus 2 and a local maximum at x equals 0.              First, find the critical numbers by setting the first derivative to zero:   We test the intervals around our critical numbers using the first derivative sign test:    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    Local minima occur at with a value of . A local maximum occurs at with a value of .  Next, compute the second derivative to evaluate concavity and identify inflection points:   We test the intervals across these boundary conditions:    Interval       Test Value       Sign of       Concavity  Concave Up  Concave Down  Concave Up    Inflection points occur at where the coordinates are exactly .   Graph of   W-shaped polynomial curve centered at the origin, showing local minima at x equals plus or minus 0.707 and a local maximum at the origin. The curve crosses the x-axis at x equals plus or minus 1.           A rectangle is to be inscribed in a semicircle of radius 2. What is the largest area the rectangle can have?   Rectangle inscribed inside a semicircle of radius 2.   A mathematically perfect semicircle of radius 2 centered at the origin on an x-y coordinate plane, with an inscribed rectangle. The rectangle has width 2x and height y, with its top two vertices touching the curve of the semicircle.       Let the base of the rectangle lie along the -axis, centered at the origin, with upper vertices touching the upper semicircle equation . The total base width is and the height is . Differentiate with respect to using the product rule: Set . The largest area is .       A rectangle has its base on the -axis and its upper two vertices on the parabola . What is the largest area the rectangle can have, and what are its dimensions?   Rectangle inscribed underneath the parabola .   A downward-opening parabola y equals 12 minus x squared centered on an axis system, with an inscribed rectangle. The rectangle has width 4 and height 8, with its top two vertices touching the curve of the parabola at x equals plus or minus 2.       The base of the rectangle spans from to , giving a width of . The height is given by . Differentiate and locate critical roots: The dimensions are width = and height = . The maximum area is .       An open-top rectangular box is constructed from a 10-in.-by-10-in. piece of cardboard by cutting squares of equal side length from the corners and folding up the sides. Find analytically the dimensions of the box of largest volume and the maximum volume.    A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box with total width 10 in.     A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 10 minus 2x.       The box length is , width is , and height is . Find the derivative and set it to zero: This yields roots (which cuts away the entire piece of cardboard) or . The optimal corner cut length is in. The base dimensions are in. by in. , creating a maximum volume of:        Approximate from using linear approximation.    Convert values to radians: center point , target point , meaning . Let . Construct the linear tangent line: :        Use l'Hôpital's rule to evaluate the limit.          This yields an indeterminate form of type . Differentiating the numerator and denominator gives:            Direct substitution yields . Differentiate via L'Hôpital's rule:            This yields the form . Differentiating three consecutive times or checking dominant trailing polynomial coefficients yields:            This is an indeterminate power form . Let , taking the natural log gives . Evaluate the limit using L'Hôpital's rule for : Since , raising back over base yields .        Use Newton's method to estimate the solution of the equation . Start with to find .    Let . The iterative formula is .        Evaluate     Factor out the constant and integrate:        For each given function, determine its derivative and its general indefinite integral.    Complete the table below by filling in the missing derivative and indefinite integral formulas:                                            The completed table values are evaluated as follows:                                           "
+},
+{
+  "id": "ex-absolute-extrema",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-absolute-extrema",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Find the absolute maximum and minimum values of each function on the given interval.      on     First, find the critical numbers by setting the derivative to zero: Since is in the interval , evaluate at the critical number and the endpoints: Comparing these values, the absolute minimum is at , and the absolute maximum is at .       on     Find the critical numbers using the product rule: Setting gives (since ). Evaluate at the boundary endpoints and : Therefore, the absolute minimum is at , and the absolute maximum is at .    "
+},
+{
+  "id": "ex-find-antiderivatives",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-find-antiderivatives",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find all possible functions with the given derivative (find the general antiderivative):          Integrate using the power rule: .           The basic antiderivative of is the natural logarithm function: .           Integrate term by term:     "
+},
+{
+  "id": "ex-critical-numbers",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-critical-numbers",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Find the critical numbers of the functions.          Apply the quotient rule to find : Set the numerator to zero: for any integer . However, notice that when , , causing the original function denominator to be zero (undefined).  Thus, the critical numbers are only where the derivative equals zero and the function is defined: for .           Differentiate and set equal to zero: Factor the quadratic binomial: . The critical numbers are and .           Differentiate and set to zero: . The critical numbers occur at for all integers .    "
+},
+{
+  "id": "ex-concavity-intervals",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-concavity-intervals",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  If , determine intervals on which the graph of is concave up or down.    Find the first and second derivatives: Set .  We test the intervals around the inflection point candidate using the sign of the second derivative:    Interval      Test Value      Sign of      Behavior \/ Concavity  Concave Down  Concave Up     "
+},
+{
+  "id": "ex-local-extrema-inflection",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-local-extrema-inflection",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If , find the local extrema of . Determine the concavity and find the point of inflection.    Find critical numbers by setting the first derivative to zero:   We test the intervals around our critical numbers using the first derivative sign test:    Interval       Test Value       Sign of       Behavior of  Increasing  Decreasing  Increasing    Because the derivative changes from positive to negative at , there is a local maximum at . Because it changes from negative to positive at , there is a local minimum at .  Now compute the second derivative for concavity: Setting or . We analyze the intervals across these boundary targets:    Interval       Test Value       Sign of       Concavity  Concave Down  Concave Down  Concave Up    Because the concavity changes signs strictly at , the inflection point occurs at .   "
+},
+{
+  "id": "ex-curve-sketching",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-curve-sketching",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  For each function below, perform a full derivative analysis to analyze its graph components:          First, find the critical numbers by evaluating where :   We test the intervals around our critical numbers using the first derivative sign test:    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    Local minima occur at and with a value of . A local maximum occurs at with a value of .  Next, compute the second derivative to evaluate concavity and identify inflection points:   We test the intervals across these structural boundary conditions:    Interval       Test Value       Sign of       Concavity  Concave Up  Concave Down  Concave Up    Inflection points occur at where the coordinates are approximately .   Graph of   W-shaped polynomial curve extending through the x-axis to show real roots on both sides, with local minima at x equals plus or minus 2 and a local maximum at x equals 0.              First, find the critical numbers by setting the first derivative to zero:   We test the intervals around our critical numbers using the first derivative sign test:    Interval        Test Value        Sign of        Behavior of  Decreasing  Increasing  Decreasing  Increasing    Local minima occur at with a value of . A local maximum occurs at with a value of .  Next, compute the second derivative to evaluate concavity and identify inflection points:   We test the intervals across these boundary conditions:    Interval       Test Value       Sign of       Concavity  Concave Up  Concave Down  Concave Up    Inflection points occur at where the coordinates are exactly .   Graph of   W-shaped polynomial curve centered at the origin, showing local minima at x equals plus or minus 0.707 and a local maximum at the origin. The curve crosses the x-axis at x equals plus or minus 1.       "
+},
+{
+  "id": "ex-optimization-semicircle",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-optimization-semicircle",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  A rectangle is to be inscribed in a semicircle of radius 2. What is the largest area the rectangle can have?   Rectangle inscribed inside a semicircle of radius 2.   A mathematically perfect semicircle of radius 2 centered at the origin on an x-y coordinate plane, with an inscribed rectangle. The rectangle has width 2x and height y, with its top two vertices touching the curve of the semicircle.       Let the base of the rectangle lie along the -axis, centered at the origin, with upper vertices touching the upper semicircle equation . The total base width is and the height is . Differentiate with respect to using the product rule: Set . The largest area is .   "
+},
+{
+  "id": "ex-optimization-parabola",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-optimization-parabola",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  A rectangle has its base on the -axis and its upper two vertices on the parabola . What is the largest area the rectangle can have, and what are its dimensions?   Rectangle inscribed underneath the parabola .   A downward-opening parabola y equals 12 minus x squared centered on an axis system, with an inscribed rectangle. The rectangle has width 4 and height 8, with its top two vertices touching the curve of the parabola at x equals plus or minus 2.       The base of the rectangle spans from to , giving a width of . The height is given by . Differentiate and locate critical roots: The dimensions are width = and height = . The maximum area is .   "
+},
+{
+  "id": "ex-opt-box",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-opt-box",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  An open-top rectangular box is constructed from a 10-in.-by-10-in. piece of cardboard by cutting squares of equal side length from the corners and folding up the sides. Find analytically the dimensions of the box of largest volume and the maximum volume.    A square sheet of cardboard with corners marked as small squares of side length x. Dashed lines indicate where the flaps fold up to form a box with total width 10 in.     A 3D perspective drawing of an open-top rectangular box with height x and base dimensions labeled 10 minus 2x.       The box length is , width is , and height is . Find the derivative and set it to zero: This yields roots (which cuts away the entire piece of cardboard) or . The optimal corner cut length is in. The base dimensions are in. by in. , creating a maximum volume of:    "
+},
+{
+  "id": "ex-linearization-trig",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-linearization-trig",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Approximate from using linear approximation.    Convert values to radians: center point , target point , meaning . Let . Construct the linear tangent line: :    "
+},
+{
+  "id": "ex-lhopital",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-lhopital",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Use l'Hôpital's rule to evaluate the limit.          This yields an indeterminate form of type . Differentiating the numerator and denominator gives:            Direct substitution yields . Differentiate via L'Hôpital's rule:            This yields the form . Differentiating three consecutive times or checking dominant trailing polynomial coefficients yields:            This is an indeterminate power form . Let , taking the natural log gives . Evaluate the limit using L'Hôpital's rule for : Since , raising back over base yields .    "
+},
+{
+  "id": "ex-newtons-method",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-newtons-method",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Use Newton's method to estimate the solution of the equation . Start with to find .    Let . The iterative formula is .    "
+},
+{
+  "id": "ex-definite-integral",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-definite-integral",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Evaluate     Factor out the constant and integrate:    "
+},
+{
+  "id": "ex-fill-in-blank-derivatives-integrals",
+  "level": "2",
+  "url": "notes-Applications-Derivatives-chapter-exercises.html#ex-fill-in-blank-derivatives-integrals",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  For each given function, determine its derivative and its general indefinite integral.    Complete the table below by filling in the missing derivative and indefinite integral formulas:                                            The completed table values are evaluated as follows:                                         "
 },
 {
   "id": "notes-week-01",

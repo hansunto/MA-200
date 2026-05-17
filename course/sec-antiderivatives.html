@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3.10 Antiderivatives and Indefinite Integrals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus 1">
+<meta property="book:author" content="Professor Hansun To">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.0.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title">Calculus 1</span> <span class="subtitle">MA-200</span></a></h1>
+<p class="byline">Professor Hansun To</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-newtons-method.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-Applications-of-Derivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="course-documents-2.html" class="internal"><span class="title">MA-200-BL: Calculus I Course Syllabus</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#subsec-Course-Information" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-3" class="internal"><span class="title">Responsibility for Learning</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-4" class="internal"><span class="title">Homework Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-5" class="internal"><span class="title">Artificial Intelligence Policy</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="course-documents-2.html#course-documents-2-6" class="internal"><span class="title">Learning Outcomes</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-Limits-and-Derivatives.html" class="internal"><span class="title">1. Limits and Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-limits-concept.html" class="internal"><span class="title">1.1 Introduction to Limits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-techniques-limits.html" class="internal"><span class="title">1.2 Techniques for Finding Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-techniques-limits.html#exercises-limits-algebraic" class="internal"><span class="title">Limits Practice</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-one-sided-limits.html" class="internal"><span class="title">1.3 One-sided Limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuity-definition.html" class="internal"><span class="title">1.4 Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="limits-at-infinity.html" class="internal"><span class="title">1.5 Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rate-change-tangent-curves.html" class="internal"><span class="title">1.6 Rate of Change and Tangent Curves</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-functions.html" class="internal"><span class="title">1.7 The Derivative as a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-derivative-rate-change.html" class="internal"><span class="title">1.8 The Derivative as a Rate of Change</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-differentiation-rules.html" class="internal"><span class="title">2. Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-differentiation-rules.html" class="internal"><span class="title">2.1 Differentiation Rules</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#sub-techniques-differentiation" class="internal"><span class="title">Techniques of Differentiation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-differentiation-rules.html#subsec-ProductandQuotientRules" class="internal"><span class="title">Product and Quotient Rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-trig-derivatives.html" class="internal"><span class="title">2.2 Derivatives of the Trigonometric Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-exp-derivatives.html" class="internal"><span class="title">2.3 Derivatives of Exponential Functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chain-rule.html" class="internal"><span class="title">2.4 The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-extended-power-rule" class="internal"><span class="title">Extended Power Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-Chain-Rule" class="internal"><span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chain-rule.html#exercises-chain-rule-solutions" class="internal"><span class="title">Chain Rule Practice with Solutions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-chain-rule.html#subsec-higher-order-derivatives" class="internal"><span class="title">Higher Order Derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Implicit-Differentiation.html" class="internal"><span class="title">2.5 Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Implicit-Differentiation.html#exercises-implicit-differentiation-set" class="internal"><span class="title">Implicit Differentiation Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html" class="internal"><span class="title">2.6 Derivatives of Logarithmic Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#subsection-derivation-cases" class="internal"><span class="title">How to Derive the Derivative Formula</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Logarithmic-Functions.html#exercises-logarithmic-differentiation" class="internal"><span class="title">Exercises on Logarithmic Differentiation</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html" class="internal"><span class="title">2.7 Derivatives of Inverse Trigonometric Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#subsection-derivation-arcsin" class="internal"><span class="title">Derivation of the Derivative of <span class="process-math">\(\arcsin x\)</span></span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-Derivatives-Inverse-Trig-Functions.html#exercises-inverse-trig-derivatives-geometric" class="internal"><span class="title">Exercises on Inverse Trigonometric Derivatives (Geometric Method)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-related-rates.html" class="internal"><span class="title">2.8 Related Rates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-Applications-of-Derivatives.html" class="internal"><span class="title">3. Applications of Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Extreme-values.html" class="internal"><span class="title">3.1 Extreme Values of Functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-first-derivative-test.html" class="internal"><span class="title">3.2 The first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-concavity-test.html" class="internal"><span class="title">3.3 Concavity and Curve Sketching</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Summary-of-Graphical-Methods.html" class="internal"><span class="title">3.4 Summary of Graphical Methods</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Optimization.html" class="internal"><span class="title">3.5 Optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-lHopitals-rule.html" class="internal"><span class="title">3.6 L’Hopital’s Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-newtons-method.html" class="internal"><span class="title">3.9 Newton’s Method</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-antiderivatives.html" class="internal"><span class="title">3.10 Antiderivatives and Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-antiderivatives.html#subsec-differential-equations" class="internal"><span class="title">Differential Equation: An equation that includes derivatives</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-notes.html" class="internal"><span class="title">Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html" class="internal"><span class="title">1. Limits and Derivatives - Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Limits-and-Derivatives-chapter-exercises.html#notes-Limits-and-Derivatives-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html" class="internal"><span class="title">2. Differentiation Rules- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#notes-Differentiation-Rules-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#subsec-derivative-reference-sheet" class="internal"><span class="title">Derivative Reference Sheet</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html" class="internal"><span class="title">3. Applications of Derivatives- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html#exercises-chapter-review" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">Monday 8/22</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">Wednesday 8/24</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">Friday 8/26</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 2</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-2" class="internal"><span class="title">Monday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">Wednesday</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">Friday</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-review.html" class="internal"><span class="title">Review</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-3.html" class="internal"><span class="title">Review 01- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-4.html" class="internal"><span class="title">Review 02- Limits of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-5.html" class="internal"><span class="title">Review 03-Introduction to Derivatives</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-6.html" class="internal"><span class="title">Review 04-Differentiation rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-7.html" class="internal"><span class="title">Review 05-Implicit Differentiation</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-8.html" class="internal"><span class="title">Review 06-Related Rates</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-9.html" class="internal"><span class="title">Review 07-Extreme Values and sketching curves</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-10.html" class="internal"><span class="title">Review 08-Optimization and L’Hôpital’s Rule</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-11.html" class="internal"><span class="title">Review 09- Antiderivatives, Newton’s Method and Linearization</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-12.html" class="internal"><span class="title">Review 10- Definite Integrals and Area</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="ch-review-13.html" class="internal"><span class="title">Review 11- Substitution and Area</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-01-intro-activity.html" class="internal"><span class="title">Introduction Activity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-antiderivatives"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">3.10 Antiderivatives and Indefinite Integrals</span>
+</h2>
+<section class="introduction" id="sec-antiderivatives-2"><div class="para" id="sec-antiderivatives-2-1">In this section, we reverse the process of differentiation. Instead of finding the derivative of a given function, we will find a function whose derivative is already known. This process is fundamental to the Fundamental Theorem of Calculus.<div class="autopermalink" data-description="Paragraph"><a href="#sec-antiderivatives-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="definition definition-like" id="defn-antiderivative"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">296</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="defn-antiderivative-1-1">
+<div class="para">A function, <span class="process-math">\(F\text{,}\)</span> is an <dfn class="terminology">antiderivative</dfn> of a function, <span class="process-math">\(f\text{,}\)</span> on an interval <span class="process-math">\(I\)</span> if</div>
+<div class="displaymath process-math" id="defn-antiderivative-1-1-5">
+\begin{equation*}
+F'(x) = f(x) \text{ for all } x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#defn-antiderivative-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 296"><a href="#defn-antiderivative" title="Copy heading and permalink for Definition 296" aria-label="Copy heading and permalink for Definition 296">🔗</a></div></article><details id="ex-antiderivative-intro" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">297</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-antiderivative-intro-1-1">If <span class="process-math">\(f(x) = 5x^2\)</span> then <span class="process-math">\(F(x) = \)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-antiderivative-intro-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-antiderivative-intro-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-antiderivative-intro-2-1">
+<div class="para">To find <span class="process-math">\(F(x)\text{,}\)</span> we apply the power rule for antiderivatives, which states that <span class="process-math">\(\int x^n \, dx = \dfrac{x^{n+1}}{n+1}\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-antiderivative-intro-2-1-3">
+\begin{equation*}
+F(x) = \dfrac{5x^{2+1}}{2+1} + C = \dfrac{5}{3}x^3 + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-antiderivative-intro-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 297.1"><a href="#ex-antiderivative-intro-2" title="Copy heading and permalink for Solution 297.1" aria-label="Copy heading and permalink for Solution 297.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 297"><a href="#ex-antiderivative-intro" title="Copy heading and permalink for Example 297" aria-label="Copy heading and permalink for Example 297">🔗</a></div></article></details><article class="definition definition-like" id="defn-indefinite-integral"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">298</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="defn-indefinite-integral-1-1">
+<div class="para">The notation</div>
+<div class="displaymath process-math" id="defn-indefinite-integral-1-1-1">
+\begin{equation*}
+\int f(x)dx=F(x)+C,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(F'(x)=f(x)\)</span> and <span class="process-math">\(C\)</span> is an arbitrary constant, denotes the family of all antiderivatives of <span class="process-math">\(f(x)\)</span> on an interval <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#defn-indefinite-integral-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 298"><a href="#defn-indefinite-integral" title="Copy heading and permalink for Definition 298" aria-label="Copy heading and permalink for Definition 298">🔗</a></div></article><div class="para logical" id="sec-antiderivatives-6">
+<div class="para">So, if we know one antiderivative of <span class="process-math">\(f(x)\)</span> on <span class="process-math">\(I\text{,}\)</span> say <span class="process-math">\(F(x)\text{,}\)</span> then we know them all. The family of antiderivatives is denoted using the notation:</div>
+<div class="displaymath process-math" id="sec-antiderivatives-6-4">
+\begin{equation*}
+\int f(x)\,dx = F(x) + C \quad \text{where } C \text{ is an arbitrary constant}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-antiderivatives-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-basic-integration" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">299</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-basic-integration-1-1">
+<div class="para">Evaluate:</div>
+<div class="displaymath process-math" id="ex-basic-integration-1-1-1">
+\begin{equation*}
+\int 5x^4\,dx = 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-integration-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-basic-integration-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-basic-integration-2-1">
+<div class="para">We apply the power rule for integration, which states that <span class="process-math">\(\int x^n \, dx = \dfrac{x^{n+1}}{n+1}\)</span> for <span class="process-math">\(n \neq -1\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-basic-integration-2-1-3">
+\begin{equation*}
+\int 5x^4\,dx = 5 \cdot \frac{x^{4+1}}{4+1} + C = 5 \cdot \dfrac{x^5}{5} + C = x^5 + C 
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-integration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 299.1"><a href="#ex-basic-integration-2" title="Copy heading and permalink for Solution 299.1" aria-label="Copy heading and permalink for Solution 299.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 299"><a href="#ex-basic-integration" title="Copy heading and permalink for Example 299" aria-label="Copy heading and permalink for Example 299">🔗</a></div></article></details><details id="ex-initial-value-simple" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">300</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-initial-value-simple-1-1">Evaluate <span class="process-math">\(\displaystyle \int 3x^2\,dx\)</span> that satisfies <span class="process-math">\(F(1)=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-initial-value-simple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-initial-value-simple-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-initial-value-simple-2-1">
+<div class="para">First, find the general antiderivative by integrating term-by-term:</div>
+<div class="displaymath process-math" id="ex-initial-value-simple-2-1-1">
+\begin{equation*}
+F(x) = \int 3x^2\,dx = 3 \cdot \frac{x^3}{3} + C = x^3 + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-initial-value-simple-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-initial-value-simple-2-2">
+<div class="para">Next, use the initial condition <span class="process-math">\(F(1) = 1\)</span> to solve for the specific constant of integration <span class="process-math">\(C\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-initial-value-simple-2-2-3">
+\begin{equation*}
+F(1) = (1)^3 + C = 1
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-initial-value-simple-2-2-4">
+\begin{equation*}
+1 + C = 1 \implies C = 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-initial-value-simple-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-initial-value-simple-2-3">
+<div class="para">Therefore, the particular solution that satisfies the initial value condition is:</div>
+<div class="displaymath process-math" id="ex-initial-value-simple-2-3-1">
+\begin{equation*}
+F(x) = x^3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-initial-value-simple-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 300.1"><a href="#ex-initial-value-simple-2" title="Copy heading and permalink for Solution 300.1" aria-label="Copy heading and permalink for Solution 300.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 300"><a href="#ex-initial-value-simple" title="Copy heading and permalink for Example 300" aria-label="Copy heading and permalink for Example 300">🔗</a></div></article></details><section class="paragraphs" id="para-notation-guide"><h3 class="heading"><span class="title">Notation Guide.</span></h3>
+<div class="para logical" id="para-notation-guide-2">
+<ol class="decimal" id="para-notation-guide-2-1">
+<li id="para-notation-guide-2-1-1">
+<div class="para" id="para-notation-guide-2-1-1-1">
+<span class="process-math">\(\displaystyle \int\text{:}\)</span> integral sign<div class="autopermalink" data-description="Paragraph"><a href="#para-notation-guide-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#para-notation-guide-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="para-notation-guide-2-1-2">
+<div class="para" id="para-notation-guide-2-1-2-1">
+<span class="process-math">\(\displaystyle \int f(x)\,dx\text{:}\)</span> indefinite integral<div class="autopermalink" data-description="Paragraph"><a href="#para-notation-guide-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#para-notation-guide-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="para-notation-guide-2-1-3">
+<div class="para" id="para-notation-guide-2-1-3-1">
+<span class="process-math">\(C\text{:}\)</span> constant of integration<div class="autopermalink" data-description="Paragraph"><a href="#para-notation-guide-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#para-notation-guide-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="para-notation-guide-2-1-4">
+<div class="para" id="para-notation-guide-2-1-4-1">
+<span class="process-math">\(dx\text{:}\)</span> tells us the variable of integration is <span class="process-math">\(x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#para-notation-guide-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#para-notation-guide-2-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#para-notation-guide-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Notation Guide"><a href="#para-notation-guide" title="Copy heading and permalink for Paragraphs: Notation Guide" aria-label="Copy heading and permalink for Paragraphs: Notation Guide">🔗</a></div></section><details id="exe-basic-integrals" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">301</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-basic-integrals-1-1">
+<ol class="decimal" id="exe-basic-integrals-1-1-1">
+<li id="exe-basic-integrals-1-1-1-1">
+<div class="para logical" id="exe-basic-integrals-1-1-1-1-1">
+<div class="para">Power Rule:</div>
+<div class="displaymath process-math" id="exe-basic-integrals-1-1-1-1-1-1">
+\begin{equation*}
+\int x^n\,dx = \hspace{1.75in}, \text{ if } n \neq -1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.1"><a href="#exe-basic-integrals-1-1-1-1" title="Copy heading and permalink for Item 301.1" aria-label="Copy heading and permalink for Item 301.1">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-1-1-1-2">
+<div class="para" id="exe-basic-integrals-1-1-1-2-1">
+<span class="process-math">\(\displaystyle \displaystyle \int 4x^3-3x^2+5x-8+\frac{1}{x}\, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.2"><a href="#exe-basic-integrals-1-1-1-2" title="Copy heading and permalink for Item 301.2" aria-label="Copy heading and permalink for Item 301.2">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-1-1-1-3">
+<div class="para" id="exe-basic-integrals-1-1-1-3-1">
+<span class="process-math">\(\displaystyle \displaystyle \int \cos 2x \,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.3"><a href="#exe-basic-integrals-1-1-1-3" title="Copy heading and permalink for Item 301.3" aria-label="Copy heading and permalink for Item 301.3">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-1-1-1-4">
+<div class="para" id="exe-basic-integrals-1-1-1-4-1">
+<span class="process-math">\(\displaystyle \displaystyle \int e^{2x} \,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.4"><a href="#exe-basic-integrals-1-1-1-4" title="Copy heading and permalink for Item 301.4" aria-label="Copy heading and permalink for Item 301.4">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-1-1-1-5">
+<div class="para" id="exe-basic-integrals-1-1-1-5-1">
+<span class="process-math">\(\displaystyle \dfrac{d}{dx}\left(\displaystyle \int e^{2x}\cos 2x \,dx\right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.5"><a href="#exe-basic-integrals-1-1-1-5" title="Copy heading and permalink for Item 301.5" aria-label="Copy heading and permalink for Item 301.5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-basic-integrals-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-basic-integrals-2-1">
+<ol class="decimal" id="exe-basic-integrals-2-1-1">
+<li id="exe-basic-integrals-2-1-1-1">
+<div class="para logical" id="exe-basic-integrals-2-1-1-1-1">
+<div class="para">By the Power Rule:</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-1-1-1">
+\begin{equation*}
+\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \text{ if } n \neq -1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.1"><a href="#exe-basic-integrals-2-1-1-1" title="Copy heading and permalink for Item 301.1" aria-label="Copy heading and permalink for Item 301.1">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-2-1-1-2">
+<div class="para logical" id="exe-basic-integrals-2-1-1-2-1">
+<div class="para">Integrate term by term:</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-2-1-1">
+\begin{equation*}
+\int 4x^3\,dx - \int 3x^2\,dx + \int 5x\,dx - \int 8\,dx + \int \frac{1}{x}\,dx
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-2-1-2">
+\begin{equation*}
+= 4\left(\frac{x^4}{4}\right) - 3\left(\frac{x^3}{3}\right) + 5\left(\frac{x^2}{2}\right) - 8x + \ln|x| + C
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-2-1-3">
+\begin{equation*}
+= x^4 - x^3 + \frac{5}{2}x^2 - 8x + \ln|x| + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.2"><a href="#exe-basic-integrals-2-1-1-2" title="Copy heading and permalink for Item 301.2" aria-label="Copy heading and permalink for Item 301.2">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-2-1-1-3">
+<div class="para logical" id="exe-basic-integrals-2-1-1-3-1">
+<div class="para">Using the reverse chain rule for trigonometric functions where <span class="process-math">\(\int \cos(kx)\,dx = \frac{1}{k}\sin(kx) + C\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-3-1-2">
+\begin{equation*}
+\int \cos 2x \,dx = \frac{1}{2}\sin 2x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.3"><a href="#exe-basic-integrals-2-1-1-3" title="Copy heading and permalink for Item 301.3" aria-label="Copy heading and permalink for Item 301.3">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-2-1-1-4">
+<div class="para logical" id="exe-basic-integrals-2-1-1-4-1">
+<div class="para">Using the reverse chain rule for exponential functions where <span class="process-math">\(\int e^{kx}\,dx = \dfrac{1}{k}e^{kx} + C\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-4-1-2">
+\begin{equation*}
+\int e^{2x} \,dx = \frac{1}{2}e^{2x} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.4"><a href="#exe-basic-integrals-2-1-1-4" title="Copy heading and permalink for Item 301.4" aria-label="Copy heading and permalink for Item 301.4">🔗</a></div>
+</li>
+<li id="exe-basic-integrals-2-1-1-5">
+<div class="para logical" id="exe-basic-integrals-2-1-1-5-1">
+<div class="para">Differentiating an indefinite integral with respect to its variable of integration returns the original integrand:</div>
+<div class="displaymath process-math" id="exe-basic-integrals-2-1-1-5-1-1">
+\begin{equation*}
+\dfrac{d}{dx}\left(\displaystyle \int e^{2x}\cos 2x \,dx\right) = e^{2x}\cos 2x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 301.5"><a href="#exe-basic-integrals-2-1-1-5" title="Copy heading and permalink for Item 301.5" aria-label="Copy heading and permalink for Item 301.5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-basic-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 301.1"><a href="#exe-basic-integrals-2" title="Copy heading and permalink for Solution 301.1" aria-label="Copy heading and permalink for Solution 301.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 301"><a href="#exe-basic-integrals" title="Copy heading and permalink for Checkpoint 301" aria-label="Copy heading and permalink for Checkpoint 301">🔗</a></div></article></details><article class="insight remark-like" id="sec-antiderivatives-11"><h3 class="heading">
+<span class="type">Insight</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">302</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="sec-antiderivatives-11-1">
+<div class="para">The Power Rule:</div>
+<div class="displaymath process-math" id="sec-antiderivatives-11-1-1">
+\begin{equation*}
+\int x^n\,dx = \frac{x^{n+1}}{n+1} + C, \text{ if } n \neq -1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-antiderivatives-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Insight 302"><a href="#sec-antiderivatives-11" title="Copy heading and permalink for Insight 302" aria-label="Copy heading and permalink for Insight 302">🔗</a></div></article><section class="subsection" id="subsec-differential-equations"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Differential Equation: An equation that includes derivatives</span>
+</h3>
+<article class="definition definition-like" id="defn-differential-equation"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">303</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="defn-differential-equation-1-1">
+<div class="para">Finding an antiderivative for a function <span class="process-math">\(f(x)\)</span> is the same problem as finding a function <span class="process-math">\(y(x)\)</span> that satisfies the equation</div>
+<div class="displaymath process-math" id="defn-differential-equation-1-1-3">
+\begin{equation*}
+\frac{dy}{dx}=f'(x)
+\end{equation*}
+</div>
+<div class="para">This is called a <dfn class="terminology">differential equation</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#defn-differential-equation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="defn-differential-equation-1-2">
+<div class="para">Suppose we fix the arbitrary constant arising in the antidifferentiation process by specifying an initial condition</div>
+<div class="displaymath process-math" id="defn-differential-equation-1-2-1">
+\begin{equation*}
+y(x_0)=y_0
+\end{equation*}
+</div>
+<div class="para">The combination of a differential equation and an initial condition is called an <dfn class="terminology">initial value problem</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#defn-differential-equation-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 303"><a href="#defn-differential-equation" title="Copy heading and permalink for Definition 303" aria-label="Copy heading and permalink for Definition 303">🔗</a></div></article><details id="ex-particular-solution" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">304</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="ex-particular-solution-1-1">Suppose <span class="process-math">\(f'(x) = 3x^2 - 8x\)</span> and <span class="process-math">\(f(1) = 2\text{,}\)</span> find the particular solution of <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-particular-solution-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-particular-solution-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-particular-solution-2-1">
+<div class="para">To find the general solution <span class="process-math">\(f(x)\text{,}\)</span> we integrate the derivative function <span class="process-math">\(f'(x)\)</span> with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-1-4">
+\begin{equation*}
+f(x) = \int (3x^2 - 8x) \, dx
+\end{equation*}
+</div>
+<div class="para">Applying the power rule term by term gives:</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-1-5">
+\begin{equation*}
+f(x) = 3\left(\frac{x^3}{3}\right) - 8\left(\frac{x^2}{2}\right) + C = x^3 - 4x^2 + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particular-solution-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-particular-solution-2-2">
+<div class="para">Now, we use the initial condition <span class="process-math">\(f(1) = 2\)</span> to solve for the specific constant <span class="process-math">\(C\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-2-3">
+\begin{equation*}
+f(1) = (1)^3 - 4(1)^2 + C = 2
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-2-4">
+\begin{equation*}
+1 - 4 + C = 2
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-2-5">
+\begin{equation*}
+-3 + C = 2 \implies C = 5
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particular-solution-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-particular-solution-2-3">
+<div class="para">Substituting <span class="process-math">\(C = 5\)</span> back into our general equation gives the particular solution:</div>
+<div class="displaymath process-math" id="ex-particular-solution-2-3-2">
+\begin{equation*}
+f(x) = x^3 - 4x^2 + 5
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-particular-solution-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 304.1"><a href="#ex-particular-solution-2" title="Copy heading and permalink for Solution 304.1" aria-label="Copy heading and permalink for Solution 304.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 304"><a href="#ex-particular-solution" title="Copy heading and permalink for Example 304" aria-label="Copy heading and permalink for Example 304">🔗</a></div></article></details><details id="ex-dropped-object" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">305</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-dropped-object-1-1">
+<div class="para">An object is dropped from a height of <span class="process-math">\(100\)</span> feet. Disregarding air resistance, find:</div>
+<ol class="decimal" id="ex-dropped-object-1-1-2">
+<li id="ex-dropped-object-1-1-2-1">
+<div class="para" id="ex-dropped-object-1-1-2-1-1">the distance it falls after <span class="process-math">\(t\)</span> seconds<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-dropped-object-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-dropped-object-1-1-2-2">
+<div class="para" id="ex-dropped-object-1-1-2-2-1">its velocity after 2 seconds<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-dropped-object-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-dropped-object-1-1-2-3">
+<div class="para" id="ex-dropped-object-1-1-2-3-1">when it hits the ground<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ex-dropped-object-1-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-dropped-object-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-dropped-object-2-1">
+<ol class="decimal" id="ex-dropped-object-2-1-1">
+<li id="ex-dropped-object-2-1-1-1">
+<div class="para logical" id="ex-dropped-object-2-1-1-1-1">
+<div class="para">Begin with acceleration due to gravity <span class="process-math">\(a(t) = -32\text{.}\)</span> Since <span class="process-math">\(v'(t) = a(t) = -32\text{,}\)</span> we integrate to find velocity:</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-1-1-3">
+\begin{equation*}
+v(t) = -32t + C_1
+\end{equation*}
+</div>
+<div class="para">Since the object is dropped, its initial velocity is zero, <span class="process-math">\(v(0) = 0\text{,}\)</span> which yields <span class="process-math">\(0 = -32(0) + C_1 \implies C_1 = 0\text{.}\)</span> Thus:</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-1-1-6">
+\begin{equation*}
+v(t) = -32t
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-dropped-object-2-1-1-1-2">
+<div class="para">Since position <span class="process-math">\(s'(t) = v(t)\text{,}\)</span> we integrate velocity to find the height function:</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-1-2-2">
+\begin{equation*}
+s(t) = \int -32t \, dt = -16t^2 + C_2
+\end{equation*}
+</div>
+<div class="para">Since the initial height is 100 feet, <span class="process-math">\(s(0) = 100\text{,}\)</span> which gives <span class="process-math">\(100 = -16(0)^2 + C_2 \implies C_2 = 100\text{.}\)</span> Therefore, the height equation is:</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-1-2-5">
+\begin{equation*}
+s(t) = -16t^2 + 100
+\end{equation*}
+</div>
+<div class="para">The downward distance fallen after <span class="process-math">\(t\)</span> seconds is represented by <span class="process-math">\(100 - s(t) = 16t^2\)</span> feet.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ex-dropped-object-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="ex-dropped-object-2-1-1-2">
+<div class="para logical" id="ex-dropped-object-2-1-1-2-1">
+<div class="para">Substitute <span class="process-math">\(t = 2\)</span> into the velocity equation:</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-2-1-2">
+\begin{equation*}
+v(2) = -32(2) = -64 \text{ ft/sec}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ex-dropped-object-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ex-dropped-object-2-1-1-3">
+<div class="para logical" id="ex-dropped-object-2-1-1-3-1">
+<div class="para">The object hits the ground when its height is zero, <span class="process-math">\(s(t) = 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-3-1-2">
+\begin{equation*}
+-16t^2 + 100 = 0 \implies 16t^2 = 100
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="ex-dropped-object-2-1-1-3-1-3">
+\begin{equation*}
+t^2 = \frac{100}{16} = \frac{25}{4} \implies t = \frac{5}{2} = 2.5 \text{ seconds}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ex-dropped-object-2-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-dropped-object-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 305.1"><a href="#ex-dropped-object-2" title="Copy heading and permalink for Solution 305.1" aria-label="Copy heading and permalink for Solution 305.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 305"><a href="#ex-dropped-object" title="Copy heading and permalink for Example 305" aria-label="Copy heading and permalink for Example 305">🔗</a></div></article></details><details id="exe-general-antiderivative" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">306</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-general-antiderivative-1-1">
+<div class="para">Find the general antiderivative of</div>
+<div class="displaymath process-math" id="exe-general-antiderivative-1-1-1">
+\begin{equation*}
+f(x)=\frac{3}{\sqrt{x}}+\frac{\sqrt{x}}{3}+\sin 2x
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-general-antiderivative-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-general-antiderivative-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-general-antiderivative-2-1">
+<div class="para">First rewrite the radical terms as fractional exponents: <span class="process-math">\(f(x) = 3x^{-1/2} + \frac{1}{3}x^{1/2} + \sin 2x\text{.}\)</span> Now integrate term by term:</div>
+<div class="displaymath process-math" id="exe-general-antiderivative-2-1-2">
+\begin{equation*}
+\int f(x)\,dx = 3\left(\frac{x^{1/2}}{1/2}\right) + \frac{1}{3}\left(\frac{x^{3/2}}{3/2}\right) - \frac{1}{2}\cos 2x + C
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="exe-general-antiderivative-2-1-3">
+\begin{equation*}
+= 6\sqrt{x} + \frac{2}{9}x^{3/2} - \frac{1}{2}\cos 2x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-general-antiderivative-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 306.1"><a href="#exe-general-antiderivative-2" title="Copy heading and permalink for Solution 306.1" aria-label="Copy heading and permalink for Solution 306.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 306"><a href="#exe-general-antiderivative" title="Copy heading and permalink for Checkpoint 306" aria-label="Copy heading and permalink for Checkpoint 306">🔗</a></div></article></details><details id="exe-ascending-balloon" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">307</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="exe-ascending-balloon-1-1">A balloon is ascending at the rate of 12 ft/sec and is at a height of 80 ft above the ground when a package is dropped. How long does it take the package to reach the ground?<div class="autopermalink" data-description="Paragraph"><a href="#exe-ascending-balloon-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ascending-balloon-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ascending-balloon-2-1">
+<div class="para">The acceleration due to gravity is <span class="process-math">\(a(t) = -32 \text{ ft/sec}^2\text{.}\)</span> Integrating acceleration gives velocity: <span class="process-math">\(v(t) = -32t + C_1\text{.}\)</span> Because the package is dropped from an ascending balloon, it inherits the balloon’s upward velocity as its initial velocity: <span class="process-math">\(v(0) = 12 \implies C_1 = 12\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-ascending-balloon-2-1-4">
+\begin{equation*}
+v(t) = -32t + 12
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ascending-balloon-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ascending-balloon-2-2">
+<div class="para">Integrating velocity gives the position equation for height: <span class="process-math">\(s(t) = -16t^2 + 12t + C_2\text{.}\)</span> The initial height is 80 feet, so <span class="process-math">\(s(0) = 80 \implies C_2 = 80\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-ascending-balloon-2-2-3">
+\begin{equation*}
+s(t) = -16t^2 + 12t + 80
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ascending-balloon-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ascending-balloon-2-3">
+<div class="para">Set <span class="process-math">\(s(t) = 0\)</span> to find when it hits the ground:</div>
+<div class="displaymath process-math" id="exe-ascending-balloon-2-3-2">
+\begin{equation*}
+-16t^2 + 12t + 80 = 0 \implies -4(4t^2 - 3t - 20) = 0
+\end{equation*}
+</div>
+<div class="para">Apply the quadratic formula to <span class="process-math">\(4t^2 - 3t - 20 = 0\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-ascending-balloon-2-3-4">
+\begin{equation*}
+t = \frac{-(-3) \pm \sqrt{(-3)^2 - 4(4)(-20)}}{2(4)} = \frac{3 \pm \sqrt{9 + 320}}{8} = \frac{3 \pm \sqrt{329}}{8}
+\end{equation*}
+</div>
+<div class="para">Since time must be positive, we evaluate the positive root:</div>
+<div class="displaymath process-math" id="exe-ascending-balloon-2-3-5">
+\begin{equation*}
+t = \frac{3 + \sqrt{329}}{8} \approx \frac{3 + 18.138}{8} \approx 2.64 \text{ seconds}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ascending-balloon-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 307.1"><a href="#exe-ascending-balloon-2" title="Copy heading and permalink for Solution 307.1" aria-label="Copy heading and permalink for Solution 307.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 307"><a href="#exe-ascending-balloon" title="Copy heading and permalink for Checkpoint 307" aria-label="Copy heading and permalink for Checkpoint 307">🔗</a></div></article></details><details id="exe-evaluate-integrals-list" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">308</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="exe-evaluate-integrals-list-1"><div class="para" id="exe-evaluate-integrals-list-1-1">Evaluate each of the following integrals using basic antiderivatives and algebraic manipulation:<div class="autopermalink" data-description="Paragraph"><a href="#exe-evaluate-integrals-list-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exe-evaluate-integrals-list-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exe-evaluate-integrals-list-2-1-1">
+<span class="process-math">\(\displaystyle \int \frac{1+\cos 2x}{2} \,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-evaluate-integrals-list-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-evaluate-integrals-list-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-evaluate-integrals-list-2-2-1">
+<div class="para">Separate the fraction into two terms and integrate each term individually:</div>
+<div class="displaymath process-math" id="exe-evaluate-integrals-list-2-2-1-1">
+\begin{equation*}
+\int \left(\frac{1}{2} + \frac{1}{2}\cos 2x\right)dx = \frac{1}{2}x + \frac{1}{4}\sin 2x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-evaluate-integrals-list-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 308.a.1"><a href="#exe-evaluate-integrals-list-2-2" title="Copy heading and permalink for Solution 308.a.1" aria-label="Copy heading and permalink for Solution 308.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 308.a"><a href="#exe-evaluate-integrals-list-2" title="Copy heading and permalink for Task 308.a" aria-label="Copy heading and permalink for Task 308.a">🔗</a></div></article><article class="task exercise-like" id="task-integral-exponential"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="task-integral-exponential-1-1">
+<span class="process-math">\(\displaystyle \int (e^{3x}+5e^{-x})\,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-integral-exponential-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-integral-exponential-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="task-integral-exponential-2-1">
+<div class="para">Integrate term by term using the exponential rule <span class="process-math">\(\int e^{kx}dx = \frac{1}{k}e^{kx}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="task-integral-exponential-2-1-2">
+\begin{equation*}
+\int e^{3x}\,dx + \int 5e^{-x}\,dx = \frac{1}{3}e^{3x} - 5e^{-x} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-integral-exponential-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 308.b.1"><a href="#task-integral-exponential-2" title="Copy heading and permalink for Solution 308.b.1" aria-label="Copy heading and permalink for Solution 308.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 308.b"><a href="#task-integral-exponential" title="Copy heading and permalink for Task 308.b" aria-label="Copy heading and permalink for Task 308.b">🔗</a></div></article><article class="task exercise-like" id="task-integral-cotangent"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="task-integral-cotangent-1-1">
+<span class="process-math">\(\displaystyle \int \cot^2 x\,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-integral-cotangent-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-integral-cotangent-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="task-integral-cotangent-2-1">
+<div class="para">Rewrite the integrand using the Pythagorean identity <span class="process-math">\(\cot^2 x = \csc^2 x - 1\text{,}\)</span> then apply known basic antiderivatives:</div>
+<div class="displaymath process-math" id="task-integral-cotangent-2-1-2">
+\begin{equation*}
+\int (\csc^2 x - 1)\,dx = -\cot x - x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-integral-cotangent-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 308.c.1"><a href="#task-integral-cotangent-2" title="Copy heading and permalink for Solution 308.c.1" aria-label="Copy heading and permalink for Solution 308.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 308.c"><a href="#task-integral-cotangent" title="Copy heading and permalink for Task 308.c" aria-label="Copy heading and permalink for Task 308.c">🔗</a></div></article><article class="task exercise-like" id="task-integral-rational-power"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="task-integral-rational-power-1-1">
+<span class="process-math">\(\displaystyle \int \frac{t\sqrt{t}+\sqrt{t}}{t^2}\,dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-integral-rational-power-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-integral-rational-power-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="task-integral-rational-power-2-1">
+<div class="para">Simplify the integrand first by dividing each term in the numerator by the denominator using exponent rules, yielding <span class="process-math">\(\dfrac{t^{3/2} + t^{1/2}}{t^2} = t^{-1/2} + t^{-3/2}\text{.}\)</span> Then apply the Power Rule:</div>
+<div class="displaymath process-math" id="task-integral-rational-power-2-1-2">
+\begin{equation*}
+\int (t^{-1/2} + t^{-3/2})\,dt = \dfrac{t^{1/2}}{1/2} + \dfrac{t^{-1/2}}{-1/2} + C = 2\sqrt{t} - \dfrac{2}{\sqrt{t}} + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-integral-rational-power-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 308.d.1"><a href="#task-integral-rational-power-2" title="Copy heading and permalink for Solution 308.d.1" aria-label="Copy heading and permalink for Solution 308.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 308.d"><a href="#task-integral-rational-power" title="Copy heading and permalink for Task 308.d" aria-label="Copy heading and permalink for Task 308.d">🔗</a></div></article><article class="task exercise-like" id="task-integral-binomial-expansion"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="task-integral-binomial-expansion-1-1">
+<span class="process-math">\(\displaystyle \int (7x-2)^3\,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-integral-binomial-expansion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="task-integral-binomial-expansion-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="task-integral-binomial-expansion-2-1">
+<div class="para">To avoid <span class="process-math">\(u\)</span>-substitution, fully expand the cubic binomial first using the binomial theorem or expansion rules:</div>
+<div class="displaymath process-math" id="task-integral-binomial-expansion-2-1-2">
+\begin{equation*}
+(7x - 2)^3 = (7x)^3 - 3(7x)^2(2) + 3(7x)(2)^2 - (2)^3
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="task-integral-binomial-expansion-2-1-3">
+\begin{equation*}
+= 343x^3 - 294x^2 + 84x - 8
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-integral-binomial-expansion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="task-integral-binomial-expansion-2-2">
+<div class="para">Now compute the general antiderivative term-by-term using the basic Power Rule:</div>
+<div class="displaymath process-math" id="task-integral-binomial-expansion-2-2-1">
+\begin{align*}
+\amp \int (343x^3 - 294x^2 + 84x - 8)\,dx \\
+\amp = 343\left(\frac{x^4}{4}\right) - 294\left(\frac{x^3}{3}\right) + 84\left(\frac{x^2}{2}\right) - 8x + C\\
+\amp = \frac{343}{4}x^4 - 98x^3 + 42x^2 - 8x + C
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-integral-binomial-expansion-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 308.e.1"><a href="#task-integral-binomial-expansion-2" title="Copy heading and permalink for Solution 308.e.1" aria-label="Copy heading and permalink for Solution 308.e.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 308.e"><a href="#task-integral-binomial-expansion" title="Copy heading and permalink for Task 308.e" aria-label="Copy heading and permalink for Task 308.e">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 308"><a href="#exe-evaluate-integrals-list" title="Copy heading and permalink for Checkpoint 308" aria-label="Copy heading and permalink for Checkpoint 308">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection: Differential Equation: An equation that includes derivatives"><a href="#subsec-differential-equations" title="Copy heading and permalink for Subsection: Differential Equation: An equation that includes derivatives" aria-label="Copy heading and permalink for Subsection: Differential Equation: An equation that includes derivatives">🔗</a></div></section><div class="autopermalink" data-description="Section: 3.10 Antiderivatives and Indefinite Integrals"><a href="#sec-antiderivatives" title="Copy heading and permalink for Section: 3.10 Antiderivatives and Indefinite Integrals" aria-label="Copy heading and permalink for Section: 3.10 Antiderivatives and Indefinite Integrals">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sec-newtons-method.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

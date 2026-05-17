@@ -233,6 +233,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-the-mean-value-theorem.html" class="internal"><span class="title">3.7 The Mean Value Thoerem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linearization-differentials.html" class="internal"><span class="title">3.8 Linearization and Differentials</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-newtons-method.html" class="internal"><span class="title">3.9 Newton’s Method</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-antiderivatives.html" class="internal"><span class="title">3.10 Antiderivatives and Indefinite Integrals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-antiderivatives.html#subsec-differential-equations" class="internal"><span class="title">Differential Equation: An equation that includes derivatives</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -248,6 +252,10 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#notes-Differentiation-Rules-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-Differentiation-Rules-chapter-exercises.html#subsec-derivative-reference-sheet" class="internal"><span class="title">Derivative Reference Sheet</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html" class="internal"><span class="title">3. Applications of Derivatives- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html#exercises-chapter-review" class="internal"><span class="title">Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1</span></a></div>
@@ -293,8 +301,39 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-differentiation-rules"><h2 class="heading hide-type">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">2. Differentiation Rules</span>
 </h2>
-<section class="introduction" id="ch-differentiation-rules-2"><div class="para" id="ch-differentiation-rules-2-1">This chapter contains materials related to differentiation rules, including lecture notes, activities, and homework.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-differentiation-rules-2"><div class="para" id="ch-differentiation-rules-2-1">In the previous chapter, we established the foundational definition of the derivative using limits and the difference quotient. While that limit definition is essential for understanding what a derivative means conceptually, evaluating it algebraically for complex functions can quickly become tedious and impractical. This chapter shifts our focus from the theory of limits to the mechanics of efficient calculation.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-differentiation-rules-2-2">Here, we will discover and master algebraic shortcuts known as differentiation rules. We will start with basic algebraic patterns, such as the Power, Product, and Quotient rules, before expanding our toolkit to compute rates of change for transcendental functions—including trigonometric, exponential, and logarithmic functions. We will then introduce the Chain Rule to differentiate composite functions, learn Implicit Differentiation to find slopes of curves not easily written in standard form, and conclude by applying these techniques to solve dynamic, real-world Related Rates problems.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="objectives goal-like" id="ch-differentiation-rules-2-3"><h2 class="heading"><span class="type">Objectives</span></h2>
+<ul class="disc" id="ch-differentiation-rules-2-3-1">
+<li id="ch-differentiation-rules-2-3-1-1">
+<div class="para" id="ch-differentiation-rules-2-3-1-1-1">Apply fundamental differentiation shortcuts, including the Power, Product, and Quotient Rules.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-differentiation-rules-2-3-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-differentiation-rules-2-3-1-2">
+<div class="para" id="ch-differentiation-rules-2-3-1-2-1">Compute derivatives for trigonometric, inverse trigonometric, exponential, and logarithmic functions.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-differentiation-rules-2-3-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-differentiation-rules-2-3-1-3">
+<div class="para" id="ch-differentiation-rules-2-3-1-3-1">Utilize the Chain Rule to differentiate composite functions efficiently.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-differentiation-rules-2-3-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-differentiation-rules-2-3-1-4">
+<div class="para" id="ch-differentiation-rules-2-3-1-4-1">Apply implicit differentiation to find derivatives of equations defining curves implicitly.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-differentiation-rules-2-3-1-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-differentiation-rules-2-3-1-5">
+<div class="para" id="ch-differentiation-rules-2-3-1-5-1">Model and solve related rates problems where multiple quantities change with respect to time.<div class="autopermalink" data-description="Paragraph"><a href="#ch-differentiation-rules-2-3-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-differentiation-rules-2-3-1-5" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#ch-differentiation-rules-2-3" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><nav class="summary-links"><ul>
 <li><a href="sec-differentiation-rules.html" class="internal"><span class="title">2.1 Differentiation Rules</span></a></li>
 <li><a href="sec-trig-derivatives.html" class="internal"><span class="title">2.2 Derivatives of the Trigonometric Functions</span></a></li>
 <li><a href="sec-exp-derivatives.html" class="internal"><span class="title">2.3 Derivatives of Exponential Functions</span></a></li>

@@ -3346,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "4.3 The Fundamental Theorem of Calculus",
-  "body": " 4.3 The Fundamental Theorem of Calculus   The Fundamental Theorem of Calculus   Suppose is continuous on a closed interval .   If the function is defined by for every in , then is an antiderivative of on . That is, .    If is any antiderivative of on , then         Evaluation Notation   If is continuous on and is any antiderivative of , then:      Substitution Rule for Definite Integrals   If , then      Definite Integrals of Symmetric Functions   Let be continuous on .   If is an even function, then .    If is an odd function, then .        Derivative of an Integral   Let be continuous on . If , then for every in :     "
+  "body": " 4.3 The Fundamental Theorem of Calculus   The Fundamental Theorem of Calculus   Suppose is continuous on a closed interval .   If the function is defined by for every in , then is an antiderivative of on . That is, .    If is any antiderivative of on , then          If is continuous on and is any antiderivative of , then:      Substitution Rule for Definite Integrals   If , then      Definite Integrals of Symmetric Functions  Let be continuous on .   If is an even function, then .    If is an odd function, then .       Derivative of an Integral   Let be continuous on . If , then for every in :      Derivative of an Integral Function   If and , find .    We use the Fundamental Theorem of Calculus, Part 1 (or the Leibniz Rule), which states that if is continuous on an interval containing a constant , then:   For the function , the integrand is , which is continuous for all . The lower limit of integration is the constant , and the upper limit is the single variable .  Applying the theorem directly, we replace the dummy variable with the upper limit variable :   Therefore, for , the derivative is .     Derivatives of Integrals with Variable Bounds   Find for each of the following functions:                We find each derivative using the Fundamental Theorem of Calculus (FTC), Part 1.     The upper limit of integration is a simple variable , and the lower limit is a constant. By the direct application of FTC Part 1, we replace the dummy variable with the upper bound variable :     The upper limit of integration is a function of , namely . Therefore, we must apply the Chain Rule along with FTC Part 1:   Differentiating with respect to gives the evaluated integrand , and the derivative of the upper bound is . Substituting these back in gives: Assuming , this simplifies beautifully to:         Solving an Initial Value Problem   Solve the initial value problem:     To find the general solution, we integrate both sides of the differential equation with respect to :   Since the derivative of is , the general antiderivative introduces an arbitrary constant :   Next, we use the given initial condition to solve for the specific constant . Substituting and (using radian measure for the trigonometric function):   Substituting the value of back into our general equation yields the particular solution:      Solving a Second-Order Initial Value Problem   Find the function that satisfies the following conditions:     We solve for by integrating the second derivative successively. First, we find the first derivative, , by integrating with respect to :   We apply the first initial condition, , to determine the value of the integration constant : Thus, the specific expression for the first derivative is:   Next, we integrate with respect to to find the original function :   We apply the second initial condition, , to determine the final integration constant :   Therefore, the unique function satisfying the given initial value problem is:      Evaluating Definite Integrals   Evaluate each of the following definite integrals using the Fundamental Theorem of Calculus:           The general antiderivative of is . Applying the Fundamental Theorem of Calculus, Part 2:             The general antiderivative of is . Evaluating across the bounds:             The integrand consists entirely of even powers, making it an even function ( ). Since the integration interval is symmetric across the origin ( ), we can simplify using the even function property:   Integrating term-by-term using the power rule:             We can split the integrand into an odd component and an even component using the linearity properties of integration:   The function contains only odd exponents, meaning it is an odd function ( ). Over a symmetric interval , its integral evaluates directly to .  The remaining part, , is an even function . We can rewrite the problem as:       Area Under a Sine Curve   Find the area of the region between the graph of and the -axis from to .    Since on the entire interval , the area of the region is given directly by the definite integral of the function over this interval:    The region under from to   A graph showing one full arch of a sine wave from x=0 to x=pi, with the region underneath it shaded in blue.     The general antiderivative of is . Applying the Fundamental Theorem of Calculus, Part 2:   Therefore, the area of the region under the sine curve on this interval is exactly square units.     Area of a Region Crossing the -Axis   Find the area of the region between the graph of and the -axis from to .    To find the total area rather than the net displacement, we must first locate where the function crosses the -axis by finding its roots on the interval . We factor the polynomial: Setting gives roots at , , and .  We analyze the sign of the function on the resulting subintervals:  On , (the curve lies above the -axis).  On , (the curve lies below the -axis).  Therefore, the total area must be split into two separate definite integrals, negating the integral over the negative region:    Shaded total area bounded by   A cubic function plot crossing the x-axis at 0, 1, and 2. The region from 0 to 1 is shaded blue above the axis, and the region from 1 to 2 is shaded red below the axis.     First, we compute the general antiderivative, :   Now, we evaluate the first integral over :   Next, we evaluate the second integral over :   Finally, we add the absolute values of the two component areas to determine the total bounded space:   Therefore, the total area of the region bounded between the curve and the -axis is exactly square units.    "
 },
 {
   "id": "thm-fundamental-theorem-calculus",
@@ -3363,35 +3363,89 @@ var ptx_lunr_docs = [
   "url": "sec-fundamental-theorem-calculus.html#cor-evaluation-notation",
   "type": "Corollary",
   "number": "338",
-  "title": "Evaluation Notation.",
-  "body": " Evaluation Notation   If is continuous on and is any antiderivative of , then:    "
+  "title": "",
+  "body": "  If is continuous on and is any antiderivative of , then:    "
 },
 {
-  "id": "fact-u-substitution-definite",
+  "id": "thm-u-substitution-definite",
   "level": "2",
-  "url": "sec-fundamental-theorem-calculus.html#fact-u-substitution-definite",
-  "type": "Fact",
+  "url": "sec-fundamental-theorem-calculus.html#thm-u-substitution-definite",
+  "type": "Theorem",
   "number": "339",
   "title": "Substitution Rule for Definite Integrals.",
   "body": " Substitution Rule for Definite Integrals   If , then    "
 },
 {
-  "id": "fact-symmetry-integrals",
+  "id": "thm-derivative-integral",
   "level": "2",
-  "url": "sec-fundamental-theorem-calculus.html#fact-symmetry-integrals",
-  "type": "Fact",
-  "number": "340",
-  "title": "Definite Integrals of Symmetric Functions.",
-  "body": " Definite Integrals of Symmetric Functions   Let be continuous on .   If is an even function, then .    If is an odd function, then .      "
-},
-{
-  "id": "thm-Derivative of an Integral",
-  "level": "2",
-  "url": "sec-fundamental-theorem-calculus.html#thm-Derivative of an Integral",
+  "url": "sec-fundamental-theorem-calculus.html#thm-derivative-integral",
   "type": "Theorem",
-  "number": "341",
+  "number": "340",
   "title": "Derivative of an Integral.",
   "body": " Derivative of an Integral   Let be continuous on . If , then for every in :    "
+},
+{
+  "id": "ex-derivative-of-integral-log",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#ex-derivative-of-integral-log",
+  "type": "Example",
+  "number": "341",
+  "title": "Derivative of an Integral Function.",
+  "body": " Derivative of an Integral Function   If and , find .    We use the Fundamental Theorem of Calculus, Part 1 (or the Leibniz Rule), which states that if is continuous on an interval containing a constant , then:   For the function , the integrand is , which is continuous for all . The lower limit of integration is the constant , and the upper limit is the single variable .  Applying the theorem directly, we replace the dummy variable with the upper limit variable :   Therefore, for , the derivative is .   "
+},
+{
+  "id": "exe-derivative-of-integrals",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#exe-derivative-of-integrals",
+  "type": "Checkpoint",
+  "number": "342",
+  "title": "Derivatives of Integrals with Variable Bounds.",
+  "body": " Derivatives of Integrals with Variable Bounds   Find for each of the following functions:                We find each derivative using the Fundamental Theorem of Calculus (FTC), Part 1.     The upper limit of integration is a simple variable , and the lower limit is a constant. By the direct application of FTC Part 1, we replace the dummy variable with the upper bound variable :     The upper limit of integration is a function of , namely . Therefore, we must apply the Chain Rule along with FTC Part 1:   Differentiating with respect to gives the evaluated integrand , and the derivative of the upper bound is . Substituting these back in gives: Assuming , this simplifies beautifully to:       "
+},
+{
+  "id": "exe-ivp-secant",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#exe-ivp-secant",
+  "type": "Checkpoint",
+  "number": "343",
+  "title": "Solving an Initial Value Problem.",
+  "body": " Solving an Initial Value Problem   Solve the initial value problem:     To find the general solution, we integrate both sides of the differential equation with respect to :   Since the derivative of is , the general antiderivative introduces an arbitrary constant :   Next, we use the given initial condition to solve for the specific constant . Substituting and (using radian measure for the trigonometric function):   Substituting the value of back into our general equation yields the particular solution:    "
+},
+{
+  "id": "exe-second-order-ivp",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#exe-second-order-ivp",
+  "type": "Checkpoint",
+  "number": "344",
+  "title": "Solving a Second-Order Initial Value Problem.",
+  "body": " Solving a Second-Order Initial Value Problem   Find the function that satisfies the following conditions:     We solve for by integrating the second derivative successively. First, we find the first derivative, , by integrating with respect to :   We apply the first initial condition, , to determine the value of the integration constant : Thus, the specific expression for the first derivative is:   Next, we integrate with respect to to find the original function :   We apply the second initial condition, , to determine the final integration constant :   Therefore, the unique function satisfying the given initial value problem is:    "
+},
+{
+  "id": "exe-ftc-evaluation-tasks",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#exe-ftc-evaluation-tasks",
+  "type": "Checkpoint",
+  "number": "345",
+  "title": "Evaluating Definite Integrals.",
+  "body": " Evaluating Definite Integrals   Evaluate each of the following definite integrals using the Fundamental Theorem of Calculus:           The general antiderivative of is . Applying the Fundamental Theorem of Calculus, Part 2:             The general antiderivative of is . Evaluating across the bounds:             The integrand consists entirely of even powers, making it an even function ( ). Since the integration interval is symmetric across the origin ( ), we can simplify using the even function property:   Integrating term-by-term using the power rule:             We can split the integrand into an odd component and an even component using the linearity properties of integration:   The function contains only odd exponents, meaning it is an odd function ( ). Over a symmetric interval , its integral evaluates directly to .  The remaining part, , is an even function . We can rewrite the problem as:     "
+},
+{
+  "id": "ex-area-under-sine",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#ex-area-under-sine",
+  "type": "Example",
+  "number": "346",
+  "title": "Area Under a Sine Curve.",
+  "body": " Area Under a Sine Curve   Find the area of the region between the graph of and the -axis from to .    Since on the entire interval , the area of the region is given directly by the definite integral of the function over this interval:    The region under from to   A graph showing one full arch of a sine wave from x=0 to x=pi, with the region underneath it shaded in blue.     The general antiderivative of is . Applying the Fundamental Theorem of Calculus, Part 2:   Therefore, the area of the region under the sine curve on this interval is exactly square units.   "
+},
+{
+  "id": "exe-area-split-polynomial",
+  "level": "2",
+  "url": "sec-fundamental-theorem-calculus.html#exe-area-split-polynomial",
+  "type": "Checkpoint",
+  "number": "348",
+  "title": "Area of a Region Crossing the <span class=\"process-math\">\\(x\\)<\/span>-Axis.",
+  "body": " Area of a Region Crossing the -Axis   Find the area of the region between the graph of and the -axis from to .    To find the total area rather than the net displacement, we must first locate where the function crosses the -axis by finding its roots on the interval . We factor the polynomial: Setting gives roots at , , and .  We analyze the sign of the function on the resulting subintervals:  On , (the curve lies above the -axis).  On , (the curve lies below the -axis).  Therefore, the total area must be split into two separate definite integrals, negating the integral over the negative region:    Shaded total area bounded by   A cubic function plot crossing the x-axis at 0, 1, and 2. The region from 0 to 1 is shaded blue above the axis, and the region from 1 to 2 is shaded red below the axis.     First, we compute the general antiderivative, :   Now, we evaluate the first integral over :   Next, we evaluate the second integral over :   Finally, we add the absolute values of the two component areas to determine the total bounded space:   Therefore, the total area of the region bounded between the curve and the -axis is exactly square units.   "
 },
 {
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
@@ -3587,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "345",
+  "number": "353",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

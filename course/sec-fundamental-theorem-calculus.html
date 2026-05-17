@@ -317,56 +317,507 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-fundamental-theorem-calculus-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Theorem 337: The Fundamental Theorem of Calculus"><a href="#thm-fundamental-theorem-calculus" title="Copy heading and permalink for Theorem 337: The Fundamental Theorem of Calculus" aria-label="Copy heading and permalink for Theorem 337: The Fundamental Theorem of Calculus">🔗</a></div></article><article class="corollary theorem-like" id="cor-evaluation-notation"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">338</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluation Notation.</span>
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">338</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para logical" id="cor-evaluation-notation-2-1">
+<div class="para logical" id="cor-evaluation-notation-1-1">
 <div class="para">If <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and <span class="process-math">\(F\)</span> is any antiderivative of <span class="process-math">\(f\text{,}\)</span> then:</div>
-<div class="displaymath process-math" id="cor-evaluation-notation-2-1-5">
+<div class="displaymath process-math" id="cor-evaluation-notation-1-1-5">
 \begin{equation*}
 \int^{b}_{a} f(x) \, dx = \left. F(x) \right|^{b}_{a} = F(b)-F(a).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#cor-evaluation-notation-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor-evaluation-notation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 338: Evaluation Notation"><a href="#cor-evaluation-notation" title="Copy heading and permalink for Corollary 338: Evaluation Notation" aria-label="Copy heading and permalink for Corollary 338: Evaluation Notation">🔗</a></div></article><article class="fact theorem-like" id="fact-u-substitution-definite"><h3 class="heading">
-<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">339</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Rule for Definite Integrals.</span>
+<div class="autopermalink" data-description="Corollary 338"><a href="#cor-evaluation-notation" title="Copy heading and permalink for Corollary 338" aria-label="Copy heading and permalink for Corollary 338">🔗</a></div></article><article class="theorem theorem-like" id="thm-u-substitution-definite"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">339</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Substitution Rule for Definite Integrals.</span>
 </h3>
-<div class="para" id="fact-u-substitution-definite-2-1">If <span class="process-math">\(u=g(x)\text{,}\)</span> then <span class="process-math">\(\displaystyle \int^{b}_{a} f(g(x)) \, dx = \int^{g(b)}_{g(a)}f(u) \, du.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fact-u-substitution-definite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-u-substitution-definite-2-1">If <span class="process-math">\(u=g(x)\text{,}\)</span> then <span class="process-math">\(\displaystyle \int^{b}_{a} f(g(x)) \, dx = \int^{g(b)}_{g(a)}f(u) \, du.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-u-substitution-definite-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Fact 339: Substitution Rule for Definite Integrals"><a href="#fact-u-substitution-definite" title="Copy heading and permalink for Fact 339: Substitution Rule for Definite Integrals" aria-label="Copy heading and permalink for Fact 339: Substitution Rule for Definite Integrals">🔗</a></div></article><article class="fact theorem-like" id="fact-symmetry-integrals"><h3 class="heading">
-<span class="type">Fact</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">340</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definite Integrals of Symmetric Functions.</span>
-</h3>
-<div class="para logical" id="fact-symmetry-integrals-2-1">
+<div class="autopermalink" data-description="Theorem 339: Substitution Rule for Definite Integrals"><a href="#thm-u-substitution-definite" title="Copy heading and permalink for Theorem 339: Substitution Rule for Definite Integrals" aria-label="Copy heading and permalink for Theorem 339: Substitution Rule for Definite Integrals">🔗</a></div></article><article class="assemblage assemblage-like" id="assem-symmetry-integrals"><h3 class="heading"><span class="title">Definite Integrals of Symmetric Functions.</span></h3>
+<div class="para logical" id="assem-symmetry-integrals-2">
 <div class="para">Let <span class="process-math">\(f\)</span> be continuous on <span class="process-math">\([-a,a]\text{.}\)</span>
 </div>
-<ol class="decimal ol-marker-1" id="fact-symmetry-integrals-2-1-3">
-<li id="fact-symmetry-integrals-2-1-3-1">
-<div class="para" id="fact-symmetry-integrals-2-1-3-1-1">If <span class="process-math">\(f\)</span> is an even function, then <span class="process-math">\(\displaystyle\int^{a}_{-a}f(x) \, dx = 2\int^{a}_{0}f(x) \, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fact-symmetry-integrals-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ol class="decimal ol-marker-1" id="assem-symmetry-integrals-2-3">
+<li id="assem-symmetry-integrals-2-3-1">
+<div class="para" id="assem-symmetry-integrals-2-3-1-1">If <span class="process-math">\(f\)</span> is an even function, then <span class="process-math">\(\displaystyle\int^{a}_{-a}f(x) \, dx = 2\int^{a}_{0}f(x) \, dx\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#assem-symmetry-integrals-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#fact-symmetry-integrals-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#assem-symmetry-integrals-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="fact-symmetry-integrals-2-1-3-2">
-<div class="para" id="fact-symmetry-integrals-2-1-3-2-1">If <span class="process-math">\(f\)</span> is an odd function, then <span class="process-math">\(\displaystyle\int^{a}_{-a}f(x) \, dx = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fact-symmetry-integrals-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="assem-symmetry-integrals-2-3-2">
+<div class="para" id="assem-symmetry-integrals-2-3-2-1">If <span class="process-math">\(f\)</span> is an odd function, then <span class="process-math">\(\displaystyle\int^{a}_{-a}f(x) \, dx = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#assem-symmetry-integrals-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#fact-symmetry-integrals-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#assem-symmetry-integrals-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#fact-symmetry-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assem-symmetry-integrals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Fact 340: Definite Integrals of Symmetric Functions"><a href="#fact-symmetry-integrals" title="Copy heading and permalink for Fact 340: Definite Integrals of Symmetric Functions" aria-label="Copy heading and permalink for Fact 340: Definite Integrals of Symmetric Functions">🔗</a></div></article><article class="theorem theorem-like" id="thm-Derivative of an Integral"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">341</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of an Integral.</span>
+<div class="autopermalink" data-description="Assemblage: Definite Integrals of Symmetric Functions"><a href="#assem-symmetry-integrals" title="Copy heading and permalink for Assemblage: Definite Integrals of Symmetric Functions" aria-label="Copy heading and permalink for Assemblage: Definite Integrals of Symmetric Functions">🔗</a></div></article><article class="theorem theorem-like" id="thm-derivative-integral"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">340</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of an Integral.</span>
 </h3>
-<div class="para logical" id="thm-Derivative of an Integral-2-1">
+<div class="para logical" id="thm-derivative-integral-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be continuous on <span class="process-math">\([a,b]\text{.}\)</span> If <span class="process-math">\(a \leq c \leq b\text{,}\)</span> then for every <span class="process-math">\(x\)</span> in <span class="process-math">\([a,b]\text{:}\)</span>
 </div>
-<div class="displaymath process-math" id="thm-Derivative of an Integral-2-1-6">
+<div class="displaymath process-math" id="thm-derivative-integral-2-1-6">
 \begin{equation*}
 \frac{d}{dx}\int^{x}_{c}f(t) \, dt = f(x).
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-Derivative%20of%20an%20Integral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-derivative-integral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 341: Derivative of an Integral"><a href="#thm-Derivative%20of%20an%20Integral" title="Copy heading and permalink for Theorem 341: Derivative of an Integral" aria-label="Copy heading and permalink for Theorem 341: Derivative of an Integral">🔗</a></div></article><div class="autopermalink" data-description="Section: 4.3 The Fundamental Theorem of Calculus"><a href="#sec-fundamental-theorem-calculus" title="Copy heading and permalink for Section: 4.3 The Fundamental Theorem of Calculus" aria-label="Copy heading and permalink for Section: 4.3 The Fundamental Theorem of Calculus">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Theorem 340: Derivative of an Integral"><a href="#thm-derivative-integral" title="Copy heading and permalink for Theorem 340: Derivative of an Integral" aria-label="Copy heading and permalink for Theorem 340: Derivative of an Integral">🔗</a></div></article><details id="ex-derivative-of-integral-log" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">341</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivative of an Integral Function.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-derivative-of-integral-log-2-1">If <span class="process-math">\(G(x)=\displaystyle \int^{x}_{1} \frac{1}{t}\,dt\)</span> and <span class="process-math">\(x \gt 0\text{,}\)</span> find <span class="process-math">\(G'(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-of-integral-log-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-derivative-of-integral-log-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-derivative-of-integral-log-3-1">
+<div class="para">We use the Fundamental Theorem of Calculus, Part 1 (or the Leibniz Rule), which states that if <span class="process-math">\(f\)</span> is continuous on an interval containing a constant <span class="process-math">\(c\text{,}\)</span> then:</div>
+<div class="displaymath process-math" id="ex-derivative-of-integral-log-3-1-3">
+\begin{equation*}
+\frac{d}{dx} \int^{x}_{c} f(t) \, dt = f(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-of-integral-log-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-derivative-of-integral-log-3-2">For the function <span class="process-math">\(G(x)\text{,}\)</span> the integrand is <span class="process-math">\(f(t) = \frac{1}{t}\text{,}\)</span> which is continuous for all <span class="process-math">\(t \gt 0\text{.}\)</span> The lower limit of integration is the constant <span class="process-math">\(c = 1\text{,}\)</span> and the upper limit is the single variable <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-of-integral-log-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-derivative-of-integral-log-3-3">
+<div class="para">Applying the theorem directly, we replace the dummy variable <span class="process-math">\(t\)</span> with the upper limit variable <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex-derivative-of-integral-log-3-3-3">
+\begin{equation*}
+G'(x) = \frac{d}{dx} \int^{x}_{1} \frac{1}{t} \, dt = \frac{1}{x}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-of-integral-log-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-derivative-of-integral-log-3-4">Therefore, for <span class="process-math">\(x \gt 0\text{,}\)</span> the derivative is <span class="process-math">\(G'(x) = \dfrac{1}{x}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-derivative-of-integral-log-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 341.1"><a href="#ex-derivative-of-integral-log-3" title="Copy heading and permalink for Solution 341.1" aria-label="Copy heading and permalink for Solution 341.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 341: Derivative of an Integral Function"><a href="#ex-derivative-of-integral-log" title="Copy heading and permalink for Example 341: Derivative of an Integral Function" aria-label="Copy heading and permalink for Example 341: Derivative of an Integral Function">🔗</a></div></article></details><details id="exe-derivative-of-integrals" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">342</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Derivatives of Integrals with Variable Bounds.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-derivative-of-integrals-2-1">
+<div class="para">Find <span class="process-math">\(\dfrac{dy}{dx}\)</span> for each of the following functions:</div>
+<ol class="decimal ol-marker-1" id="exe-derivative-of-integrals-2-1-2">
+<li id="exe-derivative-of-integrals-2-1-2-1">
+<div class="para" id="exe-derivative-of-integrals-2-1-2-1-1">
+<span class="process-math">\(\displaystyle y=\displaystyle \int^{x}_{0} \sqrt{1+t^{2}}\,dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 342.1"><a href="#exe-derivative-of-integrals-2-1-2-1" title="Copy heading and permalink for Item 342.1" aria-label="Copy heading and permalink for Item 342.1">🔗</a></div>
+</li>
+<li id="exe-derivative-of-integrals-2-1-2-2">
+<div class="para" id="exe-derivative-of-integrals-2-1-2-2-1">
+<span class="process-math">\(\displaystyle y=\displaystyle \int^{x^2}_{0} \cos\sqrt{t}\,dt\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 342.2"><a href="#exe-derivative-of-integrals-2-1-2-2" title="Copy heading and permalink for Item 342.2" aria-label="Copy heading and permalink for Item 342.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-derivative-of-integrals-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exe-derivative-of-integrals-3-1">We find each derivative using the Fundamental Theorem of Calculus (FTC), Part 1.<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-derivative-of-integrals-3-2">
+<ol class="decimal ol-marker-1" id="exe-derivative-of-integrals-3-2-1">
+<li id="exe-derivative-of-integrals-3-2-1-1">
+<div class="para logical" id="exe-derivative-of-integrals-3-2-1-1-1">
+<div class="para">The upper limit of integration is a simple variable <span class="process-math">\(x\text{,}\)</span> and the lower limit is a constant. By the direct application of FTC Part 1, we replace the dummy variable <span class="process-math">\(t\)</span> with the upper bound variable <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-derivative-of-integrals-3-2-1-1-1-4">
+\begin{equation*}
+\frac{dy}{dx} = \frac{d}{dx} \int^{x}_{0} \sqrt{1+t^{2}}\,dt = \sqrt{1+x^{2}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 342.1"><a href="#exe-derivative-of-integrals-3-2-1-1" title="Copy heading and permalink for Item 342.1" aria-label="Copy heading and permalink for Item 342.1">🔗</a></div>
+</li>
+<li id="exe-derivative-of-integrals-3-2-1-2">
+<div class="para logical" id="exe-derivative-of-integrals-3-2-1-2-1">
+<div class="para">The upper limit of integration is a function of <span class="process-math">\(x\text{,}\)</span> namely <span class="process-math">\(u = x^2\text{.}\)</span> Therefore, we must apply the Chain Rule along with FTC Part 1:</div>
+<div class="displaymath process-math" id="exe-derivative-of-integrals-3-2-1-2-1-3">
+\begin{equation*}
+\frac{dy}{dx} = \frac{d}{du}\left[ \int^{u}_{0} \cos\sqrt{t}\,dt \right] \cdot \frac{du}{dx}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-derivative-of-integrals-3-2-1-2-2">
+<div class="para">Differentiating with respect to <span class="process-math">\(u\)</span> gives the evaluated integrand <span class="process-math">\(\cos\sqrt{u}\text{,}\)</span> and the derivative of the upper bound is <span class="process-math">\(\frac{du}{dx} = 2x\text{.}\)</span> Substituting these back in gives:</div>
+<div class="displaymath process-math" id="exe-derivative-of-integrals-3-2-1-2-2-4">
+\begin{align*}
+\frac{dy}{dx} \amp = \cos\sqrt{x^2} \cdot \frac{d}{dx}(x^2)\\
+\amp = \cos(|x|) \cdot 2x
+\end{align*}
+</div>
+<div class="para">Assuming <span class="process-math">\(x \geq 0\text{,}\)</span> this simplifies beautifully to:</div>
+<div class="displaymath process-math" id="exe-derivative-of-integrals-3-2-1-2-2-6">
+\begin{equation*}
+\frac{dy}{dx} = 2x\cos(x)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-3-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 342.2"><a href="#exe-derivative-of-integrals-3-2-1-2" title="Copy heading and permalink for Item 342.2" aria-label="Copy heading and permalink for Item 342.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-derivative-of-integrals-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 342.1"><a href="#exe-derivative-of-integrals-3" title="Copy heading and permalink for Solution 342.1" aria-label="Copy heading and permalink for Solution 342.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 342: Derivatives of Integrals with Variable Bounds"><a href="#exe-derivative-of-integrals" title="Copy heading and permalink for Checkpoint 342: Derivatives of Integrals with Variable Bounds" aria-label="Copy heading and permalink for Checkpoint 342: Derivatives of Integrals with Variable Bounds">🔗</a></div></article></details><details id="exe-ivp-secant" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">343</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving an Initial Value Problem.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-ivp-secant-2-1">
+<div class="para">Solve the initial value problem:</div>
+<div class="displaymath process-math" id="exe-ivp-secant-2-1-1">
+\begin{equation*}
+\frac{dy}{dx}=\sec^{2} x, \quad y(2)=3
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ivp-secant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ivp-secant-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ivp-secant-3-1">
+<div class="para">To find the general solution, we integrate both sides of the differential equation with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-ivp-secant-3-1-2">
+\begin{equation*}
+y(x) = \int \sec^2 x \, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ivp-secant-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ivp-secant-3-2">
+<div class="para">Since the derivative of <span class="process-math">\(\tan x\)</span> is <span class="process-math">\(\sec^2 x\text{,}\)</span> the general antiderivative introduces an arbitrary constant <span class="process-math">\(C\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-ivp-secant-3-2-4">
+\begin{equation*}
+y(x) = \tan x + C
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ivp-secant-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ivp-secant-3-3">
+<div class="para">Next, we use the given initial condition <span class="process-math">\(y(2) = 3\)</span> to solve for the specific constant <span class="process-math">\(C\text{.}\)</span> Substituting <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(y = 3\)</span> (using radian measure for the trigonometric function):</div>
+<div class="displaymath process-math" id="exe-ivp-secant-3-3-5">
+\begin{align*}
+3 \amp = \tan(2) + C\\
+C \amp = 3 - \tan(2)
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ivp-secant-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ivp-secant-3-4">
+<div class="para">Substituting the value of <span class="process-math">\(C\)</span> back into our general equation yields the particular solution:</div>
+<div class="displaymath process-math" id="exe-ivp-secant-3-4-2">
+\begin{equation*}
+y(x) = \tan x + 3 - \tan(2)
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ivp-secant-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 343.1"><a href="#exe-ivp-secant-3" title="Copy heading and permalink for Solution 343.1" aria-label="Copy heading and permalink for Solution 343.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 343: Solving an Initial Value Problem"><a href="#exe-ivp-secant" title="Copy heading and permalink for Checkpoint 343: Solving an Initial Value Problem" aria-label="Copy heading and permalink for Checkpoint 343: Solving an Initial Value Problem">🔗</a></div></article></details><details id="exe-second-order-ivp" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">344</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving a Second-Order Initial Value Problem.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-second-order-ivp-2-1">
+<div class="para">Find the function <span class="process-math">\(f\)</span> that satisfies the following conditions:</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-2-1-2">
+\begin{equation*}
+f''(x)=1-6x+48x^{2}, \quad f(0)=1, \quad f'(0)=2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-second-order-ivp-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-second-order-ivp-3-1">
+<div class="para">We solve for <span class="process-math">\(f(x)\)</span> by integrating the second derivative successively. First, we find the first derivative, <span class="process-math">\(f'(x)\text{,}\)</span> by integrating <span class="process-math">\(f''(x)\)</span> with respect to <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-1-5">
+\begin{align*}
+f'(x) \amp = \int (1 - 6x + 48x^2) \, dx\\
+\amp = x - 6\left(\frac{x^2}{2}\right) + 48\left(\frac{x^3}{3}\right) + C_1\\
+\amp = x - 3x^2 + 16x^3 + C_1
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-second-order-ivp-3-2">
+<div class="para">We apply the first initial condition, <span class="process-math">\(f'(0) = 2\text{,}\)</span> to determine the value of the integration constant <span class="process-math">\(C_1\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-2-3">
+\begin{align*}
+2 \amp = (0) - 3(0)^2 + 16(0)^3 + C_1\\
+C_1 \amp = 2
+\end{align*}
+</div>
+<div class="para">Thus, the specific expression for the first derivative is:</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-2-4">
+\begin{equation*}
+f'(x) = 16x^3 - 3x^2 + x + 2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-second-order-ivp-3-3">
+<div class="para">Next, we integrate <span class="process-math">\(f'(x)\)</span> with respect to <span class="process-math">\(x\)</span> to find the original function <span class="process-math">\(f(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-3-4">
+\begin{align*}
+f(x) \amp = \int (16x^3 - 3x^2 + x + 2) \, dx\\
+\amp = 16\left(\frac{x^4}{4}\right) - 3\left(\frac{x^3}{3}\right) + \frac{x^2}{2} + 2x + C_2\\
+\amp = 4x^4 - x^3 + \frac{1}{2}x^2 + 2x + C_2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-second-order-ivp-3-4">
+<div class="para">We apply the second initial condition, <span class="process-math">\(f(0) = 1\text{,}\)</span> to determine the final integration constant <span class="process-math">\(C_2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-4-3">
+\begin{align*}
+1 \amp = 4(0)^4 - (0)^3 + \frac{1}{2}(0)^2 + 2(0) + C_2\\
+C_2 \amp = 1
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-second-order-ivp-3-5">
+<div class="para">Therefore, the unique function satisfying the given initial value problem is:</div>
+<div class="displaymath process-math" id="exe-second-order-ivp-3-5-1">
+\begin{equation*}
+f(x) = 4x^4 - x^3 + \frac{1}{2}x^2 + 2x + 1
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-second-order-ivp-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 344.1"><a href="#exe-second-order-ivp-3" title="Copy heading and permalink for Solution 344.1" aria-label="Copy heading and permalink for Solution 344.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 344: Solving a Second-Order Initial Value Problem"><a href="#exe-second-order-ivp" title="Copy heading and permalink for Checkpoint 344: Solving a Second-Order Initial Value Problem" aria-label="Copy heading and permalink for Checkpoint 344: Solving a Second-Order Initial Value Problem">🔗</a></div></article></details><details id="exe-ftc-evaluation-tasks" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">345</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Evaluating Definite Integrals.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="exe-ftc-evaluation-tasks-2"><div class="para" id="exe-ftc-evaluation-tasks-2-1">Evaluate each of the following definite integrals using the Fundamental Theorem of Calculus:<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="exe-ftc-evaluation-tasks-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="exe-ftc-evaluation-tasks-3-1-1">
+<span class="process-math">\(\displaystyle \int^{\pi}_{0} \sin x \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ftc-evaluation-tasks-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ftc-evaluation-tasks-3-2-1">
+<div class="para">The general antiderivative of <span class="process-math">\(\sin x\)</span> is <span class="process-math">\(-\cos x\text{.}\)</span> Applying the Fundamental Theorem of Calculus, Part 2:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-3-2-1-3">
+\begin{align*}
+\int^{\pi}_{0} \sin x \, dx \amp = \left[ -\cos x \right]^{\pi}_{0}\\
+\amp = (-\cos\pi) - (-\cos 0)\\
+\amp = (-(-1)) - (-1)\\
+\amp = 1 + 1 = 2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 345.a.1"><a href="#exe-ftc-evaluation-tasks-3-2" title="Copy heading and permalink for Solution 345.a.1" aria-label="Copy heading and permalink for Solution 345.a.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 345.a"><a href="#exe-ftc-evaluation-tasks-3" title="Copy heading and permalink for Task 345.a" aria-label="Copy heading and permalink for Task 345.a">🔗</a></div></article><article class="task exercise-like" id="exe-ftc-evaluation-tasks-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="exe-ftc-evaluation-tasks-4-1-1">
+<span class="process-math">\(\displaystyle \int^{\pi}_{0} \cos x \, dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ftc-evaluation-tasks-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ftc-evaluation-tasks-4-2-1">
+<div class="para">The general antiderivative of <span class="process-math">\(\cos x\)</span> is <span class="process-math">\(\sin x\text{.}\)</span> Evaluating across the bounds:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-4-2-1-3">
+\begin{align*}
+\int^{\pi}_{0} \cos x \, dx \amp = \left[ \sin x \right]^{\pi}_{0}\\
+\amp = \sin\pi - \sin 0\\
+\amp = 0 - 0 = 0
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 345.b.1"><a href="#exe-ftc-evaluation-tasks-4-2" title="Copy heading and permalink for Solution 345.b.1" aria-label="Copy heading and permalink for Solution 345.b.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 345.b"><a href="#exe-ftc-evaluation-tasks-4" title="Copy heading and permalink for Task 345.b" aria-label="Copy heading and permalink for Task 345.b">🔗</a></div></article><article class="task exercise-like" id="exe-ftc-evaluation-tasks-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="exe-ftc-evaluation-tasks-5-1-1">
+<span class="process-math">\(\displaystyle \int^{1}_{-1}(x^{4}+3x^{2}+1)\,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ftc-evaluation-tasks-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ftc-evaluation-tasks-5-2-1">
+<div class="para">The integrand <span class="process-math">\(f(x) = x^4 + 3x^2 + 1\)</span> consists entirely of even powers, making it an <em class="emphasis">even function</em> (<span class="process-math">\(f(-x) = f(x)\)</span>). Since the integration interval is symmetric across the origin (<span class="process-math">\([-1, 1]\)</span>), we can simplify using the even function property:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-5-2-1-5">
+\begin{equation*}
+\int^{1}_{-1}(x^{4}+3x^{2}+1)\,dx = 2\int^{1}_{0}(x^{4}+3x^{2}+1)\,dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ftc-evaluation-tasks-5-2-2">
+<div class="para">Integrating term-by-term using the power rule:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-5-2-2-1">
+\begin{align*}
+\amp = 2 \left[ \frac{x^5}{5} + \frac{3x^3}{3} + x \right]^{1}_{0}\\
+\amp = 2 \left[ \frac{x^5}{5} + x^3 + x \right]^{1}_{0}\\
+\amp = 2 \left( \left(\frac{1}{5} + 1 + 1\right) - 0 \right)\\
+\amp = 2 \left( \frac{1}{5} + \frac{10}{5} \right) = 2 \left(\frac{11}{5}\right) = \frac{22}{5}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-5-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 345.c.1"><a href="#exe-ftc-evaluation-tasks-5-2" title="Copy heading and permalink for Solution 345.c.1" aria-label="Copy heading and permalink for Solution 345.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 345.c"><a href="#exe-ftc-evaluation-tasks-5" title="Copy heading and permalink for Task 345.c" aria-label="Copy heading and permalink for Task 345.c">🔗</a></div></article><article class="task exercise-like" id="exe-ftc-evaluation-tasks-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="exe-ftc-evaluation-tasks-6-1-1">
+<span class="process-math">\(\displaystyle \int^{5}_{-5}(2x^{3}+3x^{2}+7x)\,dx\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-ftc-evaluation-tasks-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-ftc-evaluation-tasks-6-2-1">
+<div class="para">We can split the integrand into an odd component and an even component using the linearity properties of integration:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-6-2-1-1">
+\begin{equation*}
+\int^{5}_{-5}(2x^{3}+3x^{2}+7x)\,dx = \int^{5}_{-5}(2x^{3}+7x)\,dx + \int^{5}_{-5}3x^{2}\,dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exe-ftc-evaluation-tasks-6-2-2">The function <span class="process-math">\(g(x) = 2x^3 + 7x\)</span> contains only odd exponents, meaning it is an <em class="emphasis">odd function</em> (<span class="process-math">\(g(-x) = -g(x)\)</span>). Over a symmetric interval <span class="process-math">\([-5, 5]\text{,}\)</span> its integral evaluates directly to <span class="process-math">\(0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-6-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-ftc-evaluation-tasks-6-2-3">
+<div class="para">The remaining part, <span class="process-math">\(h(x) = 3x^2\text{,}\)</span> is an <em class="emphasis">even function</em>. We can rewrite the problem as:</div>
+<div class="displaymath process-math" id="exe-ftc-evaluation-tasks-6-2-3-3">
+\begin{align*}
+\amp = 0 + 2\int^{5}_{0}3x^{2}\,dx\\
+\amp = 6 \int^{5}_{0}x^{2}\,dx\\
+\amp = 6 \left[ \frac{x^3}{3} \right]^{5}_{0} = 2 \left[ x^3 \right]^{5}_{0}\\
+\amp = 2(5^3 - 0) = 2(125) = 250
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-ftc-evaluation-tasks-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 345.d.1"><a href="#exe-ftc-evaluation-tasks-6-2" title="Copy heading and permalink for Solution 345.d.1" aria-label="Copy heading and permalink for Solution 345.d.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 345.d"><a href="#exe-ftc-evaluation-tasks-6" title="Copy heading and permalink for Task 345.d" aria-label="Copy heading and permalink for Task 345.d">🔗</a></div></article><div class="autopermalink" data-description="Checkpoint 345: Evaluating Definite Integrals"><a href="#exe-ftc-evaluation-tasks" title="Copy heading and permalink for Checkpoint 345: Evaluating Definite Integrals" aria-label="Copy heading and permalink for Checkpoint 345: Evaluating Definite Integrals">🔗</a></div></article></details><details id="ex-area-under-sine" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">346</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Area Under a Sine Curve.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-area-under-sine-2-1">Find the area of the region between the graph of <span class="process-math">\(y=\sin x\)</span> and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=\pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-area-under-sine-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-area-under-sine-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-area-under-sine-3-1">
+<div class="para">Since <span class="process-math">\(\sin x \geq 0\)</span> on the entire interval <span class="process-math">\([0, \pi]\text{,}\)</span> the area <span class="process-math">\(A\)</span> of the region is given directly by the definite integral of the function over this interval:</div>
+<div class="displaymath process-math" id="ex-area-under-sine-3-1-4">
+\begin{equation*}
+A = \int_{0}^{\pi} \sin x \, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-area-under-sine-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-sine-area-region"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/img-sine-area-region.svg" role="img" class="contained" alt="A graph showing one full arch of a sine wave from x=0 to x=pi, with the region underneath it shaded in blue."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">347<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 347: The region under y = \sin x from x = 0 to x = \pi"><a href="#fig-sine-area-region" title="Copy heading and permalink for Figure 347: The region under y = \sin x from x = 0 to x = \pi" aria-label="Copy heading and permalink for Figure 347: The region under y = \sin x from x = 0 to x = \pi">🔗</a></div></figcaption></figure><div class="para logical" id="ex-area-under-sine-3-3">
+<div class="para">The general antiderivative of <span class="process-math">\(\sin x\)</span> is <span class="process-math">\(-\cos x\text{.}\)</span> Applying the Fundamental Theorem of Calculus, Part 2:</div>
+<div class="displaymath process-math" id="ex-area-under-sine-3-3-3">
+\begin{align*}
+A \amp = \left[ -\cos x \right]_{0}^{\pi}\\
+\amp = (-\cos\pi) - (-\cos 0)\\
+\amp = (-(-1)) - (-1)\\
+\amp = 1 + 1 = 2
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-area-under-sine-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-area-under-sine-3-4">Therefore, the area of the region under the sine curve on this interval is exactly <span class="process-math">\(2\)</span> square units.<div class="autopermalink" data-description="Paragraph"><a href="#ex-area-under-sine-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 346.1"><a href="#ex-area-under-sine-3" title="Copy heading and permalink for Solution 346.1" aria-label="Copy heading and permalink for Solution 346.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 346: Area Under a Sine Curve"><a href="#ex-area-under-sine" title="Copy heading and permalink for Example 346: Area Under a Sine Curve" aria-label="Copy heading and permalink for Example 346: Area Under a Sine Curve">🔗</a></div></article></details><details id="exe-area-split-polynomial" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">348</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Area of a Region Crossing the <span class="process-math">\(x\)</span>-Axis.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="exe-area-split-polynomial-2-1">
+<div class="para">Find the area of the region between the graph of</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-2-1-1">
+\begin{equation*}
+f(x)=x^{3}-3x^{2}+2x
+\end{equation*}
+</div>
+<div class="para">and the <span class="process-math">\(x\)</span>-axis from <span class="process-math">\(x=0\)</span> to <span class="process-math">\(x=2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="exe-area-split-polynomial-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exe-area-split-polynomial-3-1">
+<div class="para">To find the total area rather than the net displacement, we must first locate where the function crosses the <span class="process-math">\(x\)</span>-axis by finding its roots on the interval <span class="process-math">\([0,2]\text{.}\)</span> We factor the polynomial:</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-1-3">
+\begin{equation*}
+f(x) = x(x^2 - 3x + 2) = x(x-1)(x-2)
+\end{equation*}
+</div>
+<div class="para">Setting <span class="process-math">\(f(x) = 0\)</span> gives roots at <span class="process-math">\(x = 0\text{,}\)</span> <span class="process-math">\(x = 1\text{,}\)</span> and <span class="process-math">\(x = 2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-area-split-polynomial-3-2">
+<div class="para">We analyze the sign of the function on the resulting subintervals:</div>
+<ul class="disc" id="exe-area-split-polynomial-3-2-1">
+<li id="exe-area-split-polynomial-3-2-1-1">
+<div class="para" id="exe-area-split-polynomial-3-2-1-1-1">On <span class="process-math">\([0,1]\text{,}\)</span> <span class="process-math">\(f(x) \geq 0\)</span> (the curve lies above the <span class="process-math">\(x\)</span>-axis).<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exe-area-split-polynomial-3-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="exe-area-split-polynomial-3-2-1-2">
+<div class="para" id="exe-area-split-polynomial-3-2-1-2-1">On <span class="process-math">\([1,2]\text{,}\)</span> <span class="process-math">\(f(x) \leq 0\)</span> (the curve lies below the <span class="process-math">\(x\)</span>-axis).<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#exe-area-split-polynomial-3-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Therefore, the total area <span class="process-math">\(A\)</span> must be split into two separate definite integrals, negating the integral over the negative region:</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-2-3">
+\begin{equation*}
+A = \int_{0}^{1} (x^3 - 3x^2 + 2x) \, dx - \int_{1}^{2} (x^3 - 3x^2 + 2x) \, dx
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-polynomial-split-area"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="generated/latex-image/img-polynomial-split-area.svg" role="img" class="contained" alt="A cubic function plot crossing the x-axis at 0, 1, and 2. The region from 0 to 1 is shaded blue above the axis, and the region from 1 to 2 is shaded red below the axis."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">349<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 349: Shaded total area bounded by y = x^3 - 3x^2 + 2x"><a href="#fig-polynomial-split-area" title="Copy heading and permalink for Figure 349: Shaded total area bounded by y = x^3 - 3x^2 + 2x" aria-label="Copy heading and permalink for Figure 349: Shaded total area bounded by y = x^3 - 3x^2 + 2x">🔗</a></div></figcaption></figure><div class="para logical" id="exe-area-split-polynomial-3-4">
+<div class="para">First, we compute the general antiderivative, <span class="process-math">\(F(x)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-4-2">
+\begin{equation*}
+F(x) = \int (x^3 - 3x^2 + 2x) \, dx = \frac{x^4}{4} - x^3 + x^2
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-area-split-polynomial-3-5">
+<div class="para">Now, we evaluate the first integral over <span class="process-math">\([0,1]\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-5-2">
+\begin{align*}
+\int_{0}^{1} (x^3 - 3x^2 + 2x) \, dx \amp = \left[ \frac{x^4}{4} - x^3 + x^2 \right]_{0}^{1}\\
+\amp = \left( \frac{1}{4} - 1 + 1 \right) - 0 = \frac{1}{4}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-area-split-polynomial-3-6">
+<div class="para">Next, we evaluate the second integral over <span class="process-math">\([1,2]\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-6-2">
+\begin{align*}
+\int_{1}^{2} (x^3 - 3x^2 + 2x) \, dx \amp = \left[ \frac{x^4}{4} - x^3 + x^2 \right]_{1}^{2}\\
+\amp = \left( \frac{2^4}{4} - 2^3 + 2^2 \right) - \left( \frac{1}{4} - 1 + 1 \right)\\
+\amp = (4 - 8 + 4) - \frac{1}{4} = 0 - \frac{1}{4} = -\frac{1}{4}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="exe-area-split-polynomial-3-7">
+<div class="para">Finally, we add the absolute values of the two component areas to determine the total bounded space:</div>
+<div class="displaymath process-math" id="exe-area-split-polynomial-3-7-1">
+\begin{equation*}
+A = \frac{1}{4} - \left(-\frac{1}{4}\right) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exe-area-split-polynomial-3-8">Therefore, the total area of the region bounded between the curve and the <span class="process-math">\(x\)</span>-axis is exactly <span class="process-math">\(\dfrac{1}{2}\)</span> square units.<div class="autopermalink" data-description="Paragraph"><a href="#exe-area-split-polynomial-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 348.1"><a href="#exe-area-split-polynomial-3" title="Copy heading and permalink for Solution 348.1" aria-label="Copy heading and permalink for Solution 348.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Checkpoint 348: Area of a Region Crossing the x-Axis"><a href="#exe-area-split-polynomial" title="Copy heading and permalink for Checkpoint 348: Area of a Region Crossing the x-Axis" aria-label="Copy heading and permalink for Checkpoint 348: Area of a Region Crossing the x-Axis">🔗</a></div></article></details><div class="autopermalink" data-description="Section: 4.3 The Fundamental Theorem of Calculus"><a href="#sec-fundamental-theorem-calculus" title="Copy heading and permalink for Section: 4.3 The Fundamental Theorem of Calculus" aria-label="Copy heading and permalink for Section: 4.3 The Fundamental Theorem of Calculus">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-definite-integral.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="course-notes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

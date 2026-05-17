@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <section xml:id="sec-fundamental-theorem-calculus" class="notes">
   <title>4.3 The Fundamental Theorem of Calculus</title>
 
@@ -9,18 +8,22 @@
       <p>
         Suppose <m>f</m> is continuous on a closed interval <m>[a,b]</m>.
         <ol marker="1">
-          <li> <p> If the function <m>G</m> is defined by <m>G(x)=\displaystyle\int^{x}_{a}f(t) \, dt</m> 
-            for every <m>x</m> in <m>[a,b]</m>, then <m>G</m> is an antiderivative of 
-            <m>f</m> on <m>[a,b]</m>. That is, <m>G'(x) = f(x)</m>. </p> </li>
-          <li> <p> If <m>F</m> is any antiderivative of <m>f</m> on <m>[a,b]</m>, 
-            then <m>\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a).</m> </p> </li>
+          <li>
+            <p>
+              If the function <m>G</m> is defined by <m>G(x)=\displaystyle\int^{x}_{a}f(t) \, dt</m> for every <m>x</m> in <m>[a,b]</m>, then <m>G</m> is an antiderivative of <m>f</m> on <m>[a,b]</m>. That is, <m>G'(x) = f(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>F</m> is any antiderivative of <m>f</m> on <m>[a,b]</m>, then <m>\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a).</m>
+            </p>
+          </li>
         </ol>
       </p>
     </statement>
   </theorem>
 
   <corollary xml:id="cor-evaluation-notation">
-    <title>Evaluation Notation</title>
     <statement>
       <p>
         If <m>f</m> is continuous on <m>[a,b]</m> and <m>F</m> is any antiderivative of <m>f</m>, then:
@@ -31,37 +34,35 @@
     </statement>
   </corollary>
 
-  <fact xml:id="fact-u-substitution-definite">
+  <theorem xml:id="thm-u-substitution-definite">
     <title>Substitution Rule for Definite Integrals</title>
     <statement>
       <p>
         If <m>u=g(x)</m>, then <m>\displaystyle \int^{b}_{a} f(g(x)) \, dx = \int^{g(b)}_{g(a)}f(u) \, du.</m>
       </p>
     </statement>
-  </fact>
+  </theorem>
 
-  <fact xml:id="fact-symmetry-integrals">
+  <assemblage xml:id="assem-symmetry-integrals">
     <title>Definite Integrals of Symmetric Functions</title>
-    <statement>
-      <p>
-        Let <m>f</m> be continuous on <m>[-a,a]</m>.
-        <ol marker="1">
-          <li>
-            <p>
-              If <m>f</m> is an even function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 2\int^{a}_{0}f(x) \, dx</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>f</m> is an odd function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 0</m>.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-  </fact>
-  
-    <theorem xml:id="thm-Derivative of an Integral">
+    <p>
+      Let <m>f</m> be continuous on <m>[-a,a]</m>.
+      <ol marker="1">
+        <li>
+          <p>
+            If <m>f</m> is an even function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 2\int^{a}_{0}f(x) \, dx</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>f</m> is an odd function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </assemblage>
+
+  <theorem xml:id="thm-derivative-integral">
     <title>Derivative of an Integral</title>
     <statement>
       <p>
@@ -72,4 +73,390 @@
       </p>
     </statement>
   </theorem>
+
+  <example xml:id="ex-derivative-of-integral-log">
+  <title>Derivative of an Integral Function</title>
+  <statement>
+    <p>
+      If <m>G(x)=\displaystyle \int^{x}_{1} \frac{1}{t}\,dt</m> and <m>x \gt 0</m>, find <m>G'(x)</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We use the Fundamental Theorem of Calculus, Part 1 (or the Leibniz Rule), which states that if <m>f</m> is continuous on an interval containing a constant <m>c</m>, then:
+      <me>\frac{d}{dx} \int^{x}_{c} f(t) \, dt = f(x)</me>
+    </p>
+    <p>
+      For the function <m>G(x)</m>, the integrand is <m>f(t) = \frac{1}{t}</m>, which is continuous for all <m>t \gt 0</m>. The lower limit of integration is the constant <m>c = 1</m>, and the upper limit is the single variable <m>x</m>.
+    </p>
+    <p>
+      Applying the theorem directly, we replace the dummy variable <m>t</m> with the upper limit variable <m>x</m>:
+      <me>G'(x) = \frac{d}{dx} \int^{x}_{1} \frac{1}{t} \, dt = \frac{1}{x}</me>
+    </p>
+    <p>
+      Therefore, for <m>x \gt 0</m>, the derivative is <m>G'(x) = \dfrac{1}{x}</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="exe-derivative-of-integrals">
+  <title>Derivatives of Integrals with Variable Bounds</title>
+  <statement>
+    <p>
+      Find <m>\dfrac{dy}{dx}</m> for each of the following functions:
+      <ol marker="1">
+        <li> <p> <m>y=\displaystyle \int^{x}_{0} \sqrt{1+t^{2}}\,dt</m> </p> </li>
+        <li> <p> <m>y=\displaystyle \int^{x^2}_{0} \cos\sqrt{t}\,dt</m> </p> </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p> We find each derivative using the Fundamental Theorem of Calculus (FTC), Part 1. </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            The upper limit of integration is a simple variable <m>x</m>, and the lower limit is a constant. By the direct application of FTC Part 1, we replace the dummy variable <m>t</m> with the upper bound variable <m>x</m>:
+            <me>\frac{dy}{dx} = \frac{d}{dx} \int^{x}_{0} \sqrt{1+t^{2}}\,dt = \sqrt{1+x^{2}}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            The upper limit of integration is a function of <m>x</m>, namely <m>u = x^2</m>. Therefore, we must apply the Chain Rule along with FTC Part 1:
+            <me>\frac{dy}{dx} = \frac{d}{du}\left[ \int^{u}_{0} \cos\sqrt{t}\,dt \right] \cdot \frac{du}{dx}</me>
+          </p>
+          <p>
+            Differentiating with respect to <m>u</m> gives the evaluated integrand <m>\cos\sqrt{u}</m>, and the derivative of the upper bound is <m>\frac{du}{dx} = 2x</m>. Substituting these back in gives:
+            <md>
+              <mrow>\frac{dy}{dx} \amp = \cos\sqrt{x^2} \cdot \frac{d}{dx}(x^2)</mrow>
+              <mrow>\amp = \cos(|x|) \cdot 2x</mrow>
+            </md>
+            Assuming <m>x \geq 0</m>, this simplifies beautifully to:
+            <me>\frac{dy}{dx} = 2x\cos(x)</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-ivp-secant">
+  <title>Solving an Initial Value Problem</title>
+  <statement>
+    <p>
+      Solve the initial value problem:
+      <me>\frac{dy}{dx}=\sec^{2} x, \quad y(2)=3</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the general solution, we integrate both sides of the differential equation with respect to <m>x</m>:
+      <me>y(x) = \int \sec^2 x \, dx</me>
+    </p>
+    <p>
+      Since the derivative of <m>\tan x</m> is <m>\sec^2 x</m>, the general antiderivative introduces an arbitrary constant <m>C</m>:
+      <me>y(x) = \tan x + C</me>
+    </p>
+    <p>
+      Next, we use the given initial condition <m>y(2) = 3</m> to solve for the specific constant <m>C</m>. Substituting <m>x = 2</m> and <m>y = 3</m> (using radian measure for the trigonometric function):
+      <md>
+        <mrow>3 \amp = \tan(2) + C</mrow>
+        <mrow>C \amp = 3 - \tan(2)</mrow>
+      </md>
+    </p>
+    <p>
+      Substituting the value of <m>C</m> back into our general equation yields the particular solution:
+      <me>y(x) = \tan x + 3 - \tan(2)</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-second-order-ivp">
+  <title>Solving a Second-Order Initial Value Problem</title>
+  <statement>
+    <p>
+      Find the function <m>f</m> that satisfies the following conditions:
+      <me>f''(x)=1-6x+48x^{2}, \quad f(0)=1, \quad f'(0)=2</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We solve for <m>f(x)</m> by integrating the second derivative successively. First, we find the first derivative, <m>f'(x)</m>, by integrating <m>f''(x)</m> with respect to <m>x</m>:
+      <md>
+        <mrow>f'(x) \amp = \int (1 - 6x + 48x^2) \, dx</mrow>
+        <mrow>\amp = x - 6\left(\frac{x^2}{2}\right) + 48\left(\frac{x^3}{3}\right) + C_1</mrow>
+        <mrow>\amp = x - 3x^2 + 16x^3 + C_1</mrow>
+      </md>
+    </p>
+    <p>
+      We apply the first initial condition, <m>f'(0) = 2</m>, to determine the value of the integration constant <m>C_1</m>:
+      <md>
+        <mrow>2 \amp = (0) - 3(0)^2 + 16(0)^3 + C_1</mrow>
+        <mrow>C_1 \amp = 2</mrow>
+      </md>
+      Thus, the specific expression for the first derivative is:
+      <me>f'(x) = 16x^3 - 3x^2 + x + 2</me>
+    </p>
+    <p>
+      Next, we integrate <m>f'(x)</m> with respect to <m>x</m> to find the original function <m>f(x)</m>:
+      <md>
+        <mrow>f(x) \amp = \int (16x^3 - 3x^2 + x + 2) \, dx</mrow>
+        <mrow>\amp = 16\left(\frac{x^4}{4}\right) - 3\left(\frac{x^3}{3}\right) + \frac{x^2}{2} + 2x + C_2</mrow>
+        <mrow>\amp = 4x^4 - x^3 + \frac{1}{2}x^2 + 2x + C_2</mrow>
+      </md>
+    </p>
+    <p>
+      We apply the second initial condition, <m>f(0) = 1</m>, to determine the final integration constant <m>C_2</m>:
+      <md>
+        <mrow>1 \amp = 4(0)^4 - (0)^3 + \frac{1}{2}(0)^2 + 2(0) + C_2</mrow>
+        <mrow>C_2 \amp = 1</mrow>
+      </md>
+    </p>
+    <p>
+      Therefore, the unique function satisfying the given initial value problem is:
+      <me>f(x) = 4x^4 - x^3 + \frac{1}{2}x^2 + 2x + 1</me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-ftc-evaluation-tasks">
+  <title>Evaluating Definite Integrals</title>
+  <introduction>
+    <p>
+      Evaluate each of the following definite integrals using the Fundamental Theorem of Calculus:
+    </p>
+  </introduction>
+
+  <!-- TASK 1 -->
+  <task>
+    <statement>
+      <p> <m>\displaystyle \int^{\pi}_{0} \sin x \, dx</m> </p>
+    </statement>
+    <solution>
+      <p>
+        The general antiderivative of <m>\sin x</m> is <m>-\cos x</m>. 
+        Applying the Fundamental Theorem of Calculus, Part 2:
+        <md>
+          <mrow>\int^{\pi}_{0} \sin x \, dx \amp = \left[ -\cos x \right]^{\pi}_{0}</mrow>
+          <mrow>\amp = (-\cos\pi) - (-\cos 0)</mrow>
+          <mrow>\amp = (-(-1)) - (-1)</mrow>
+          <mrow>\amp = 1 + 1 = 2</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 2 -->
+  <task>
+    <statement>
+      <p> <m>\displaystyle \int^{\pi}_{0} \cos x \, dx</m> </p>
+    </statement>
+    <solution>
+      <p>
+        The general antiderivative of <m>\cos x</m> is <m>\sin x</m>. 
+        Evaluating across the bounds:
+        <md>
+          <mrow>\int^{\pi}_{0} \cos x \, dx \amp = \left[ \sin x \right]^{\pi}_{0}</mrow>
+          <mrow>\amp = \sin\pi - \sin 0</mrow>
+          <mrow>\amp = 0 - 0 = 0</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 3 -->
+  <task>
+    <statement>
+      <p> <m>\displaystyle \int^{1}_{-1}(x^{4}+3x^{2}+1)\,dx</m> </p>
+    </statement>
+    <solution>
+      <p>
+        The integrand <m>f(x) = x^4 + 3x^2 + 1</m> consists entirely of even powers, making it an <em>even function</em> (<m>f(-x) = f(x)</m>). Since the integration interval is symmetric across the origin (<m>[-1, 1]</m>), we can simplify using the even function property:
+        <me>\int^{1}_{-1}(x^{4}+3x^{2}+1)\,dx = 2\int^{1}_{0}(x^{4}+3x^{2}+1)\,dx</me>
+      </p>
+      <p>
+        Integrating term-by-term using the power rule:
+        <md>
+          <mrow>\amp = 2 \left[ \frac{x^5}{5} + \frac{3x^3}{3} + x \right]^{1}_{0}</mrow>
+          <mrow>\amp = 2 \left[ \frac{x^5}{5} + x^3 + x \right]^{1}_{0}</mrow>
+          <mrow>\amp = 2 \left( \left(\frac{1}{5} + 1 + 1\right) - 0 \right)</mrow>
+          <mrow>\amp = 2 \left( \frac{1}{5} + \frac{10}{5} \right) = 2 \left(\frac{11}{5}\right) = \frac{22}{5}</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+
+  <!-- TASK 4 -->
+  <task>
+    <statement>
+      <p> <m>\displaystyle \int^{5}_{-5}(2x^{3}+3x^{2}+7x)\,dx</m> </p>
+    </statement>
+    <solution>
+      <p>
+        We can split the integrand into an odd component and an even component using the linearity properties of integration:
+        <me>\int^{5}_{-5}(2x^{3}+3x^{2}+7x)\,dx = \int^{5}_{-5}(2x^{3}+7x)\,dx + \int^{5}_{-5}3x^{2}\,dx</me>
+      </p>
+      <p>
+        The function <m>g(x) = 2x^3 + 7x</m> contains only odd exponents, meaning it is an <em>odd function</em> (<m>g(-x) = -g(x)</m>). Over a symmetric interval <m>[-5, 5]</m>, its integral evaluates directly to <m>0</m>.
+      </p>
+      <p>
+        The remaining part, <m>h(x) = 3x^2</m>, is an <em>even function</em>. We can rewrite the problem as:
+        <md>
+          <mrow>\amp = 0 + 2\int^{5}_{0}3x^{2}\,dx</mrow>
+          <mrow>\amp = 6 \int^{5}_{0}x^{2}\,dx</mrow>
+          <mrow>\amp = 6 \left[ \frac{x^3}{3} \right]^{5}_{0} = 2 \left[ x^3 \right]^{5}_{0}</mrow>
+          <mrow>\amp = 2(5^3 - 0) = 2(125) = 250</mrow>
+        </md>
+      </p>
+    </solution>
+  </task>
+</exercise>
+
+<example xml:id="ex-area-under-sine">
+  <title>Area Under a Sine Curve</title>
+  <statement>
+    <p>
+      Find the area of the region between the graph of <m>y=\sin x</m> and the <m>x</m>-axis from <m>x=0</m> to <m>x=\pi</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Since <m>\sin x \geq 0</m> on the entire interval <m>[0, \pi]</m>, the area <m>A</m> of the region is given directly by the definite integral of the function over this interval:
+      <me>A = \int_{0}^{\pi} \sin x \, dx</me>
+    </p>
+
+    <figure xml:id="fig-sine-area-region">
+      <title>The region under <m>y = \sin x</m> from <m>x = 0</m> to <m>x = \pi</m></title>
+      <image xml:id="img-sine-area-region" width="60%">
+        <description>A graph showing one full arch of a sine wave from x=0 to x=pi, with the region underneath it shaded in blue.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=1.5]
+            % Shade the region under the sine curve
+            \fill[blue!15] (0,0) -- plot[domain=0:3.1416, samples=100] (\x, {sin(\x r)}) -- (3.1416,0) -- cycle;
+            
+            % Draw Axis Lines
+            \draw[-&gt;, thick] (-0.5,0) -- (4.0,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-0.5) -- (0,1.5) node[above] {$y$};
+            
+            % Draw Curve y = sin x
+            \draw[very thick, blue, domain=-0.2:3.5, samples=100] plot (\x, {sin(\x r)}) node[right] {$y = \sin x$};
+            
+            % Axis ticks and labels
+            \node[below left] at (0,0) {$0$};
+            \draw (1.5708,0.05) -- (1.5708,-0.05) node[below] {$\frac{\pi}{2}$};
+            \draw (3.1416,0.05) -- (3.1416,-0.05) node[below] {$\pi$};
+            \draw (0.05,1) -- (-0.05,1) node[left] {$1$};
+            
+            % Area label inside the region
+            \node at (1.5708, 0.4) [black] {$A = 2$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      The general antiderivative of <m>\sin x</m> is <m>-\cos x</m>. Applying the Fundamental Theorem of Calculus, Part 2:
+      <md>
+        <mrow>A \amp = \left[ -\cos x \right]_{0}^{\pi}</mrow>
+        <mrow>\amp = (-\cos\pi) - (-\cos 0)</mrow>
+        <mrow>\amp = (-(-1)) - (-1)</mrow>
+        <mrow>\amp = 1 + 1 = 2</mrow>
+      </md>
+    </p>
+    <p>
+      Therefore, the area of the region under the sine curve on this interval is exactly <m>2</m> square units.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="exe-area-split-polynomial">
+  <title>Area of a Region Crossing the <m>x</m>-Axis</title>
+  <statement>
+    <p>
+      Find the area of the region between the graph of 
+      <me>f(x)=x^{3}-3x^{2}+2x</me> 
+      and the <m>x</m>-axis from <m>x=0</m> to <m>x=2</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      To find the total area rather than the net displacement, we must first locate where the function crosses the <m>x</m>-axis by finding its roots on the interval <m>[0,2]</m>. We factor the polynomial:
+      <me>f(x) = x(x^2 - 3x + 2) = x(x-1)(x-2)</me>
+      Setting <m>f(x) = 0</m> gives roots at <m>x = 0</m>, <m>x = 1</m>, and <m>x = 2</m>.
+    </p>
+    <p>
+      We analyze the sign of the function on the resulting subintervals:
+      <ul>
+        <li><p>On <m>[0,1]</m>, <m>f(x) \geq 0</m> (the curve lies above the <m>x</m>-axis).</p></li>
+        <li><p>On <m>[1,2]</m>, <m>f(x) \leq 0</m> (the curve lies below the <m>x</m>-axis).</p></li>
+      </ul>
+      Therefore, the total area <m>A</m> must be split into two separate definite integrals, negating the integral over the negative region:
+      <me>A = \int_{0}^{1} (x^3 - 3x^2 + 2x) \, dx - \int_{1}^{2} (x^3 - 3x^2 + 2x) \, dx</me>
+    </p>
+<figure xml:id="fig-polynomial-split-area">
+  <title>Shaded total area bounded by <m>y = x^3 - 3x^2 + 2x</m></title>
+  <image xml:id="img-polynomial-split-area" width="65%">
+    <description>A cubic function plot crossing the x-axis at 0, 1, and 2. The region from 0 to 1 is shaded blue above the axis, and the region from 1 to 2 is shaded red below the axis.</description>
+    <latex-image>
+      \begin{tikzpicture}[scale=2]
+        % Shade positive region (0 to 1)
+        \fill[blue!15] (0,0) -- plot[domain=0:1, samples=100] (\x, {\x^3 - 3*\x^2 + 2*\x}) -- (1,0) -- cycle;
+        
+        % Shade negative region (1 to 2)
+        \fill[red!15] (1,0) -- plot[domain=1:2, samples=100] (\x, {\x^3 - 3*\x^2 + 2*\x}) -- (2,0) -- cycle;
+        
+        % Draw Axis Lines
+        \draw[-&gt;, thick] (-0.3,0) -- (2.4,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-0.6) -- (0,0.6) node[above] {$y$};
+        
+        % Draw Curve
+        \draw[very thick, blue, domain=-0.1:2.2, samples=100] plot (\x, {\x^3 - 3*\x^2 + 2*\x}) node[right] {$y = f(x)$};
+        
+        % Fixed Labels and roots (Removed invalid 'victory' typos)
+        \node[below left] at (0,0) {$0$};
+        \node[below, yshift=-3pt] at (1,0) {$1$};
+        \node[above, yshift=3pt] at (2,0) {$2$};
+        
+        % Area value labels
+        \node at (0.5, 0.12) [black, scale=0.8] {$A_1 = \frac{1}{4}$};
+        \node at (1.5, -0.12) [black, scale=0.8] {$A_2 = \frac{1}{4}$};
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+    <p>
+      First, we compute the general antiderivative, <m>F(x)</m>:
+      <me>F(x) = \int (x^3 - 3x^2 + 2x) \, dx = \frac{x^4}{4} - x^3 + x^2</me>
+    </p>
+    <p>
+      Now, we evaluate the first integral over <m>[0,1]</m>:
+      <md>
+        <mrow>\int_{0}^{1} (x^3 - 3x^2 + 2x) \, dx \amp = \left[ \frac{x^4}{4} - x^3 + x^2 \right]_{0}^{1}</mrow>
+        <mrow>\amp = \left( \frac{1}{4} - 1 + 1 \right) - 0 = \frac{1}{4}</mrow>
+      </md>
+    </p>
+    <p>
+      Next, we evaluate the second integral over <m>[1,2]</m>:
+      <md>
+        <mrow>\int_{1}^{2} (x^3 - 3x^2 + 2x) \, dx \amp = \left[ \frac{x^4}{4} - x^3 + x^2 \right]_{1}^{2}</mrow>
+        <mrow>\amp = \left( \frac{2^4}{4} - 2^3 + 2^2 \right) - \left( \frac{1}{4} - 1 + 1 \right)</mrow>
+        <mrow>\amp = (4 - 8 + 4) - \frac{1}{4} = 0 - \frac{1}{4} = -\frac{1}{4}</mrow>
+      </md>
+    </p>
+    <p>
+      Finally, we add the absolute values of the two component areas to determine the total bounded 
+      space:
+      <me>A = \frac{1}{4} - \left(-\frac{1}{4}\right) = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}</me>
+    </p>
+    <p>
+      Therefore, the total area of the region bounded between the curve and the <m>x</m>-axis is 
+      exactly <m>\dfrac{1}{2}</m> square units.
+    </p>
+  </solution>
+</exercise>
+
+
+
+  
 </section>

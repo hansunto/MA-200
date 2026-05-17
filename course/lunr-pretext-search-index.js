@@ -3448,6 +3448,150 @@ var ptx_lunr_docs = [
   "body": " Area of a Region Crossing the -Axis   Find the area of the region between the graph of and the -axis from to .    To find the total area rather than the net displacement, we must first locate where the function crosses the -axis by finding its roots on the interval . We factor the polynomial: Setting gives roots at , , and .  We analyze the sign of the function on the resulting subintervals:  On , (the curve lies above the -axis).  On , (the curve lies below the -axis).  Therefore, the total area must be split into two separate definite integrals, negating the integral over the negative region:    Shaded total area bounded by   A cubic function plot crossing the x-axis at 0, 1, and 2. The region from 0 to 1 is shaded blue above the axis, and the region from 1 to 2 is shaded red below the axis.     First, we compute the general antiderivative, :   Now, we evaluate the first integral over :   Next, we evaluate the second integral over :   Finally, we add the absolute values of the two component areas to determine the total bounded space:   Therefore, the total area of the region bounded between the curve and the -axis is exactly square units.   "
 },
 {
+  "id": "sec-indefinite-integrals-substitution",
+  "level": "1",
+  "url": "sec-indefinite-integrals-substitution.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.4 Indefinite Integrals and Substitution Rule",
+  "body": " 4.4 Indefinite Integrals and Substitution Rule  The variable can be replaced by a new variable to find indefinite integrals. This technique is referred to as a change of variable , or the method of substitution .   Method of Substitution  If is an antiderivative of , then: If and then:     Integral of the Tangent Function   The general indefinite integral of the tangent function is given by:     We begin by rewriting the tangent function in terms of sine and cosine:   We use the method of substitution by letting the denominator be our new variable: Taking the differential of both sides gives:   Substituting and back into the integral equation yields:   Replacing with the original expression results in our first general form:   Using the logarithmic power property ( ), we can rewrite the expression to eliminate the negative sign:      Integral of the Secant Function   The indefinite integral of the secant function is:      Deriving the Integral of Secant   Evaluate the indefinite integral to find its general formula.    We use a classic integration trick by multiplying the numerator and denominator by :   Now, we apply the method of substitution by letting the denominator be our new variable: Taking the differential of both sides yields:   Notice that the numerator is an exact match for . Substituting and back into our expression transforms it into a standard logarithmic integration form:      Evaluating Indefinite Integrals via Substitution   Evaluate each of the following indefinite integrals:           Let . Then , which means . Substituting these into the integral gives: Substituting back :             Let . Then . The substitution is a direct match: Substituting back :             Let . Then . This yields the standard natural log integration form: Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which implies : Substituting back :             Let . Then . This aligns perfectly with the standard power rule profile: Substituting back :   An alternative choice of substitution (where ) yields . Both answers are correct as they differ only by a trigonometric constant identity threshold ( ).        Further Indefinite Integrals via Substitution   Evaluate each of the following indefinite integrals:           Let . Then , which means . Substituting these into the integral gives: Substituting back yields:             Let . Then , which implies . Substituting these gives: Substituting back yields:             Let . Using the chain rule, , which means . Substituting these gives: Substituting back yields:             First, expand the integrand algebraically before evaluating:   Using the Pythagorean identity and the double-angle identity , we rewrite the integral without needing a raw -substitution:             First, rewrite the integrand using the identity : Let . Then , which means . Substituting these into the formula gives: Substituting back yields:             Rewrite the integrand using the identity : Let . Then , which means . Knowing that the antiderivative of is : Substituting back yields:       Indefinite Integrals of the Six Trigonometric Functions                                           "
+},
+{
+  "id": "sec-indefinite-integrals-substitution-2",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#sec-indefinite-integrals-substitution-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "change of variable method of substitution "
+},
+{
+  "id": "fact-integral-tangent",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#fact-integral-tangent",
+  "type": "Fact",
+  "number": "350",
+  "title": "Integral of the Tangent Function.",
+  "body": " Integral of the Tangent Function   The general indefinite integral of the tangent function is given by:     We begin by rewriting the tangent function in terms of sine and cosine:   We use the method of substitution by letting the denominator be our new variable: Taking the differential of both sides gives:   Substituting and back into the integral equation yields:   Replacing with the original expression results in our first general form:   Using the logarithmic power property ( ), we can rewrite the expression to eliminate the negative sign:    "
+},
+{
+  "id": "fact-integral-secant",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#fact-integral-secant",
+  "type": "Fact",
+  "number": "351",
+  "title": "Integral of the Secant Function.",
+  "body": " Integral of the Secant Function   The indefinite integral of the secant function is:    "
+},
+{
+  "id": "ex-integral-secant-derivation",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#ex-integral-secant-derivation",
+  "type": "Example",
+  "number": "352",
+  "title": "Deriving the Integral of Secant.",
+  "body": " Deriving the Integral of Secant   Evaluate the indefinite integral to find its general formula.    We use a classic integration trick by multiplying the numerator and denominator by :   Now, we apply the method of substitution by letting the denominator be our new variable: Taking the differential of both sides yields:   Notice that the numerator is an exact match for . Substituting and back into our expression transforms it into a standard logarithmic integration form:    "
+},
+{
+  "id": "ex-substitution-examples",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#ex-substitution-examples",
+  "type": "Example",
+  "number": "353",
+  "title": "Evaluating Indefinite Integrals via Substitution.",
+  "body": " Evaluating Indefinite Integrals via Substitution   Evaluate each of the following indefinite integrals:           Let . Then , which means . Substituting these into the integral gives: Substituting back :             Let . Then . The substitution is a direct match: Substituting back :             Let . Then . This yields the standard natural log integration form: Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which means : Substituting back :             Let . Then , which implies : Substituting back :             Let . Then . This aligns perfectly with the standard power rule profile: Substituting back :   An alternative choice of substitution (where ) yields . Both answers are correct as they differ only by a trigonometric constant identity threshold ( ).      "
+},
+{
+  "id": "exe-substitution-more-examples",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#exe-substitution-more-examples",
+  "type": "Checkpoint",
+  "number": "355",
+  "title": "Further Indefinite Integrals via Substitution.",
+  "body": " Further Indefinite Integrals via Substitution   Evaluate each of the following indefinite integrals:           Let . Then , which means . Substituting these into the integral gives: Substituting back yields:             Let . Then , which implies . Substituting these gives: Substituting back yields:             Let . Using the chain rule, , which means . Substituting these gives: Substituting back yields:             First, expand the integrand algebraically before evaluating:   Using the Pythagorean identity and the double-angle identity , we rewrite the integral without needing a raw -substitution:             First, rewrite the integrand using the identity : Let . Then , which means . Substituting these into the formula gives: Substituting back yields:             Rewrite the integrand using the identity : Let . Then , which means . Knowing that the antiderivative of is : Substituting back yields:     "
+},
+{
+  "id": "table-trig-integrals",
+  "level": "2",
+  "url": "sec-indefinite-integrals-substitution.html#table-trig-integrals",
+  "type": "Table",
+  "number": "356",
+  "title": "Indefinite Integrals of the Six Trigonometric Functions",
+  "body": " Indefinite Integrals of the Six Trigonometric Functions                                          "
+},
+{
+  "id": "sec-area-between-curves",
+  "level": "1",
+  "url": "sec-area-between-curves.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.5 Area Between Curves",
+  "body": " 4.5 Area Between Curves   Area Between Bounded Graphs   If and are continuous and for every in , then the area of the region bounded by the graphs of and , and the vertical lines and is:      Guidelines for Finding the Area of a Region     Sketch the region, labeling the upper boundary and the lower boundary .   Find the smallest value and the largest value for points in the region.    Express the area as and evaluate the definite integral.        Area Bounded by Exponential and Linear Functions   Find the area of the region bounded above by , bounded below by , and bounded on the sides by and .     Bounded Region for Example 1 (Custom Domain)   Graph of y=e^x and y=x over the domain from x=-1 to x=1.25 with the bounded region shaded between x=0 and x=1.     On the interval , the exponential function is always greater than or equal to the linear function . Setting up the integral using the upper function minus the lower function yields:       Area Enclosed by Two Parabolas   Find the area of the region enclosed by the parabolas and .     Bounded Region for Example 2   Graph of two intersecting parabolas y=x^2 and y=2x-x^2 showing the enclosed region between x=0 and x=1.     First, we find the limits of integration by locating the intersection points of the two curves. We set the quadratic equations equal to each other: This gives intersection boundaries at and .  On the interval , . Therefore, is the upper boundary and is the lower boundary. We evaluate the definite integral:      Area Between a Parabola and a Square Root Function   Find the area of the region bounded by the graphs of the equations and .    First, we find the limits of integration by finding the points of intersection for the two curves. We set the equations equal to each other: This gives real intersection boundaries at and .   Bounded region between and   Graphs of y=x^2 and y=sqrt(x) over the domain from x=-1 to x=1.5 with the bounded region shaded between x=0 and x=1.     On the interval , evaluating a test point like shows that . Therefore, is the upper boundary and is the lower boundary (see ).  We set up and evaluate the definite integral using the power rule:   The exact area of the bounded region is square units.     Area Bounded by Three Intersecting Curves   Find the area of the region bounded by the graphs of the equations , , and .    First, we rewrite each equation explicitly in terms of :  Line 1 ( ):  Cubic Curve ( ):  Line 2 ( ):    Next, we find the three intersection points to define our boundaries:   Intersection of and : This gives the vertex point .    Intersection of and : This gives the vertex point .    Intersection of and : This gives the vertex point .      Region bounded by , , and   Graph of the three functions on the domain from x=-5 to x=3, showing a split shaded region spanning from x=-4 to x=2.     As seen in , the upper boundary of the region is always the line . However, the lower boundary changes at . Therefore, the area must be split into two separate definite integrals:   We evaluate the first area component ( ) from to :   We evaluate the second area component ( ) from to :   Summing the two subregions yields the total area of the bounded space:   Therefore, the total area of the bounded region is exactly square units.     Area Bounded by Sine and Cosine Functions   Find the area of the region bounded by the curves , , , and .     Region bounded by and on   Plot of sine and cosine intersecting at pi\/4. The region where cosine is above sine from 0 to pi\/4, and where sine is above cosine from pi\/4 to pi\/2, are both shaded in light blue.     To find the total area of the bounded region, we first find where the two curves intersect on the interval . We set the equations equal to each other:   This intersection splits our interval into two symmetric subregions where the boundaries swap positions:  On , (Cosine is the upper boundary).  On , (Sine is the upper boundary).  We express the total area as the sum of two separate definite integrals:   We evaluate the first definite integral component:   We evaluate the second definite integral component:   Summing the two subregions yields the final area value:   Therefore, the exact area of the bounded region is square units.     Area Enclosed by a Parabola and a Line   Find the area of the region between and .     Region enclosed by and   A line y=2x passing through the origin and intersecting the parabola y=x^2 at the point (2,4). The region enclosed between them is shaded in light blue with a perfect 1:1 ratio.     First, we find the limits of integration by finding the points of intersection for the two curves. We set the quadratic and linear expressions equal to each other: This gives intersection boundaries at and .  On the interval , testing a point like shows that . Therefore, the line is the upper boundary and the parabola is the lower boundary.  We set up and evaluate the definite integral using the standard power rule:   The exact area of the enclosed region is square units.    "
+},
+{
+  "id": "thm-area-between-curves",
+  "level": "2",
+  "url": "sec-area-between-curves.html#thm-area-between-curves",
+  "type": "Theorem",
+  "number": "357",
+  "title": "Area Between Bounded Graphs.",
+  "body": " Area Between Bounded Graphs   If and are continuous and for every in , then the area of the region bounded by the graphs of and , and the vertical lines and is:    "
+},
+{
+  "id": "ex-area-exponential-linear",
+  "level": "2",
+  "url": "sec-area-between-curves.html#ex-area-exponential-linear",
+  "type": "Example",
+  "number": "358",
+  "title": "Area Bounded by Exponential and Linear Functions.",
+  "body": " Area Bounded by Exponential and Linear Functions   Find the area of the region bounded above by , bounded below by , and bounded on the sides by and .     Bounded Region for Example 1 (Custom Domain)   Graph of y=e^x and y=x over the domain from x=-1 to x=1.25 with the bounded region shaded between x=0 and x=1.     On the interval , the exponential function is always greater than or equal to the linear function . Setting up the integral using the upper function minus the lower function yields:    "
+},
+{
+  "id": "ex-area-two-parabolas",
+  "level": "2",
+  "url": "sec-area-between-curves.html#ex-area-two-parabolas",
+  "type": "Example",
+  "number": "360",
+  "title": "Area Enclosed by Two Parabolas.",
+  "body": " Area Enclosed by Two Parabolas   Find the area of the region enclosed by the parabolas and .     Bounded Region for Example 2   Graph of two intersecting parabolas y=x^2 and y=2x-x^2 showing the enclosed region between x=0 and x=1.     First, we find the limits of integration by locating the intersection points of the two curves. We set the quadratic equations equal to each other: This gives intersection boundaries at and .  On the interval , . Therefore, is the upper boundary and is the lower boundary. We evaluate the definite integral:    "
+},
+{
+  "id": "exe-area-between-parabola-root",
+  "level": "2",
+  "url": "sec-area-between-curves.html#exe-area-between-parabola-root",
+  "type": "Checkpoint",
+  "number": "362",
+  "title": "Area Between a Parabola and a Square Root Function.",
+  "body": " Area Between a Parabola and a Square Root Function   Find the area of the region bounded by the graphs of the equations and .    First, we find the limits of integration by finding the points of intersection for the two curves. We set the equations equal to each other: This gives real intersection boundaries at and .   Bounded region between and   Graphs of y=x^2 and y=sqrt(x) over the domain from x=-1 to x=1.5 with the bounded region shaded between x=0 and x=1.     On the interval , evaluating a test point like shows that . Therefore, is the upper boundary and is the lower boundary (see ).  We set up and evaluate the definite integral using the power rule:   The exact area of the bounded region is square units.   "
+},
+{
+  "id": "exe-area-three-curves",
+  "level": "2",
+  "url": "sec-area-between-curves.html#exe-area-three-curves",
+  "type": "Checkpoint",
+  "number": "364",
+  "title": "Area Bounded by Three Intersecting Curves.",
+  "body": " Area Bounded by Three Intersecting Curves   Find the area of the region bounded by the graphs of the equations , , and .    First, we rewrite each equation explicitly in terms of :  Line 1 ( ):  Cubic Curve ( ):  Line 2 ( ):    Next, we find the three intersection points to define our boundaries:   Intersection of and : This gives the vertex point .    Intersection of and : This gives the vertex point .    Intersection of and : This gives the vertex point .      Region bounded by , , and   Graph of the three functions on the domain from x=-5 to x=3, showing a split shaded region spanning from x=-4 to x=2.     As seen in , the upper boundary of the region is always the line . However, the lower boundary changes at . Therefore, the area must be split into two separate definite integrals:   We evaluate the first area component ( ) from to :   We evaluate the second area component ( ) from to :   Summing the two subregions yields the total area of the bounded space:   Therefore, the total area of the bounded region is exactly square units.   "
+},
+{
+  "id": "exe-area-sine-cosine-split",
+  "level": "2",
+  "url": "sec-area-between-curves.html#exe-area-sine-cosine-split",
+  "type": "Checkpoint",
+  "number": "366",
+  "title": "Area Bounded by Sine and Cosine Functions.",
+  "body": " Area Bounded by Sine and Cosine Functions   Find the area of the region bounded by the curves , , , and .     Region bounded by and on   Plot of sine and cosine intersecting at pi\/4. The region where cosine is above sine from 0 to pi\/4, and where sine is above cosine from pi\/4 to pi\/2, are both shaded in light blue.     To find the total area of the bounded region, we first find where the two curves intersect on the interval . We set the equations equal to each other:   This intersection splits our interval into two symmetric subregions where the boundaries swap positions:  On , (Cosine is the upper boundary).  On , (Sine is the upper boundary).  We express the total area as the sum of two separate definite integrals:   We evaluate the first definite integral component:   We evaluate the second definite integral component:   Summing the two subregions yields the final area value:   Therefore, the exact area of the bounded region is square units.   "
+},
+{
+  "id": "exe-area-parabola-line",
+  "level": "2",
+  "url": "sec-area-between-curves.html#exe-area-parabola-line",
+  "type": "Checkpoint",
+  "number": "368",
+  "title": "Area Enclosed by a Parabola and a Line.",
+  "body": " Area Enclosed by a Parabola and a Line   Find the area of the region between and .     Region enclosed by and   A line y=2x passing through the origin and intersecting the parabola y=x^2 at the point (2,4). The region enclosed between them is shaded in light blue with a perfect 1:1 ratio.     First, we find the limits of integration by finding the points of intersection for the two curves. We set the quadratic and linear expressions equal to each other: This gives intersection boundaries at and .  On the interval , testing a point like shows that . Therefore, the line is the upper boundary and the parabola is the lower boundary.  We set up and evaluate the definite integral using the standard power rule:   The exact area of the enclosed region is square units.   "
+},
+{
   "id": "notes-Limits-and-Derivatives-chapter-exercises",
   "level": "1",
   "url": "notes-Limits-and-Derivatives-chapter-exercises.html",
@@ -3641,7 +3785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "notes-Differentiation-Rules-chapter-exercises.html#table-derivative-limit-definitions",
   "type": "Table",
-  "number": "353",
+  "number": "373",
   "title": "The derivative Table",
   "body": " The derivative Table  Core Functions and Analytical Derivatives       Simplified Derivative Formula                                                "
 },

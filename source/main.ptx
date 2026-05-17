@@ -142,10 +142,44 @@
   <chapter xml:id="ch-Integrals">
       <title>4. Integrals </title>
       <introduction>
-        <p>
-          
-        </p>
-      </introduction>
+    <p> Up until now, you have been studying derivatives, which are all about measuring how fast things change. 
+        In this chapter, we are going to flip things around and look at the second main branch of calculus: 
+        <strong>Integration</strong>. Instead of looking at speed or rates of change, 
+        integration is all about measuring how things build up or accumulate over time.
+    </p>
+    <p> We will start with a classic geometric riddle: 
+      How do you find the exact area inside a shape with a curved border? 
+      You will see how we can estimate this area by filling the shape with simple rectangles, 
+      and how making those rectangles skinnier and skinnier leads us to the exact answer. 
+    </p>
+    <p>
+      The fun part of this chapter is the <strong>Fundamental Theorem of Calculus</strong>. 
+      This theorem reveals a beautiful connection: differentiation and integration are actually 
+      exact opposites, just like multiplication and division! Once you master this shortcut, 
+      you will learn practical techniques to calculate these areas quickly without drawing a single 
+      rectangle.
+    </p>
+    
+    <objectives>
+      <p>By the end of this chapter, you will be able to:</p>
+      <ul>
+        <li> <p> Estimate the area under a curved line by drawing and calculating the areas of standard rectangles.
+          </p> </li>
+        <li> <p> Understand what a definite integral means and use basic geometry shapes 
+            (like circles and triangles) to solve them.
+        </p> </li>
+        <li> <p> Use the Fundamental Theorem of Calculus shortcuts to solve integration problems
+             without using long limits.
+        </p> </li>
+        <li> <p> Use the <m>u</m>-substitution method (the "reverse chain rule") to simplify and solve 
+            trickier algebraic and trigonometric equations.
+        </p> </li>
+        <li> <p> Sketch graphs where lines cross over each other and calculate the exact space 
+            trapped between those curves.
+        </p> </li>
+      </ul>
+    </objectives>
+    </introduction>
 
       <xi:include href="./notes/41Area.ptx" />
       <xi:include href="./notes/42DefiniteInt.ptx" />
@@ -168,7 +202,7 @@
       <xi:include href="./notes/limitschex.ptx"/>
       <xi:include href="./notes/DiffChEx.ptx"/>
       <xi:include href="./notes/AppChEx.ptx"/>
-      
+      <xi:include href="./notes/IntChEx.ptx"/>
       
       <!-- Add more xi:include files here to include them in the main course -->
       <!--<xi:include href="./notes/week01.ptx"/>

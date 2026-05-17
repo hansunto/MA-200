@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-Integrals-chapter-exercises">
+  <title>4. Integrals- Chapter Exercises</title>
+ 
+  <introduction>
+    <p>
+      This review section is designed to help you test your understanding of everything we covered in this chapter. You will find problems that combine properties of definite integrals, particle motion apps, the Fundamental Theorem of Calculus, and areas bounded by overlapping graphs.
+    </p>
+    <p>
+      <strong>Study Tip:</strong> Before moving into the algebra for the integration problems, take a moment to look at the structure of the integrand. Ask yourself: 
+      <ul>
+        <li><p>Can this be simplified first using basic algebra or trigonometry tricks?</p></li>
+        <li><p>Is there a clear composite function that makes it a candidate for <m>u</m>-substitution?</p></li>
+        <li><p>Are the limits of integration symmetric, allowing you to use odd or even function shortcuts?</p></li>
+      </ul>
+      Work through these systematically to build your confidence for upcoming exams!
+    </p>
+  </introduction>
+ 
+<exercises workplace="Integrals Exercises">
+
+  <!-- EXERCISE 1 -->
+  <exercise xml:id="exe-review-additivity">
+    <statement>
+      <p>
+        If <m>\int^{6}_{0} f(x) \, dx=10</m> and <m>\int^{4}_{0} f(x) \, dx=7</m>, find <m>\int^{6}_{4} f(x) \, dx</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Using the additive interval property of definite integrals, we know that:
+        <me>\int^{6}_{0} f(x) \, dx = \int^{4}_{0} f(x) \, dx + \int^{6}_{4} f(x) \, dx</me>
+        Substituting the given values into the equation yields:
+        <me>10 = 7 + \int^{6}_{4} f(x) \, dx \implies \int^{6}_{4} f(x) \, dx = 10 - 7 = 3</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 2 -->
+  <exercise xml:id="exe-review-evaluations">
+    <statement>
+      <p>Evaluate each of the following integrals:</p>
+    </statement>
+    
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{2}_{1} \left(8x^{3}+3x^{2}-\frac{2}{x^{3}}\right) \, dx</m></p>
+      </statement>
+      <solution>
+        <p>
+          First, rewrite the final term using negative exponents: <m>2x^{-3}</m>. Integrating term-by-term via the power rule gives:
+          <md>
+            <mrow>\amp = \left[ 8\left(\frac{x^4}{4}\right) + 3\left(\frac{x^3}{3}\right) - 2\left(\frac{x^{-2}}{-2}\right) \right]^{2}_{1} = \left[ 2x^4 + x^3 + \frac{1}{x^2} \right]^{2}_{1}</mrow>
+            <mrow>\amp = \left( 2(2)^4 + (2)^3 + \frac{1}{2^2} \right) - \left( 2(1)^4 + (1)^3 + \frac{1}{1^2} \right)</mrow>
+            <mrow>\amp = \left( 32 + 8 + \frac{1}{4} \right) - (2 + 1 + 1) = 40.25 - 4 = 36.25 = \frac{145}{4}</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{1}_{0} (1-x^{9}) \, dx</m></p>
+      </statement>
+      <solution>
+        <p>
+          Applying the power rule yields:
+          <me>\left[ x - \frac{x^{10}}{10} \right]^{1}_{0} = \left( 1 - \frac{1}{10} \right) - (0 - 0) = \frac{9}{10}</me>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{9}_{1} \frac{\sqrt{u}-2u^{2}}{u} \, du</m></p>
+      </statement>
+      <solution>
+        <p>
+          Simplify the quotient term-by-term before executing integration:
+          <me>\int^{9}_{1} \left( \frac{u^{1/2}}{u} - \frac{2u^2}{u} \right) \, du = \int^{9}_{1} \left( u^{-1/2} - 2u \right) \, du</me>
+          Integrating via the power rule gives:
+          <md>
+            <mrow>\amp = \left[ 2u^{1/2} - u^2 \right]^{9}_{1} = \left[ 2\sqrt{u} - u^2 \right]^{9}_{1}</mrow>
+            <mrow>\amp = \left( 2\sqrt{9} - 9^2 \right) - \left( 2\sqrt{1} - 1^2 \right)</mrow>
+            <mrow>\amp = (6 - 81) - (2 - 1) = -75 - 1 = -76</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{1}_{0} y(y^{2}+1)^{5} \, dy</m></p>
+      </statement>
+      <solution>
+        <p>
+          Use substitution: let <m>u = y^2 + 1</m>, so <m>du = 2y \, dy \implies y \, dy = \frac{1}{2} \, du</m>. 
+          Convert limits: when <m>y=0 \implies u=1</m>; when <m>y=1 \implies u=2</m>.
+          <md>
+            <mrow>\amp = \frac{1}{2} \int^{2}_{1} u^5 \, du = \frac{1}{2} \left[ \frac{u^6}{6} \right]^{2}_{1} = \frac{1}{12} (2^6 - 1^6)</mrow>
+            <mrow>\amp = \frac{1}{12} (64 - 1) = \frac{63}{12} = \frac{21}{4}</mrow>
+          </md>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{3}_{1} \frac{dt}{(t-4)^{2}}</m></p>
+      </statement>
+      <solution>
+        <p>
+          <note>
+            <p>
+              <strong>Discontinuity Warning:</strong> Notice that the integrand has an infinite asymptote at <m>t = 4</m>. While <m>t = 4</m> is outside our interval of integration <m>[1,3]</m>, the function is completely continuous on this closed region. This means we can evaluate it directly using the standard Fundamental Theorem of Calculus without improper limits.
+            </p>
+          </note>
+        </p>
+        <p>
+          We rewrite the function using a negative exponent and integrate via the power rule:
+          <md>
+            <mrow>\int^{3}_{1} (t-4)^{-2} \, dt \amp = \left[ -\frac{1}{t-4} \right]^{3}_{1}</mrow>
+            <mrow>\amp = \left( -\frac{1}{3-4} \right) - \left( -\frac{1}{1-4} \right)</mrow>
+            <mrow>\amp = \left( -\frac{1}{-1} \right) - \left( -\frac{1}{-3} \right)</mrow>
+            <mrow>\amp = 1 - \frac{1}{3} = \frac{2}{3}</mrow>
+          </md>
+        </p>
+        <p>
+          Therefore, the definite integral evaluates exactly to <m>\frac{2}{3}</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int^{1}_{0} v^{2}\cos (v^{3}) \, dv</m></p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = v^3</m>, meaning <m>du = 3v^2 \, dv \implies v^2 \, dv = \frac{1}{3} \, du</m>.
+          Bounds: <m>v=0 \implies u=0</m>; <m>v=1 \implies u=1</m>.
+          <me>\frac{1}{3} \int^{1}_{0} \cos u \, du = \frac{1}{3} \left[ \sin u \right]^{1}_{0} = \frac{1}{3}(\sin(1) - \sin(0)) = \frac{\sin(1)}{3}</me>
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p><m>\displaystyle \int \sin\pi x ~\cos \pi x \, dx</m></p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>u = \sin\pi x</m>, meaning <m>du = \pi\cos\pi x \, dx \implies \cos\pi x \, dx = \frac{1}{\pi} \, du</m>.
+          <me>\frac{1}{\pi} \int u \, du = \frac{1}{\pi} \left( \frac{u^2}{2} \right) + C = \frac{\sin^2(\pi x)}{2\pi} + C</me>
+        </p>
+      </solution>
+    </task>
+  </exercise>
+
+  <!-- EXERCISE 3 -->
+  <exercise xml:id="exe-review-particle-motion-1">
+    <statement>
+      <p>
+        A particle moves along a line with velocity function <m>v(t)=t^{2}-t</m> where <m>v</m> is measured in meters per second. Find (a) the displacement and (b) the distance traveled by the particle during the time interval <m>[0,5].</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <strong>(a) Displacement:</strong> This is simply the net change found by evaluating the direct definite integral:
+        <me>\int^{5}_{0} (t^2 - t) \, dt = \left[ \frac{t^3}{3} - \frac{t^2}{2} \right]^{5}_{0} = \left( \frac{125}{3} - \frac{25}{2} \right) - 0 = \frac{250 - 75}{6} = \frac{175}{6} \text{ meters}</me>
+      </p>
+      <p>
+        <strong>(b) Distance Traveled:</strong> This tracks total accumulated ground covered, requiring the integral of the speed function, <m>\int |v(t)| \, dt</m>. Setting <m>v(t) = t(t-1) = 0</m> shows the particle changes direction at <m>t = 1</m>.
+        <ul>
+          <li><p>On <m>[0,1]</m>, <m>v(t) \leq 0</m> (negative interval).</p></li>
+          <li><p>On <m>[1,5]</m>, <m>v(t) \geq 0</m> (positive interval).</p></li>
+        </ul>
+        <md>
+          <mrow>\text{Distance} \amp = -\int^{1}_{0} (t^2 - t) \, dt + \int^{5}_{1} (t^2 - t) \, dt</mrow>
+          <mrow>\amp = -\left[ \frac{t^3}{3} - \frac{t^2}{2} \right]^{1}_{0} + \left[ \frac{t^3}{3} - \frac{t^2}{2} \right]^{5}_{1}</mrow>
+          <mrow>\amp = -\left( \frac{1}{3} - \frac{1}{2} \right) + \left( \frac{175}{6} - \left(\frac{1}{3} - \frac{1}{2}\right) \right) = \frac{1}{6} + \frac{175}{6} + \frac{1}{6} = \frac{177}{6} = \frac{59}{2} \text{ meters}</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 4 -->
+  <exercise xml:id="exe-review-limit-to-integral">
+    <statement>
+      <p>
+        Express <me>\lim_{n\to \infty}\sum^{n}_{k=1}\sin (x_{k}) \Delta x</me> as a definite integral on the interval <m>[0,\pi]</m> and then evaluate the integral.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        By matching the limits of a Riemann sum definition, the sample function is <m>f(x) = \sin x</m>, and the limits of integration are <m>a=0</m> and <m>b=\pi</m>. The limit converts to:
+        <me>\int^{\pi}_{0} \sin x \, dx = \left[ -\cos x \right]^{\pi}_{0} = (-\cos\pi) - (-\cos 0) = 1 + 1 = 2</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 5 -->
+  <exercise xml:id="exe-review-composite-sub">
+    <statement>
+      <p>
+        If <m>f</m> is continuous and <m>\int^{2}_{0} f(x) \, dx=4</m>, evaluate: <me>\int^{\pi/2}_{0} f(2\sin \theta)\cos \theta \, d\theta</me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We execute a substitution on our target integral frame: let <m>u = 2\sin\theta</m>. Then <m>du = 2\cos\theta \, d\theta \implies \cos\theta \, d\theta = \frac{1}{2} \, du</m>.
+        Convert interval boundaries:
+        <ul>
+          <li><p>Lower limit: When <m>\theta = 0 \implies u = 2\sin(0) = 0</m>.</p></li>
+          <li><p>Upper limit: When <m>\theta = \pi/2 \implies u = 2\sin(\pi/2) = 2</m>.</p></li>
+        </ul>
+        <me>\int^{\pi/2}_{0} f(2\sin \theta)\cos \theta \, d\theta = \int^{2}_{0} f(u) \cdot \frac{1}{2} \, du = \frac{1}{2} \int^{2}_{0} f(u) \, du = \frac{1}{2}(4) = 2</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 6 -->
+  <exercise xml:id="exe-review-particle-motion-2">
+    <statement>
+      <p>
+        A particle moves along a line so that its velocity at time <m>t</m> is <m>v(t)=t^{2}-t-6</m>. Find the distance traveled during the time period <m>1\leq t\leq 4</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        To track total distance traveled, we first solve for when the velocity equals zero: <m>t^2 - t - 6 = (t-3)(t+2) = 0</m>. On our interval <m>[1,4]</m>, the direction change root occurs at <m>t = 3</m>.
+        <ul>
+          <li><p>On <m>[1,3]</m>, <m>v(t) \leq 0</m> (the particle moves backward).</p></li>
+          <li><p>On <m>[3,4]</m>, <m>v(t) \geq 0</m> (the particle moves forward).</p></li>
+        </ul>
+        We absolute-value check each area partition piece:
+        <md>
+          <mrow>\text{Distance} \amp = \int^{3}_{1} -(t^2-t-6) \, dt + \int^{4}_{3} (t^2-t-6) \, dt</mrow>
+          <mrow>\amp = -\left[ \frac{t^3}{3} - \frac{t^2}{2} - 6t \right]^{3}_{1} + \left[ \frac{t^3}{3} - \frac{t^2}{2} - 6t \right]^{4}_{3}</mrow>
+          <mrow>\amp = -\left( \left(9 - 4.5 - 18\right) - \left(\frac{1}{3} - \frac{1}{2} - 6\right) \right) + \left( \left(\frac{64}{3} - 8 - 24\right) - \left(9 - 4.5 - 18\right) \right)</mrow>
+          <mrow>\amp = -\left( -13.5 - (-6.166) \right) + \left( -10.666 - (-13.5) \right) = 7.333 + 2.833 = \frac{61}{6} \approx 10.17 \text{ meters}</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 7 -->
+  <exercise xml:id="exe-review-linearity-combination">
+    <statement>
+      <p>
+        If <m>\int^{9}_{0} f(x) \, dx=27</m> and <m>\int^{9}_{0} g(x) \, dx=16</m>, find <m>\int^{9}_{0} [2f(x)+3g(x)] \, dx.</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Applying standard linearity and constant coefficient multiple expansion parameters:
+        <md>
+          <mrow>\int^{9}_{0} [2f(x)+3g(x)] \, dx \amp = 2\int^{9}_{0} f(x) \, dx + 3\int^{9}_{0} g(x) \, dx</mrow>
+          <mrow>\amp = 2(27) + 3(16) = 54 + 48 = 102</mrow>
+        </md>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 8 -->
+  <exercise xml:id="exe-review-leibniz-chain">
+    <statement>
+      <p>
+        Find <m>\displaystyle \frac{d}{dx}\int^{x^4}_{1} \sec t \, dt</m>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        By using the Leibniz Rule variation of the Fundamental Theorem of Calculus Part 1 alongside the Chain Rule:
+        <me>\frac{d}{dx}\int^{x^4}_{1} \sec t \, dt = \sec(x^4) \cdot \frac{d}{dx}(x^4) = 4x^3\sec(x^4)</me>
+      </p>
+    </solution>
+  </exercise>
+
+  <!-- EXERCISE 9 -->
+  <exercise xml:id="exe-review-sine-cosine-area">
+    <statement>
+      <p>
+        Find the area of the region bounded by the curves <me>y=\sin x, \quad y=\cos x, \quad x=0, \quad \text{and } x=\pi/2.</me>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        The curves intersect inside the boundary at <m>x = \pi/4</m>, where <m>\sin x = \cos x</m>. This splits our total region into two symmetric components:
+        <me>A = \int^{\pi/4}_{0} (\cos x - \sin x) \, dx + \int^{\pi/2}_{\pi/4} (\sin x - \cos x) \, dx</me>
+        Evaluating each segment individually yields:
+        <me>A = (\sqrt{2} - 1) + (\sqrt{2} - 1) = 2\sqrt{2} - 2</me>
+      </p>
+    </solution>
+  </exercise>
+</exercises>
+
+<!-- CORE FORMULA COMPLETED REFERENCE CHART -->
+<table xml:id="table-calculus-derivatives-integrals-summary">
+  <title>Calculus Reference Sheet: Derivatives and Indefinite Integrals</title>
+  <tabular halign="center" top="double" bottom="double" left="medium" right="medium">
+    <col percentage="30" right="minor" />
+    <col percentage="35" right="minor" />
+    <col percentage="35" />
+    <row header="yes" bottom="medium">
+      <cell><m>y=f(x)</m></cell>
+      <cell><m>\frac{dy}{dx}</m></cell>
+      <cell><m>\int f(x) \, dx</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>x^{n}</m></cell>
+      <cell><m>n x^{n-1}</m></cell>
+      <cell><m>\dfrac{x^{n+1}}{n+1}+C \quad (n \neq -1)</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\sqrt{x}</m></cell>
+      <cell><m>\dfrac{1}{2\sqrt{x}}</m></cell>
+      <cell><m>\dfrac{2}{3}x^{3/2}+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\dfrac{1}{x}</m></cell>
+      <cell><m>-\dfrac{1}{x^2}</m></cell>
+      <cell><m>\ln|x|+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>e^{x}</m></cell>
+      <cell><m>e^{x}</m></cell>
+      <cell><m>e^{x}+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\sin x</m></cell>
+      <cell><m>\cos x</m></cell>
+      <cell><m>-\cos x+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\cos x</m></cell>
+      <cell><m>-\sin x</m></cell>
+      <cell><m>\sin x+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\tan x</m></cell>
+      <cell><m>\sec^2 x</m></cell>
+      <cell><m>\ln|\sec x|+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\sec x</m></cell>
+      <cell><m>\sec x \tan x</m></cell>
+      <cell><m>\ln|\sec x + \tan x|+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\cot x</m></cell>
+      <cell><m>-\csc^2 x</m></cell>
+      <cell><m>\ln|\sin x|+C</m></cell>
+    </row>
+    <row bottom="minor">
+      <cell><m>\csc x</m></cell>
+      <cell><m>-\csc x \cot x</m></cell>
+      <cell><m>-\ln|\csc x + \cot x|+C</m></cell>
+    </row>
+    <row>
+      <cell><m>\ln x</m></cell>
+      <cell><m>\dfrac{1}{x}</m></cell>
+      <cell><m>x\ln x - x + C</m></cell>
+    </row>
+  </tabular>
+</table>
+
+
+
+
+
+
+</section>

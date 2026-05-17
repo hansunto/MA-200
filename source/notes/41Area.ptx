@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec-area-summation" class="notes">
+  <title>4.1 Area and Summation Notations</title>
+  
+  <p>
+    In development of the definite integral we shall employ sums of many numbers. To express such sums compactly, it is convenient to use <term>summation notation.</term>
+  </p>
+  
+  <definition xml:id="def-summation-notation">
+    <title>Summation Notation</title>
+    <statement>
+      <p>
+        Given a collection of numbers <m>\{a_{1},a_{2}, \dots, a_{n}\},</m> the symbol <m>\sum^{n}_{k=1}a_{k}</m> represents the sum and is written as 
+        <me> \displaystyle \sum^{n}_{k=1}a_{k}=a_{1}+a_{2}+ \dots+ a_{n} </me>
+      </p>
+    </statement>
+  </definition>
+  
+  <example>
+  <statement>
+    <p>Evaluate <m>\displaystyle \sum^{4}_{k=1}k(k-3)</m></p>
+  </statement>
+  <solution>
+    <p> We expand the summation by substituting the values <m>k = 1, 2, 3, 4</m> into the expression: </p>
+    <p> <md>
+        <mrow>\sum^{4}_{k=1}k(k-3) \amp = 1(1-3) + 2(2-3) + 3(3-3) + 4(4-3)</mrow>
+        <mrow>\amp = 1(-2) + 2(-1) + 3(0) + 4(1)</mrow>
+        <mrow>\amp = -2 - 2 + 0 + 4</mrow>
+        <mrow>\amp = 0</mrow>
+    </md> </p>
+  </solution>
+</example>
+
+<example>
+  <statement>
+    <p>Evaluate <m>\displaystyle \sum^{3}_{k=0}\frac{2^{k}}{(k+1)}</m></p>
+  </statement>
+  <solution>
+    <p> We expand the summation by substituting the values <m>k = 0, 1, 2, 3</m> into the expression: </p>
+    <p> <md>
+        <mrow>\sum^{3}_{k=0}\frac{2^{k}}{(k+1)} \amp = \frac{2^{0}}{0+1} + \frac{2^{1}}{1+1} + \frac{2^{2}}{2+1} + \frac{2^{3}}{3+1}</mrow>
+        <mrow>\amp = \frac{1}{1} + \frac{2}{2} + \frac{4}{3} + \frac{8}{4}</mrow>
+        <mrow>\amp = 1 + 1 + \frac{4}{3} + 2</mrow>
+        <mrow>\amp = 4 + \frac{4}{3} = \frac{16}{3}</mrow>
+    </md> </p>
+  </solution>
+</example>
+  
+<theorem xml:id="thm-linearity-summation">
+<title>Properties of Summation</title>
+<statement>
+    <p> If <m>n</m> is any positive integer and <m>\{a_{1},a_{2}, \dots, a_{n}\}</m> and <m>\{b_{1},b_{2}, \dots, b_{n}\}</m> are sets of real numbers, then: </p>
+    <p>
+    <ol>      
+        <li>
+        <p> <m>\displaystyle \sum^{n}_{k=1}(a_{k}\pm b_{k})=\displaystyle \sum^{n}_{k=1}a_{k}\pm \displaystyle \sum^{n}_{k=1}b_{k}</m> </p>
+        </li>
+        <li>
+        <p> <m>\displaystyle \sum^{n}_{k=1}ca_{k}=c\left(\displaystyle \sum^{n}_{k=1}a_{k}\right)</m> for every real number <m>c</m> </p>
+        </li>
+        <li>
+        <p> <m>\displaystyle \sum^{n}_{k=1}c=nc</m> </p>
+        </li>
+    </ol>
+    </p>
+</statement>
+</theorem>
+  
+<theorem xml:id="thm-summation-formulas">
+<title>Standard Summation Formulas</title>
+<statement>
+    <p>
+     <ol>
+        <li> <p> <m>\displaystyle \sum^{n}_{k=1}k=1+2+ \dots +n=\frac{n(n+1)}{2}</m> </p> </li>
+        <li> <p> <m>\displaystyle \sum^{n}_{k=1}k^{2}=1^{2}+2^{2}+ \dots +n^{2}=\frac{n(n+1)(2n+1)}{6}</m> </p> </li>
+        <li> <p> <m>\displaystyle \sum^{n}_{k=1}k^{3}=1^{3}+2^{3}+ \dots +n^{3}=\left[\frac{n(n+1)}{2}\right]^{2}</m> </p> </li>
+     </ol>
+    </p>
+</statement>
+</theorem>
+  
+<example>
+  <statement>
+    <p>Evaluate <m>\displaystyle \sum^{100}_{k=1}k</m> and <m>\displaystyle \sum^{20}_{k=1}k^{2}</m>.</p>
+  </statement>
+  <solution>
+    <p>
+      For the first sum, we apply the identity <m>\sum_{k=1}^{n} k = \dfrac{n(n+1)}{2}</m> with <m>n = 100</m>:
+      <me> \sum^{100}_{k=1}k = \dfrac{100(101)}{2} = 50 \cdot 101 = 5050 </me>
+    </p>
+    <p>
+      For the second sum, we apply the identity <m>\sum_{k=1}^{n} k^2 = \dfrac{n(n+1)(2n+1)}{6}</m> with <m>n = 20</m>:
+      <me> \sum^{20}_{k=1}k^{2} = \dfrac{20(21)(41)}{6} = \dfrac{17220}{6} = 2870 </me>
+    </p>
+  </solution>
+</example>
+
+<example> 
+  <statement>
+    <p>Express <m>\displaystyle \sum^{n}_{k=1}(k^{2}-4k+3)</m> in terms of <m>n.</m></p>
+  </statement>
+  <solution>
+    <p> We first split the sum using linearity properties:
+      <me> \sum^{n}_{k=1}(k^{2}-4k+3) = \sum^{n}_{k=1}k^{2} - 4\sum^{n}_{k=1}k + \sum^{n}_{k=1}3 </me>
+    </p>
+    <p> Substituting the standard summation formulas yields:
+      <md>
+        <mrow>\amp = \frac{n(n+1)(2n+1)}{6} - 4\left(\frac{n(n+1)}{2}\right) + 3n</mrow>
+        <mrow>\amp = \frac{2n^3 + 3n^2 + n}{6} - 2n(n+1) + 3n</mrow>
+        <mrow>\amp = \frac{2n^3 + 3n^2 + n}{6} - 2n^2 - 2n + 3n</mrow>
+        <mrow>\amp = \frac{2n^3 + 3n^2 + n}{6} - \frac{12n^2}{6} + \frac{6n}{6}</mrow>
+        <mrow>\amp = \frac{2n^3 - 9n^2 + 7n}{6}</mrow>
+        <mrow>\amp = \frac{n(2n-7)(n-1)}{6}</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+
+<exercise>
+<title>Equivalence of Index Shifts</title>
+<statement>
+<p>Which formula is not equivalent to the other two?</p>
+<md>
+    <mrow>\sum^{4}_{k=2}\frac{(-1)^{k-1}}{k-1} \amp\qquad \sum^{2}_{k=0}\frac{(-1)^{k}}{k+1} \amp\qquad \sum^{1}_{k=-1}\frac{(-1)^{k}}{k+2}</mrow>
+</md>
+  </statement>
+  <solution>
+    <p>
+      We expand each summation term by term to compare their values:
+    </p>
+    <p>
+      <ol>
+        <li>
+          <p>
+            First sum (let <m>S_1</m>): For <m>k=2,3,4</m>, we get:
+            <me>S_1 = \frac{(-1)^{2-1}}{2-1} + \frac{(-1)^{3-1}}{3-1} + \frac{(-1)^{4-1}}{4-1} = \frac{-1}{1} + \frac{1}{2} + \frac{-1}{3} = -1 + \frac{1}{2} - \frac{1}{3}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Second sum (let <m>S_2</m>): For <m>k=0,1,2</m>, we get:
+            <me>S_2 = \frac{(-1)^{0}}{0+1} + \frac{(-1)^{1}}{1+1} + \frac{(-1)^{2}}{2+1} = \frac{1}{1} + \frac{-1}{2} + \frac{1}{3} = 1 - \frac{1}{2} + \frac{1}{3}</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Third sum (let <m>S_3</m>): For <m>k=-1,0,1</m>, we get:
+            <me>S_3 = \frac{(-1)^{-1}}{-1+2} + \frac{(-1)^{0}}{0+2} + \frac{(-1)^{1}}{1+2} = \frac{-1}{1} + \frac{1}{2} + \frac{-1}{3} = -1 + \frac{1}{2} - \frac{1}{3}</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Comparing the terms shows that <m>S_1 = S_3 = -\frac{5}{6}</m>, while <m>S_2 = \frac{5}{6}</m>. Therefore, the second formula, <m>\sum^{2}_{k=0}\frac{(-1)^{k}}{k+1}</m>, is not equivalent to the other two.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Linearity Properties of Sums</title>
+  <statement>
+    <p> 
+      Suppose that <m>\displaystyle\sum^{n}_{k=1}a_{k}=-5</m> and <m>\displaystyle\sum^{n}_{k=1}b_{k}=6</m>. Find the value of: 
+      <me> \displaystyle\sum^{n}_{k=1}(2a_{k}-3b_{k}+1) </me> 
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the linearity properties of summation notation, we split the target expression into three separate sums:
+      <me>\sum^{n}_{k=1}(2a_{k}-3b_{k}+1) = 2\sum^{n}_{k=1}a_{k} - 3\sum^{n}_{k=1}b_{k} + \sum^{n}_{k=1}1</me>
+    </p>
+    <p>
+      We are given the values for the first two sums, and we know that summing a constant <m>c</m> from <m>1</m> to <m>n</m> results in <m>nc</m> (here, <m>n \cdot 1 = n</m>). Substituting these values gives:
+      <md>
+        <mrow>\amp = 2(-5) - 3(6) + n</mrow>
+        <mrow>\amp = -10 - 18 + n</mrow>
+        <mrow>\amp = n - 28</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <title>Simplifying Cube Identities</title>
+  <statement>
+    <p> 
+      Evaluate the sum: 
+      <me>\displaystyle\sum^{5}_{k=1}\frac{k^{3}}{225}-\left(\sum^{5}_{k=1}k\right)^{3}</me> 
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we factor out the constant from the first summation and compute the inner sum of the second term:
+      <me>\frac{1}{225}\left(\sum^{5}_{k=1}k^{3}\right) - \left(\sum^{5}_{k=1}k\right)^{3}</me>
+    </p>
+    <p>
+      Using the formulas <m>\sum_{k=1}^n k = \dfrac{n(n+1)}{2}</m> and <m>\sum_{k=1}^n k^3 = \left[\dfrac{n(n+1)}{2}\right]^2</m> for <m>n=5</m>:
+      <me>\sum^{5}_{k=1}k = \frac{5(6)}{2} = 15</me>
+      <me>\sum^{5}_{k=1}k^{3} = (15)^2 = 225</me>
+    </p>
+    <p>
+      Substituting these evaluated pieces back into our original expression yields:
+      <md>
+        <mrow>\amp = \frac{1}{225}(225) - (15)^3</mrow>
+        <mrow>\amp = 1 - 3375</mrow>
+        <mrow>\amp = -3374</mrow>
+      </md>
+    </p>
+  </solution>
+</exercise>
+
+</section>

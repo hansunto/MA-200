@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="sec-fundamental-theorem-calculus" class="notes">
+  <title>4.3 The Fundamental Theorem of Calculus</title>
+
+  <theorem xml:id="thm-fundamental-theorem-calculus">
+    <title>The Fundamental Theorem of Calculus</title>
+    <statement>
+      <p>
+        Suppose <m>f</m> is continuous on a closed interval <m>[a,b]</m>.
+        <ol marker="1">
+          <li> <p> If the function <m>G</m> is defined by <m>G(x)=\displaystyle\int^{x}_{a}f(t) \, dt</m> 
+            for every <m>x</m> in <m>[a,b]</m>, then <m>G</m> is an antiderivative of 
+            <m>f</m> on <m>[a,b]</m>. That is, <m>G'(x) = f(x)</m>. </p> </li>
+          <li> <p> If <m>F</m> is any antiderivative of <m>f</m> on <m>[a,b]</m>, 
+            then <m>\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a).</m> </p> </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <corollary xml:id="cor-evaluation-notation">
+    <title>Evaluation Notation</title>
+    <statement>
+      <p>
+        If <m>f</m> is continuous on <m>[a,b]</m> and <m>F</m> is any antiderivative of <m>f</m>, then:
+        <me>
+          \int^{b}_{a} f(x) \, dx = \left. F(x) \right|^{b}_{a} = F(b)-F(a).
+        </me>
+      </p>
+    </statement>
+  </corollary>
+
+  <fact xml:id="fact-u-substitution-definite">
+    <title>Substitution Rule for Definite Integrals</title>
+    <statement>
+      <p>
+        If <m>u=g(x)</m>, then <m>\displaystyle \int^{b}_{a} f(g(x)) \, dx = \int^{g(b)}_{g(a)}f(u) \, du.</m>
+      </p>
+    </statement>
+  </fact>
+
+  <fact xml:id="fact-symmetry-integrals">
+    <title>Definite Integrals of Symmetric Functions</title>
+    <statement>
+      <p>
+        Let <m>f</m> be continuous on <m>[-a,a]</m>.
+        <ol marker="1">
+          <li>
+            <p>
+              If <m>f</m> is an even function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 2\int^{a}_{0}f(x) \, dx</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> is an odd function, then <m>\displaystyle\int^{a}_{-a}f(x) \, dx = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </fact>
+  
+    <theorem xml:id="thm-Derivative of an Integral">
+    <title>Derivative of an Integral</title>
+    <statement>
+      <p>
+        Let <m>f</m> be continuous on <m>[a,b]</m>. If <m>a \leq c \leq b</m>, then for every <m>x</m> in <m>[a,b]</m>:
+        <me>
+          \frac{d}{dx}\int^{x}_{c}f(t) \, dt = f(x).
+        </me>
+      </p>
+    </statement>
+  </theorem>
+</section>

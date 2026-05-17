@@ -137,9 +137,27 @@
       <xi:include href="./notes/38Linearization.ptx"/>
       <xi:include href="./notes/39NewtonMethod.ptx"/>
       <xi:include href="./notes/310Antiderivatives.ptx"/>
-
-
     </chapter>
+
+  <chapter xml:id="ch-Integrals">
+      <title>4. Integrals </title>
+      <introduction>
+        <p>
+          
+        </p>
+      </introduction>
+
+      <xi:include href="./notes/41Area.ptx" />
+      <xi:include href="./notes/42DefiniteInt.ptx" />
+      <xi:include href="./notes/43FTC.ptx" />
+      
+
+
+
+  </chapter>
+
+
+
 
    <!----> <chapter xml:id="course-notes">
       <title>Chapter Exercises</title>

@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<section xml:id="sec-definite-integral" class="notes">
+  <title>4.2 Definite Integrals</title>
+
+<p> Our goal is to find the area under a curve. What is the area under the parabola 
+    <m>y=x^{2}</m> between <m>x=0</m> to <m>x=1</m>?
+</p>
+    
+<p> Suppose we divide the area <m>S</m> into four strips <m>S_{1},S_{2}, S_{3},</m> and 
+    <m>S_{4}</m> by drawing the vertical lines <m>x=1/4,</m> <m>x=1/2,</m> and <m>x=3/4</m>. 
+    We can approximate each strip by a rectangle whose base is the same as the strip and whose height 
+    is the same as the right edge of the strip.
+</p>
+    
+<p> Each rectangle has width <m>1/4</m> and the heights are <m>(1/4)^{2},\ (1/2)^{2}, (3/4)^{2}</m> 
+    and <m>1^{2}</m>. If we let <m>R_{4}</m> be the sum of the areas of these approximating rectangles 
+    we get:
+    <md>
+    <mrow>R_{4} \amp =\frac{1}{4}\cdot\frac{1}{4}^{2}+\frac{1}{4}\cdot\frac{1}{2}^{2}+\frac{1}{4}\cdot\frac{3}{4}^{2}+\frac{1}{4}\cdot 1^{2}</mrow>
+    <mrow> \amp =\frac{15}{32}=0.46875</mrow>
+    </md>
+    We see that the area of <m>S</m> is less than <m>R_{4}</m>, so:
+    <me> S \lt 0.46875 </me>
+</p>
+
+<figure xml:id="fig-right-sum-r4-labeled">
+  <title>Right Riemann Sum Approximation with Point Labels (<m>R_4</m>)</title>
+  <image xml:id="img-right-sum-r4-labeled" width="60%">
+    <description>Four right-endpoint rectangles with exact coordinate labels and true area shading.</description>
+    <latex-image>
+      \begin{tikzpicture}[scale=4.5]
+        % Shade True Area Region S Under Curve
+        \fill[gray!15] (0,0) -- plot[domain=0:1, samples=100] (\x, {\x*\x}) -- (1,0) -- cycle;
+        
+        % Draw Axes
+        \draw[-&gt;, thick] (-0.1,0) -- (1.2,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-0.1) -- (0,1.2) node[above] {$y$};
+        
+        % Shaded Right Rectangles with transparency
+        \foreach \x in {0.25, 0.5, 0.75, 1.0} {
+          \draw[fill=blue!10, fill opacity=0.4, draw=blue!60, thick] (\x-0.25, 0) rectangle (\x, {\x*\x});
+        }
+        
+        % Draw Function y = x^2
+        \draw[very thick, blue, domain=0:1.1, samples=100] plot (\x, {\x*\x}) node[right] {$y=x^2$};
+        
+        % Marked and Labeled Vertex Points
+        \fill[blue] (0.25, 0.0625) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{1}{4}, \frac{1}{16})$};
+        \fill[blue] (0.5, 0.25) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{1}{2}, \frac{1}{4})$};
+        \fill[blue] (0.75, 0.5625) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{3}{4}, \frac{9}{16})$};
+        \fill[blue] (1.0, 1.0) circle (0.5pt) node[above left, scale=0.6, black] {$(1, 1)$};
+        
+        % Axis Labels
+        \node[below left] at (0,0) {$0$};
+        \node[below] at (0.25,0) {$\frac{1}{4}$};
+        \node[below] at (0.5,0) {$\frac{1}{2}$};
+        \node[below] at (0.75,0) {$\frac{3}{4}$};
+        \node[below] at (1,0) {$1$};
+        \node[left] at (0,1) {$1$};
+        \draw[dashed, gray] (0,1) -- (1,1);
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+<p> We could use the smaller rectangles whose heights are values of <m>f</m> at the left endpoints 
+    of the subintervals. Gathering the sum of the areas of these approximating rectangles we get:
+    <md>
+     <mrow>L_{4} \amp =\frac{1}{4}\cdot0^{2}+\frac{1}{4}\cdot\frac{1}{4}^{2}+\frac{1}{4}\cdot\frac{1}{2}^{2}+\frac{1}{4}\cdot \frac{3}{4}^{2}</mrow>
+     <mrow> \amp =\frac{7}{32}=0.21875</mrow>
+    </md>
+    We see that the area of <m>S</m> is larger than <m>L_{4}</m>, so:
+     <me> S \gt 0.21875 </me>
+</p>
+
+<figure xml:id="fig-left-sum-l4-labeled">
+  <title>Left Riemann Sum Approximation with Point Labels (<m>L_4</m>)</title>
+  <image xml:id="img-left-sum-l4-labeled" width="60%">
+    <description>Four left-endpoint rectangles with exact coordinate labels and true area shading.</description>
+    <latex-image>
+      \begin{tikzpicture}[scale=4.5]
+        % Shade True Area Region S Under Curve
+        \fill[gray!15] (0,0) -- plot[domain=0:1, samples=100] (\x, {\x*\x}) -- (1,0) -- cycle;
+        
+        % Draw Axes
+        \draw[-&gt;, thick] (-0.1,0) -- (1.2,0) node[right] {$x$};
+        \draw[-&gt;, thick] (0,-0.1) -- (0,1.2) node[above] {$y$};
+        
+        % Shaded Left Rectangles with transparency
+        \foreach \x in {0, 0.25, 0.5, 0.75} {
+          \draw[fill=red!10, fill opacity=0.4, draw=red!60, thick] (\x, 0) rectangle (\x+0.25, {\x*\x});
+        }
+        
+        % Draw Function y = x^2
+        \draw[very thick, blue, domain=0:1.1, samples=100] plot (\x, {\x*\x}) node[right] {$y=x^2$};
+        
+        % Marked and Labeled Vertex Points
+        \fill[red] (0, 0) circle (0.5pt) node[above right, scale=0.6, black] {$(0, 0)$};
+        \fill[red] (0.25, 0.0625) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{1}{4}, \frac{1}{16})$};
+        \fill[red] (0.5, 0.25) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{1}{2}, \frac{1}{4})$};
+        \fill[red] (0.75, 0.5625) circle (0.5pt) node[above left, scale=0.6, black] {$(\frac{3}{4}, \frac{9}{16})$};
+        
+        % Axis Labels
+        \node[below left] at (0,0) {$0$};
+        \node[below] at (0.25,0) {$\frac{1}{4}$};
+        \node[below] at (0.5,0) {$\frac{1}{2}$};
+        \node[below] at (0.75,0) {$\frac{3}{4}$};
+        \node[below] at (1,0) {$1$};
+        \node[left] at (0,1) {$1$};
+        \draw[dashed, gray] (0,1) -- (1,1);
+      \end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+
+<p> We can repeat this process with a larger number of strips. We divide the region <m>S</m> into eight strips of equal width. By computing the sum of the areas of the smaller rectangles <m>L_{8}</m> and the sum of the areas of the larger rectangles <m>R_{8}</m> we obtain better estimates for <m>S</m>:
+      <me> 0.2734375 \lt S \lt 0.3984375 </me>
+</p>
+    
+<p> We could obtain better estimates by increasing the number of strips. </p>
+    
+<p> With 1000 strips we narrow it down even more. 
+    A good estimate is obtained by averaging these numbers: <m>S \approx 0.3333335.</m> </p>
+
+<definition xml:id="def-definite-integral">
+  <title>The Definite Integral</title>
+  <statement>
+    <p> 
+      Let <m>f</m> be defined on a closed interval <m>[a,b]</m>. The <term>definite integral of <m>f</m> from <m>a</m> to <m>b</m></term>, denoted by <m>\int^{b}_{a}f(x)dx</m>, is: 
+      <me> \int^{b}_{a} f(x)dx = \lim_{\lVert P \rVert \to 0} \sum_{k} f(w_{k}) \Delta x_{k} </me> 
+      provided that the limit exists. 
+    </p>
+ </statement>
+</definition>
+
+<theorem xml:id="thm-area-as-definite-integral">
+  <title>Area as a Definite Integral</title>
+  <statement>
+    <p> If <m>f</m> is integrable and <m>f(x) \geq 0</m> for every <m>x</m> in <m>[a,b]</m>, then the area <m>A</m> of the region under the graph of <m>f</m> from <m>a</m> to <m>b</m> is:
+      <me> \text{Area} = A = \int^{b}_{a} f(x) \, dx </me>
+    </p>
+  </statement>
+</theorem>
+
+<example xml:id="ex-upper-sum-limit">
+  <title>Area via Limit of Upper Sums</title>
+  <statement>
+    <p>
+      For the function <m>f(x)=x^{2}+1</m>, find a formula for the upper sum obtained by dividing the interval <m>[0,2]</m> into <m>n</m> equal subintervals. Then take the limit of this sum as <m>n\to\infty</m> to calculate the area under the curve.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we find the width of each subinterval, <m>\Delta x</m>, by dividing the length of the interval <m>[0,2]</m> into <m>n</m> equal parts:
+      <me>\Delta x = \frac{2 - 0}{n} = \frac{2}{n}</me>
+    </p>
+    <p>
+      Because <m>f(x) = x^2 + 1</m> is a strictly increasing function on the interval <m>[0,2]</m>, the maximum value of the function on any subinterval occurs at its right endpoint. The <m>k</m>-th right endpoint is given by:
+      <me>x_k = a + k\Delta x = 0 + k\left(\frac{2}{n}\right) = \frac{2k}{n}</me>
+    </p>
+    <p>
+      We evaluate the function at these right endpoints to find the heights of our upper sum rectangles:
+      <me>f(x_k) = \left(\frac{2k}{n}\right)^2 + 1 = \frac{4k^2}{n^2} + 1</me>
+    </p>
+    <p>
+      Now, we formulate the upper Riemann sum, <m>R_n</m>:
+      <md>
+        <mrow>R_n \amp = \sum_{k=1}^{n} f(x_k)\Delta x = \sum_{k=1}^{n} \left(\frac{4k^2}{n^2} + 1\right)\left(\frac{2}{n}\right)</mrow>
+        <mrow>\amp = \sum_{k=1}^{n} \left(\frac{8k^2}{n^3} + \frac{2}{n}\right)</mrow>
+      </md>
+    </p>
+    <p>
+      Using the linearity properties of summation, we separate the terms and factor out constants relative to the summation index <m>k</m>:
+      <me>R_n = \frac{8}{n^3}\sum_{k=1}^{n} k^2 + \frac{2}{n}\sum_{k=1}^{n} 1</me>
+    </p>
+    <p>
+      Substituting the standard summation identities <m>\sum_{k=1}^{n} k^2 = \dfrac{n(n+1)(2n+1)}{6}</m> and <m>\sum_{k=1}^{n} 1 = n</m> yields:
+      <md>
+        <mrow>R_n \amp = \frac{8}{n^3} \cdot \frac{n(n+1)(2n+1)}{6} + \frac{2}{n} \cdot n</mrow>
+        <mrow>\amp = \frac{4}{3} \cdot \frac{2n^3 + 3n^2 + n}{n^3} + 2</mrow>
+        <mrow>\amp = \frac{4}{3}\left(2 + \frac{3}{n} + \frac{1}{n^2}\right) + 2</mrow>
+        <mrow>\amp = \frac{8}{3} + \frac{4}{n} + \frac{4}{3n^2} + 2</mrow>
+        <mrow>\amp = \frac{14}{3} + \frac{4}{n} + \frac{4}{3n^2}</mrow>
+      </md>
+    </p>
+    <p>
+      To find the exact area under the curve, we calculate the limit of this expression as the number of subintervals approaches infinity (<m>n \to \infty</m>):
+      <md>
+        <mrow>\text{Area} \amp = \lim_{n \to \infty} R_n = \lim_{n \to \infty} \left(\frac{14}{3} + \frac{4}{n} + \frac{4}{3n^2}\right)</mrow>
+        <mrow>\amp = \frac{14}{3} + 0 + 0 = \frac{14}{3}</mrow>
+      </md>
+    </p>
+    <postscript>
+      <p>
+        <strong class="alert">Verification via Definite Integration:</strong> 
+        We can independently confirm this area calculation by directly evaluating the definite integral using the Fundamental Theorem of Calculus:
+        <md>
+          <mrow>\int_{0}^{2} (x^2 + 1) \, dx \amp = \left[ \frac{x^3}{3} + x \right]_{0}^{2}</mrow>
+          <mrow>\amp = \left( \frac{2^3}{3} + 2 \right) - \left( \frac{0^3}{3} + 0 \right)</mrow>
+          <mrow>\amp = \left( \frac{8}{3} + \frac{6}{3} \right) - 0</mrow>
+          <mrow>\amp = \frac{14}{3}</mrow>
+        </md>
+        Both methods yield an identical area of <m>\dfrac{14}{3}</m>.
+      </p>
+    </postscript>
+  </solution>
+</example>
+
+<exercise xml:id="exe-geometric-integrals">
+  <title>Evaluating Integrals Using Geometry</title>
+  <statement>
+    <p>
+      Evaluate each of the following definite integrals:
+      <ol marker="1">
+        <li>
+          <p>
+            <m>\displaystyle \int^{4}_{-4}\sqrt{16-x^{2}}\,dx</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \int^{-4}_{4}\sqrt{16-x^{2}}\,dx</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \int^{4}_{4}\sqrt{16-x^{2}}\,dx</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\displaystyle \int^{4}_{0}\sqrt{16-x^{2}}\,dx</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      The integrand <m>y = \sqrt{16-x^2}</m> represents the upper half of a circle centered at the origin with a radius of <m>r = 4</m> (since <m>x^2 + y^2 = 16</m>). We can evaluate these integrals by finding the areas of the corresponding geometric regions.
+    </p>
+
+    <figure xml:id="fig-semicircle-integral">
+      <title>Geometric regions under <m>y = \sqrt{16-x^2}</m></title>
+      <image xml:id="img-semicircle-integral" width="60%">
+        <description>A semicircle centered at the origin with a radius of 4 extending from x=-4 to x=4.</description>
+        <latex-image>
+          \begin{tikzpicture}[scale=0.8]
+            % Shade Quarter Circle (First Quadrant Region)
+            \fill[blue!15] (0,0) -- (4,0) arc (0:90:4) -- cycle;
+            
+            % Shade Left Quarter Circle (Second Quadrant Region)
+            \fill[gray!10] (0,0) -- (0,4) arc (90:180:4) -- cycle;
+            
+            % Draw Axis Lines
+            \draw[-&gt;, thick] (-5,0) -- (5,0) node[right] {$x$};
+            \draw[-&gt;, thick] (0,-0.5) -- (0,5) node[above] {$y$};
+            
+            % Draw Semicircle arc
+            \draw[very thick, blue, domain=0:180, samples=100] plot ({4*cos(\x)}, {4*sin(\x)});
+            
+            % Axis Numbers
+            \node[below left] at (0,0) {$0$};
+            \node[below] at (4,0) {$4$};
+            \node[below] at (-4,0) {$-4$};
+            \node[above left] at (0,4) {$4$};
+            
+            % Graph Equation Label
+            \node[blue, above right] at (2.5,2.5) {$y = \sqrt{16-x^2}$};
+            
+            % Shading Text Labels
+            \node at (1.5,1.5) [black, scale=0.9] {$4\pi$};
+            \node at (-1.5,1.5) [black, scale=0.9] {$4\pi$};
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            The interval is <m>[-4, 4]</m>, which covers the entire base of the semicircle. The area of a full semicircle of radius <m>4</m> is:
+            <me>\text{Area} = \frac{1}{2}\pi r^2 = \frac{1}{2}\pi (4)^2 = 8\pi</me>
+            Therefore, 
+            <me>\int^{4}_{-4}\sqrt{16-x^{2}}\,dx = 8\pi</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            This integral has reversed limits of integration. Using the property <m>\int_{a}^{b} f(x)\,dx = -\int_{b}^{a} f(x)\,dx</m>, we negate the result from part 1:
+            <me>\int^{-4}_{4}\sqrt{16-x^{2}}\,dx = -\int^{4}_{-4}\sqrt{16-x^{2}}\,dx = -8\pi</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Since the upper and lower limits of integration are identical (<m>a = b = 4</m>), the width of the region is zero. By definition, any integral with identical limits evaluates to zero:
+            <me>\int^{4}_{4}\sqrt{16-x^{2}}\,dx = 0</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            The interval is <m>[0, 4]</m>, which represents exactly one-quarter of the circle (the blue region shaded in the first quadrant). Its geometric area is half of the semicircle:
+            <me>\text{Area} = \frac{1}{4}\pi r^2 = \frac{1}{4}\pi (4)^2 = 4\pi</me>
+            Therefore,
+            <me>\int^{4}_{0}\sqrt{16-x^{2}}\,dx = 4\pi</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<subsection xml:id="subsec-properties-definite-integral">
+  <title>Properties of the Definite Integral</title>
+
+  <theorem xml:id="thm-definite-integral-properties">
+    <title>Properties of the Definite Integral</title>
+    <statement>
+      <p>
+        The following properties hold for definite integrals:
+        <ol marker="1">
+          <li>
+            <p>
+              If <m>f</m> is continuous on <m>[a,b]</m>, then <m>f</m> is integrable on <m>[a,b]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>c \lt d</m>, then <m>\displaystyle \int^d_c f(x) \, dx = - \int^c_d f(x) \, dx</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f(a)</m> exists, then <m>\int^a_a f(x) \, dx = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>c</m> is a real number, then <m>\displaystyle \int^b_{a}c \, dx = c(b-a)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> and <m>g</m> are integrable on <m>[a,b]</m> and <m>c</m> is any real number, then <m>cf</m>, <m>f+g</m>, and <m>f-g</m> are integrable on <m>[a,b]</m> and:
+              <ol marker="a">
+                <li>
+                  <p>
+                    <m>\displaystyle \int^b_{a}cf(x) \, dx = c\int^b_{a}f(x) \, dx</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\displaystyle\int^b_{a}(f(x) \pm g(x)) \, dx = \int^b_{a}f(x) \, dx \pm \int^b_{a}g(x) \, dx</m>
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>a \lt c \lt b</m> and if <m>f</m> is integrable on both <m>[a,c]</m> and <m>[c,b]</m>, then <m>f</m> is integrable on <m>[a,b]</m> and:
+              <me>\int^b_{a}f(x) \, dx = \int^c_{a}f(x) \, dx + \int^b_{c}f(x) \, dx</me>
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> is integrable on <m>[a,b]</m> and <m>f(x) \geq 0</m> for every <m>x</m> in <m>[a,b]</m>, then <m>\displaystyle\int^b_{a}f(x) \, dx \geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>f</m> and <m>g</m> are integrable on <m>[a,b]</m> and <m>f(x) \geq g(x)</m> for every <m>x</m> in <m>[a,b]</m>, then <m>\displaystyle\int^b_{a}f(x) \, dx \geq \int^b_{a}g(x) \, dx</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+<example xml:id="ex-definite-integral-properties-apply">
+  <title>Applying Definite Integral Properties</title>
+  <statement>
+    <p>
+      Suppose that <m>\int^0_{-3}g(x)\,dx=\sqrt{2}</m>. Find the value of each of the following:
+      <ol marker="a">
+        <li> <p> <m>\displaystyle \int^{-3}_0 g(x)\,dx</m> </p> </li>
+        <li> <p> <m>\displaystyle \int^{0}_{-3} g(u)\,du</m> </p> </li>
+        <li> <p> <m>\displaystyle \int^{0}_{-3} [-g(p)]\,dp</m> </p> </li>
+        <li> <p> <m>\displaystyle \int^{0}_{-3} \frac{g(x)}{\sqrt{2}}\,dx</m> </p> </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p> We use the properties of the definite integral to evaluate each expression:
+      <ol marker="a">
+        <li> <p>
+        By the reversed limits of integration property, <m>\int_{a}^{b} f(x)\,dx = -\int_{b}^{a} f(x)\,dx</m>:
+        <me>\int^{-3}_0 g(x)\,dx = -\int^0_{-3}g(x)\,dx = -\sqrt{2}</me>
+        </p> </li>
+        <li> <p>
+        The variable of integration is a dummy variable. Changing the variable label from <m>x</m> to <m>u</m> does not affect the value of the definite integral over the same interval:
+        <me>\int^{0}_{-3} g(u)\,du = \int^0_{-3}g(x)\,dx = \sqrt{2}</me>
+        </p> </li>
+        <li> <p>
+        By the constant multiple property, we can factor out the negative sign (a constant coefficient of <m>-1</m>):
+        <me>\int^{0}_{-3} [-g(p)]\,dp = -1 \cdot \int^{0}_{-3} g(p)\,dp = -\sqrt{2}</me>
+        </p> </li>
+        <li> <p>
+        By the constant multiple property, we factor out the scalar factor <m>\dfrac{1}{\sqrt{2}}</m>:
+        <me>\int^{0}_{-3} \dfrac{g(x)}{\sqrt{2}}\,dx = \dfrac{1}{\sqrt{2}} \int^{0}_{-3} g(x)\,dx = \dfrac{1}{\sqrt{2}} \cdot \sqrt{2} = 1</me>
+        </p> </li>
+      </ol>
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-integrate-constant">
+  <title>Integrating a Constant Function</title>
+  <statement>
+    <p>
+      Evaluate <m>\displaystyle \int^3_{-2}7 \, dx</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Using the constant function integration property, <m>\int_a^b c \, dx = c(b-a)</m>, where <m>c = 7</m>, <m>a = -2</m>, and <m>b = 3</m>:
+      <md>
+        <mrow>\int^3_{-2}7 \, dx \amp = 7 \cdot [3 - (-2)]</mrow>
+        <mrow>\amp = 7 \cdot (3 + 2)</mrow>
+        <mrow>\amp = 7 \cdot 5 = 35</mrow>
+      </md>
+    </p>
+  </solution>
+</example>
+
+<example xml:id="ex-combine-integrals">
+  <title>Combining Integrals into One Vector</title>
+  <statement>
+    <p>
+      Express as one integral: <m>\displaystyle\int^7_{2}f(x) \, dx - \int^7_{5}f(x) \, dx</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      First, we apply the reversed limits property to the second term to change its sign from negative to positive:
+      <me>-\int^7_{5}f(x) \, dx = \int^5_{7}f(x) \, dx</me>
+    </p>
+    <p>
+      Substituting this back into our original expression gives:
+      <me>\int^7_{2}f(x) \, dx + \int^5_{7}f(x) \, dx</me>
+    </p>
+    <p>
+      Using the interval additivity property (<m>\int_a^c f(x)\,dx + \int_c^b f(x)\,dx = \int_a^b f(x)\,dx</m>), we arrange and combine the matching adjacent bounds:
+      <me>\int^5_{7}f(x) \, dx + \int^7_{2}f(x) \, dx = \int^5_{2}f(x) \, dx</me>
+    </p>
+  </solution>
+</example>
+
+<theorem xml:id="thm-mvt-definite-integral">
+  <title>Mean Value Theorem for Definite Integrals</title>
+  <statement>
+    <p>
+      If <m>f</m> is continuous on a closed interval <m>[a,b]</m>, then there is a number <m>z</m> in the open interval <m>(a,b)</m> such that:
+      <me>\displaystyle\int^b_{a}f(x) \, dx = f(z)(b-a)</me>
+    </p>
+  </statement>
+</theorem>
+
+<definition xml:id="def-average-value-function">
+  <title>Average Value of a Function</title>
+  <statement>
+    <p>
+      Let <m>f</m> be continuous on <m>[a,b]</m>. The <term>average value</term> <m>f_{\text{av}}</m> of <m>f</m> on <m>[a,b]</m> is defined as:
+      <me>f_{\text{av}} = \frac{1}{b-a}\displaystyle\int^b_{a}f(x) \, dx</me>
+    </p>
+  </statement>
+</definition>
+
+<example xml:id="ex-average-value-calculation">
+  <title>Finding the Average Value of a Function</title>
+  <statement>
+    <p>
+      Given that <m>\displaystyle \int^{3}_{0} x^{2} \, dx=9</m>, find the average value of <m>f(x) = x^2</m> on the interval <m>[0,3].</m>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We use the definition of the average value of a continuous function on an interval <m>[a,b]</m>:
+      <me>f_{\text{av}} = \frac{1}{b-a} \int^{b}_{a} f(x) \, dx</me>
+    </p>
+    <p>
+      For this problem, the bounds are <m>a = 0</m> and <m>b = 3</m>, and the value of the integral is given as <m>9</m>. Substituting these values into our formula yields:
+      <md>
+        <mrow>f_{\text{av}} \amp = \frac{1}{3 - 0} \int^{3}_{0} x^{2} \, dx</mrow>
+        <mrow>\amp = \frac{1}{3} \cdot (9)</mrow>
+        <mrow>\amp = 3</mrow>
+      </md>
+    </p>
+    <p>
+      Therefore, the average value of <m>f(x) = x^2</m> on the interval <m>[0,3]</m> is <m>3</m>.
+    </p>
+  </solution>
+</example>
+
+<exercise xml:id="exe-graphical-integration">
+  <title>Evaluating Integrals Graphically</title>
+  <statement>
+    <p>
+      Graph the integrands and use the areas to evaluate the integrals:
+      <ol marker="1">
+        <li> <p> <m>\displaystyle \int^{3/2}_{1/2}(-2x+4) \, dx</m> </p> </li>
+        <li> <p> <m>\displaystyle \int^{0}_{-4}\sqrt{16-x^{2}} \, dx</m> </p> </li>
+      </ol>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      We evaluate each integral by identifying the geometric shape formed between the function's graph and the <m>x</m>-axis over the given interval.
+    </p>
+    <p>
+      <ol marker="1">
+        <li>
+          <p>
+            The integrand is the linear equation <m>y = -2x + 4</m>. Over the interval <m>[\frac{1}{2}, \frac{3}{2}]</m>, the region under the line forms a trapezoid sitting entirely above the <m>x</m>-axis.
+          </p>
+          
+          <figure xml:id="fig-trapezoid-integral">
+            <title>Region under <m>y = -2x + 4</m> from <m>x = \frac{1}{2}</m> to <m>x = \frac{3}{2}</m></title>
+            <image xml:id="img-trapezoid-integral" width="55%">
+              <description>A line with a negative slope, where a trapezoidal region underneath it is shaded between x=0.5 and x=1.5.</description>
+              <latex-image>
+                \begin{tikzpicture}[scale=1.25]
+                  % Shading the trapezoid
+                  \fill[blue!15] (0.5,0) -- (1.5,0) -- (1.5,1) -- (0.5,3) -- cycle;
+                  
+                  % Axes
+                  \draw[-&gt;, thick] (-0.5,0) -- (2.5,0) node[right] {$x$};
+                  \draw[-&gt;, thick] (0,-0.5) -- (0,4.5) node[above] {$y$};
+                  
+                  % Line graph
+                  \draw[very thick, blue, domain=-0.1:2.1, samples=100] plot (\x, {-2*\x+4}) node[right] {$y = -2x+4$};
+                  
+                  % Dashed guides and labels
+                  \draw[dashed, gray] (0.5,0) -- (0.5,3) node[above right, scale=0.9, black] {$(\frac{1}{2}, 3)$};
+                  \draw[dashed, gray] (1.5,0) -- (1.5,1) node[above right, scale=0.9, black] {$(\frac{3}{2}, 1)$};
+                  
+                  \node[below] at (0.5,0) {$\frac{1}{2}$};
+                  \node[below] at (1.5,0) {$\frac{3}{2}$};
+                  \node[left] at (0,1) {$1$};
+                  \node[left] at (0,3) {$3$};
+                  \node[below left] at (0,0) {$0$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+
+          <p>
+            The width of the trapezoid base is <m>h = \frac{3}{2} - \frac{1}{2} = 1</m>. The parallel vertical heights are the function evaluations at the endpoints:
+            <me>b_1 = f\left(\frac{1}{2}\right) = -2\left(\frac{1}{2}\right) + 4 = 3</me>
+            <me>b_2 = f\left(\frac{3}{2}\right) = -2\left(\frac{3}{2}\right) + 4 = 1</me>
+            Using the geometric formula for the area of a trapezoid, <m>A = \frac{b_1 + b_2}{2} \cdot h</m>:
+            <me>\int^{3/2}_{1/2}(-2x+4) \, dx = \left(\frac{3 + 1}{2}\right) \cdot 1 = 2</me>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            The integrand is <m>y = \sqrt{16-x^2}</m>, which describes the upper half of a circle centered at the origin with a radius of <m>r = 4</m>.
+          </p>
+
+          <figure xml:id="fig-quarter-circle-left">
+            <title>Region under <m>y = \sqrt{16-x^2}</m> from <m>x = -4</m> to <m>x = 0</m></title>
+            <image xml:id="img-quarter-circle-left" width="55%">
+              <description>A quarter circle region in the second quadrant shaded under the curve y = sqrt(16-x^2) from x=-4 to x=0.</description>
+              <latex-image>
+                \begin{tikzpicture}[scale=0.8]
+                  % Shading Left Quarter Circle (Second Quadrant)
+                  \fill[blue!15] (0,0) -- (0,4) arc (90:180:4) -- cycle;
+                  
+                  % Axes
+                  \draw[-&gt;, thick] (-5,0) -- (1.5,0) node[right] {$x$};
+                  \draw[-&gt;, thick] (0,-0.5) -- (0,5) node[above] {$y$};
+                  
+                  % Full semicircle arc (faded out on right)
+                  \draw[thick, gray, dashed, domain=0:90] plot ({4*cos(\x)}, {4*sin(\x)});
+                  \draw[very thick, blue, domain=90:180] plot ({4*cos(\x)}, {4*sin(\x)}) node[midway, above left] {$y = \sqrt{16-x^2}$};
+                  
+                  % Labels
+                  \node[below left] at (0,0) {$0$};
+                  \node[below] at (-4,0) {$-4$};
+                  \node[above right] at (0,4) {$4$};
+                  \node at (-1.5,1.5) [black] {$A = 4\pi$};
+                \end{tikzpicture}
+              </latex-image>
+            </image>
+          </figure>
+
+          <p>
+            The interval <m>[-4, 0]</m> bounds a region sitting exclusively within the second quadrant, representing exactly one-quarter of the total circle's area. 
+            <me>\text{Area} = \frac{1}{4}\pi r^2 = \frac{1}{4}\pi (4)^2 = 4\pi</me>
+            Because the region rests entirely above the <m>x</m>-axis, the value of the integral is positive:
+            <me>\int^{0}_{-4}\sqrt{16-x^{2}} \, dx = 4\pi</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exe-average-value-quadratic">
+  <title>Average Value of a Quadratic Function</title>
+  <statement>
+    <p>
+      Find the average value of the function over the given interval:
+      <me>f(x)=(x-1)^{2}, \quad \text{ on } [0,\sqrt{3}]</me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      By definition, the average value of a continuous function <m>f(x)</m> on a closed interval <m>[a,b]</m> is given by:
+      <me>f_{\text{av}} = \frac{1}{b-a} \int_{a}^{b} f(x) \, dx</me>
+    </p>
+    <p>
+      For this problem, the bounds are <m>a = 0</m> and <m>b = \sqrt{3}</m>, giving a width of <m>b - a = \sqrt{3} - 0 = \sqrt{3}</m>. We set up the average value expression:
+      <me>f_{\text{av}} = \frac{1}{\sqrt{3}} \int_{0}^{\sqrt{3}} (x-1)^2 \, dx</me>
+    </p>
+    <p>
+      To evaluate the integral, we first expand the quadratic integrand:
+      <me>(x-1)^2 = x^2 - 2x + 1</me>
+    </p>
+    <p>
+      Now, we integrate term-by-term using the standard power rule:
+      <md>
+        <mrow>\int_{0}^{\sqrt{3}} (x^2 - 2x + 1) \, dx \amp = \left[ \frac{x^3}{3} - x^2 + x \right]_{0}^{\sqrt{3}}</mrow>
+        <mrow>\amp = \left( \frac{(\sqrt{3})^3}{3} - (\sqrt{3})^2 + \sqrt{3} \right) - \left( 0 - 0 + 0 \right)</mrow>
+        <mrow>\amp = \left( \frac{3\sqrt{3}}{3} - 3 + \sqrt{3} \right)</mrow>
+        <mrow>\amp = \sqrt{3} - 3 + \sqrt{3}</mrow>
+        <mrow>\amp = 2\sqrt{3} - 3</mrow>
+      </md>
+    </p>
+    <p>
+      Finally, we multiply the evaluated integral by the front fraction coefficient <m>\frac{1}{\sqrt{3}}</m> to get the average value:
+      <md>
+        <mrow>f_{\text{av}} \amp = \frac{1}{\sqrt{3}} \left( 2\sqrt{3} - 3 \right)</mrow>
+        <mrow>\amp = \frac{2\sqrt{3}}{\sqrt{3}} - \frac{3}{\sqrt{3}}</mrow>
+        <mrow>\amp = 2 - \sqrt{3}</mrow>
+      </md>
+    </p>
+    <p>
+      Therefore, the exact average value of the function on the given interval is <m>2 - \sqrt{3}</m> (or approximately <m>0.268</m>).
+    </p>
+  </solution>
+</exercise>
+
+</subsection>  
+
+</section>

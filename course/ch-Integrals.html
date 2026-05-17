@@ -270,6 +270,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html" class="internal"><span class="title">3. Applications of Derivatives- Chapter Exercises</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Applications-Derivatives-chapter-exercises.html#exercises-chapter-review" class="internal"><span class="title">Exercises</span></a></div></li></ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-Integrals-chapter-exercises.html" class="internal"><span class="title">4. Integrals- Chapter Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="notes-Integrals-chapter-exercises.html#notes-Integrals-chapter-exercises-3" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -298,7 +302,41 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-Integrals"><h2 class="heading hide-type">
 <span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">4. Integrals</span>
 </h2>
-<section class="introduction" id="ch-Integrals-2"><div class="para" id="ch-Integrals-2-1"><div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></section><nav class="summary-links"><ul>
+<section class="introduction" id="ch-Integrals-2"><div class="para" id="ch-Integrals-2-1">Up until now, you have been studying derivatives, which are all about measuring how fast things change. In this chapter, we are going to flip things around and look at the second main branch of calculus: Integration. Instead of looking at speed or rates of change, integration is all about measuring how things build up or accumulate over time.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-Integrals-2-2">We will start with a classic geometric riddle: How do you find the exact area inside a shape with a curved border? You will see how we can estimate this area by filling the shape with simple rectangles, and how making those rectangles skinnier and skinnier leads us to the exact answer.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch-Integrals-2-3">The fun part of this chapter is the Fundamental Theorem of Calculus. This theorem reveals a beautiful connection: differentiation and integration are actually exact opposites, just like multiplication and division! Once you master this shortcut, you will learn practical techniques to calculate these areas quickly without drawing a single rectangle.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="objectives goal-like" id="ch-Integrals-2-4"><h2 class="heading"><span class="type">Objectives</span></h2>
+<ul class="disc" id="ch-Integrals-2-4-2">
+<li id="ch-Integrals-2-4-2-1">
+<div class="para" id="ch-Integrals-2-4-2-1-1">Estimate the area under a curved line by drawing and calculating the areas of standard rectangles.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-Integrals-2-4-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-Integrals-2-4-2-2">
+<div class="para" id="ch-Integrals-2-4-2-2-1">Understand what a definite integral means and use basic geometry shapes (like circles and triangles) to solve them.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-Integrals-2-4-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-Integrals-2-4-2-3">
+<div class="para" id="ch-Integrals-2-4-2-3-1">Use the Fundamental Theorem of Calculus shortcuts to solve integration problems without using long limits.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-Integrals-2-4-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-Integrals-2-4-2-4">
+<div class="para" id="ch-Integrals-2-4-2-4-1">Use the <span class="process-math">\(u\)</span>-substitution method (the "reverse chain rule") to simplify and solve trickier algebraic and trigonometric equations.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-4-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-Integrals-2-4-2-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="ch-Integrals-2-4-2-5">
+<div class="para" id="ch-Integrals-2-4-2-5-1">Sketch graphs where lines cross over each other and calculate the exact space trapped between those curves.<div class="autopermalink" data-description="Paragraph"><a href="#ch-Integrals-2-4-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#ch-Integrals-2-4-2-5" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives"><a href="#ch-Integrals-2-4" title="Copy heading and permalink for Objectives" aria-label="Copy heading and permalink for Objectives">🔗</a></div></article></section><nav class="summary-links"><ul>
 <li><a href="sec-area-summation.html" class="internal"><span class="title">4.1 Area and Summation Notations</span></a></li>
 <li><a href="sec-definite-integral.html" class="internal"><span class="title">4.2 Definite Integrals</span></a></li>
 <li><a href="sec-fundamental-theorem-calculus.html" class="internal"><span class="title">4.3 The Fundamental Theorem of Calculus</span></a></li>

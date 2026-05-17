@@ -3925,6 +3925,105 @@ var ptx_lunr_docs = [
   "body": "  For each given function, determine its derivative and its general indefinite integral.    Complete the table below by filling in the missing derivative and indefinite integral formulas:                                            The completed table values are evaluated as follows:                                         "
 },
 {
+  "id": "notes-Integrals-chapter-exercises",
+  "level": "1",
+  "url": "notes-Integrals-chapter-exercises.html",
+  "type": "Section",
+  "number": "",
+  "title": "4. Integrals- Chapter Exercises",
+  "body": " 4. Integrals- Chapter Exercises   This review section is designed to help you test your understanding of everything we covered in this chapter. You will find problems that combine properties of definite integrals, particle motion apps, the Fundamental Theorem of Calculus, and areas bounded by overlapping graphs.   Study Tip: Before moving into the algebra for the integration problems, take a moment to look at the structure of the integrand. Ask yourself:  Can this be simplified first using basic algebra or trigonometry tricks?  Is there a clear composite function that makes it a candidate for -substitution?  Are the limits of integration symmetric, allowing you to use odd or even function shortcuts?  Work through these systematically to build your confidence for upcoming exams!       If and , find .    Using the additive interval property of definite integrals, we know that: Substituting the given values into the equation yields:        Evaluate each of the following integrals:        First, rewrite the final term using negative exponents: . Integrating term-by-term via the power rule gives:          Applying the power rule yields:          Simplify the quotient term-by-term before executing integration: Integrating via the power rule gives:          Use substitution: let , so . Convert limits: when ; when .             Discontinuity Warning: Notice that the integrand has an infinite asymptote at . While is outside our interval of integration , the function is completely continuous on this closed region. This means we can evaluate it directly using the standard Fundamental Theorem of Calculus without improper limits.    We rewrite the function using a negative exponent and integrate via the power rule:   Therefore, the definite integral evaluates exactly to .         Let , meaning . Bounds: ; .          Let , meaning .         A particle moves along a line with velocity function where is measured in meters per second. Find (a) the displacement and (b) the distance traveled by the particle during the time interval      (a) Displacement: This is simply the net change found by evaluating the direct definite integral:    (b) Distance Traveled: This tracks total accumulated ground covered, requiring the integral of the speed function, . Setting shows the particle changes direction at .  On , (negative interval).  On , (positive interval).          Express as a definite integral on the interval and then evaluate the integral.    By matching the limits of a Riemann sum definition, the sample function is , and the limits of integration are and . The limit converts to:        If is continuous and , evaluate:     We execute a substitution on our target integral frame: let . Then . Convert interval boundaries:  Lower limit: When .  Upper limit: When .          A particle moves along a line so that its velocity at time is . Find the distance traveled during the time period .    To track total distance traveled, we first solve for when the velocity equals zero: . On our interval , the direction change root occurs at .  On , (the particle moves backward).  On , (the particle moves forward).  We absolute-value check each area partition piece:        If and , find     Applying standard linearity and constant coefficient multiple expansion parameters:        Find     By using the Leibniz Rule variation of the Fundamental Theorem of Calculus Part 1 alongside the Chain Rule:        Find the area of the region bounded by the curves     The curves intersect inside the boundary at , where . This splits our total region into two symmetric components: Evaluating each segment individually yields:        Calculus Reference Sheet: Derivatives and Indefinite Integrals                                                                    "
+},
+{
+  "id": "exe-review-additivity",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-additivity",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  If and , find .    Using the additive interval property of definite integrals, we know that: Substituting the given values into the equation yields:    "
+},
+{
+  "id": "exe-review-evaluations",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-evaluations",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Evaluate each of the following integrals:        First, rewrite the final term using negative exponents: . Integrating term-by-term via the power rule gives:          Applying the power rule yields:          Simplify the quotient term-by-term before executing integration: Integrating via the power rule gives:          Use substitution: let , so . Convert limits: when ; when .             Discontinuity Warning: Notice that the integrand has an infinite asymptote at . While is outside our interval of integration , the function is completely continuous on this closed region. This means we can evaluate it directly using the standard Fundamental Theorem of Calculus without improper limits.    We rewrite the function using a negative exponent and integrate via the power rule:   Therefore, the definite integral evaluates exactly to .         Let , meaning . Bounds: ; .          Let , meaning .     "
+},
+{
+  "id": "exe-review-particle-motion-1",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-particle-motion-1",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  A particle moves along a line with velocity function where is measured in meters per second. Find (a) the displacement and (b) the distance traveled by the particle during the time interval      (a) Displacement: This is simply the net change found by evaluating the direct definite integral:    (b) Distance Traveled: This tracks total accumulated ground covered, requiring the integral of the speed function, . Setting shows the particle changes direction at .  On , (negative interval).  On , (positive interval).      "
+},
+{
+  "id": "exe-review-limit-to-integral",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-limit-to-integral",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Express as a definite integral on the interval and then evaluate the integral.    By matching the limits of a Riemann sum definition, the sample function is , and the limits of integration are and . The limit converts to:    "
+},
+{
+  "id": "exe-review-composite-sub",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-composite-sub",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  If is continuous and , evaluate:     We execute a substitution on our target integral frame: let . Then . Convert interval boundaries:  Lower limit: When .  Upper limit: When .      "
+},
+{
+  "id": "exe-review-particle-motion-2",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-particle-motion-2",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  A particle moves along a line so that its velocity at time is . Find the distance traveled during the time period .    To track total distance traveled, we first solve for when the velocity equals zero: . On our interval , the direction change root occurs at .  On , (the particle moves backward).  On , (the particle moves forward).  We absolute-value check each area partition piece:    "
+},
+{
+  "id": "exe-review-linearity-combination",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-linearity-combination",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  If and , find     Applying standard linearity and constant coefficient multiple expansion parameters:    "
+},
+{
+  "id": "exe-review-leibniz-chain",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-leibniz-chain",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Find     By using the Leibniz Rule variation of the Fundamental Theorem of Calculus Part 1 alongside the Chain Rule:    "
+},
+{
+  "id": "exe-review-sine-cosine-area",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#exe-review-sine-cosine-area",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Find the area of the region bounded by the curves     The curves intersect inside the boundary at , where . This splits our total region into two symmetric components: Evaluating each segment individually yields:    "
+},
+{
+  "id": "table-calculus-derivatives-integrals-summary",
+  "level": "2",
+  "url": "notes-Integrals-chapter-exercises.html#table-calculus-derivatives-integrals-summary",
+  "type": "Table",
+  "number": "379",
+  "title": "Calculus Reference Sheet: Derivatives and Indefinite Integrals",
+  "body": " Calculus Reference Sheet: Derivatives and Indefinite Integrals                                                                   "
+},
+{
   "id": "ch-review-3",
   "level": "1",
   "url": "ch-review-3.html",

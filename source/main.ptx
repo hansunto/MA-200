@@ -6,9 +6,9 @@
   <xi:include href="./docinfo.ptx" />
   <!-- By creating a PreTeXt "book" for the course, we can split components into "chapters" -->
   <book>
-    <title>Calculus 1</title>
+    <title>MA-200 (Calculus I)</title>
 
-    <subtitle>MA-200</subtitle>
+    <subtitle>Worcester State University</subtitle>
 
     <!-- Optional: include frontmatter with author info and date -->
     <xi:include href="./frontmatter.ptx" />

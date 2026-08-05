@@ -4508,6 +4508,15 @@ var ptx_lunr_docs = [
   "number": "",
   "title": "Homework",
   "body": " Homework    "
+},
+{
+  "id": "GenEdSLO",
+  "level": "1",
+  "url": "GenEdSLO.html",
+  "type": "Section",
+  "number": "",
+  "title": "LASC and GenEd Student Learning Outcomes (SLO’s)",
+  "body": " LASC and GenEd Student Learning Outcomes (SLO's)     Justify their mathematical reasoning and use correct mathematical notation and terminology.  Apply mathematical techniques to the analysis and solution of real-world problems.  Demonnumerical literacy by accurately performing mathematical procedures and articulating the underlying concepts that govern numerical operations and relationships.     "
 }
 ]
 

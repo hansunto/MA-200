@@ -261,6 +261,13 @@
 
     </chapter>
 
+    <chapter xml:id="GenEd">
+      <title>LASC and GenEd Document </title>
+    
+      <xi:include href="./syllabus/GenEdSLO.ptx"/>
+
+    </chapter>
+
     <!-- Include additional chapters for other categories -->
 
 

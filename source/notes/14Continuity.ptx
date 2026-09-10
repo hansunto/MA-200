@@ -58,7 +58,7 @@
         <p>
             Let <m>f</m> be defined as:
             <me>
-                f(x) = \begin{cases} 4x+1 \amp \text{for } 0 \lt x \lt 1 \\ x^2+4 \amp \text{for } 1 \lt x \lt 2 \end{cases}
+                f(x) = \begin{cases} 4x+1 \amp \text{for } 0 \lt x \le 1 \\ x^2+4 \amp \text{for } 1 \lt x \lt 2 \end{cases}
             </me>
         </p>
     </statement>
